@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./handheld.css">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -18,17 +19,17 @@
   <div class="grain" aria-hidden="true"></div>
 
   <header class="topbar">
-    <div class="brand"><span class="brand-mark">L<span>↓</span>L</span><span class="brand-name">THE LOWER LEVEL<small>YOUR MEDIA, UNDERGROUND</small></span></div>
-    <div class="top-actions"><span class="demo-pill"><span></span> YOUR COLLECTION</span><button type="button" class="nav-button" id="mapBtn">Floor map</button><button id="browseBtn" class="nav-button" type="button"><span class="browse-full">Browse collection (B)</span><span class="browse-short">Browse</span> <span id="itemCount">42</span></button></div>
+    <div class="brand"><span class="brand-mark" data-pixel="logo"></span><span class="brand-name">THE LOWER LEVEL</span></div>
+    <nav class="top-actions" aria-label="Store menus"><button type="button" class="nav-button" id="mapBtn" data-pixel="map">Floor map</button><button id="browseBtn" class="nav-button" type="button" data-pixel="collection">Collection <span id="itemCount"></span></button></nav>
   </header>
 
   <section id="intro" class="intro" aria-labelledby="introTitle">
     <div class="intro-card">
-      <div class="eyebrow"><span class="eyebrow-line"></span> LEVEL 1  /  MUSIC + GAME LOUNGE</div>
-      <h1 id="introTitle">Go downstairs.<br><em>Get lost.</em></h1>
-      <p>Start in the listening lounge. Take the northwest stairs to the media gallery, or choose a room on the floor map.</p>
-      <button id="enterBtn" class="primary-button" type="button">Enter the basement <span class="button-icon">↘</span></button>
-      <div class="intro-controls"><span>W A S D <b>MOVE</b></span><span>DRAG <b>LOOK</b></span><span>DOUBLE CLICK <b>LOCK MOUSE</b></span><span>E <b>INSPECT</b></span><span>B <b>BROWSE</b></span></div>
+      <div class="menu-bar"><span>Field menu</span><span class="bar-bars" aria-hidden="true"></span></div>
+      <div class="intro-slot"><div class="tile-frame"><canvas id="roomTile" width="124" height="82" aria-label="Pixel illustration of the listening lounge"></canvas></div><div><h1 id="introTitle">The Lower Level</h1><p id="entryLocation">Music + game lounge</p></div></div>
+      <div class="intro-options"><button id="enterBtn" class="primary-button" type="button">Enter the store <span aria-hidden="true">▶</span></button><button type="button" id="introMap">Floor map</button></div>
+      <div class="intro-controls"><span>WASD <b>Move</b></span><span>Drag <b>Look</b></span><span>E <b>Open stack</b></span></div>
+      <div class="intro-touch">Move with the stick · Drag to look</div>
     </div>
 
   </section>
@@ -38,21 +39,22 @@
     <div class="crosshair" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap">E</span><span id="promptText">Inspect item</span></div>
     <div class="hud-bottom"><div class="movement-guide"><span>W A S D</span> MOVE <b>·</b> <span>DRAG</span> LOOK <b>·</b> <span>SHIFT</span> RUN <b>·</b> <span>B</span> BROWSE <b>·</b> <span>ESC</span> PAUSE</div><div class="floor-tag">LEVEL <strong id="floorNumber">01</strong></div></div>
-    <div id="touchControls" class="touch-controls"><div id="joystick" class="joystick"><div id="stick" class="stick"></div></div><div id="lookPad" class="look-pad" aria-label="Drag to look around"><span>DRAG TO LOOK</span></div><button id="touchInspect" class="touch-inspect" type="button">INSPECT</button></div>
+    <div id="touchControls" class="touch-controls"><div id="joystick" class="joystick"><div id="stick" class="stick"></div></div><div id="lookPad" class="look-pad" aria-label="Drag to look around"><span>DRAG TO LOOK</span></div><button id="touchInspect" class="touch-inspect" type="button">OPEN STACK</button></div>
   </div>
 
   <aside id="catalogPanel" class="panel catalog-panel hidden" aria-labelledby="catalogTitle" aria-modal="true" role="dialog">
-    <div class="panel-head"><div><div class="panel-kicker">THE ENTIRE BASEMENT</div><h2 id="catalogTitle">The collection<span>.</span></h2></div><button id="closeCatalog" class="close-button" type="button" aria-label="Close collection">×</button></div>
-    <p class="panel-intro">Movies and series from your IMDb CSV. Music selections from your Spotify playlist. Games are samples until you add a list.</p>
+    <div class="panel-head"><div><h2 id="catalogTitle" data-pixel="collection">Collection</h2></div><button id="closeCatalog" class="close-button" type="button" aria-label="Close collection">×</button></div>
+    <p class="panel-intro">Movies and series from your IMDb CSV. Music selections from your Spotify playlist. </p>
     <label class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search the shelves" autocomplete="off" aria-label="Search the collection"></label>
     <div id="filters" class="filters" aria-label="Filter media categories"></div>
+    <div id="catalogSelection" class="chosen-item hidden"><strong id="chosenTitle"></strong><button id="catalogOpenStack">Open stack (E)</button><button id="catalogDetails">Details</button></div>
     <div id="catalogGrid" class="catalog-grid"></div>
     <div class="panel-foot"><a href="https://www.imdb.com/user/p.ad4lijmxzoqnsph42clunnfkoi/watchlist/?ref_=ext_shr_lnk" target="_blank" rel="noopener noreferrer">IMDb watchlist</a><span>·</span><a href="https://open.spotify.com/playlist/0gwADXODSkvnsFaNMe55XP?si=6c3fd152b6304f54" target="_blank" rel="noopener noreferrer">Full Spotify playlist</a></div>
   </aside>
 
   <aside id="detailPanel" class="panel detail-panel hidden" aria-labelledby="detailTitle" aria-modal="true" role="dialog">
-    <div class="panel-head"><div class="panel-kicker">PULLED FROM THE SHELF</div><button id="closeDetail" class="close-button" type="button" aria-label="Close item details">×</button></div>
-    <div id="detailArt" class="detail-art"><img id="audioArt" class="audio-art hidden" alt="Cover artwork"><div class="detail-art-top" id="detailFormat"></div><div class="detail-art-title" id="detailArtTitle"></div><div class="detail-art-bottom">THE LOWER LEVEL ARCHIVE</div></div>
+    <div class="panel-head"><strong data-pixel="disc">Item details</strong><button id="closeDetail" class="close-button" type="button" aria-label="Close item details">×</button></div>
+    <div id="detailArt" class="detail-art"><img id="audioArt" class="audio-art hidden" alt="Cover artwork"><div class="detail-art-top" id="detailFormat"></div><div class="detail-art-title" id="detailArtTitle"></div></div>
     <div id="detailCategory" class="detail-category"></div><h2 id="detailTitle"></h2><p id="detailCreator" class="detail-creator"></p>
     <div class="detail-rule"></div><div class="detail-meta"><div><span>RELEASE</span><strong id="detailYear"></strong></div><div><span>FORMAT</span><strong id="detailFormatValue"></strong></div><div><span>COLLECTION SOURCE</span><strong id="detailSource"></strong></div></div>
     <div id="detailNote" class="detail-note"></div><div id="audioExtra" class="audio-extra hidden"></div><a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
@@ -60,12 +62,13 @@
   </aside>
 
   <div id="stackOverlay" class="stack-overlay hidden" role="dialog" aria-modal="true" aria-label="Flip through media stack">
-    <div class="stack-head"><div><div class="stack-kicker">PULLED FROM THE RACK</div><div id="stackCategory" class="stack-category"></div></div><button id="closeStack" class="close-button" type="button" aria-label="Close stack">×</button></div>
+    <div class="stack-head"><div><div class="stack-kicker" data-pixel="disc">Stack viewer</div><div id="stackCategory" class="stack-category"></div></div><button id="closeStack" class="close-button" type="button" aria-label="Close stack">×</button></div>
     <div class="stack-side-note">DRAG TO TILT <span>·</span> SWIPE OR SCROLL TO FLIP</div>
-    <div class="stack-foot"><div class="stack-info"><span id="stackCount">1 / 4</span><h2 id="stackTitle"></h2><p id="stackMeta"></p></div><div class="stack-actions"><button id="stackPrev" type="button" aria-label="Previous case">←</button><button id="stackNext" type="button" aria-label="Next case">→</button><button id="stackDetails" type="button">View item details ↗</button></div></div>
+    <div class="stack-foot"><div class="stack-info"><span id="stackCount">1 / 4</span><h2 id="stackTitle"></h2><p id="stackMeta"></p><p id="caseSize"></p></div><div class="stack-actions"><button id="caseZoom" type="button" aria-pressed="false">Magnify</button><button id="stackPrev" type="button" aria-label="Previous case">←</button><button id="stackNext" type="button" aria-label="Next case">→</button><button id="stackDetails" type="button">View item details ↗</button></div></div>
   </div>
-  <dialog id="mapDialog" class="map-dialog"><div class="panel-head"><h2>Floor map</h2><button id="closeMap" class="close-button" aria-label="Close floor map">×</button></div><div class="level-tabs"><button id="levelOne">Level 1</button><button id="levelTwo">Level 2</button></div><div id="planBoard" aria-label="Select a room"></div><p>Select a room to enter it.</p></dialog>
+  <dialog id="mapDialog" class="map-dialog"><div class="panel-head"><h2 data-pixel="map">Floor map</h2><button id="closeMap" class="close-button" aria-label="Close floor map">×</button></div><div class="level-tabs"><button id="levelOne">Level 1</button><button id="levelTwo">Level 2</button></div><div id="planBoard" aria-label="Select a room"></div><p>Select a room to enter it.</p></dialog>
   <div id="toast" class="toast hidden" role="status"></div>
+  <script type="module" src="./interface.js"></script>
   <script type="module" src="./app.js"></script>
 </body>
 </html>

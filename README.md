@@ -4,23 +4,23 @@ A first-person 3D basement media store for desktop, tablet, and phone. Level 1 c
 
 ## Explore
 
-- Desktop: WASD to move, drag to look, Shift to run, E or click a visible case to flip through its stack, B to browse, Esc to pause. Double-click the scene or press L for optional pointer lock. Arrow keys also look around.
-- Phone and tablet: left joystick to move, drag the right side to look, and tap a visible case or Inspect to flip through its stack.
+- Desktop: WASD to move, drag to look, Shift to run, click a case to select it and press E to open its stack, B to browse, Esc to pause. Double-click the scene or press L for optional pointer lock. Arrow keys also look around.
+- Phone and tablet: left joystick to move, drag the right side to look, and tap a case to select it, then tap Open stack.
 - In a stack: arrow buttons, left/right keys, scroll, or swipe to flip cases. Drag to tilt the 3D stack; open details for the selected item.
 - Floor map opens a room selector for either level. Walk up the western stair flight, turn on the north landing, and follow the eastern flight to reach Level 2 on foot.
 - Browse offers search and format filters without walking to a rack. Item details include a **Go to this shelf** button.
 
 ## Collection
 
-The current catalog has 217 entries:
+The current catalog has 205 entries:
 
 - 96 imported from the supplied IMDb watchlist CSV: 81 films and 15 TV series or miniseries.
 - 109 physical music entries from 108 verified albums represented in the supplied Spotify playlist. This is a selected snapshot of the playlist, not a live or complete sync. The full playlist link is available in Browse. Spotify album art is bundled for the selected snapshot. TheAudioDB free v1 API enriches album details and cover art when an album is opened and a match is found.
-- 12 sample game discs and cartridges until a game list is supplied.
+- Game racks are empty until a game list is supplied.
 
 Music format rules use the album's published release year: before 1985 goes to vinyl; 1985–1995 goes to both cassette and CD; after 1995 goes to CD. An album that appears in the 1985–1995 interval has two physical entries. Spotify album page metadata supplied the release years for the selected snapshot; TheAudioDB is used for live item detail enrichment. Album editions and compilations can have later dates than the original recording.
 
-Movie and series cases use imported IMDb artwork. Films from 2006 onward use blue Blu-ray style cases; older films use DVD cases. Vinyl sleeves are square, CDs use jewel cases, cassettes use horizontal tape cases, and games use cartridge or blue disc cases. Each rack holds staggered physical stacks with a 3D flip-through view. A small amount of explicitly labeled display stock fills the sparse vinyl, cassette, and game racks without adding those titles to the 217-item collection.
+Movie and series cases use imported IMDb artwork. Films from 2006 onward use blue Blu-ray style cases; older films use DVD cases. Vinyl sleeves are square, CDs use jewel cases, cassettes use horizontal tape cases, and games use cartridge or blue disc cases. Cases use one metre per world unit. Each imported item has one physical shelf location per format. Rear cases sit on an incline with individually selectable covers.
 
 ## Preview locally
 

@@ -1,58 +1,68 @@
 import * as T from './vendor/three.module.js';
-import {categoryById} from './catalog.js';
-import {fixtures} from './plan.js';
-import {caseSpec,coverTexture} from './media.js';
+import {categoryById, ITEMS} from './catalog.js';
+import {fixtures,rise} from './plan.js';
+import {createMediaCase,caseSpec} from './media.js';
 
-function cassetteSpine(item,cover){
-  const canvas=document.createElement('canvas');canvas.width=384;canvas.height=72;
-  const ctx=canvas.getContext('2d'),texture=new T.CanvasTexture(canvas);
-  texture.colorSpace=T.SRGBColorSpace;
-  function draw(image){
-    ctx.fillStyle='#252723';ctx.fillRect(0,0,384,72);ctx.fillStyle='#e3ddc9';ctx.fillRect(4,5,376,62);
-    ctx.drawImage(image,8,8,58,55);ctx.fillStyle='#312e29';ctx.font='bold 21px sans-serif';
-    ctx.fillText(item.title,75,33,295);ctx.font='15px sans-serif';ctx.fillText(item.creator,76,54,289);texture.needsUpdate=true;
-  }
-  draw(cover.image);
-  if(item.artwork){const img=new Image();img.onload=()=>draw(img);img.src=item.artwork;}
-  return texture;
-}
-export function stockRooms(interior,box,label,displayItems) {
-  const stacks=new Map(), interactables=[[],[]], destinations=new Map(), offsets={};
-  const wood=new T.MeshStandardMaterial({color:'#664a35'}), steel=new T.MeshStandardMaterial({color:'#292a27'}), led=new T.MeshBasicMaterial({color:'#ffd7a2'}),white=new T.MeshStandardMaterial({color:'white'});
-  const boxGeo=new T.BoxGeometry(),artGeo=new T.PlaneGeometry(),dummy=new T.Object3D(),artwork=new Map();
-  for(const [level,key,x,z,width,angle] of fixtures){
-    const cat=categoryById[key],entries=displayItems(cat),group=new T.Group();
-    group.position.set(x,0,z);group.rotation.y=angle;interior.floors[level-1].add(group);
-    if(!destinations.has(key)||level===2)destinations.set(key,{level,x:x+Math.sin(angle)*1.6,z:z+Math.cos(angle)*1.6,yaw:angle});
-    interior.obstacles.push({level,x,z,w:Math.abs(Math.cos(angle))*width+Math.abs(Math.sin(angle))*.75,d:Math.abs(Math.sin(angle))*width+Math.abs(Math.cos(angle))*.75});
-    const cols=Math.max(4,Math.floor((width-.16)/.45)),rows=key==='vinyl'?3:4,h=key==='vinyl'?1.75:2.32,step=(h-.2)/rows;
-    box(group,0,h/2,-.25,width,h,.08,steel);
-    for(const side of [-1,1])box(group,side*(width/2-.034),h/2,0,.068,h,.62,steel);
-    const count=cols*rows*4, bodies=new T.InstancedMesh(boxGeo,white,count);
-    group.add(bodies);let index=0;
-    for(let row=0;row<rows;row++){
-      const base=.12+row*step;
-      box(group,0,base,0,width,.055,.67,wood);box(group,0,base+.045,.33,width,.056,.023,steel);
-      if(key==='cds')box(group,0,base+.12,.34,width,.012,.012,steel);
-      for(let col=0;col<cols;col++){
-        const cx=(col+.5)*(width-.16)/cols-(width-.16)/2,first=offsets[key]||0;
-        const items=Array.from({length:4},(_,k)=>entries[(first+k)%entries.length]);offsets[key]=first+4;
-        const id=key+'-'+stacks.size;stacks.set(id,{category:cat,items});
-        for(let k=3;k>=0;k--){
-          const item=items[k],spec=caseSpec(item),scale=Math.min((width-.24)/cols/spec.w,(step-.085)/spec.h);
-          const tape=key==='cassettes',ww=spec.w*scale,hh=tape?.108:spec.h*scale;
-          const yy=base+.031+hh/2+(tape?k*.115:k*.013),zz=tape?.09:.24-k*.085;
-          dummy.position.set(cx+(tape?0:k*.009),yy,zz);dummy.rotation.set(tape?0:-.09,0,0);dummy.scale.set(ww,hh,tape?.40:Math.min(.075,spec.d));dummy.updateMatrix();
-          bodies.setMatrixAt(index,dummy.matrix);bodies.setColorAt(index++,new T.Color(spec.shell));
-          if(k===0||tape){if(!artwork.has(item.id)){const cover=coverTexture(item);artwork.set(item.id,new T.MeshBasicMaterial({map:tape?cassetteSpine(item,cover):cover}));}
-            const art=new T.Mesh(artGeo,artwork.get(item.id));art.position.set(cx,yy+(tape?0:spec.ay*scale),zz+(tape?.204:.048));art.rotation.x=tape?0:-.09;
-            art.scale.set(tape?ww*.95:spec.aw*scale,tape?.092:spec.ah*scale,1);art.userData.stackId=id;group.add(art);interactables[level-1].push(art);
-          }
-        }
-      }
+function distributeInventory(){
+  const placements=fixtures.map(()=>[]);
+  for(const category of Object.keys(categoryById)){
+    const bays=fixtures.flatMap((fixture,index)=>fixture[1]===category?[index]:[]);
+    if(!bays.length)continue;
+    const entries=ITEMS.filter(item=>item.category===category);
+    for(let first=0;first<entries.length;first+=4){
+      const bay=bays[(first/4)%bays.length];
+      placements[bay].push(entries.slice(first,first+4));
     }
-    box(group,0,h,0,width,.065,.62,wood);box(group,0,h-.045,.245,width-.1,.018,.035,led);
-    label(group,cat.short,0,h+.12,.13,Math.min(1.55,width*.64),.22,{bg:'#302c26',color:'#efcea5',size:80});
   }
+  return placements;
+}
+
+export function stockRooms(interior,box,label){
+  const stacks=new Map(),interactables=[[],[]],destinations=new Map();
+  const wood=new T.MeshStandardMaterial({color:'#664a35'});
+  const steel=new T.MeshStandardMaterial({color:'#292a27'});
+  const led=new T.MeshBasicMaterial({color:'#ffd7a2'});
+  const placements=distributeInventory();
+  fixtures.forEach(([level,key,x,z,width,angle],bay)=>{
+    const category=categoryById[key],group=new T.Group();
+    group.position.set(x,0,z);group.rotation.y=angle;interior.floors[level-1].add(group);
+    const picks=interactables[level-1],assigned=placements[bay];
+    const board=(...args)=>{const m=box(group,...args);picks.push(m);return m;};
+    const maxWidth=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).w));
+    const maxHeight=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).h));
+    const pitch=maxWidth+.042,capacity=Math.max(1,Math.floor((width-.18)/pitch));
+    const rows=Math.max(1,Math.ceil(assigned.length/capacity));
+    const step=maxHeight*1.75+.07,base=1.08;
+    const height=base+step*rows+.04;
+    interior.obstacles.push({level,x,z,w:Math.abs(Math.cos(angle))*width+Math.abs(Math.sin(angle))*.65,d:Math.abs(Math.sin(angle))*width+Math.abs(Math.cos(angle))*.65});
+    board(0,base/2,-.035,width,base,.5,wood);
+    board(0,height/2,-.26,width,height,.055,steel);
+    for(const side of [-1,1])board(side*(width/2-.026),height/2,0,.052,height,.61,steel);
+    for(let row=0;row<rows;row++){
+      const deck=base+row*step;board(0,deck,0,width,.026,.62,wood);
+      const rowStacks=assigned.slice(row*capacity,(row+1)*capacity);
+      rowStacks.forEach((items,col)=>{
+        const cx=(col-(rowStacks.length-1)/2)*pitch,id=key+'-'+stacks.size;
+        stacks.set(id,{category,items});let previousTop=deck,previousDepth=0,zz=.22;
+        items.forEach((item,index)=>{
+          const {group:model,spec,shell}=createMediaCase(item);
+          const tilt=-.19,faceHeight=spec.h*Math.cos(tilt);
+          const top=index?Math.max(deck+.018+faceHeight,previousTop+.18*faceHeight):deck+.018+faceHeight;
+          const yy=top-faceHeight/2;
+          if(index)zz-=(previousDepth+spec.d)/2+.026;
+          const support=top-faceHeight-deck-.012;
+          if(support>.002)board(cx,deck+.011+support/2,zz,spec.w*.86,support,.016,steel);
+          model.position.set(cx,yy,zz);model.rotation.x=tilt;group.add(model);
+          shell.userData={stackId:id,index,item,spec};picks.push(shell);
+          const target=new T.Vector3();shell.getWorldPosition(target);
+          const distance=.85;
+          destinations.set(item.id,{level,x:target.x+Math.sin(angle)*distance,z:target.z+Math.cos(angle)*distance,yaw:angle,pitch:Math.atan2(target.y-((level-1)*rise+1.62),distance)});
+          previousDepth=spec.d;previousTop=top;
+        });
+      });
+    }
+    board(0,height,0,width,.035,.62,wood);board(0,height-.025,.235,width-.1,.01,.025,led);
+    label(group,category.short,0,height+.12,.12,Math.min(1.55,width*.65),.19,{bg:'#302c26',color:'#efcea5',size:80});
+  });
   return {stacks,interactables,destinations};
 }

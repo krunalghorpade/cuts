@@ -43,3 +43,9 @@
 .top-actions{gap:8px}.brand-mark{display:flex;align-items:center;justify-content:center;letter-spacing:-2px}
 @media(max-width:700px){.topbar{padding:14px 12px}.brand{gap:7px}.brand-mark{min-width:31px;height:36px}.top-actions{gap:4px}.brand-name small{display:none}.nav-button{padding:9px 7px}.map-dialog{padding:16px}.map-dialog #planBoard button{font-size:11px}.intro-controls{display:none}.brand-name{letter-spacing:.07em}}
 @media(max-height:500px){.map-dialog{width:min(520px,90vw)}#planBoard{height:48dvh}.level-tabs{margin:7px 0}}
+
+.chosen-item{position:sticky;top:0;z-index:4;display:flex;align-items:center;gap:7px;padding:9px;margin-bottom:10px;background:#273629;border:1px solid #c8a578}
+.chosen-item strong{flex:1;font-size:13px}.chosen-item button,#caseZoom{font:500 11px 'DM Mono',monospace;color:#efe6d5;background:#303f32;border:1px solid #908b73;padding:8px;min-height:38px}
+.catalog-card[aria-pressed=true]{outline:2px solid #f3b573;outline-offset:-2px}.stack-info #caseSize{font-size:12px;color:#d8b78f;margin-top:6px}
+.stack-actions button:disabled{opacity:.4;cursor:default}
+.inspect-prompt{max-width:80vw;white-space:normal}.inspect-prompt .keycap{flex-shrink:0}
