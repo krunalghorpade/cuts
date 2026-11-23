@@ -252,3 +252,14 @@ body:has(.panel:not(.hidden), #mapDialog[open]) :is(.topbar, .hud, .intro) { vis
   #musicControls,#tvControls:has(#tvItem:not(.hidden)){width:min(242px,calc(100vw - 144px))}
 }
 #arcadeAgain {text-decoration:underline;text-underline-offset:3px}
+#reloadCollections {width:36px;min-width:36px;display:grid;place-items:center;border-radius:50%}
+#reloadCollections svg {width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+#reloadCollections[aria-busy=true] svg {animation:refresh-turn .9s linear infinite}
+@keyframes refresh-turn {to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#reloadCollections[aria-busy=true] svg{animation:none}}
+.catalog-description {margin:18px 0;max-width:55ch;font-size:16px;line-height:1.5}
+.related-titles,.poster-credit {margin-top:14px;font-size:14px;line-height:1.45}
+.related-titles h3 {font-size:14px;font-weight:500;margin:0 0 3px;color:var(--muted)}
+.related-titles button {display:block;min-height:34px;text-decoration:underline;text-underline-offset:3px}
+.poster-credit {color:var(--muted);font-size:12px}
+@media(max-width:510px){.topbar nav{gap:8px}.topbar{gap:7px}.location{max-width:32%}#reloadCollections{width:32px;min-width:32px}}

@@ -1,0 +1,637 @@
+{
+  "artists": [
+    {
+      "creator": "Ajay-Atul",
+      "credit": "1atishgund",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:AjayAtul_Pune_2017.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "photo": "./art/artists/ajay-atul.webp",
+      "width": 500,
+      "height": 333
+    },
+    {
+      "creator": "Asha Bhosle",
+      "credit": "Firoze Edassery",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ashaji.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "photo": "./art/artists/asha-bhosle.webp",
+      "width": 500,
+      "height": 451
+    },
+    {
+      "creator": "Lata Mangeshkar",
+      "credit": "Bollywood Hungama",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lata_Mangeshkar_-_still_29065_crop.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "photo": "./art/artists/lata-mangeshkar.webp",
+      "width": 440,
+      "height": 400
+    },
+    {
+      "creator": "Avadhoot Gupte",
+      "credit": "Trinidade",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Avadhoot_Gupte.JPG",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "photo": "./art/artists/avadhoot-gupte.webp",
+      "width": 500,
+      "height": 441
+    },
+    {
+      "creator": "Vaishali Samant",
+      "credit": "Bollywood Hungama",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Vaishali_Samant3.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "photo": "./art/artists/vaishali-samant.webp",
+      "width": 403,
+      "height": 680
+    },
+    {
+      "creator": "Sudhir Phadke",
+      "credit": "सुधीर वासुदेव नांदगावकर, चैतन्य कुंटे, माधव इमारते",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sudhir_Phadke_Image.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "photo": "./art/artists/sudhir-phadke.webp",
+      "width": 500,
+      "height": 653
+    },
+    {
+      "creator": "Hridaynath Mangeshkar",
+      "credit": "Auranade",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hridaynath-Mangeshkar-2008.JPG",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "photo": "./art/artists/hridaynath-mangeshkar.webp",
+      "width": 336,
+      "height": 280
+    },
+    {
+      "creator": "Kishore Kumar",
+      "credit": "India Post, Government of India",
+      "license": "GODL-India",
+      "source": "https://commons.wikimedia.org/wiki/File:Kishore_Kumar_2016_postcard_of_India_(cropped).jpg",
+      "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+      "photo": "./art/artists/kishore-kumar.webp",
+      "width": 500,
+      "height": 627
+    },
+    {
+      "creator": "Usha Mangeshkar",
+      "credit": "Bollywood Hungama",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Usha_Mangeshkar_2007_-_still_19426_crop.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "photo": "./art/artists/usha-mangeshkar.webp",
+      "width": 489,
+      "height": 680
+    },
+    {
+      "creator": "Jasleen Royal",
+      "credit": "Karanevilkataria",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Jasleen_Royal_performing_in_Rajasthan_(cropped).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "photo": "./art/artists/jasleen-royal.webp",
+      "width": 480,
+      "height": 640
+    },
+    {
+      "creator": "Ashok Patki",
+      "credit": "Yogee23",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ashok_Patki.JPG",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "photo": "./art/artists/ashok-patki.webp",
+      "width": 500,
+      "height": 437
+    },
+    {
+      "creator": "Kratex",
+      "credit": "Kratex · Official artist portrait",
+      "license": "Artist publicity photo",
+      "source": "https://kratex.in/about/",
+      "licenseUrl": "https://press.kratex.in/",
+      "photo": "./art/artists/kratex.webp",
+      "width": 453,
+      "height": 680
+    },
+    {
+      "creator": "Britney Spears",
+      "credit": "Glenn Francis",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Britney_Spears_2013_(Straighten_Crop).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "photo": "./art/artists/britney-spears.webp",
+      "width": 428,
+      "height": 680
+    },
+    {
+      "creator": "Michael Jackson",
+      "credit": "Matthew Rolston; Distributed by Epic Records",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Michael_Jackson_1983_(3x4_cropped)_(contrast).jpg",
+      "photo": "./art/artists/michael-jackson.webp",
+      "width": 500,
+      "height": 665
+    },
+    {
+      "creator": "George Michael",
+      "credit": "University of Houston Digital Library",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:George_Michael.jpeg",
+      "photo": "./art/artists/george-michael.webp",
+      "width": 479,
+      "height": 680
+    },
+    {
+      "creator": "Shakira",
+      "credit": "Junta de Andalucía",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2023-11-16_Gala_de_los_Latin_Grammy,_03_(cropped)02.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "photo": "./art/artists/shakira.webp",
+      "width": 500,
+      "height": 667
+    },
+    {
+      "creator": "David Guetta",
+      "credit": "Junta de Andalucía",
+      "license": "CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2023-11-16_Gala_de_los_Latin_Grammy,_22_(David_Guetta).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "photo": "./art/artists/david-guetta.webp",
+      "width": 477,
+      "height": 680
+    },
+    {
+      "creator": "DJ Snake",
+      "credit": "Arno Partissimo",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:DJS-Presskit05_(cropped).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "photo": "./art/artists/dj-snake.webp",
+      "width": 440,
+      "height": 680
+    },
+    {
+      "creator": "The Weeknd",
+      "credit": "Brian Ziff",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Weeknd_Portrait_by_Brian_Ziff.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "photo": "./art/artists/the-weeknd.webp",
+      "width": 454,
+      "height": 680
+    },
+    {
+      "creator": "Rihanna",
+      "credit": "SIGMA",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rihanna_Fenty_2018.png",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "photo": "./art/artists/rihanna.webp",
+      "width": 500,
+      "height": 666
+    },
+    {
+      "creator": "Marshmello",
+      "credit": "Stefan Brending ( 2eight )",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2016_Open_Beatz_-_Marshmello_-_by_2eight_-DSC_4448.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "photo": "./art/artists/marshmello.webp",
+      "width": 454,
+      "height": 680
+    },
+    {
+      "creator": "Taylor Swift",
+      "credit": "iHeartRadioCA",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_(3).png",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "photo": "./art/artists/taylor-swift.webp",
+      "width": 478,
+      "height": 680
+    },
+    {
+      "creator": "Daft Punk",
+      "credit": "Sony Music Entertainment, additional editing by W.carter",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Daft_Punk_in_2013_2-_centered.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "photo": "./art/artists/daft-punk.webp",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "creator": "Linkin Park",
+      "credit": "James Minchin III (rights holder), CeriRoberts (Warner Records representative)",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Linkin_Park_-_From_Zero_Lead_Press_Photo_-_James_Minchin_III.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "photo": "./art/artists/linkin-park.webp",
+      "width": 500,
+      "height": 375
+    },
+    {
+      "creator": "Oneohtrix Point Never",
+      "credit": "Warp Records",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:ONEOHTRIX_POINT_NEVER_(cropped).jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "photo": "./art/artists/oneohtrix-point-never.webp",
+      "width": 500,
+      "height": 651
+    },
+    {
+      "creator": "Adele",
+      "credit": "Marc E.",
+      "license": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Adele_2016.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "photo": "./art/artists/adele.webp",
+      "width": 500,
+      "height": 664
+    },
+    {
+      "creator": "Modern Talking",
+      "credit": "RCA Records",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Modern_Talking_(1985-87_RCA_Records_press_photo).jpg",
+      "photo": "./art/artists/modern-talking.webp",
+      "width": 500,
+      "height": 314
+    },
+    {
+      "creator": "Avicii",
+      "credit": "The Perfect World Foundation",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Avicii_2014_003cr.jpg",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "photo": "./art/artists/avicii.webp",
+      "width": 500,
+      "height": 672
+    }
+  ],
+  "quotes": [
+    {
+      "id": "tt0075314",
+      "text": "You talkin’ to me?",
+      "author": "Travis Bickle",
+      "rooms": [
+        "bathroom",
+        "theatre"
+      ],
+      "source": "https://www.youtube.com/watch?v=dB_5XEMH3mc"
+    },
+    {
+      "id": "tt0081505",
+      "text": "Here’s Johnny!",
+      "author": "Jack Torrance",
+      "rooms": [
+        "bathroom",
+        "theatre"
+      ],
+      "source": "https://www.youtube.com/watch?v=5V61_W1O65c"
+    },
+    {
+      "id": "tt0062622",
+      "text": "I’m sorry, Dave. I’m afraid I can’t do that.",
+      "author": "HAL 9000",
+      "rooms": [
+        "bathroom",
+        "bedroom",
+        "theatre"
+      ],
+      "source": "https://www.youtube.com/watch?v=Wy4EfdnMZ5g"
+    },
+    {
+      "id": "tt0098904",
+      "text": "Serenity now!",
+      "author": "Frank Costanza",
+      "rooms": [
+        "bedroom",
+        "bathroom",
+        "tv"
+      ],
+      "source": "https://www.youtube.com/watch?v=YBF_fDa8c24"
+    },
+    {
+      "id": "tt0386676",
+      "text": "How the turntables…",
+      "author": "Michael Scott",
+      "rooms": [
+        "bathroom",
+        "tv"
+      ],
+      "source": "https://www.youtube.com/watch?v=rQwZ6z68gdI"
+    },
+    {
+      "id": "tt0496424",
+      "text": "I want to go to there.",
+      "author": "Liz Lemon",
+      "rooms": [
+        "bedroom",
+        "tv"
+      ],
+      "source": "https://www.youtube.com/watch?v=8pEjiQ634to"
+    },
+    {
+      "id": "tt0487831",
+      "text": "Have you tried turning it off and on again?",
+      "author": "Roy Trenneman",
+      "rooms": [
+        "bathroom",
+        "tv"
+      ],
+      "source": "https://www.youtube.com/watch?v=01jnXkUaX1E"
+    },
+    {
+      "id": "tt0133093",
+      "text": "There is no spoon.",
+      "author": "Spoon Boy",
+      "rooms": [
+        "theatre",
+        "bedroom"
+      ],
+      "source": "https://www.youtube.com/watch?v=M95uj0dEgUY"
+    },
+    {
+      "id": "tt0057012",
+      "text": "Gentlemen, you can’t fight in here! This is the War Room!",
+      "author": "President Merkin Muffley",
+      "rooms": [
+        "theatre",
+        "bathroom"
+      ],
+      "source": "https://www.youtube.com/watch?v=WI5B7jLWZUc"
+    },
+    {
+      "id": "tt0072500",
+      "text": "Don’t mention the war!",
+      "author": "Basil Fawlty",
+      "rooms": [
+        "tv",
+        "bedroom"
+      ],
+      "source": "https://www.youtube.com/watch?v=yfl6Lu3xQW0"
+    },
+    {
+      "id": "tt12004706",
+      "text": "Dekh raha hai Binod?",
+      "author": "Bhushan",
+      "rooms": [
+        "tv",
+        "bedroom"
+      ],
+      "source": "https://www.youtube.com/watch?v=M_x7t9RkFc8&t=118s"
+    },
+    {
+      "id": "tt0098936",
+      "text": "A damn fine cup of coffee.",
+      "author": "Dale Cooper",
+      "rooms": [
+        "tv"
+      ],
+      "source": "https://www.youtube.com/watch?v=rpqIZmTmC5U"
+    },
+    {
+      "id": "tt0903747",
+      "text": "I am the one who knocks.",
+      "author": "Walter White",
+      "rooms": [
+        "tv",
+        "bedroom"
+      ],
+      "source": "https://www.youtube.com/watch?v=zAjJYkUnTEs"
+    },
+    {
+      "id": "tt0172495",
+      "text": "Are you not entertained?",
+      "author": "Maximus",
+      "rooms": [
+        "theatre"
+      ],
+      "source": "https://www.youtube.com/watch?v=HmdpjkM3onk"
+    },
+    {
+      "id": "tt0068646",
+      "text": "I believe in America.",
+      "author": "Amerigo Bonasera",
+      "rooms": [
+        "theatre"
+      ],
+      "source": "https://www.youtube.com/watch?v=eZHsmb4ezEk"
+    },
+    {
+      "id": "tt0111161",
+      "text": "Get busy living or get busy dying.",
+      "author": "Andy Dufresne",
+      "rooms": [
+        "theatre"
+      ],
+      "source": "https://www.youtube.com/watch?v=T2bE_Abo0q0"
+    },
+    {
+      "id": "tt0080684",
+      "text": "Do. Or do not. There is no try.",
+      "author": "Yoda",
+      "rooms": [
+        "theatre"
+      ],
+      "source": "https://www.starwars.com/databank/Yoda"
+    },
+    {
+      "id": "tt0245429",
+      "text": "Once you’ve met someone, you never really forget them.",
+      "author": "Zeniba",
+      "rooms": [
+        "bedroom",
+        "theatre"
+      ],
+      "source": "https://www.youtube.com/shorts/X1LUxt0KYdk"
+    }
+  ],
+  "memes": [
+    {
+      "id": "tt0210613",
+      "caption": "Went to the fair. Missed my century.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0249174",
+      "caption": "Spent longer finding a runway than actually flying.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0184666",
+      "caption": "Traveled seven years to put off doing the Water Temple.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0210061",
+      "caption": "Signed up to save the world. Got cast in an opera.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0217733",
+      "caption": "Saved up for a bicycle. My wallet stops one coin short.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0478230",
+      "caption": "Half my Pokémon team works in maritime transport.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0263641",
+      "caption": "Stepped into the Dark World. Apparently I’m a rabbit now.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0180825",
+      "caption": "Spent the equipment budget on one excellent cardboard box.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0365498",
+      "caption": "Camouflage report: the uniform matches. The waving crocodile hat does not.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0486673",
+      "caption": "The mountain moved. I’m still holding its ankle.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0420798",
+      "caption": "Spent the whole night choosing underglow. Still last on the grid.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt2315506",
+      "caption": "Won another block of Coast City. Still riding the bus home with my PSP.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0357718",
+      "caption": "Brought two SMGs. Forgot I might need a free hand for grenades.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0374692",
+      "caption": "Gravity gun acquired. Every radiator is coming with me.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt0397042",
+      "caption": "Saved Ashley. Kept the village eggs. Priorities.",
+      "rooms": [
+        "retro"
+      ]
+    },
+    {
+      "id": "tt6161168",
+      "caption": "Main quest tomorrow. The horse needs brushing.",
+      "rooms": [
+        "gaming"
+      ]
+    },
+    {
+      "id": "tt10562854",
+      "caption": "Put my runes in a safe place. Under the boss.",
+      "rooms": [
+        "gaming"
+      ]
+    },
+    {
+      "id": "tt14321832",
+      "caption": "We agreed on a plan. Apparently each of us heard a different plan.",
+      "rooms": [
+        "gaming"
+      ]
+    },
+    {
+      "id": "tt7651352",
+      "caption": "My GPS is the wind. Today I followed a fox instead.",
+      "rooms": [
+        "gaming"
+      ]
+    },
+    {
+      "id": "tt4795016",
+      "caption": "Found the shortcut to the bonfire. Immediately needed the bonfire.",
+      "rooms": [
+        "gaming"
+      ]
+    },
+    {
+      "id": "tt5807606",
+      "caption": "One more parcel. There’s definitely room above my head.",
+      "rooms": [
+        "gaming"
+      ]
+    },
+    {
+      "id": "tt9459718",
+      "caption": "Family dinner postponed. Dad is camping the exit again.",
+      "rooms": [
+        "gaming"
+      ]
+    },
+    {
+      "id": "tt4044024",
+      "caption": "The tall machine is a map. Naturally I have to climb it.",
+      "rooms": [
+        "gaming"
+      ]
+    },
+    {
+      "id": "tt21047286",
+      "caption": "Moved the shotgun two squares. The attaché case finally closes.",
+      "rooms": [
+        "gaming"
+      ]
+    },
+    {
+      "id": "tt1648163",
+      "caption": "Our co-op test results are in. One of us moved the portal.",
+      "rooms": [
+        "gaming"
+      ]
+    }
+  ]
+}

@@ -54,7 +54,7 @@ function stitchedFabric(){
   return new T.MeshStandardMaterial({map,roughness:.94});
 }
 
-export function buildGamingDesk({part,box,tv,speaker,block,shadow,walnut}){
+export function buildGamingDesk({part,box,tv,speaker,block,shadow}){
   // Model small objects around their own origin so the controls turn with their bodies.
   function placed(x,y,z,yaw=0){
     const pose=new T.Matrix4().makeRotationY(yaw).setPosition(x,y,z);
@@ -63,8 +63,12 @@ export function buildGamingDesk({part,box,tv,speaker,block,shadow,walnut}){
   }
 
   const top=.79,z=-1.66;
-  box(0,top-.031,z,3.26,.062,1.04,walnut);
-  box(0,top-.071,z,3.20,.02,.99,graphite);
+  const glass=new T.MeshStandardMaterial({color:'#a5c8c9',transparent:true,opacity:.32,depthWrite:false,metalness:.26,roughness:.15});
+  box(0,top-.009,z,3.26,.018,1.04,glass);
+  for(const side of [-1,1]){
+    box(0,top-.036,z+side*.50,3.24,.045,.026,alloy);
+    box(side*1.61,top-.036,z,.025,.045,1.00,alloy);
+  }
   for(const side of [-1,1]){
     const x=side*1.29;
     box(x,.371,z-.07,.086,.68,.12,graphite);
@@ -137,8 +141,21 @@ export function buildGamingDesk({part,box,tv,speaker,block,shadow,walnut}){
     pad('round',.054+dx,.0305,-.013+dz,.007,.005,.007,color);
 
   // Mesh-front PC with recessed fan hubs and a lit rim around each intake.
-  const pc=placed(1.01,.06,-1.59);
-  pc('cushion',0,.224,0,.235,.448,.43,graphite);
+  const pc=placed(1.13,top+.035,-1.46,-.25);
+  const lit=hex=>new T.MeshBasicMaterial({color:hex,toneMapped:false});
+  const rgb=['#72d5d7','#c583d0','#83b7ef'].map(lit);
+  for(const sign of [-1,1]){
+    pc('box',0,.224+sign*.216,0,.238,.018,.43,graphite);
+    pc('box',sign*.111,.224,-.209,.015,.432,.014,graphite);
+  }
+  pc('box',.109,.224,0,.009,.43,.406,graphite);
+  pc('box',-.114,.224,0,.004,.426,.405,glass);
+  pc('box',.101,.226,-.016,.009,.34,.30,rubber);
+  pc('box',.029,.158,.012,.14,.051,.273,alloy);
+  pc('box',-.043,.168,.012,.005,.008,.243,rgb[1]);
+  for(let i=0;i<3;i++)pc('box',.082,.315,.055+i*.025,.025,.094,.009,rgb[i]);
+  const cooler=new T.TorusGeometry(.045,.004,6,26);
+  pc(cooler,.051,.29,-.069,1,1,1,rgb[0],0,Math.PI/2);
   pc('box',0,.22,.213,.21,.412,.012,rubber);
   const rim=new T.TorusGeometry(.068,.003,6,32);
   for(const y of [.13,.29]){
@@ -149,11 +166,22 @@ export function buildGamingDesk({part,box,tv,speaker,block,shadow,walnut}){
       pc('leaf',.036*Math.sin(a),y+.036*Math.cos(a),.234,.030,.065,.006,alloy,0,0,-a-.45);
     }
     pc('round',0,y,.237,.038,.01,.038,graphite,Math.PI/2);
-    pc(rim,0,y,.238,1,1,1,pilot);
+    pc(rim,0,y,.238,1,1,1,rgb[y>.2?1:0]);
   }
   for(const side of [-1,1])pc('box',side*.08,-.032,0,.044,.055,.32,graphite);
   pc('box',.064,.404,.222,.028,.004,.005,pilot);
 
+  // The headband hangs on a padded rest, with its cups clear of the glass.
+  const hp=placed(-1.09,top,-1.41,.25);
+  hp('cushion',0,.011,0,.151,.022,.129,graphite);
+  hp('round',0,.139,-.016,.018,.252,.018,alloy);
+  hp('cushion',0,.270,0,.083,.021,.065,upholstery);
+  hp(new T.TorusGeometry(.087,.009,8,32,Math.PI),0,.196,.018,1,1,1,rubber);
+  for(const side of [-1,1]){
+    hp('cushion',side*.091,.163,.018,.031,.093,.073,graphite,0,0,side*-.10);
+    hp('cushion',side*.072,.163,.018,.019,.087,.067,upholstery);
+    hp('box',side*.109,.162,.018,.002,.035,.009,rgb[2]);
+  }
   // The chair is pulled back and turned toward the screen, leaving the controls visible.
   const chairX=-.52,chairZ=-.32;
   const chair=placed(chairX,0,chairZ,-.57);

@@ -1,0 +1,997 @@
+[
+  {
+    "id": "manga:dragon-ball",
+    "category": "manga",
+    "title": "Dragon Ball",
+    "creator": "Akira Toriyama",
+    "year": "2003",
+    "format": "Manga paperback",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/dragon-ball-volume-1/product/104",
+    "relatedAnimeIds": [
+      "tt0088509",
+      "tt0280249",
+      "tt0121220",
+      "tt0214341",
+      "tt1409055",
+      "tt21142804",
+      "tt29485149"
+    ],
+    "relation": "Source manga for Dragon Ball, Dragon Ball Z and Kai. Related franchise manga for the anime-original Daima.",
+    "description": "Bulma recruits a boy with a monkey tail to find seven wish-granting Dragon Balls.",
+    "edition": "Vol. 1 · English edition",
+    "isbn": "9781569319208",
+    "artwork": "./art/manga/9781569319208.webp",
+    "trimMm": [
+      127.0,
+      190.5
+    ],
+    "pages": 192,
+    "dimensions": [
+      127.0,
+      190.5,
+      11.2
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:dragon-ball-super",
+    "category": "manga",
+    "title": "Dragon Ball Super",
+    "creator": "Akira Toriyama and Toyotarou",
+    "year": "2017",
+    "format": "Manga paperback",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/dragon-ball-super-volume-1/product/5125",
+    "relatedAnimeIds": [
+      "tt4644488",
+      "tt39395275",
+      "tt14614892"
+    ],
+    "relation": "Parallel manga continuity for Super and its Beerus story. Later Super Hero chapters adapt the film.",
+    "description": "Beerus comes to Earth searching for a Super Saiyan God. The later Super Hero arc follows Piccolo and Gohan against the revived Red Ribbon Army.",
+    "edition": "Vol. 1 · English edition",
+    "isbn": "9781421592541",
+    "artwork": "./art/manga/9781421592541.webp",
+    "trimMm": [
+      127.0,
+      190.5
+    ],
+    "pages": 192,
+    "dimensions": [
+      127.0,
+      190.5,
+      11.2
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:death-note",
+    "category": "manga",
+    "title": "Death Note",
+    "creator": "Tsugumi Ohba and Takeshi Obata",
+    "year": "2005",
+    "format": "Manga paperback",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/death-note-volume-1/product/513",
+    "relatedAnimeIds": [
+      "tt0877057"
+    ],
+    "relation": "Source manga",
+    "description": "Light Yagami tests a notebook that can kill anyone whose name he writes in it.",
+    "edition": "Vol. 1 · English edition",
+    "isbn": "9781421501680",
+    "artwork": "./art/manga/9781421501680.webp",
+    "trimMm": [
+      127.0,
+      190.5
+    ],
+    "pages": 200,
+    "dimensions": [
+      127.0,
+      190.5,
+      11.6
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:monster",
+    "category": "manga",
+    "title": "Monster: The Perfect Edition",
+    "creator": "Naoki Urasawa",
+    "year": "2014",
+    "format": "Manga paperback",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/monster-volume-1/product/3451",
+    "relatedAnimeIds": [
+      "tt0434706"
+    ],
+    "relation": "Source manga",
+    "description": "A surgeon in Germany revisits the consequences of saving a young boy instead of a prominent patient.",
+    "edition": "Vol. 1 · English omnibus",
+    "isbn": "9781421569062",
+    "artwork": "./art/manga/9781421569062.webp",
+    "trimMm": [
+      146.0,
+      209.5
+    ],
+    "pages": 426,
+    "dimensions": [
+      146.0,
+      209.5,
+      23.1
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:takopi",
+    "category": "manga",
+    "title": "Takopi’s Original Sin",
+    "creator": "Taizan 5",
+    "year": "2023",
+    "format": "Manga paperback",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/takopi-s-original-sin/product/7652/paperback",
+    "relatedAnimeIds": [
+      "tt36988358"
+    ],
+    "relation": "Source manga",
+    "description": "An alien visits Earth hoping to make people happy and meets a child whose troubles his gadgets can’t solve.",
+    "edition": "Complete English edition",
+    "isbn": "9781974740345",
+    "artwork": "./art/manga/9781974740345.webp",
+    "trimMm": [
+      146.0,
+      209.5
+    ],
+    "pages": 416,
+    "dimensions": [
+      146.0,
+      209.5,
+      22.6
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:evangelion",
+    "category": "manga",
+    "title": "Neon Genesis Evangelion",
+    "creator": "Yoshiyuki Sadamoto",
+    "year": "2012",
+    "format": "Manga paperback",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/neon-genesis-evangelion-3-in-1-edition-volume-1/product/3182",
+    "relatedAnimeIds": [
+      "tt0112159"
+    ],
+    "relation": "Parallel manga retelling of the anime project",
+    "description": "Shinji arrives in Tokyo-3 and discovers why his estranged father has summoned him. Sadamoto tells his own version of the Evangelion story.",
+    "edition": "3-in-1 edition, Vol. 1 · English",
+    "isbn": "9781421550794",
+    "artwork": "./art/manga/9781421550794.webp",
+    "trimMm": [
+      146.0,
+      219.1
+    ],
+    "pages": 524,
+    "dimensions": [
+      146.0,
+      219.1,
+      28.1
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:spirited-away",
+    "category": "manga",
+    "title": "Spirited Away Film Comic",
+    "creator": "Hayao Miyazaki",
+    "year": "2002",
+    "format": "Manga paperback",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/film-comic/spirited-away-film-comics-volume-1/product/4731",
+    "relatedAnimeIds": [
+      "tt0245429"
+    ],
+    "relation": "Film comic adapted from the movie",
+    "description": "Frames from the film follow Chihiro as she crosses a tunnel and enters a bathhouse run by spirits.",
+    "edition": "Vol. 1 · English edition",
+    "isbn": "9781569317914",
+    "artwork": "./art/manga/9781569317914.webp",
+    "trimMm": [
+      127.0,
+      181.0
+    ],
+    "pages": 172,
+    "dimensions": [
+      127.0,
+      181.0,
+      10.2
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:mononoke",
+    "category": "manga",
+    "title": "Princess Mononoke Film Comic",
+    "creator": "Hayao Miyazaki",
+    "year": "2006",
+    "format": "Manga paperback",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/film-comic/princess-mononoke-film-comics-volume-1/product/737",
+    "relatedAnimeIds": [
+      "tt0119698"
+    ],
+    "relation": "Film comic adapted from the movie",
+    "description": "Ashitaka leaves home seeking a cure and enters a conflict between the forest gods and an iron-making settlement.",
+    "edition": "Vol. 1 · English edition",
+    "isbn": "9781421505978",
+    "artwork": "./art/manga/9781421505978.webp",
+    "trimMm": [
+      127.0,
+      181.0
+    ],
+    "pages": 176,
+    "dimensions": [
+      127.0,
+      181.0,
+      10.4
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:harlock",
+    "category": "manga",
+    "title": "Space Pirate Captain Harlock",
+    "creator": "Leiji Matsumoto",
+    "year": "1977",
+    "format": "Manga paperback",
+    "source": "Akita Shoten",
+    "sourceUrl": "https://www.akitashoten.co.jp/comics/4253063632",
+    "relatedAnimeIds": [
+      "tt0144736"
+    ],
+    "relation": "Related original Captain Harlock manga; SSX is an anime continuation of Arcadia of My Youth.",
+    "description": "Harlock and the crew of the Arcadia sail in defiance of Earth’s authorities as an invasion approaches.",
+    "edition": "Sunday Comics, Vol. 1 · Japanese",
+    "isbn": "9784253063630",
+    "artwork": "./art/manga/9784253063630.webp",
+    "dimensions": [
+      119,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:jojo",
+    "category": "manga",
+    "title": "JoJo’s Bizarre Adventure: Phantom Blood",
+    "creator": "Hirohiko Araki",
+    "year": "1987",
+    "format": "Manga paperback",
+    "source": "Shueisha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-851126-9",
+    "relatedAnimeIds": [
+      "tt2359704"
+    ],
+    "relation": "Source manga",
+    "description": "Jonathan Joestar’s life changes when his family takes in Dio Brando and a mysterious stone mask draws them into conflict.",
+    "edition": "Jump Comics, Vol. 1 · Japanese",
+    "isbn": "9784088511269",
+    "artwork": "./art/manga/9784088511269.webp",
+    "trimMm": [
+      112,
+      176
+    ],
+    "dimensions": [
+      112,
+      176,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:cowboy-bebop",
+    "category": "manga",
+    "title": "Cowboy Bebop",
+    "creator": "Yutaka Nanten and Hajime Yatate",
+    "year": "1999",
+    "format": "Manga paperback",
+    "source": "Kadokawa",
+    "sourceUrl": "https://www.kadokawa.co.jp/product/199999853078/",
+    "relatedAnimeIds": [
+      "tt0213338"
+    ],
+    "relation": "Official manga companion to the anime",
+    "description": "Nanten sends the bounty hunters of the Bebop on cases in the same spacefaring setting as the television series.",
+    "edition": "Asuka Comics DX, Vol. 1 · Japanese",
+    "isbn": "9784048530781",
+    "artwork": "./art/manga/9784048530781.webp",
+    "dimensions": [
+      115,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:your-name",
+    "category": "manga",
+    "title": "Your Name.",
+    "creator": "Makoto Shinkai and Ranmaru Kotone",
+    "year": "2017",
+    "format": "Manga paperback",
+    "source": "Yen Press",
+    "sourceUrl": "https://yenpress.com/titles/9780316558556-your-name-vol-1-manga",
+    "relatedAnimeIds": [
+      "tt5311514"
+    ],
+    "relation": "Manga adaptation of the film",
+    "description": "Mitsuha in the countryside and Taki in Tokyo start waking up in one another’s lives.",
+    "edition": "Vol. 1 · English manga edition",
+    "isbn": "9780316558556",
+    "artwork": "./art/manga/9780316558556.webp",
+    "trimMm": [
+      127,
+      190.5
+    ],
+    "pages": 180,
+    "dimensions": [
+      127,
+      190.5,
+      10.6
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211986",
+    "category": "manga",
+    "title": "Dragon Ball Z: Dead Zone — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1994",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421198100181335501",
+    "relatedAnimeIds": [
+      "tt0142235"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Garlic Jr. kidnaps Gohan while hunting the Dragon Balls that promise him immortality.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211986",
+    "artwork": "./art/manga/9784834211986.webp",
+    "dimensions": [
+      132,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211948",
+    "category": "manga",
+    "title": "Dragon Ball Z: The World's Strongest — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1994",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421194100181335501",
+    "relatedAnimeIds": [
+      "tt0142240"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "A scientist searches for a new body for Dr. Wheelo and draws Goku into an icy fortress.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211948",
+    "artwork": "./art/manga/9784834211948.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211924",
+    "category": "manga",
+    "title": "Dragon Ball Z: The Tree of Might — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1994",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421192100181335501",
+    "relatedAnimeIds": [
+      "tt0142233"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Turles plants a tree that drains Earth’s energy to produce fruit for his invading crew.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211924",
+    "artwork": "./art/manga/9784834211924.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211917",
+    "category": "manga",
+    "title": "Dragon Ball Z: Lord Slug — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1994",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421191100181335501",
+    "relatedAnimeIds": [
+      "tt0142244"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Lord Slug seizes the Dragon Balls and tries to turn Earth into a world his army can inhabit.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211917",
+    "artwork": "./art/manga/9784834211917.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211818",
+    "category": "manga",
+    "title": "Dragon Ball Z: Cooler's Revenge — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1992",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421181100181335501",
+    "relatedAnimeIds": [
+      "tt1125254"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Cooler comes to Earth searching for the Saiyan who defeated his brother Frieza.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211818",
+    "artwork": "./art/manga/9784834211818.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211825",
+    "category": "manga",
+    "title": "Dragon Ball Z: The Return of Cooler — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1992",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421182100181335501",
+    "relatedAnimeIds": [
+      "tt0142237"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Goku and his friends visit New Namek and encounter an army of mechanical Coolers.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211825",
+    "artwork": "./art/manga/9784834211825.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211849",
+    "category": "manga",
+    "title": "Dragon Ball Z: Super Android 13! — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1993",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421184100181335501",
+    "relatedAnimeIds": [
+      "tt0142241"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Three androids carrying Dr. Gero’s orders attack Goku and his friends.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211849",
+    "artwork": "./art/manga/9784834211849.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211887",
+    "category": "manga",
+    "title": "Dragon Ball Z: Bojack Unbound — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1993",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421188100181335501",
+    "relatedAnimeIds": [
+      "tt0142238"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "An exhibition tournament turns dangerous when Bojack and his fighters take the arena.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211887",
+    "artwork": "./art/manga/9784834211887.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211979",
+    "category": "manga",
+    "title": "Dragon Ball Z: Broly - Second Coming — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1994",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421197100181335501",
+    "relatedAnimeIds": [
+      "tt0142239"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Goten, Trunks and Videl find a sleeping Broly in a mountain village.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211979",
+    "artwork": "./art/manga/9784834211979.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834213133",
+    "category": "manga",
+    "title": "Dragon Ball Z: Bio-Broly — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1994",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421313100181335501",
+    "relatedAnimeIds": [
+      "tt0142234"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Goten and Trunks stumble on a laboratory that has grown a dangerous copy of Broly.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834213133",
+    "artwork": "./art/manga/9784834213133.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834214123",
+    "category": "manga",
+    "title": "Dragon Ball Z: Wrath of the Dragon — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1995",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421412100181335501",
+    "relatedAnimeIds": [
+      "tt0142243"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Tapion carries a secret that threatens to unleash the monster Hirudegarn.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834214123",
+    "artwork": "./art/manga/9784834214123.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211832",
+    "category": "manga",
+    "title": "Dragon Ball Z: Bardock - The Father of Goku — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1993",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421183100181335501",
+    "relatedAnimeIds": [
+      "tt0142245"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Bardock sees disturbing visions as Frieza turns against the Saiyans.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211832",
+    "artwork": "./art/manga/9784834211832.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834211856",
+    "category": "manga",
+    "title": "Dragon Ball Z: The History of Trunks — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1993",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421185100181335501",
+    "relatedAnimeIds": [
+      "tt0142247"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "In a future ruled by androids, Gohan trains Trunks to defend the people still alive.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834211856",
+    "artwork": "./art/manga/9784834211856.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834213140",
+    "category": "manga",
+    "title": "Dragon Ball: Curse of the Blood Rubies — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1995",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421314100314335501",
+    "relatedAnimeIds": [
+      "tt0142251",
+      "tt2155428"
+    ],
+    "relation": "Film comic of an individual movie included in the Harmony Gold compilation.",
+    "description": "Goku and Bulma encounter an extravagant king whose appetite is destroying his country.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834213140",
+    "artwork": "./art/manga/9784834213140.webp",
+    "dimensions": [
+      133,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834213157",
+    "category": "manga",
+    "title": "Dragon Ball: Sleeping Princess in Devil's Castle — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1995",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421315100314335501",
+    "relatedAnimeIds": [
+      "tt0142249"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Goku and Krillin compete for the chance to train with Master Roshi.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834213157",
+    "artwork": "./art/manga/9784834213157.webp",
+    "dimensions": [
+      115.3,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834213171",
+    "category": "manga",
+    "title": "Dragon Ball: Mystical Adventure — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1995",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421317100314335501",
+    "relatedAnimeIds": [
+      "tt0142248",
+      "tt2155428"
+    ],
+    "relation": "Film comic of an individual movie included in the Harmony Gold compilation.",
+    "description": "A martial arts tournament brings Goku and his friends into a plot inside Emperor Chiaotzu’s court.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834213171",
+    "artwork": "./art/manga/9784834213171.webp",
+    "dimensions": [
+      132,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834214192",
+    "category": "manga",
+    "title": "Dragon Ball: The Path to Power — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1996",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421419100314335501",
+    "relatedAnimeIds": [
+      "tt0142250"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "An anniversary retelling brings Goku’s meeting with Bulma together with his fight against the Red Ribbon Army.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834214192",
+    "artwork": "./art/manga/9784834214192.webp",
+    "dimensions": [
+      128.2,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834215250",
+    "category": "manga",
+    "title": "Dragon Ball GT: A Hero's Legacy — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "1997",
+    "format": "Manga paperback",
+    "source": "Shueisha / Home-sha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=83421525100525335501",
+    "relatedAnimeIds": [
+      "tt0142232"
+    ],
+    "relation": "Official film comic of the animated story",
+    "description": "Goku Jr. searches for the four-star Dragon Ball after Pan falls ill.",
+    "edition": "Jump Anime Comics · Japanese print edition",
+    "isbn": "9784834215250",
+    "artwork": "./art/manga/9784834215250.webp",
+    "dimensions": [
+      128.2,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834232073",
+    "category": "manga",
+    "title": "Dragon Ball Z: Broly – The Legendary Super Saiyan — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "2013",
+    "format": "Manga paperback",
+    "source": "Shueisha",
+    "sourceUrl": "https://www.homesha.co.jp/products/items/isbn-978-4-8342-3207-3/",
+    "relatedAnimeIds": [
+      "tt0142242"
+    ],
+    "relation": "Official film comic of the movie",
+    "description": "Paragus brings Vegeta to a new planet, where a Saiyan named Broly hides an extraordinary power.",
+    "edition": "New print edition · Japanese",
+    "isbn": "9784834232073",
+    "artwork": "./art/manga/9784834232073.webp",
+    "dimensions": [
+      133,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784834232257",
+    "category": "manga",
+    "title": "Dragon Ball Z: Fusion Reborn — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "2014",
+    "format": "Manga paperback",
+    "source": "Shueisha",
+    "sourceUrl": "https://www.homesha.co.jp/products/items/isbn-978-4-8342-3225-7/",
+    "relatedAnimeIds": [
+      "tt0142236"
+    ],
+    "relation": "Official film comic of the movie",
+    "description": "Goku and Vegeta face Janemba after a disturbance breaks down the barrier between worlds.",
+    "edition": "New print edition · Japanese",
+    "isbn": "9784834232257",
+    "artwork": "./art/manga/9784834232257.webp",
+    "dimensions": [
+      128,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784088708836",
+    "category": "manga",
+    "title": "Dragon Ball Z: Battle of Gods — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "2013",
+    "format": "Manga paperback",
+    "source": "Shueisha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-870883-6",
+    "relatedAnimeIds": [
+      "tt2263944"
+    ],
+    "relation": "Official film comic of the movie",
+    "description": "Beerus interrupts a birthday party on Earth in his search for a warrior from a dream.",
+    "edition": "Jump Comics · Japanese print edition",
+    "isbn": "9784088708836",
+    "artwork": "./art/manga/9784088708836.webp",
+    "dimensions": [
+      116,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784088806969",
+    "category": "manga",
+    "title": "Dragon Ball Z: Resurrection ‘F’ — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "2015",
+    "format": "Manga paperback",
+    "source": "Shueisha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-880696-9",
+    "relatedAnimeIds": [
+      "tt3819668"
+    ],
+    "relation": "Official film comic of the movie",
+    "description": "Frieza returns with a new form and an army to challenge Earth’s defenders.",
+    "edition": "Jump Comics · Japanese print edition",
+    "isbn": "9784088806969",
+    "artwork": "./art/manga/9784088806969.webp",
+    "dimensions": [
+      115,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784088820026",
+    "category": "manga",
+    "title": "Dragon Ball Super: Broly — Film Comic",
+    "creator": "Akira Toriyama (original work)",
+    "year": "2019",
+    "format": "Manga paperback",
+    "source": "Shueisha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-882002-6",
+    "relatedAnimeIds": [
+      "tt7961060"
+    ],
+    "relation": "Official film comic of the movie",
+    "description": "Goku and Vegeta encounter Broly, a Saiyan raised in isolation by his father Paragus.",
+    "edition": "Jump Comics · Japanese print edition",
+    "isbn": "9784088820026",
+    "artwork": "./art/manga/9784088820026.webp",
+    "dimensions": [
+      115,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784088821597",
+    "category": "manga",
+    "title": "Dragon Ball GT: Shadow Dragon Saga",
+    "creator": "Akira Toriyama (original work)",
+    "year": "2019",
+    "format": "Manga paperback",
+    "source": "Shueisha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-882159-7",
+    "relatedAnimeIds": [
+      "tt0139774"
+    ],
+    "relation": "Anime comic adapting the Shadow Dragon arc of Dragon Ball GT.",
+    "description": "Goku sets out to purify the Dragon Balls after their collected negative energy gives rise to the Shadow Dragons.",
+    "edition": "Vol. 1 · Japanese film comic",
+    "isbn": "9784088821597",
+    "artwork": "./art/manga/9784088821597.webp",
+    "dimensions": [
+      115,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:9784088818504",
+    "category": "manga",
+    "title": "Super Dragon Ball Heroes: Universe Mission!!",
+    "creator": "Yoshitaka Nagayama",
+    "year": "2019",
+    "format": "Manga paperback",
+    "source": "Shueisha",
+    "sourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-881850-4",
+    "relatedAnimeIds": [
+      "tt8433216"
+    ],
+    "relation": "Parallel manga of the Universe Mission story from Super Dragon Ball Heroes.",
+    "description": "Goku and Vegeta travel to the Prison Planet in search of Future Trunks.",
+    "edition": "Vol. 1 · Japanese edition",
+    "isbn": "9784088818504",
+    "artwork": "./art/manga/9784088818504.webp",
+    "dimensions": [
+      115,
+      182,
+      10.8
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:vjump-2009-05",
+    "category": "manga",
+    "title": "Dragon Ball: The Return of Son Goku and Friends!",
+    "creator": "Naho Ooishi and Akira Toriyama",
+    "year": "2009",
+    "format": "Manga paperback",
+    "source": "V Jump / Suruga-ya print catalogue",
+    "sourceUrl": "https://www.suruga-ya.jp/product/detail/WO4860",
+    "relatedAnimeIds": [
+      "tt1317478"
+    ],
+    "relation": "Manga adaptation of the animated special",
+    "description": "Goku’s friends gather for a celebration when Vegeta’s younger brother arrives with unexpected news.",
+    "edition": "Part 1 of 2 · May 2009 V Jump supplement",
+    "artwork": "./art/manga/vjump-2009-05.webp",
+    "pages": 36,
+    "dimensions": [
+      131,
+      190,
+      3.2
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:episode-of-bardock",
+    "category": "manga",
+    "title": "Dragon Ball: Episode of Bardock",
+    "creator": "Naho Ooishi and Akira Toriyama",
+    "year": "2014",
+    "format": "Manga paperback",
+    "source": "Saikyō Jump / Suruga-ya print catalogue",
+    "sourceUrl": "https://www.suruga-ya.jp/product/detail/WO4030",
+    "relatedAnimeIds": [
+      "tt2980736"
+    ],
+    "relation": "Source manga for the animated special",
+    "description": "Bardock awakens on a planet that resembles his lost home and confronts the space pirate Chilled.",
+    "edition": "March 2014 Saikyō Jump supplement · Japanese",
+    "artwork": "./art/manga/episode-of-bardock.webp",
+    "pages": 84,
+    "dimensions": [
+      116,
+      182,
+      5.7
+    ],
+    "estimatedSize": true
+  }
+]

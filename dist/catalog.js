@@ -1,12 +1,14 @@
-const load = async path => {
-  const response = await fetch(new URL(path, import.meta.url));
-  if (!response.ok) throw new Error("Unable to read the store catalog");
-  return response.json();
-};
-const [screenTitles, music, books, playlistSources, trailerSources, editions, previews] = await Promise.all([
-  load("imdb-items.json"), load("spotify-items.json"), load("book-items.json"), load("playlists.json"), load("trailers.json").catch(()=>({})),
-  load("game-editions.json"), load("music-previews.json")
-]);
+import {retroPackage} from './game-packages.js';
+const files=['imdb-items','spotify-items','book-items','playlists','trailers','game-editions','music-previews','manga-items','item-descriptions','poster-content'];
+export async function loadCollections(cache='default'){
+  return Promise.all(files.map(async name=>{
+    const response=await fetch(new URL('./'+name+'.json',import.meta.url),{cache});
+    if(!response.ok)throw new Error('Unable to load '+name);
+    return response.json();
+  }));
+}
+const [screenTitles,music,books,playlistSources,trailerSources,editions,previews,manga,descriptions,editorial]=await loadCollections();
+export const posterContent=editorial;
 export const trailerStreams = trailerSources;
 export const musicPreviews = previews;
 export const playlists = playlistSources;
@@ -20,21 +22,26 @@ export const CATEGORIES = [
   ['anime','Anime series','ANIME SERIES','BOX SET','#a4a4a4'],
   ['playstation','PlayStation discs','PLAYSTATION','DISC','#3a69ab'],
   ['xbox','Xbox discs','XBOX','DISC','#56834e'],
-  ['cartridges','Game cartridges','CARTRIDGES','CART','#8875b5'],
+  ['retro-games','Retro boxed games','BOXED GAMES','BOX','#8875b5'],
+  ['switch','Nintendo Switch','SWITCH','CASE','#ac4947'],
   ['game-discs','Other game editions','GAME ARCHIVE','CASE','#778380'],
   ['vinyl','Vinyl records','VINYL','LP','#bd6480'],
   ['cassettes','Cassettes','CASSETTES','TAPE','#c9934e'],
   ['cds','Music CDs','COMPACT DISCS','CD','#6c9c70'],
-  ['books','Books','BOOKS','BOOK','#937d61']
+  ['books','Books','BOOKS','BOOK','#937d61'],
+  ['manga','Manga','MANGA','MANGA','#a56a53']
 ].map(([id,label,short,format,accent])=>({id,label,short,format,accent}));
-export const gameCategories=['playstation','xbox','game-discs','cartridges'];
+export const gameCategories=['playstation','xbox','game-discs','retro-games','switch'];
 export const screenCategories=['movies','anime-movies','shows','anime',...gameCategories];
 const titles=screenTitles.map(item=>{
   const edition=editions[item.id];
-  if(!edition)return item;
-  const consoleDisc=item.category==='game-discs' && ['playstation','xbox'].includes(edition.shelf);
-  return {...item,...(edition.artwork?{artwork:edition.artwork,igdbUrl:edition.igdbUrl}:{}),
-    ...(consoleDisc?{category:edition.shelf,platform:edition.platform,edition:edition.edition||'',format:edition.platform+' disc'}:{})};
+  if(!['cartridges','game-discs'].includes(item.category))return item;
+  const platform=edition?.platform||item.platform||'';
+  const retro=retroPackage(platform);
+  const category=retro?'retro-games':/^Nintendo Switch/i.test(platform)?'switch':['playstation','xbox'].includes(edition?.shelf)?edition.shelf:'game-discs';
+  return {...item,category,platform,edition:edition?.edition||'',
+    format:retro?platform+' boxed edition':category==='switch'?'Nintendo Switch retail case':platform?platform+' disc':item.format,
+    ...(edition?.artwork?{artwork:edition.artwork,igdbUrl:edition.igdbUrl}:{})};
 });
 export const categoryById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 // Merge multiple Spotify editions with the same credited artist and album title.
@@ -51,9 +58,15 @@ for(const item of music){
 const retainedMusic=music.filter(item=>releases.get(releaseKey(item)).album.albumUri===item.albumUri)
   .map(item=>({...item,playlists:[...releases.get(releaseKey(item)).lists]}));
 const seen = new Set();
-export const ITEMS = [...titles, ...retainedMusic, ...books].filter(item => {
+export const ITEMS = [...titles, ...retainedMusic, ...books, ...manga].filter(item => {
   const key = item.albumUri ? item.albumUri + "|" + item.category : item.id;
   if (seen.has(key)) return false;
   seen.add(key);
   return true;
-}).map(item => ({...item, accent: categoryById[item.category].accent}));
+}).map(item=>{
+  const note=descriptions[item.id]||descriptions[item.albumUri];
+  const sourceText=item.description||note?.text;
+  const extra=item.album&&item.featuredTrack?' Its playlist selection includes “'+item.featuredTrack+'”.':'';
+  return {...item,description:sourceText||[item.title,item.creator?'by '+item.creator:'',item.year?'('+item.year+')':''].filter(Boolean).join(' ')+'.'+extra,
+    descriptionSource:note?.sourceUrl||item.sourceUrl,accent:categoryById[item.category].accent};
+});

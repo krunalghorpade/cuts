@@ -2,7 +2,7 @@ import * as T from './vendor/three.module.js';
 import {rooms, rise, stair, openingsFor, roomAt} from './plan.js';
 import {makeDoor} from './doors.js';
 import {addTelevision} from './displays.js';
-import {cinemaRoom,listeningStation,gameConsoles,arcadeCabinets} from './media-rooms.js';
+import {cinemaRoom,listeningStation,arcadeCabinets} from './media-rooms.js';
 import {collectibleShelves} from './collectibles.js';
 import {buildGamingDesk} from './gaming-desk.js';
 
@@ -57,7 +57,13 @@ function textureMaterial(draw,w=512,h=256){
   const map=new T.CanvasTexture(canvas);map.colorSpace=T.SRGBColorSpace;return new T.MeshBasicMaterial({map});
 }
 const shadowMat=(()=>{const m=textureMaterial((g,w,h)=>{const v=g.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);v.addColorStop(0,'rgba(15,10,5,.72)');v.addColorStop(.55,'rgba(15,10,5,.45)');v.addColorStop(1,'rgba(15,10,5,0)');g.fillStyle=v;g.fillRect(0,0,w,h);},96,96);m.transparent=true;m.depthWrite=false;return m})();
-export function buildInterior(scene, label){
+import {dressRooms} from './room-props.js';
+import {dressGamingRoom} from './modern-room.js';
+import {brotherhoodStatue} from './brotherhood-statue.js';
+import {buildRetroShowcase} from './retro-showcase.js';
+
+export function buildInterior(scene,label,items,editorial){
+  const featureStock=new Map();
   const shelfBounds=[], floors=[], obstacles=[], occluders=[], doors=[], screens=[], devices=[];
   scene.add(new T.HemisphereLight('#f9e9d7','#716f68',1.38));
   const sun=new T.DirectionalLight('#fff1df',1.55);sun.position.set(-5,9,5);scene.add(sun);
@@ -212,6 +218,7 @@ export function buildInterior(scene, label){
       cabinet(11.1,8.46,4.7);box(11.1,.88,8.44,4.78,.12,.8,stone);box(10,.956,8.39,.69,.012,.42,dark);box(10,1.12,8.61,.035,.34,.035,iron);box(10,1.28,8.53,.035,.035,.17,iron);
       box(12.34,1.17,8.43,.69,.45,.46,iron);box(12.33,1.17,8.19,.5,.3,.02,'#54585a');box(13.37,1.07,7.92,.86,2.1,.81,'#8d928d');box(13.37,1.31,7.5,.85,.025,.02,dark);block(13.37,7.92,.86,.81);
       table(11.1,6.6,2.8,.7,.98);for(const xx of [10.45,11.74]){cyl(xx,.63,5.93,.46,.08,.46,walnut);for(const a of [-1,1])for(const b of [-1,1])box(xx+.135*a,.31,5.93+.13*b,.037,.6,.037,iron);block(xx,5.93,.46,.46);}
+      dressRooms({part,box,cyl,oval,group,label,walnut,items,editorial,featureStock});
       lightStrip(11.2,1.97,8.67,3.5,.19);plant(8.6,8.25,1.3);spot(11.6,2.8,7.4,28,8);
     }else{
       cove(-4,-5.88,7.3,3.04);cove(4,-5.88,7.3,3.04);
@@ -220,11 +227,30 @@ export function buildInterior(scene, label){
       rug(0,.32,5.65,4.62);
       buildGamingDesk({part,box,tv,speaker,block,shadow,walnut});
       originX=0;
-      gameConsoles({box,cyl,oval});
+      const gamingProps={part,box,cyl,oval,group,block,label,walnut,shelfBounds,shadow};
+      dressGamingRoom(gamingProps);brotherhoodStatue(gamingProps);
       collectibleShelves({group,box,cyl,walnut,block,shelfBounds,label});
       table(-8.7,8.6,1.85,.81,.82);seat(-10.06,8.6,.78,-Math.PI/2);plant(-12.2,6.7,1.75);
-      cabinet(9.67,-1.65,1.72);tv(9.67,-1.65,1.48,1.51,true,true);
-      arcadeCabinets({group,box,cyl,block,label,shadow,devices});
+      // The east wall faces the west doorway. The centre of the glass sits on its sightline.
+      const crtX=14.39,crtZ=-2.25,crtY=1.51,crtWidth=1.48,crtDepth=crtWidth*.57;
+      box(crtX,.41,crtZ,.81,.75,1.91,walnut);box(crtX,.824,crtZ,.87,.063,1.99,dark);block(crtX,crtZ,.87,1.99);
+      box(crtX,crtY,crtZ,crtDepth,crtWidth*.8,crtWidth,iron);
+      box(crtX,.883,crtZ,.53,.072,.73,iron);
+      const crt=addTelevision(group,'retro',crtX-crtDepth/2-.003,crtY+.01,crtZ,crtWidth*.91,crtWidth*.91*.75,false,true);
+      crt.screen.rotation.y=-Math.PI/2;screens.push(crt);
+      for(let i=0;i<5;i++)box(crtX-crtDepth/2-.004,1.015,crtZ+.42+i*.043,.009,.015,.029,'#7d807d');
+      box(crtX-crtDepth/2-.006,1.015,crtZ+.65,.011,.012,.016,'#7eae75');
+      buildRetroShowcase({part,box,cyl,oval,group,block,label,walnut,shelfBounds});
+      // Keep the whole doorway-to-screen cone clear, including the edges of the CRT.
+      // The two coin-ops share the east wall farther north, facing the seating area.
+      const arcadeGroup=new T.Group();
+      const arcadeX=15.90,arcadeZ=6.17;
+      arcadeGroup.rotation.y=Math.PI/2;arcadeGroup.position.set(arcadeX,0,arcadeZ);arcadeGroup.updateMatrix();group.add(arcadeGroup);
+      const oriented=shape=>(x,y,z,w,h,d,m,rx=0,ry=0,rz=0)=>part(shape,x,y,z,w,h,d,m,rx,ry,rz,arcadeGroup.matrix);
+      arcadeCabinets({group:arcadeGroup,box:oriented('box'),cyl:oriented('round'),label,devices,
+        block:(x,z,w,d)=>{block(arcadeX+z,arcadeZ-x,d,w);shelfBounds.push({level,x:arcadeX+z,z:arcadeZ-x,w:d,d:w,bottom:0,top:2.05});},
+        shadow:(x,z,w,d)=>shadow(arcadeX+z,arcadeZ-x,d,w)});
+
       const arcadeRug='#303045';
       box(11.72,.022,-4.69,5.82,.022,4.68,arcadeRug);
       for(let i=0;i<8;i++)for(let j=0;j<5;j++){
@@ -232,8 +258,8 @@ export function buildInterior(scene, label){
         box(x,.035,z,.105,.004,.021,(i+j)%2?'#527e7d':'#98738e',0,-.56);
         box(x+.062,.036,z+.012,.047,.004,.019,'#b99867',0,.64);
       }
-      for(const h of [2.61,2.68])box(12.1,h,-1.106,5.4,.018,.016,h<2.65?'#4f8c92':'#98769b');
-      sign('ARCADE',12.27,2.42,-1.124,2.2,Math.PI);
+      for(const h of [3.31,3.38])box(12.1,h,-1.106,5.4,.018,.016,h<3.35?'#4f8c92':'#98769b');
+      sign('RETRO GAMING ROOM',12.27,3.065,-1.124,2.52,Math.PI);
       const arcadeLight=new T.PointLight('#a091c5',5,5,1.8);arcadeLight.position.set(12,2.20,-2.48);group.add(arcadeLight);shelf(11.1,8.52,4.82,2.8,'objects',Math.PI);shelf(13.53,6,2.6,2.42,'objects',-Math.PI/2);
       plant(-3.24,-4.44,1.47);plant(7.2,5.15,1.45);plant(14.23,-6.85,1.5);plant(8.7,8.36,1.4);
       spot(4,2.9,-1.8,18,9);spot(-2.9,2.8,4.63,13,7);spot(-8.5,3,9.5,24,8);spot(11.3,3,-6.2,28,9);spot(11.1,2.8,7.25,23,7);
@@ -243,5 +269,5 @@ export function buildInterior(scene, label){
       group.add(new T.Mesh(geo,material));
     }
   }
-  return {floors,obstacles,occluders,doors,screens,devices,shelfBounds};
+  return {floors,obstacles,occluders,doors,screens,devices,shelfBounds,featureStock};
 }

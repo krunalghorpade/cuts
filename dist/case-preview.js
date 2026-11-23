@@ -124,7 +124,7 @@ export function createCasePreview(canvas, items) {
         continue;
       }
       model=group;
-      if(record.category!=='cartridges'){
+      {
         const back=new THREE.Mesh(new THREE.PlaneGeometry(spec.w*.94,spec.h*.94),displayLabel(item,spec));
         back.rotation.y=Math.PI;back.position.z=-spec.d/2-.00012;
         model.add(back);decorations.push(back);

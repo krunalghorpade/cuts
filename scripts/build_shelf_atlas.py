@@ -9,10 +9,16 @@ dest = DIST / "art" / "shelves"
 dest.mkdir(parents=True, exist_ok=True)
 editions = json.loads((DIST / "game-editions.json").read_text()) if (DIST / "game-editions.json").exists() else {}
 items = [dict(i, artwork=editions.get(i["id"], {}).get("artwork") or i.get("artwork"))
-         for src in ("imdb-items", "spotify-items", "book-items")
+         for src in ("imdb-items", "spotify-items", "book-items", "manga-items")
          for i in json.loads((DIST / (src + ".json")).read_text())]
 art = sorted({i["artwork"] for i in items
               if (i.get("artwork") or "").startswith("./art/") and (DIST / i["artwork"]).is_file()})
+# Keep stable slots for existing covers when appending a new collection.
+index_file = dest / "index.json"
+if index_file.exists():
+    available = set(art)
+    old = [path for path in json.loads(index_file.read_text())["art"] if path in available]
+    art = old + sorted(available.difference(old))
 for start in range(0, len(art), GRID * GRID):
     sheet = Image.new("RGB", (GRID*TILE, GRID*TILE))
     for slot, path in enumerate(art[start:start + GRID*GRID]):

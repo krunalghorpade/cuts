@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList, trailerStreams, musicPreviews } from './catalog.js';
+import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList, trailerStreams, musicPreviews, posterContent, loadCollections } from './catalog.js';
 import {installMusicPlayers} from './music-players.js';
 import {installArcade} from './arcade.js';
 import { buildInterior } from './interior.js';
@@ -55,10 +55,16 @@ function label(parent, text, x, y, z, w, h, opts = {}) {
   plane.position.set(x, y, z); parent.add(plane); return plane;
 }
 
-const interior=buildInterior(scene,label);
+let layoutSeed=0, restoredVisit=null;
+try{
+  layoutSeed=Number(sessionStorage.getItem('myroom.shelfSeed'))>>>0;
+  const pending=sessionStorage.getItem('myroom.refreshVisit');
+  if(pending){restoredVisit=JSON.parse(pending);sessionStorage.removeItem('myroom.refreshVisit');}
+}catch{}
+const interior=buildInterior(scene,label,ITEMS,posterContent);
 const displayTargets=[[],[]];
-const {stacks,interactables,destinations,roomStock}=stockRooms(interior,box,label);
-const updatePosters=installPosters(interior.floors,ITEMS,displayTargets,interior.shelfBounds);
+const {stacks,interactables,destinations,roomStock}=stockRooms(interior,box,label,layoutSeed);
+const updatePosters=installPosters(interior,roomStock,displayTargets,posterContent);
 const updateTVs=installTelevisions(canvas,interior.screens,roomStock,trailerStreams,openDetail);
 for(const device of interior.devices){
   const targets=displayTargets[device.userData.level-1];targets.push(device);
@@ -102,7 +108,7 @@ async function enrichAudio(item){
   const album=await audioCache.get(key);if(currentDetailId!==item.id||!album)return;
   extra.replaceChildren();
   if(album.strGenre){const tag=document.createElement('strong');tag.textContent=album.strGenre.toUpperCase();extra.append(tag);}
-  if(album.strDescriptionEN){const desc=document.createElement('p');desc.textContent=album.strDescriptionEN.slice(0,270)+(album.strDescriptionEN.length>270?'…':'');extra.append(desc);}
+  if(!item.description&&album.strDescriptionEN){const desc=document.createElement('p');desc.textContent=album.strDescriptionEN.slice(0,270)+(album.strDescriptionEN.length>270?'…':'');extra.append(desc);}
   if(extra.childNodes.length)extra.classList.remove('hidden');
 }
 const sections=new Map();
@@ -123,6 +129,27 @@ function openDetail(item){
   showDetailItem();
   $('closeDetail').focus({preventScroll:true});
 }
+const catalogById=new Map(ITEMS.map(item=>[item.id,item]));
+function showRelated(item){
+  const panel=$('relatedTitles');panel.replaceChildren();
+  const ids=item.relatedAnimeIds||ITEMS.filter(book=>book.category==='manga'&&book.relatedAnimeIds?.includes(item.id)).map(book=>book.id);
+  const works=ids.map(id=>catalogById.get(id)).filter(Boolean);
+  panel.classList.toggle('hidden',!works.length);
+  if(works.length){
+    const heading=document.createElement('h3');heading.textContent=item.category==='manga'?'Related anime':'On the manga shelf';panel.append(heading);
+    if(item.relation){const p=document.createElement('p');p.textContent=item.relation;panel.append(p);}
+    for(const work of works){
+      const button=document.createElement('button');button.type='button';button.textContent=work.title;button.onclick=()=>openDetail(work);panel.append(button);
+    }
+  }
+  const credit=$('posterCredit');credit.replaceChildren();
+  const artist=item.album&&posterContent.artists.find(a=>a.creator===item.creator);
+  credit.classList.toggle('hidden',!artist);
+  if(artist){
+    const a=document.createElement('a');a.textContent='Artist poster · '+(artist.credit||artist.creator);a.href=artist.source;a.target='_blank';a.rel='noopener noreferrer';credit.append(a);
+    if(artist.licenseUrl){const l=document.createElement('a');l.textContent=artist.license;l.href=artist.licenseUrl;l.target='_blank';l.rel='noopener noreferrer';credit.append(' · ',l);}
+  }
+}
 function turnItem(direction){
   const next=detailIndex+direction;
   if(next<0 || next>=detailItems.length)return;
@@ -139,7 +166,9 @@ function showDetailItem(direction=0){
   detailPanel.scrollTop=0;
   preview.show(item,prev,next,direction);
   $('audioExtra').classList.add('hidden');
-  $('sizeLabel').textContent=item.category==='books' ? (item.estimatedSize?'Estimated size':'Book size') : 'Case size';
+  $('itemDescription').textContent=item.description;
+  showRelated(item);
+  $('sizeLabel').textContent=['books','manga'].includes(item.category) ? (item.estimatedSize?'Estimated size':'Book size') : 'Case size';
   $('detailSize').textContent=caseSpec(item).dimensions.join(' × ')+' mm';
   $('detailCategory').textContent=categoryById[item.category].label;$('detailTitle').textContent=item.title;
   $('detailCreator').textContent=item.creator;$('detailYear').textContent=item.year;$('detailFormatValue').textContent=caseSpec(item).label;$('detailSource').textContent=item.source;
@@ -205,7 +234,7 @@ function renderCatalog(){
   grid.scrollTop=0;
   for(const item of ITEMS){
     if(filter!=='all' && item.category!==filter) continue;
-    if(q && ![item.title,item.creator,item.year,categoryById[item.category].label].join(' ').toLowerCase().includes(q)) continue;
+    if(q && ![item.title,item.creator,item.year,item.platform,categoryById[item.category].label].join(' ').toLowerCase().includes(q)) continue;
     const card=document.createElement('button');
     card.type='button';card.className='catalog-card';card.setAttribute('aria-pressed','false');
     const image=document.createElement('img');
@@ -227,7 +256,7 @@ function renderCatalog(){
   if(!grid.childElementCount){
     const empty=document.createElement('p');empty.className='empty-state';
     empty.textContent=q?'No matches.':'This shelf is empty.';
-    if(!q && ['cartridges','game-discs'].includes(filter)){
+    if(!q && ['retro-games','switch','game-discs'].includes(filter)){
       const link=document.createElement('a');
       link.href=imdbList;link.target='_blank';link.rel='noopener noreferrer';
       link.textContent='View IMDb watchlist';
@@ -441,3 +470,33 @@ function openMap(){
 $('mapBtn').onclick=openMap;$('closeMap').onclick=()=>mapDialog.close();
 $('levelOne').onclick=()=>{mapLevel=1;drawMap();};$('levelTwo').onclick=()=>{mapLevel=2;drawMap();};
 mapDialog.addEventListener('close',()=>{uiOpen=false;});
+
+const reloadButton=$('reloadCollections');
+reloadButton.disabled=false;
+reloadButton.onclick=async()=>{
+  if(reloadButton.disabled)return;
+  reloadButton.disabled=true;reloadButton.setAttribute('aria-busy','true');
+  try{
+    await loadCollections('reload');
+    const view={active,ground,level,x:camera.position.x,z:camera.position.z,yaw,pitch};
+    const seed=crypto.getRandomValues(new Uint32Array(1))[0]||1;
+    sessionStorage.setItem('myroom.shelfSeed',String(seed));
+    sessionStorage.setItem('myroom.refreshVisit',JSON.stringify(view));
+    location.reload();
+  }catch{
+    reloadButton.disabled=false;reloadButton.removeAttribute('aria-busy');
+    showToast('Collections could not be refreshed. Try again.');
+  }
+};
+if(restoredVisit){
+  const v=restoredVisit;
+  if(v.active&&[1,2].includes(v.level)&&[v.x,v.z,v.yaw,v.pitch,v.ground].every(Number.isFinite)){
+    const room=roomAt(v.level,v.x,v.z);
+    const obstacle=interior.obstacles.some(o=>o.level===v.level&&Math.abs(v.x-o.x)<o.w/2+.19&&Math.abs(v.z-o.z)<o.d/2+.19);
+    if(room&&obstacle)arrive(v.level,...room.spawn);
+    else if(room||inside(stair,v.x,v.z)){
+      arrive(v.level,v.x,v.z,v.yaw,v.pitch);ground=v.ground;camera.position.y=ground+1.62;refreshFloor();
+    }
+  }
+  showToast('Collections refreshed · shelves shuffled');
+}

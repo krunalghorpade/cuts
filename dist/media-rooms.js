@@ -69,8 +69,8 @@ export function gameConsoles({box,cyl,oval}){
 }
 
 export function arcadeCabinets({group,box,cyl,block,label,shadow,devices}){
-  for(const [x,key,title,color] of [[11.48,'bricks','Brick Break','#368a94'],[13.13,'drift','Star Drift','#926fa3']]){
-    const z=-1.75;
+  for(const [x,key,title,color] of [[10.82,'bricks','Brick Break','#368a94'],[12.32,'drift','Star Drift','#926fa3']]){
+    const z=-1.47;
     box(x,.48,z,.71,.93,.66,dark);box(x,.53,z-.337,.57,.55,.017,charcoal);
     box(x,.73,z-.35,.16,.15,.025,'#606464');box(x,.75,z-.367,.08,.009,.011,dark);
     for(const s of [-1,1]){

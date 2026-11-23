@@ -4,13 +4,30 @@ import {categoryById, ITEMS} from './catalog.js';
 import {fixtures,rise,roomAt} from './plan.js';
 import {createMediaCase,caseSpec} from './media.js';
 
-function distributeInventory(){
+function distributeInventory(seed){
+  let state=seed;
+  function random(){
+    state=(Math.imul(state,1664525)+1013904223)>>>0;
+    return state/4294967296;
+  }
   const placements=fixtures.map(()=>[]);
   for(const category of Object.keys(categoryById)){
     const bays=fixtures.flatMap((fixture,index)=>fixture[1]===category?[index]:[]);
     if(!bays.length)continue;
     const entries=ITEMS.filter(item=>item.category===category);
-    if(category==='books'){
+    if(seed)for(let i=entries.length-1;i>0;i--){
+      const j=Math.floor(random()*(i+1));[entries[i],entries[j]]=[entries[j],entries[i]];
+    }
+    if(category==='retro-games'){
+      const systems=new Map();
+      for(const item of entries){
+        if(!systems.has(item.platform))systems.set(item.platform,[]);
+        systems.get(item.platform).push(item);
+      }
+      for(const games of systems.values())for(const game of games)placements[bays[0]].push([game]);
+      continue;
+    }
+    if(category==='books'||category==='manga'){
       entries.forEach((book,index)=>placements[bays[index % bays.length]].push([book]));
       continue;
     }
@@ -33,12 +50,12 @@ function distributeInventory(){
   return placements;
 }
 
-export function stockRooms(interior,box,label){
+export function stockRooms(interior,box,label,seed=0){
   const stacks=new Map(),interactables=[[],[]],destinations=new Map(),roomStock=new Map();
   const wood=new T.MeshStandardMaterial({color:'#664a35'});
   const steel=new T.MeshStandardMaterial({color:'#292a27'});
   const led=new T.MeshBasicMaterial({color:'#ffd7a2'});
-  const placements=distributeInventory();
+  const placements=distributeInventory(seed);
   fixtures.forEach(([level,key,x,z,width,angle],bay)=>{
     const category=categoryById[key],group=new T.Group();
     group.position.set(x,0,z);group.rotation.y=angle;interior.floors[level-1].add(group);
@@ -50,11 +67,12 @@ export function stockRooms(interior,box,label){
     const maxWidth=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).w));
     const maxHeight=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).h));
     const pitch=maxWidth+.042,capacity=Math.max(1,Math.floor((width-.18)/pitch));
-    const firstRow=key==='books'?2:0;
+    const printRack=key==='books'||key==='manga';
+    const firstRow=key==='books'?2:key==='manga'?1:0;
     const stockRows=Math.ceil(assigned.length/capacity);
-    const rows=key==='books'?Math.max(4,firstRow+stockRows):Math.max(1,stockRows);
-    const step=key==='books'?Math.max(.46,maxHeight+.10):maxHeight*1.75+.07;
-    const base=key==='books'?.16:rows>2?.64:1.08;
+    const rows=printRack?Math.max(4,firstRow+stockRows):Math.max(1,stockRows);
+    const step=printRack?Math.max(.46,maxHeight+.10):maxHeight*1.75+.07;
+    const base=printRack?.16:rows>2?.64:1.08;
     const height=base+step*rows+.04;
     // Extend the display toward the aisle if a set outgrows the regular shelf.
     const isBoxRack=key==='shows'||key==='anime';
@@ -76,6 +94,11 @@ export function stockRooms(interior,box,label){
       const rowStacks=assigned.slice(start,start+capacity);
       rowStacks.forEach((items,col)=>{
         const cx=(col-(rowStacks.length-1)/2)*pitch,id=key+'-'+stacks.size;
+        if(key==='retro-games'&&(col===0||rowStacks[col-1][0].platform!==items[0].platform)){
+          const platform=items[0].platform.replace('Super Nintendo Entertainment System','Super NES').replace('Nintendo Entertainment System','NES').replace('PlayStation Portable','PSP');
+          board(cx,deck-.019,.314,pitch-.016,.041,.008,steel);
+          label(group,platform,cx,deck-.019,.319,pitch-.019,.037,{bg:'#292b2b',color:'#ebe5d5',width:768,height:118,size:66});
+        }
         stacks.set(id,{category,items});let previousTop=deck,previousDepth=0,zz=.22;
         items.forEach((item,index)=>{
           const {group:model,spec,shell}=createMediaCase(item,true);

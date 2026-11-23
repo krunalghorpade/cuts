@@ -11,7 +11,7 @@ const hash = value => { let h=2166136261; for(const ch of String(value)){h^=ch.c
 const wrap = (ctx,text,maxWidth) => { const words=String(text).split(/\s+/); const lines=[]; let line=''; for(const word of words){const next=line?line+' '+word:word;if(ctx.measureText(next).width>maxWidth&&line){lines.push(line);line=word;}else line=next;} if(line)lines.push(line);return lines; };
 const isSquare = item => item.category==='vinyl'||item.category==='cds';
 const isWide = item => item.category==='cassettes';
-function dimensions(item){return isSquare(item)?[256,256]:isWide(item)?[256,160]:item.category==='cartridges'?[240,200]:[200,280];}
+function dimensions(item){if(item.category==="retro-games"){const {w,h}=caseSpec(item);return [Math.round(260*w/h),260];}return isSquare(item)?[256,256]:isWide(item)?[256,160]:[200,280];}
 function drawArt(ctx,item,img,width,height){
   const seed=hash(item.id),hue=seed%360;
   const grad=ctx.createLinearGradient(0,0,width,height);grad.addColorStop(0,`hsl(${hue} 37% 27%)`);grad.addColorStop(.55,`hsl(${(hue+45)%360} 56% 43%)`);grad.addColorStop(1,`hsl(${(hue+190)%360} 43% 20%)`);
@@ -43,6 +43,7 @@ export function coverTexture(item){
 }
 export function coverDataUrl(item){return coverTexture(item).image.toDataURL('image/png');}
 export function isBluRay(item){return ['movies','anime-movies'].includes(item.category)&&Number(item.year)>=2006;}
+import {retroPackage} from './game-packages.js';
 // Outside width, height and depth in millimetres. One scene unit is one metre.
 const formats = {
   vinyl: [315,315,3, 'LP jacket','#403b35'],
@@ -63,18 +64,12 @@ const formats = {
   boxset: [135,190,25,'TV box set','#343336']
 };
 export function caseSpec(item){
-  const kinds={books:'book',vinyl:'vinyl',cds:'cd',cassettes:'cassette',shows:'boxset',anime:'boxset','game-discs':'game',playstation:'game',xbox:'game'};
+  const kinds={books:'book',manga:'book',vinyl:'vinyl',cds:'cd',cassettes:'cassette',shows:'boxset',anime:'boxset','game-discs':'game',playstation:'game',xbox:'game'};
   let kind=kinds[item.category];
-  if(item.category==='cartridges'){
-    const platform=(item.platform||'').toLowerCase();
-    if(platform.startsWith('nintendo switch'))kind='switch';
-    else if(/nintendo (3ds|ds)/.test(platform))kind='ds';
-    else if(/advance|gba/.test(platform))kind='gba';
-    else if(/game boy/.test(platform))kind='gb';
-    else if(/super|snes/.test(platform))kind='snes';
-    else if(/nintendo 64|n64/.test(platform))kind='n64';
-    else if(/nes|famicom|nintendo entertainment/.test(platform)&&!platform.includes('genesis'))kind='nes';
-    else kind='cart';
+  if(item.category==='retro-games'||item.category==='switch'){
+    const pack=retroPackage(item.platform);
+    const [width,height,depth,shell]=pack?pack.slice(2):[105,170,11,'#a39fa0'];
+    return {w:width/1000,h:height/1000,d:depth/1000,kind:'retail',label:item.format,shell,dimensions:[width,height,depth]};
   }
   if(!kind)kind=isBluRay(item)?'bluray':'dvd';
   let [width,height,depth,label,shell]=formats[kind];
@@ -86,7 +81,7 @@ export function caseSpec(item){
     if(item.platform==='PlayStation Portable'){width=105;height=177;depth=14;shell='#dddfe2';}
   }
   if(kind==='book'){
-    [width,height,depth]=item.dimensions || formats.book.slice(0,3);
+    [width,height,depth]=item.dimensions || (item.category==='manga'?[127,190,16]:formats.book.slice(0,3));
     label=item.format || 'Book';
   }
   if(kind==='boxset'){
@@ -141,14 +136,9 @@ export function createMediaCase(item,onShelf=false){
     }else if(kind==='game'||kind==='bluray'){
       face(w-.004,h*.89,0,-h*.038,art);
       face(w-.004,h*.067,0,h*.447,kind==='game'?gameBands[item.category]:blueBandTexture);
-    }else if(item.category==='cartridges'){
-      face(w*.84,h*.72,0,-h*.048,art);
-      group.add(makeBox(w*.94,h*.08,d*.06,shellMaterial(spec.shell),0,h*.445,front));
-      const contactCount=kind==='ds'?17:kind==='switch'?16:32;
-      const span=w*.8, pitch=span/contactCount;
-      for(let i=0;i<contactCount;i++){
-        group.add(makeBox(pitch*.66,h*.35,.00018,shellMaterial('#b9954c'),-span/2+pitch*(i+.5),-h*.265,-d/2-.0001));
-      }
+    }else if(kind==='retail'){
+      face(w-.002,h-.002,0,0,art);
+      group.add(makeBox(w*.98,.0013,d*.97,shellMaterial(spec.shell),0,h*.499,0));
     }else if(kind==='cassette'){
       face(w*.96,h*.93,0,0,art);
       group.add(makeBox(w*.98,.0015,.0003,silver,0,-h*.47,front+.00015));

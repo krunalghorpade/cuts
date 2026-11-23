@@ -10,7 +10,7 @@ export const rooms = [
   {id:'music', name:'Music room', floor:2, bounds:[-8,-6,0,6], spawn:[-5.55,2.68,2.36]},
   {id:'gaming', name:'Modern gaming room', floor:2, bounds:[0,-6,8,6], spawn:[2.00,2.6,-.40]},
   {id:'library', name:'Book library', floor:2, bounds:[-13,6,-4,11], spawn:[-6.1,7.3,1.5]},
-  {id:'retro', name:'Retro gaming room', floor:2, bounds:[8,-9,15,-1], spawn:[10.1,-3.85,2.95]},
+  {id:'retro', name:'Retro Gaming Room', floor:2, bounds:[8,-9,15,-1], spawn:[9.65,-2.25,-Math.PI/2]},
   {id:'collect', name:'Collectibles', floor:2, bounds:[8,3,14,9], spawn:[9.3,4.4,-2.35]}
 ];
 export const stair = [-12,-9,-8,-2];
@@ -30,8 +30,10 @@ export const fixtures = [
   [2,'cds',-4.88,.04,3.30,-Math.PI/2], [2,'cds',-4.15,.04,3.30,Math.PI/2],
   [2,'cds',-.45,-.10,3.55,-Math.PI/2],
   [2,'playstation',2.10,-5.55,3.42,0], [2,'xbox',5.93,-5.55,3.42,0],
-  [2,'cartridges',11.5,-8.5,5.6,0],
+  [2,'switch',6.48,5.54,2.28,Math.PI],
+  [2,'retro-games',11.5,-8.5,5.6,0],
   [2,'game-discs',11.25,3.47,3.65,0],
+  [2,'manga',-4.44,8.52,3.45,-Math.PI/2],
   [2,'books',-8.5,10.56,6.05,Math.PI], [2,'books',-12.46,8.98,2.72,Math.PI/2]
 ];
 export function roomAt(floor,x,z) {
