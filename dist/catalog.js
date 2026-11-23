@@ -3,9 +3,10 @@ const load = async path => {
   if (!response.ok) throw new Error("Unable to read the store catalog");
   return response.json();
 };
-const [screenTitles, music, books, playlistSources] = await Promise.all([
-  load("imdb-items.json"), load("spotify-items.json"), load("book-items.json"), load("playlists.json")
+const [screenTitles, music, books, playlistSources, trailerSources] = await Promise.all([
+  load("imdb-items.json"), load("spotify-items.json"), load("book-items.json"), load("playlists.json"), load("trailers.json").catch(()=>({}))
 ]);
+export const trailerStreams = trailerSources;
 export const playlists = playlistSources;
 export const bookList = "https://openlibrary.org/people/krunal_ghorpade/lists/OL360679L/my_books";
 export const imdbList = "https://www.imdb.com/user/p.ad4lijmxzoqnsph42clunnfkoi/watchlist/";

@@ -7,6 +7,7 @@ from collections import Counter
 from pathlib import Path
 from urllib.error import URLError
 from urllib.request import urlopen
+from urllib.parse import urlsplit
 
 from fetch_art import DIST, imdb_art
 
@@ -15,6 +16,15 @@ SERIES_METADATA = {
     "tt22297578": {"episodeCount": 8, "episodeSource": "https://www.netflix.com/title/81281063"}
 }
 SERIES_TYPES = {"tv series", "tv mini series", "tv miniseries"}
+# Cartridge systems released before the Switch generation.
+LEGACY_CARTRIDGES = {
+    "nes", "famicom", "nintendo entertainment system", "snes", "super nintendo",
+    "super nintendo entertainment system", "super famicom", "n64", "nintendo 64",
+    "game boy", "game boy color", "game boy advance", "gba", "nintendo ds", "nintendo 3ds",
+    "sega master system", "sega genesis", "sega mega drive", "sega game gear",
+    "atari 2600", "atari 5200", "atari 7800", "atari jaguar", "atari lynx", "neo geo pocket",
+}
+
 
 
 def read_json(url):
@@ -65,7 +75,9 @@ def import_list(path):
             year = (row.get("Year") or "").strip()
             if kind == "video game":
                 platform = (row.get("Platform") or "").strip()
-                cartridge = platform.casefold() in {"nintendo ds", "game boy advance", "nintendo switch"}
+                legacy = platform.casefold() in LEGACY_CARTRIDGES
+                cartridge = legacy or platform.casefold() in {"nintendo switch", "nintendo switch 2"}
+                metadata["legacyCartridge"] = bool(legacy and year.isdigit() and int(year) < 2017)
                 category = "cartridges" if cartridge else "game-discs"
                 packaging = "Game cartridge" if cartridge else "Game archive case"
                 if platform:
@@ -79,6 +91,9 @@ def import_list(path):
                     "format": packaging,
                     "source": "IMDb", "sourceUrl": f"https://www.imdb.com/title/{title_id}/",
                     "rating": row.get("IMDb Rating", ""), "genres": genres, **metadata}
+            trailer = (row.get("Trailer URL") or "").strip()
+            if trailer and urlsplit(trailer).scheme == "https" and urlsplit(trailer).hostname:
+                item["trailerUrl"] = trailer
             _, item["artwork"], error = imdb_art(item)
             if error:
                 print(f"Poster unavailable for {title}: {error}")

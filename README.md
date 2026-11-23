@@ -9,6 +9,8 @@ A two-floor, first-person media store for desktop, tablet and phone. The interfa
 - The item carousel opens on the selected case. Use the left and right buttons or arrow keys to browse its media section in shelf order. Drag the centered 3D case to rotate it. With the preview focused, Shift + left/right rotates horizontally and up/down rotates vertically. Reset view restores the opening angle.
 - The floor map takes you to a room on either floor. The Book Library entrance stays open. The other doors swing open as you approach from either side and close after you walk away. The switchback stairs connect the two levels on foot.
 
+The digital wall posters change once a minute. The modern TVs stream muted theatrical trailers matched to catalog titles. The CRT plays trailers for games released before 2017 on verified legacy cartridge platforms and shows standby when none qualify. Playback pauses outside the TV room or while browsing a menu.
+
 ## Catalog
 
 The film, series and anime inventory comes from the supplied IMDb CSV. Each IMDb title ID appears once. A series goes on one shelf. Anime has its own section on Level 2. Box sets use a packaging estimate of four episodes per disc and four discs per inner case. Every set has a 135 × 190 mm cover. Additional discs and cases increase depth. Sets at least half as deep as their cover width stand upright in their own shelf slot. When an episode count is unavailable, the item uses a standard box without an inferred count.
@@ -17,6 +19,7 @@ The music catalog combines the previously imported Kratex Favs selection with th
 
 ## Update data
 
+- Run `python3 scripts/import_trailers.py` after updating IMDb titles to refresh verified Internet Archive trailer streams. An optional HTTPS `Trailer URL` column can supply a directly playable trailer for a specific IMDb ID.
 - Run `python3 scripts/import_books.py` to refresh the Open Library list, edition details, and book covers.
 
 - Run `python3 scripts/import_imdb.py path/to/watchlist.csv` with the IMDb title-list export. Series episode counts use matched TVmaze IDs or credited series metadata. The importer reuses local posters for existing IMDb IDs.

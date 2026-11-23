@@ -1,6 +1,7 @@
 import * as THREE from './vendor/three.module.js';
-import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList } from './catalog.js';
+import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList, trailerStreams } from './catalog.js';
 import { buildInterior } from './interior.js';
+import {installPosters,installTelevisions} from './displays.js';
 import { rooms, rise, stair, inside, roomAt, groundAt } from './plan.js';
 import { createCasePreview } from './case-preview.js';
 import { stockRooms } from './racks.js';
@@ -23,7 +24,7 @@ const camera = new THREE.PerspectiveCamera(73, innerWidth / innerHeight, 0.08, 8
 camera.position.set(-3.5, 1.62, 4.1);
 camera.rotation.order = 'YXZ';
 camera.rotation.y = -.31;
-const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
+const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
 renderer.setPixelRatio(Math.min(devicePixelRatio, Math.sqrt(900000/(innerWidth*innerHeight))));
 renderer.setSize(innerWidth, innerHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -53,6 +54,8 @@ function label(parent, text, x, y, z, w, h, opts = {}) {
 }
 
 const interior=buildInterior(scene,label);
+const updatePosters=installPosters(interior.floors,ITEMS);
+const updateTVs=installTelevisions(canvas,interior.screens,ITEMS,trailerStreams);
 const {stacks,interactables,destinations}=stockRooms(interior,box,label);
 for(const door of interior.doors)interactables[door.level-1].push(...door.faces);
 let ground=0,level=1;
@@ -338,6 +341,8 @@ function animate(){
     for(const door of interior.doors)door.update(dt,level,camera.position.x,camera.position.z);
   }
   if(active&&!uiOpen&&intro.classList.contains('hidden')){yaw+=((keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0))*dt*1.55;pitch=clamp(pitch+((keys.has('ArrowUp')?1:0)-(keys.has('ArrowDown')?1:0))*dt*1.3,-1.28,1.28);updateMovement(dt);camera.rotation.y=yaw;camera.rotation.x=pitch;camera.updateMatrixWorld();updateFocus();}
+  updatePosters(performance.now());
+  updateTVs(camera,roomAt(level,camera.position.x,camera.position.z)?.id,active&&!uiOpen);
   if(!currentDetailItem){renderer.autoClear=false;renderer.clear();renderer.render(scene,camera);}
   preview.render();
 }animate();

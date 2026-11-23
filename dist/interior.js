@@ -1,6 +1,7 @@
 import * as T from './vendor/three.module.js';
 import {rooms, rise, stair, doorways, roomAt} from './plan.js';
 import {makeDoor} from './doors.js';
+import {addTelevision} from './displays.js';
 
 let seed=22711;
 const random=()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
@@ -52,20 +53,9 @@ function textureMaterial(draw,w=512,h=256){
   const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;draw(canvas.getContext('2d'),w,h);
   const map=new T.CanvasTexture(canvas);map.colorSpace=T.SRGBColorSpace;return new T.MeshBasicMaterial({map});
 }
-const landscape=textureMaterial((g,w,h)=>{
-  const sky=g.createLinearGradient(0,0,0,h);sky.addColorStop(0,'#3f5578');sky.addColorStop(.45,'#ebb298');sky.addColorStop(.7,'#dd9b72');sky.addColorStop(1,'#363c4e');g.fillStyle=sky;g.fillRect(0,0,w,h);
-  g.fillStyle='#ffe8b4';g.beginPath();g.arc(333,100,16,0,Math.PI*2);g.fill();
-  for(let l=0;l<4;l++){g.fillStyle=['#827787','#665767','#493f4c','#2e303a'][l];g.beginPath();g.moveTo(0,h);for(let x=0;x<=w;x+=6)g.lineTo(x,124+l*24+Math.sin(x*.018+l*2)*23+Math.sin(x*.057+l)*8+random()*6);g.lineTo(w,h);g.fill();}
-});
-const pixelScreen=textureMaterial((g,w,h)=>{
-  g.fillStyle='#4b78ae';g.fillRect(0,0,w,h);
-  for(let i=0;i<9;i++){let x=random()*w,y=random()*h*.4;g.fillStyle='#dfded1';g.fillRect(x,y,52,10);g.fillRect(x+10,y-9,22,9);}
-  for(let x=0;x<w;x+=8){let hh=Math.sin(x/58)*34+95;g.fillStyle='#456e5c';g.fillRect(x,hh+30,8,h);g.fillStyle='#74914b';g.fillRect(x,hh+30,8,8);}
-  g.fillStyle='#db9e54';g.fillRect(0,205,w,51);g.fillStyle='#d24330';g.fillRect(210,175,20,17);g.fillStyle='#27405e';g.fillRect(211,192,20,13);
-});
 const shadowMat=(()=>{const m=textureMaterial((g,w,h)=>{const v=g.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);v.addColorStop(0,'rgba(15,10,5,.72)');v.addColorStop(.55,'rgba(15,10,5,.45)');v.addColorStop(1,'rgba(15,10,5,0)');g.fillStyle=v;g.fillRect(0,0,w,h);},96,96);m.transparent=true;m.depthWrite=false;return m})();
 export function buildInterior(scene, label){
-  const floors=[], obstacles=[], occluders=[], doors=[];
+  const floors=[], obstacles=[], occluders=[], doors=[], screens=[];
   scene.add(new T.HemisphereLight('#f9e9d7','#716f68',1.38));
   const sun=new T.DirectionalLight('#fff1df',1.55);sun.position.set(-5,9,5);scene.add(sun);
   const fill=new T.DirectionalLight('#b8c9d3',.52);fill.position.set(8,3,-4);scene.add(fill);
@@ -115,7 +105,13 @@ export function buildInterior(scene, label){
       piece(0,h-.06,.24,w-.1,.018,.04,light);
       block(x,z,Math.abs(Math.cos(angle))*w+Math.abs(Math.sin(angle))*.6,Math.abs(Math.sin(angle))*w+Math.abs(Math.cos(angle))*.6);
     }
-    function tv(x,z,w,y,crt=false,reverse=false){const s=reverse?-1:1;box(x,y,z,w,w*(crt?.8:.57),crt?.57:.09,iron);box(x,y+.01,z+s*(crt?.29:.05),w*.91,w*(crt?.64:.49),.012,crt?pixelScreen:landscape);box(x,y-w*.34,z,.09,.2,.1,iron);box(x,y-w*.39,z,w*.48,.045,.25,iron);}
+    function tv(x,z,w,y,crt=false,reverse=false){
+      const sign=reverse?-1:1,depth=crt?w*.57:.09;
+      box(x,y,z,w,w*(crt?.8:.57),depth,iron);
+      const screenZ=z+sign*(depth/2+.002),room=roomAt(level,x,z).id;
+      screens.push(addTelevision(group,room,x,y+.01,screenZ,w*.91,w*(crt?.64:.49),reverse,crt));
+      box(x,y-w*.34,z,.09,.2,.1,iron);box(x,y-w*.39,z,w*.48,.045,.25,iron);
+    }
     function cabinet(x,z,w){box(x,.42,z,w,.74,.68,walnut);box(x,.075,z,w-.2,.14,.5,iron);box(x,.81,z,w+.04,.055,.72,dark);for(let i=-1;i<=1;i++)box(x+i*w*.26,.43,z+.352,.014,.6,.008,iron);shadow(x,z,w*1.2,1.3);block(x,z,w,.74);}
     function seat(x,z,w,angle=0){const p=(lx,y,lz,sw,h,sd,m,rx=0)=>box(x+Math.cos(angle)*lx+Math.sin(angle)*lz,y,z-Math.sin(angle)*lx+Math.cos(angle)*lz,sw,h,sd,m,rx,angle);
       p(0,.21,0,w-.12,.2,.68,iron);p(0,.39,0,w,.31,.85,linen);p(0,.77,.4,w,.66,.22,linen,.14);for(const side of [-1,1])p(side*(w/2-.09),.55,.01,.18,.45,.9,linen);
@@ -226,5 +222,5 @@ export function buildInterior(scene, label){
       group.add(new T.Mesh(geo,material));
     }
   }
-  return {floors,obstacles,occluders,doors};
+  return {floors,obstacles,occluders,doors,screens};
 }

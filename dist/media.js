@@ -50,6 +50,11 @@ const formats = {
   cassette: [109,69.6,16.8,'Cassette case','#c4c5bc'],
   switch: [21,31,3,'Switch game card','#383a38'],
   ds: [33,35,3.8,'Nintendo DS game card','#484848'],
+  nes: [120,133,17,'NES cartridge','#898987'],
+  n64: [116,76,19,'Nintendo 64 cartridge','#848583'],
+  gb: [57,65,8,'Game Boy cartridge','#888b87'],
+  snes: [128,87,20,'SNES cartridge','#95948d'],
+  cart: [104,71,17,'Game cartridge','#484846'],
   gba: [60,34,9,'Game Boy Advance cartridge','#315344'],
   dvd: [135,190,14,'DVD case','#202123'],
   bluray: [135,171,12,'Blu-ray case','#1d5da4'],
@@ -60,7 +65,17 @@ const formats = {
 export function caseSpec(item){
   const kinds={books:'book',vinyl:'vinyl',cds:'cd',cassettes:'cassette',shows:'boxset',anime:'boxset','game-discs':'game'};
   let kind=kinds[item.category];
-  if(item.category==='cartridges')kind=/^nintendo ds$/i.test(item.platform||'')?'ds':/advance|gba/i.test(item.platform||'')?'gba':'switch';
+  if(item.category==='cartridges'){
+    const platform=(item.platform||'').toLowerCase();
+    if(platform.startsWith('nintendo switch'))kind='switch';
+    else if(/nintendo (3ds|ds)/.test(platform))kind='ds';
+    else if(/advance|gba/.test(platform))kind='gba';
+    else if(/game boy/.test(platform))kind='gb';
+    else if(/super|snes/.test(platform))kind='snes';
+    else if(/nintendo 64|n64/.test(platform))kind='n64';
+    else if(/nes|famicom|nintendo entertainment/.test(platform)&&!platform.includes('genesis'))kind='nes';
+    else kind='cart';
+  }
   if(!kind)kind=isBluRay(item)?'bluray':'dvd';
   let [width,height,depth,label,shell]=formats[kind];
   if(kind==='game')label=item.format || label;
@@ -115,7 +130,7 @@ export function createMediaCase(item,onShelf=false){
     }else if(kind==='game'||kind==='bluray'){
       face(w-.004,h*.89,0,-h*.038,art);
       face(w-.004,h*.067,0,h*.447,kind==='game'?gameBandTexture:blueBandTexture);
-    }else if(kind==='switch'||kind==='gba'||kind==='ds'){
+    }else if(item.category==='cartridges'){
       face(w*.84,h*.72,0,-h*.048,art);
       group.add(makeBox(w*.94,h*.08,d*.06,shellMaterial(spec.shell),0,h*.445,front));
       const contactCount=kind==='ds'?17:kind==='switch'?16:32;
