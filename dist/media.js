@@ -28,7 +28,7 @@ function drawArt(ctx,item,img,width,height){
     ctx.font=`700 ${isSquare(item)?25:isWide(item)?20:26}px Arial`;
     const lines=wrap(ctx,item.title,width-27).slice(0,isWide(item)?2:4);let y=height-19-(lines.length-1)*(isWide(item)?21:27);
     for(const line of lines){ctx.fillText(line.slice(0,30),13,y);y+=isWide(item)?21:27;}
-    ctx.shadowBlur=0;ctx.font='600 10px Arial';ctx.fillText((item.creator||'THE LOWER LEVEL').toUpperCase().slice(0,30),13,23);
+    ctx.shadowBlur=0;ctx.font='600 10px Arial';ctx.fillText((item.creator||'MY ROOM').toUpperCase().slice(0,30),13,23);
   }
   // A small edge mark makes even distant stock feel printed, not a blank color tile.
   ctx.fillStyle='rgba(255,255,255,.88)';ctx.fillRect(8,8,3,Math.min(28,height*.14));

@@ -33,7 +33,7 @@ function displayLabel(item, spec, spine = false) {
     ctx.font = '29px sans-serif'; ctx.fillText(item.creator, 34, Math.max(470, y + 68), 530);
     ctx.fillRect(34, 664, 532, 2);
     ctx.font = '24px monospace'; ctx.fillText(String(item.year), 34, 715);
-    ctx.textAlign = 'right'; ctx.fillText('THE LOWER LEVEL', 566, 715);
+    ctx.textAlign = 'right'; ctx.fillText('MY ROOM', 566, 715);
   }
   const map = new THREE.CanvasTexture(paper);
   map.colorSpace = THREE.SRGBColorSpace;
