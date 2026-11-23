@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-import {createMediaCase, coverTexture, caseSpec} from './media.js';
+import {createMediaCase, caseSpec} from './media.js';
 
 // Broad strip lights give jewel lids, overwrap and molded edges a reflection when turned.
 function inspectionStudio(){
@@ -101,9 +101,9 @@ export function createCasePreview(canvas, items) {
     hide();prepareRenderer();
     for(const [target,record] of [[-1,previous],[0,item],[1,next]]){
       if(!record)continue;
-      const {group,spec,dispose}=createMediaCase(record);
+      const {group,spec,dispose,textures}=createMediaCase(record);
       const start=oldSlots.get(record.id) ?? target+direction;
-      entries.push({id:record.id,group,dispose,texture:coverTexture(record),version:-1,
+      entries.push({id:record.id,group,dispose,textures,versions:[],
         start,slot:start,target,scale:2/(spec.kind==='boxset'?boxDiagonal:Math.hypot(spec.w,spec.h,spec.d))});
       scene.add(group);
       if(target!==0){
@@ -129,14 +129,14 @@ export function createCasePreview(canvas, items) {
       camera.updateProjectionMatrix();dirty=true;
     }
     const t=started?Math.min(1,(performance.now()-started)/220):1;
-    if(!dirty && !started && entries.every(e=>e.texture.version===e.version))return;
+    if(!dirty && !started && entries.every(e=>e.textures.every((texture,i)=>texture.version===e.versions[i])))return;
     const halfWidth=camera.position.z*Math.tan(THREE.MathUtils.degToRad(camera.fov/2))*camera.aspect;
     for(const e of entries){
       e.slot=e.target+(e.start-e.target)*(1-t)**3;
       const side=Math.min(1,Math.abs(e.slot));
       e.group.position.set(e.slot*halfWidth*.98,-side*.035,-side*.48);
       e.group.scale.setScalar(e.scale*(1-.34*side));
-      e.version=e.texture.version;
+      e.versions=e.textures.map(texture=>texture.version);
     }
     if(t===1)started=0;
     renderer.render(scene,camera);dirty=false;

@@ -81,6 +81,9 @@ def catalog_promos(item, editions):
     if not re.fullmatch(r"tt[0-9]+", iid):
         return []
     if iid in editions:
+        # A LaunchBox-only edition can have packaging before it has a trailer ID.
+        if not editions[iid].get("igdbId"):
+            return []
         gid = int(editions[iid]["igdbId"])
         meta = get(f"https://app.lizardbyte.dev/GameDB/games/{gid}.json")
         if int(meta.get("id", -1)) != gid:

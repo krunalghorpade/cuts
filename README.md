@@ -24,7 +24,8 @@ The music catalog combines the previously imported Kratex Favs selection with th
 ## Update data
 
 - Run `python3 scripts/import_trailers.py` after updating IMDb titles to refresh title-matched trailer sources from Internet Archive, IMDb-keyed film metadata, and IGDB game records. An optional HTTPS `Trailer URL` column can supply a directly playable trailer for a specific IMDb ID.
-- Run `python3 scripts/import_igdb.py` to refresh IGDB covers for matched game editions and `python3 scripts/import_music_previews.py` to update Spotify preview availability.
+- Run `python3 scripts/import_launchbox.py` to refresh platform-matched game box art from the LaunchBox Games Database. Use `--metadata /path/to/Metadata.zip` to read a previously downloaded LaunchBox snapshot. The importer keeps each IMDb game ID and records the LaunchBox edition and image sources. The shelves and inspection view show the front, back and spine scans available for that edition.
+- Run `python3 scripts/import_music_previews.py` to update Spotify preview availability.
 - Run `python3 scripts/import_books.py` to refresh the Open Library list, edition details, and book covers.
 
 - Run `python3 scripts/import_imdb.py path/to/watchlist.csv` with the IMDb title-list export. Series episode counts use matched TVmaze IDs or credited series metadata. The importer reuses local posters for existing IMDb IDs.

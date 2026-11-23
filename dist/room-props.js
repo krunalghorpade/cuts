@@ -11,7 +11,7 @@ export function dressRooms({part,box,group,label,walnut,items,editorial,featureS
     used.get(room).set(id,item);
     if(!materials.has(tile.map))materials.set(tile.map,new T.MeshBasicMaterial({map:tile.map}));
     const plane=new T.PlaneGeometry(),uv=plane.attributes.uv;
-    for(let j=0;j<uv.count;j++)uv.setXY(j,tile.u+uv.getX(j)*tile.scale,tile.v+uv.getY(j)*tile.scale);
+    for(let j=0;j<uv.count;j++)uv.setXY(j,tile.u+uv.getX(j)*tile.sx,tile.v+uv.getY(j)*tile.sy);
     box(x,y,z,w+.007,h+.007,.012,'#544c42',0,angle,tilt);
     part(plane,x+Math.sin(angle)*.007,y,z+Math.cos(angle)*.007,w,h,1,materials.get(tile.map),0,angle,tilt);
   }

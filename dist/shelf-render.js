@@ -5,12 +5,7 @@ const slots=new Map(atlas.art.map((path,index)=>[path,index]));
 const vinylSlots=new Map((atlas.vinyl?.art??[]).map((path,index)=>[path,index]));
 const sheets=new Map();
 const loader=new T.TextureLoader();
-export function shelfCover(path,vinyl=false){
-  const useLargePrint=vinyl&&vinylSlots.has(path);
-  const index=(useLargePrint?vinylSlots:slots).get(path);
-  if(index===undefined)return null;
-  const {grid,tile,pad}=useLargePrint?atlas.vinyl:atlas;
-  const page=(useLargePrint?'lp-':'')+Math.floor(index/(grid*grid));
+function loadSheet(page){
   if(!sheets.has(page)){
     let complete;
     const ready=new Promise(resolve=>{complete=resolve;});
@@ -18,9 +13,28 @@ export function shelfCover(path,vinyl=false){
       loaded=>complete(loaded),undefined,()=>complete(map));
     map.colorSpace=T.SRGBColorSpace;map.anisotropy=4;sheets.set(page,{map,ready});
   }
+  return sheets.get(page);
+}
+
+export function gamePrintAspect(path){
+  return atlas.gameBoxes?.prints[path]?.[5];
+}
+
+export function shelfCover(path,vinyl=false){
+  const box=atlas.gameBoxes?.prints[path];
+  if(box){
+    const [page,x,y,w,h]=box,[width,height]=atlas.gameBoxes.pages[page];
+    return {...loadSheet('game-'+page),u:(x+.5)/width,v:1-(y+h-.5)/height,
+      sx:(w-1)/width,sy:(h-1)/height};
+  }
+  const useLargePrint=vinyl&&vinylSlots.has(path);
+  const index=(useLargePrint?vinylSlots:slots).get(path);
+  if(index===undefined)return null;
+  const {grid,tile,pad}=useLargePrint?atlas.vinyl:atlas;
+  const page=(useLargePrint?'lp-':'')+Math.floor(index/(grid*grid));
   const inset=pad/tile,slot=index%(grid*grid),scale=(1-2*inset)/grid;
-  return {...sheets.get(page),u:(slot%grid+inset)/grid,
-    v:1-(Math.floor(slot/grid)+1-inset)/grid,scale,sx:scale,sy:scale};
+  return {...loadSheet(page),u:(slot%grid+inset)/grid,
+    v:1-(Math.floor(slot/grid)+1-inset)/grid,sx:scale,sy:scale};
 }
 
 // Case hardware uses instances of the same Blender geometry. Individual covers and

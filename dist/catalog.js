@@ -36,12 +36,14 @@ export const screenCategories=['movies','anime-movies','shows','anime',...gameCa
 const titles=screenTitles.map(item=>{
   const edition=editions[item.id];
   if(!['cartridges','game-discs'].includes(item.category))return item;
-  const platform=edition?.platform||item.platform||'';
+  const platform=item.platform||edition?.platform||'';
   const retro=retroPackage(platform);
-  const category=retro?'retro-games':/^Nintendo Switch/i.test(platform)?'switch':['playstation','xbox'].includes(edition?.shelf)?edition.shelf:'game-discs';
+  const category=retro?'retro-games':/^Nintendo Switch/i.test(platform)?'switch':
+    /^PlayStation [345]$/i.test(platform)?'playstation':/^Xbox (360|One|Series)/i.test(platform)?'xbox':'game-discs';
   return {...item,category,platform,edition:edition?.edition||'',
     format:retro?platform+' boxed edition':category==='switch'?'Nintendo Switch retail case':platform?platform+' disc':item.format,
-    ...(edition?.artwork?{artwork:edition.artwork,igdbUrl:edition.igdbUrl}:{})};
+    ...(edition?.launchboxUrl && edition.artwork ? {artwork:edition.artwork,launchboxUrl:edition.launchboxUrl,
+      boxBack:edition.boxBack,boxSpine:edition.boxSpine,artworkNote:edition.artworkNote} : {})};
 });
 export const categoryById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 // Merge multiple Spotify editions with the same credited artist and album title.

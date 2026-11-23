@@ -75,6 +75,9 @@ function printed(map,vinyl){
   if(!cache.has(map))cache.set(map,new T.MeshStandardMaterial({map,roughness:vinyl ? .83 : .57,metalness:0}));
   return cache.get(map);
 }
+export function disposePrint(map){
+  paper.get(map)?.dispose();paper.delete(map);map.dispose();
+}
 function tinted(part,color){
   const key=part.material.uuid+color;
   if(!tints.has(key)){
@@ -87,9 +90,37 @@ function withUVs(base,tile){
   for(let i=0;i<uv.count;i++)uv.setXY(i,tile.u+uv.getX(i)*tile.sx,tile.v+uv.getY(i)*tile.sy);
   return geometry;
 }
+// Retail scans already include the platform strip. Use one continuous paper face
+// across the two print slots that the generic game case uses for art and its banner.
+const retailFronts=new WeakMap();
+function printBounds(geometry){
+  if(!geometry.boundingBox)geometry.computeBoundingBox();
+  return geometry.boundingBox;
+}
+function fullGameFront(front,band){
+  if(!band)return front;
+  if(!retailFronts.has(front)){
+    const bounds=printBounds(front),top=printBounds(band).max.y;
+    const factor=(top-bounds.min.y)/(bounds.max.y-bounds.min.y);
+    const expanded=front.clone().translate(0,-bounds.min.y,0).scale(1,factor,1).translate(0,bounds.min.y,0);
+    retailFronts.set(front,expanded);
+  }
+  return retailFronts.get(front);
+}
+function fitScan(mesh,aspect,caseScale,spine){
+  const bounds=printBounds(mesh.geometry),axis=spine?'z':'x';
+  const width=(bounds.max[axis]-bounds.min[axis])*caseScale[axis];
+  const height=(bounds.max.y-bounds.min.y)*caseScale.y;
+  if(!aspect||!width||!height)return;
+  const ratio=aspect*height/width;
+  mesh.scale[axis]=Math.min(1,ratio);
+  mesh.scale.y=Math.min(1,1/ratio);
+  mesh.position[axis]=(bounds.max[axis]+bounds.min[axis])*.5*(1-mesh.scale[axis]);
+  mesh.position.y=(bounds.max.y+bounds.min.y)*.5*(1-mesh.scale.y);
+}
 const hitGeometry=new T.BoxGeometry(1,1,1);
 const hitMaterial=new T.MeshBasicMaterial();
-export function makePackage(item,spec,onShelf,cover,band){
+export function makePackage(item,spec,onShelf,cover,band,scans){
   const id=modelId(item,spec), model=models.get(id), group=new T.Group(),visual=new T.Group();
   group.name=item.title;group.userData.itemId=item.id;
   visual.name=(onShelf?'Shelf_':'Detail_')+id;
@@ -99,12 +130,16 @@ export function makePackage(item,spec,onShelf,cover,band){
   group.add(visual);
   const inserts=onShelf?shelfInserts(item,spec):detailInserts(item,spec);
   const front=onShelf&&id==='cassette'&&cover.ready?shelfJCard(item,cover):cover;
-  const prints={MAT_FRONT:front,MAT_BACK:inserts.back,MAT_SPINE:inserts.spine,MAT_BAND:{map:band}};
+  const prints={MAT_FRONT:front,MAT_BACK:inserts.back,MAT_SPINE:inserts.spine,MAT_BAND:{map:band},...scans};
+  const surfaces=onShelf?model.shelf:model.detail;
+  const printedBand=scans?.MAT_FRONT && surfaces.find(part=>part.slot==='MAT_BAND');
   const generatedGeometry=[];
   const detailPaper=onShelf?null:new T.MeshStandardMaterial({map:inserts.map,roughness:id==='vinyl' ? .83 : .66});
-  for(const part of onShelf?model.shelf:model.detail){
+  for(const part of surfaces){
+    if(part===printedBand)continue;
     const tile=prints[part.slot];
-    let geometry=part.geometry,material=part.material;
+    let material=part.material;
+    let geometry=part.slot==='MAT_FRONT' && printedBand ? fullGameFront(part.geometry,printedBand.geometry) : part.geometry;
     if(tile?.map){
       material=tile.map===inserts.map&&detailPaper?detailPaper:printed(tile.map,id==='vinyl');
       if(!onShelf&&tile.sx){
@@ -116,6 +151,7 @@ export function makePackage(item,spec,onShelf,cover,band){
     }
     const mesh=new T.Mesh(geometry,material);
     mesh.name=part.slot;
+    if(scans?.[part.slot])fitScan(mesh,tile.aspect,visual.scale,part.slot==='MAT_SPINE');
     if(onShelf){
       if(tile?.sx)mesh.userData.printTile=tile;
       else mesh.userData.packageHardware=true;
@@ -129,8 +165,10 @@ export function makePackage(item,spec,onShelf,cover,band){
     shell=new T.Mesh(hitGeometry,hitMaterial);shell.name='Case pick volume';
     shell.scale.set(spec.w,spec.h,spec.d);shell.visible=false;group.add(shell);
   }
-  return {group,spec,shell,dispose:onShelf?null:()=>{
+  const textures=onShelf?[]:[...new Set([front.map,...Object.values(scans||{}).map(tile=>tile.map)])];
+  return {group,spec,shell,textures,dispose:onShelf?null:()=>{
     for(const geometry of generatedGeometry)geometry.dispose();
     detailPaper.dispose();inserts.map.dispose();
+    for(const tile of Object.values(scans||{}))tile.release?.();
   }};
 }

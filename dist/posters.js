@@ -98,6 +98,9 @@ function paint(g,pic,img,x,y){
     fit(g,img,0,0,w,236);g.fillStyle='#e8e4d6';g.fillRect(0,236,w,84);g.fillStyle='#222321';
     g.font='bold 22px Arial';lines(g,pic.words,202).slice(0,2).forEach((l,i)=>g.fillText(l,11,262+i*23));
     g.font='12px Georgia';g.fillText(pic.item.title,11,307,202);
+  }else if(img&&pic.item.launchboxUrl){
+    const scale=Math.min(w/img.width,h/img.height),iw=img.width*scale,ih=img.height*scale;
+    g.drawImage(img,(w-iw)/2,(h-ih)/2,iw,ih);
   }else if(img){
     const ar=img.width/img.height;
     if(ar>.86){const hh=Math.min(w/ar,260);fit(g,img,0,(h-hh)/2,w,hh);g.fillStyle='#f5e8d3';g.font='bold 12px Arial';g.fillText(pic.item.title,9,306,w-18);}

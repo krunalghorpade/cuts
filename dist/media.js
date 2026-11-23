@@ -1,7 +1,7 @@
 import * as THREE from './vendor/three.module.js';
 
-import {shelfCover} from './shelf-render.js';
-import {makePackage} from './packaging.js';
+import {shelfCover,gamePrintAspect} from './shelf-render.js';
+import {makePackage,disposePrint} from './packaging.js';
 import {drawJCard} from './package-prints.js';
 import {retroPackage} from './game-packages.js';
 
@@ -98,8 +98,42 @@ function formatBand(item){
   g.textAlign=game?'left':'center';g.fillText(label,game?18:256,25,475);
   const map=new THREE.CanvasTexture(c);map.colorSpace=THREE.SRGBColorSpace;bands.set(label,map);return map;
 }
+const scanMaps=new Map(),scanLoader=new THREE.TextureLoader();
+function gameScan(path,onShelf){
+  const aspect=gamePrintAspect(path);
+  if(onShelf){
+    const tile=shelfCover(path);
+    return tile && {...tile,aspect};
+  }
+  let entry=scanMaps.get(path);
+  if(!entry){
+    const map=scanLoader.load(new URL(path,import.meta.url).href);
+    map.colorSpace=THREE.SRGBColorSpace;map.anisotropy=4;
+    entry={map,users:0};scanMaps.set(path,entry);
+  }
+  entry.users++;
+  return {map:entry.map,aspect,release(){
+    entry.users--;
+    // The carousel can acquire the same edition again synchronously when it turns.
+    queueMicrotask(()=>{
+      if(entry.users===0 && scanMaps.get(path)===entry){
+        scanMaps.delete(path);disposePrint(entry.map);
+      }
+    });
+  }};
+}
+
 export function createMediaCase(item,onShelf=false){
-  const spec=caseSpec(item),tile=onShelf?shelfCover(item.artwork,item.category==='vinyl'):null;
-  const cover=tile||{map:coverTexture(item)};
-  return makePackage(item,spec,onShelf,cover,formatBand(item));
+  const spec=caseSpec(item);
+  const scans={};
+  if(item.launchboxUrl){
+    for(const [slot,path] of [['MAT_FRONT',item.artwork],['MAT_BACK',item.boxBack],['MAT_SPINE',item.boxSpine]]){
+      if(path){
+        const scan=gameScan(path,onShelf);
+        if(scan)scans[slot]=scan;
+      }
+    }
+  }
+  const cover=scans.MAT_FRONT||(onShelf && shelfCover(item.artwork,item.category==='vinyl'))||{map:coverTexture(item)};
+  return makePackage(item,spec,onShelf,cover,formatBand(item),scans);
 }

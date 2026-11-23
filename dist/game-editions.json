@@ -2,1074 +2,3355 @@
   "tt6161168": {
     "igdbId": 25076,
     "igdbUrl": "https://www.igdb.com/games/red-dead-redemption-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1q1f.jpg",
-    "artwork": "./art/igdb/tt6161168.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/25076.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/25076.json",
+    "launchboxId": 151629,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/151629",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/34aeba0d-b1e8-400f-8905-c81ed8d84c78.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt6161168-front-34aeba0d-b1e8-400f-8905-c81ed8d84c78.webp",
+    "artworkSource": "https://images.launchbox-app.com/34aeba0d-b1e8-400f-8905-c81ed8d84c78.jpg"
   },
   "tt2140553": {
     "igdbId": 1009,
     "igdbUrl": "https://www.igdb.com/games/the-last-of-us",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7f.jpg",
-    "artwork": "./art/igdb/tt2140553.webp",
     "shelf": "playstation",
     "platform": "PlayStation 3",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat",
+    "launchboxId": 10392,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/10392",
+    "launchboxPlatform": "Sony Playstation 3",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9a204038-8491-4714-8639-62b6af67ad36.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/428dfeb4-fa1d-40af-9b77-e3f5ff0af8ce.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2140553-front-9a204038-8491-4714-8639-62b6af67ad36.webp",
+    "artworkSource": "https://images.launchbox-app.com/9a204038-8491-4714-8639-62b6af67ad36.jpg",
+    "boxBack": "./art/launchbox/tt2140553-back-428dfeb4-fa1d-40af-9b77-e3f5ff0af8ce.webp"
   },
   "tt13258344": {
     "igdbId": 119171,
     "igdbUrl": "https://www.igdb.com/games/baldurs-gate-iii",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.jpg",
-    "artwork": "./art/igdb/tt13258344.webp",
     "edition": "Deluxe Edition",
     "shelf": "xbox",
     "platform": "Xbox Series X",
-    "editionSource": "https://us.merch.larian.com/products/baldur-s-gate-3-deluxe-edition-xbox"
+    "editionSource": "https://us.merch.larian.com/products/baldur-s-gate-3-deluxe-edition-xbox",
+    "launchboxId": 447791,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/447791",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/5340d2a1-80aa-49a5-a7f7-57b55e9062ae.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt13258344-front-5340d2a1-80aa-49a5-a7f7-57b55e9062ae.webp",
+    "artworkSource": "https://images.launchbox-app.com/5340d2a1-80aa-49a5-a7f7-57b55e9062ae.png",
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
   },
   "tt32591698": {
     "igdbId": 305152,
     "igdbUrl": "https://www.igdb.com/games/clair-obscur-expedition-33",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gam.jpg",
-    "artwork": "./art/igdb/tt32591698.webp",
     "shelf": "playstation",
     "platform": "PlayStation 5",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/305152.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/305152.json",
+    "launchboxId": 472494,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/472494",
+    "launchboxPlatform": "Sony Playstation 5",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_bb0113ae-fd26-40ac-97c5-7a3cb23d5862.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_73a18949-ba78-41ec-9e16-057176748595.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_83d04277-8e12-4926-9706-e8221c0cb226.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt32591698-front-r2_bb0113ae-fd26-40ac-97c5-7a3cb23d5862.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_bb0113ae-fd26-40ac-97c5-7a3cb23d5862.png",
+    "boxBack": "./art/launchbox/tt32591698-back-r2_73a18949-ba78-41ec-9e16-057176748595.webp",
+    "boxSpine": "./art/launchbox/tt32591698-spine-r2_83d04277-8e12-4926-9706-e8221c0cb226.webp"
   },
   "tt2993508": {
     "igdbId": 1942,
     "igdbUrl": "https://www.igdb.com/games/the-witcher-3-wild-hunt",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaarl.jpg",
-    "artwork": "./art/igdb/tt2993508.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/1942.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/1942.json",
+    "launchboxId": 17251,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/17251",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5aa3c1d0-8e6a-46c2-9821-099b394b07b8.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2993508-front-5aa3c1d0-8e6a-46c2-9821-099b394b07b8.webp",
+    "artworkSource": "https://images.launchbox-app.com/5aa3c1d0-8e6a-46c2-9821-099b394b07b8.jpg"
   },
   "tt0184666": {
     "igdbId": 1029,
     "igdbUrl": "https://www.igdb.com/games/the-legend-of-zelda-ocarina-of-time",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3nnx.jpg",
-    "artwork": "./art/igdb/tt0184666.webp"
+    "launchboxId": 161,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/161",
+    "launchboxPlatform": "Nintendo 64",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/06da83f4-2c7b-4551-9792-8e2292ff6afb.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0f7548a2-8b81-4f1d-9284-3e1a3b6303e5.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ce26333d-438c-4795-86a7-9657494805a8.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0184666-front-06da83f4-2c7b-4551-9792-8e2292ff6afb.webp",
+    "artworkSource": "https://images.launchbox-app.com/06da83f4-2c7b-4551-9792-8e2292ff6afb.jpg",
+    "boxBack": "./art/launchbox/tt0184666-back-0f7548a2-8b81-4f1d-9284-3e1a3b6303e5.webp",
+    "boxSpine": "./art/launchbox/tt0184666-spine-ce26333d-438c-4795-86a7-9657494805a8.webp"
   },
   "tt0208155": {
     "igdbId": 427,
     "igdbUrl": "https://www.igdb.com/games/final-fantasy-vii",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kx2.jpg",
-    "artwork": "./art/igdb/tt0208155.webp",
     "shelf": "playstation",
     "platform": "PlayStation",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation.dat",
+    "launchboxId": 525,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/525",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_0fc9f0e1-4e87-4410-9be7-96e59a4c5464.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/eacdb1ca-ab11-47af-98a5-ec3f553c9df1.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d5a8e96f-ed9e-4596-b3c1-271a150fbb19.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0208155-front-r2_0fc9f0e1-4e87-4410-9be7-96e59a4c5464.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_0fc9f0e1-4e87-4410-9be7-96e59a4c5464.png",
+    "boxBack": "./art/launchbox/tt0208155-back-eacdb1ca-ab11-47af-98a5-ec3f553c9df1.webp",
+    "boxSpine": "./art/launchbox/tt0208155-spine-d5a8e96f-ed9e-4596-b3c1-271a150fbb19.webp"
   },
   "tt5838588": {
     "igdbId": 19560,
     "igdbUrl": "https://www.igdb.com/games/god-of-war--1",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobkt6.jpg",
-    "artwork": "./art/igdb/tt5838588.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/19560.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/19560.json",
+    "launchboxId": 149607,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/149607",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ac21e54c-a102-49a3-ab17-17ce67e4f868.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5a3752a0-683f-43cb-b068-4457dd8b70a3.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e09a8e8e-7ae6-41b6-84bd-74df7620a7b9.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt5838588-front-ac21e54c-a102-49a3-ab17-17ce67e4f868.webp",
+    "artworkSource": "https://images.launchbox-app.com/ac21e54c-a102-49a3-ab17-17ce67e4f868.jpg",
+    "boxBack": "./art/launchbox/tt5838588-back-5a3752a0-683f-43cb-b068-4457dd8b70a3.webp",
+    "boxSpine": "./art/launchbox/tt5838588-spine-e09a8e8e-7ae6-41b6-84bd-74df7620a7b9.webp"
   },
   "tt13119450": {
     "igdbId": 112875,
     "igdbUrl": "https://www.igdb.com/games/god-of-war-ragnarok",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coba3d.jpg",
-    "artwork": "./art/igdb/tt13119450.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/112875.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/112875.json",
+    "launchboxId": 217152,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/217152",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4166fff0-21ec-41ae-a3bf-9dbf36934e81.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt13119450-front-4166fff0-21ec-41ae-a3bf-9dbf36934e81.webp",
+    "artworkSource": "https://images.launchbox-app.com/4166fff0-21ec-41ae-a3bf-9dbf36934e81.jpg"
   },
   "tt0180825": {
     "igdbId": 375,
     "igdbUrl": "https://www.igdb.com/games/metal-gear-solid",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpak.jpg",
-    "artwork": "./art/igdb/tt0180825.webp",
     "shelf": "playstation",
     "platform": "PlayStation",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation.dat",
+    "launchboxId": 196,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/196",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_d810b36e-fd9e-435f-9e1b-32ef76459e66.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7ce6092e-8afb-42b5-bc83-bcb64e25e0f4.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_4115e099-f65e-4293-a794-74079c336fa6.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0180825-front-r2_d810b36e-fd9e-435f-9e1b-32ef76459e66.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_d810b36e-fd9e-435f-9e1b-32ef76459e66.jpg",
+    "boxBack": "./art/launchbox/tt0180825-back-7ce6092e-8afb-42b5-bc83-bcb64e25e0f4.webp",
+    "boxSpine": "./art/launchbox/tt0180825-spine-r2_4115e099-f65e-4293-a794-74079c336fa6.webp"
   },
   "tt0365498": {
     "igdbId": 379,
     "igdbUrl": "https://www.igdb.com/games/metal-gear-solid-3-snake-eater",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ei5.jpg",
-    "artwork": "./art/igdb/tt0365498.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 44,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/44",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e8fb6be7-937e-4147-b64c-2002381bf024.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8a10e4bd-8997-41bb-9ced-5c706a9a9656.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/46ed768a-2e2a-4493-af12-a0dba588fc32.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0365498-front-e8fb6be7-937e-4147-b64c-2002381bf024.webp",
+    "artworkSource": "https://images.launchbox-app.com/e8fb6be7-937e-4147-b64c-2002381bf024.jpg",
+    "boxBack": "./art/launchbox/tt0365498-back-8a10e4bd-8997-41bb-9ced-5c706a9a9656.webp",
+    "boxSpine": "./art/launchbox/tt0365498-spine-46ed768a-2e2a-4493-af12-a0dba588fc32.webp"
   },
   "tt1568322": {
     "igdbId": 501,
     "igdbUrl": "https://www.igdb.com/games/batman-arkham-city",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1voh.jpg",
-    "artwork": "./art/igdb/tt1568322.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 9059,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/9059",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1e72179c-e0a5-47c6-bb4b-186db80aee72.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b7d41590-66ae-4317-ae00-030c698da275.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1568322-front-1e72179c-e0a5-47c6-bb4b-186db80aee72.webp",
+    "artworkSource": "https://images.launchbox-app.com/1e72179c-e0a5-47c6-bb4b-186db80aee72.jpg",
+    "boxBack": "./art/launchbox/tt1568322-back-b7d41590-66ae-4317-ae00-030c698da275.webp"
   },
   "tt0210613": {
     "igdbId": 1802,
     "igdbUrl": "https://www.igdb.com/games/chrono-trigger",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3plw.jpg",
-    "artwork": "./art/igdb/tt0210613.webp"
+    "launchboxId": 1255,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1255",
+    "launchboxPlatform": "Super Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5db08b42-02db-4a10-b073-6a44abf60720.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f82bab38-07f2-47c5-9585-db5d81dea6e6.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5adc8c03-0bc3-43a6-b4cc-14e6f3581850.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0210613-front-5db08b42-02db-4a10-b073-6a44abf60720.webp",
+    "artworkSource": "https://images.launchbox-app.com/5db08b42-02db-4a10-b073-6a44abf60720.jpg",
+    "boxBack": "./art/launchbox/tt0210613-back-f82bab38-07f2-47c5-9585-db5d81dea6e6.webp",
+    "boxSpine": "./art/launchbox/tt0210613-spine-5adc8c03-0bc3-43a6-b4cc-14e6f3581850.webp"
   },
   "tt10562854": {
     "igdbId": 119133,
     "igdbUrl": "https://www.igdb.com/games/elden-ring",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.jpg",
-    "artwork": "./art/igdb/tt10562854.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/119133.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/119133.json",
+    "launchboxId": 217102,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/217102",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b113fa60-684c-401c-9f95-10b0c9e92786.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt10562854-front-b113fa60-684c-401c-9f95-10b0c9e92786.webp",
+    "artworkSource": "https://images.launchbox-app.com/b113fa60-684c-401c-9f95-10b0c9e92786.jpg"
   },
   "tt0183066": {
     "igdbId": 14,
     "igdbUrl": "https://www.igdb.com/games/fallout-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ado.jpg",
-    "artwork": "./art/igdb/tt0183066.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 2419,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2419",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/bbdf71d0-44b6-48c5-9eea-4b10bd65f02f.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/dd089bf6-9747-41bd-9c67-162cc3d8c715.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f625b944-b2b9-41d7-9271-63e81e441990.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0183066-front-bbdf71d0-44b6-48c5-9eea-4b10bd65f02f.webp",
+    "artworkSource": "https://images.launchbox-app.com/bbdf71d0-44b6-48c5-9eea-4b10bd65f02f.jpg",
+    "boxBack": "./art/launchbox/tt0183066-back-dd089bf6-9747-41bd-9c67-162cc3d8c715.webp",
+    "boxSpine": "./art/launchbox/tt0183066-spine-f625b944-b2b9-41d7-9271-63e81e441990.webp"
   },
   "tt0383385": {
     "igdbId": 732,
     "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-san-andreas",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lb9.jpg",
-    "artwork": "./art/igdb/tt0383385.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 3930,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3930",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/56b5479a-bba5-43d6-b458-0fcd00bf10ba.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8ff51dca-beef-4d70-9827-61b8b2bd7f42.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d3af030f-53dc-4197-aed7-14831d65d4fa.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0383385-front-56b5479a-bba5-43d6-b458-0fcd00bf10ba.webp",
+    "artworkSource": "https://images.launchbox-app.com/56b5479a-bba5-43d6-b458-0fcd00bf10ba.png",
+    "boxBack": "./art/launchbox/tt0383385-back-8ff51dca-beef-4d70-9827-61b8b2bd7f42.webp",
+    "boxSpine": "./art/launchbox/tt0383385-spine-d3af030f-53dc-4197-aed7-14831d65d4fa.webp"
   },
   "tt0224637": {
     "igdbId": 6,
     "igdbUrl": "https://www.igdb.com/games/baldurs-gate-ii-shadows-of-amn",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co71yr.jpg",
-    "artwork": "./art/igdb/tt0224637.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 2191,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2191",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "",
+        "source": "https://images.launchbox-app.com/5afe2f73-e642-4e5d-b3fa-c4b17595c795.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0224637-front-5afe2f73-e642-4e5d-b3fa-c4b17595c795.webp",
+    "artworkSource": "https://images.launchbox-app.com/5afe2f73-e642-4e5d-b3fa-c4b17595c795.jpg"
   },
   "tt2103188": {
     "igdbId": 1020,
     "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-v",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbd.jpg",
-    "artwork": "./art/igdb/tt2103188.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 13353,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/13353",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d1a1e164-2441-4738-ae90-304e0bfcadda.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/893cd6e7-7981-4442-8f7c-95c6855c5c6b.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1468f0e7-9a5f-4a1c-8c4a-431f8fa14c3d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2103188-front-d1a1e164-2441-4738-ae90-304e0bfcadda.webp",
+    "artworkSource": "https://images.launchbox-app.com/d1a1e164-2441-4738-ae90-304e0bfcadda.jpg",
+    "boxBack": "./art/launchbox/tt2103188-back-893cd6e7-7981-4442-8f7c-95c6855c5c6b.webp",
+    "boxSpine": "./art/launchbox/tt2103188-spine-1468f0e7-9a5f-4a1c-8c4a-431f8fa14c3d.webp"
   },
   "tt0374692": {
     "igdbId": 233,
     "igdbUrl": "https://www.igdb.com/games/half-life-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nmw.jpg",
-    "artwork": "./art/igdb/tt0374692.webp",
     "shelf": "xbox",
     "platform": "Xbox",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat",
+    "launchboxId": 18385,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/18385",
+    "launchboxPlatform": "Microsoft Xbox",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/2c53e9cb-2bcd-472a-9d96-789d713f1202.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0a2d8e8e-d354-4287-87c0-281c3aa9d696.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c58e1ece-1aaf-4db8-8626-430460671a42.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0374692-front-2c53e9cb-2bcd-472a-9d96-789d713f1202.webp",
+    "artworkSource": "https://images.launchbox-app.com/2c53e9cb-2bcd-472a-9d96-789d713f1202.jpg",
+    "boxBack": "./art/launchbox/tt0374692-back-0a2d8e8e-d354-4287-87c0-281c3aa9d696.webp",
+    "boxSpine": "./art/launchbox/tt0374692-spine-c58e1ece-1aaf-4db8-8626-430460671a42.webp"
   },
   "tt1648163": {
     "igdbId": 72,
     "igdbUrl": "https://www.igdb.com/games/portal-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rs4.jpg",
-    "artwork": "./art/igdb/tt1648163.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 6270,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/6270",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7969e3ba-d874-475c-9864-b3de9452c3ce.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0556e635-aa9b-4243-99c9-5108c8125f2e.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8435cadb-c23b-4303-b8c6-a15796aa6d1d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1648163-front-7969e3ba-d874-475c-9864-b3de9452c3ce.webp",
+    "artworkSource": "https://images.launchbox-app.com/7969e3ba-d874-475c-9864-b3de9452c3ce.jpg",
+    "boxBack": "./art/launchbox/tt1648163-back-0556e635-aa9b-4243-99c9-5108c8125f2e.webp",
+    "boxSpine": "./art/launchbox/tt1648163-spine-8435cadb-c23b-4303-b8c6-a15796aa6d1d.webp"
   },
   "tt0282975": {
     "igdbId": 481,
     "igdbUrl": "https://www.igdb.com/games/silent-hill-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vyg.jpg",
-    "artwork": "./art/igdb/tt0282975.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 4793,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4793",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c4007fff-9166-4389-83b6-e338c2278a29.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4cf19c6d-16ac-46e7-a0ff-6516bf980c40.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0a09dd0a-a5a6-4b40-b3a1-8845f34cd644.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0282975-front-c4007fff-9166-4389-83b6-e338c2278a29.webp",
+    "artworkSource": "https://images.launchbox-app.com/c4007fff-9166-4389-83b6-e338c2278a29.jpg",
+    "boxBack": "./art/launchbox/tt0282975-back-4cf19c6d-16ac-46e7-a0ff-6516bf980c40.webp",
+    "boxSpine": "./art/launchbox/tt0282975-spine-0a09dd0a-a5a6-4b40-b3a1-8845f34cd644.webp"
   },
   "tt1479962": {
     "igdbId": 434,
     "igdbUrl": "https://www.igdb.com/games/red-dead-redemption",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lcv.jpg",
-    "artwork": "./art/igdb/tt1479962.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 191,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/191",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1174b9ad-68a1-4098-82de-41c60969fde3.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9736f5f7-1cdf-46b0-a13a-18d4666c0e92.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/58fee692-0570-4cf0-bb64-000264c3f5ef.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1479962-front-1174b9ad-68a1-4098-82de-41c60969fde3.webp",
+    "artworkSource": "https://images.launchbox-app.com/1174b9ad-68a1-4098-82de-41c60969fde3.jpg",
+    "boxBack": "./art/launchbox/tt1479962-back-9736f5f7-1cdf-46b0-a13a-18d4666c0e92.webp",
+    "boxSpine": "./art/launchbox/tt1479962-spine-58fee692-0570-4cf0-bb64-000264c3f5ef.webp"
   },
   "tt10471854": {
     "igdbId": 119388,
     "igdbUrl": "https://www.igdb.com/games/the-legend-of-zelda-tears-of-the-kingdom",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5vmg.jpg",
-    "artwork": "./art/igdb/tt10471854.webp"
+    "launchboxId": 215519,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/215519",
+    "launchboxPlatform": "Nintendo Switch",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/20c45766-0bc0-410d-ab7c-58b6a4855f75.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a9ce73d6-37c1-45a8-b641-4f1f68d1d224.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/469ec44d-aeb6-4f33-a1d4-505ea2a6b79e.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt10471854-front-20c45766-0bc0-410d-ab7c-58b6a4855f75.webp",
+    "artworkSource": "https://images.launchbox-app.com/20c45766-0bc0-410d-ab7c-58b6a4855f75.png",
+    "boxBack": "./art/launchbox/tt10471854-back-a9ce73d6-37c1-45a8-b641-4f1f68d1d224.webp",
+    "boxSpine": "./art/launchbox/tt10471854-spine-469ec44d-aeb6-4f33-a1d4-505ea2a6b79e.webp"
   },
   "tt3334704": {
     "igdbId": 7331,
     "igdbUrl": "https://www.igdb.com/games/uncharted-4-a-thief-s-end",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7h.jpg",
-    "artwork": "./art/igdb/tt3334704.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/7331.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/7331.json",
+    "launchboxId": 21416,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/21416",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/07f1ca51-57e2-4e7e-859b-fd03ebd4f7fe.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt3334704-front-07f1ca51-57e2-4e7e-859b-fd03ebd4f7fe.webp",
+    "artworkSource": "https://images.launchbox-app.com/07f1ca51-57e2-4e7e-859b-fd03ebd4f7fe.jpg"
   },
   "tt25808274": {
     "igdbId": 215769,
     "igdbUrl": "https://www.igdb.com/games/cyberpunk-2077-phantom-liberty",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7566.jpg",
-    "artwork": "./art/igdb/tt25808274.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 447842,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/447842",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Banner",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/3c23163a-b9ae-4e2b-b8ba-7878f7ff5c19.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt25808274-front-3c23163a-b9ae-4e2b-b8ba-7878f7ff5c19.webp",
+    "artworkSource": "https://images.launchbox-app.com/3c23163a-b9ae-4e2b-b8ba-7878f7ff5c19.jpg",
+    "artworkNote": "LaunchBox has a promotional banner for this digital expansion. The artwork is shown at its original proportions."
   },
   "tt24179294": {
     "igdbId": 228530,
     "igdbUrl": "https://www.igdb.com/games/death-stranding-2-on-the-beach",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.jpg",
-    "artwork": "./art/igdb/tt24179294.webp",
     "shelf": "playstation",
     "platform": "PlayStation 5",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/228530.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/228530.json",
+    "launchboxId": 459200,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/459200",
+    "launchboxPlatform": "Sony Playstation 5",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_458fa392-6068-4afd-b5e4-241f50bd1463.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt24179294-front-r2_458fa392-6068-4afd-b5e4-241f50bd1463.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_458fa392-6068-4afd-b5e4-241f50bd1463.jpg"
   },
   "tt21047286": {
     "igdbId": 132181,
     "igdbUrl": "https://www.igdb.com/games/resident-evil-4--1",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6bo0.jpg",
-    "artwork": "./art/igdb/tt21047286.webp",
     "shelf": "xbox",
     "platform": "Xbox Series X",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/132181.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/132181.json",
+    "launchboxId": 261464,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/261464",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/1a174b0e-c44d-41d5-9fa6-e3a3046f8a59.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt21047286-front-1a174b0e-c44d-41d5-9fa6-e3a3046f8a59.webp",
+    "artworkSource": "https://images.launchbox-app.com/1a174b0e-c44d-41d5-9fa6-e3a3046f8a59.jpg",
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
   },
   "tt1814884": {
     "igdbId": 472,
     "igdbUrl": "https://www.igdb.com/games/the-elder-scrolls-v-skyrim",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocs1l.jpg",
-    "artwork": "./art/igdb/tt1814884.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/472.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/472.json",
+    "launchboxId": 8256,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8256",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_0003e4b0-2772-4ed5-8753-480c0627f2cf.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f582e910-c177-4ce8-bfc0-f596c7b211aa.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_782e5d64-e2e3-4186-805e-e558c686dc6a.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt1814884-front-r2_0003e4b0-2772-4ed5-8753-480c0627f2cf.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_0003e4b0-2772-4ed5-8753-480c0627f2cf.jpg",
+    "boxBack": "./art/launchbox/tt1814884-back-f582e910-c177-4ce8-bfc0-f596c7b211aa.webp",
+    "boxSpine": "./art/launchbox/tt1814884-spine-r2_782e5d64-e2e3-4186-805e-e558c686dc6a.webp"
   },
   "tt1349460": {
     "igdbId": 565,
     "igdbUrl": "https://www.igdb.com/games/uncharted-2-among-thieves",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tnb.jpg",
-    "artwork": "./art/igdb/tt1349460.webp",
     "shelf": "playstation",
     "platform": "PlayStation 3",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat",
+    "launchboxId": 201,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/201",
+    "launchboxPlatform": "Sony Playstation 3",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/cbfc0edb-730a-48ed-8fd7-e6b3e2e9107b.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/72bcd46a-8f91-40f7-9955-9fb1f0704383.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_202ef6dd-c3d3-42bd-a1e8-9a1d9e57746e.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt1349460-front-cbfc0edb-730a-48ed-8fd7-e6b3e2e9107b.webp",
+    "artworkSource": "https://images.launchbox-app.com/cbfc0edb-730a-48ed-8fd7-e6b3e2e9107b.jpg",
+    "boxBack": "./art/launchbox/tt1349460-back-72bcd46a-8f91-40f7-9955-9fb1f0704383.webp",
+    "boxSpine": "./art/launchbox/tt1349460-spine-r2_202ef6dd-c3d3-42bd-a1e8-9a1d9e57746e.webp"
   },
   "tt0397042": {
     "igdbId": 145191,
     "igdbUrl": "https://www.igdb.com/games/resident-evil-4--2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2wki.jpg",
-    "artwork": "./art/igdb/tt0397042.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 3928,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3928",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_acc0564e-f465-405b-bf84-0ee721b1714d.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_197d26d3-b849-47c7-8028-e049c795ea75.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_4de0b9a9-88ce-463e-8e9c-61a8617a1149.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0397042-front-r2_acc0564e-f465-405b-bf84-0ee721b1714d.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_acc0564e-f465-405b-bf84-0ee721b1714d.png",
+    "boxBack": "./art/launchbox/tt0397042-back-r2_197d26d3-b849-47c7-8028-e049c795ea75.webp",
+    "boxSpine": "./art/launchbox/tt0397042-spine-r2_4de0b9a9-88ce-463e-8e9c-61a8617a1149.webp"
   },
   "tt0314123": {
     "igdbId": 733,
     "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-vice-city",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbb.jpg",
-    "artwork": "./art/igdb/tt0314123.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 4166,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4166",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9ab89a02-8481-495f-b16b-f669573a34a0.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0db024bb-0e08-493b-baa6-f00111068523.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/2a20624c-c3a7-485d-ba27-0574f194b03d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0314123-front-9ab89a02-8481-495f-b16b-f669573a34a0.webp",
+    "artworkSource": "https://images.launchbox-app.com/9ab89a02-8481-495f-b16b-f669573a34a0.jpg",
+    "boxBack": "./art/launchbox/tt0314123-back-0db024bb-0e08-493b-baa6-f00111068523.webp",
+    "boxSpine": "./art/launchbox/tt0314123-spine-2a20624c-c3a7-485d-ba27-0574f194b03d.webp"
   },
   "tt7651352": {
     "igdbId": 75235,
     "igdbUrl": "https://www.igdb.com/games/ghost-of-tsushima",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2crj.jpg",
-    "artwork": "./art/igdb/tt7651352.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/75235.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/75235.json",
+    "launchboxId": 184978,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/184978",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e45c7c13-3b92-43e7-83e1-329041919414.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6e5a367e-0b80-4954-9d5b-b228d2492037.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_97ce6119-4596-4878-9eea-937a78c82468.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt7651352-front-e45c7c13-3b92-43e7-83e1-329041919414.webp",
+    "artworkSource": "https://images.launchbox-app.com/e45c7c13-3b92-43e7-83e1-329041919414.jpg",
+    "boxBack": "./art/launchbox/tt7651352-back-6e5a367e-0b80-4954-9d5b-b228d2492037.webp",
+    "boxSpine": "./art/launchbox/tt7651352-spine-r2_97ce6119-4596-4878-9eea-937a78c82468.webp"
   },
   "tt0291337": {
     "igdbId": 18,
     "igdbUrl": "https://www.igdb.com/games/max-payne",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wb2.jpg",
-    "artwork": "./art/igdb/tt0291337.webp",
     "shelf": "xbox",
     "platform": "Xbox",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat",
+    "launchboxId": 13911,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/13911",
+    "launchboxPlatform": "Microsoft Xbox",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/75525c80-30e5-466d-a58e-01a795947b88.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6acd8c72-a6db-4774-9ee3-0d2c4dead325.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/77b5c7d8-cd0c-4f57-b461-222dbfe936da.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0291337-front-75525c80-30e5-466d-a58e-01a795947b88.webp",
+    "artworkSource": "https://images.launchbox-app.com/75525c80-30e5-466d-a58e-01a795947b88.jpg",
+    "boxBack": "./art/launchbox/tt0291337-back-6acd8c72-a6db-4774-9ee3-0d2c4dead325.webp",
+    "boxSpine": "./art/launchbox/tt0291337-spine-77b5c7d8-cd0c-4f57-b461-222dbfe936da.webp"
   },
   "tt1380179": {
     "igdbId": 9600,
     "igdbUrl": "https://www.igdb.com/games/persona-4",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u07.jpg",
-    "artwork": "./art/igdb/tt1380179.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 9328,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/9328",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/88dd3c72-663f-4262-a85d-0ba96f2a99ab.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/de5371a0-42b2-4a7c-8f4c-b34e56f6e705.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6df17171-ff85-4bf6-909c-bbfd0996196c.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1380179-front-88dd3c72-663f-4262-a85d-0ba96f2a99ab.webp",
+    "artworkSource": "https://images.launchbox-app.com/88dd3c72-663f-4262-a85d-0ba96f2a99ab.jpg",
+    "boxBack": "./art/launchbox/tt1380179-back-de5371a0-42b2-4a7c-8f4c-b34e56f6e705.webp",
+    "boxSpine": "./art/launchbox/tt1380179-spine-6df17171-ff85-4bf6-909c-bbfd0996196c.webp"
   },
   "tt3944082": {
     "igdbId": 9927,
     "igdbUrl": "https://www.igdb.com/games/persona-5",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r76.jpg",
-    "artwork": "./art/igdb/tt3944082.webp",
     "shelf": "playstation",
     "platform": "PlayStation 3",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat",
+    "launchboxId": 25654,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/25654",
+    "launchboxPlatform": "Sony Playstation 3",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3648080d-af08-4130-a126-3f43e4d8b607.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt3944082-front-3648080d-af08-4130-a126-3f43e4d8b607.webp",
+    "artworkSource": "https://images.launchbox-app.com/3648080d-af08-4130-a126-3f43e4d8b607.jpg"
   },
   "tt0486673": {
     "igdbId": 2207,
     "igdbUrl": "https://www.igdb.com/games/shadow-of-the-colossus",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ozz.jpg",
-    "artwork": "./art/igdb/tt0486673.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 2240,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2240",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5cc09022-addf-4e85-8233-007ea1b29b1d.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ee695f26-87cf-4660-9e28-ff6ad18cd4f7.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/cae40912-e5f6-4f5d-963b-82bd0535678f.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0486673-front-5cc09022-addf-4e85-8233-007ea1b29b1d.webp",
+    "artworkSource": "https://images.launchbox-app.com/5cc09022-addf-4e85-8233-007ea1b29b1d.jpg",
+    "boxBack": "./art/launchbox/tt0486673-back-ee695f26-87cf-4660-9e28-ff6ad18cd4f7.webp",
+    "boxSpine": "./art/launchbox/tt0486673-spine-cae40912-e5f6-4f5d-963b-82bd0535678f.webp"
   },
   "tt0249174": {
     "igdbId": 1068,
     "igdbUrl": "https://www.igdb.com/games/super-mario-bros-3",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ozx.jpg",
-    "artwork": "./art/igdb/tt0249174.webp"
+    "launchboxId": 112,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/112",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/500ae7d7-0c4a-41bf-a91c-747623e894a5.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/25d45104-f557-4a8c-a963-590ff7cac0dc.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f4523f0b-372d-4983-95f1-1cf27c0971e6.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0249174-front-500ae7d7-0c4a-41bf-a91c-747623e894a5.webp",
+    "artworkSource": "https://images.launchbox-app.com/500ae7d7-0c4a-41bf-a91c-747623e894a5.jpg",
+    "boxBack": "./art/launchbox/tt0249174-back-25d45104-f557-4a8c-a963-590ff7cac0dc.webp",
+    "boxSpine": "./art/launchbox/tt0249174-spine-f4523f0b-372d-4983-95f1-1cf27c0971e6.webp"
   },
   "tt0221606": {
     "igdbId": 1070,
     "igdbUrl": "https://www.igdb.com/games/super-mario-world",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8lo8.jpg",
-    "artwork": "./art/igdb/tt0221606.webp"
+    "launchboxId": 136,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/136",
+    "launchboxPlatform": "Super Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/00fb4aca-c22f-4ca9-84d0-90cf8c22d4af.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1c158bd5-22be-49d8-a0ca-895e1a206f5a.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/dbf473bc-a534-4aa1-84c1-8de3a218c060.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0221606-front-00fb4aca-c22f-4ca9-84d0-90cf8c22d4af.webp",
+    "artworkSource": "https://images.launchbox-app.com/00fb4aca-c22f-4ca9-84d0-90cf8c22d4af.png",
+    "boxBack": "./art/launchbox/tt0221606-back-1c158bd5-22be-49d8-a0ca-895e1a206f5a.webp",
+    "boxSpine": "./art/launchbox/tt0221606-spine-dbf473bc-a534-4aa1-84c1-8de3a218c060.webp"
   },
   "tt0263641": {
     "igdbId": 1026,
     "igdbUrl": "https://www.igdb.com/games/the-legend-of-zelda-a-link-to-the-past",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3vzn.jpg",
-    "artwork": "./art/igdb/tt0263641.webp"
+    "launchboxId": 1318,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1318",
+    "launchboxPlatform": "Super Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_689c3eda-bd3b-452d-997c-c25b5335656e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_6911f959-beb7-4131-9c4b-3b12cb4e3816.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_5c9fd347-7b4b-4370-aebe-cc42dafc38d1.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0263641-front-r2_689c3eda-bd3b-452d-997c-c25b5335656e.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_689c3eda-bd3b-452d-997c-c25b5335656e.jpg",
+    "boxBack": "./art/launchbox/tt0263641-back-r2_6911f959-beb7-4131-9c4b-3b12cb4e3816.webp",
+    "boxSpine": "./art/launchbox/tt0263641-spine-r2_5c9fd347-7b4b-4370-aebe-cc42dafc38d1.webp"
   },
   "tt1282022": {
     "igdbId": 500,
     "igdbUrl": "https://www.igdb.com/games/batman-arkham-asylum",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1voj.jpg",
-    "artwork": "./art/igdb/tt1282022.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 9057,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/9057",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e3ed282b-754c-4ff6-bf77-cf8ecad6f2c2.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ff4f65ae-8bfa-4557-ad5b-4485047539e9.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1282022-front-e3ed282b-754c-4ff6-bf77-cf8ecad6f2c2.webp",
+    "artworkSource": "https://images.launchbox-app.com/e3ed282b-754c-4ff6-bf77-cf8ecad6f2c2.png",
+    "boxSpine": "./art/launchbox/tt1282022-spine-ff4f65ae-8bfa-4557-ad5b-4485047539e9.webp"
   },
   "tt1094581": {
     "igdbId": 20,
     "igdbUrl": "https://www.igdb.com/games/bioshock",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mli.jpg",
-    "artwork": "./art/igdb/tt1094581.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 7145,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7145",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7f924b6d-bcf5-4365-8855-77aa668692dd.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e738a362-0bd1-49fd-a75a-c076a6c08811.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3c221692-ba70-4069-b26b-70ceb8ba5a88.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1094581-front-7f924b6d-bcf5-4365-8855-77aa668692dd.webp",
+    "artworkSource": "https://images.launchbox-app.com/7f924b6d-bcf5-4365-8855-77aa668692dd.jpg",
+    "boxBack": "./art/launchbox/tt1094581-back-e738a362-0bd1-49fd-a75a-c076a6c08811.webp",
+    "boxSpine": "./art/launchbox/tt1094581-spine-3c221692-ba70-4069-b26b-70ceb8ba5a88.webp"
   },
   "tt1712064": {
     "igdbId": 538,
     "igdbUrl": "https://www.igdb.com/games/bioshock-infinite",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n12.jpg",
-    "artwork": "./art/igdb/tt1712064.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 14409,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/14409",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "United States",
+        "source": "https://images.launchbox-app.com/r2_749171d1-6e3e-421b-98e1-1025b50c6c49.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1712064-front-r2_749171d1-6e3e-421b-98e1-1025b50c6c49.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_749171d1-6e3e-421b-98e1-1025b50c6c49.jpg"
   },
   "tt4795016": {
     "igdbId": 11133,
     "igdbUrl": "https://www.igdb.com/games/dark-souls-iii",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9ed.jpg",
-    "artwork": "./art/igdb/tt4795016.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11133.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11133.json",
+    "launchboxId": 33365,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/33365",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/2c9098c7-5c39-48cd-9799-cc502525839a.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt4795016-front-2c9098c7-5c39-48cd-9799-cc502525839a.webp",
+    "artworkSource": "https://images.launchbox-app.com/2c9098c7-5c39-48cd-9799-cc502525839a.jpg"
   },
   "tt1541718": {
     "igdbId": 76,
     "igdbUrl": "https://www.igdb.com/games/dragon-age-origins",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvs.jpg",
-    "artwork": "./art/igdb/tt1541718.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 7467,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7467",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/da600af5-3da4-4d8a-9e22-39a12b30fff7.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ca3e7bc8-6376-446b-a887-f11952ffad79.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1541718-front-da600af5-3da4-4d8a-9e22-39a12b30fff7.webp",
+    "artworkSource": "https://images.launchbox-app.com/da600af5-3da4-4d8a-9e22-39a12b30fff7.jpg",
+    "boxBack": "./art/launchbox/tt1541718-back-ca3e7bc8-6376-446b-a887-f11952ffad79.webp"
   },
   "tt0210061": {
     "igdbId": 426,
     "igdbUrl": "https://www.igdb.com/games/final-fantasy-iii--7",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaq5k.jpg",
-    "artwork": "./art/igdb/tt0210061.webp"
+    "launchboxId": 108333,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/108333",
+    "launchboxPlatform": "Super Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6504fd85-ab13-47f1-b600-1954a91c7696.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/29d53bd3-bba9-47c0-9a68-e1394e72bf80.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a4f5ef5e-9070-42f7-baf3-93b73a9783a1.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0210061-front-6504fd85-ab13-47f1-b600-1954a91c7696.webp",
+    "artworkSource": "https://images.launchbox-app.com/6504fd85-ab13-47f1-b600-1954a91c7696.jpg",
+    "boxBack": "./art/launchbox/tt0210061-back-29d53bd3-bba9-47c0-9a68-e1394e72bf80.webp",
+    "boxSpine": "./art/launchbox/tt0210061-spine-a4f5ef5e-9070-42f7-baf3-93b73a9783a1.webp",
+    "artworkNote": "The North American Super Nintendo box carries the original regional title, Final Fantasy III."
   },
   "tt0284110": {
     "igdbId": 418,
     "igdbUrl": "https://www.igdb.com/games/final-fantasy-x",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tr1.jpg",
-    "artwork": "./art/igdb/tt0284110.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 20,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/20",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0ac3558d-5e4a-4515-8384-a9939928610c.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ae49832a-5ed5-4f67-8684-ab390dc1eac1.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1dcc80f1-c850-4e23-af1e-0986ad560a2d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0284110-front-0ac3558d-5e4a-4515-8384-a9939928610c.webp",
+    "artworkSource": "https://images.launchbox-app.com/0ac3558d-5e4a-4515-8384-a9939928610c.jpg",
+    "boxBack": "./art/launchbox/tt0284110-back-ae49832a-5ed5-4f67-8684-ab390dc1eac1.webp",
+    "boxSpine": "./art/launchbox/tt0284110-spine-1dcc80f1-c850-4e23-af1e-0986ad560a2d.webp"
   },
   "tt0846694": {
     "igdbId": 551,
     "igdbUrl": "https://www.igdb.com/games/god-of-war-ii",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3dik.jpg",
-    "artwork": "./art/igdb/tt0846694.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 88,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/88",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/2b06034c-9d15-4bdd-8e20-b564027cd957.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/90b1c5e3-71d9-4043-b6af-6d9787407a31.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ed2a70f1-872f-4c25-8ed9-057e1850bf02.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0846694-front-2b06034c-9d15-4bdd-8e20-b564027cd957.webp",
+    "artworkSource": "https://images.launchbox-app.com/2b06034c-9d15-4bdd-8e20-b564027cd957.jpg",
+    "boxBack": "./art/launchbox/tt0846694-back-90b1c5e3-71d9-4043-b6af-6d9787407a31.webp",
+    "boxSpine": "./art/launchbox/tt0846694-spine-ed2a70f1-872f-4c25-8ed9-057e1850bf02.webp"
   },
   "tt1199781": {
     "igdbId": 499,
     "igdbUrl": "https://www.igdb.com/games/god-of-war-iii",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3koi.jpg",
-    "artwork": "./art/igdb/tt1199781.webp",
     "shelf": "playstation",
     "platform": "PlayStation 3",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat",
+    "launchboxId": 843,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/843",
+    "launchboxPlatform": "Sony Playstation 3",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/43250330-b1dc-40c7-ac61-7bac745c5ace.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ed7ab402-c85e-421e-876c-ed507caadcc1.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0c72cebf-26d7-4003-852a-eb4dc894c269.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1199781-front-43250330-b1dc-40c7-ac61-7bac745c5ace.webp",
+    "artworkSource": "https://images.launchbox-app.com/43250330-b1dc-40c7-ac61-7bac745c5ace.jpg",
+    "boxBack": "./art/launchbox/tt1199781-back-ed7ab402-c85e-421e-876c-ed507caadcc1.webp",
+    "boxSpine": "./art/launchbox/tt1199781-spine-0c72cebf-26d7-4003-852a-eb4dc894c269.webp"
   },
   "tt10323784": {
     "igdbId": 115289,
     "igdbUrl": "https://www.igdb.com/games/hollow-knight-silksong",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobebu.jpg",
-    "artwork": "./art/igdb/tt10323784.webp",
     "edition": "Physical Edition",
     "shelf": "playstation",
     "platform": "PlayStation 5",
-    "editionSource": "https://www.fangamer.com/blogs/news/hollow-knight-silksong-physical-editions"
+    "editionSource": "https://www.fangamer.com/blogs/news/hollow-knight-silksong-physical-editions",
+    "launchboxId": 460642,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/460642",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/b35d1530-af7a-41d3-a07b-b4a812b0ade9.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt10323784-front-b35d1530-af7a-41d3-a07b-b4a812b0ade9.webp",
+    "artworkSource": "https://images.launchbox-app.com/b35d1530-af7a-41d3-a07b-b4a812b0ade9.jpg",
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
   },
   "tt14321832": {
     "igdbId": 135243,
     "igdbUrl": "https://www.igdb.com/games/it-takes-two",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob22v.jpg",
-    "artwork": "./art/igdb/tt14321832.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/135243.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/135243.json",
+    "launchboxId": 214076,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/214076",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3b0cd49b-42b9-48df-8f40-70beb3c3e2ec.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt14321832-front-3b0cd49b-42b9-48df-8f40-70beb3c3e2ec.webp",
+    "artworkSource": "https://images.launchbox-app.com/3b0cd49b-42b9-48df-8f40-70beb3c3e2ec.jpg"
   },
   "tt0338221": {
     "igdbId": 39,
     "igdbUrl": "https://www.igdb.com/games/mafia",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qrt.jpg",
-    "artwork": "./art/igdb/tt0338221.webp",
     "shelf": "xbox",
     "platform": "Xbox",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat",
+    "launchboxId": 8007,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8007",
+    "launchboxPlatform": "Microsoft Xbox",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/409d9b4b-8c15-4b39-94a1-08acfa7fa436.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7d544159-7293-473b-aae5-e7a24fe2e558.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3e514071-bdeb-4351-b970-ce298817b79c.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0338221-front-409d9b4b-8c15-4b39-94a1-08acfa7fa436.webp",
+    "artworkSource": "https://images.launchbox-app.com/409d9b4b-8c15-4b39-94a1-08acfa7fa436.jpg",
+    "boxBack": "./art/launchbox/tt0338221-back-7d544159-7293-473b-aae5-e7a24fe2e558.webp",
+    "boxSpine": "./art/launchbox/tt0338221-spine-3e514071-bdeb-4351-b970-ce298817b79c.webp"
   },
   "tt1073668": {
     "igdbId": 73,
     "igdbUrl": "https://www.igdb.com/games/mass-effect",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x7o.jpg",
-    "artwork": "./art/igdb/tt1073668.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 7535,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7535",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/18798261-4c46-436f-b0f9-d9bcac487ffe.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3e32f4c2-0add-4728-9a90-752c6f032a79.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/2db546a0-1db2-45ab-a35d-4ea153f2c079.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1073668-front-18798261-4c46-436f-b0f9-d9bcac487ffe.webp",
+    "artworkSource": "https://images.launchbox-app.com/18798261-4c46-436f-b0f9-d9bcac487ffe.jpg",
+    "boxBack": "./art/launchbox/tt1073668-back-3e32f4c2-0add-4728-9a90-752c6f032a79.webp",
+    "boxSpine": "./art/launchbox/tt1073668-spine-2db546a0-1db2-45ab-a35d-4ea153f2c079.webp"
   },
   "tt1839558": {
     "igdbId": 75,
     "igdbUrl": "https://www.igdb.com/games/mass-effect-3",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x7q.jpg",
-    "artwork": "./art/igdb/tt1839558.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 8160,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8160",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d95b395d-e661-4934-8848-23285248d672.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c67a4a86-b4a2-4f8d-b26a-c0fbb54ada65.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/82a75f69-35b0-4648-ae18-b684fc9ec4e6.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1839558-front-d95b395d-e661-4934-8848-23285248d672.webp",
+    "artworkSource": "https://images.launchbox-app.com/d95b395d-e661-4934-8848-23285248d672.jpg",
+    "boxBack": "./art/launchbox/tt1839558-back-c67a4a86-b4a2-4f8d-b26a-c0fbb54ada65.webp",
+    "boxSpine": "./art/launchbox/tt1839558-spine-82a75f69-35b0-4648-ae18-b684fc9ec4e6.webp"
   },
   "tt0217061": {
     "igdbId": 230,
     "igdbUrl": "https://www.igdb.com/games/starcraft",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9n6m.jpg",
-    "artwork": "./art/igdb/tt0217061.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 153,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/153",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/41cfbc36-a9a4-4416-a6cb-a88c2300abd2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f03fb12d-389d-4b8c-a761-0992ff9cba2e.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/20516a5b-1046-478e-b109-c3e4ce9e7aba.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0217061-front-41cfbc36-a9a4-4416-a6cb-a88c2300abd2.webp",
+    "artworkSource": "https://images.launchbox-app.com/41cfbc36-a9a4-4416-a6cb-a88c2300abd2.jpg",
+    "boxBack": "./art/launchbox/tt0217061-back-f03fb12d-389d-4b8c-a761-0992ff9cba2e.webp",
+    "boxSpine": "./art/launchbox/tt0217061-spine-20516a5b-1046-478e-b109-c3e4ce9e7aba.webp"
   },
   "tt22892938": {
     "igdbId": 222341,
     "igdbUrl": "https://www.igdb.com/games/silent-hill-2--1",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coavaf.jpg",
-    "artwork": "./art/igdb/tt22892938.webp",
     "shelf": "playstation",
     "platform": "PlayStation 5",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/222341.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/222341.json",
+    "launchboxId": 454868,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/454868",
+    "launchboxPlatform": "Sony Playstation 5",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_f6f6f015-20ac-49f2-8b3c-6c421cc5b7b2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_335afa24-7f3a-4c0b-b18e-8707cf9d1a0c.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_954cc465-b1ea-49ff-a2a9-15ba963016bd.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt22892938-front-r2_f6f6f015-20ac-49f2-8b3c-6c421cc5b7b2.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_f6f6f015-20ac-49f2-8b3c-6c421cc5b7b2.jpg",
+    "boxBack": "./art/launchbox/tt22892938-back-r2_335afa24-7f3a-4c0b-b18e-8707cf9d1a0c.webp",
+    "boxSpine": "./art/launchbox/tt22892938-spine-r2_954cc465-b1ea-49ff-a2a9-15ba963016bd.webp"
   },
   "tt5807780": {
     "igdbId": 19565,
     "igdbUrl": "https://www.igdb.com/games/marvels-spider-man",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r77.jpg",
-    "artwork": "./art/igdb/tt5807780.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/19565.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/19565.json",
+    "launchboxId": 148142,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/148142",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ded2ed1f-5ef1-4752-bfce-79ccef7d7b8f.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c2214765-f0de-4eb4-883f-43ad3abdde68.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/88bafc75-b0c7-4859-bb8e-e435e19bf1b4.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt5807780-front-ded2ed1f-5ef1-4752-bfce-79ccef7d7b8f.webp",
+    "artworkSource": "https://images.launchbox-app.com/ded2ed1f-5ef1-4752-bfce-79ccef7d7b8f.jpg",
+    "boxBack": "./art/launchbox/tt5807780-back-c2214765-f0de-4eb4-883f-43ad3abdde68.webp",
+    "boxSpine": "./art/launchbox/tt5807780-spine-88bafc75-b0c7-4859-bb8e-e435e19bf1b4.webp"
   },
   "tt0282366": {
     "igdbId": 82,
     "igdbUrl": "https://www.igdb.com/games/baldur-s-gate-ii-throne-of-bhaal",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25n2.jpg",
-    "artwork": "./art/igdb/tt0282366.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 2192,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2192",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "",
+        "source": "https://images.launchbox-app.com/f79693a6-bdcb-4d92-97cf-16531136bb5a.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "",
+        "source": "https://images.launchbox-app.com/ab4b5cbf-63d2-467e-a70e-906e6dbf5dc4.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0282366-front-f79693a6-bdcb-4d92-97cf-16531136bb5a.webp",
+    "artworkSource": "https://images.launchbox-app.com/f79693a6-bdcb-4d92-97cf-16531136bb5a.jpg",
+    "boxBack": "./art/launchbox/tt0282366-back-ab4b5cbf-63d2-467e-a70e-906e6dbf5dc4.webp"
   },
   "tt3554580": {
     "igdbId": 5503,
     "igdbUrl": "https://www.igdb.com/games/batman-arkham-knight",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coagib.jpg",
-    "artwork": "./art/igdb/tt3554580.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/5503.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/5503.json",
+    "launchboxId": 21415,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/21415",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/89614fa7-cb08-4c16-b3c1-721127a069cd.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt3554580-front-89614fa7-cb08-4c16-b3c1-721127a069cd.webp",
+    "artworkSource": "https://images.launchbox-app.com/89614fa7-cb08-4c16-b3c1-721127a069cd.jpg"
   },
   "tt1125798": {
     "igdbId": 623,
     "igdbUrl": "https://www.igdb.com/games/call-of-duty-4-modern-warfare",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wko.jpg",
-    "artwork": "./art/igdb/tt1125798.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 7159,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7159",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3783374f-86b4-4ff5-b463-24e66ff0f984.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1fa8c8dd-decd-4dea-b102-2c5f95b22b44.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3c88eca7-9b0c-4e74-9e26-6813e25b9bf2.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1125798-front-3783374f-86b4-4ff5-b463-24e66ff0f984.webp",
+    "artworkSource": "https://images.launchbox-app.com/3783374f-86b4-4ff5-b463-24e66ff0f984.jpg",
+    "boxBack": "./art/launchbox/tt1125798-back-1fa8c8dd-decd-4dea-b102-2c5f95b22b44.webp",
+    "boxSpine": "./art/launchbox/tt1125798-spine-3c88eca7-9b0c-4e74-9e26-6813e25b9bf2.webp"
   },
   "tt0258523": {
     "igdbId": 126,
     "igdbUrl": "https://www.igdb.com/games/diablo-ii",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3gfq.jpg",
-    "artwork": "./art/igdb/tt0258523.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 759,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/759",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d1fe0aa2-755f-4b13-ba78-a906b8ca39bb.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ef781ba4-287e-4345-97fb-2402ddd0809f.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b1c3b4e7-eea9-418b-a06d-b76cd9cdcdbd.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0258523-front-d1fe0aa2-755f-4b13-ba78-a906b8ca39bb.webp",
+    "artworkSource": "https://images.launchbox-app.com/d1fe0aa2-755f-4b13-ba78-a906b8ca39bb.jpg",
+    "boxBack": "./art/launchbox/tt0258523-back-ef781ba4-287e-4345-97fb-2402ddd0809f.webp",
+    "boxSpine": "./art/launchbox/tt0258523-spine-b1c3b4e7-eea9-418b-a06d-b76cd9cdcdbd.webp"
   },
   "tt11177022": {
     "igdbId": 26472,
     "igdbUrl": "https://www.igdb.com/games/disco-elysium",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sfj.jpg",
-    "artwork": "./art/igdb/tt11177022.webp",
     "edition": "The Final Cut",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://discoelysium.iam8bit.com/"
+    "editionSource": "https://discoelysium.iam8bit.com/",
+    "launchboxId": 172271,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/172271",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/b62e64af-969b-4a79-9114-9ffa9658f10d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt11177022-front-b62e64af-969b-4a79-9114-9ffa9658f10d.webp",
+    "artworkSource": "https://images.launchbox-app.com/b62e64af-969b-4a79-9114-9ffa9658f10d.jpg",
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
   },
   "tt1073664": {
     "igdbId": 15,
     "igdbUrl": "https://www.igdb.com/games/fallout-3",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ycw.jpg",
-    "artwork": "./art/igdb/tt1073664.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 8183,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8183",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/56566597-dd2b-4ba4-a944-f0aadf36f038.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b179b1af-0a13-4866-baa2-32853b8518bf.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/bb15fe24-50a2-4a4d-b3c0-da7b2dfbbc29.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1073664-front-56566597-dd2b-4ba4-a944-f0aadf36f038.webp",
+    "artworkSource": "https://images.launchbox-app.com/56566597-dd2b-4ba4-a944-f0aadf36f038.jpg",
+    "boxBack": "./art/launchbox/tt1073664-back-b179b1af-0a13-4866-baa2-32853b8518bf.webp",
+    "boxSpine": "./art/launchbox/tt1073664-spine-bb15fe24-50a2-4a4d-b3c0-da7b2dfbbc29.webp"
   },
   "tt0416779": {
     "igdbId": 549,
     "igdbUrl": "https://www.igdb.com/games/god-of-war",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3ddc.jpg",
-    "artwork": "./art/igdb/tt0416779.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 26,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/26",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e0525716-30ba-4c1d-8522-669e10bf21f4.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1babf65c-3e29-492f-9bd1-46e1ad250ee0.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9c24cd30-9a3c-404c-8a91-7ecea926db42.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0416779-front-e0525716-30ba-4c1d-8522-669e10bf21f4.webp",
+    "artworkSource": "https://images.launchbox-app.com/e0525716-30ba-4c1d-8522-669e10bf21f4.jpg",
+    "boxBack": "./art/launchbox/tt0416779-back-1babf65c-3e29-492f-9bd1-46e1ad250ee0.webp",
+    "boxSpine": "./art/launchbox/tt0416779-spine-9c24cd30-9a3c-404c-8a91-7ecea926db42.webp"
   },
   "tt0366758": {
     "igdbId": 19,
     "igdbUrl": "https://www.igdb.com/games/max-payne-2-the-fall-of-max-payne",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lcl.jpg",
-    "artwork": "./art/igdb/tt0366758.webp",
     "shelf": "xbox",
     "platform": "Xbox",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat",
+    "launchboxId": 8012,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8012",
+    "launchboxPlatform": "Microsoft Xbox",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b084a6f5-c3bf-487e-9e7c-3672c37de6de.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9592ad86-928a-4b84-b06a-672adf58b299.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/115c72c9-264c-454a-8e6d-c8b64bbe06bd.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0366758-front-b084a6f5-c3bf-487e-9e7c-3672c37de6de.webp",
+    "artworkSource": "https://images.launchbox-app.com/b084a6f5-c3bf-487e-9e7c-3672c37de6de.jpg",
+    "boxBack": "./art/launchbox/tt0366758-back-9592ad86-928a-4b84-b06a-672adf58b299.webp",
+    "boxSpine": "./art/launchbox/tt0366758-spine-115c72c9-264c-454a-8e6d-c8b64bbe06bd.webp"
   },
   "tt8329350": {
     "igdbId": 37001,
     "igdbUrl": "https://www.igdb.com/games/ori-and-the-will-of-the-wisps",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocjl7.jpg",
-    "artwork": "./art/igdb/tt8329350.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/37001.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/37001.json",
+    "launchboxId": 177646,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/177646",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5e0c0504-9a36-4e2f-aca0-4125c56da442.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt8329350-front-5e0c0504-9a36-4e2f-aca0-4125c56da442.webp",
+    "artworkSource": "https://images.launchbox-app.com/5e0c0504-9a36-4e2f-aca0-4125c56da442.jpg"
   },
   "tt1127708": {
     "igdbId": 71,
     "igdbUrl": "https://www.igdb.com/games/portal",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coay61.jpg",
-    "artwork": "./art/igdb/tt1127708.webp",
     "edition": "The Orange Box",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 10918,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/10918",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/99c5524a-bbc4-4054-97d3-b83f468c315d.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1561ff97-c5d5-465a-8bbf-7390117c2289.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_327caba4-5c33-4ccf-b6c1-fb7abaf79641.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt1127708-front-99c5524a-bbc4-4054-97d3-b83f468c315d.webp",
+    "artworkSource": "https://images.launchbox-app.com/99c5524a-bbc4-4054-97d3-b83f468c315d.jpg",
+    "boxBack": "./art/launchbox/tt1127708-back-1561ff97-c5d5-465a-8bbf-7390117c2289.webp",
+    "boxSpine": "./art/launchbox/tt1127708-spine-r2_327caba4-5c33-4ccf-b6c1-fb7abaf79641.webp",
+    "artworkNote": "The Orange Box is the Xbox 360 physical release that includes Portal."
   },
   "tt8558306": {
     "igdbId": 76882,
     "igdbUrl": "https://www.igdb.com/games/sekiro-shadows-die-twice",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2a23.jpg",
-    "artwork": "./art/igdb/tt8558306.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/76882.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/76882.json",
+    "launchboxId": 165025,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/165025",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_06ffdb31-c4b0-4bff-a34f-c81149450c4a.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt8558306-front-r2_06ffdb31-c4b0-4bff-a34f-c81149450c4a.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_06ffdb31-c4b0-4bff-a34f-c81149450c4a.jpg"
   },
   "tt0296870": {
     "igdbId": 456,
     "igdbUrl": "https://www.igdb.com/games/starcraft-brood-war",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9n6r.jpg",
-    "artwork": "./art/igdb/tt0296870.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 14393,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/14393",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/efcf2d4f-d337-464c-bd0c-9a35e5e0e61f.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0296870-front-efcf2d4f-d337-464c-bd0c-9a35e5e0e61f.webp",
+    "artworkSource": "https://images.launchbox-app.com/efcf2d4f-d337-464c-bd0c-9a35e5e0e61f.jpg"
   },
   "tt1800763": {
     "igdbId": 512,
     "igdbUrl": "https://www.igdb.com/games/uncharted-3-drake-s-deception",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tp8.jpg",
-    "artwork": "./art/igdb/tt1800763.webp",
     "shelf": "playstation",
     "platform": "PlayStation 3",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat",
+    "launchboxId": 2264,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2264",
+    "launchboxPlatform": "Sony Playstation 3",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e47f8a34-3d98-475a-a9fa-33ea743cf2fb.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7fe8dfb9-cd30-4e16-8d1d-bde74ca0e0b0.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_8fe5356e-94c8-43dc-8550-6a8344d7e8a4.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1800763-front-e47f8a34-3d98-475a-a9fa-33ea743cf2fb.webp",
+    "artworkSource": "https://images.launchbox-app.com/e47f8a34-3d98-475a-a9fa-33ea743cf2fb.jpg",
+    "boxBack": "./art/launchbox/tt1800763-back-7fe8dfb9-cd30-4e16-8d1d-bde74ca0e0b0.webp",
+    "boxSpine": "./art/launchbox/tt1800763-spine-r2_8fe5356e-94c8-43dc-8550-6a8344d7e8a4.webp"
   },
   "tt1706601": {
     "igdbId": 16,
     "igdbUrl": "https://www.igdb.com/games/fallout-new-vegas",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u60.jpg",
-    "artwork": "./art/igdb/tt1706601.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 8162,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8162",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "United States",
+        "source": "https://images.launchbox-app.com/r2_9260c8fc-a9f1-4736-8aae-d205c4e9e60e.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1706601-front-r2_9260c8fc-a9f1-4736-8aae-d205c4e9e60e.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_9260c8fc-a9f1-4736-8aae-d205c4e9e60e.jpg"
   },
   "tt0802999": {
     "igdbId": 731,
     "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-iv",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbv.jpg",
-    "artwork": "./art/igdb/tt0802999.webp",
     "shelf": "playstation",
     "platform": "PlayStation 3",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat",
+    "launchboxId": 6607,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/6607",
+    "launchboxPlatform": "Sony Playstation 3",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3e472d4d-2df7-408d-b0fc-7bd51f1773fe.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c6878c30-e3b9-4818-be00-08f8657a6a6f.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0802999-front-3e472d4d-2df7-408d-b0fc-7bd51f1773fe.webp",
+    "artworkSource": "https://images.launchbox-app.com/3e472d4d-2df7-408d-b0fc-7bd51f1773fe.jpg",
+    "boxSpine": "./art/launchbox/tt0802999-spine-c6878c30-e3b9-4818-be00-08f8657a6a6f.webp"
   },
   "tt6057416": {
     "igdbId": 11169,
     "igdbUrl": "https://www.igdb.com/games/final-fantasy-vii-remake",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobcwt.jpg",
-    "artwork": "./art/igdb/tt6057416.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11169.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11169.json",
+    "launchboxId": 29221,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/29221",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7a07f5f9-5244-45f1-b91d-ae29fe4e03ab.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt6057416-front-7a07f5f9-5244-45f1-b91d-ae29fe4e03ab.webp",
+    "artworkSource": "https://images.launchbox-app.com/7a07f5f9-5244-45f1-b91d-ae29fe4e03ab.jpg"
   },
   "tt7791150": {
     "igdbId": 14593,
     "igdbUrl": "https://www.igdb.com/games/hollow-knight",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobfzp.jpg",
-    "artwork": "./art/igdb/tt7791150.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/14593.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/14593.json",
+    "launchboxId": 212189,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/212189",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_4cdb14ea-c353-448f-99d1-de3fe1841e8b.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt7791150-front-r2_4cdb14ea-c353-448f-99d1-de3fe1841e8b.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_4cdb14ea-c353-448f-99d1-de3fe1841e8b.jpg"
   },
   "tt7896952": {
     "igdbId": 26845,
     "igdbUrl": "https://www.igdb.com/games/fire-emblem-three-houses",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n8t.jpg",
-    "artwork": "./art/igdb/tt7896952.webp"
+    "launchboxId": 167709,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/167709",
+    "launchboxPlatform": "Nintendo Switch",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/17e79619-8fa9-469b-a1b6-cf161f33066e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_d1ab5cbe-1a77-42e7-9a6d-680becbc464c.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_427768bf-5d23-4946-a8ca-eeed79cd71c3.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt7896952-front-17e79619-8fa9-469b-a1b6-cf161f33066e.webp",
+    "artworkSource": "https://images.launchbox-app.com/17e79619-8fa9-469b-a1b6-cf161f33066e.jpg",
+    "boxBack": "./art/launchbox/tt7896952-back-r2_d1ab5cbe-1a77-42e7-9a6d-680becbc464c.webp",
+    "boxSpine": "./art/launchbox/tt7896952-spine-r2_427768bf-5d23-4946-a8ca-eeed79cd71c3.webp"
   },
   "tt4044024": {
     "igdbId": 11156,
     "igdbUrl": "https://www.igdb.com/games/horizon-zero-dawn",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2una.jpg",
-    "artwork": "./art/igdb/tt4044024.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11156.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11156.json",
+    "launchboxId": 29523,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/29523",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/01ebaf1c-f0bd-43bb-afe9-81e6127508e1.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt4044024-front-01ebaf1c-f0bd-43bb-afe9-81e6127508e1.webp",
+    "artworkSource": "https://images.launchbox-app.com/01ebaf1c-f0bd-43bb-afe9-81e6127508e1.jpg"
   },
   "tt3983144": {
     "igdbId": 11397,
     "igdbUrl": "https://www.igdb.com/games/yakuza-0",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co252x.jpg",
-    "artwork": "./art/igdb/tt3983144.webp",
     "shelf": "playstation",
     "platform": "PlayStation 3",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11397.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11397.json",
+    "launchboxId": 152183,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/152183",
+    "launchboxPlatform": "Sony Playstation 3",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/33510b12-7079-49fc-816a-57a13fae7c86.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt3983144-front-33510b12-7079-49fc-816a-57a13fae7c86.webp",
+    "artworkSource": "https://images.launchbox-app.com/33510b12-7079-49fc-816a-57a13fae7c86.jpg",
+    "artworkNote": "Japanese PlayStation 3 box for Yakuza 0, released as Ryū ga Gotoku Zero: Chikai no Basho."
   },
   "tt0413662": {
     "igdbId": 327,
     "igdbUrl": "https://www.igdb.com/games/age-of-empires-ii-the-age-of-kings",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55xo.jpg",
-    "artwork": "./art/igdb/tt0413662.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 5867,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/5867",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/dade3eff-95d4-46e0-921f-87dd29e706a2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/56a1dd98-7ef1-450d-a3bc-4e8bee7ec174.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/b8cd19fc-529d-468a-977e-508ae92cb62c.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0413662-front-dade3eff-95d4-46e0-921f-87dd29e706a2.webp",
+    "artworkSource": "https://images.launchbox-app.com/dade3eff-95d4-46e0-921f-87dd29e706a2.jpg",
+    "boxBack": "./art/launchbox/tt0413662-back-56a1dd98-7ef1-450d-a3bc-4e8bee7ec174.webp",
+    "boxSpine": "./art/launchbox/tt0413662-spine-b8cd19fc-529d-468a-977e-508ae92cb62c.webp"
   },
   "tt15174768": {
     "igdbId": 159119,
     "igdbUrl": "https://www.igdb.com/games/dead-space--1",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobkv5.jpg",
-    "artwork": "./art/igdb/tt15174768.webp",
     "shelf": "xbox",
     "platform": "Xbox Series X",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/159119.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/159119.json",
+    "launchboxId": 219396,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/219396",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/335c73fe-f036-4e70-a46a-da5806069e66.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt15174768-front-335c73fe-f036-4e70-a46a-da5806069e66.webp",
+    "artworkSource": "https://images.launchbox-app.com/335c73fe-f036-4e70-a46a-da5806069e66.jpg",
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
   },
   "tt2321297": {
     "igdbId": 529,
     "igdbUrl": "https://www.igdb.com/games/far-cry-3",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpd.jpg",
-    "artwork": "./art/igdb/tt2321297.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 12518,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/12518",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3c4a628e-08b1-49e3-8880-d86503840a02.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b84a4d84-5c12-4b3c-984f-23ae2813484a.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_02e8b8dc-3172-4f00-bbab-b048714e43d0.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2321297-front-3c4a628e-08b1-49e3-8880-d86503840a02.webp",
+    "artworkSource": "https://images.launchbox-app.com/3c4a628e-08b1-49e3-8880-d86503840a02.jpg",
+    "boxBack": "./art/launchbox/tt2321297-back-b84a4d84-5c12-4b3c-984f-23ae2813484a.webp",
+    "boxSpine": "./art/launchbox/tt2321297-spine-r2_02e8b8dc-3172-4f00-bbab-b048714e43d0.webp"
   },
   "tt9459718": {
     "igdbId": 113112,
     "igdbUrl": "https://www.igdb.com/games/hades--1",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9kr.jpg",
-    "artwork": "./art/igdb/tt9459718.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/113112.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/113112.json",
+    "launchboxId": 167721,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/167721",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/e47fbdac-3c40-4717-a7a9-025b775e4988.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt9459718-front-e47fbdac-3c40-4717-a7a9-025b775e4988.webp",
+    "artworkSource": "https://images.launchbox-app.com/e47fbdac-3c40-4717-a7a9-025b775e4988.jpg",
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
   },
   "tt12496904": {
     "igdbId": 112874,
     "igdbUrl": "https://www.igdb.com/games/horizon-forbidden-west",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gvu.jpg",
-    "artwork": "./art/igdb/tt12496904.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/112874.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/112874.json",
+    "launchboxId": 214927,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/214927",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Russia",
+        "source": "https://images.launchbox-app.com/r2_2edb51c0-a2bf-4252-a85d-20f021c954ca.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "Russia",
+        "source": "https://images.launchbox-app.com/r2_887fa693-eb29-4e8b-bd7b-3b64d087f60d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt12496904-front-r2_2edb51c0-a2bf-4252-a85d-20f021c954ca.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_2edb51c0-a2bf-4252-a85d-20f021c954ca.jpg",
+    "boxBack": "./art/launchbox/tt12496904-back-r2_887fa693-eb29-4e8b-bd7b-3b64d087f60d.webp"
   },
   "tt0884870": {
     "igdbId": 1271,
     "igdbUrl": "https://www.igdb.com/games/okami",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3mpk.jpg",
-    "artwork": "./art/igdb/tt0884870.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 51,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/51",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/fa7e3762-87ac-489f-9ce4-6571d9117709.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/738310e3-bca4-49b3-8ce4-68485c9502d4.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/869910d1-4802-40f1-95e9-d25bc19724e4.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0884870-front-fa7e3762-87ac-489f-9ce4-6571d9117709.webp",
+    "artworkSource": "https://images.launchbox-app.com/fa7e3762-87ac-489f-9ce4-6571d9117709.jpg",
+    "boxBack": "./art/launchbox/tt0884870-back-738310e3-bca4-49b3-8ce4-68485c9502d4.webp",
+    "boxSpine": "./art/launchbox/tt0884870-spine-869910d1-4802-40f1-95e9-d25bc19724e4.webp"
   },
   "tt5238626": {
     "igdbId": 11208,
     "igdbUrl": "https://www.igdb.com/games/nier-automata",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pcj.jpg",
-    "artwork": "./art/igdb/tt5238626.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11208.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11208.json",
+    "launchboxId": 35050,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/35050",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9cc5a678-eb2f-4e16-9025-da579c70ba13.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt5238626-front-9cc5a678-eb2f-4e16-9025-da579c70ba13.webp",
+    "artworkSource": "https://images.launchbox-app.com/9cc5a678-eb2f-4e16-9025-da579c70ba13.jpg"
   },
   "tt0217733": {
     "igdbId": 1561,
     "igdbUrl": "https://www.igdb.com/games/pokemon-red-version",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pi4.jpg",
-    "artwork": "./art/igdb/tt0217733.webp"
+    "launchboxId": 2356,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2356",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7b8101cd-ea45-4189-b9e6-45e170aa42dc.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ef3897c8-fb89-42bb-a0f8-0e742938e9d6.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5882fcc5-cb56-4583-a8a2-2515b2cabfa7.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0217733-front-7b8101cd-ea45-4189-b9e6-45e170aa42dc.webp",
+    "artworkSource": "https://images.launchbox-app.com/7b8101cd-ea45-4189-b9e6-45e170aa42dc.png",
+    "boxBack": "./art/launchbox/tt0217733-back-ef3897c8-fb89-42bb-a0f8-0e742938e9d6.webp",
+    "boxSpine": "./art/launchbox/tt0217733-spine-5882fcc5-cb56-4583-a8a2-2515b2cabfa7.webp"
   },
   "tt0310011": {
     "igdbId": 1558,
     "igdbUrl": "https://www.igdb.com/games/pokemon-gold-version",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pia.jpg",
-    "artwork": "./art/igdb/tt0310011.webp"
+    "launchboxId": 2360,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2360",
+    "launchboxPlatform": "Nintendo Game Boy Color",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/91254337-0075-4edb-b28f-b9c4e38163b2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e1f4c2f4-3121-49f8-b872-2cb518dd62f9.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8bc07bce-9951-4a08-99fe-a7ffff808a31.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0310011-front-91254337-0075-4edb-b28f-b9c4e38163b2.webp",
+    "artworkSource": "https://images.launchbox-app.com/91254337-0075-4edb-b28f-b9c4e38163b2.jpg",
+    "boxBack": "./art/launchbox/tt0310011-back-e1f4c2f4-3121-49f8-b872-2cb518dd62f9.webp",
+    "boxSpine": "./art/launchbox/tt0310011-spine-8bc07bce-9951-4a08-99fe-a7ffff808a31.webp"
   },
   "tt1037854": {
     "igdbId": 239,
     "igdbUrl": "https://www.igdb.com/games/starcraft-ii-wings-of-liberty",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tnn.jpg",
-    "artwork": "./art/igdb/tt1037854.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 151,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/151",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/05e248ec-6df2-4558-9483-cf39dd560db4.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ce7cb3d9-8987-4384-a993-6fa7b16580f2.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1be5235c-caf9-48aa-a5f7-82c552bcd9aa.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1037854-front-05e248ec-6df2-4558-9483-cf39dd560db4.webp",
+    "artworkSource": "https://images.launchbox-app.com/05e248ec-6df2-4558-9483-cf39dd560db4.jpg",
+    "boxBack": "./art/launchbox/tt1037854-back-ce7cb3d9-8987-4384-a993-6fa7b16580f2.webp",
+    "boxSpine": "./art/launchbox/tt1037854-spine-1be5235c-caf9-48aa-a5f7-82c552bcd9aa.webp"
   },
   "tt0177266": {
     "igdbId": 358,
     "igdbUrl": "https://www.igdb.com/games/super-mario-bros",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6pib.jpg",
-    "artwork": "./art/igdb/tt0177266.webp"
+    "launchboxId": 140,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/140",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e078d459-a166-47a2-9b5a-26a9fd7cd924.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/829fc885-7b63-4e64-934d-104f5e939340.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/efce963a-c0b1-49a0-810e-f48e31f71bfc.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0177266-front-e078d459-a166-47a2-9b5a-26a9fd7cd924.webp",
+    "artworkSource": "https://images.launchbox-app.com/e078d459-a166-47a2-9b5a-26a9fd7cd924.jpg",
+    "boxBack": "./art/launchbox/tt0177266-back-829fc885-7b63-4e64-934d-104f5e939340.webp",
+    "boxSpine": "./art/launchbox/tt0177266-spine-efce963a-c0b1-49a0-810e-f48e31f71bfc.webp"
   },
   "tt5370130": {
     "igdbId": 90101,
     "igdbUrl": "https://www.igdb.com/games/super-smash-bros-ultimate",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2255.jpg",
-    "artwork": "./art/igdb/tt5370130.webp"
+    "launchboxId": 158007,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/158007",
+    "launchboxPlatform": "Nintendo Switch",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/10b6c7ca-a587-47cb-b7ad-40a4ef710b24.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/873e54cf-6d01-4370-8121-70a7b645b845.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9d087597-5a84-4944-8ee4-d5074e395ed2.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt5370130-front-10b6c7ca-a587-47cb-b7ad-40a4ef710b24.webp",
+    "artworkSource": "https://images.launchbox-app.com/10b6c7ca-a587-47cb-b7ad-40a4ef710b24.png",
+    "boxBack": "./art/launchbox/tt5370130-back-873e54cf-6d01-4370-8121-70a7b645b845.webp",
+    "boxSpine": "./art/launchbox/tt5370130-spine-9d087597-5a84-4944-8ee4-d5074e395ed2.webp"
   },
   "tt6298000": {
     "igdbId": 26192,
     "igdbUrl": "https://www.igdb.com/games/the-last-of-us-part-ii",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ziw.jpg",
-    "artwork": "./art/igdb/tt6298000.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/26192.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/26192.json",
+    "launchboxId": 121823,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/121823",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3e0032bb-3e29-4206-af02-6fdeed8ecb06.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f5d90b08-2cef-42c8-8aa0-078f62b63c98.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/fff30691-3aab-4290-a768-7755e6bcd95e.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt6298000-front-3e0032bb-3e29-4206-af02-6fdeed8ecb06.webp",
+    "artworkSource": "https://images.launchbox-app.com/3e0032bb-3e29-4206-af02-6fdeed8ecb06.jpg",
+    "boxBack": "./art/launchbox/tt6298000-back-f5d90b08-2cef-42c8-8aa0-078f62b63c98.webp",
+    "boxSpine": "./art/launchbox/tt6298000-spine-fff30691-3aab-4290-a768-7755e6bcd95e.webp"
   },
   "tt1699759": {
     "igdbId": 113,
     "igdbUrl": "https://www.igdb.com/games/assassins-creed-brotherhood",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocdky.jpg",
-    "artwork": "./art/igdb/tt1699759.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 8169,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8169",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/2cff20a6-217a-4ff8-890f-d91f6bd8ba3d.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5439edcf-2dff-4723-bb6b-ac8cc350d488.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/986c47e1-f808-4c0d-a4dd-1b8de616c5a6.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1699759-front-2cff20a6-217a-4ff8-890f-d91f6bd8ba3d.webp",
+    "artworkSource": "https://images.launchbox-app.com/2cff20a6-217a-4ff8-890f-d91f6bd8ba3d.jpg",
+    "boxBack": "./art/launchbox/tt1699759-back-5439edcf-2dff-4723-bb6b-ac8cc350d488.webp",
+    "boxSpine": "./art/launchbox/tt1699759-spine-986c47e1-f808-4c0d-a4dd-1b8de616c5a6.webp"
   },
   "tt2739708": {
     "igdbId": 1970,
     "igdbUrl": "https://www.igdb.com/games/assassins-creed-iv-black-flag",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4qfn.jpg",
-    "artwork": "./art/igdb/tt2739708.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 17924,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/17924",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f118e8f2-d2d0-4a48-90d7-b79835095522.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ed20b0c9-44f9-4372-9c93-b15182d79859.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/311705e5-d763-4f1f-9f9b-2e5eb7895895.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2739708-front-f118e8f2-d2d0-4a48-90d7-b79835095522.webp",
+    "artworkSource": "https://images.launchbox-app.com/f118e8f2-d2d0-4a48-90d7-b79835095522.jpg",
+    "boxBack": "./art/launchbox/tt2739708-back-ed20b0c9-44f9-4372-9c93-b15182d79859.webp",
+    "boxSpine": "./art/launchbox/tt2739708-spine-311705e5-d763-4f1f-9f9b-2e5eb7895895.webp"
   },
   "tt5807606": {
     "igdbId": 19564,
     "igdbUrl": "https://www.igdb.com/games/death-stranding",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocsvh.jpg",
-    "artwork": "./art/igdb/tt5807606.webp",
     "shelf": "playstation",
     "platform": "PlayStation 4",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/19564.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/19564.json",
+    "launchboxId": 172172,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/172172",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f6cbfdd5-39ad-411e-89e9-44ed80b26af5.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt5807606-front-f6cbfdd5-39ad-411e-89e9-44ed80b26af5.webp",
+    "artworkSource": "https://images.launchbox-app.com/f6cbfdd5-39ad-411e-89e9-44ed80b26af5.png"
   },
   "tt1173898": {
     "igdbId": 2254,
     "igdbUrl": "https://www.igdb.com/games/dragon-ball-z-budokai-tenkaichi-3",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3r52.jpg",
-    "artwork": "./art/igdb/tt1173898.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 7224,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7224",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/d764b840-eab1-4605-9fc8-f1dfdf166700.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/c698b1b8-47ae-4555-b388-07c8a40bedd7.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/73382b75-1529-4142-91bd-546441bff626.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt1173898-front-d764b840-eab1-4605-9fc8-f1dfdf166700.webp",
+    "artworkSource": "https://images.launchbox-app.com/d764b840-eab1-4605-9fc8-f1dfdf166700.jpg",
+    "boxBack": "./art/launchbox/tt1173898-back-c698b1b8-47ae-4555-b388-07c8a40bedd7.webp",
+    "boxSpine": "./art/launchbox/tt1173898-spine-73382b75-1529-4142-91bd-546441bff626.webp"
   },
   "tt1288501": {
     "igdbId": 548,
     "igdbUrl": "https://www.igdb.com/games/gears-of-war-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28gg.jpg",
-    "artwork": "./art/igdb/tt1288501.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 24,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/24",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/efd00fb8-5ce4-44a8-81dc-36b44ba9ab4c.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/77f85c55-a4c0-4a74-9716-b97dc94265d6.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6a0bff17-bfcf-4c0b-89ca-0362466baed6.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1288501-front-efd00fb8-5ce4-44a8-81dc-36b44ba9ab4c.webp",
+    "artworkSource": "https://images.launchbox-app.com/efd00fb8-5ce4-44a8-81dc-36b44ba9ab4c.jpg",
+    "boxBack": "./art/launchbox/tt1288501-back-77f85c55-a4c0-4a74-9716-b97dc94265d6.webp",
+    "boxSpine": "./art/launchbox/tt1288501-spine-6a0bff17-bfcf-4c0b-89ca-0362466baed6.webp"
   },
   "tt0357718": {
     "igdbId": 986,
     "igdbUrl": "https://www.igdb.com/games/halo-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x77.jpg",
-    "artwork": "./art/igdb/tt0357718.webp",
     "shelf": "xbox",
     "platform": "Xbox",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat",
+    "launchboxId": 6079,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/6079",
+    "launchboxPlatform": "Microsoft Xbox",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ea79d9b4-6cb4-46dd-951d-d7ef9e9beb1b.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e64e11b1-2193-46ce-9988-24cf9295f028.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/189105e9-c5a0-4a64-8227-2f55536e07da.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0357718-front-ea79d9b4-6cb4-46dd-951d-d7ef9e9beb1b.webp",
+    "artworkSource": "https://images.launchbox-app.com/ea79d9b4-6cb4-46dd-951d-d7ef9e9beb1b.jpg",
+    "boxBack": "./art/launchbox/tt0357718-back-e64e11b1-2193-46ce-9988-24cf9295f028.webp",
+    "boxSpine": "./art/launchbox/tt0357718-spine-189105e9-c5a0-4a64-8227-2f55536e07da.webp"
   },
   "tt0259104": {
     "igdbId": 132,
     "igdbUrl": "https://www.igdb.com/games/warcraft-iii-reign-of-chaos",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xuq.jpg",
-    "artwork": "./art/igdb/tt0259104.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 802,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/802",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/532075de-1a72-46c8-b355-e327ff14f263.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/4144fd22-16d8-4589-b56a-246fbc8d0797.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0259104-front-532075de-1a72-46c8-b355-e327ff14f263.webp",
+    "artworkSource": "https://images.launchbox-app.com/532075de-1a72-46c8-b355-e327ff14f263.jpg",
+    "boxBack": "./art/launchbox/tt0259104-back-4144fd22-16d8-4589-b56a-246fbc8d0797.webp"
   },
   "tt0462448": {
     "igdbId": 98,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-most-wanted",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209j.jpg",
-    "artwork": "./art/igdb/tt0462448.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 419388,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/419388",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/80e7c117-9007-4bc3-bb49-f04308a1e592.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c1904bfe-71b2-49ae-ba43-75be099f29fd.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0462448-front-80e7c117-9007-4bc3-bb49-f04308a1e592.webp",
+    "artworkSource": "https://images.launchbox-app.com/80e7c117-9007-4bc3-bb49-f04308a1e592.jpg",
+    "boxBack": "./art/launchbox/tt0462448-back-c1904bfe-71b2-49ae-ba43-75be099f29fd.webp"
   },
   "tt2370518": {
     "igdbId": 1985,
     "igdbUrl": "https://www.igdb.com/games/metal-gear-solid-v-the-phantom-pain",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v85.jpg",
-    "artwork": "./art/igdb/tt2370518.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 16717,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/16717",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f049e751-a5db-47f6-baee-b2650eee3451.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2370518-front-f049e751-a5db-47f6-baee-b2650eee3451.webp",
+    "artworkSource": "https://images.launchbox-app.com/f049e751-a5db-47f6-baee-b2650eee3451.jpg"
   },
   "tt0217729": {
     "igdbId": 1511,
     "igdbUrl": "https://www.igdb.com/games/pokemon-blue-version",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pi7.jpg",
-    "artwork": "./art/igdb/tt0217729.webp"
+    "launchboxId": 2357,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2357",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/22bbf1b4-fe67-45b3-96cd-26134e29591e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a80a4371-5734-48ff-985e-69baa44e7c4d.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d0d56b0f-d328-43fe-acc2-7ed5dcf00c0a.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0217729-front-22bbf1b4-fe67-45b3-96cd-26134e29591e.webp",
+    "artworkSource": "https://images.launchbox-app.com/22bbf1b4-fe67-45b3-96cd-26134e29591e.jpg",
+    "boxBack": "./art/launchbox/tt0217729-back-a80a4371-5734-48ff-985e-69baa44e7c4d.webp",
+    "boxSpine": "./art/launchbox/tt0217729-spine-d0d56b0f-d328-43fe-acc2-7ed5dcf00c0a.webp"
   },
   "tt0288740": {
     "igdbId": 1514,
     "igdbUrl": "https://www.igdb.com/games/pokemon-crystal-version",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pil.jpg",
-    "artwork": "./art/igdb/tt0288740.webp"
+    "launchboxId": 2362,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2362",
+    "launchboxPlatform": "Nintendo Game Boy Color",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8b6c2887-9bf3-4f5c-beb4-13cd12673ca2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e8b85a4a-1c3c-4924-8ede-47a693e42930.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/33078ee9-7177-4b33-a9a8-b567a7f76752.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0288740-front-8b6c2887-9bf3-4f5c-beb4-13cd12673ca2.webp",
+    "artworkSource": "https://images.launchbox-app.com/8b6c2887-9bf3-4f5c-beb4-13cd12673ca2.jpg",
+    "boxBack": "./art/launchbox/tt0288740-back-e8b85a4a-1c3c-4924-8ede-47a693e42930.webp",
+    "boxSpine": "./art/launchbox/tt0288740-spine-33078ee9-7177-4b33-a9a8-b567a7f76752.webp"
   },
   "tt0478230": {
     "igdbId": 1517,
     "igdbUrl": "https://www.igdb.com/games/pokemon-emerald-version",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zhr.jpg",
-    "artwork": "./art/igdb/tt0478230.webp"
+    "launchboxId": 2365,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2365",
+    "launchboxPlatform": "Nintendo Game Boy Advance",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1fde111d-8805-47ba-af07-03b436e4dfde.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6602f3ad-0d9c-47d2-93f8-d36f18d5e092.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/567c7a8d-baeb-4b16-9dc3-b158c11f411d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0478230-front-1fde111d-8805-47ba-af07-03b436e4dfde.webp",
+    "artworkSource": "https://images.launchbox-app.com/1fde111d-8805-47ba-af07-03b436e4dfde.jpg",
+    "boxBack": "./art/launchbox/tt0478230-back-6602f3ad-0d9c-47d2-93f8-d36f18d5e092.webp",
+    "boxSpine": "./art/launchbox/tt0478230-spine-567c7a8d-baeb-4b16-9dc3-b158c11f411d.webp"
   },
   "tt2385021": {
     "igdbId": 1011,
     "igdbUrl": "https://www.igdb.com/games/borderlands-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ba3.jpg",
-    "artwork": "./art/igdb/tt2385021.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 9959,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/9959",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/bd44d321-535a-4e98-a22d-85f286ed774a.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_0f72b065-8277-4077-852b-09776da4d91c.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2385021-front-bd44d321-535a-4e98-a22d-85f286ed774a.webp",
+    "artworkSource": "https://images.launchbox-app.com/bd44d321-535a-4e98-a22d-85f286ed774a.jpg",
+    "boxBack": "./art/launchbox/tt2385021-back-r2_0f72b065-8277-4077-852b-09776da4d91c.webp"
   },
   "tt0888006": {
     "igdbId": 2720,
     "igdbUrl": "https://www.igdb.com/games/bully",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocd6z.jpg",
-    "artwork": "./art/igdb/tt0888006.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 3931,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3931",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3cf369be-2b6a-4a13-910b-1ca30ba95feb.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/489a1d17-1cae-41e2-96d7-294d3a84aa81.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/17859a3c-f277-45ef-8866-da1b810c3ba5.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0888006-front-3cf369be-2b6a-4a13-910b-1ca30ba95feb.webp",
+    "artworkSource": "https://images.launchbox-app.com/3cf369be-2b6a-4a13-910b-1ca30ba95feb.jpg",
+    "boxBack": "./art/launchbox/tt0888006-back-489a1d17-1cae-41e2-96d7-294d3a84aa81.webp",
+    "boxSpine": "./art/launchbox/tt0888006-spine-17859a3c-f277-45ef-8866-da1b810c3ba5.webp"
   },
   "tt3810192": {
     "igdbId": 1877,
     "igdbUrl": "https://www.igdb.com/games/cyberpunk-2077",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaih8.jpg",
-    "artwork": "./art/igdb/tt3810192.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/1877.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/1877.json",
+    "launchboxId": 199421,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/199421",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d3942503-dd67-4dee-93e1-0ad51a8ea78c.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt3810192-front-d3942503-dd67-4dee-93e1-0ad51a8ea78c.webp",
+    "artworkSource": "https://images.launchbox-app.com/d3942503-dd67-4dee-93e1-0ad51a8ea78c.jpg"
   },
   "tt0277723": {
     "igdbId": 730,
     "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-iii",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lb8.jpg",
-    "artwork": "./art/igdb/tt0277723.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 4165,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4165",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/cf73a1a9-002f-4513-b9ef-c575adf8b683.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/40c394e7-ae98-4fc3-ba0c-203c15ffd63e.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a909aaeb-86ca-4b69-b3ba-1bfaa3899f34.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0277723-front-cf73a1a9-002f-4513-b9ef-c575adf8b683.webp",
+    "artworkSource": "https://images.launchbox-app.com/cf73a1a9-002f-4513-b9ef-c575adf8b683.jpg",
+    "boxBack": "./art/launchbox/tt0277723-back-40c394e7-ae98-4fc3-ba0c-203c15ffd63e.webp",
+    "boxSpine": "./art/launchbox/tt0277723-spine-a909aaeb-86ca-4b69-b3ba-1bfaa3899f34.webp"
   },
   "tt0217732": {
     "igdbId": 1512,
     "igdbUrl": "https://www.igdb.com/games/pokemon-yellow-version-special-pikachu-edition",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pih.jpg",
-    "artwork": "./art/igdb/tt0217732.webp"
+    "launchboxId": 2359,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2359",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9d0d1c3f-a63e-4e15-9c9d-536cbeedfb1d.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d18f6661-4636-46a2-8611-45e985f82341.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/301258c4-b985-4a9c-8aac-5e0fea4fec8f.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0217732-front-9d0d1c3f-a63e-4e15-9c9d-536cbeedfb1d.webp",
+    "artworkSource": "https://images.launchbox-app.com/9d0d1c3f-a63e-4e15-9c9d-536cbeedfb1d.jpg",
+    "boxBack": "./art/launchbox/tt0217732-back-d18f6661-4636-46a2-8611-45e985f82341.webp",
+    "boxSpine": "./art/launchbox/tt0217732-spine-301258c4-b985-4a9c-8aac-5e0fea4fec8f.webp"
   },
   "tt0437437": {
     "igdbId": 837,
     "igdbUrl": "https://www.igdb.com/games/prince-of-persia-warrior-within",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9x1a.jpg",
-    "artwork": "./art/igdb/tt0437437.webp",
     "shelf": "xbox",
     "platform": "Xbox",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat",
+    "launchboxId": 8033,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8033",
+    "launchboxPlatform": "Microsoft Xbox",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/62796e64-481f-4d9d-ac58-98cc5d50d0ba.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8bbee6b3-4226-443f-8e89-fb3e15a48d01.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1b1b80f9-e86d-4307-8514-18255d45928d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0437437-front-62796e64-481f-4d9d-ac58-98cc5d50d0ba.webp",
+    "artworkSource": "https://images.launchbox-app.com/62796e64-481f-4d9d-ac58-98cc5d50d0ba.jpg",
+    "boxBack": "./art/launchbox/tt0437437-back-8bbee6b3-4226-443f-8e89-fb3e15a48d01.webp",
+    "boxSpine": "./art/launchbox/tt0437437-spine-1b1b80f9-e86d-4307-8514-18255d45928d.webp"
   },
   "tt12497042": {
     "igdbId": 55163,
     "igdbUrl": "https://www.igdb.com/games/resident-evil-village",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab9q.jpg",
-    "artwork": "./art/igdb/tt12497042.webp",
     "shelf": "xbox",
     "platform": "Xbox Series X",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/55163.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/55163.json",
+    "launchboxId": 219500,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/219500",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6242e4c4-8edd-4168-985d-1472ca6c5635.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt12497042-front-6242e4c4-8edd-4168-985d-1472ca6c5635.webp",
+    "artworkSource": "https://images.launchbox-app.com/6242e4c4-8edd-4168-985d-1472ca6c5635.jpg",
+    "artworkNote": "Shared Xbox Series X and Xbox One retail cover for Resident Evil Village."
   },
   "tt12497014": {
     "igdbId": 134582,
     "igdbUrl": "https://www.igdb.com/games/ratchet-and-clank-rift-apart",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2str.jpg",
-    "artwork": "./art/igdb/tt12497014.webp",
     "shelf": "playstation",
     "platform": "PlayStation 5",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/134582.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/134582.json",
+    "launchboxId": 205481,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/205481",
+    "launchboxPlatform": "Sony Playstation 5",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/47d4eacd-501c-47f8-b994-e938d69238c2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e9298c27-c405-45e5-92aa-790959ef75eb.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_0545072a-87f8-45aa-81df-76a93b3f7f28.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt12497014-front-47d4eacd-501c-47f8-b994-e938d69238c2.webp",
+    "artworkSource": "https://images.launchbox-app.com/47d4eacd-501c-47f8-b994-e938d69238c2.jpg",
+    "boxBack": "./art/launchbox/tt12497014-back-e9298c27-c405-45e5-92aa-790959ef75eb.webp",
+    "boxSpine": "./art/launchbox/tt12497014-spine-r2_0545072a-87f8-45aa-81df-76a93b3f7f28.webp"
   },
   "tt0427889": {
     "igdbId": 911,
     "igdbUrl": "https://www.igdb.com/games/tom-clancy-s-splinter-cell-chaos-theory",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coamhg.jpg",
-    "artwork": "./art/igdb/tt0427889.webp",
     "shelf": "xbox",
     "platform": "Xbox",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat",
+    "launchboxId": 13289,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/13289",
+    "launchboxPlatform": "Microsoft Xbox",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/2591a906-188c-4257-aa44-c63609a95213.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/90b02264-063c-4f32-8bad-96e28dd75303.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0427889-front-2591a906-188c-4257-aa44-c63609a95213.webp",
+    "artworkSource": "https://images.launchbox-app.com/2591a906-188c-4257-aa44-c63609a95213.jpg",
+    "boxSpine": "./art/launchbox/tt0427889-spine-90b02264-063c-4f32-8bad-96e28dd75303.webp"
   },
   "tt2224413": {
     "igdbId": 3201,
     "igdbUrl": "https://www.igdb.com/games/project-i-dot-g-i-dot-im-going-in",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mmm.jpg",
-    "artwork": "./art/igdb/tt2224413.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 8406,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8406",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d2dab8f4-7fd8-4ec9-a304-ec77dded8efe.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/474c3e92-51e3-4cc3-81fc-79d52cb760c4.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2224413-front-d2dab8f4-7fd8-4ec9-a304-ec77dded8efe.webp",
+    "artworkSource": "https://images.launchbox-app.com/d2dab8f4-7fd8-4ec9-a304-ec77dded8efe.jpg",
+    "boxBack": "./art/launchbox/tt2224413-back-474c3e92-51e3-4cc3-81fc-79d52cb760c4.webp"
   },
   "tt0275393": {
     "igdbId": 241,
     "igdbUrl": "https://www.igdb.com/games/counter-strike",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc32b.jpg",
-    "artwork": "./art/igdb/tt0275393.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 9416,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/9416",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/04d4c174-02b5-459a-9ebc-2810e4c59e7a.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1fe8e3aa-d8e4-441a-919f-b84cad2fc9e2.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ff09b31f-2996-4ef3-8c80-bb7dd3ba00d4.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0275393-front-04d4c174-02b5-459a-9ebc-2810e4c59e7a.webp",
+    "artworkSource": "https://images.launchbox-app.com/04d4c174-02b5-459a-9ebc-2810e4c59e7a.png",
+    "boxBack": "./art/launchbox/tt0275393-back-1fe8e3aa-d8e4-441a-919f-b84cad2fc9e2.webp",
+    "boxSpine": "./art/launchbox/tt0275393-spine-ff09b31f-2996-4ef3-8c80-bb7dd3ba00d4.webp"
   },
   "tt2584348": {
     "igdbId": 1372,
     "igdbUrl": "https://www.igdb.com/games/counter-strike-global-offensive",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc32n.jpg",
-    "artwork": "./art/igdb/tt2584348.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 10771,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/10771",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/cf809d92-1858-489e-9c9a-007b530d2022.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2584348-front-cf809d92-1858-489e-9c9a-007b530d2022.webp",
+    "artworkSource": "https://images.launchbox-app.com/cf809d92-1858-489e-9c9a-007b530d2022.jpg"
   },
   "tt0466736": {
     "igdbId": 297,
     "igdbUrl": "https://www.igdb.com/games/counter-strike-condition-zero",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tx3.jpg",
-    "artwork": "./art/igdb/tt0466736.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 7807,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7807",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0bd902e1-e3f7-4bbf-8ded-b6d46cf8d026.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8bb44455-044c-4514-973c-e1edc00aff0d.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/defbe55a-5da3-473b-a5bd-965a2f15cb1d.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0466736-front-0bd902e1-e3f7-4bbf-8ded-b6d46cf8d026.webp",
+    "artworkSource": "https://images.launchbox-app.com/0bd902e1-e3f7-4bbf-8ded-b6d46cf8d026.jpg",
+    "boxBack": "./art/launchbox/tt0466736-back-8bb44455-044c-4514-973c-e1edc00aff0d.webp",
+    "boxSpine": "./art/launchbox/tt0466736-spine-defbe55a-5da3-473b-a5bd-965a2f15cb1d.webp"
   },
   "tt7795464": {
     "igdbId": 307,
     "igdbUrl": "https://www.igdb.com/games/counter-strike-source",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1txv.jpg",
-    "artwork": "./art/igdb/tt7795464.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 3372,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3372",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/33b78d40-529c-4927-b6b2-7c604cd1156b.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt7795464-front-33b78d40-529c-4927-b6b2-7c604cd1156b.webp",
+    "artworkSource": "https://images.launchbox-app.com/33b78d40-529c-4927-b6b2-7c604cd1156b.jpg"
   },
   "tt2290962": {
     "igdbId": 2963,
     "igdbUrl": "https://www.igdb.com/games/dota-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cod313.jpg",
-    "artwork": "./art/igdb/tt2290962.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 2474,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2474",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/3494a505-747f-41d7-99bb-c646952e43c7.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2290962-front-3494a505-747f-41d7-99bb-c646952e43c7.webp",
+    "artworkSource": "https://images.launchbox-app.com/3494a505-747f-41d7-99bb-c646952e43c7.jpg"
   },
   "tt2071507": {
     "igdbId": 115,
     "igdbUrl": "https://www.igdb.com/games/league-of-legends",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc99o.jpg",
-    "artwork": "./art/igdb/tt2071507.webp",
-    "shelf": "archive"
+    "shelf": "archive",
+    "launchboxId": 928,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/928",
+    "launchboxPlatform": "Windows",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d823bc11-a294-4043-8bb3-b77203417ebb.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2071507-front-d823bc11-a294-4043-8bb3-b77203417ebb.webp",
+    "artworkSource": "https://images.launchbox-app.com/d823bc11-a294-4043-8bb3-b77203417ebb.jpg"
   },
   "tt10987766": {
     "igdbId": 119161,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-heat",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coar0x.jpg",
-    "artwork": "./art/igdb/tt10987766.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/119161.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/119161.json",
+    "launchboxId": 183303,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/183303",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1ef1b00a-285f-4bab-be46-c2e3d1833f55.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt10987766-front-1ef1b00a-285f-4bab-be46-c2e3d1833f55.webp",
+    "artworkSource": "https://images.launchbox-app.com/1ef1b00a-285f-4bab-be46-c2e3d1833f55.jpg"
   },
   "tt0790814": {
     "igdbId": 99,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-carbon",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209k.jpg",
-    "artwork": "./art/igdb/tt0790814.webp",
     "shelf": "playstation",
     "platform": "PlayStation 3",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat",
+    "launchboxId": 6622,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/6622",
+    "launchboxPlatform": "Sony Playstation 3",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f6cb0183-d65b-496c-ac2d-3afc37f498e8.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_14a9b5fb-3350-48b9-8ce9-ced25e7ad0cf.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_f32d106d-9328-48fb-83d0-43e721916748.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0790814-front-f6cb0183-d65b-496c-ac2d-3afc37f498e8.webp",
+    "artworkSource": "https://images.launchbox-app.com/f6cb0183-d65b-496c-ac2d-3afc37f498e8.jpg",
+    "boxBack": "./art/launchbox/tt0790814-back-r2_14a9b5fb-3350-48b9-8ce9-ced25e7ad0cf.webp",
+    "boxSpine": "./art/launchbox/tt0790814-spine-r2_f32d106d-9328-48fb-83d0-43e721916748.webp"
   },
   "tt5108242": {
     "igdbId": 10965,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20a2.jpg",
-    "artwork": "./art/igdb/tt5108242.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/10965.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/10965.json",
+    "launchboxId": 32940,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/32940",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5b6b5ea5-f91c-4c8a-b0fc-cbc8ea5c410e.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt5108242-front-5b6b5ea5-f91c-4c8a-b0fc-cbc8ea5c410e.webp",
+    "artworkSource": "https://images.launchbox-app.com/5b6b5ea5-f91c-4c8a-b0fc-cbc8ea5c410e.jpg"
   },
   "tt0420798": {
     "igdbId": 97,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-underground-2",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209h.jpg",
-    "artwork": "./art/igdb/tt0420798.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 4813,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4813",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4b70a068-c41f-4c7d-b367-33b33b7dc6b3.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/219e4a5e-a9b4-4f49-bb41-c0f0bb7cdaed.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/fe331254-fe44-4923-b999-ccb82324a277.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0420798-front-4b70a068-c41f-4c7d-b367-33b33b7dc6b3.webp",
+    "artworkSource": "https://images.launchbox-app.com/4b70a068-c41f-4c7d-b367-33b33b7dc6b3.jpg",
+    "boxBack": "./art/launchbox/tt0420798-back-219e4a5e-a9b4-4f49-bb41-c0f0bb7cdaed.webp",
+    "boxSpine": "./art/launchbox/tt0420798-spine-fe331254-fe44-4923-b999-ccb82324a277.webp"
   },
   "tt2186922": {
     "igdbId": 3193,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-most-wanted-53b9fef3-adb4-41a0-8ca0-ffcbb0060467",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20a5.jpg",
-    "artwork": "./art/igdb/tt2186922.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 11975,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/11975",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/61b93440-a1bd-4bde-b07d-367fefb41144.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b7d3572b-0fc1-4a93-85e7-e2d5a96eec85.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/40237a83-c7e7-4f0b-b5b9-f0617564c02d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2186922-front-61b93440-a1bd-4bde-b07d-367fefb41144.webp",
+    "artworkSource": "https://images.launchbox-app.com/61b93440-a1bd-4bde-b07d-367fefb41144.jpg",
+    "boxBack": "./art/launchbox/tt2186922-back-b7d3572b-0fc1-4a93-85e7-e2d5a96eec85.webp",
+    "boxSpine": "./art/launchbox/tt2186922-spine-40237a83-c7e7-4f0b-b5b9-f0617564c02d.webp"
   },
   "tt1264900": {
     "igdbId": 101,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-undercover",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209n.jpg",
-    "artwork": "./art/igdb/tt1264900.webp",
     "shelf": "playstation",
     "platform": "PlayStation 3",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat",
+    "launchboxId": 11953,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/11953",
+    "launchboxPlatform": "Sony Playstation 3",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0467ddd4-b66b-470e-a648-67c5c34c55af.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c474bf57-7afa-4609-aa08-535b2d98f280.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0921d518-257d-4977-b24b-5a967f192eb1.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1264900-front-0467ddd4-b66b-470e-a648-67c5c34c55af.webp",
+    "artworkSource": "https://images.launchbox-app.com/0467ddd4-b66b-470e-a648-67c5c34c55af.jpg",
+    "boxBack": "./art/launchbox/tt1264900-back-c474bf57-7afa-4609-aa08-535b2d98f280.webp",
+    "boxSpine": "./art/launchbox/tt1264900-spine-0921d518-257d-4977-b24b-5a967f192eb1.webp"
   },
   "tt7243342": {
     "igdbId": 36662,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-payback",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209y.jpg",
-    "artwork": "./art/igdb/tt7243342.webp",
     "shelf": "xbox",
     "platform": "Xbox One",
-    "editionSource": "https://app.lizardbyte.dev/GameDB/games/36662.json"
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/36662.json",
+    "launchboxId": 159858,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/159858",
+    "launchboxPlatform": "Microsoft Xbox One",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e9e2cc81-6cd0-48e2-b15c-55a9aee5b38f.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt7243342-front-e9e2cc81-6cd0-48e2-b15c-55a9aee5b38f.webp",
+    "artworkSource": "https://images.launchbox-app.com/e9e2cc81-6cd0-48e2-b15c-55a9aee5b38f.png"
   },
   "tt1708432": {
     "igdbId": 248127,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-nitro--1",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6fyj.jpg",
-    "artwork": "./art/igdb/tt1708432.webp"
+    "launchboxId": 21144,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/21144",
+    "launchboxPlatform": "Nintendo DS",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6a32512d-8038-44a2-a821-3b86ef2f16aa.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8f0feead-d69f-4345-bbcc-e8c52a9b3a3c.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/bc1d10ca-c27d-452d-b01f-0b29e48f2939.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1708432-front-6a32512d-8038-44a2-a821-3b86ef2f16aa.webp",
+    "artworkSource": "https://images.launchbox-app.com/6a32512d-8038-44a2-a821-3b86ef2f16aa.jpg",
+    "boxBack": "./art/launchbox/tt1708432-back-8f0feead-d69f-4345-bbcc-e8c52a9b3a3c.webp",
+    "boxSpine": "./art/launchbox/tt1708432-spine-bc1d10ca-c27d-452d-b01f-0b29e48f2939.webp"
   },
   "tt0390296": {
     "igdbId": 96,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-underground",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209g.jpg",
-    "artwork": "./art/igdb/tt0390296.webp",
     "shelf": "playstation",
     "platform": "PlayStation 2",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat",
+    "launchboxId": 5396,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/5396",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_b52f6419-7e31-4211-80a2-23b48eaba90b.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f95e0bb1-cb46-40d5-ae21-0c4b50b53987.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/bcccc0bb-10c7-42c7-a446-2fe6967a3448.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0390296-front-r2_b52f6419-7e31-4211-80a2-23b48eaba90b.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_b52f6419-7e31-4211-80a2-23b48eaba90b.png",
+    "boxBack": "./art/launchbox/tt0390296-back-f95e0bb1-cb46-40d5-ae21-0c4b50b53987.webp",
+    "boxSpine": "./art/launchbox/tt0390296-spine-bcccc0bb-10c7-42c7-a446-2fe6967a3448.webp"
   },
   "tt1776254": {
     "igdbId": 105,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-hot-pursuit",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h9s.jpg",
-    "artwork": "./art/igdb/tt1776254.webp",
     "shelf": "xbox",
     "platform": "Xbox 360",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat",
+    "launchboxId": 8481,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8481",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/971c514e-30fb-4e21-a57a-3b476e1916b4.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/da09b64e-7849-413c-b959-7bc07f15eabf.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt1776254-front-971c514e-30fb-4e21-a57a-3b476e1916b4.webp",
+    "artworkSource": "https://images.launchbox-app.com/971c514e-30fb-4e21-a57a-3b476e1916b4.jpg",
+    "boxBack": "./art/launchbox/tt1776254-back-da09b64e-7849-413c-b959-7bc07f15eabf.webp"
   },
   "tt2315506": {
     "igdbId": 11639,
     "igdbUrl": "https://www.igdb.com/games/need-for-speed-carbon-own-the-city",
-    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209m.jpg",
-    "artwork": "./art/igdb/tt2315506.webp",
     "shelf": "playstation",
     "platform": "PlayStation Portable",
-    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%20Portable.dat"
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%20Portable.dat",
+    "launchboxId": 19381,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/19381",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_5501f5da-18e1-4055-9613-0932872dbb3d.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_0f9fca54-2a9d-450a-9704-70cc8e99c1cb.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_db3a0c68-836c-4c5e-b208-0cc51dc3f4ce.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2315506-front-r2_5501f5da-18e1-4055-9613-0932872dbb3d.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_5501f5da-18e1-4055-9613-0932872dbb3d.jpg",
+    "boxBack": "./art/launchbox/tt2315506-back-r2_0f9fca54-2a9d-450a-9704-70cc8e99c1cb.webp",
+    "boxSpine": "./art/launchbox/tt2315506-spine-r2_db3a0c68-836c-4c5e-b208-0cc51dc3f4ce.webp"
   }
 }

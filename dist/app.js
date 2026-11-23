@@ -221,12 +221,13 @@ function showDetailItem(direction=0){
     sourceLink.textContent=item.album?'Open on Spotify':'Open on '+item.source;
   }
   const coverSource=$('coverSource');
-  coverSource.classList.toggle('hidden',!item.igdbUrl);
-  if(item.igdbUrl)coverSource.href=item.igdbUrl;
+  coverSource.classList.toggle('hidden',!item.launchboxUrl);
+  if(item.launchboxUrl)coverSource.href=item.launchboxUrl;
+  else coverSource.removeAttribute('href');
   const listNames=(item.playlists || []).map(id=>playlists[id]).filter(Boolean);
   $('detailNote').textContent=item.album
     ? [item.featuredTrack, listNames.join(', ')].filter(Boolean).join(' · ')
-    : [item.pages ? item.pages+' pages' : '', item.platforms?.join(', ') || item.platform, item.edition, item.episodeCount!=null ? item.episodeCount+' episodes' : '', (item.genres||[]).join(', ')].filter(Boolean).join(' · ');
+    : [item.pages ? item.pages+' pages' : '', item.platforms?.join(', ') || item.platform, item.edition, item.artworkNote, item.episodeCount!=null ? item.episodeCount+' episodes' : '', (item.genres||[]).join(', ')].filter(Boolean).join(' · ');
   if(item.album)enrichAudio(item);
 }
 $('itemPrev').onclick=()=>turnItem(-1);
