@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#101010">
-  <meta name="description" content="Explore My Room, a first-person basement archive of film, music and games by Krunal Ghorpade aka Kratex.">
+  <meta name="description" content="Explore My Room, a three-floor first-person archive of film, music, games and art by Krunal Ghorpade aka Kratex.">
   <meta name="author" content="Krunal Ghorpade aka Kratex">
   <title>My Room - by Krunal Ghorpade aka Kratex</title>
   <link rel="stylesheet" href="./style.css">
@@ -13,7 +13,7 @@
 <body>
   <canvas id="scene" aria-label="Interactive three-dimensional basement media store"></canvas>
   <header class="topbar">
-    <span id="entryLocation" class="location">Level 1 · Private movie theatre</span>
+    <span id="entryLocation" class="location">Level 1 · Entrance lobby</span>
     <nav aria-label="Store menus">
       <button type="button" id="mapBtn">Floor map</button>
       <button type="button" id="browseBtn">Collection <span id="itemCount"></span></button>
@@ -31,6 +31,8 @@
   </section>
 
   <div id="hud" class="hud hidden">
+    <button id="liftAction" class="lift-hint hidden" type="button">Choose elevator floor</button>
+    <span id="liftMessage" class="lift-hint hidden" role="status"></span>
     <div class="aim" aria-hidden="true"></div>
     <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap"></span><span id="promptText"></span><button id="displayDetails" class="hidden" type="button">View details</button></div>
     <section id="tvControls" class="player-bar hidden" aria-label="Room trailer">
@@ -105,9 +107,13 @@
   <dialog id="arcadeGame" class="map-dialog" aria-labelledby="arcadeName"><header class="panel-head"><h2 id="arcadeName"></h2><button id="leaveArcade" type="button">Leave game</button></header>
     <canvas id="arcadeCanvas" width="480" height="320" tabindex="0" aria-label="Arcade playfield"></canvas><p id="arcadeGuide"></p><span id="arcadeScore"></span> <button id="arcadeAgain" type="button">Play again</button>
   </dialog>
+  <dialog id="liftDialog" class="map-dialog lift-dialog" aria-labelledby="liftTitle">
+    <header class="panel-head"><h2 id="liftTitle">Elevator</h2><button id="closeLift" type="button">Close</button></header>
+    <div class="lift-stops"><button type="button" data-floor="3"><b>03</b> Gallery &amp; private room</button><button type="button" data-floor="2"><b>02</b> Library, music &amp; games</button><button type="button" data-floor="1"><b>01</b> Entrance &amp; cinema</button></div>
+  </dialog>
   <dialog id="mapDialog" class="map-dialog" aria-labelledby="mapTitle">
     <header class="panel-head"><h2 id="mapTitle">Floor map</h2><button id="closeMap" type="button" aria-label="Close floor map">Close</button></header>
-    <div class="level-tabs"><button id="levelOne" type="button">Level 1</button><button id="levelTwo" type="button">Level 2</button></div>
+    <div class="level-tabs"><button id="levelOne" type="button">Level 1</button><button id="levelTwo" type="button">Level 2</button><button id="levelThree" type="button">Level 3</button></div>
     <div id="planBoard" aria-label="Select a room"></div><p>Select a room to enter it.</p>
   </dialog>
   <div id="toast" class="toast hidden" role="status"></div>

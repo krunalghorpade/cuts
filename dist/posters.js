@@ -1,5 +1,5 @@
 import * as T from './vendor/three.module.js';
-import {rooms,openingsFor,groundAt,rise} from './plan.js';
+import {rooms,openingsFor,rise} from './plan.js';
 
 const quarter=Math.PI/2, aspect=320/224;
 const counts={cinema:14,television:13,music:9,gaming:10,retro:11,library:5,kitchen:5,bed:7,bath:3,collect:4,shop:4};
@@ -26,10 +26,12 @@ function clearMount([level,x,y,z,angle,width],shelves){
   });
 }
 function mounts(room,shelves){
+  if(!rows[room.id])return [];
   const [x0,z0,x1,z1]=room.bounds,out=[];
   const walls={W:['x',x0,quarter],E:['x',x1,-quarter],N:['z',z0,0],S:['z',z1,Math.PI]};
   function add(side,pos,y,w){
     if(out.length>=counts[room.id])return;
+    if(room.id==='television'&&side==='N'&&pos<3.65)return;
     const [axis,k,angle]=walls[side],hw=w/2+.06;
     if(openingsFor(room.floor).some(([a,v,lo,hi])=>a===axis&&v===k&&pos+hw>lo-.06&&pos-hw<hi+.06))return;
     const slot=[room.floor,(axis==='x'?k:pos)+.125*Math.sin(angle),y,(axis==='z'?k:pos)+.125*Math.cos(angle),angle,w,room.id];
@@ -45,10 +47,13 @@ function mounts(room,shelves){
 }
 function stairFrames(){
   const slots=[];
-  for(const [x,a] of [[-11.875,quarter],[-8.125,-quarter]])for(const z of [-4.55,-5.57,-6.59,-7.61]){
-    const y=groundAt(x,z,0)+1.55,l=y>=rise?2:1;slots.push([l,x,y-(l-1)*rise,z,a,.58,'stairs']);
+  for(const level of [1,2]){
+    for(const z of [-6.82,-5.65,-4.48]){
+      const climb=(z+7.24)/3.84*rise/2;
+      slots.push([level,-8.125,rise-climb+1.38,z,-quarter,.57,'stairs']);
+    }
+    for(const x of [-11.18,-10.04,-8.88])slots.push([level,x,rise/2+1.48,-2.125,Math.PI,.64,'stairs']);
   }
-  for(const x of [-11.15,-10,-8.85])slots.push([1,x,rise/2+1.55,-8.875,0,.68,'stairs']);
   return slots;
 }
 function decks(items,room,content){

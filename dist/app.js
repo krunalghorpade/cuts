@@ -4,7 +4,8 @@ import {installMusicPlayers} from './music-players.js';
 import {installArcade} from './arcade.js';
 import { buildInterior } from './interior.js';
 import {installPosters,installTelevisions} from './displays.js';
-import { rooms, rise, stair, inside, roomAt, groundAt } from './plan.js';
+import {installElevator} from './elevator.js';
+import { rooms, levels, levelOf, ceilingOf, rise, stair, stairStart, stairEnd, lift, entrance, inside, roomAt, groundAt } from './plan.js';
 import { createCasePreview } from './case-preview.js';
 import { stockRooms } from './racks.js';
 import { caseSpec, coverDataUrl } from './media.js';
@@ -23,9 +24,9 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color('#63584a');
 scene.fog = new THREE.FogExp2('#63584a', 0.012);
 const camera = new THREE.PerspectiveCamera(73, innerWidth / innerHeight, 0.08, 80);
-camera.position.set(-1.35,1.62,3.25);
+camera.position.set(entrance[0],1.62,entrance[1]);
 camera.rotation.order = 'YXZ';
-camera.rotation.y = .29;
+camera.rotation.y = entrance[2];
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
 renderer.setPixelRatio(Math.min(devicePixelRatio, Math.sqrt(900000/(innerWidth*innerHeight))));
 renderer.setSize(innerWidth, innerHeight);
@@ -62,7 +63,8 @@ try{
   if(pending){restoredVisit=JSON.parse(pending);sessionStorage.removeItem('myroom.refreshVisit');}
 }catch{}
 const interior=buildInterior(scene,label,ITEMS,posterContent);
-const displayTargets=[[],[]];
+const elevator=installElevator(scene,interior.floors,box,label);
+const displayTargets=levels.map(()=>[]);
 const {stacks,interactables,destinations,roomStock}=stockRooms(interior,box,label,layoutSeed);
 const updatePosters=installPosters(interior,roomStock,displayTargets,posterContent);
 const updateTVs=installTelevisions(canvas,interior.screens,roomStock,trailerStreams,openDetail);
@@ -79,22 +81,24 @@ const musicPlayer=installMusicPlayers(roomStock.get('music')||[],musicPreviews,i
 const openArcade=installArcade(()=>{uiOpen=false;});
 let ground=0,level=1;
 function refreshFloor(){
-  level=ground>rise/2?2:1;
+  level=levelOf(ground);
   const onStair=inside(stair,camera.position.x,camera.position.z);
   interior.floors.forEach((group,index)=>group.visible=onStair||index===level-1);
-  $('entryLocation').textContent='Level '+level+' · '+(onStair?'Staircase':roomAt(level,camera.position.x,camera.position.z)?.name||'Landing');
+  const {x,z}=camera.position;
+  const location=inside(lift,x,z)?'Elevator':onStair?'Staircase':roomAt(level,x,z)?.name||'Entrance';
+  $('entryLocation').textContent='Level '+level+' · '+location;
 }
 refreshFloor();
-let active=false, uiOpen=false, yaw=.29, pitch=0, focusedCase=null, selectedCase=null, toastTimer;
+let active=false, uiOpen=false, yaw=entrance[2], pitch=0, focusedCase=null, selectedCase=null, toastTimer;
 let dragLook=false, dragPointer=null, dragLastX=0, dragLastY=0;
 const keys=new Set(); const raycaster=new THREE.Raycaster(); const hoverPoint=new THREE.Vector2();let hasPointer=false,suppressClick=false,pressX=0,pressY=0; const clock=new THREE.Clock();
 const joystick={x:0,y:0,pointer:null}; let lookStart=null,lookPointer=null,lookLastX=0,lookLastY=0;
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
 function requestLook(){ if(!mobile && !uiOpen && document.pointerLockElement!==canvas) { const request=canvas.requestPointerLock?.(); request?.catch?.(()=>showToast('Drag on the scene to look around')); } }
-function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');const room=roomAt(level,camera.position.x,camera.position.z)?.id;updateTVs(camera,room,true);musicPlayer.update(room==='music'); }
-function pause(){ if(!active||uiOpen)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Continue exploring'; document.exitPointerLock?.(); }
+function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');const room=roomAt(level,camera.position.x,camera.position.z)?.id;updateTVs(camera,room,true);musicPlayer.update(room==='music'||room==='library'); }
+function pause(){ if(!active||uiOpen||elevator.riding)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Continue exploring'; document.exitPointerLock?.(); }
 function showToast(message){const el=$('toast');el.textContent=message;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2400);}
-function openCatalog(){preview.hide();currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();$('searchInput').focus();}
+function openCatalog(){if(elevator.riding)return;preview.hide();currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();$('searchInput').focus();}
 function closeCatalog(){catalogPanel.classList.add('hidden');uiOpen=false;if(active){hud.classList.remove('hidden');}else intro.classList.remove('hidden');}
 const audioCache=new Map();let currentDetailId=null,currentDetailItem=null;
 async function enrichAudio(item){
@@ -300,6 +304,8 @@ function useTarget(shell){
   keys.clear();uiOpen=true;document.exitPointerLock?.();openArcade(data.device,data.title);
 }
 function inspect(){
+  if(elevator.riding)return;
+  if(elevator.enclosed(camera.position.x,camera.position.z)){openLift();return;}
   if(focusedCase?.userData.device){useTarget(focusedCase);return;}
   const target=focusedCase?.userData.display==='tv'?focusedCase:selectedCase||focusedCase;
   if(!target){showToast('Select a case on the shelf');return;}
@@ -327,7 +333,7 @@ canvas.addEventListener('pointerdown',event=>{suppressClick=false;pressX=event.c
 function endDrag(event){if(event.pointerId===dragPointer){dragLook=false;dragPointer=null;}}
 canvas.addEventListener('pointerup',endDrag);canvas.addEventListener('pointercancel',endDrag);
 document.addEventListener('keydown',event=>{
-  if($('mapDialog').open||$('arcadeGame').open)return;
+  if($('mapDialog').open||$('arcadeGame').open||$('liftDialog').open||elevator.riding)return;
   if(currentDetailItem){
     if(event.key==='Escape')closeDetail();
     else if(event.key==='ArrowLeft'||event.key==='ArrowRight'){
@@ -362,8 +368,9 @@ function tryMove(x,z){
   const h=groundAt(x,z,ground);
   if(h===null||Math.abs(h-ground)>.44)return;
   const onStair=inside(stair,x,z);
-  if(onStair && z< -4.1 && z> -7.9 && Math.abs(x+10)<.24)return;
-  const floor=h>rise/2?2:1;
+  if(onStair && z>stairStart && z<stairEnd && Math.abs(x+10)<.23)return;
+  const floor=levelOf(h);
+  if(elevator.blocks(x,z,floor))return;
   if(interior.obstacles.some(o=>o.level===floor && Math.abs(x-o.x)<o.w/2+.19 && Math.abs(z-o.z)<o.d/2+.19))return;
   if(interior.doors.some(door=>door.level===floor && door.blocks(x,z)))return;
   camera.position.x=x;camera.position.z=z;ground=h;
@@ -386,12 +393,15 @@ function pickStackAt(clientX,clientY){
     if(!onStair && wall.level!==level)continue;
     const t=wall.w<wall.d?(wall.x-p.x)/(q.x-p.x):(wall.z-p.z)/(q.z-p.z);
     const height=p.y+(q.y-p.y)*t-(wall.level-1)*rise;
-    if(height>=0&&height<=rise&&t>0&&t<1&&Math.abs(p.x+(q.x-p.x)*t-wall.x)<=wall.w/2&&Math.abs(p.z+(q.z-p.z)*t-wall.z)<=wall.d/2)return null;
+    if(height>=0&&height<=ceilingOf(wall.level)&&t>0&&t<1&&Math.abs(p.x+(q.x-p.x)*t-wall.x)<=wall.w/2&&Math.abs(p.z+(q.z-p.z)*t-wall.z)<=wall.d/2)return null;
   }
   return hit.object;
 
 }
 function updateFocus(){
+  if(inside(lift,camera.position.x,camera.position.z)){
+    focusedCase=null;outline(hoverFrame,null);selectCase(null);prompt.classList.add('hidden');return;
+  }
   const aim=mobile||document.pointerLockElement===canvas;
   focusedCase=aim?pickStackAt(innerWidth/2,innerHeight/2):hasPointer?pickStackAt(hoverPoint.x,hoverPoint.y):null;
   outline(hoverFrame,focusedCase===selectedCase?null:focusedCase);
@@ -427,16 +437,50 @@ function updateFocus(){
     $('promptText').textContent=(isSelected||aim?'View item · ':'Select · ')+item.title;
   }
 }
+const liftDialog=$('liftDialog'),liftAction=$('liftAction'),liftMessage=$('liftMessage');
+function openLift(){
+  if(uiOpen||!active||elevator.riding||!elevator.enclosed(camera.position.x,camera.position.z)||!elevator.available(level))return;
+  uiOpen=true;keys.clear();document.exitPointerLock?.();
+  for(const b of liftDialog.querySelectorAll('[data-floor]'))b.disabled=Number(b.dataset.floor)===level;
+  liftDialog.showModal();
+}
+liftAction.onclick=openLift;
+$('closeLift').onclick=()=>liftDialog.close();
+liftDialog.addEventListener('close',()=>{uiOpen=false;keys.clear();});
+for(const b of liftDialog.querySelectorAll('[data-floor]')){
+  b.onclick=()=>{
+    const target=Number(b.dataset.floor);
+    if(elevator.request(target,level,camera.position.x,camera.position.z)){
+      keys.clear();selectCase(null);liftDialog.close();
+    }
+  };
+}
+function updateLift(dt){
+  const {x,z}=camera.position;
+  const riding=elevator.riding;
+  const state=elevator.update(dt,level,x,z);
+  if(riding){
+    ground=state.height;camera.position.y=ground+1.62;refreshFloor();
+    if(state.arrived){yaw=Math.PI;pitch=0;camera.rotation.set(0,yaw,0,'YXZ');}
+  }
+  const within=elevator.enclosed(x,z),near=Math.abs(x+3.475)<1.18&&z>=-9.43&&z< -7.5;
+  const ready=elevator.available(level);
+  liftAction.classList.toggle('hidden',!(active&&!uiOpen&&within&&ready&&!elevator.riding));
+  const status=elevator.riding?'Elevator in motion':near?(ready?'Step inside the elevator':'Elevator arriving'):'';
+  if(liftMessage.textContent!==status)liftMessage.textContent=status;
+  liftMessage.classList.toggle('hidden',!active||uiOpen||!status);
+}
 function animate(){
   requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.15);
+  updateLift(dt);
   if(active&&!uiOpen){
     for(const door of interior.doors)door.update(dt,level,camera.position.x,camera.position.z);
   }
-  if(active&&!uiOpen&&intro.classList.contains('hidden')){yaw+=((keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0))*dt*1.55;pitch=clamp(pitch+((keys.has('ArrowUp')?1:0)-(keys.has('ArrowDown')?1:0))*dt*1.3,-1.28,1.28);updateMovement(dt);camera.rotation.y=yaw;camera.rotation.x=pitch;camera.updateMatrixWorld();updateFocus();}
+  if(active&&!uiOpen&&intro.classList.contains('hidden')){yaw+=((keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0))*dt*1.55;pitch=clamp(pitch+((keys.has('ArrowUp')?1:0)-(keys.has('ArrowDown')?1:0))*dt*1.3,-1.28,1.28);if(!elevator.riding)updateMovement(dt);camera.rotation.y=yaw;camera.rotation.x=pitch;camera.updateMatrixWorld();updateFocus();}
   updatePosters(performance.now());
   const currentRoom=roomAt(level,camera.position.x,camera.position.z)?.id;
   updateTVs(camera,currentRoom,active&&!uiOpen);
-  musicPlayer.update(active&&!uiOpen&&currentRoom==='music',dt);
+  musicPlayer.update(active&&!uiOpen&&(currentRoom==='music'||currentRoom==='library'),dt);
   if(!currentDetailItem){renderer.autoClear=false;renderer.clear();renderer.render(scene,camera);}
   preview.render();
 }animate();
@@ -453,28 +497,29 @@ function drawMap(){
   const add=(bounds,name,action,current=false)=>{
     const [x,z,X,Z]=bounds,button=document.createElement('button');
     button.type='button';button.textContent=name;button.onclick=action;
-    button.style.left=(x+13)/28*100+'%';button.style.top=(z+9)/20*100+'%';
-    button.style.width=(X-x)/28*100+'%';button.style.height=(Z-z)/20*100+'%';
+    button.style.left=(x+13)/28*100+'%';button.style.top=(z+11.4)/22.4*100+'%';
+    button.style.width=(X-x)/28*100+'%';button.style.height=(Z-z)/22.4*100+'%';
     if(current)button.className='here';board.append(button);
   };
   const current=roomAt(level,camera.position.x,camera.position.z)?.id;
   for(const r of rooms.filter(r=>r.floor===mapLevel)){
     add(r.bounds,r.name,()=>{mapDialog.close();arrive(r.floor,...r.spawn);},r.id===current);
   }
-  add(stair,'Stairs',()=>{mapDialog.close();arrive(mapLevel,mapLevel===1?-11:-9,-3.04,0);});
-  $('levelOne').setAttribute('aria-pressed',String(mapLevel===1));$('levelTwo').setAttribute('aria-pressed',String(mapLevel===2));
+  add(stair,'Stairs',()=>{mapDialog.close();arrive(mapLevel,mapLevel===3?-9:-11,-8.1,Math.PI);},inside(stair,camera.position.x,camera.position.z)&&level===mapLevel);
+  add(lift,'Lift',()=>{mapDialog.close();arrive(mapLevel,-3.475,-7.95,0);},inside(lift,camera.position.x,camera.position.z)&&level===mapLevel);
+  $('levelOne').setAttribute('aria-pressed',String(mapLevel===1));$('levelTwo').setAttribute('aria-pressed',String(mapLevel===2));$('levelThree').setAttribute('aria-pressed',String(mapLevel===3));
 }
 function openMap(){
-  if(uiOpen)return;uiOpen=true;keys.clear();document.exitPointerLock?.();mapLevel=level;drawMap();mapDialog.showModal();
+  if(uiOpen||elevator.riding)return;uiOpen=true;keys.clear();document.exitPointerLock?.();mapLevel=level;drawMap();mapDialog.showModal();
 }
 $('mapBtn').onclick=openMap;$('closeMap').onclick=()=>mapDialog.close();
-$('levelOne').onclick=()=>{mapLevel=1;drawMap();};$('levelTwo').onclick=()=>{mapLevel=2;drawMap();};
+$('levelOne').onclick=()=>{mapLevel=1;drawMap();};$('levelTwo').onclick=()=>{mapLevel=2;drawMap();};$('levelThree').onclick=()=>{mapLevel=3;drawMap();};
 mapDialog.addEventListener('close',()=>{uiOpen=false;});
 
 const reloadButton=$('reloadCollections');
 reloadButton.disabled=false;
 reloadButton.onclick=async()=>{
-  if(reloadButton.disabled)return;
+  if(reloadButton.disabled||elevator.riding)return;
   reloadButton.disabled=true;reloadButton.setAttribute('aria-busy','true');
   try{
     await loadCollections('reload');
@@ -490,10 +535,11 @@ reloadButton.onclick=async()=>{
 };
 if(restoredVisit){
   const v=restoredVisit;
-  if(v.active&&[1,2].includes(v.level)&&[v.x,v.z,v.yaw,v.pitch,v.ground].every(Number.isFinite)){
+  if(v.active&&levels.includes(v.level)&&[v.x,v.z,v.yaw,v.pitch,v.ground].every(Number.isFinite)){
     const room=roomAt(v.level,v.x,v.z);
     const obstacle=interior.obstacles.some(o=>o.level===v.level&&Math.abs(v.x-o.x)<o.w/2+.19&&Math.abs(v.z-o.z)<o.d/2+.19);
-    if(room&&obstacle)arrive(v.level,...room.spawn);
+    if(inside(lift,v.x,v.z))arrive(v.level,-3.475,-7.95,0);
+    else if(room&&obstacle)arrive(v.level,...room.spawn);
     else if(room||inside(stair,v.x,v.z)){
       arrive(v.level,v.x,v.z,v.yaw,v.pitch);ground=v.ground;camera.position.y=ground+1.62;refreshFloor();
     }

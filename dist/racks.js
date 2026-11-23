@@ -41,8 +41,8 @@ function distributeInventory(seed){
         place();
         continue;
       }
-      const depth=spec.d+.026;
-      if(stack.length && (stack.length===4 || occupied+depth>.43))place();
+      const depth=spec.d+(category==='vinyl'?.016:.026);
+      if(stack.length && (stack.length===(category==='vinyl'?10:4) || occupied+depth>(category==='vinyl'?.25:.43)))place();
       stack.push(item);occupied+=depth;
     }
     if(stack.length)place();
@@ -51,7 +51,7 @@ function distributeInventory(seed){
 }
 
 export function stockRooms(interior,box,label,seed=0){
-  const stacks=new Map(),interactables=[[],[]],destinations=new Map(),roomStock=new Map();
+  const stacks=new Map(),interactables=interior.floors.map(()=>[]),destinations=new Map(),roomStock=new Map();
   const wood=new T.MeshStandardMaterial({color:'#664a35'});
   const steel=new T.MeshStandardMaterial({color:'#292a27'});
   const led=new T.MeshBasicMaterial({color:'#ffd7a2'});
@@ -67,28 +67,36 @@ export function stockRooms(interior,box,label,seed=0){
     const maxWidth=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).w));
     const maxHeight=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).h));
     const pitch=maxWidth+.042,capacity=Math.max(1,Math.floor((width-.18)/pitch));
-    const printRack=key==='books'||key==='manga';
+    const printRack=key==='books'||key==='manga',recordBin=key==='vinyl';
     const firstRow=key==='books'?2:key==='manga'?1:0;
     const stockRows=Math.ceil(assigned.length/capacity);
     const rows=printRack?Math.max(4,firstRow+stockRows):Math.max(1,stockRows);
-    const step=printRack?Math.max(.46,maxHeight+.10):maxHeight*1.75+.07;
-    const base=printRack?.16:rows>2?.64:1.08;
+    const step=recordBin?maxHeight*2.03+.06:printRack?Math.max(.46,maxHeight+.10):maxHeight*1.75+.07;
+    const base=recordBin?.74:printRack?.16:rows>2?.64:1.08;
     const height=base+step*rows+.04;
     // Extend the display toward the aisle if a set outgrows the regular shelf.
     const isBoxRack=key==='shows'||key==='anime';
     const deepest=isBoxRack?Math.max(0,...assigned.flat().map(item=>caseSpec(item).d)):0;
     const extension=Math.max(0,deepest-.46);
-    const shelfZ=extension/2,depth=.65+extension;
+    const shelfZ=extension/2,depth=recordBin?.32:.65+extension;
     const footprint={level,x:x+Math.sin(angle)*shelfZ,z:z+Math.cos(angle)*shelfZ,
       w:Math.abs(Math.cos(angle))*width+Math.abs(Math.sin(angle))*depth,
       d:Math.abs(Math.sin(angle))*width+Math.abs(Math.cos(angle))*depth};
     interior.obstacles.push(footprint);
     interior.shelfBounds.push({...footprint,bottom:0,top:height+.22});
-    board(0,base/2,-.035+shelfZ,width,base,.5+extension,wood);
-    board(0,height/2,-.26,width,height,.055,steel);
-    for(const side of [-1,1])board(side*(width/2-.026),height/2,shelfZ,.052,height,.61+extension,steel);
+    if(recordBin){
+      board(0,base/2,0,width,base,.31,wood);
+      board(0,base+.018,.152,width,.095,.025,steel);
+      for(const side of [-1,1])board(side*(width/2-.016),base+.045,0,.032,.14,.31,wood);
+      label(group,category.short,0,base-.14,.166, .72,.13,{bg:'#302c26',color:'#efcea5',size:72});
+    }else{
+      board(0,base/2,-.035+shelfZ,width,base,.5+extension,wood);
+      board(0,height/2,-.26,width,height,.055,steel);
+      for(const side of [-1,1])board(side*(width/2-.026),height/2,shelfZ,.052,height,.61+extension,steel);
+    }
     for(let row=0;row<rows;row++){
-      const deck=base+row*step;board(0,deck,shelfZ,width,.026,.62+extension,wood);
+      const deck=base+row*step;
+      board(0,deck,shelfZ,width,.026,recordBin?.31:.62+extension,wood);
       if(row<firstRow)continue;
       const start=(row-firstRow)*capacity;
       const rowStacks=assigned.slice(start,start+capacity);
@@ -99,15 +107,15 @@ export function stockRooms(interior,box,label,seed=0){
           board(cx,deck-.019,.314,pitch-.016,.041,.008,steel);
           label(group,platform,cx,deck-.019,.319,pitch-.019,.037,{bg:'#292b2b',color:'#ebe5d5',width:768,height:118,size:66});
         }
-        stacks.set(id,{category,items});let previousTop=deck,previousDepth=0,zz=.22;
+        stacks.set(id,{category,items});let previousTop=deck,previousDepth=0,zz=recordBin?.105:.22;
         items.forEach((item,index)=>{
           const {group:model,spec,shell}=createMediaCase(item,true);
           if(isBoxRack && index===0)zz=.255+extension-spec.d/2;
           const upright=isBoxRack && items.length===1;
           const tilt=upright?0:-.19,faceHeight=spec.h*Math.cos(tilt);
-          const top=index?Math.max(deck+.018+faceHeight,previousTop+.18*faceHeight):deck+.018+faceHeight;
+          const top=index?Math.max(deck+.018+faceHeight,previousTop+(recordBin?.106:.18)*faceHeight):deck+.018+faceHeight;
           const yy=top-faceHeight/2;
-          if(index)zz-=(previousDepth+spec.d)/2+.026;
+          if(index)zz-=(previousDepth+spec.d)/2+(recordBin?.016:.026);
           const support=top-faceHeight-deck-.012;
           if(support>.002)board(cx,deck+.011+support/2,zz,spec.w*.86,support,.016,steel);
           model.position.set(cx,yy,zz);model.rotation.x=tilt;group.add(model);
@@ -119,8 +127,10 @@ export function stockRooms(interior,box,label,seed=0){
         });
       });
     }
-    board(0,height,shelfZ,width,.035,.62+extension,wood);board(0,height-.025,.235+extension,width-.1,.01,.025,led);
-    label(group,category.short,0,height+.12,.12,Math.min(1.55,width*.65),.19,{bg:'#302c26',color:'#efcea5',size:80});
+    if(!recordBin){
+      board(0,height,shelfZ,width,.035,.62+extension,wood);board(0,height-.025,.235+extension,width-.1,.01,.025,led);
+      label(group,category.short,0,height+.12,.12,Math.min(1.55,width*.65),.19,{bg:'#302c26',color:'#efcea5',size:80});
+    }
     batchRack(group);
   });
   return {stacks,interactables,destinations,roomStock};

@@ -1,15 +1,15 @@
 # My Room - by Krunal Ghorpade aka Kratex
 
-A two-floor, first-person media store for desktop, tablet and phone. The interface uses Helvetica Neue, with Helvetica and Arial fallbacks.
+A three-floor, first-person media store for desktop, tablet and phone. The interface uses Helvetica Neue, with Helvetica and Arial fallbacks.
 
 ## Explore
 
 - Use WASD to walk, drag or use the arrow keys to look, and hold Shift to run. Click a case to select it and press E to inspect it. B opens the collection, M opens the floor map and Esc pauses the walkthrough. L or a double click enables mouse look.
 - On a touch screen, move with the stick, drag to look, tap a case to select it, then tap View item.
 - The item carousel opens on the selected case. Use the left and right buttons or arrow keys to browse its media section in shelf order. Drag the centered 3D case to rotate it. With the preview focused, Shift + left/right rotates horizontally and up/down rotates vertically. Reset view restores the opening angle.
-- The floor map takes you to a room on either floor. The Book Library entrance stays open. The other doors swing open as you approach from either side and close after you walk away. The switchback stairs connect the two levels on foot.
+- The floor map visits rooms on all three levels. Doors open as you approach. Both switchback flights and the elevator connect the floors. The lift arrives when approached. Step inside and press E or choose a destination on screen.
 
-Level 1 has a private projector theatre with movie and anime-film racks, and a TV room with separate regular and anime series shelves. Level 2 has a music room, a retro gaming room with two playable arcade cabinets, and a modern gaming desk with PlayStation, Xbox and Nintendo consoles. Other game editions without a verified console disc are filed in the collectibles annex.
+The entrance lobby on Level 1 opens straight into the TV lounge and has a separate door to a private projector theatre with movie and anime-film racks, and a TV room with separate regular and anime series shelves. Level 2 has a combined music and book library with a listening lounge, a retro gaming room with two playable arcade cabinets, and a modern gaming desk with PlayStation, Xbox and Nintendo consoles. Other game editions without a verified console disc are filed in the collectibles annex. Level 3 has a gallery with wall-mounted and suspended art, and a separately accessed private bedroom and writing desk.
 
 Each screen draws randomly from titles on its own shelves with matched trailers. A per-room history in the visitor’s browser keeps played titles out of the current cycle. The player tries alternate sources when a stream or embed fails. The 4:3 CRT uses legacy cartridge titles. Digital posters change once a minute. Click or tap a poster or a playing screen and select View details to inspect its item. Trailer sound follows your distance from the screen. Use Mute TVs or V to silence it.
 

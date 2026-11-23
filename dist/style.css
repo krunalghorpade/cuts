@@ -126,7 +126,7 @@ body:has(.panel:not(.hidden), #mapDialog[open]) :is(.topbar, .hud, .intro) { vis
 .map-dialog { width: min(560px, calc(100% - 32px)); max-height: 92dvh; padding: var(--panel-pad); }
 .map-dialog::backdrop { background: rgb(0 0 0 / .55); }
 .level-tabs { margin: 18px 0 22px; }
-#planBoard { position: relative; width: 100%; aspect-ratio: 28 / 20; }
+#planBoard { position: relative; width: 100%; aspect-ratio: 28 / 22.4; }
 #planBoard button {
   position: absolute; display: grid; place-items: center; min-height: 0; padding: 3px;
   background: #e6e6e6; text-align: center; line-height: 1.15; font-size: clamp(11px, 2vw, 15px);
@@ -263,3 +263,14 @@ body:has(.panel:not(.hidden), #mapDialog[open]) :is(.topbar, .hud, .intro) { vis
 .related-titles button {display:block;min-height:34px;text-decoration:underline;text-underline-offset:3px}
 .poster-credit {color:var(--muted);font-size:12px}
 @media(max-width:510px){.topbar nav{gap:8px}.topbar{gap:7px}.location{max-width:32%}#reloadCollections{width:32px;min-width:32px}}
+
+.lift-hint {position:fixed;z-index:4;bottom:max(90px,16vh);left:50%;transform:translateX(-50%);background:#171917;color:white;padding:11px 17px;font:inherit;font-size:14px;white-space:nowrap}
+button.lift-hint {pointer-events:auto}
+.lift-dialog {max-width:380px}
+.lift-stops {display:grid;margin:20px 0 4px}
+.lift-stops button {text-align:left;padding:13px 8px;font:inherit;min-height:48px}
+.lift-stops b {font-size:14px;display:inline-block;min-width:36px}
+.lift-stops button:disabled {opacity:.42}
+body:has(#liftDialog[open]) :is(.hud,.topbar){visibility:hidden}
+#planBoard button {line-height:1.12}
+@media(max-width:600px){#planBoard button{padding:1px;font-size:10px}#planBoard button[aria-label="Elevator"]{font-size:9px}}

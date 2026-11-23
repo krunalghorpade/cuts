@@ -3,6 +3,7 @@ import * as T from './vendor/three.module.js';
 const unitBox = new T.BoxGeometry();
 const hardware = new T.MeshStandardMaterial({color:'#977c55',metalness:.64,roughness:.38});
 const trim = new T.MeshStandardMaterial({color:'#33332e',roughness:.68});
+const entryGlass=new T.MeshStandardMaterial({color:'#b9d4c7',transparent:true,opacity:.17,roughness:.23,depthWrite:false});
 const leafHeight = 2.23;
 const openingAngle = Math.PI / 2;
 const playerRadius = .19;
@@ -17,7 +18,7 @@ export function makeDoor(parent, level, opening, roomName, wood, label, keepOpen
   frame.rotation.y = axis==='x' ? -Math.PI/2 : 0;
   parent.add(frame);
 
-  const faces=[], leaves=[], fixed=[];
+  const faces=[], leaves=[];
   function part(owner,px,py,pz,w,h,d,material) {
     const mesh=new T.Mesh(unitBox,material);
     mesh.position.set(px,py,pz);mesh.scale.set(w,h,d);owner.add(mesh);
@@ -26,17 +27,9 @@ export function makeDoor(parent, level, opening, roomName, wood, label, keepOpen
 
   // Doors open into the destination room. The west stair doors swing onto the landing.
   let swing = axis==='z'||wall<0 ? 1 : -1;
-  const privateRoom = roomName==='Bedroom'||roomName==='Washroom';
+  const privateRoom = opening[5]==='single';
   const jambSpan=span-.16;
-  const clearWidth=privateRoom ? 1.04 : jambSpan;
-  if(privateRoom){
-    const sideWidth=(jambSpan-clearWidth)/2;
-    for(const side of [-1,1]){
-      const u=side*(clearWidth+sideWidth)/2;
-      fixed.push([u-sideWidth/2,u+sideWidth/2]);
-      faces.push(part(frame,u,leafHeight/2,0,sideWidth,leafHeight,.11,wood));
-    }
-  }
+  const clearWidth=jambSpan;
   part(frame,0,2.41,0,jambSpan,.34,.115,wood);
   part(frame,0,2.247,0,jambSpan,.025,.13,trim);
   if(roomName!=='Stairwell'){
@@ -51,11 +44,17 @@ export function makeDoor(parent, level, opening, roomName, wood, label, keepOpen
     const pivot=new T.Group();
     pivot.position.x=hinge;frame.add(pivot);
     const center=direction*width/2;
-    faces.push(part(pivot,center,leafHeight/2+.007,0,width,leafHeight,.046,wood));
+    const glazed=roomName==='Entrance';
+    faces.push(part(pivot,center,leafHeight/2+.007,0,width,leafHeight,.046,glazed?entryGlass:wood));
+    if(glazed){
+      for(const dx of [-1,1])part(pivot,center+dx*(width-.05)/2,leafHeight/2,0,.05,leafHeight,.064,trim);
+      for(const cy of [.035,1.04,leafHeight-.032])part(pivot,center,cy,0,width,.064,.064,trim);
+    }
     for(const side of [-1,1]){
-      // Each face has its own handle and recessed panel trim.
-      part(pivot,center,1.45,side*.024,width-.14,1.19,.007,trim);
-      part(pivot,center,1.45,side*.029,width-.165,1.165,.006,wood);
+      if(!glazed){
+        part(pivot,center,1.45,side*.024,width-.14,1.19,.007,trim);
+        part(pivot,center,1.45,side*.029,width-.165,1.165,.006,wood);
+      }
       const latch=direction*(width-.10);
       part(pivot,latch,1.04,side*.031,.05,.15,.013,hardware);
       part(pivot,latch,1.055,side*.056,.029,.03,.048,hardware);
@@ -79,7 +78,6 @@ export function makeDoor(parent, level, opening, roomName, wood, label, keepOpen
   function blocks(px,pz) {
     const u=axis==='x'?pz-z:px-x, v=axis==='x'?x-px:pz-z;
     if(Math.abs(u)>span/2+playerRadius || Math.abs(v)>1.35)return false;
-    if(Math.abs(v)<playerRadius+.055 && fixed.some(([a,b])=>u>a-playerRadius&&u<b+playerRadius))return true;
     return leafTouches(u,v,progress);
   }
   function update(dt,playerLevel,px,pz) {

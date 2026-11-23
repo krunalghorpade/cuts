@@ -11,15 +11,16 @@ function hitSurface(parent,devices,key,title,x,y,z,w,h,d){
 }
 export function cinemaRoom({group,box,cyl,seat,block,spot,rug,screens}){
   const cx=-4.04;
-  box(cx,2.1,-5.872,7.64,4,.06,'#262326');
-  box(cx,2.13,-5.79,5.52,3.15,.09,'#100f10');
-  screens.push(addTelevision(group,'cinema',cx,2.13,-5.738,5.38,5.38*9/16,false,false));
+  const screenX=-4.95;
+  box(screenX,2.1,-5.872,5.25,3.6,.06,'#262326');
+  box(screenX,2.13,-5.79,4.45,2.56,.09,'#100f10');
+  screens.push(addTelevision(group,'cinema',screenX,2.13,-5.738,4.32,4.32*9/16,false,false));
   for(const side of [-1,1]){
-    const sx=cx+side*3.21;
+    const sx=screenX+side*2.48;
     box(sx,1.24,-5.55,.32,1.34,.24,dark);
     for(const y of [.89,1.27,1.70])cyl(sx,y,-5.414,.185,.023,.185,charcoal,Math.PI/2);
     block(sx,-5.55,.32,.24);
-    for(let i=0;i<8;i++)box(sx+side*(i-3.5)*.058,2.67,-5.80,.022,1.20,.05,i%2?dark:charcoal);
+    for(let i=0;i<8;i++)box(sx+(i-3.5)*.034,2.67,-5.80,.022,1.20,.05,i%2?dark:charcoal);
   }
   rug(cx,.66,5.45,5.38);
   for(const z of [-.10,2.22])for(const x of [-5.43,-4.14,-2.85]){
@@ -36,20 +37,27 @@ export function cinemaRoom({group,box,cyl,seat,block,spot,rug,screens}){
 }
 
 export function listeningStation({group,part,box,cyl,block,sign,shadow,walnut,devices}){
-  const z=5.42,y=.91;
-  box(-2.87,.44,z,4.62,.78,.75,walnut);
-  box(-2.87,y-.04,z,4.69,.08,.83,'#27292a');block(-2.87,z,4.69,.83);shadow(-2.87,z,4.94,1.25);
+  const z=-5.53,y=.91,cx=-5.55;
+  box(cx,.44,z,3.75,.78,.72,walnut);
+  box(cx,y-.04,z,3.79,.08,.76,'#27292a');block(cx,z,3.79,.76);shadow(cx,z,3.88,1.19);
   const layout=[
-    {key:'vinyl',name:'Vinyl',x:-4.30,build:turntable,bounds:[.484,.416,.397]},
-    {key:'cassettes',name:'Cassette',x:-2.87,build:boombox,bounds:[.56,.412,.222]},
-    {key:'cds',name:'CD',x:-1.44,build:compactStereo,bounds:[.75,.36,.34]}
+    ['vinyl','Vinyl',-6.65,turntable,[.484,.416,.397]],
+    ['cassettes','Cassette',-5.50,boombox,[.56,.412,.222]],
+    ['cds','CD',-4.52,compactStereo,[.75,.36,.34]]
   ];
-  for(const {key,name,x,build,bounds:[width,height,depth]} of layout){
-    sign(name.toUpperCase(),x,1.60,5.872,.90,Math.PI);
-    hitSurface(group,devices,key,name+' player',x,y+height/2,z,width,height,depth);
-    const model=build({group,part,box,cyl,walnut},x,y,z);
-    Object.assign(devices.at(-1).userData,model);
-    shadow(x,z,width*1.28,depth*1.48,y+.001);
+  for(const [key,name,x,build,[w,h,d]] of layout){
+    const owner=new T.Group();
+    owner.position.set(x,y,z);owner.rotation.y=Math.PI;owner.updateMatrix();group.add(owner);
+    const shaped=(shape)=>(px,py,pz,sw,sh,sd,mat,rx=0,ry=0,rz=0,pose=null)=>{
+      const transform=pose?new T.Matrix4().multiplyMatrices(owner.matrix,pose):owner.matrix;
+      part(shape,px,py,pz,sw,sh,sd,mat,rx,ry,rz,transform);
+    };
+    const deviceParts={group:owner,box:shaped('box'),cyl:shaped('round'),walnut,
+      part:(shape,...args)=>shaped(shape)(...args)};
+    sign(name.toUpperCase(),x,1.6,-5.87,.83,0);
+    hitSurface(owner,devices,key,name+' player',0,h/2,0,w,h,d);
+    Object.assign(devices.at(-1).userData,build(deviceParts,0,0,0));
+    shadow(x,z,w*1.28,d*1.48,y+.001);
   }
 }
 
