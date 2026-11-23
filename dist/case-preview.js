@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-import {createMediaCase, coverTexture} from './media.js';
+import {createMediaCase, coverTexture, caseSpec} from './media.js';
 
 // A printed catalog insert supplies a readable spine and reverse when the import only has front art.
 function displayLabel(item, spec, spine = false) {
@@ -40,7 +40,10 @@ function displayLabel(item, spec, spine = false) {
   return new THREE.MeshStandardMaterial({map, roughness:.76});
 }
 
-export function createCasePreview(canvas) {
+export function createCasePreview(canvas, items) {
+  // One display scale preserves the proportions of every box set in the carousel.
+  const sets=items.filter(item=>item.category==='shows'||item.category==='anime').map(caseSpec);
+  const boxDiagonal=Math.max(.20,...sets.map(spec=>Math.hypot(spec.w,spec.h,spec.d)));
   let renderer, model, drag = null, dirty = true, started=0;
   let entries=[];
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
@@ -114,7 +117,7 @@ export function createCasePreview(canvas) {
       const {group,spec}=createMediaCase(record);
       const start=oldSlots.get(record.id) ?? target+direction;
       entries.push({id:record.id,group,texture:coverTexture(record),version:-1,
-        start,slot:start,target,scale:2/Math.hypot(spec.w,spec.h,spec.d)});
+        start,slot:start,target,scale:2/(spec.kind==='boxset'?boxDiagonal:Math.hypot(spec.w,spec.h,spec.d))});
       scene.add(group);
       if(target!==0){
         group.rotation.set(.06,-target*.42,0,'YXZ');

@@ -70,14 +70,11 @@ export function caseSpec(item){
   }
   if(kind==='boxset'){
     label=item.category==='anime'?'Anime box set':'Series box set';
-    // Estimate four episodes per disc and four discs per inner case. Large sets
-    // put multiple rows of cases inside one slipbox to fit a shelf's depth.
+    // Four episodes per disc, four discs per inner case, all behind one cover.
     if(Number.isInteger(item.episodeCount) && item.episodeCount>0){
       const discs=Math.ceil(item.episodeCount/4);
       const innerCases=Math.ceil(discs/4);
-      const columns=Math.ceil(innerCases/8);
-      width=135*columns;
-      depth=8+Math.ceil(innerCases/columns)*6+Math.ceil(discs/columns)*2;
+      depth=8+innerCases*6+discs*2;
     }
   }
   return {w:width/1000,h:height/1000,d:depth/1000,kind,label,shell,dimensions:[width,height,depth]};

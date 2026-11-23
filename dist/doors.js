@@ -7,7 +7,7 @@ const leafHeight = 2.23;
 const openingAngle = Math.PI / 2;
 const playerRadius = .19;
 
-export function makeDoor(parent, level, opening, roomName, wood, label) {
+export function makeDoor(parent, level, opening, roomName, wood, label, keepOpen = false) {
   const [axis,wall,low,high] = opening;
   const span = high-low, middle = (low+high)/2;
   const x = axis==='x' ? wall : middle;
@@ -61,10 +61,11 @@ export function makeDoor(parent, level, opening, roomName, wood, label) {
       part(pivot,latch,1.055,side*.056,.029,.03,.048,hardware);
       part(pivot,latch-direction*.051,1.055,side*.08,.13,.029,.022,hardware);
     }
+    if(keepOpen)pivot.rotation.y=-direction*swing*openingAngle;
     leaves.push({pivot,hinge,width,direction});
   }
 
-  let progress=0, openingRequested=false;
+  let progress=keepOpen?1:0, openingRequested=false;
   function leafTouches(u,v,amount) {
     for(const {hinge,width,direction} of leaves){
       const angle=-direction*swing*amount*openingAngle;
@@ -82,6 +83,7 @@ export function makeDoor(parent, level, opening, roomName, wood, label) {
     return leafTouches(u,v,progress);
   }
   function update(dt,playerLevel,px,pz) {
+    if(keepOpen)return;
     const u=axis==='x'?pz-z:px-x, v=axis==='x'?x-px:pz-z;
     const sameFloor=level===playerLevel;
     if(sameFloor && Math.abs(u)<clearWidth/2+.25 && Math.abs(v)<1.9){

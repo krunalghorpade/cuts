@@ -153,7 +153,7 @@ export function buildInterior(scene, label){
       if(level===2 && name==='Washroom')continue;
       const mid=(a+b)/2;
       const destination=axis==='x'?roomAt(level,wall+Math.sign(wall)*.3,mid):roomAt(level,mid,wall+.3);
-      doors.push(makeDoor(group,level,opening,destination?.name || 'Stairwell',walnut,label));
+      doors.push(makeDoor(group,level,opening,destination?.name || 'Stairwell',walnut,label,destination?.id==='library'));
     }
     // Mid-flight landing and stair treads occupy a shared double-height opening.
     box(-10,-.075,-3.05,4,.15,2.1,floorMat);

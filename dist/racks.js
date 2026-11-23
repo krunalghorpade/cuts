@@ -17,7 +17,14 @@ function distributeInventory(){
     let stack=[], occupied=0, index=0;
     const place=()=>{placements[bays[index++ % bays.length]].push(stack);stack=[];occupied=0;};
     for(const item of entries){
-      const depth=caseSpec(item).d+.026;
+      const spec=caseSpec(item);
+      if(spec.kind==='boxset' && spec.d>=spec.w/2){
+        if(stack.length)place();
+        stack.push(item);
+        place();
+        continue;
+      }
+      const depth=spec.d+.026;
       if(stack.length && (stack.length===4 || occupied+depth>.43))place();
       stack.push(item);occupied+=depth;
     }
@@ -46,12 +53,19 @@ export function stockRooms(interior,box,label){
     const step=key==='books'?Math.max(.46,maxHeight+.10):maxHeight*1.75+.07;
     const base=key==='books'?.16:rows>2?.64:1.08;
     const height=base+step*rows+.04;
-    interior.obstacles.push({level,x,z,w:Math.abs(Math.cos(angle))*width+Math.abs(Math.sin(angle))*.65,d:Math.abs(Math.sin(angle))*width+Math.abs(Math.cos(angle))*.65});
-    board(0,base/2,-.035,width,base,.5,wood);
+    // Extend the display toward the aisle if a set outgrows the regular shelf.
+    const isBoxRack=key==='shows'||key==='anime';
+    const deepest=isBoxRack?Math.max(0,...assigned.flat().map(item=>caseSpec(item).d)):0;
+    const extension=Math.max(0,deepest-.46);
+    const shelfZ=extension/2,depth=.65+extension;
+    interior.obstacles.push({level,x:x+Math.sin(angle)*shelfZ,z:z+Math.cos(angle)*shelfZ,
+      w:Math.abs(Math.cos(angle))*width+Math.abs(Math.sin(angle))*depth,
+      d:Math.abs(Math.sin(angle))*width+Math.abs(Math.cos(angle))*depth});
+    board(0,base/2,-.035+shelfZ,width,base,.5+extension,wood);
     board(0,height/2,-.26,width,height,.055,steel);
-    for(const side of [-1,1])board(side*(width/2-.026),height/2,0,.052,height,.61,steel);
+    for(const side of [-1,1])board(side*(width/2-.026),height/2,shelfZ,.052,height,.61+extension,steel);
     for(let row=0;row<rows;row++){
-      const deck=base+row*step;board(0,deck,0,width,.026,.62,wood);
+      const deck=base+row*step;board(0,deck,shelfZ,width,.026,.62+extension,wood);
       if(row<firstRow)continue;
       const start=(row-firstRow)*capacity;
       const rowStacks=assigned.slice(start,start+capacity);
@@ -60,7 +74,9 @@ export function stockRooms(interior,box,label){
         stacks.set(id,{category,items});let previousTop=deck,previousDepth=0,zz=.22;
         items.forEach((item,index)=>{
           const {group:model,spec,shell}=createMediaCase(item,true);
-          const tilt=-.19,faceHeight=spec.h*Math.cos(tilt);
+          if(isBoxRack && index===0)zz=.255+extension-spec.d/2;
+          const upright=isBoxRack && items.length===1;
+          const tilt=upright?0:-.19,faceHeight=spec.h*Math.cos(tilt);
           const top=index?Math.max(deck+.018+faceHeight,previousTop+.18*faceHeight):deck+.018+faceHeight;
           const yy=top-faceHeight/2;
           if(index)zz-=(previousDepth+spec.d)/2+.026;
@@ -69,13 +85,13 @@ export function stockRooms(interior,box,label){
           model.position.set(cx,yy,zz);model.rotation.x=tilt;group.add(model);
           shell.userData={stackId:id,index,item,spec};picks.push(shell);
           const target=new T.Vector3();shell.getWorldPosition(target);
-          const distance=.85;
+          const distance=.85+(isBoxRack?spec.d/2:0);
           destinations.set(item.id,{level,x:target.x+Math.sin(angle)*distance,z:target.z+Math.cos(angle)*distance,yaw:angle,pitch:Math.atan2(target.y-((level-1)*rise+1.62),distance)});
           previousDepth=spec.d;previousTop=top;
         });
       });
     }
-    board(0,height,0,width,.035,.62,wood);board(0,height-.025,.235,width-.1,.01,.025,led);
+    board(0,height,shelfZ,width,.035,.62+extension,wood);board(0,height-.025,.235+extension,width-.1,.01,.025,led);
     label(group,category.short,0,height+.12,.12,Math.min(1.55,width*.65),.19,{bg:'#302c26',color:'#efcea5',size:80});
     batchRack(group);
   });
