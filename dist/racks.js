@@ -1,4 +1,5 @@
 import * as T from './vendor/three.module.js';
+import {cinemaShelfFinishes,dressCinemaCabinet} from './cinema.js';
 import {batchRack} from './shelf-render.js';
 import {categoryById, ITEMS} from './catalog.js';
 import {fixtures,rise,roomAt} from './plan.js';
@@ -42,7 +43,8 @@ function distributeInventory(seed){
         continue;
       }
       const depth=spec.d+(category==='vinyl'?.016:.026);
-      if(stack.length && (stack.length===(category==='vinyl'?10:4) || occupied+depth>(category==='vinyl'?.25:.43)))place();
+      const stackLimit=category==='vinyl'?10:(category==='movies'||category==='anime-movies')?2:4;
+      if(stack.length && (stack.length===stackLimit || occupied+depth>(category==='vinyl'?.25:.43)))place();
       stack.push(item);occupied+=depth;
     }
     if(stack.length)place();
@@ -52,8 +54,8 @@ function distributeInventory(seed){
 
 export function stockRooms(interior,box,label,seed=0){
   const stacks=new Map(),interactables=interior.floors.map(()=>[]),destinations=new Map(),roomStock=new Map();
-  const wood=new T.MeshStandardMaterial({color:'#664a35'});
-  const steel=new T.MeshStandardMaterial({color:'#292a27'});
+  const usualWood=new T.MeshStandardMaterial({color:'#664a35'});
+  const usualSteel=new T.MeshStandardMaterial({color:'#292a27'});
   const led=new T.MeshBasicMaterial({color:'#ffd7a2'});
   const placements=distributeInventory(seed);
   fixtures.forEach(([level,key,x,z,width,angle],bay)=>{
@@ -61,6 +63,8 @@ export function stockRooms(interior,box,label,seed=0){
     group.position.set(x,0,z);group.rotation.y=angle;interior.floors[level-1].add(group);
     const picks=interactables[level-1],assigned=placements[bay];
     const room=roomAt(level,x,z).id;
+    const cinema=room==='cinema';
+    const wood=cinema?cinemaShelfFinishes.walnut:usualWood,steel=cinema?cinemaShelfFinishes.edge:usualSteel;
     if(!roomStock.has(room))roomStock.set(room,[]);
     roomStock.get(room).push(...assigned.flat());
     const board=(...args)=>{const m=box(group,...args);picks.push(m);return m;};
@@ -70,10 +74,10 @@ export function stockRooms(interior,box,label,seed=0){
     const printRack=key==='books'||key==='manga',recordBin=key==='vinyl';
     const firstRow=key==='books'?2:key==='manga'?1:0;
     const stockRows=Math.ceil(assigned.length/capacity);
-    const rows=printRack?Math.max(4,firstRow+stockRows):Math.max(1,stockRows);
-    const step=recordBin?maxHeight*2.03+.06:printRack?Math.max(.46,maxHeight+.10):maxHeight*1.75+.07;
-    const base=recordBin?.74:printRack?.16:rows>2?.64:1.08;
-    const height=base+step*rows+.04;
+    const rows=cinema?Math.max(5,stockRows):printRack?Math.max(4,firstRow+stockRows):Math.max(1,stockRows);
+    const step=cinema?Math.max(.389,maxHeight*1.41+.045):recordBin?maxHeight*2.03+.06:printRack?Math.max(.46,maxHeight+.10):maxHeight*1.75+.07;
+    const base=cinema?.43:recordBin?.74:printRack?.16:rows>2?.64:1.08;
+    const height=cinema?Math.max(2.89,base+step*rows+.57):base+step*rows+.04;
     // Extend the display toward the aisle if a set outgrows the regular shelf.
     const isBoxRack=key==='shows'||key==='anime';
     const deepest=isBoxRack?Math.max(0,...assigned.flat().map(item=>caseSpec(item).d)):0;
@@ -90,13 +94,26 @@ export function stockRooms(interior,box,label,seed=0){
       for(const side of [-1,1])board(side*(width/2-.016),base+.045,0,.032,.14,.31,wood);
       label(group,category.short,0,base-.14,.166, .72,.13,{bg:'#302c26',color:'#efcea5',size:72});
     }else{
-      board(0,base/2,-.035+shelfZ,width,base,.5+extension,wood);
+      if(cinema){
+        group.name='L01_CINEMA_'+key.toUpperCase()+'_'+bay;
+        board(0,.062,0,width-.09,.124,.43,steel);
+        board(0,(base+.12)/2,-.035,width-.05,base-.12,.48,wood);
+        for(const sign of [-1,1]){
+          const leafWidth=(width-.055)/2;
+          board(sign*leafWidth/2,(base+.16)/2,.218,leafWidth-.015,base-.18,.026,wood);
+          board(sign*.095,base-.12,.241,.13,.015,.022,steel);
+        }
+      }else board(0,base/2,-.035+shelfZ,width,base,.5+extension,wood);
       board(0,height/2,-.26,width,height,.055,steel);
       for(const side of [-1,1])board(side*(width/2-.026),height/2,shelfZ,.052,height,.61+extension,steel);
     }
     for(let row=0;row<rows;row++){
       const deck=base+row*step;
       board(0,deck,shelfZ,width,.026,recordBin?.31:.62+extension,wood);
+      if(cinema){
+        board(0,deck-.019,.267,width-.075,.016,.025,steel);
+        board(0,deck-.020,.255,width-.098,.009,.010,led);
+      }
       if(row<firstRow)continue;
       const start=(row-firstRow)*capacity;
       const rowStacks=assigned.slice(start,start+capacity);
@@ -129,7 +146,15 @@ export function stockRooms(interior,box,label,seed=0){
     }
     if(!recordBin){
       board(0,height,shelfZ,width,.035,.62+extension,wood);board(0,height-.025,.235+extension,width-.1,.01,.025,led);
-      label(group,category.short,0,height+.12,.12,Math.min(1.55,width*.65),.19,{bg:'#302c26',color:'#efcea5',size:80});
+      if(cinema){
+        const displayDeck=base+step*rows;
+        board(0,displayDeck,0,width,.035,.61,wood);
+        if(key==='anime-movies')dressCinemaCabinet(group,displayDeck+.018);
+        const lintel=height-.104;
+        board(0,lintel,.244,width,.18,.117,steel);
+        board(0,lintel-.097,.235,width-.075,.010,.023,led);
+        label(group,category.label,0,lintel,.305,Math.min(.82,width-.14),.084,{bg:'#22221e',color:'#ddcbb0',size:69});
+      }else label(group,category.short,0,height+.12,.12,Math.min(1.55,width*.65),.19,{bg:'#302c26',color:'#efcea5',size:80});
     }
     batchRack(group);
   });

@@ -4,7 +4,8 @@ import * as T from './vendor/three.module.js';
 import {rooms, levels, ceilingOf, rise, stair, stairStart, stairEnd, lift, openingsFor, roomAt} from './plan.js';
 import {makeDoor} from './doors.js';
 import {addTelevision} from './displays.js';
-import {cinemaRoom,listeningStation,arcadeCabinets} from './media-rooms.js';
+import {buildCinema} from './cinema.js';
+import {listeningStation,arcadeCabinets} from './media-rooms.js';
 import {collectibleShelves} from './collectibles.js';
 import {buildGamingDesk} from './gaming-desk.js';
 
@@ -95,6 +96,7 @@ import {buildRetroShowcase} from './retro-showcase.js';
 
 export function buildInterior(scene,label,items,editorial){
   const featureStock=new Map();
+  let theatre;
   const shelfBounds=[], floors=[], obstacles=[], occluders=[], doors=[], screens=[], devices=[];
   scene.add(new T.HemisphereLight('#f9e9d7','#716f68',1.38));
   const sun=new T.DirectionalLight('#fff1df',1.55);sun.position.set(-5,9,5);scene.add(sun);
@@ -115,8 +117,8 @@ export function buildInterior(scene,label,items,editorial){
       for(let i=0;i<base.attributes.position.count;i++){
         vec.fromBufferAttribute(base.attributes.position,i).applyMatrix4(dummy.matrix);const px=vec.x,py=vec.y,pz=vec.z;b.p.push(px,py,pz);
         vec.fromBufferAttribute(base.attributes.normal,i).applyMatrix3(normalMatrix).normalize();b.n.push(vec.x,vec.y,vec.z);
-        if(mat===glassBlock||mat===stone||mat===floorMat||mat===walnut||mat===linen||mat===wool){
-          const side=Math.abs(vec.x)>.7,top=Math.abs(vec.y)>.7,scale=mat===glassBlock?.245:mat===stone?2.5:mat===walnut?1.3:mat===floorMat?3:.7;
+        if(mat.userData.metresPerTile||mat===glassBlock||mat===stone||mat===floorMat||mat===walnut||mat===linen||mat===wool){
+          const side=Math.abs(vec.x)>.7,top=Math.abs(vec.y)>.7,scale=mat.userData.metresPerTile||(mat===glassBlock?.245:mat===stone?2.5:mat===walnut?1.3:mat===floorMat?3:.7);
           b.uv.push((side?pz:px)/scale,(top?pz:py)/scale);
         }else b.uv.push(base.attributes.uv.getX(i),base.attributes.uv.getY(i));
       }
@@ -185,11 +187,12 @@ export function buildInterior(scene,label,items,editorial){
     }
     for(const r of plan){
       const [x,z,X,Z]=r.bounds,cx=(x+X)/2,cz=(z+Z)/2,w=X-x,d=Z-z;
+      outline(r.bounds);
+      if(r.id==='cinema')continue;
       box(cx,-.10,cz,w,.20,d,floorMat);
       box(cx,height+.08,cz,w,.16,d,walnut);
       for(let xx=x+.42;xx<X-.15;xx+=.48)box(xx,height-.006,cz,.010,.014,d,'#493b2e');
       for(let zz=z+1.25;zz<Z-.6;zz+=4.5)lightStrip(cx,height-.17,zz,Math.min(w*.60,5.3),.078);
-      outline(r.bounds);
     }
     outline(stair);outline(lift);
     for(const {axis,f,spans} of boundaries.values()){
@@ -271,7 +274,7 @@ export function buildInterior(scene,label,items,editorial){
       }block(x,z,2.8,.72);shadow(x,z,3.2,1.2);
     }
     if(level===1){
-      cinemaRoom({group,box,cyl,seat,block,spot,rug,screens});
+      theatre=buildCinema({group,box,cyl,block,shadow,screens});
       cove(1.93,-5.88,3.42,3.05);
       cabinet(1.91,-5.53,3.10);tv(1.91,-5.51,1.99,1.73);
       speaker(.58,.84,-5.44);speaker(3.25,.84,-5.44);
@@ -352,5 +355,5 @@ export function buildInterior(scene,label,items,editorial){
       group.add(new T.Mesh(geo,material));
     }
   }
-  return {floors,obstacles,occluders,doors,screens,devices,shelfBounds,featureStock};
+  return {floors,obstacles,occluders,doors,screens,devices,shelfBounds,featureStock,theatre};
 }

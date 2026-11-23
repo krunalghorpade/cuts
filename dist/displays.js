@@ -1,4 +1,5 @@
 import * as T from './vendor/three.module.js';
+import {cinemaProgramme} from './cinema-programme.js';
 export {installPosters} from './posters.js';
 import {CSS3DRenderer} from './vendor/CSS3DRenderer.js';
 import {createChannel,trailerSources} from './trailer-channel.js';
@@ -19,7 +20,7 @@ function slate(label,retro=false){
 }
 
 const standby={
-  cinema:slate('PRIVATE CINEMA'), television:slate('TV ROOM'),
+  cinema:cinemaProgramme(), television:slate('TV ROOM'),
   gaming:slate('GAME TRAILERS'), retro:slate('RETRO GAMING ROOM',true)
 };
 const windowMaterial=new T.ShaderMaterial({

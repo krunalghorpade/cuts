@@ -1,41 +1,12 @@
 import * as T from './vendor/three.module.js';
 import {turntable} from './hi-fi.js';
 import {boombox,compactStereo} from './stereos.js';
-import {addTelevision} from './displays.js';
 
-const dark='#202328', charcoal='#35363a', metal='#535762', amber='#b48b58';
-const glow=new T.MeshBasicMaterial({color:'#ffcf88',toneMapped:false});
+const dark='#202328', charcoal='#35363a', metal='#535762';
 function hitSurface(parent,devices,key,title,x,y,z,w,h,d){
   const target=new T.Mesh(new T.BoxGeometry(w,h,d),new T.MeshBasicMaterial({visible:false}));
   target.position.set(x,y,z);target.userData={device:key,title,display:'device',level:2};parent.add(target);devices.push(target);
 }
-export function cinemaRoom({group,box,cyl,seat,block,spot,rug,screens}){
-  const cx=-4.04;
-  const screenX=-4.95;
-  box(screenX,2.1,-5.872,5.25,3.6,.06,'#262326');
-  box(screenX,2.13,-5.79,4.45,2.56,.09,'#100f10');
-  screens.push(addTelevision(group,'cinema',screenX,2.13,-5.738,4.32,4.32*9/16,false,false));
-  for(const side of [-1,1]){
-    const sx=screenX+side*2.48;
-    box(sx,1.24,-5.55,.32,1.34,.24,dark);
-    for(const y of [.89,1.27,1.70])cyl(sx,y,-5.414,.185,.023,.185,charcoal,Math.PI/2);
-    block(sx,-5.55,.32,.24);
-    for(let i=0;i<8;i++)box(sx+(i-3.5)*.034,2.67,-5.80,.022,1.20,.05,i%2?dark:charcoal);
-  }
-  rug(cx,.66,5.45,5.38);
-  for(const z of [-.10,2.22])for(const x of [-5.43,-4.14,-2.85]){
-    seat(x,z,1.00,0,'#72444b');
-    for(const s of [-1,1]){cyl(x+s*.41,.774,z-.25,.082,.012,.082,metal);cyl(x+s*.41,.782,z-.25,.063,.006,.063,dark);}
-  }
-  box(cx,3.48,2.02,.055,.94,.055,metal);
-  box(cx,2.97,2.02,.56,.19,.39,charcoal);
-  cyl(cx+.12,2.97,1.81,.115,.08,.115,dark,Math.PI/2);
-  cyl(cx+.12,2.97,1.763,.079,.014,.079,glow,Math.PI/2);
-  for(let i=0;i<6;i++)box(cx-.20+i*.040,2.97,1.816,.016,.075,.014,dark);
-  for(const x of [-6.33,-1.92])for(const z of [.25,1.28,2.31])box(x,.03,z,.045,.024,.24,glow);
-  spot(-4.1,2.8,.15,6,7);
-}
-
 export function listeningStation({group,part,box,cyl,block,sign,shadow,walnut,devices}){
   const z=-5.53,y=.91,cx=-5.55;
   box(cx,.44,z,3.75,.78,.72,walnut);

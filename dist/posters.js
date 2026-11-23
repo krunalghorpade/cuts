@@ -4,7 +4,8 @@ import {rooms,openingsFor,rise} from './plan.js';
 const quarter=Math.PI/2, aspect=320/224;
 const counts={cinema:14,television:13,music:9,gaming:10,retro:11,library:5,kitchen:5,bed:7,bath:3,collect:4,shop:4};
 const rows={
-  cinema:[['E',[-4.7,-3.55,-2.40,-1.25,-.10,1.05]],['W',[-5.12,-1.59,1.64,5.04]],['S',[-2.45,-1.44,-.48]],['E',[5.32]]],
+  cinema:[['E',[-4.76,-4.09,-3.42,-1.42,-.75,-.08,1.42,2.09,5.10],1.76,.41],
+          ['W',[-5.27,-4.54,-3.81,3.84,4.57],1.82,.44]],
   television:[['W',[-4.6,-3.45,-2.30,-1.15,.00,1.15]],['S',[.58,3.51,4.49,7.45]],['N',[1.04,6.99]],['E',[-4.72,2.74]]],
   music:[['E',[-4.76,-3.66,-2.62,1.92,4.94]],['S',[-4.28,-3.28,-2.28,-1.28],2.57],['W',[-5.10,1.70,5.40]],['N',[-6.48,-5.45,-2.77,-1.69],2.42]],
   gaming:[['E',[-5.00,-4.12,-.78,.28,2.72]],['W',[-4.88,-3.83,1.18,2.20]],['S',[2.40,3.42,4.44]]],
@@ -31,10 +32,12 @@ function mounts(room,shelves){
   const walls={W:['x',x0,quarter],E:['x',x1,-quarter],N:['z',z0,0],S:['z',z1,Math.PI]};
   function add(side,pos,y,w){
     if(out.length>=counts[room.id])return;
+    if(room.id==='cinema'&&(side==='N'||side==='S'))return;
     if(room.id==='television'&&side==='N'&&pos<3.65)return;
     const [axis,k,angle]=walls[side],hw=w/2+.06;
     if(openingsFor(room.floor).some(([a,v,lo,hi])=>a===axis&&v===k&&pos+hw>lo-.06&&pos-hw<hi+.06))return;
-    const slot=[room.floor,(axis==='x'?k:pos)+.125*Math.sin(angle),y,(axis==='z'?k:pos)+.125*Math.cos(angle),angle,w,room.id];
+    const offset=room.id==='cinema'?(side==='W'?.225:.15):.125;
+    const slot=[room.floor,(axis==='x'?k:pos)+offset*Math.sin(angle),y,(axis==='z'?k:pos)+offset*Math.cos(angle),angle,w,room.id];
     if(out.some(other=>Math.hypot(other[1]-slot[1],other[3]-slot[3])<(w+other[5])/2+.15))return;
     if(clearMount(slot,shelves))out.push(slot);
   }

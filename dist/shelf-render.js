@@ -7,37 +7,57 @@ const loader=new T.TextureLoader();
 export function shelfCover(path){
   const index=slots.get(path);
   if(index===undefined)return null;
-  const {grid,tile,pad}=atlas, page=Math.floor(index/(grid*grid));
+  const {grid,tile,pad}=atlas,page=Math.floor(index/(grid*grid));
   if(!sheets.has(page)){
-    const map=loader.load(new URL('./art/shelves/'+page+'.webp',import.meta.url).href);
-    map.colorSpace=T.SRGBColorSpace;map.anisotropy=4;sheets.set(page,map);
+    let complete;
+    const ready=new Promise(resolve=>{complete=resolve;});
+    const map=loader.load(new URL('./art/shelves/'+page+'.webp',import.meta.url).href,
+      loaded=>complete(loaded),undefined,()=>complete(map));
+    map.colorSpace=T.SRGBColorSpace;map.anisotropy=4;sheets.set(page,{map,ready});
   }
-  const inset=pad/tile, slot=index%(grid*grid);
-  return {map:sheets.get(page),u:(slot%grid+inset)/grid,
-    v:1-(Math.floor(slot/grid)+1-inset)/grid,scale:(1-2*inset)/grid};
+  const inset=pad/tile,slot=index%(grid*grid),scale=(1-2*inset)/grid;
+  return {...sheets.get(page),u:(slot%grid+inset)/grid,
+    v:1-(Math.floor(slot/grid)+1-inset)/grid,scale,sx:scale,sy:scale};
 }
 
-// Draw a rack once per material. Its original cases still provide individual
-// hit targets and transforms for hover, selection, and shelf destinations.
+// Case hardware uses instances of the same Blender geometry. Individual covers and
+// the shop fittings are merged by material; all original selection volumes survive.
 export function batchRack(group){
   group.updateWorldMatrix(true,true);
-  const inverse=group.matrixWorld.clone().invert(), buckets=new Map();
-  const matrix=new T.Matrix4(), normal=new T.Matrix3(), point=new T.Vector3();
+  const inverse=group.matrixWorld.clone().invert(),buckets=new Map(),instances=new Map();
+  const matrix=new T.Matrix4(),normal=new T.Matrix3(),point=new T.Vector3(),visuals=[];
   group.traverse(mesh=>{
-    if(!mesh.isMesh)return;
-    const material=mesh.material;
-    if(!buckets.has(material))buckets.set(material,{positions:[],normals:[],uvs:[],indices:[]});
-    const b=buckets.get(material), geometry=mesh.geometry;
-    const {position,uv,normal:sourceNormal}=geometry.attributes, offset=b.positions.length/3;
-    matrix.multiplyMatrices(inverse,mesh.matrixWorld);normal.getNormalMatrix(matrix);
-    for(let i=0;i<position.count;i++){
-      point.fromBufferAttribute(position,i).applyMatrix4(matrix);b.positions.push(point.x,point.y,point.z);
-      point.fromBufferAttribute(sourceNormal,i).applyNormalMatrix(normal);b.normals.push(point.x,point.y,point.z);
-      b.uvs.push(uv.getX(i),uv.getY(i));
+    if(mesh.userData.shelfPackageVisual)visuals.push(mesh);
+    if(!mesh.isMesh||!mesh.visible)return;
+    const {material,geometry}=mesh;
+    matrix.multiplyMatrices(inverse,mesh.matrixWorld);
+    if(mesh.userData.packageHardware){
+      if(!instances.has(geometry))instances.set(geometry,new Map());
+      const byMaterial=instances.get(geometry);
+      if(!byMaterial.has(material))byMaterial.set(material,[]);
+      byMaterial.get(material).push(matrix.clone());
+    }else{
+      if(!buckets.has(material))buckets.set(material,{positions:[],normals:[],uvs:[],indices:[]});
+      const b=buckets.get(material),{position,uv,normal:sourceNormal}=geometry.attributes;
+      const offset=b.positions.length/3,tile=mesh.userData.printTile;
+      normal.getNormalMatrix(matrix);
+      for(let i=0;i<position.count;i++){
+        point.fromBufferAttribute(position,i).applyMatrix4(matrix);b.positions.push(point.x,point.y,point.z);
+        point.fromBufferAttribute(sourceNormal,i).applyNormalMatrix(normal);b.normals.push(point.x,point.y,point.z);
+        const u=uv?.getX(i)??0,v=uv?.getY(i)??0;
+        if(tile)b.uvs.push(tile.u+u*tile.sx,tile.v+v*tile.sy);else b.uvs.push(u,v);
+      }
+      if(geometry.index){for(const i of geometry.index.array)b.indices.push(offset+i);}
+      else{for(let i=0;i<position.count;i++)b.indices.push(offset+i);}
     }
-    for(const i of geometry.index.array)b.indices.push(offset+i);
     mesh.visible=false;
   });
+  visuals.forEach(visual=>visual.removeFromParent());
+  for(const [geometry,byMaterial] of instances)for(const [material,matrices] of byMaterial){
+    const mesh=new T.InstancedMesh(geometry,material,matrices.length);
+    mesh.name='Shelf case hardware';matrices.forEach((m,i)=>mesh.setMatrixAt(i,m));
+    mesh.computeBoundingSphere();group.add(mesh);
+  }
   for(const [material,b] of buckets){
     const geometry=new T.BufferGeometry();
     geometry.setAttribute('position',new T.Float32BufferAttribute(b.positions,3));

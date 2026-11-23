@@ -274,3 +274,8 @@ button.lift-hint {pointer-events:auto}
 body:has(#liftDialog[open]) :is(.hud,.topbar){visibility:hidden}
 #planBoard button {line-height:1.12}
 @media(max-width:600px){#planBoard button{padding:1px;font-size:10px}#planBoard button[aria-label="Elevator"]{font-size:9px}}
+
+#cinemaLights[hidden]{display:none}
+#tvControls:has(#cinemaLights:not([hidden])){width:auto;max-width:min(350px,calc(100vw - 32px));border-radius:8px}
+#tvControls:has(#cinemaLights:not([hidden])) .playing-item{max-width:min(185px,33vw)}
+#cinemaLights[aria-pressed=true]{background:rgba(255,255,255,.16)}

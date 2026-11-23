@@ -24,9 +24,10 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color('#63584a');
 scene.fog = new THREE.FogExp2('#63584a', 0.012);
 const camera = new THREE.PerspectiveCamera(73, innerWidth / innerHeight, 0.08, 80);
-camera.position.set(entrance[0],1.62,entrance[1]);
+const start=location.hash==='#cinema'?rooms.find(room=>room.id==='cinema').spawn:entrance;
+camera.position.set(start[0],1.62,start[1]);
 camera.rotation.order = 'YXZ';
-camera.rotation.y = entrance[2];
+camera.rotation.y = start[2];
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
 renderer.setPixelRatio(Math.min(devicePixelRatio, Math.sqrt(900000/(innerWidth*innerHeight))));
 renderer.setSize(innerWidth, innerHeight);
@@ -64,6 +65,15 @@ try{
 }catch{}
 const interior=buildInterior(scene,label,ITEMS,posterContent);
 const elevator=installElevator(scene,interior.floors,box,label);
+const houseLights=$('cinemaLights');
+function syncHouseLights(on){
+  interior.theatre.setHouseLights(on);
+  houseLights.setAttribute('aria-pressed',String(on));
+  houseLights.title=on?'Dim theatre lights':'Raise theatre lights';
+  houseLights.setAttribute('aria-label',houseLights.title);
+}
+houseLights.onclick=()=>syncHouseLights(!interior.theatre.bright);
+syncHouseLights(false);
 const displayTargets=levels.map(()=>[]);
 const {stacks,interactables,destinations,roomStock}=stockRooms(interior,box,label,layoutSeed);
 const updatePosters=installPosters(interior,roomStock,displayTargets,posterContent);
@@ -89,7 +99,7 @@ function refreshFloor(){
   $('entryLocation').textContent='Level '+level+' · '+location;
 }
 refreshFloor();
-let active=false, uiOpen=false, yaw=entrance[2], pitch=0, focusedCase=null, selectedCase=null, toastTimer;
+let active=false, uiOpen=false, yaw=start[2], pitch=0, focusedCase=null, selectedCase=null, toastTimer;
 let dragLook=false, dragPointer=null, dragLastX=0, dragLastY=0;
 const keys=new Set(); const raycaster=new THREE.Raycaster(); const hoverPoint=new THREE.Vector2();let hasPointer=false,suppressClick=false,pressX=0,pressY=0; const clock=new THREE.Clock();
 const joystick={x:0,y:0,pointer:null}; let lookStart=null,lookPointer=null,lookLastX=0,lookLastY=0;
@@ -479,6 +489,7 @@ function animate(){
   if(active&&!uiOpen&&intro.classList.contains('hidden')){yaw+=((keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0))*dt*1.55;pitch=clamp(pitch+((keys.has('ArrowUp')?1:0)-(keys.has('ArrowDown')?1:0))*dt*1.3,-1.28,1.28);if(!elevator.riding)updateMovement(dt);camera.rotation.y=yaw;camera.rotation.x=pitch;camera.updateMatrixWorld();updateFocus();}
   updatePosters(performance.now());
   const currentRoom=roomAt(level,camera.position.x,camera.position.z)?.id;
+  houseLights.hidden=currentRoom!=='cinema'||!active||uiOpen;
   updateTVs(camera,currentRoom,active&&!uiOpen);
   musicPlayer.update(active&&!uiOpen&&(currentRoom==='music'||currentRoom==='library'),dt);
   if(!currentDetailItem){renderer.autoClear=false;renderer.clear();renderer.render(scene,camera);}

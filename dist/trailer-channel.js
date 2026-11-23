@@ -70,6 +70,7 @@ export function createChannel(scene,entries,retro,room,standby,windowMaterial){
   }
   function next(){
     resetSource();entry=rotation.choose();index=0;marked=false;
+    standby[room].userData.cue?.(entry?.item||null);
     if(!entry){watch(30000,next);return;}
     candidates=rotation.sourcesFor(entry);startSource();
   }
