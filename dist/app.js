@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-import { CATEGORIES, ITEMS, categoryById, playlists, traktList, gameList } from './catalog.js';
+import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, gameList } from './catalog.js';
 import { buildInterior } from './interior.js';
 import { rooms, rise, stair, inside, roomAt, groundAt } from './plan.js';
 import { createCasePreview } from './case-preview.js';
@@ -217,7 +217,7 @@ function renderCatalog(){
   }
 }
 const sourceList=$('sourceLists');
-for(const [title,url] of [['Trakt watch list',traktList],['My Games on RAWG',gameList],...Object.entries(playlists).map(([id,name])=>[name,'https://open.spotify.com/playlist/'+id])]){
+for(const [title,url] of [['IMDb watchlist (CSV export)',imdbList],['My Games on RAWG',gameList],...Object.entries(playlists).map(([id,name])=>[name,'https://open.spotify.com/playlist/'+id])]){
   const a=document.createElement('a');a.href=url;a.textContent=title;a.target='_blank';a.rel='noopener noreferrer';sourceList.append(a);
 }
 $('dismissPanel').onclick=()=>detailPanel.classList.contains('hidden')?closeCatalog():closeDetail();
@@ -282,7 +282,7 @@ document.addEventListener('keydown',event=>{
   if(!active||uiOpen)return;
   keys.add(event.code);
   if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.code))event.preventDefault();
-  if(event.code==='KeyB')openCatalog();
+  if(event.code==='KeyB'){event.preventDefault();openCatalog();}
   if(event.code==='KeyL')requestLook();
   if(event.code==='KeyE'&&!event.repeat)inspect();
   if(event.key==='Escape')pause();

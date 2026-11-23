@@ -3,12 +3,12 @@ const load = async path => {
   if (!response.ok) throw new Error("Unable to read the store catalog");
   return response.json();
 };
-const [trakt, music, games, playlistSources] = await Promise.all([
-  load("trakt-items.json"), load("spotify-items.json"), load("rawg-items.json"), load("playlists.json")
+const [screenTitles, music, games, playlistSources] = await Promise.all([
+  load("imdb-items.json"), load("spotify-items.json"), load("rawg-items.json"), load("playlists.json")
 ]);
 export const playlists = playlistSources;
 export const gameList = "https://rawg.io/collections/my-games-108";
-export const traktList = "https://app.trakt.tv/users/krunal-ghorpade-324337/lists/my-watch-list?share=P0J99Y06TeYp";
+export const imdbList = "https://www.imdb.com/user/p.ad4lijmxzoqnsph42clunnfkoi/watchlist/";
 
 export const CATEGORIES = [
   {
@@ -16,7 +16,7 @@ export const CATEGORIES = [
     "label": "Movie DVDs",
     "short": "MOVIES",
     "format": "DVD",
-    "source": "Trakt list",
+    "source": "IMDb CSV",
     "accent": "#d65b55",
     "rack": {
       "x": -7.35,
@@ -29,7 +29,7 @@ export const CATEGORIES = [
     "label": "Series",
     "short": "SERIES",
     "format": "BOX SET",
-    "source": "Trakt list",
+    "source": "IMDb CSV",
     "accent": "#d99043",
     "rack": {
       "x": -7.35,
@@ -42,7 +42,7 @@ export const CATEGORIES = [
     "label": "Anime",
     "short": "ANIME",
     "format": "BOX SET",
-    "source": "Trakt list",
+    "source": "IMDb CSV",
     "accent": "#a4a4a4"
   },
   {
@@ -126,7 +126,7 @@ for(const item of music){
 const retainedMusic=music.filter(item=>releases.get(releaseKey(item)).album.albumUri===item.albumUri)
   .map(item=>({...item,playlists:[...releases.get(releaseKey(item)).lists]}));
 const seen = new Set();
-export const ITEMS = [...trakt, ...retainedMusic, ...games].filter(item => {
+export const ITEMS = [...screenTitles, ...retainedMusic, ...games].filter(item => {
   const key = item.albumUri ? item.albumUri + "|" + item.category : item.id;
   if (seen.has(key)) return false;
   seen.add(key);

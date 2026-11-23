@@ -11,7 +11,7 @@ A two-floor, first-person media store for desktop, tablet and phone. The interfa
 
 ## Catalog
 
-The film, series and anime inventory comes from the supplied Trakt list. An empty snapshot leaves those shelves empty. A series goes on one shelf. Anime has its own section on Level 2. Box sets use a packaging estimate of four episodes per disc and four discs per inner case. Multi-volume sets expand in depth and width. When an episode count is unavailable, the item uses a standard box without an inferred count.
+The film, series and anime inventory comes from the supplied IMDb CSV. Each IMDb title ID appears once. A series goes on one shelf. Anime has its own section on Level 2. Box sets use a packaging estimate of four episodes per disc and four discs per inner case. Multi-volume sets expand in depth and width. When an episode count is unavailable, the item uses a standard box without an inferred count.
 
 The music catalog combines the previously imported Kratex Favs selection with the other supplied Spotify playlists. Each album retains its source playlists. Each album gets one case per eligible format, using Spotify's album release year. Vinyl covers releases through 1989 and from 2021 onward. Cassettes cover 1980 through 2000 inclusive, and CDs cover 1985 onward. Source links are available from the collection. TheAudioDB enriches album details where available. The game inventory comes from the owner’s RAWG collection, My Games. Each distinct RAWG entry has a single location. The Nintendo DS and Switch card models represent selected cartridge releases. Other titles use archive case mockups. The listed platforms describe support, not ownership of a particular edition.
 
@@ -19,7 +19,7 @@ The music catalog combines the previously imported Kratex Favs selection with th
 
 - Run `python3 scripts/import_rawg.py` to refresh all collection pages from RAWG, download the artwork and rebuild the shelf textures. Per-item links in the store lead back to RAWG.
 
-- Run `python3 scripts/import_trakt.py path/to/list.json` with a Trakt movie/show list export. CSV rows with type and title are also accepted. Include genres, origin and episode counts for classification and sizing. With a configured `TRAKT_CLIENT_ID`, the importer can read the public list directly and hydrate minimal entries. The client ID is read only by the import script.
+- Run `python3 scripts/import_imdb.py path/to/watchlist.csv` with the IMDb title-list export. Series episode counts use matched TVmaze IDs or credited series metadata. The importer reuses local posters for existing IMDb IDs.
 - `scripts/import_spotify.py` merges normalized Spotify album results into the snapshot. It reads Spotify album release dates, saves local cover thumbnails and retains each album's playlist memberships.
 - Run `python3 scripts/build_shelf_atlas.py` after updating the catalog. The walkthrough batches static shelf geometry and uses small artwork tiles. The item carousel loads the larger covers as needed.
 
