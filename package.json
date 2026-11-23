@@ -1,0 +1,13 @@
+{
+  "name": "the-lower-level",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A first-person 3D basement media archive",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 --directory dist"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  }
+}

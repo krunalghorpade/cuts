@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111713">
+  <meta name="description" content="Step into The Lower Level, a first-person basement archive of films, television, games and music.">
+  <title>The Lower Level — A basement media archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <canvas id="scene" aria-label="Interactive three-dimensional basement media store"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">L<span>↓</span>L</span><span class="brand-name">THE LOWER LEVEL<small>YOUR MEDIA, UNDERGROUND</small></span></div>
+    <div class="top-actions"><span class="demo-pill"><span></span> YOUR COLLECTION</span><button id="browseBtn" class="nav-button" type="button"><span class="browse-full">Browse collection (B)</span><span class="browse-short">Browse</span> <span id="itemCount">42</span></button></div>
+  </header>
+
+  <section id="intro" class="intro" aria-labelledby="introTitle">
+    <div class="intro-card">
+      <div class="eyebrow"><span class="eyebrow-line"></span> A PLACE FOR EVERYTHING YOU LOVE</div>
+      <h1 id="introTitle">Go downstairs.<br><em>Get lost.</em></h1>
+      <p>Your personal media collection, reimagined as a basement store. Wander the aisles. Pick up a favorite. Stay a while.</p>
+      <button id="enterBtn" class="primary-button" type="button">Enter the basement <span class="button-icon">↘</span></button>
+      <div class="intro-controls"><span>W A S D <b>MOVE</b></span><span>DRAG <b>LOOK</b></span><span>DOUBLE CLICK <b>LOCK MOUSE</b></span><span>E <b>INSPECT</b></span><span>B <b>BROWSE</b></span></div>
+    </div>
+    <div class="intro-side"><span>EST. IN YOUR IMAGINATION</span><span>↓ SCROLL THROUGH CULTURE</span></div>
+  </section>
+
+  <div id="hud" class="hud hidden">
+    <div class="location"><span class="location-dot"></span><span id="zoneName">THE ENTRANCE</span><small>THE LOWER LEVEL / B1</small></div>
+    <div class="crosshair" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap">E</span><span id="promptText">Inspect item</span></div>
+    <div class="hud-bottom"><div class="movement-guide"><span>W A S D</span> MOVE <b>·</b> <span>DRAG</span> LOOK <b>·</b> <span>SHIFT</span> RUN <b>·</b> <span>B</span> BROWSE <b>·</b> <span>ESC</span> PAUSE</div><div class="floor-tag">BASEMENT FLOOR <strong>01</strong></div></div>
+    <div id="touchControls" class="touch-controls"><div id="joystick" class="joystick"><div id="stick" class="stick"></div></div><div id="lookPad" class="look-pad" aria-label="Drag to look around"><span>DRAG TO LOOK</span></div><button id="touchInspect" class="touch-inspect" type="button">INSPECT</button></div>
+  </div>
+
+  <aside id="catalogPanel" class="panel catalog-panel hidden" aria-labelledby="catalogTitle" aria-modal="true" role="dialog">
+    <div class="panel-head"><div><div class="panel-kicker">THE ENTIRE BASEMENT</div><h2 id="catalogTitle">The collection<span>.</span></h2></div><button id="closeCatalog" class="close-button" type="button" aria-label="Close collection">×</button></div>
+    <p class="panel-intro">Movies and series from your IMDb CSV. Music selections from your Spotify playlist. Games are samples until you add a list.</p>
+    <label class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search the shelves" autocomplete="off" aria-label="Search the collection"></label>
+    <div id="filters" class="filters" aria-label="Filter media categories"></div>
+    <div id="catalogGrid" class="catalog-grid"></div>
+    <div class="panel-foot"><a href="https://www.imdb.com/user/p.ad4lijmxzoqnsph42clunnfkoi/watchlist/?ref_=ext_shr_lnk" target="_blank" rel="noopener noreferrer">IMDb watchlist</a><span>·</span><a href="https://open.spotify.com/playlist/0gwADXODSkvnsFaNMe55XP?si=6c3fd152b6304f54" target="_blank" rel="noopener noreferrer">Full Spotify playlist</a></div>
+  </aside>
+
+  <aside id="detailPanel" class="panel detail-panel hidden" aria-labelledby="detailTitle" aria-modal="true" role="dialog">
+    <div class="panel-head"><div class="panel-kicker">PULLED FROM THE SHELF</div><button id="closeDetail" class="close-button" type="button" aria-label="Close item details">×</button></div>
+    <div id="detailArt" class="detail-art"><img id="audioArt" class="audio-art hidden" alt="Album artwork from TheAudioDB"><div class="detail-art-top" id="detailFormat"></div><div class="detail-art-title" id="detailArtTitle"></div><div class="detail-art-bottom">THE LOWER LEVEL ARCHIVE</div></div>
+    <div id="detailCategory" class="detail-category"></div><h2 id="detailTitle"></h2><p id="detailCreator" class="detail-creator"></p>
+    <div class="detail-rule"></div><div class="detail-meta"><div><span>RELEASE</span><strong id="detailYear"></strong></div><div><span>FORMAT</span><strong id="detailFormatValue"></strong></div><div><span>COLLECTION SOURCE</span><strong id="detailSource"></strong></div></div>
+    <div id="detailNote" class="detail-note"></div><div id="audioExtra" class="audio-extra hidden"></div><a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
+    <button id="backToStore" class="secondary-button" type="button">Back to the aisle</button>
+  </aside>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
