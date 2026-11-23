@@ -3,11 +3,11 @@ const load = async path => {
   if (!response.ok) throw new Error("Unable to read the store catalog");
   return response.json();
 };
-const [screenTitles, music, games, playlistSources] = await Promise.all([
-  load("imdb-items.json"), load("spotify-items.json"), load("rawg-items.json"), load("playlists.json")
+const [screenTitles, music, books, playlistSources] = await Promise.all([
+  load("imdb-items.json"), load("spotify-items.json"), load("book-items.json"), load("playlists.json")
 ]);
 export const playlists = playlistSources;
-export const gameList = "https://rawg.io/collections/my-games-108";
+export const bookList = "https://openlibrary.org/people/krunal_ghorpade/lists/OL360679L/my_books";
 export const imdbList = "https://www.imdb.com/user/p.ad4lijmxzoqnsph42clunnfkoi/watchlist/";
 
 export const CATEGORIES = [
@@ -50,7 +50,7 @@ export const CATEGORIES = [
     "label": "Game DVDs",
     "short": "GAME DISCS",
     "format": "DISC",
-    "source": "RAWG",
+    "source": "IMDb CSV",
     "accent": "#4c9daa",
     "rack": {
       "x": -2.45,
@@ -63,13 +63,21 @@ export const CATEGORIES = [
     "label": "Game cartridges",
     "short": "CARTRIDGES",
     "format": "CART",
-    "source": "RAWG",
+    "source": "IMDb CSV",
     "accent": "#8875b5",
     "rack": {
       "x": -2.45,
       "z": -2,
       "side": 1
     }
+  },
+  {
+    "id": "books",
+    "label": "Books",
+    "short": "BOOKS",
+    "format": "BOOK",
+    "source": "Open Library",
+    "accent": "#937d61"
   },
   {
     "id": "vinyl",
@@ -126,7 +134,7 @@ for(const item of music){
 const retainedMusic=music.filter(item=>releases.get(releaseKey(item)).album.albumUri===item.albumUri)
   .map(item=>({...item,playlists:[...releases.get(releaseKey(item)).lists]}));
 const seen = new Set();
-export const ITEMS = [...screenTitles, ...retainedMusic, ...games].filter(item => {
+export const ITEMS = [...screenTitles, ...retainedMusic, ...books].filter(item => {
   const key = item.albumUri ? item.albumUri + "|" + item.category : item.id;
   if (seen.has(key)) return false;
   seen.add(key);

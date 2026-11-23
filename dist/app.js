@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, gameList } from './catalog.js';
+import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList } from './catalog.js';
 import { buildInterior } from './interior.js';
 import { rooms, rise, stair, inside, roomAt, groundAt } from './plan.js';
 import { createCasePreview } from './case-preview.js';
@@ -123,6 +123,7 @@ function showDetailItem(direction=0){
   detailPanel.scrollTop=0;
   preview.show(item,prev,next,direction);
   $('audioExtra').classList.add('hidden');
+  $('sizeLabel').textContent=item.category==='books' ? (item.estimatedSize?'Estimated size':'Book size') : 'Case size';
   $('detailSize').textContent=caseSpec(item).dimensions.join(' × ')+' mm';
   $('detailCategory').textContent=categoryById[item.category].label;$('detailTitle').textContent=item.title;
   $('detailCreator').textContent=item.creator;$('detailYear').textContent=item.year;$('detailFormatValue').textContent=caseSpec(item).label;$('detailSource').textContent=item.source;
@@ -135,7 +136,7 @@ function showDetailItem(direction=0){
   const listNames=(item.playlists || []).map(id=>playlists[id]).filter(Boolean);
   $('detailNote').textContent=item.album
     ? [item.featuredTrack, listNames.join(', ')].filter(Boolean).join(' · ')
-    : [item.platforms?.join(', ') || item.platform, item.episodeCount!=null ? item.episodeCount+' episodes' : '', (item.genres||[]).join(', ')].filter(Boolean).join(' · ');
+    : [item.pages ? item.pages+' pages' : '', item.platforms?.join(', ') || item.platform, item.episodeCount!=null ? item.episodeCount+' episodes' : '', (item.genres||[]).join(', ')].filter(Boolean).join(' · ');
   if(item.album)enrichAudio(item);
 }
 $('itemPrev').onclick=()=>turnItem(-1);
@@ -209,15 +210,15 @@ function renderCatalog(){
     empty.textContent=q?'No matches.':'This shelf is empty.';
     if(!q && ['cartridges','game-discs'].includes(filter)){
       const link=document.createElement('a');
-      link.href=gameList;link.target='_blank';link.rel='noopener noreferrer';
-      link.textContent='View My Games on RAWG';
+      link.href=imdbList;link.target='_blank';link.rel='noopener noreferrer';
+      link.textContent='View IMDb watchlist';
       empty.append(document.createElement('br'),link);
     }
     grid.append(empty);
   }
 }
 const sourceList=$('sourceLists');
-for(const [title,url] of [['IMDb watchlist (CSV export)',imdbList],['My Games on RAWG',gameList],...Object.entries(playlists).map(([id,name])=>[name,'https://open.spotify.com/playlist/'+id])]){
+for(const [title,url] of [['IMDb watchlist (CSV export)',imdbList],['My books on Open Library',bookList],...Object.entries(playlists).map(([id,name])=>[name,'https://open.spotify.com/playlist/'+id])]){
   const a=document.createElement('a');a.href=url;a.textContent=title;a.target='_blank';a.rel='noopener noreferrer';sourceList.append(a);
 }
 $('dismissPanel').onclick=()=>detailPanel.classList.contains('hidden')?closeCatalog():closeDetail();

@@ -10,6 +10,10 @@ function distributeInventory(){
     const bays=fixtures.flatMap((fixture,index)=>fixture[1]===category?[index]:[]);
     if(!bays.length)continue;
     const entries=ITEMS.filter(item=>item.category===category);
+    if(category==='books'){
+      entries.forEach((book,index)=>placements[bays[index % bays.length]].push([book]));
+      continue;
+    }
     let stack=[], occupied=0, index=0;
     const place=()=>{placements[bays[index++ % bays.length]].push(stack);stack=[];occupied=0;};
     for(const item of entries){
@@ -36,8 +40,11 @@ export function stockRooms(interior,box,label){
     const maxWidth=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).w));
     const maxHeight=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).h));
     const pitch=maxWidth+.042,capacity=Math.max(1,Math.floor((width-.18)/pitch));
-    const rows=Math.max(1,Math.ceil(assigned.length/capacity));
-    const step=maxHeight*1.75+.07,base=rows>2?.64:1.08;
+    const firstRow=key==='books'?2:0;
+    const stockRows=Math.ceil(assigned.length/capacity);
+    const rows=key==='books'?Math.max(4,firstRow+stockRows):Math.max(1,stockRows);
+    const step=key==='books'?Math.max(.46,maxHeight+.10):maxHeight*1.75+.07;
+    const base=key==='books'?.16:rows>2?.64:1.08;
     const height=base+step*rows+.04;
     interior.obstacles.push({level,x,z,w:Math.abs(Math.cos(angle))*width+Math.abs(Math.sin(angle))*.65,d:Math.abs(Math.sin(angle))*width+Math.abs(Math.cos(angle))*.65});
     board(0,base/2,-.035,width,base,.5,wood);
@@ -45,7 +52,9 @@ export function stockRooms(interior,box,label){
     for(const side of [-1,1])board(side*(width/2-.026),height/2,0,.052,height,.61,steel);
     for(let row=0;row<rows;row++){
       const deck=base+row*step;board(0,deck,0,width,.026,.62,wood);
-      const rowStacks=assigned.slice(row*capacity,(row+1)*capacity);
+      if(row<firstRow)continue;
+      const start=(row-firstRow)*capacity;
+      const rowStacks=assigned.slice(start,start+capacity);
       rowStacks.forEach((items,col)=>{
         const cx=(col-(rowStacks.length-1)/2)*pitch,id=key+'-'+stacks.size;
         stacks.set(id,{category,items});let previousTop=deck,previousDepth=0,zz=.22;

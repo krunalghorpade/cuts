@@ -24,7 +24,9 @@ export const fixtures = [
   [2,'cds',-3.8,-.6,3.3,Math.PI/2], [2,'game-discs',3.95,-.6,3.3,-Math.PI/2],
   [2,'cds',-4.51,-.6,3.3,-Math.PI/2], [2,'cds',4.66,-.6,3.3,Math.PI/2],
   [2,'vinyl',-2.7,5.56,2.7,Math.PI], [2,'movies',.8,5.56,2.8,Math.PI], [2,'anime',4.3,5.56,2.8,Math.PI],
-  [2,'cartridges',11.5,-8.5,5.6,0]
+  [2,'cartridges',11.5,-8.5,5.6,0],
+  [2,'books',-8.5,10.56,6.05,Math.PI], [2,'books',-12.46,8.98,2.72,Math.PI/2],
+  [1,'books',-2.7,5.56,2.4,Math.PI]
 ];
 export function roomAt(floor,x,z) {
   return rooms.find(r=>r.floor===floor && inside(r.bounds,x,z));

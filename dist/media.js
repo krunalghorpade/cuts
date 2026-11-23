@@ -54,15 +54,20 @@ const formats = {
   dvd: [135,190,14,'DVD case','#202123'],
   bluray: [135,171,12,'Blu-ray case','#1d5da4'],
   game: [135,171,14,'Game disc case','#22599a'],
+  book: [145,220,20,'Book','#e2dac9'],
   boxset: [135,190,25,'TV box set','#343336']
 };
 export function caseSpec(item){
-  const kinds={vinyl:'vinyl',cds:'cd',cassettes:'cassette',shows:'boxset',anime:'boxset','game-discs':'game'};
+  const kinds={books:'book',vinyl:'vinyl',cds:'cd',cassettes:'cassette',shows:'boxset',anime:'boxset','game-discs':'game'};
   let kind=kinds[item.category];
-  if(item.category==='cartridges')kind=item.platform==='Nintendo DS'?'ds':/advance|gba/i.test(item.platform||'')?'gba':'switch';
+  if(item.category==='cartridges')kind=/^nintendo ds$/i.test(item.platform||'')?'ds':/advance|gba/i.test(item.platform||'')?'gba':'switch';
   if(!kind)kind=isBluRay(item)?'bluray':'dvd';
   let [width,height,depth,label,shell]=formats[kind];
-  if(kind==='game' && item.source==='RAWG')label='Game archive case';
+  if(kind==='game')label=item.format || label;
+  if(kind==='book'){
+    [width,height,depth]=item.dimensions || formats.book.slice(0,3);
+    label=item.format || 'Book';
+  }
   if(kind==='boxset'){
     label=item.category==='anime'?'Anime box set':'Series box set';
     // Estimate four episodes per disc and four discs per inner case. Large sets
@@ -91,7 +96,7 @@ export function createMediaCase(item,onShelf=false){
     const tile=onShelf?shelfCover(item.artwork):null;
     const art=tile?.map||coverTexture(item);
     const {w,h,d,kind}=spec, group=new THREE.Group();
-    const shell=makeBox(w,h,d,shellMaterial(spec.shell));group.add(shell);
+    const shell=kind==='book' ? makeBox(w-.003,h-.004,d-.002,shellMaterial(spec.shell)) : makeBox(w,h,d,shellMaterial(spec.shell));group.add(shell);
     const front=d/2+.00013;
     function face(width,height,x,y,map,z=front){
       const geometry=new THREE.PlaneGeometry(width,height);
@@ -102,7 +107,12 @@ export function createMediaCase(item,onShelf=false){
       const mesh=new THREE.Mesh(geometry,printMaterial(map));
       mesh.position.set(x,y,z);group.add(mesh);
     }
-    if(kind==='cd'){
+    if(kind==='book'){
+      const binding=shellMaterial('#49433b'),board=.0012;
+      for(const side of [-1,1])group.add(makeBox(w,h,board,binding,0,0,side*(d-board)/2));
+      group.add(makeBox(.002,h,d,binding,-w/2+.001,0,0));
+      face(w,h,0,0,art);
+    }else if(kind==='cd'){
       face(.120,.120,.007,0,art);
       group.add(makeBox(.008,.122,.0003,ink,-.065,0,front));
     }else if(kind==='game'||kind==='bluray'){

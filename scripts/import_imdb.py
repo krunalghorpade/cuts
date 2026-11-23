@@ -1,4 +1,4 @@
-"""Stock the movie, series and anime racks from an IMDb list CSV."""
+"""Stock the movie, series, anime and game racks from an IMDb list CSV."""
 import argparse
 import csv
 import json
@@ -55,7 +55,7 @@ def import_list(path):
             if title_id in items:
                 continue
             kind = row["Title Type"].strip().casefold()
-            if kind not in SERIES_TYPES | {"movie", "tv movie", "short", "tv short", "video"}:
+            if kind not in SERIES_TYPES | {"movie", "tv movie", "short", "tv short", "video", "video game"}:
                 raise ValueError(f"Unsupported IMDb title type {row['Title Type']!r} for {title}")
             series = kind in SERIES_TYPES
             genres = [genre.strip() for genre in (row.get("Genres") or "").split(",") if genre.strip()]
@@ -63,9 +63,20 @@ def import_list(path):
             anime = metadata.get("isAnime") or any(genre.casefold() == "anime" for genre in genres)
             category = "anime" if anime else "shows" if series else "movies"
             year = (row.get("Year") or "").strip()
+            if kind == "video game":
+                platform = (row.get("Platform") or "").strip()
+                cartridge = platform.casefold() in {"nintendo ds", "game boy advance", "nintendo switch"}
+                category = "cartridges" if cartridge else "game-discs"
+                packaging = "Game cartridge" if cartridge else "Game archive case"
+                if platform:
+                    metadata["platform"] = platform
+            elif category in {"shows", "anime"}:
+                packaging = "Box set"
+            else:
+                packaging = "Blu-ray" if year.isdigit() and int(year) >= 2006 else "DVD"
             item = {"id": title_id, "title": title, "category": category,
                     "creator": (row.get("Directors") or "").strip(), "year": year,
-                    "format": "Box set" if category != "movies" else "Blu-ray" if year.isdigit() and int(year) >= 2006 else "DVD",
+                    "format": packaging,
                     "source": "IMDb", "sourceUrl": f"https://www.imdb.com/title/{title_id}/",
                     "rating": row.get("IMDb Rating", ""), "genres": genres, **metadata}
             _, item["artwork"], error = imdb_art(item)

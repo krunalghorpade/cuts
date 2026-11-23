@@ -110,10 +110,9 @@ export function buildInterior(scene, label){
       const piece=(lx,ly,lz,sw,sh,sd,m)=>box(x+Math.cos(angle)*lx+Math.sin(angle)*lz,ly,z-Math.sin(angle)*lx+Math.cos(angle)*lz,sw,sh,sd,m,0,angle);
       piece(0,h/2,-.23,w,h,.07,dark);for(const side of [-1,1])piece(side*w/2,h/2,0,.065,h,.56,iron);
       for(let r=0;r<=4;r++){const sy=.12+r*(h-.15)/4;piece(0,sy,0,w,.065,.6,walnut);if(r===4)break;
-        if(kind==='books'){let xx=-w/2+.09;while(xx<w/2-.13){const sw=.065+random()*.095,sh=(h/4)*(.52+random()*.34);piece(xx+sw/2,sy+.04+sh/2,.055,sw,sh,.32,['#4a4c41','#bcab8e','#795448','#8e8065','#404449','#c4bda6'][Math.floor(random()*6)]);piece(xx+sw/2,sy+sh*.64,.22,sw*.78,.025,.009,cream);xx+=sw+.014;}}
-        else{for(let k=0;k<4;k++){const px=w*((k+.5)/4-.5);if(kind==='objects'&&(k+r)%2===0){piece(px,sy+.24,0,.13,.36,.12,brass);piece(px,sy+.47,0,.22,.18,.17,cream);piece(px,sy+.055,0,.42,.07,.21,iron);}else{piece(px,sy+.112,0,w*.17,.15,.32,(k+r)%2?cream:iron);piece(px,sy+.2,0,w*.11,.045,.25,dark);piece(px+.08,sy+.12,.164,.035,.018,.012,light);}}}
+        if(kind!=='empty'){for(let k=0;k<4;k++){const px=w*((k+.5)/4-.5);if(kind==='objects'&&(k+r)%2===0){piece(px,sy+.24,0,.13,.36,.12,brass);piece(px,sy+.47,0,.22,.18,.17,cream);piece(px,sy+.055,0,.42,.07,.21,iron);}else{piece(px,sy+.112,0,w*.17,.15,.32,(k+r)%2?cream:iron);piece(px,sy+.2,0,w*.11,.045,.25,dark);piece(px+.08,sy+.12,.164,.035,.018,.012,light);}}}
       }
-      if(kind!=='books'){piece(0,h-.06,.24,w-.1,.018,.04,light);}
+      piece(0,h-.06,.24,w-.1,.018,.04,light);
       block(x,z,Math.abs(Math.cos(angle))*w+Math.abs(Math.sin(angle))*.6,Math.abs(Math.sin(angle))*w+Math.abs(Math.cos(angle))*.6);
     }
     function tv(x,z,w,y,crt=false,reverse=false){const s=reverse?-1:1;box(x,y,z,w,w*(crt?.8:.57),crt?.57:.09,iron);box(x,y+.01,z+s*(crt?.29:.05),w*.91,w*(crt?.64:.49),.012,crt?pixelScreen:landscape);box(x,y-w*.34,z,.09,.2,.1,iron);box(x,y-w*.39,z,w*.48,.045,.25,iron);}
@@ -123,7 +122,6 @@ export function buildInterior(scene, label){
       const count=Math.max(1,Math.round(w/1.05));for(let i=0;i<count;i++){const xx=(i+.5)*((w-.32)/count)-w/2+.16;p(xx,.57,-.035,(w-.35)/count-.015,.12,.64,linen);p(xx,.82,.23,(w-.35)/count-.025,.47,.16,linen,.13);}
       block(x,z,Math.abs(Math.cos(angle))*w+Math.abs(Math.sin(angle))*.95,Math.abs(Math.sin(angle))*w+Math.abs(Math.cos(angle))*.95);shadow(x,z,w*1.45,1.65);}
     function table(x,z,w,d,y=.53){box(x,y,z,w,.105,d,walnut);for(const a of [-1,1])for(const b of [-1,1])box(x+a*(w/2-.12),y/2,z+b*(d/2-.1),.075,y,.075,iron);block(x,z,w,d);shadow(x,z,w*1.4,d*1.5);}
-    function books(x,y,z){for(let i=0;i<3;i++)box(x+i*.012,y+i*.06+.025,z,.43,.052,.29,['#966c46','#3d4848',cream][i],0,i*.07);}
     function speaker(x,y,z){box(x,y+.25,z,.31,.5,.29,walnut);for(const [cy,sz] of [[.18,.2],[.37,.09]])cyl(x,y+cy,z+.15,sz,.024,sz,iron,Math.PI/2);}
     const plan=rooms.filter(r=>r.floor===level);
     const boundaries=new Map();
@@ -186,7 +184,7 @@ export function buildInterior(scene, label){
     if(level===1){
       cove(.05,-5.886,7.8,2.93);cove(11.6,-1.12,4.35,2.88,Math.PI);
       rug(0,.55,6.9,5.55);seat(0,2.94,3.8);seat(-2.45,-.28,.94,-.77);seat(2.45,-.28,.94,.77);
-      table(0,1.19,2.2,.93);books(-.52,.595,1.17);plant(.46,1.13,.55,.59);
+      table(0,1.19,2.2,.93);plant(.46,1.13,.55,.59);
       cabinet(-1.4,-5.46,2.98);cabinet(1.55,-5.46,2.37);tv(-1.38,-5.43,2.63,1.88);tv(1.55,-5.45,1.48,1.51,true);
       for(const x of [-2.3,.91]){box(x,.898,-5.27,.39,.085,.23,iron);box(x+.52,.905,-5.22,.20,.077,.12,cream);}
       // The listening station stands south of both music racks, clear of their browsing aisles.
@@ -196,11 +194,11 @@ export function buildInterior(scene, label){
       cyl(playerX,.915,playerZ,.15,.012,.15,brass);
       box(playerX+.24,.95,playerZ+.09,.029,.024,.23,cream,0,.31);
       speaker(-7.68,.84,playerZ);
-      shelf(-2.7,5.6,2.4,1.65,'books',Math.PI);shelf(.35,5.6,2.8,1.65,'consoles',Math.PI);shelf(3.53,5.6,2.8,1.65,'objects',Math.PI);
+      shelf(.35,5.6,2.8,1.65,'consoles',Math.PI);shelf(3.53,5.6,2.8,1.65,'objects',Math.PI);
       plant(-3.42,-4.45,1.7);plant(3.42,-4.45,1.85);plant(6.55,5.16,1.6);spot(-1,2.7,-4.3,15,10);
       textileRack(-10.5,7.7);textileRack(-9.1,9.4);rug(-9.2,8.7,5.9,3.6);
       box(-4.77,1.28,9.9,1.35,2.56,1.77,walnut);for(let i=0;i<12;i++)box(-5.39+i*.112,1.26,8.98,.125,2.48,.1+(i%2)*.06,linen);block(-4.77,9.9,1.35,1.85);sign('FITTING ROOM',-4.77,2.75,8.93,1.25,Math.PI);
-      shelf(-12.53,9.3,2.35,2.35,'books',Math.PI/2);plant(-12.25,6.68,1.32);spot(-9.4,3.1,8.8,22,7);
+      shelf(-12.53,9.3,2.35,2.35,'empty',Math.PI/2);plant(-12.25,6.68,1.32);spot(-9.4,3.1,8.8,22,7);
       // Bedroom: upholstered bed, folded throw, nightstands, wardrobe, cinema wall.
       rug(11.6,-5.85,4.5,4.15);box(11.65,.32,-5.95,2.38,.53,3.18,walnut);box(11.65,.68,-5.95,2.34,.29,3.13,linen);box(11.65,.88,-5.27,2.35,.13,1.76,'#5d625b');box(11.65,1.0,-7.58,2.55,1.55,.17,walnut);block(11.65,-5.95,2.5,3.4);
       for(const a of [-1,1]){oval(11.65+a*.54,.9,-7,.96,.27,.56,cream);box(11.65+a*1.65,.43,-7.15,.64,.64,.68,walnut);cyl(11.65+a*1.65,.93,-7.15,.21,.38,.21,brass);cyl(11.65+a*1.65,1.16,-7.15,.37,.28,.37,cream);}
@@ -216,9 +214,9 @@ export function buildInterior(scene, label){
       lightStrip(11.2,1.97,8.67,3.5,.19);plant(8.6,8.25,1.3);spot(11.6,2.8,7.4,28,8);
     }else{
       cove(0,-5.88,14.8,2.98);
-      rug(0,1.05,5.75,3.9);table(0,-1.6,3.35,.83,.94);tv(0,-1.74,.94,1.39);speaker(-1.26,.99,-1.75);speaker(1.26,.99,-1.75);books(-.68,.995,-1.47);
-      seat(-1.05,-.18,.75);seat(1.05,-.18,.75);seat(-2.3,2.35,1.03,-1.12);seat(2.3,2.35,1.03,1.12);table(0,2.4,1.75,.72);plant(.44,2.36,.56,.59);books(-.42,.59,2.42);
-      shelf(-12.61,8.5,3.7,2.9,'books',Math.PI/2);shelf(-8.5,10.56,6.05,2.9,'books',Math.PI);table(-8.7,8.6,1.85,.81,.82);books(-8.65,.88,8.67);seat(-10.06,8.6,.78,-Math.PI/2);plant(-12.2,6.7,1.75);
+      rug(0,1.05,5.75,3.9);table(0,-1.6,3.35,.83,.94);tv(0,-1.74,.94,1.39);speaker(-1.26,.99,-1.75);speaker(1.26,.99,-1.75);
+      seat(-1.05,-.18,.75);seat(1.05,-.18,.75);seat(-2.3,2.35,1.03,-1.12);seat(2.3,2.35,1.03,1.12);table(0,2.4,1.75,.72);plant(.44,2.36,.56,.59);
+      table(-8.7,8.6,1.85,.81,.82);seat(-10.06,8.6,.78,-Math.PI/2);plant(-12.2,6.7,1.75);
       shelf(11.5,-1.44,5.1,2.75,'consoles',Math.PI);shelf(11.1,8.52,4.82,2.8,'objects',Math.PI);shelf(13.53,6,2.6,2.42,'objects',-Math.PI/2);
       plant(-3.24,-4.44,1.47);plant(7.2,5.15,1.45);plant(14.23,-6.85,1.5);plant(8.7,8.36,1.4);
       spot(0,2.9,-1.8,18,9);spot(-8.5,3,9.5,24,8);spot(11.3,3,-6.2,28,9);spot(11.1,2.8,7.25,23,7);
