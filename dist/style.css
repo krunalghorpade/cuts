@@ -7,3 +7,25 @@
 .source-link{display:block;text-align:center;width:100%;padding:13px 10px;margin:0 0 10px;border:1px solid #a7b7a4;color:#f1eade;text-decoration:none;font:600 13px 'Space Grotesk',sans-serif}.source-link:hover{border-color:#e6aa70;color:#e6aa70}.panel-foot a{color:#cfdcc9;text-decoration:none}.panel-foot a:hover{text-decoration:underline;color:#e6aa70}
 
 .browse-short{display:none}@media (max-width:700px){.browse-full{display:none}.browse-short{display:inline}.nav-button{font-size:12px}.filter{font-size:12px}}
+
+/* Physical stack viewer: the cases themselves are rendered in the WebGL scene. */
+.stack-active .topbar{opacity:.45;pointer-events:none}
+.stack-overlay{position:fixed;z-index:26;inset:0;pointer-events:auto;color:#f5f1e8;touch-action:pan-y}
+.stack-head{position:absolute;top:26px;left:34px;right:34px;display:flex;align-items:start;justify-content:space-between;gap:20px}
+.stack-kicker,.stack-category,.stack-side-note,.stack-info>span{font:500 11px 'DM Mono',monospace;letter-spacing:.16em;color:#e9ac71}
+.stack-category{color:#c9d2c7;margin-top:10px;font-size:10px}
+.stack-side-note{position:absolute;top:50%;right:34px;writing-mode:vertical-rl;transform:translateY(-50%);font-size:10px;color:#8c9e93}
+.stack-side-note span{color:#e9ac71;margin:10px 0}
+.stack-foot{position:absolute;bottom:32px;left:34px;right:34px;display:flex;align-items:end;justify-content:space-between;gap:24px}
+.stack-info h2{font:600 clamp(30px,4vw,56px)/.98 'Space Grotesk',sans-serif;letter-spacing:-.055em;margin:9px 0 8px;max-width:620px;text-wrap:balance}
+.stack-info p{margin:0;color:#c2cfc3;font-size:14px}
+.stack-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.stack-actions button{min-width:48px;height:48px;padding:0 14px;border:1px solid #8c9b8d;background:rgba(14,24,19,.78);color:#f6eee3;font:600 20px 'Space Grotesk',sans-serif;backdrop-filter:blur(8px)}
+.stack-actions button:hover{border-color:#f0b47a;color:#f0b47a}
+.stack-actions #stackDetails{font:600 12px 'DM Mono',monospace;color:#17231b;background:#eab076;border-color:#eab076}
+.catalog-art{background-size:cover;background-position:center;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.85)}
+.catalog-art:after{display:none}
+@media(max-width:700px){.stack-head{top:86px;left:20px;right:20px}.stack-side-note{display:none}.stack-foot{bottom:29px;left:20px;right:20px;display:block}.stack-info h2{font-size:clamp(29px,8vw,43px);max-width:100%}.stack-info p{font-size:12px}.stack-actions{margin-top:18px;justify-content:flex-start}.stack-actions #stackDetails{flex:1;text-align:center;white-space:nowrap;font-size:10px}.stack-actions button{height:44px;min-width:44px}.stack-category{font-size:9px}}
+.stack-active .topbar{opacity:0}
+
+.visit-shelf{width:100%;justify-content:space-between;margin-bottom:10px}

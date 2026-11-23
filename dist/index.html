@@ -52,13 +52,18 @@
 
   <aside id="detailPanel" class="panel detail-panel hidden" aria-labelledby="detailTitle" aria-modal="true" role="dialog">
     <div class="panel-head"><div class="panel-kicker">PULLED FROM THE SHELF</div><button id="closeDetail" class="close-button" type="button" aria-label="Close item details">×</button></div>
-    <div id="detailArt" class="detail-art"><img id="audioArt" class="audio-art hidden" alt="Album artwork from TheAudioDB"><div class="detail-art-top" id="detailFormat"></div><div class="detail-art-title" id="detailArtTitle"></div><div class="detail-art-bottom">THE LOWER LEVEL ARCHIVE</div></div>
+    <div id="detailArt" class="detail-art"><img id="audioArt" class="audio-art hidden" alt="Cover artwork"><div class="detail-art-top" id="detailFormat"></div><div class="detail-art-title" id="detailArtTitle"></div><div class="detail-art-bottom">THE LOWER LEVEL ARCHIVE</div></div>
     <div id="detailCategory" class="detail-category"></div><h2 id="detailTitle"></h2><p id="detailCreator" class="detail-creator"></p>
     <div class="detail-rule"></div><div class="detail-meta"><div><span>RELEASE</span><strong id="detailYear"></strong></div><div><span>FORMAT</span><strong id="detailFormatValue"></strong></div><div><span>COLLECTION SOURCE</span><strong id="detailSource"></strong></div></div>
     <div id="detailNote" class="detail-note"></div><div id="audioExtra" class="audio-extra hidden"></div><a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
-    <button id="backToStore" class="secondary-button" type="button">Back to the aisle</button>
+    <button id="visitShelf" class="primary-button visit-shelf" type="button">Go to this shelf <span class="button-icon">↗</span></button><button id="backToStore" class="secondary-button" type="button">Back to the aisle</button>
   </aside>
 
+  <div id="stackOverlay" class="stack-overlay hidden" role="dialog" aria-modal="true" aria-label="Flip through media stack">
+    <div class="stack-head"><div><div class="stack-kicker">PULLED FROM THE RACK</div><div id="stackCategory" class="stack-category"></div></div><button id="closeStack" class="close-button" type="button" aria-label="Close stack">×</button></div>
+    <div class="stack-side-note">DRAG TO TILT <span>·</span> SWIPE OR SCROLL TO FLIP</div>
+    <div class="stack-foot"><div class="stack-info"><span id="stackCount">1 / 4</span><h2 id="stackTitle"></h2><p id="stackMeta"></p></div><div class="stack-actions"><button id="stackPrev" type="button" aria-label="Previous case">←</button><button id="stackNext" type="button" aria-label="Next case">→</button><button id="stackDetails" type="button">View item details ↗</button></div></div>
+  </div>
   <div id="toast" class="toast hidden" role="status"></div>
   <script type="module" src="./app.js"></script>
 </body>
