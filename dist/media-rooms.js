@@ -40,7 +40,7 @@ export function listeningStation({group,part,box,cyl,block,sign,shadow,walnut,de
   box(-2.87,.44,z,4.62,.78,.75,walnut);
   box(-2.87,y-.04,z,4.69,.08,.83,'#27292a');block(-2.87,z,4.69,.83);shadow(-2.87,z,4.94,1.25);
   const layout=[
-    {key:'vinyl',name:'Vinyl',x:-4.30,build:turntable,bounds:[.70,.22,.51]},
+    {key:'vinyl',name:'Vinyl',x:-4.30,build:turntable,bounds:[.484,.416,.397]},
     {key:'cassettes',name:'Cassette',x:-2.87,build:boombox,bounds:[.56,.412,.222]},
     {key:'cds',name:'CD',x:-1.44,build:compactStereo,bounds:[.75,.36,.34]}
   ];
@@ -49,7 +49,7 @@ export function listeningStation({group,part,box,cyl,block,sign,shadow,walnut,de
     hitSurface(group,devices,key,name+' player',x,y+height/2,z,width,height,depth);
     const model=build({group,part,box,cyl,walnut},x,y,z);
     Object.assign(devices.at(-1).userData,model);
-    if(key!=='vinyl')shadow(x,z,width*1.28,depth*1.48,y+.001);
+    shadow(x,z,width*1.28,depth*1.48,y+.001);
   }
 }
 

@@ -1,74 +1,88 @@
 import * as T from './vendor/three.module.js';
 
-const graphite='#26282b', silver='#a4a39c', rubber='#141619';
-function canvasMap(w,h){
-  const canvas=document.createElement('canvas');
-  canvas.width=w;canvas.height=h;
-  const map=new T.CanvasTexture(canvas);
-  map.colorSpace=T.SRGBColorSpace;map.anisotropy=4;
-  return {map,ctx:canvas.getContext('2d')};
-}
-function squareImage(ctx,img,x,y,size){
-  const side=Math.min(img.naturalWidth,img.naturalHeight);
-  ctx.drawImage(img,(img.naturalWidth-side)/2,(img.naturalHeight-side)/2,side,side,x,y,size,size);
-}
-function mesh(parent,geometry,material,x,y,z){
-  const obj=new T.Mesh(geometry,material);
-  obj.position.set(x,y,z);parent.add(obj);
-  return obj;
-}
+const recordSpeed=2*Math.PI*(33+1/3)/60;
+const modelURL=new URL('./models/vinyl-player.glb',import.meta.url).href;
 
-export function turntable({group,box,cyl,walnut},x,y,z){
-  const center=x+.025;
-  for(const dx of [-.26,.26])box(x+dx,y+.02,z,.07,.04,.32,rubber);
-  box(x,y+.075,z,.69,.077,.45,walnut);
-  box(x,y+.118,z,.677,.013,.436,'#474746');
-  cyl(center,y+.139,z,.338,.030,.338,silver);
-  cyl(center,y+.157,z,.326,.013,.326,rubber);
-  const platter=new T.Group();platter.position.set(center,y+.166,z);group.add(platter);
-  const {map,ctx}=canvasMap(640,640);
-  const disc=mesh(platter,new T.CircleGeometry(.1525,96),new T.MeshStandardMaterial({map,roughness:.38,metalness:.18}),0,0,0);
-  disc.rotation.x=-Math.PI/2;
-  // Cut bands and uneven highlights remain visible as the disc revolves.
-  ctx.fillStyle='#1b1c1e';ctx.fillRect(0,0,640,640);
-  for(let radius=108;radius<320;radius+=2){
-    ctx.lineWidth=1;ctx.strokeStyle=radius%14===0?'#424447':'#26282a';
-    ctx.beginPath();ctx.arc(320,320,radius,0,Math.PI*2);ctx.stroke();
-  }
-  for(let j=0;j<2;j++)for(let i=0;i<90;i++){
-    const a=.48+j*Math.PI+(i-45)*.009;
-    ctx.strokeStyle='rgba(172,177,186,'+(.008+.078*Math.cos((i-45)/45*Math.PI/2))+')';
-    ctx.lineWidth=2.4;ctx.beginPath();ctx.moveTo(320+Math.cos(a)*108,320+Math.sin(a)*108);
-    ctx.lineTo(320+Math.cos(a)*316,320+Math.sin(a)*316);ctx.stroke();
-  }
-  const label=canvasMap(160,160);
-  const centerLabel=mesh(platter,new T.CircleGeometry(.05,60),new T.MeshBasicMaterial({map:label.map,toneMapped:false}),0,.0008,0);
-  centerLabel.rotation.x=-Math.PI/2;
-  cyl(center,y+.17,z,.005,.010,.005,silver);
-  // Pivot, counterweight, arm tube and the cartridge over the playing surface.
-  cyl(x-.222,y+.158,z+.126,.071,.066,.071,graphite);
-  box(x-.1505,y+.201,z+.0255,.012,.012,.25,silver,0,-.62);
-  box(x-.08,y+.185,z-.075,.024,.035,.039,graphite,0,-.62);
-  cyl(x+.243,y+.136,z-.136,.044,.019,.044,silver);
-  cyl(x+.243,y+.148,z-.136,.034,.007,.034,graphite);
-  cyl(x-.236,y+.207,z+.161,.043,.054,.043,silver,Math.PI/2-.13);
-  const jacket=new T.Group();jacket.name='Now playing record sleeve';
-  jacket.position.set(x-.53,y+.174,z+.035);
-  jacket.rotation.set(-.17,Math.PI,0,'YXZ');group.add(jacket);
-  const jacketMap=canvasMap(512,512);
-  mesh(jacket,new T.BoxGeometry(.316,.316,.004),new T.MeshStandardMaterial({color:'#c4bbaa'}),0,0,0);
-  mesh(jacket,new T.PlaneGeometry(.314,.314),new T.MeshBasicMaterial({map:jacketMap.map,toneMapped:false}),0,0,.0024);
-  box(x-.53,y+.014,z+.027,.29,.027,.18,walnut);
-  box(x-.53,y+.033,z-.044,.266,.024,.016,silver);
-  jacket.visible=false;
-  return {platter,jacket,show({item,image}){
-    platter.visible=Boolean(item);jacket.visible=Boolean(item&&image);
-    label.ctx.fillStyle='#c3a784';label.ctx.fillRect(0,0,160,160);
-    if(image){
-      squareImage(jacketMap.ctx,image,0,0,512);jacketMap.map.needsUpdate=true;
-      squareImage(label.ctx,image,0,0,160);
+function printSurface(width,height,geometry){
+  const canvas=document.createElement('canvas');
+  canvas.width=width;canvas.height=height;
+  const map=new T.CanvasTexture(canvas);map.colorSpace=T.SRGBColorSpace;map.anisotropy=4;
+  return {ctx:canvas.getContext('2d'),map,mesh:new T.Mesh(geometry,new T.MeshBasicMaterial({map,toneMapped:false}))};
+}
+function coverImage(ctx,image){
+  const side=Math.min(image.naturalWidth,image.naturalHeight);
+  ctx.drawImage(image,(image.naturalWidth-side)/2,(image.naturalHeight-side)/2,side,side,0,0,ctx.canvas.width,ctx.canvas.height);
+}
+export function turntable({group,box,walnut},x,y,z){
+  const base=new T.Group();base.name='Vinyl listening deck';
+  base.position.set(x,y,z);base.rotation.y=Math.PI;group.add(base);
+  const sleeve=new T.Group();sleeve.name='Now playing record sleeve';
+  sleeve.position.set(x-.438,y+.174,z+.035);
+  sleeve.rotation.set(-.17,Math.PI,0,'YXZ');sleeve.visible=false;group.add(sleeve);
+  const board=new T.Mesh(new T.BoxGeometry(.316,.316,.004),new T.MeshStandardMaterial({color:'#bcad96',roughness:.85}));
+  const print=printSurface(512,512,new T.PlaneGeometry(.314,.314));
+  sleeve.add(board,print.mesh);print.mesh.position.z=.0022;
+  print.mesh.userData={display:'case',level:2,item:null,width:.314,height:.314};
+  print.mesh.raycast=function(ray,hits){if(sleeve.visible)T.Mesh.prototype.raycast.call(this,ray,hits);};
+  box(x-.438,y+.011,z+.03,.265,.022,.145,walnut);
+  box(x-.438,y+.024,z-.014,.25,.021,.009,'#a19a84');
+  box(x-.438,y+.052,z+.061,.074,.084,.012,walnut,-.17);
+  const label=printSurface(256,256,new T.CircleGeometry(.050,72));label.mesh.rotation.x=-Math.PI/2;
+  let rotor,pressing,arm,loading=false,retryAt=0;
+  let record=null,cover=null,labelItem=null,labelImage=null;
+  let phase=0,seconds=0,armAngle=0;
+  function sync(){
+    sleeve.visible=Boolean(record&&cover);print.mesh.userData.item=sleeve.visible?record:null;
+    if(pressing)pressing.visible=Boolean(record);
+    if(!record||labelItem===record&&labelImage===cover)return;
+    labelItem=record;labelImage=cover;
+    const g=label.ctx;
+    if(cover){
+      coverImage(print.ctx,cover);print.map.needsUpdate=true;
+      coverImage(g,cover);
+      g.fillStyle='rgba(27,20,14,.25)';g.fillRect(0,0,256,256);
+    }else{
+      g.fillStyle='#bda680';g.fillRect(0,0,256,256);
     }
-    label.ctx.fillStyle='#e5ddc6';label.ctx.fillRect(49,109,62,10);
+    g.fillStyle='#e9dcbc';g.fillRect(0,156,256,55);
+    g.textAlign='center';g.fillStyle='#2b2925';g.font='bold 16px Helvetica,Arial,sans-serif';
+    g.fillText(record.title,128,179,198);
+    g.font='12px Helvetica,Arial,sans-serif';g.fillText(record.creator||'',128,197,190);
+    g.beginPath();g.arc(128,128,10,0,2*Math.PI);g.fillStyle='#b8a88d';g.fill();
     label.map.needsUpdate=true;
+  }
+  async function loadDeck(){
+    if(rotor||loading||performance.now()<retryAt)return;
+    loading=true;
+    try{
+      const {GLTFLoader}=await import('./vendor/GLTFLoader.js');
+      const {scene}=await new GLTFLoader().loadAsync(modelURL);
+      const disc=scene.getObjectByName('Pressing'),motor=scene.getObjectByName('Rotor'),tonearm=scene.getObjectByName('Tonearm');
+      if(!disc||!motor||!tonearm)throw new Error('Missing turntable mechanism');
+      rotor=motor;pressing=disc;arm=tonearm;
+      label.mesh.position.y=.01665;pressing.add(label.mesh);base.add(scene);
+      rotor.rotation.y=phase;arm.rotation.order='YXZ';arm.rotation.y=armAngle;sync();
+    }catch(error){
+      retryAt=performance.now()+15000;
+      console.warn('Unable to load the turntable model.',error);
+    }finally{loading=false;}
+  }
+  if(window.requestIdleCallback)window.requestIdleCallback(loadDeck,{timeout:3500});
+  else window.setTimeout(loadDeck,800);
+  return {coverTarget:print.mesh,show({item,image}){
+    if(item?.id!==record?.id)seconds=0;
+    record=item;cover=image;
+    if(!item){labelItem=null;labelImage=null;}
+    sync();
+  },updateMechanism(dt,playing){
+    if(!rotor&&!loading&&performance.now()>=retryAt)void loadDeck();
+    if(playing){phase=(phase-dt*recordSpeed)%(2*Math.PI);seconds+=dt;}
+    const target=record?-T.MathUtils.degToRad(25+Math.min(seconds/30,1)*2):0;
+    armAngle=T.MathUtils.damp(armAngle,target,4,dt);
+    if(rotor)rotor.rotation.y=phase;
+    if(arm){
+      arm.rotation.y=armAngle;
+      arm.rotation.x=T.MathUtils.degToRad(.8)*T.MathUtils.clamp(-armAngle/.43,0,1);
+    }
   }};
 }

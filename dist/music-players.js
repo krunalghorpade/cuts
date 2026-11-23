@@ -5,7 +5,7 @@ export function installMusicPlayers(items,previews,devices,openDetail){
   const audio=document.createElement('audio');audio.preload='none';panel.append(audio);
   const decks=new Map(Object.keys(names).map(key=>[key,items.filter(i=>i.category===key && previews[i.albumUri]?.url)]));
   const models=devices.map(d=>d.userData).filter(d=>d.show);
-  const platter=models.find(d=>d.platter)?.platter;
+  const vinylPlayer=models.find(d=>d.device==='vinyl');
   const artist=document.getElementById('musicArtist'),art=document.getElementById('musicArtwork'),status=document.getElementById('musicStatus');
   let coverUrl='',cover=null,sounding=false;
   function selectCover(url){
@@ -89,7 +89,7 @@ export function installMusicPlayers(items,previews,devices,openDetail){
       else if(record)play();else if(selected)next();
       render();
     }
-    if(inside&&selected==='vinyl'&&sounding&&!audio.paused&&platter)platter.rotation.y-=dt*3.49;
+    if(inside)vinylPlayer?.updateMechanism(dt,selected==='vinyl'&&sounding&&!audio.paused);
   }
   document.addEventListener('visibilitychange',()=>{if(document.hidden)update(false);});
   render();
