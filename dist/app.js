@@ -54,9 +54,14 @@ function label(parent, text, x, y, z, w, h, opts = {}) {
 }
 
 const interior=buildInterior(scene,label);
-const updatePosters=installPosters(interior.floors,ITEMS);
+const displayTargets=[[],[]];
+const updatePosters=installPosters(interior.floors,ITEMS,displayTargets);
 const updateTVs=installTelevisions(canvas,interior.screens,ITEMS,trailerStreams);
 const {stacks,interactables,destinations}=stockRooms(interior,box,label);
+for(const tv of interior.screens){
+  const floor=rooms.find(room=>room.id===tv.room).floor;
+  tv.screen.userData.level=floor;displayTargets[floor-1].push(tv.screen);
+}
 for(const door of interior.doors)interactables[door.level-1].push(...door.faces);
 let ground=0,level=1;
 function refreshFloor(){
@@ -72,7 +77,7 @@ const keys=new Set(); const raycaster=new THREE.Raycaster(); const hoverPoint=ne
 const joystick={x:0,y:0,pointer:null}; let lookStart=null,lookPointer=null,lookLastX=0,lookLastY=0;
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
 function requestLook(){ if(!mobile && !uiOpen && document.pointerLockElement!==canvas) { const request=canvas.requestPointerLock?.(); request?.catch?.(()=>showToast('Drag on the scene to look around')); } }
-function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden'); }
+function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');updateTVs(camera,roomAt(level,camera.position.x,camera.position.z)?.id,true); }
 function pause(){ if(!active||uiOpen)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Continue exploring'; document.exitPointerLock?.(); }
 function showToast(message){const el=$('toast');el.textContent=message;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2400);}
 function openCatalog(){preview.hide();currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();$('searchInput').focus();}
@@ -236,16 +241,23 @@ function makeFrame(color){
 const hoverFrame=makeFrame('#bebebe'),selectionFrame=makeFrame('#ffffff');
 function outline(frame,shell){
   if(!shell){frame.visible=false;return;}
+  if(shell.userData.display){
+    shell.add(frame);frame.visible=true;
+    frame.position.set(0,0,.001);frame.scale.set(shell.userData.width,shell.userData.height,1);return;
+  }
   if(frame.parent!==shell.parent)shell.parent.add(frame);
   const {w,h,d}=shell.userData.spec;
   frame.visible=true;frame.scale.set(w+.0007,h+.0007,1);frame.position.z=d/2+.00085;
 }
-function selectCase(shell){selectedCase=shell;outline(selectionFrame,shell);}
+function selectCase(shell){
+  selectedCase=shell;outline(selectionFrame,shell);
+}
 function inspect(){
-  const target=selectedCase||focusedCase;
+  const target=focusedCase?.userData.display==='tv'?focusedCase:selectedCase||focusedCase;
   if(!target){showToast('Select a case on the shelf');return;}
   openDetail(target.userData.item);
 }
+$('displayDetails').onclick=()=>openDetail(selectedCase?.userData.item);
 $('catalogDetails').onclick=()=>openDetail(catalogSelection);
 $('itemCount').textContent=ITEMS.length;$('enterBtn').onclick=enter;$('browseBtn').onclick=openCatalog;$('closeCatalog').onclick=closeCatalog;$('closeDetail').onclick=()=>closeDetail();$('searchInput').oninput=renderCatalog;$('touchInspect').onclick=inspect;
 renderFilters();
@@ -288,6 +300,7 @@ document.addEventListener('keydown',event=>{
   if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.code))event.preventDefault();
   if(event.code==='KeyB'){event.preventDefault();openCatalog();}
   if(event.code==='KeyL')requestLook();
+  if(event.code==='KeyV'&&!event.repeat&&!$('tvSound').classList.contains('hidden'))$('tvSound').click();
   if(event.code==='KeyE'&&!event.repeat)inspect();
   if(event.key==='Escape')pause();
 });
@@ -313,13 +326,19 @@ let bob=0;function updateMovement(dt){let f=(keys.has('KeyW')?1:0)-(keys.has('Ke
 }
 function pickStackAt(clientX,clientY){
   raycaster.setFromCamera(new THREE.Vector2(clientX/innerWidth*2-1,-clientY/innerHeight*2+1),camera);
-  const hit=raycaster.intersectObjects(interactables[level-1],false).find(h=>h.distance<8.0);
+  const onStair=inside(stair,camera.position.x,camera.position.z);
+  const visible=onStair?displayTargets.flat():displayTargets[level-1];
+  const hits=raycaster.intersectObjects(interactables[level-1],false);
+  raycaster.intersectObjects(visible,false,hits);
+  const hit=hits[0];
+  if(!hit||hit.distance>(hit.object.userData.display?14:8))return null;
   if(!hit?.object.userData.item)return null;
   const p=camera.position,q=hit.point;
   for(const wall of interior.occluders){
-    if(wall.level!==level)continue;
+    if(!onStair && wall.level!==level)continue;
     const t=wall.w<wall.d?(wall.x-p.x)/(q.x-p.x):(wall.z-p.z)/(q.z-p.z);
-    if(t>0&&t<1&&Math.abs(p.x+(q.x-p.x)*t-wall.x)<=wall.w/2&&Math.abs(p.z+(q.z-p.z)*t-wall.z)<=wall.d/2)return null;
+    const height=p.y+(q.y-p.y)*t-(wall.level-1)*rise;
+    if(height>=0&&height<=rise&&t>0&&t<1&&Math.abs(p.x+(q.x-p.x)*t-wall.x)<=wall.w/2&&Math.abs(p.z+(q.z-p.z)*t-wall.z)<=wall.d/2)return null;
   }
   return hit.object;
 
@@ -329,11 +348,26 @@ function updateFocus(){
   focusedCase=aim?pickStackAt(innerWidth/2,innerHeight/2):hasPointer?pickStackAt(hoverPoint.x,hoverPoint.y):null;
   outline(hoverFrame,focusedCase===selectedCase?null:focusedCase);
   canvas.style.cursor=focusedCase?'pointer':'';
-  if(selectedCase && (selectedCase.getWorldPosition(new THREE.Vector3()).distanceTo(camera.position)>5 || !interactables[level-1].includes(selectedCase)))selectCase(null);
-  const current=selectedCase||focusedCase;
-  prompt.classList.toggle('hidden',!current);
-  prompt.querySelector('.keycap').textContent=mobile?'':selectedCase||aim?'E':'Click';
-  if(current)$('promptText').textContent=(selectedCase||aim?'View item · ':'Select · ')+current.userData.item.title;
+  if(selectedCase){
+    const display=selectedCase.userData.display;
+    const inRange=selectedCase.userData.item && selectedCase.getWorldPosition(new THREE.Vector3()).distanceTo(camera.position)<(display?14:5);
+    const sameFloor=display?interior.floors[selectedCase.userData.level-1].visible:interactables[level-1].includes(selectedCase);
+    if(!inRange||!sameFloor)selectCase(null);
+  }
+  const hoveredTV=focusedCase?.userData.display==='tv' && focusedCase!==selectedCase;
+  const current=hoveredTV?focusedCase:selectedCase||focusedCase;
+  const isSelected=current && current===selectedCase;
+  const item=current?.userData.item;
+  prompt.classList.toggle('hidden',!item);
+  $('displayDetails').classList.toggle('hidden',!(isSelected && current.userData.display));
+  if(!item)return;
+  if(current.userData.display){
+    prompt.querySelector('.keycap').textContent=isSelected&&!mobile?'E':'';
+    $('promptText').textContent=(current.userData.display==='tv'?'Now playing · ':'')+item.title;
+  }else{
+    prompt.querySelector('.keycap').textContent=mobile?'':isSelected||aim?'E':'Click';
+    $('promptText').textContent=(isSelected||aim?'View item · ':'Select · ')+item.title;
+  }
 }
 function animate(){
   requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.15);

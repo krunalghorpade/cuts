@@ -53,6 +53,7 @@ def series_metadata(title_id, previous):
 def import_list(path):
     target = DIST / "imdb-items.json"
     previous = {i["id"]: i for i in json.loads(target.read_text())} if target.exists() else {}
+    editions = json.loads(Path(__file__).with_name("imdb-editions.json").read_text())
     items = {}
     with path.open(encoding="utf-8-sig", newline="") as stream:
         rows = csv.DictReader(stream)
@@ -65,16 +66,18 @@ def import_list(path):
             if title_id in items:
                 continue
             kind = row["Title Type"].strip().casefold()
-            if kind not in SERIES_TYPES | {"movie", "tv movie", "short", "tv short", "video", "video game"}:
+            if kind not in SERIES_TYPES | {"movie", "tv movie", "tv special", "short", "tv short", "video", "video game"}:
                 raise ValueError(f"Unsupported IMDb title type {row['Title Type']!r} for {title}")
             series = kind in SERIES_TYPES
             genres = [genre.strip() for genre in (row.get("Genres") or "").split(",") if genre.strip()]
-            metadata = series_metadata(title_id, previous.get(title_id, {})) if series else {}
+            metadata = dict(editions.get(title_id, {}))
+            if series and not metadata.get("episodeCount"):
+                metadata.update(series_metadata(title_id, previous.get(title_id, {})))
             anime = metadata.get("isAnime") or any(genre.casefold() == "anime" for genre in genres)
             category = "anime" if anime else "shows" if series else "movies"
             year = (row.get("Year") or "").strip()
             if kind == "video game":
-                platform = (row.get("Platform") or "").strip()
+                platform = (row.get("Platform") or metadata.get("platform") or "").strip()
                 legacy = platform.casefold() in LEGACY_CARTRIDGES
                 cartridge = legacy or platform.casefold() in {"nintendo switch", "nintendo switch 2"}
                 metadata["legacyCartridge"] = bool(legacy and year.isdigit() and int(year) < 2017)

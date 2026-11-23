@@ -206,3 +206,9 @@ body:has(.panel:not(.hidden), #mapDialog[open]) :is(.topbar, .hud, .intro) { vis
   .item-layout { align-items:start; }
   #casePreview { height:54dvh; }
 }
+
+#displayDetails { pointer-events:auto; min-height:44px; margin-left:1em; text-decoration:underline; text-underline-offset:3px; }
+.inspect-prompt { z-index:2; }
+#tvSound { position:absolute; bottom:var(--bottom); right:var(--gutter); z-index:2; pointer-events:auto; background:rgb(18 18 18 / .82); padding:0 14px; font-size:14px; }
+@media(pointer:coarse){#tvSound {bottom:auto; top:calc(var(--top) + 54px);}}
+@media(pointer:coarse){.hud:has(#displayDetails:not(.hidden)) .touch-inspect {display:none;}}

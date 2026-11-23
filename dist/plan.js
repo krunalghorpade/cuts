@@ -8,7 +8,7 @@ export const rooms = [
   {id:'kitchen', name:'Kitchen', floor:1, bounds:[8,3,14,9], spawn:[9.2,4.4,-2.3]},
   {id:'gallery', name:'Media browsing gallery', floor:2, bounds:[-8,-6,8,6], spawn:[-3.2,3.4,-.25]},
   {id:'library', name:'Book library', floor:2, bounds:[-13,6,-4,11], spawn:[-6.1,7.3,1.5]},
-  {id:'games', name:'Game cartridges + consoles', floor:2, bounds:[8,-9,15,-1], spawn:[9.1,-2,-.45]},
+  {id:'games', name:'Game cartridges + consoles', floor:2, bounds:[8,-9,15,-1], spawn:[10.1,-3.85,2.95]},
   {id:'collect', name:'Collectibles', floor:2, bounds:[8,3,14,9], spawn:[9.3,4.4,-2.35]}
 ];
 export const stair = [-12,-9,-8,-2];

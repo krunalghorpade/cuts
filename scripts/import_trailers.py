@@ -76,16 +76,21 @@ def select_stream(item, rows):
 
 def main():
     items = json.loads((DIST / "imdb-items.json").read_text())
-    result = {}
+    ids = {item["id"] for item in items}
+    existing = json.loads(SNAPSHOT.read_text()) if SNAPSHOT.exists() else {}
+    result = {key: stream for key, stream in existing.items() if key in ids}
     groups = []
     for games in (False, True):
-        pending = [i for i in items if not i.get("trailerUrl") and str(i.get("year", "")).isdigit()
+        pending = [i for i in items if i["id"] not in result and not i.get("trailerUrl") and str(i.get("year", "")).isdigit()
                    and (i.get("legacyCartridge") if games else i["category"] in {"movies", "shows", "anime"})]
         groups.extend(pending[start:start+8] for start in range(0, len(pending), 8))
     with ThreadPoolExecutor(3) as pool:
         matches = {}
-        for batch in pool.map(discover, groups):
-            matches.update(batch)
+        for group, future in [(group, pool.submit(discover, group)) for group in groups]:
+            try:
+                matches.update(future.result())
+            except (OSError, ValueError) as exc:
+                print("Trailer lookup failed for", group[0]["title"], exc, file=sys.stderr)
         def match(item):
             rows = matches.get(item["id"])
             if not rows:

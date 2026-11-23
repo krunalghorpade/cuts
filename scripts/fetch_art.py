@@ -42,13 +42,15 @@ def imdb_art(item):
     initial = urllib.parse.quote(title[0].lower())
     url = f'https://v2.sg.media-imdb.com/suggestion/{initial}/{query}.json'
     try:
-        data = json.loads(get(url, 1_000_000))
-        match = next((entry for entry in data.get('d', []) if entry.get('id') == item['id']), None)
-        image_url = match.get('i', {}).get('imageUrl') if match else None
-        if not image_url:
-            exact = json.loads(get(f"https://v2.sg.media-imdb.com/suggestion/t/{item['id']}.json", 1_000_000))
-            exact_match = next((entry for entry in exact.get('d', []) if entry.get('id') == item['id']), None)
-            image_url = exact_match.get('i', {}).get('imageUrl') if exact_match else None
+        exact_url = f"https://v2.sg.media-imdb.com/suggestion/t/{item['id']}.json"
+        image_url = None
+        for endpoint in (exact_url, url):
+            data = json.loads(get(endpoint, 1_000_000))
+            match = next((entry for entry in data.get("d", []) if entry.get("id") == item["id"]), None)
+            image_url = match.get("i", {}).get("imageUrl") if match else None
+            if image_url:
+                image_url = image_url.replace("._V1_.", "._V1_QL85_UX420_.")
+                break
         if not image_url:
             return item['id'], None, 'no poster result'
         save_image(image_url, path)

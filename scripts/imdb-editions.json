@@ -1,0 +1,591 @@
+{
+  "tt0496424": {
+    "episodeCount": 138,
+    "episodeSource": "https://api.tvmaze.com/shows/537/episodes",
+    "isAnime": false
+  },
+  "tt0386676": {
+    "episodeCount": 202,
+    "episodeSource": "https://api.tvmaze.com/shows/526/episodes",
+    "isAnime": false
+  },
+  "tt2467372": {
+    "episodeCount": 153,
+    "episodeSource": "https://api.tvmaze.com/shows/49/episodes",
+    "isAnime": false
+  },
+  "tt22014226": {
+    "episodeCount": 12,
+    "episodeSource": "https://api.tvmaze.com/shows/65827/episodes",
+    "isAnime": false
+  },
+  "tt11611698": {
+    "episodeCount": 7,
+    "episodeSource": "https://api.tvmaze.com/shows/65856/episodes",
+    "isAnime": false
+  },
+  "tt22297578": {
+    "episodeCount": 8,
+    "episodeSource": "https://www.netflix.com/title/81281063"
+  },
+  "tt2364582": {
+    "episodeCount": 136,
+    "episodeSource": "https://api.tvmaze.com/shows/31/episodes",
+    "isAnime": false
+  },
+  "tt3475734": {
+    "episodeCount": 18,
+    "episodeSource": "https://api.tvmaze.com/shows/336/episodes",
+    "isAnime": false
+  },
+  "tt6313900": {
+    "episodeCount": 6,
+    "episodeSource": "https://api.tvmaze.com/shows/23460/episodes",
+    "isAnime": false
+  },
+  "tt2357547": {
+    "episodeCount": 39,
+    "episodeSource": "https://api.tvmaze.com/shows/1370/episodes",
+    "isAnime": false
+  },
+  "tt3322312": {
+    "episodeCount": 39,
+    "episodeSource": "https://api.tvmaze.com/shows/1369/episodes",
+    "isAnime": false
+  },
+  "tt3322314": {
+    "episodeCount": 26,
+    "episodeSource": "https://api.tvmaze.com/shows/2174/episodes",
+    "isAnime": false
+  },
+  "tt4230076": {
+    "episodeCount": 8,
+    "episodeSource": "https://api.tvmaze.com/shows/2176/episodes",
+    "isAnime": false
+  },
+  "tt5675620": {
+    "episodeCount": 26,
+    "episodeSource": "https://api.tvmaze.com/shows/16544/episodes",
+    "isAnime": false
+  },
+  "tt0144736": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0144736.json",
+    "episodeCount": 22,
+    "episodeSource": "https://api.tvmaze.com/shows/45828/episodes"
+  },
+  "tt39395275": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt39395275.json",
+    "episodeCount": 19,
+    "episodeSource": "https://api.tvmaze.com/shows/93969/episodes"
+  },
+  "tt0214341": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0214341.json",
+    "episodeCount": 291,
+    "episodeSource": "https://v3-cinemeta.strem.io/meta/series/tt0214341.json"
+  },
+  "tt0088509": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0088509.json",
+    "episodeCount": 153,
+    "episodeSource": "https://api.tvmaze.com/shows/2102/episodes"
+  },
+  "tt4644488": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt4644488.json",
+    "episodeCount": 131,
+    "episodeSource": "https://api.tvmaze.com/shows/2368/episodes"
+  },
+  "tt0121220": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0121220.json",
+    "episodeCount": 291,
+    "episodeSource": "https://api.tvmaze.com/shows/2103/episodes"
+  },
+  "tt29485149": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt29485149.json",
+    "episodeCount": 20,
+    "episodeSource": "https://api.tvmaze.com/shows/75093/episodes"
+  },
+  "tt7961060": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt7961060.json"
+  },
+  "tt1409055": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt1409055.json",
+    "episodeCount": 167,
+    "episodeSource": "https://api.tvmaze.com/shows/1676/episodes"
+  },
+  "tt14614892": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt14614892.json"
+  },
+  "tt0139774": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0139774.json",
+    "episodeCount": 64,
+    "episodeSource": "https://api.tvmaze.com/shows/2104/episodes"
+  },
+  "tt0142242": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142242.json"
+  },
+  "tt10710138": {
+    "episodeCount": 67,
+    "episodeSource": "https://v3-cinemeta.strem.io/meta/series/tt10710138.json"
+  },
+  "tt0142236": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142236.json"
+  },
+  "tt0142239": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142239.json"
+  },
+  "tt2263944": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt2263944.json"
+  },
+  "tt0142238": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142238.json"
+  },
+  "tt1125254": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt1125254.json"
+  },
+  "tt8433216": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt8433216.json",
+    "episodeCount": 54,
+    "episodeSource": "https://v3-cinemeta.strem.io/meta/series/tt8433216.json"
+  },
+  "tt0142244": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142244.json"
+  },
+  "tt0142232": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142232.json"
+  },
+  "tt0142237": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142237.json"
+  },
+  "tt0142243": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142243.json"
+  },
+  "tt3819668": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt3819668.json"
+  },
+  "tt0142241": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142241.json"
+  },
+  "tt0142251": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142251.json"
+  },
+  "tt2155428": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt2155428.json"
+  },
+  "tt9360062": {
+    "episodeCount": 12,
+    "episodeSource": "https://v3-cinemeta.strem.io/meta/series/tt9360062.json"
+  },
+  "tt2565520": {
+    "episodeCount": 16,
+    "episodeSource": "https://v3-cinemeta.strem.io/meta/series/tt2565520.json"
+  },
+  "tt0142234": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142234.json"
+  },
+  "tt0142248": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142248.json"
+  },
+  "tt0142240": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142240.json"
+  },
+  "tt0142233": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142233.json"
+  },
+  "tt0142235": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142235.json"
+  },
+  "tt0142245": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142245.json"
+  },
+  "tt1317478": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt1317478.json"
+  },
+  "tt2980736": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt2980736.json"
+  },
+  "tt0142250": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142250.json"
+  },
+  "tt0142247": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142247.json"
+  },
+  "tt0142249": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0142249.json"
+  },
+  "tt0098936": {
+    "episodeCount": 48,
+    "episodeSource": "https://api.tvmaze.com/shows/156/episodes",
+    "isAnime": false
+  },
+  "tt0245429": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0245429.json"
+  },
+  "tt5311514": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt5311514.json"
+  },
+  "tt0119698": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/movie/tt0119698.json"
+  },
+  "tt0903747": {
+    "episodeCount": 62,
+    "episodeSource": "https://api.tvmaze.com/shows/169/episodes",
+    "isAnime": false
+  },
+  "tt7366338": {
+    "episodeCount": 5,
+    "episodeSource": "https://api.tvmaze.com/shows/30770/episodes",
+    "isAnime": false
+  },
+  "tt0944947": {
+    "episodeCount": 73,
+    "episodeSource": "https://api.tvmaze.com/shows/82/episodes",
+    "isAnime": false
+  },
+  "tt2861424": {
+    "episodeCount": 91,
+    "episodeSource": "https://api.tvmaze.com/shows/216/episodes",
+    "isAnime": false
+  },
+  "tt1475582": {
+    "episodeCount": 12,
+    "episodeSource": "https://api.tvmaze.com/shows/335/episodes",
+    "isAnime": false
+  },
+  "tt0103359": {
+    "episodeCount": 85,
+    "episodeSource": "https://api.tvmaze.com/shows/757/episodes",
+    "isAnime": false
+  },
+  "tt3032476": {
+    "episodeCount": 63,
+    "episodeSource": "https://api.tvmaze.com/shows/618/episodes",
+    "isAnime": false
+  },
+  "tt12392504": {
+    "episodeCount": 10,
+    "episodeSource": "https://api.tvmaze.com/shows/51127/episodes",
+    "isAnime": false
+  },
+  "tt0877057": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0877057.json",
+    "episodeCount": 37,
+    "episodeSource": "https://api.tvmaze.com/shows/40/episodes"
+  },
+  "tt0098904": {
+    "episodeCount": 180,
+    "episodeSource": "https://api.tvmaze.com/shows/530/episodes",
+    "isAnime": false
+  },
+  "tt2356777": {
+    "episodeCount": 30,
+    "episodeSource": "https://api.tvmaze.com/shows/5/episodes",
+    "isAnime": false
+  },
+  "tt0213338": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0213338.json",
+    "episodeCount": 26,
+    "episodeSource": "https://api.tvmaze.com/shows/1121/episodes"
+  },
+  "tt7660850": {
+    "episodeCount": 39,
+    "episodeSource": "https://api.tvmaze.com/shows/23470/episodes",
+    "isAnime": false
+  },
+  "tt4742876": {
+    "episodeCount": 10,
+    "episodeSource": "https://api.tvmaze.com/shows/7329/episodes",
+    "isAnime": false
+  },
+  "tt3398228": {
+    "episodeCount": 76,
+    "episodeSource": "https://api.tvmaze.com/shows/184/episodes",
+    "isAnime": false
+  },
+  "tt12004706": {
+    "episodeCount": 32,
+    "episodeSource": "https://api.tvmaze.com/shows/47014/episodes",
+    "isAnime": false
+  },
+  "tt0072500": {
+    "episodeCount": 12,
+    "episodeSource": "https://api.tvmaze.com/shows/577/episodes",
+    "isAnime": false
+  },
+  "tt0096548": {
+    "episodeCount": 6,
+    "episodeSource": "https://v3-cinemeta.strem.io/meta/series/tt0096548.json"
+  },
+  "tt2085059": {
+    "episodeCount": 32,
+    "episodeSource": "https://api.tvmaze.com/shows/305/episodes",
+    "isAnime": false
+  },
+  "tt2442560": {
+    "episodeCount": 36,
+    "episodeSource": "https://api.tvmaze.com/shows/269/episodes",
+    "isAnime": false
+  },
+  "tt0434706": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0434706.json",
+    "episodeCount": 74,
+    "episodeSource": "https://api.tvmaze.com/shows/8244/episodes"
+  },
+  "tt10986410": {
+    "episodeCount": 44,
+    "episodeSource": "https://api.tvmaze.com/shows/44458/episodes",
+    "isAnime": false
+  },
+  "tt5753856": {
+    "episodeCount": 26,
+    "episodeSource": "https://api.tvmaze.com/shows/17861/episodes",
+    "isAnime": false
+  },
+  "tt5687612": {
+    "episodeCount": 12,
+    "episodeSource": "https://api.tvmaze.com/shows/16149/episodes",
+    "isAnime": false
+  },
+  "tt0804503": {
+    "episodeCount": 92,
+    "episodeSource": "https://api.tvmaze.com/shows/385/episodes",
+    "isAnime": false
+  },
+  "tt6025022": {
+    "episodeCount": 39,
+    "episodeSource": "https://api.tvmaze.com/shows/505/episodes",
+    "isAnime": false
+  },
+  "tt11280740": {
+    "episodeCount": 19,
+    "episodeSource": "https://api.tvmaze.com/shows/44933/episodes",
+    "isAnime": false
+  },
+  "tt14392248": {
+    "episodeCount": 15,
+    "episodeSource": "https://api.tvmaze.com/shows/55489/episodes",
+    "isAnime": false
+  },
+  "tt0773262": {
+    "episodeCount": 96,
+    "episodeSource": "https://api.tvmaze.com/shows/161/episodes",
+    "isAnime": false
+  },
+  "tt4786824": {
+    "episodeCount": 60,
+    "episodeSource": "https://api.tvmaze.com/shows/3594/episodes",
+    "isAnime": false
+  },
+  "tt1518542": {
+    "episodeCount": 80,
+    "episodeSource": "https://api.tvmaze.com/shows/29206/episodes",
+    "isAnime": false
+  },
+  "tt0096657": {
+    "episodeCount": 14,
+    "episodeSource": "https://api.tvmaze.com/shows/1719/episodes",
+    "isAnime": false
+  },
+  "tt1856010": {
+    "episodeCount": 73,
+    "episodeSource": "https://api.tvmaze.com/shows/175/episodes",
+    "isAnime": false
+  },
+  "tt0088484": {
+    "episodeCount": 6,
+    "episodeSource": "https://v3-cinemeta.strem.io/meta/series/tt0088484.json"
+  },
+  "tt4574334": {
+    "episodeCount": 42,
+    "episodeSource": "https://api.tvmaze.com/shows/2993/episodes",
+    "isAnime": false
+  },
+  "tt0275137": {
+    "episodeCount": 52,
+    "episodeSource": "https://api.tvmaze.com/shows/22040/episodes",
+    "isAnime": false
+  },
+  "tt0280249": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0280249.json",
+    "episodeCount": 153,
+    "episodeSource": "https://v3-cinemeta.strem.io/meta/series/tt0280249.json"
+  },
+  "tt0487831": {
+    "episodeCount": 24,
+    "episodeSource": "https://api.tvmaze.com/shows/539/episodes",
+    "isAnime": false
+  },
+  "tt13868972": {
+    "episodeCount": 16,
+    "episodeSource": "https://api.tvmaze.com/shows/60326/episodes",
+    "isAnime": false
+  },
+  "tt4158110": {
+    "episodeCount": 45,
+    "episodeSource": "https://api.tvmaze.com/shows/1871/episodes",
+    "isAnime": false
+  },
+  "tt9544034": {
+    "episodeCount": 26,
+    "episodeSource": "https://api.tvmaze.com/shows/43728/episodes",
+    "isAnime": false
+  },
+  "tt36988358": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt36988358.json",
+    "episodeCount": 6,
+    "episodeSource": "https://v3-cinemeta.strem.io/meta/series/tt36988358.json"
+  },
+  "tt0112159": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt0112159.json",
+    "episodeCount": 26,
+    "episodeSource": "https://api.tvmaze.com/shows/1925/episodes"
+  },
+  "tt0290978": {
+    "episodeCount": 12,
+    "episodeSource": "https://api.tvmaze.com/shows/1292/episodes",
+    "isAnime": false
+  },
+  "tt2575988": {
+    "episodeCount": 53,
+    "episodeSource": "https://api.tvmaze.com/shows/143/episodes",
+    "isAnime": false
+  },
+  "tt2359704": {
+    "isAnime": true,
+    "metadataSource": "https://v3-cinemeta.strem.io/meta/series/tt2359704.json",
+    "episodeCount": 190,
+    "episodeSource": "https://api.tvmaze.com/shows/8287/episodes"
+  },
+  "tt0184666": {
+    "platform": "Nintendo 64",
+    "metadataSource": "https://www.nintendo.com/jp/n01/n64/software/zelda/",
+    "trailerUrl": "https://archive.org/download/ZeldaOcarinaOfTimeEnglishCommerical/ZeldaOcarinaOfTimeEnglishCommerical.mp4",
+    "trailerSource": "https://archive.org/details/ZeldaOcarinaOfTimeEnglishCommerical"
+  },
+  "tt0210613": {
+    "platform": "Super Nintendo Entertainment System",
+    "metadataSource": "https://www.wikidata.org/entity/Q761815"
+  },
+  "tt0221606": {
+    "platform": "Super Nintendo Entertainment System",
+    "metadataSource": "https://www.wikidata.org/entity/Q853143"
+  },
+  "tt0263641": {
+    "platform": "Super Nintendo Entertainment System",
+    "metadataSource": "https://www.wikidata.org/entity/Q370055"
+  },
+  "tt0210061": {
+    "platform": "Super Nintendo Entertainment System",
+    "metadataSource": "https://www.wikidata.org/entity/Q535940"
+  },
+  "tt0249174": {
+    "platform": "Nintendo Entertainment System",
+    "metadataSource": "https://www.wikidata.org/entity/Q639619",
+    "trailerUrl": "https://archive.org/download/youtube-Wz2z-ZbcxT0/Wz2z-ZbcxT0.mp4",
+    "trailerSource": "https://archive.org/details/youtube-Wz2z-ZbcxT0"
+  },
+  "tt0177266": {
+    "platform": "Nintendo Entertainment System",
+    "metadataSource": "https://www.wikidata.org/entity/Q11168"
+  },
+  "tt0217733": {
+    "platform": "Game Boy",
+    "metadataSource": "https://www.wikidata.org/entity/Q25536523"
+  },
+  "tt0217729": {
+    "platform": "Game Boy",
+    "metadataSource": "https://www.wikidata.org/entity/Q637137"
+  },
+  "tt0217732": {
+    "platform": "Game Boy",
+    "metadataSource": "https://www.wikidata.org/entity/Q1988120"
+  },
+  "tt0310011": {
+    "platform": "Game Boy Color",
+    "metadataSource": "https://www.wikidata.org/entity/Q25991446"
+  },
+  "tt0288740": {
+    "platform": "Game Boy Color",
+    "metadataSource": "https://www.wikidata.org/entity/Q2351827"
+  },
+  "tt0478230": {
+    "platform": "Game Boy Advance",
+    "metadataSource": "https://www.pokemon.com/us/pokemon-video-games/pokemon-emerald-version/"
+  },
+  "tt10471854": {
+    "platform": "Nintendo Switch",
+    "metadataSource": "https://www.zelda.com/tears-of-the-kingdom/"
+  },
+  "tt7896952": {
+    "platform": "Nintendo Switch",
+    "metadataSource": "https://www.nintendo.com/us/store/products/fire-emblem-three-houses-switch/"
+  },
+  "tt5370130": {
+    "platform": "Nintendo Switch",
+    "metadataSource": "https://www.smashbros.com/en_US/"
+  },
+  "tt1708432": {
+    "platform": "Nintendo DS",
+    "metadataSource": "https://www.wikidata.org/entity/Q1313322"
+  },
+  "tt27750841": {
+    "episodeCount": 8,
+    "episodeSource": "https://datasets.imdbws.com/title.episode.tsv.gz"
+  },
+  "tt32304483": {
+    "episodeCount": 4,
+    "episodeSource": "https://datasets.imdbws.com/title.episode.tsv.gz"
+  },
+  "tt21142804": {
+    "episodeCount": 10,
+    "episodeSource": "https://datasets.imdbws.com/title.episode.tsv.gz"
+  },
+  "tt29954260": {
+    "episodeCount": 3,
+    "episodeSource": "https://datasets.imdbws.com/title.episode.tsv.gz"
+  }
+}

@@ -105,12 +105,16 @@ export function buildInterior(scene, label){
       piece(0,h-.06,.24,w-.1,.018,.04,light);
       block(x,z,Math.abs(Math.cos(angle))*w+Math.abs(Math.sin(angle))*.6,Math.abs(Math.sin(angle))*w+Math.abs(Math.cos(angle))*.6);
     }
-    function tv(x,z,w,y,crt=false,reverse=false){
-      const sign=reverse?-1:1,depth=crt?w*.57:.09;
-      box(x,y,z,w,w*(crt?.8:.57),depth,iron);
+    function tv(x,z,w,y,crt=false,reverse=false,surface=.8375){
+      const sign=reverse?-1:1,depth=crt?w*.57:.065;
+      const screenW=w*.91*(crt?1:1.4),screenH=w*(crt?.64:.49*1.4);
+      const rim=.012,bodyW=crt?w:screenW+rim*2,bodyH=crt?w*.8:screenH+rim*2;
+      box(x,y,z,bodyW,bodyH,depth,iron);
       const screenZ=z+sign*(depth/2+.002),room=roomAt(level,x,z).id;
-      screens.push(addTelevision(group,room,x,y+.01,screenZ,w*.91,w*(crt?.64:.49),reverse,crt));
-      box(x,y-w*.34,z,.09,.2,.1,iron);box(x,y-w*.39,z,w*.48,.045,.25,iron);
+      screens.push(addTelevision(group,room,x,y+(crt?.01:0),screenZ,screenW,screenH,reverse,crt));
+      const bottom=y-bodyH/2;
+      box(x,(bottom+surface)/2,z,.09,bottom-surface,.09,iron);
+      box(x,surface+.02,z,bodyW*.40,.04,crt?.42:.32,iron);
     }
     function cabinet(x,z,w){box(x,.42,z,w,.74,.68,walnut);box(x,.075,z,w-.2,.14,.5,iron);box(x,.81,z,w+.04,.055,.72,dark);for(let i=-1;i<=1;i++)box(x+i*w*.26,.43,z+.352,.014,.6,.008,iron);shadow(x,z,w*1.2,1.3);block(x,z,w,.74);}
     function seat(x,z,w,angle=0){const p=(lx,y,lz,sw,h,sd,m,rx=0)=>box(x+Math.cos(angle)*lx+Math.sin(angle)*lz,y,z-Math.sin(angle)*lx+Math.cos(angle)*lz,sw,h,sd,m,rx,angle);
@@ -178,11 +182,11 @@ export function buildInterior(scene, label){
       }block(x,z,2.8,.72);shadow(x,z,3.2,1.2);
     }
     if(level===1){
-      cove(.05,-5.886,7.8,2.93);cove(11.6,-1.12,4.35,2.88,Math.PI);
+      cove(.05,-5.886,7.8,2.93);cove(11.6,-1.12,4.55,3.16,Math.PI);
       rug(0,.55,6.9,5.55);seat(0,2.94,3.8);seat(-2.45,-.28,.94,-.77);seat(2.45,-.28,.94,.77);
       table(0,1.19,2.2,.93);plant(.46,1.13,.55,.59);
-      cabinet(-1.4,-5.46,2.98);cabinet(1.55,-5.46,2.37);tv(-1.38,-5.43,2.63,1.88);tv(1.55,-5.45,1.48,1.51,true);
-      for(const x of [-2.3,.91]){box(x,.898,-5.27,.39,.085,.23,iron);box(x+.52,.905,-5.22,.20,.077,.12,cream);}
+      cabinet(0,-5.46,4.05);tv(0,-5.43,2.63,1.89);
+      for(const x of [-1.52,.96]){box(x,.898,-5.27,.39,.085,.23,iron);box(x+.52,.905,-5.22,.20,.077,.12,cream);}
       // The listening station stands south of both music racks, clear of their browsing aisles.
       const playerX=-7.25, playerZ=4.83;
       cabinet(-7.40,playerZ,.90);
@@ -198,7 +202,7 @@ export function buildInterior(scene, label){
       // Bedroom: upholstered bed, folded throw, nightstands, wardrobe, cinema wall.
       rug(11.6,-5.85,4.5,4.15);box(11.65,.32,-5.95,2.38,.53,3.18,walnut);box(11.65,.68,-5.95,2.34,.29,3.13,linen);box(11.65,.88,-5.27,2.35,.13,1.76,'#5d625b');box(11.65,1.0,-7.58,2.55,1.55,.17,walnut);block(11.65,-5.95,2.5,3.4);
       for(const a of [-1,1]){oval(11.65+a*.54,.9,-7,.96,.27,.56,cream);box(11.65+a*1.65,.43,-7.15,.64,.64,.68,walnut);cyl(11.65+a*1.65,.93,-7.15,.21,.38,.21,brass);cyl(11.65+a*1.65,1.16,-7.15,.37,.28,.37,cream);}
-      box(14.5,1.4,-5.05,.8,2.8,3.6,walnut);block(14.5,-5.05,.8,3.6);cabinet(12.15,-1.47,3.3);tv(12.15,-1.48,2.9,1.98,false,true);spot(12,3.1,-2.3,25,8);
+      box(14.5,1.4,-5.05,.8,2.8,3.6,walnut);block(14.5,-5.05,.8,3.6);cabinet(12.15,-1.47,4.04);tv(12.15,-1.48,2.9,1.96,false,true);spot(12,3.1,-2.3,25,8);
       // Shower glass, brass shower head, porcelain basin and WC.
       box(12.18,.085,1.95,1.35,.17,1.7,stone);const glass=new T.MeshStandardMaterial({color:'#9eaba1',transparent:true,opacity:.20,depthWrite:false});box(11.53,1.14,2.04,.034,2.2,1.5,glass);box(11.53,2.24,2.04,.05,.045,1.5,iron);block(12.18,2.15,1.2,1.2);
       cyl(12.76,1.45,2.42,.035,1.65,.035,brass);box(12.55,2.26,2.42,.46,.04,.04,brass);cyl(12.33,2.21,2.42,.25,.045,.25,iron);
@@ -210,10 +214,11 @@ export function buildInterior(scene, label){
       lightStrip(11.2,1.97,8.67,3.5,.19);plant(8.6,8.25,1.3);spot(11.6,2.8,7.4,28,8);
     }else{
       cove(0,-5.88,14.8,2.98);
-      rug(0,1.05,5.75,3.9);table(0,-1.6,3.35,.83,.94);tv(0,-1.74,.94,1.39);speaker(-1.26,.99,-1.75);speaker(1.26,.99,-1.75);
+      rug(0,1.05,5.75,3.9);table(0,-1.6,3.35,.83,.94);tv(0,-1.74,.94,1.48,false,false,.98);speaker(-1.26,.99,-1.75);speaker(1.26,.99,-1.75);
       seat(-1.05,-.18,.75);seat(1.05,-.18,.75);seat(-2.3,2.35,1.03,-1.12);seat(2.3,2.35,1.03,1.12);table(0,2.4,1.75,.72);plant(.44,2.36,.56,.59);
       table(-8.7,8.6,1.85,.81,.82);seat(-10.06,8.6,.78,-Math.PI/2);plant(-12.2,6.7,1.75);
-      shelf(11.5,-1.44,5.1,2.75,'consoles',Math.PI);shelf(11.1,8.52,4.82,2.8,'objects',Math.PI);shelf(13.53,6,2.6,2.42,'objects',-Math.PI/2);
+      cabinet(9.67,-1.65,1.72);tv(9.67,-1.65,1.48,1.51,true,true);
+      shelf(12.54,-1.44,3.55,2.75,'consoles',Math.PI);shelf(11.1,8.52,4.82,2.8,'objects',Math.PI);shelf(13.53,6,2.6,2.42,'objects',-Math.PI/2);
       plant(-3.24,-4.44,1.47);plant(7.2,5.15,1.45);plant(14.23,-6.85,1.5);plant(8.7,8.36,1.4);
       spot(0,2.9,-1.8,18,9);spot(-8.5,3,9.5,24,8);spot(11.3,3,-6.2,28,9);spot(11.1,2.8,7.25,23,7);
     }
