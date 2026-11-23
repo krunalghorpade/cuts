@@ -82,7 +82,7 @@ def main():
     groups = []
     for games in (False, True):
         pending = [i for i in items if i["id"] not in result and not i.get("trailerUrl") and str(i.get("year", "")).isdigit()
-                   and (i.get("legacyCartridge") if games else i["category"] in {"movies", "shows", "anime"})]
+                   and (i.get("legacyCartridge") if games else i["category"] in {"movies", "anime-movies", "shows", "anime"})]
         groups.extend(pending[start:start+8] for start in range(0, len(pending), 8))
     with ThreadPoolExecutor(3) as pool:
         matches = {}

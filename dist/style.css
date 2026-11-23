@@ -212,3 +212,11 @@ body:has(.panel:not(.hidden), #mapDialog[open]) :is(.topbar, .hud, .intro) { vis
 #tvSound { position:absolute; bottom:var(--bottom); right:var(--gutter); z-index:2; pointer-events:auto; background:rgb(18 18 18 / .82); padding:0 14px; font-size:14px; }
 @media(pointer:coarse){#tvSound {bottom:auto; top:calc(var(--top) + 54px);}}
 @media(pointer:coarse){.hud:has(#displayDetails:not(.hidden)) .touch-inspect {display:none;}}
+
+#musicControls {position:absolute;right:var(--gutter);bottom:var(--bottom);z-index:2;max-width:min(340px,84vw);padding:7px 14px;background:rgb(16 16 16 / .90);pointer-events:auto;font-size:13px;}
+.deck-buttons {display:flex;gap:18px}.deck-buttons button[aria-pressed="true"] {font-weight:700}
+#musicControls a,#musicItem,#musicResume,#arcadeAgain {text-decoration:underline;text-underline-offset:3px}
+#musicTrack {overflow-wrap:anywhere}#musicItem {margin-left:12px}
+#arcadeCanvas {display:block;width:100%;height:auto;touch-action:none;background:#101722}
+#arcadeGame .panel-head {margin-bottom:12px}#arcadeGame #arcadeGuide {margin:10px 0}#arcadeScore {margin-right:16px}
+@media(pointer:coarse){#musicControls {top:calc(var(--top) + 54px);bottom:auto;max-width:min(280px,78vw)}}

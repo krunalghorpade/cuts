@@ -1,4 +1,5 @@
 import * as T from './vendor/three.module.js';
+import {screenCategories} from './catalog.js';
 import {rise,groundAt} from './plan.js';
 import {CSS3DObject,CSS3DRenderer} from './vendor/CSS3DRenderer.js';
 
@@ -16,18 +17,18 @@ function stairFlight(x,angle){
 }
 const frames=[
   ...row(1,[-11.45,-10.25,-9.05],2.22,6.125,0,.65),
-  ...row(1,[4.72,5.75,6.78],2.35,-5.875,0,.65),
+  ...row(1,[1.17,6.98],2.32,-5.875,0,.64),
   [1,7.875,2.17,-4.65,-quarter,.82],[1,7.875,2.15,2.72,-quarter,.64],
-  ...row(1,[-.66,.44,1.54,2.64,3.74,4.84],2.43,5.875,Math.PI,.68),
+  ...row(1,[-4.77,-3.74,-2.71,2.03,4.14,6.28],2.43,5.875,Math.PI,.68),
   ...row(1,[-11.67,-10.44,-9.21],2.35,10.875,Math.PI,.79),
   [1,8.125,2.23,-6.24,quarter,.82],[1,8.125,2.23,-7.42,quarter,.82],
   [1,13.875,2.28,4.62,-quarter,.65],
-  ...row(2,[-3.46,-2.55],2.30,-5.875,0,.61),
-  ...row(2,[2.00,2.90,3.80],2.30,-5.875,0,.61),
+  ...row(2,[-4.28,-3.28],2.62,5.875,Math.PI,.61),
+  ...row(2,[2.45,3.45,4.45],2.42,5.875,Math.PI,.68),
   [2,7.875,2.06,-.72,-quarter,.85],[2,7.875,2.06,.54,-quarter,.85],
   ...row(2,[-11.28,-10.18,-9.08],2.24,6.125,0,.76),
   ...row(2,[9.64,10.74,11.84,12.94,14.04],2.33,-8.875,0,.68),
-  ...row(2,[10.28,11.44,12.60],2.18,3.125,0,.78),
+  ...row(2,[10.28,11.44,12.60],2.55,3.125,0,.70),
   ...stairFlight(-11.875,quarter),...stairFlight(-8.125,-quarter),
   ...row(1,[-11.15,-10,-8.85],rise/2+1.55,-8.875,0,.68)
 ];
@@ -42,7 +43,7 @@ function shuffled(entries){
 }
 
 export function installPosters(floors,items,targets){
-  const artwork=items.filter(i=>i.artwork && ['movies','shows','anime','game-discs','cartridges'].includes(i.category));
+  const artwork=items.filter(i=>i.artwork && screenCategories.includes(i.category));
   const slots=frames.slice(0,artwork.length);
   if(!slots.length)return ()=>{};
   const w=224,h=320,cols=Math.ceil(Math.sqrt(slots.length*h/w)),rows=Math.ceil(slots.length/cols);
@@ -112,9 +113,8 @@ function slate(label,retro=false){
 }
 
 const standby={
-  collection:slate('MY ROOM CINEMA'),
-  games:slate('GAME TRAILERS'),
-  cartridges:slate('CARTRIDGE CHANNEL',true)
+  cinema:slate('PRIVATE CINEMA'), television:slate('TV ROOM'),
+  gaming:slate('GAME TRAILERS'), retro:slate('CARTRIDGE CHANNEL',true)
 };
 const windowMaterial=new T.ShaderMaterial({
   vertexShader:'void main(){gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',
@@ -122,7 +122,7 @@ const windowMaterial=new T.ShaderMaterial({
 });
 
 export function addTelevision(parent,room,x,y,z,w,h,reverse,retro){
-  const channel=retro?'cartridges':room==='gallery'?'games':'collection';
+  const channel=room;
   const screen=new T.Mesh(new T.PlaneGeometry(w,h),standby[channel]);
   screen.position.set(x,y,z);screen.rotation.y=reverse?Math.PI:0;parent.add(screen);
   screen.userData={display:"tv",width:w,height:h,item:null};
@@ -200,23 +200,20 @@ function createChannel(scene,entries,retro){
   }};
 }
 
-export function installTelevisions(canvas,screens,items,streams){
+export function installTelevisions(canvas,screens,roomStock,streams){
   const renderer=new CSS3DRenderer(),scene=new T.Scene();
   renderer.domElement.className='room-televisions';renderer.domElement.setAttribute('aria-hidden','true');
   canvas.before(renderer.domElement);
-  const byChannel={collection:[],games:[],cartridges:[]};
-  for(const item of items){
-    const url=item.trailerUrl||streams[item.id]?.url;
-    if(!url)continue;
-    if(['movies','shows','anime','game-discs','cartridges'].includes(item.category)){
-      const entry={id:item.id,item,url};
-      byChannel.collection.push(entry);
-      if(item.category==='game-discs'||item.category==='cartridges')byChannel.games.push(entry);
-      if(item.category==='cartridges' && item.legacyCartridge===true)byChannel.cartridges.push(entry);
+  const channels=new Map();
+  for(const tv of screens){
+    const entries=[];
+    for(const item of roomStock.get(tv.room)||[]){
+      const url=item.trailerUrl||streams[item.id]?.url;
+      if(!url||tv.retro&&!item.legacyCartridge)continue;
+      entries.push({id:item.id,item,url});
     }
+    channels.set(tv.channel,createChannel(scene,entries,tv.retro));
   }
-  const channels=new Map(Object.entries(byChannel).map(([name,entries])=>
-    [name,createChannel(scene,entries,name==='cartridges')]));
   function resize(){renderer.setSize(canvas.clientWidth,canvas.clientHeight);}
   resize();window.addEventListener('resize',resize);
   const muteButton=document.getElementById('tvSound');

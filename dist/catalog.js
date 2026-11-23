@@ -3,123 +3,39 @@ const load = async path => {
   if (!response.ok) throw new Error("Unable to read the store catalog");
   return response.json();
 };
-const [screenTitles, music, books, playlistSources, trailerSources] = await Promise.all([
-  load("imdb-items.json"), load("spotify-items.json"), load("book-items.json"), load("playlists.json"), load("trailers.json").catch(()=>({}))
+const [screenTitles, music, books, playlistSources, trailerSources, editions, previews] = await Promise.all([
+  load("imdb-items.json"), load("spotify-items.json"), load("book-items.json"), load("playlists.json"), load("trailers.json").catch(()=>({})),
+  load("game-editions.json"), load("music-previews.json")
 ]);
 export const trailerStreams = trailerSources;
+export const musicPreviews = previews;
 export const playlists = playlistSources;
 export const bookList = "https://openlibrary.org/people/krunal_ghorpade/lists/OL360679L/my_books";
 export const imdbList = "https://www.imdb.com/user/p.ad4lijmxzoqnsph42clunnfkoi/watchlist/";
 
 export const CATEGORIES = [
-  {
-    "id": "movies",
-    "label": "Movie DVDs",
-    "short": "MOVIES",
-    "format": "DVD",
-    "source": "IMDb CSV",
-    "accent": "#d65b55",
-    "rack": {
-      "x": -7.35,
-      "z": -2,
-      "side": -1
-    }
-  },
-  {
-    "id": "shows",
-    "label": "Series",
-    "short": "SERIES",
-    "format": "BOX SET",
-    "source": "IMDb CSV",
-    "accent": "#d99043",
-    "rack": {
-      "x": -7.35,
-      "z": -2,
-      "side": 1
-    }
-  },
-  {
-    "id": "anime",
-    "label": "Anime",
-    "short": "ANIME",
-    "format": "BOX SET",
-    "source": "IMDb CSV",
-    "accent": "#a4a4a4"
-  },
-  {
-    "id": "game-discs",
-    "label": "Game DVDs",
-    "short": "GAME DISCS",
-    "format": "DISC",
-    "source": "IMDb CSV",
-    "accent": "#4c9daa",
-    "rack": {
-      "x": -2.45,
-      "z": -2,
-      "side": -1
-    }
-  },
-  {
-    "id": "cartridges",
-    "label": "Game cartridges",
-    "short": "CARTRIDGES",
-    "format": "CART",
-    "source": "IMDb CSV",
-    "accent": "#8875b5",
-    "rack": {
-      "x": -2.45,
-      "z": -2,
-      "side": 1
-    }
-  },
-  {
-    "id": "books",
-    "label": "Books",
-    "short": "BOOKS",
-    "format": "BOOK",
-    "source": "Open Library",
-    "accent": "#937d61"
-  },
-  {
-    "id": "vinyl",
-    "label": "Vinyl records",
-    "short": "VINYL",
-    "format": "LP",
-    "source": "Spotify playlist",
-    "accent": "#bd6480",
-    "rack": {
-      "x": 2.45,
-      "z": -2,
-      "side": -1
-    }
-  },
-  {
-    "id": "cds",
-    "label": "CDs",
-    "short": "CDS",
-    "format": "CD",
-    "source": "Spotify playlist",
-    "accent": "#6c9c70",
-    "rack": {
-      "x": 2.45,
-      "z": -2,
-      "side": 1
-    }
-  },
-  {
-    "id": "cassettes",
-    "label": "Cassettes",
-    "short": "CASSETTES",
-    "format": "TAPE",
-    "source": "Spotify playlist",
-    "accent": "#c9934e",
-    "rack": {
-      "x": 7.35,
-      "z": -2,
-      "side": -1
-    }
-  }
-];
+  ['movies','Movies','MOVIES','DVD','#d65b55'],
+  ['anime-movies','Anime movies','ANIME MOVIES','DVD','#a79aa5'],
+  ['shows','TV series','SERIES','BOX SET','#d99043'],
+  ['anime','Anime series','ANIME SERIES','BOX SET','#a4a4a4'],
+  ['playstation','PlayStation discs','PLAYSTATION','DISC','#3a69ab'],
+  ['xbox','Xbox discs','XBOX','DISC','#56834e'],
+  ['cartridges','Game cartridges','CARTRIDGES','CART','#8875b5'],
+  ['game-discs','Other game editions','GAME ARCHIVE','CASE','#778380'],
+  ['vinyl','Vinyl records','VINYL','LP','#bd6480'],
+  ['cassettes','Cassettes','CASSETTES','TAPE','#c9934e'],
+  ['cds','Music CDs','COMPACT DISCS','CD','#6c9c70'],
+  ['books','Books','BOOKS','BOOK','#937d61']
+].map(([id,label,short,format,accent])=>({id,label,short,format,accent}));
+export const gameCategories=['playstation','xbox','game-discs','cartridges'];
+export const screenCategories=['movies','anime-movies','shows','anime',...gameCategories];
+const titles=screenTitles.map(item=>{
+  const edition=editions[item.id];
+  if(!edition)return item;
+  const consoleDisc=item.category==='game-discs' && ['playstation','xbox'].includes(edition.shelf);
+  return {...item,...(edition.artwork?{artwork:edition.artwork,igdbUrl:edition.igdbUrl}:{}),
+    ...(consoleDisc?{category:edition.shelf,platform:edition.platform,edition:edition.edition||'',format:edition.platform+' disc'}:{})};
+});
 export const categoryById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
 // Merge multiple Spotify editions with the same credited artist and album title.
 const releases=new Map();
@@ -135,7 +51,7 @@ for(const item of music){
 const retainedMusic=music.filter(item=>releases.get(releaseKey(item)).album.albumUri===item.albumUri)
   .map(item=>({...item,playlists:[...releases.get(releaseKey(item)).lists]}));
 const seen = new Set();
-export const ITEMS = [...screenTitles, ...retainedMusic, ...books].filter(item => {
+export const ITEMS = [...titles, ...retainedMusic, ...books].filter(item => {
   const key = item.albumUri ? item.albumUri + "|" + item.category : item.id;
   if (seen.has(key)) return false;
   seen.add(key);

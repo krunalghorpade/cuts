@@ -270,5 +270,73 @@
   "tt3810192": {
     "url": "https://cdn.fastly.steamstatic.com/steam/apps/256812919/movie480.mp4",
     "source": "https://store.steampowered.com/app/1091500/"
+  },
+  "tt0103359": {
+    "url": "https://archive.org/download/videoplayback_20261012_1123/videoplayback.mp4",
+    "source": "https://archive.org/details/videoplayback_20261012_1123"
+  },
+  "tt0112159": {
+    "url": "https://archive.org/download/promo-for-dvd-release-of-neon-genesis-evangelion-inu-yasha-s-1-d-2/Promo%20for%20DVD%20release%20of%20Neon%20Genesis%20Evangelion%20%5BInuYasha%20S1D2%5D.mp4",
+    "source": "https://archive.org/details/promo-for-dvd-release-of-neon-genesis-evangelion-inu-yasha-s-1-d-2"
+  },
+  "tt0119698": {
+    "url": "https://archive.org/download/princess-mononoke-1997-official-trailer/Princess%20Mononoke%20%281997%29_%20Official%20Trailer.mp4",
+    "source": "https://archive.org/details/princess-mononoke-1997-official-trailer"
+  },
+  "tt0139774": {
+    "url": "https://archive.org/download/promo-for-dvd-release-of-dragon-ball-gt-season-1-dragon-ball-z-s-6-d-3/Promo%20for%20DVD%20release%20of%20Dragon%20Ball%20GT%20Season%201%20%5BDragon%20Ball%20Z%20S6D3%5D.mp4",
+    "source": "https://archive.org/details/promo-for-dvd-release-of-dragon-ball-gt-season-1-dragon-ball-z-s-6-d-3"
+  },
+  "tt0245429": {
+    "url": "https://archive.org/download/spirited-away-2001-trailer/Spirited%20Away%20%282001%29%20Trailer.mp4",
+    "source": "https://archive.org/details/spirited-away-2001-trailer"
+  },
+  "tt0773262": {
+    "url": "https://archive.org/download/2008-promo-for-dexter/2008%20promo%20for%20Dexter.ia.mp4",
+    "source": "https://archive.org/details/2008-promo-for-dexter"
+  },
+  "tt0804503": {
+    "url": "https://archive.org/download/2008-promo-for-mad-men/2008%20promo%20for%20Mad%20Men.ia.mp4",
+    "source": "https://archive.org/details/2008-promo-for-mad-men"
+  },
+  "tt0944947": {
+    "url": "https://archive.org/download/game-of-thrones-official-series-trailer-hbo-1080-p-hd/Game%20of%20Thrones%20_%20Official%20Series%20Trailer%20%28HBO%29%281080P_HD%29.ia.mp4",
+    "source": "https://archive.org/details/game-of-thrones-official-series-trailer-hbo-1080-p-hd"
+  },
+  "tt10986410": {
+    "url": "https://archive.org/download/youtube-Ut1lESPDoo0/Ut1lESPDoo0.mp4",
+    "source": "https://archive.org/details/youtube-Ut1lESPDoo0"
+  },
+  "tt11280740": {
+    "url": "https://archive.org/download/youtube-PeAMPb6YlWI/PeAMPb6YlWI.mp4",
+    "source": "https://archive.org/details/youtube-PeAMPb6YlWI"
+  },
+  "tt14614892": {
+    "url": "https://archive.org/download/youtube-EGIkuEnfHn4/EGIkuEnfHn4.mp4",
+    "source": "https://archive.org/details/youtube-EGIkuEnfHn4"
+  },
+  "tt2085059": {
+    "url": "https://archive.org/download/youtube-jDiYGjp5iFg/jDiYGjp5iFg.mp4",
+    "source": "https://archive.org/details/youtube-jDiYGjp5iFg"
+  },
+  "tt29485149": {
+    "url": "https://archive.org/download/dragon-ball-daima-dub-trailer/Dragon%20Ball%20DAIMA%20-%20DUB%20TRAILER.mp4",
+    "source": "https://archive.org/details/dragon-ball-daima-dub-trailer"
+  },
+  "tt3032476": {
+    "url": "https://archive.org/download/youtube-Qz3u06eXf0E/Qz3u06eXf0E.mp4",
+    "source": "https://archive.org/details/youtube-Qz3u06eXf0E"
+  },
+  "tt4574334": {
+    "url": "https://archive.org/download/youtube-fKKSr_jnRxU/fKKSr_jnRxU.mp4",
+    "source": "https://archive.org/details/youtube-fKKSr_jnRxU"
+  },
+  "tt5311514": {
+    "url": "https://archive.org/download/youtube-KYIMw0G__0w/KYIMw0G__0w.mp4",
+    "source": "https://archive.org/details/youtube-KYIMw0G__0w"
+  },
+  "tt5675620": {
+    "url": "https://archive.org/download/ThePunisher_Serie_Official_Trailer_1080p-H264/Marvel%27s%20The%20Punisher%20-%20Official%20Trailer%201080p_H264.mp4",
+    "source": "https://archive.org/details/ThePunisher_Serie_Official_Trailer_1080p-H264"
   }
 }

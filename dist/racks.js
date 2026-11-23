@@ -1,7 +1,7 @@
 import * as T from './vendor/three.module.js';
 import {batchRack} from './shelf-render.js';
 import {categoryById, ITEMS} from './catalog.js';
-import {fixtures,rise} from './plan.js';
+import {fixtures,rise,roomAt} from './plan.js';
 import {createMediaCase,caseSpec} from './media.js';
 
 function distributeInventory(){
@@ -34,7 +34,7 @@ function distributeInventory(){
 }
 
 export function stockRooms(interior,box,label){
-  const stacks=new Map(),interactables=[[],[]],destinations=new Map();
+  const stacks=new Map(),interactables=[[],[]],destinations=new Map(),roomStock=new Map();
   const wood=new T.MeshStandardMaterial({color:'#664a35'});
   const steel=new T.MeshStandardMaterial({color:'#292a27'});
   const led=new T.MeshBasicMaterial({color:'#ffd7a2'});
@@ -43,6 +43,9 @@ export function stockRooms(interior,box,label){
     const category=categoryById[key],group=new T.Group();
     group.position.set(x,0,z);group.rotation.y=angle;interior.floors[level-1].add(group);
     const picks=interactables[level-1],assigned=placements[bay];
+    const room=roomAt(level,x,z).id;
+    if(!roomStock.has(room))roomStock.set(room,[]);
+    roomStock.get(room).push(...assigned.flat());
     const board=(...args)=>{const m=box(group,...args);picks.push(m);return m;};
     const maxWidth=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).w));
     const maxHeight=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).h));
@@ -95,5 +98,5 @@ export function stockRooms(interior,box,label){
     label(group,category.short,0,height+.12,.12,Math.min(1.55,width*.65),.19,{bg:'#302c26',color:'#efcea5',size:80});
     batchRack(group);
   });
-  return {stacks,interactables,destinations};
+  return {stacks,interactables,destinations,roomStock};
 }

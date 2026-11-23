@@ -1,0 +1,1075 @@
+{
+  "tt6161168": {
+    "igdbId": 25076,
+    "igdbUrl": "https://www.igdb.com/games/red-dead-redemption-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1q1f.jpg",
+    "artwork": "./art/igdb/tt6161168.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/25076.json"
+  },
+  "tt2140553": {
+    "igdbId": 1009,
+    "igdbUrl": "https://www.igdb.com/games/the-last-of-us",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7f.jpg",
+    "artwork": "./art/igdb/tt2140553.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 3",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+  },
+  "tt13258344": {
+    "igdbId": 119171,
+    "igdbUrl": "https://www.igdb.com/games/baldurs-gate-iii",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.jpg",
+    "artwork": "./art/igdb/tt13258344.webp",
+    "edition": "Deluxe Edition",
+    "shelf": "xbox",
+    "platform": "Xbox Series X",
+    "editionSource": "https://us.merch.larian.com/products/baldur-s-gate-3-deluxe-edition-xbox"
+  },
+  "tt32591698": {
+    "igdbId": 305152,
+    "igdbUrl": "https://www.igdb.com/games/clair-obscur-expedition-33",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9gam.jpg",
+    "artwork": "./art/igdb/tt32591698.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 5",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/305152.json"
+  },
+  "tt2993508": {
+    "igdbId": 1942,
+    "igdbUrl": "https://www.igdb.com/games/the-witcher-3-wild-hunt",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaarl.jpg",
+    "artwork": "./art/igdb/tt2993508.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/1942.json"
+  },
+  "tt0184666": {
+    "igdbId": 1029,
+    "igdbUrl": "https://www.igdb.com/games/the-legend-of-zelda-ocarina-of-time",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3nnx.jpg",
+    "artwork": "./art/igdb/tt0184666.webp"
+  },
+  "tt0208155": {
+    "igdbId": 427,
+    "igdbUrl": "https://www.igdb.com/games/final-fantasy-vii",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kx2.jpg",
+    "artwork": "./art/igdb/tt0208155.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation.dat"
+  },
+  "tt5838588": {
+    "igdbId": 19560,
+    "igdbUrl": "https://www.igdb.com/games/god-of-war--1",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobkt6.jpg",
+    "artwork": "./art/igdb/tt5838588.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/19560.json"
+  },
+  "tt13119450": {
+    "igdbId": 112875,
+    "igdbUrl": "https://www.igdb.com/games/god-of-war-ragnarok",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coba3d.jpg",
+    "artwork": "./art/igdb/tt13119450.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/112875.json"
+  },
+  "tt0180825": {
+    "igdbId": 375,
+    "igdbUrl": "https://www.igdb.com/games/metal-gear-solid",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobpak.jpg",
+    "artwork": "./art/igdb/tt0180825.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation.dat"
+  },
+  "tt0365498": {
+    "igdbId": 379,
+    "igdbUrl": "https://www.igdb.com/games/metal-gear-solid-3-snake-eater",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ei5.jpg",
+    "artwork": "./art/igdb/tt0365498.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt1568322": {
+    "igdbId": 501,
+    "igdbUrl": "https://www.igdb.com/games/batman-arkham-city",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1voh.jpg",
+    "artwork": "./art/igdb/tt1568322.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0210613": {
+    "igdbId": 1802,
+    "igdbUrl": "https://www.igdb.com/games/chrono-trigger",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3plw.jpg",
+    "artwork": "./art/igdb/tt0210613.webp"
+  },
+  "tt10562854": {
+    "igdbId": 119133,
+    "igdbUrl": "https://www.igdb.com/games/elden-ring",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.jpg",
+    "artwork": "./art/igdb/tt10562854.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/119133.json"
+  },
+  "tt0183066": {
+    "igdbId": 14,
+    "igdbUrl": "https://www.igdb.com/games/fallout-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8ado.jpg",
+    "artwork": "./art/igdb/tt0183066.webp",
+    "shelf": "archive"
+  },
+  "tt0383385": {
+    "igdbId": 732,
+    "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-san-andreas",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lb9.jpg",
+    "artwork": "./art/igdb/tt0383385.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt0224637": {
+    "igdbId": 6,
+    "igdbUrl": "https://www.igdb.com/games/baldurs-gate-ii-shadows-of-amn",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co71yr.jpg",
+    "artwork": "./art/igdb/tt0224637.webp",
+    "shelf": "archive"
+  },
+  "tt2103188": {
+    "igdbId": 1020,
+    "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-v",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbd.jpg",
+    "artwork": "./art/igdb/tt2103188.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0374692": {
+    "igdbId": 233,
+    "igdbUrl": "https://www.igdb.com/games/half-life-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nmw.jpg",
+    "artwork": "./art/igdb/tt0374692.webp",
+    "shelf": "xbox",
+    "platform": "Xbox",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+  },
+  "tt1648163": {
+    "igdbId": 72,
+    "igdbUrl": "https://www.igdb.com/games/portal-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rs4.jpg",
+    "artwork": "./art/igdb/tt1648163.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0282975": {
+    "igdbId": 481,
+    "igdbUrl": "https://www.igdb.com/games/silent-hill-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2vyg.jpg",
+    "artwork": "./art/igdb/tt0282975.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt1479962": {
+    "igdbId": 434,
+    "igdbUrl": "https://www.igdb.com/games/red-dead-redemption",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lcv.jpg",
+    "artwork": "./art/igdb/tt1479962.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt10471854": {
+    "igdbId": 119388,
+    "igdbUrl": "https://www.igdb.com/games/the-legend-of-zelda-tears-of-the-kingdom",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5vmg.jpg",
+    "artwork": "./art/igdb/tt10471854.webp"
+  },
+  "tt3334704": {
+    "igdbId": 7331,
+    "igdbUrl": "https://www.igdb.com/games/uncharted-4-a-thief-s-end",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r7h.jpg",
+    "artwork": "./art/igdb/tt3334704.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/7331.json"
+  },
+  "tt25808274": {
+    "igdbId": 215769,
+    "igdbUrl": "https://www.igdb.com/games/cyberpunk-2077-phantom-liberty",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7566.jpg",
+    "artwork": "./art/igdb/tt25808274.webp",
+    "shelf": "archive"
+  },
+  "tt24179294": {
+    "igdbId": 228530,
+    "igdbUrl": "https://www.igdb.com/games/death-stranding-2-on-the-beach",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ipx.jpg",
+    "artwork": "./art/igdb/tt24179294.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 5",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/228530.json"
+  },
+  "tt21047286": {
+    "igdbId": 132181,
+    "igdbUrl": "https://www.igdb.com/games/resident-evil-4--1",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6bo0.jpg",
+    "artwork": "./art/igdb/tt21047286.webp",
+    "shelf": "xbox",
+    "platform": "Xbox Series X",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/132181.json"
+  },
+  "tt1814884": {
+    "igdbId": 472,
+    "igdbUrl": "https://www.igdb.com/games/the-elder-scrolls-v-skyrim",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocs1l.jpg",
+    "artwork": "./art/igdb/tt1814884.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/472.json"
+  },
+  "tt1349460": {
+    "igdbId": 565,
+    "igdbUrl": "https://www.igdb.com/games/uncharted-2-among-thieves",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tnb.jpg",
+    "artwork": "./art/igdb/tt1349460.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 3",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+  },
+  "tt0397042": {
+    "igdbId": 145191,
+    "igdbUrl": "https://www.igdb.com/games/resident-evil-4--2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2wki.jpg",
+    "artwork": "./art/igdb/tt0397042.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt0314123": {
+    "igdbId": 733,
+    "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-vice-city",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbb.jpg",
+    "artwork": "./art/igdb/tt0314123.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt7651352": {
+    "igdbId": 75235,
+    "igdbUrl": "https://www.igdb.com/games/ghost-of-tsushima",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2crj.jpg",
+    "artwork": "./art/igdb/tt7651352.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/75235.json"
+  },
+  "tt0291337": {
+    "igdbId": 18,
+    "igdbUrl": "https://www.igdb.com/games/max-payne",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3wb2.jpg",
+    "artwork": "./art/igdb/tt0291337.webp",
+    "shelf": "xbox",
+    "platform": "Xbox",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+  },
+  "tt1380179": {
+    "igdbId": 9600,
+    "igdbUrl": "https://www.igdb.com/games/persona-4",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u07.jpg",
+    "artwork": "./art/igdb/tt1380179.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt3944082": {
+    "igdbId": 9927,
+    "igdbUrl": "https://www.igdb.com/games/persona-5",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r76.jpg",
+    "artwork": "./art/igdb/tt3944082.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 3",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+  },
+  "tt0486673": {
+    "igdbId": 2207,
+    "igdbUrl": "https://www.igdb.com/games/shadow-of-the-colossus",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ozz.jpg",
+    "artwork": "./art/igdb/tt0486673.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt0249174": {
+    "igdbId": 1068,
+    "igdbUrl": "https://www.igdb.com/games/super-mario-bros-3",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ozx.jpg",
+    "artwork": "./art/igdb/tt0249174.webp"
+  },
+  "tt0221606": {
+    "igdbId": 1070,
+    "igdbUrl": "https://www.igdb.com/games/super-mario-world",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8lo8.jpg",
+    "artwork": "./art/igdb/tt0221606.webp"
+  },
+  "tt0263641": {
+    "igdbId": 1026,
+    "igdbUrl": "https://www.igdb.com/games/the-legend-of-zelda-a-link-to-the-past",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3vzn.jpg",
+    "artwork": "./art/igdb/tt0263641.webp"
+  },
+  "tt1282022": {
+    "igdbId": 500,
+    "igdbUrl": "https://www.igdb.com/games/batman-arkham-asylum",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1voj.jpg",
+    "artwork": "./art/igdb/tt1282022.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt1094581": {
+    "igdbId": 20,
+    "igdbUrl": "https://www.igdb.com/games/bioshock",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mli.jpg",
+    "artwork": "./art/igdb/tt1094581.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt1712064": {
+    "igdbId": 538,
+    "igdbUrl": "https://www.igdb.com/games/bioshock-infinite",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2n12.jpg",
+    "artwork": "./art/igdb/tt1712064.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt4795016": {
+    "igdbId": 11133,
+    "igdbUrl": "https://www.igdb.com/games/dark-souls-iii",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9ed.jpg",
+    "artwork": "./art/igdb/tt4795016.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11133.json"
+  },
+  "tt1541718": {
+    "igdbId": 76,
+    "igdbUrl": "https://www.igdb.com/games/dragon-age-origins",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvs.jpg",
+    "artwork": "./art/igdb/tt1541718.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0210061": {
+    "igdbId": 426,
+    "igdbUrl": "https://www.igdb.com/games/final-fantasy-iii--7",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaq5k.jpg",
+    "artwork": "./art/igdb/tt0210061.webp"
+  },
+  "tt0284110": {
+    "igdbId": 418,
+    "igdbUrl": "https://www.igdb.com/games/final-fantasy-x",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tr1.jpg",
+    "artwork": "./art/igdb/tt0284110.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt0846694": {
+    "igdbId": 551,
+    "igdbUrl": "https://www.igdb.com/games/god-of-war-ii",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3dik.jpg",
+    "artwork": "./art/igdb/tt0846694.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt1199781": {
+    "igdbId": 499,
+    "igdbUrl": "https://www.igdb.com/games/god-of-war-iii",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3koi.jpg",
+    "artwork": "./art/igdb/tt1199781.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 3",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+  },
+  "tt10323784": {
+    "igdbId": 115289,
+    "igdbUrl": "https://www.igdb.com/games/hollow-knight-silksong",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobebu.jpg",
+    "artwork": "./art/igdb/tt10323784.webp",
+    "edition": "Physical Edition",
+    "shelf": "playstation",
+    "platform": "PlayStation 5",
+    "editionSource": "https://www.fangamer.com/blogs/news/hollow-knight-silksong-physical-editions"
+  },
+  "tt14321832": {
+    "igdbId": 135243,
+    "igdbUrl": "https://www.igdb.com/games/it-takes-two",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob22v.jpg",
+    "artwork": "./art/igdb/tt14321832.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/135243.json"
+  },
+  "tt0338221": {
+    "igdbId": 39,
+    "igdbUrl": "https://www.igdb.com/games/mafia",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1qrt.jpg",
+    "artwork": "./art/igdb/tt0338221.webp",
+    "shelf": "xbox",
+    "platform": "Xbox",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+  },
+  "tt1073668": {
+    "igdbId": 73,
+    "igdbUrl": "https://www.igdb.com/games/mass-effect",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x7o.jpg",
+    "artwork": "./art/igdb/tt1073668.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt1839558": {
+    "igdbId": 75,
+    "igdbUrl": "https://www.igdb.com/games/mass-effect-3",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x7q.jpg",
+    "artwork": "./art/igdb/tt1839558.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0217061": {
+    "igdbId": 230,
+    "igdbUrl": "https://www.igdb.com/games/starcraft",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9n6m.jpg",
+    "artwork": "./art/igdb/tt0217061.webp",
+    "shelf": "archive"
+  },
+  "tt22892938": {
+    "igdbId": 222341,
+    "igdbUrl": "https://www.igdb.com/games/silent-hill-2--1",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coavaf.jpg",
+    "artwork": "./art/igdb/tt22892938.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 5",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/222341.json"
+  },
+  "tt5807780": {
+    "igdbId": 19565,
+    "igdbUrl": "https://www.igdb.com/games/marvels-spider-man",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1r77.jpg",
+    "artwork": "./art/igdb/tt5807780.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/19565.json"
+  },
+  "tt0282366": {
+    "igdbId": 82,
+    "igdbUrl": "https://www.igdb.com/games/baldur-s-gate-ii-throne-of-bhaal",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25n2.jpg",
+    "artwork": "./art/igdb/tt0282366.webp",
+    "shelf": "archive"
+  },
+  "tt3554580": {
+    "igdbId": 5503,
+    "igdbUrl": "https://www.igdb.com/games/batman-arkham-knight",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coagib.jpg",
+    "artwork": "./art/igdb/tt3554580.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/5503.json"
+  },
+  "tt1125798": {
+    "igdbId": 623,
+    "igdbUrl": "https://www.igdb.com/games/call-of-duty-4-modern-warfare",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wko.jpg",
+    "artwork": "./art/igdb/tt1125798.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0258523": {
+    "igdbId": 126,
+    "igdbUrl": "https://www.igdb.com/games/diablo-ii",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3gfq.jpg",
+    "artwork": "./art/igdb/tt0258523.webp",
+    "shelf": "archive"
+  },
+  "tt11177022": {
+    "igdbId": 26472,
+    "igdbUrl": "https://www.igdb.com/games/disco-elysium",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sfj.jpg",
+    "artwork": "./art/igdb/tt11177022.webp",
+    "edition": "The Final Cut",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://discoelysium.iam8bit.com/"
+  },
+  "tt1073664": {
+    "igdbId": 15,
+    "igdbUrl": "https://www.igdb.com/games/fallout-3",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ycw.jpg",
+    "artwork": "./art/igdb/tt1073664.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0416779": {
+    "igdbId": 549,
+    "igdbUrl": "https://www.igdb.com/games/god-of-war",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3ddc.jpg",
+    "artwork": "./art/igdb/tt0416779.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt0366758": {
+    "igdbId": 19,
+    "igdbUrl": "https://www.igdb.com/games/max-payne-2-the-fall-of-max-payne",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lcl.jpg",
+    "artwork": "./art/igdb/tt0366758.webp",
+    "shelf": "xbox",
+    "platform": "Xbox",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+  },
+  "tt8329350": {
+    "igdbId": 37001,
+    "igdbUrl": "https://www.igdb.com/games/ori-and-the-will-of-the-wisps",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocjl7.jpg",
+    "artwork": "./art/igdb/tt8329350.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/37001.json"
+  },
+  "tt1127708": {
+    "igdbId": 71,
+    "igdbUrl": "https://www.igdb.com/games/portal",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coay61.jpg",
+    "artwork": "./art/igdb/tt1127708.webp",
+    "edition": "The Orange Box",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt8558306": {
+    "igdbId": 76882,
+    "igdbUrl": "https://www.igdb.com/games/sekiro-shadows-die-twice",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2a23.jpg",
+    "artwork": "./art/igdb/tt8558306.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/76882.json"
+  },
+  "tt0296870": {
+    "igdbId": 456,
+    "igdbUrl": "https://www.igdb.com/games/starcraft-brood-war",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9n6r.jpg",
+    "artwork": "./art/igdb/tt0296870.webp",
+    "shelf": "archive"
+  },
+  "tt1800763": {
+    "igdbId": 512,
+    "igdbUrl": "https://www.igdb.com/games/uncharted-3-drake-s-deception",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tp8.jpg",
+    "artwork": "./art/igdb/tt1800763.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 3",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+  },
+  "tt1706601": {
+    "igdbId": 16,
+    "igdbUrl": "https://www.igdb.com/games/fallout-new-vegas",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1u60.jpg",
+    "artwork": "./art/igdb/tt1706601.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0802999": {
+    "igdbId": 731,
+    "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-iv",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lbv.jpg",
+    "artwork": "./art/igdb/tt0802999.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 3",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+  },
+  "tt6057416": {
+    "igdbId": 11169,
+    "igdbUrl": "https://www.igdb.com/games/final-fantasy-vii-remake",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobcwt.jpg",
+    "artwork": "./art/igdb/tt6057416.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11169.json"
+  },
+  "tt7791150": {
+    "igdbId": 14593,
+    "igdbUrl": "https://www.igdb.com/games/hollow-knight",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobfzp.jpg",
+    "artwork": "./art/igdb/tt7791150.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/14593.json"
+  },
+  "tt7896952": {
+    "igdbId": 26845,
+    "igdbUrl": "https://www.igdb.com/games/fire-emblem-three-houses",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1n8t.jpg",
+    "artwork": "./art/igdb/tt7896952.webp"
+  },
+  "tt4044024": {
+    "igdbId": 11156,
+    "igdbUrl": "https://www.igdb.com/games/horizon-zero-dawn",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2una.jpg",
+    "artwork": "./art/igdb/tt4044024.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11156.json"
+  },
+  "tt3983144": {
+    "igdbId": 11397,
+    "igdbUrl": "https://www.igdb.com/games/yakuza-0",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co252x.jpg",
+    "artwork": "./art/igdb/tt3983144.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 3",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11397.json"
+  },
+  "tt0413662": {
+    "igdbId": 327,
+    "igdbUrl": "https://www.igdb.com/games/age-of-empires-ii-the-age-of-kings",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55xo.jpg",
+    "artwork": "./art/igdb/tt0413662.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt15174768": {
+    "igdbId": 159119,
+    "igdbUrl": "https://www.igdb.com/games/dead-space--1",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cobkv5.jpg",
+    "artwork": "./art/igdb/tt15174768.webp",
+    "shelf": "xbox",
+    "platform": "Xbox Series X",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/159119.json"
+  },
+  "tt2321297": {
+    "igdbId": 529,
+    "igdbUrl": "https://www.igdb.com/games/far-cry-3",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vpd.jpg",
+    "artwork": "./art/igdb/tt2321297.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt9459718": {
+    "igdbId": 113112,
+    "igdbUrl": "https://www.igdb.com/games/hades--1",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cob9kr.jpg",
+    "artwork": "./art/igdb/tt9459718.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/113112.json"
+  },
+  "tt12496904": {
+    "igdbId": 112874,
+    "igdbUrl": "https://www.igdb.com/games/horizon-forbidden-west",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gvu.jpg",
+    "artwork": "./art/igdb/tt12496904.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/112874.json"
+  },
+  "tt0884870": {
+    "igdbId": 1271,
+    "igdbUrl": "https://www.igdb.com/games/okami",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3mpk.jpg",
+    "artwork": "./art/igdb/tt0884870.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt5238626": {
+    "igdbId": 11208,
+    "igdbUrl": "https://www.igdb.com/games/nier-automata",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pcj.jpg",
+    "artwork": "./art/igdb/tt5238626.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/11208.json"
+  },
+  "tt0217733": {
+    "igdbId": 1561,
+    "igdbUrl": "https://www.igdb.com/games/pokemon-red-version",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pi4.jpg",
+    "artwork": "./art/igdb/tt0217733.webp"
+  },
+  "tt0310011": {
+    "igdbId": 1558,
+    "igdbUrl": "https://www.igdb.com/games/pokemon-gold-version",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pia.jpg",
+    "artwork": "./art/igdb/tt0310011.webp"
+  },
+  "tt1037854": {
+    "igdbId": 239,
+    "igdbUrl": "https://www.igdb.com/games/starcraft-ii-wings-of-liberty",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tnn.jpg",
+    "artwork": "./art/igdb/tt1037854.webp",
+    "shelf": "archive"
+  },
+  "tt0177266": {
+    "igdbId": 358,
+    "igdbUrl": "https://www.igdb.com/games/super-mario-bros",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6pib.jpg",
+    "artwork": "./art/igdb/tt0177266.webp"
+  },
+  "tt5370130": {
+    "igdbId": 90101,
+    "igdbUrl": "https://www.igdb.com/games/super-smash-bros-ultimate",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2255.jpg",
+    "artwork": "./art/igdb/tt5370130.webp"
+  },
+  "tt6298000": {
+    "igdbId": 26192,
+    "igdbUrl": "https://www.igdb.com/games/the-last-of-us-part-ii",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ziw.jpg",
+    "artwork": "./art/igdb/tt6298000.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/26192.json"
+  },
+  "tt1699759": {
+    "igdbId": 113,
+    "igdbUrl": "https://www.igdb.com/games/assassins-creed-brotherhood",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocdky.jpg",
+    "artwork": "./art/igdb/tt1699759.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt2739708": {
+    "igdbId": 1970,
+    "igdbUrl": "https://www.igdb.com/games/assassins-creed-iv-black-flag",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4qfn.jpg",
+    "artwork": "./art/igdb/tt2739708.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt5807606": {
+    "igdbId": 19564,
+    "igdbUrl": "https://www.igdb.com/games/death-stranding",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocsvh.jpg",
+    "artwork": "./art/igdb/tt5807606.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 4",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/19564.json"
+  },
+  "tt1173898": {
+    "igdbId": 2254,
+    "igdbUrl": "https://www.igdb.com/games/dragon-ball-z-budokai-tenkaichi-3",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3r52.jpg",
+    "artwork": "./art/igdb/tt1173898.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt1288501": {
+    "igdbId": 548,
+    "igdbUrl": "https://www.igdb.com/games/gears-of-war-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co28gg.jpg",
+    "artwork": "./art/igdb/tt1288501.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0357718": {
+    "igdbId": 986,
+    "igdbUrl": "https://www.igdb.com/games/halo-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x77.jpg",
+    "artwork": "./art/igdb/tt0357718.webp",
+    "shelf": "xbox",
+    "platform": "Xbox",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+  },
+  "tt0259104": {
+    "igdbId": 132,
+    "igdbUrl": "https://www.igdb.com/games/warcraft-iii-reign-of-chaos",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xuq.jpg",
+    "artwork": "./art/igdb/tt0259104.webp",
+    "shelf": "archive"
+  },
+  "tt0462448": {
+    "igdbId": 98,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-most-wanted",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209j.jpg",
+    "artwork": "./art/igdb/tt0462448.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt2370518": {
+    "igdbId": 1985,
+    "igdbUrl": "https://www.igdb.com/games/metal-gear-solid-v-the-phantom-pain",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1v85.jpg",
+    "artwork": "./art/igdb/tt2370518.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0217729": {
+    "igdbId": 1511,
+    "igdbUrl": "https://www.igdb.com/games/pokemon-blue-version",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pi7.jpg",
+    "artwork": "./art/igdb/tt0217729.webp"
+  },
+  "tt0288740": {
+    "igdbId": 1514,
+    "igdbUrl": "https://www.igdb.com/games/pokemon-crystal-version",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pil.jpg",
+    "artwork": "./art/igdb/tt0288740.webp"
+  },
+  "tt0478230": {
+    "igdbId": 1517,
+    "igdbUrl": "https://www.igdb.com/games/pokemon-emerald-version",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zhr.jpg",
+    "artwork": "./art/igdb/tt0478230.webp"
+  },
+  "tt2385021": {
+    "igdbId": 1011,
+    "igdbUrl": "https://www.igdb.com/games/borderlands-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9ba3.jpg",
+    "artwork": "./art/igdb/tt2385021.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt0888006": {
+    "igdbId": 2720,
+    "igdbUrl": "https://www.igdb.com/games/bully",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cocd6z.jpg",
+    "artwork": "./art/igdb/tt0888006.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt3810192": {
+    "igdbId": 1877,
+    "igdbUrl": "https://www.igdb.com/games/cyberpunk-2077",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coaih8.jpg",
+    "artwork": "./art/igdb/tt3810192.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/1877.json"
+  },
+  "tt0277723": {
+    "igdbId": 730,
+    "igdbUrl": "https://www.igdb.com/games/grand-theft-auto-iii",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lb8.jpg",
+    "artwork": "./art/igdb/tt0277723.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt0217732": {
+    "igdbId": 1512,
+    "igdbUrl": "https://www.igdb.com/games/pokemon-yellow-version-special-pikachu-edition",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pih.jpg",
+    "artwork": "./art/igdb/tt0217732.webp"
+  },
+  "tt0437437": {
+    "igdbId": 837,
+    "igdbUrl": "https://www.igdb.com/games/prince-of-persia-warrior-within",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co9x1a.jpg",
+    "artwork": "./art/igdb/tt0437437.webp",
+    "shelf": "xbox",
+    "platform": "Xbox",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+  },
+  "tt12497042": {
+    "igdbId": 55163,
+    "igdbUrl": "https://www.igdb.com/games/resident-evil-village",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coab9q.jpg",
+    "artwork": "./art/igdb/tt12497042.webp",
+    "shelf": "xbox",
+    "platform": "Xbox Series X",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/55163.json"
+  },
+  "tt12497014": {
+    "igdbId": 134582,
+    "igdbUrl": "https://www.igdb.com/games/ratchet-and-clank-rift-apart",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2str.jpg",
+    "artwork": "./art/igdb/tt12497014.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 5",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/134582.json"
+  },
+  "tt0427889": {
+    "igdbId": 911,
+    "igdbUrl": "https://www.igdb.com/games/tom-clancy-s-splinter-cell-chaos-theory",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coamhg.jpg",
+    "artwork": "./art/igdb/tt0427889.webp",
+    "shelf": "xbox",
+    "platform": "Xbox",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox.dat"
+  },
+  "tt2224413": {
+    "igdbId": 3201,
+    "igdbUrl": "https://www.igdb.com/games/project-i-dot-g-i-dot-im-going-in",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mmm.jpg",
+    "artwork": "./art/igdb/tt2224413.webp",
+    "shelf": "archive"
+  },
+  "tt0275393": {
+    "igdbId": 241,
+    "igdbUrl": "https://www.igdb.com/games/counter-strike",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc32b.jpg",
+    "artwork": "./art/igdb/tt0275393.webp",
+    "shelf": "archive"
+  },
+  "tt2584348": {
+    "igdbId": 1372,
+    "igdbUrl": "https://www.igdb.com/games/counter-strike-global-offensive",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc32n.jpg",
+    "artwork": "./art/igdb/tt2584348.webp",
+    "shelf": "archive"
+  },
+  "tt0466736": {
+    "igdbId": 297,
+    "igdbUrl": "https://www.igdb.com/games/counter-strike-condition-zero",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1tx3.jpg",
+    "artwork": "./art/igdb/tt0466736.webp",
+    "shelf": "archive"
+  },
+  "tt7795464": {
+    "igdbId": 307,
+    "igdbUrl": "https://www.igdb.com/games/counter-strike-source",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1txv.jpg",
+    "artwork": "./art/igdb/tt7795464.webp",
+    "shelf": "archive"
+  },
+  "tt2290962": {
+    "igdbId": 2963,
+    "igdbUrl": "https://www.igdb.com/games/dota-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/cod313.jpg",
+    "artwork": "./art/igdb/tt2290962.webp",
+    "shelf": "archive"
+  },
+  "tt2071507": {
+    "igdbId": 115,
+    "igdbUrl": "https://www.igdb.com/games/league-of-legends",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coc99o.jpg",
+    "artwork": "./art/igdb/tt2071507.webp",
+    "shelf": "archive"
+  },
+  "tt10987766": {
+    "igdbId": 119161,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-heat",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/coar0x.jpg",
+    "artwork": "./art/igdb/tt10987766.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/119161.json"
+  },
+  "tt0790814": {
+    "igdbId": 99,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-carbon",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209k.jpg",
+    "artwork": "./art/igdb/tt0790814.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 3",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+  },
+  "tt5108242": {
+    "igdbId": 10965,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20a2.jpg",
+    "artwork": "./art/igdb/tt5108242.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/10965.json"
+  },
+  "tt0420798": {
+    "igdbId": 97,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-underground-2",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209h.jpg",
+    "artwork": "./art/igdb/tt0420798.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt2186922": {
+    "igdbId": 3193,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-most-wanted-53b9fef3-adb4-41a0-8ca0-ffcbb0060467",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20a5.jpg",
+    "artwork": "./art/igdb/tt2186922.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt1264900": {
+    "igdbId": 101,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-undercover",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209n.jpg",
+    "artwork": "./art/igdb/tt1264900.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 3",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%203.dat"
+  },
+  "tt7243342": {
+    "igdbId": 36662,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-payback",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209y.jpg",
+    "artwork": "./art/igdb/tt7243342.webp",
+    "shelf": "xbox",
+    "platform": "Xbox One",
+    "editionSource": "https://app.lizardbyte.dev/GameDB/games/36662.json"
+  },
+  "tt1708432": {
+    "igdbId": 248127,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-nitro--1",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6fyj.jpg",
+    "artwork": "./art/igdb/tt1708432.webp"
+  },
+  "tt0390296": {
+    "igdbId": 96,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-underground",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209g.jpg",
+    "artwork": "./art/igdb/tt0390296.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation 2",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%202.dat"
+  },
+  "tt1776254": {
+    "igdbId": 105,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-hot-pursuit",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2h9s.jpg",
+    "artwork": "./art/igdb/tt1776254.webp",
+    "shelf": "xbox",
+    "platform": "Xbox 360",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Microsoft%20-%20Xbox%20360.dat"
+  },
+  "tt2315506": {
+    "igdbId": 11639,
+    "igdbUrl": "https://www.igdb.com/games/need-for-speed-carbon-own-the-city",
+    "artworkSource": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209m.jpg",
+    "artwork": "./art/igdb/tt2315506.webp",
+    "shelf": "playstation",
+    "platform": "PlayStation Portable",
+    "editionSource": "https://github.com/libretro/libretro-database/blob/master/metadat/redump/Sony%20-%20PlayStation%20Portable.dat"
+  }
+}

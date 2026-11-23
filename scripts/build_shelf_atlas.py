@@ -7,8 +7,11 @@ DIST = Path(__file__).resolve().parents[1] / "dist"
 TILE, GRID, PAD = 96, 12, 2
 dest = DIST / "art" / "shelves"
 dest.mkdir(parents=True, exist_ok=True)
-art = sorted({i["artwork"] for src in ("imdb-items", "spotify-items", "book-items")
-              for i in json.loads((DIST / (src + ".json")).read_text())
+editions = json.loads((DIST / "game-editions.json").read_text()) if (DIST / "game-editions.json").exists() else {}
+items = [dict(i, artwork=editions.get(i["id"], {}).get("artwork") or i.get("artwork"))
+         for src in ("imdb-items", "spotify-items", "book-items")
+         for i in json.loads((DIST / (src + ".json")).read_text())]
+art = sorted({i["artwork"] for i in items
               if (i.get("artwork") or "").startswith("./art/") and (DIST / i["artwork"]).is_file()})
 for start in range(0, len(art), GRID * GRID):
     sheet = Image.new("RGB", (GRID*TILE, GRID*TILE))

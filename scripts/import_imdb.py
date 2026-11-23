@@ -74,7 +74,7 @@ def import_list(path):
             if series and not metadata.get("episodeCount"):
                 metadata.update(series_metadata(title_id, previous.get(title_id, {})))
             anime = metadata.get("isAnime") or any(genre.casefold() == "anime" for genre in genres)
-            category = "anime" if anime else "shows" if series else "movies"
+            category = ("anime" if series else "anime-movies") if anime else ("shows" if series else "movies")
             year = (row.get("Year") or "").strip()
             if kind == "video game":
                 platform = (row.get("Platform") or metadata.get("platform") or "").strip()

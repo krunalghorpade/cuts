@@ -1,5 +1,7 @@
 import * as THREE from './vendor/three.module.js';
-import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList, trailerStreams } from './catalog.js';
+import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList, trailerStreams, musicPreviews } from './catalog.js';
+import {installMusicPlayers} from './music-players.js';
+import {installArcade} from './arcade.js';
 import { buildInterior } from './interior.js';
 import {installPosters,installTelevisions} from './displays.js';
 import { rooms, rise, stair, inside, roomAt, groundAt } from './plan.js';
@@ -21,9 +23,9 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color('#63584a');
 scene.fog = new THREE.FogExp2('#63584a', 0.012);
 const camera = new THREE.PerspectiveCamera(73, innerWidth / innerHeight, 0.08, 80);
-camera.position.set(-3.5, 1.62, 4.1);
+camera.position.set(-1.35,1.62,3.25);
 camera.rotation.order = 'YXZ';
-camera.rotation.y = -.31;
+camera.rotation.y = .29;
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
 renderer.setPixelRatio(Math.min(devicePixelRatio, Math.sqrt(900000/(innerWidth*innerHeight))));
 renderer.setSize(innerWidth, innerHeight);
@@ -56,13 +58,16 @@ function label(parent, text, x, y, z, w, h, opts = {}) {
 const interior=buildInterior(scene,label);
 const displayTargets=[[],[]];
 const updatePosters=installPosters(interior.floors,ITEMS,displayTargets);
-const updateTVs=installTelevisions(canvas,interior.screens,ITEMS,trailerStreams);
-const {stacks,interactables,destinations}=stockRooms(interior,box,label);
+const {stacks,interactables,destinations,roomStock}=stockRooms(interior,box,label);
+const updateTVs=installTelevisions(canvas,interior.screens,roomStock,trailerStreams);
+for(const device of interior.devices)displayTargets[device.userData.level-1].push(device);
 for(const tv of interior.screens){
   const floor=rooms.find(room=>room.id===tv.room).floor;
   tv.screen.userData.level=floor;displayTargets[floor-1].push(tv.screen);
 }
 for(const door of interior.doors)interactables[door.level-1].push(...door.faces);
+const musicPlayer=installMusicPlayers(roomStock.get('music')||[],musicPreviews,interior.devices,openDetail);
+const openArcade=installArcade(()=>{uiOpen=false;});
 let ground=0,level=1;
 function refreshFloor(){
   level=ground>rise/2?2:1;
@@ -71,13 +76,13 @@ function refreshFloor(){
   $('entryLocation').textContent='Level '+level+' · '+(onStair?'Staircase':roomAt(level,camera.position.x,camera.position.z)?.name||'Landing');
 }
 refreshFloor();
-let active=false, uiOpen=false, yaw=-.31, pitch=0, focusedCase=null, selectedCase=null, toastTimer;
+let active=false, uiOpen=false, yaw=.29, pitch=0, focusedCase=null, selectedCase=null, toastTimer;
 let dragLook=false, dragPointer=null, dragLastX=0, dragLastY=0;
 const keys=new Set(); const raycaster=new THREE.Raycaster(); const hoverPoint=new THREE.Vector2();let hasPointer=false,suppressClick=false,pressX=0,pressY=0; const clock=new THREE.Clock();
 const joystick={x:0,y:0,pointer:null}; let lookStart=null,lookPointer=null,lookLastX=0,lookLastY=0;
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
 function requestLook(){ if(!mobile && !uiOpen && document.pointerLockElement!==canvas) { const request=canvas.requestPointerLock?.(); request?.catch?.(()=>showToast('Drag on the scene to look around')); } }
-function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');updateTVs(camera,roomAt(level,camera.position.x,camera.position.z)?.id,true); }
+function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');const room=roomAt(level,camera.position.x,camera.position.z)?.id;updateTVs(camera,room,true);musicPlayer.update(room==='music'); }
 function pause(){ if(!active||uiOpen)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Continue exploring'; document.exitPointerLock?.(); }
 function showToast(message){const el=$('toast');el.textContent=message;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2400);}
 function openCatalog(){preview.hide();currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();$('searchInput').focus();}
@@ -141,10 +146,13 @@ function showDetailItem(direction=0){
     sourceLink.href=item.sourceUrl;
     sourceLink.textContent=item.album?'Open on Spotify':'Open on '+item.source;
   }
+  const coverSource=$('coverSource');
+  coverSource.classList.toggle('hidden',!item.igdbUrl);
+  if(item.igdbUrl)coverSource.href=item.igdbUrl;
   const listNames=(item.playlists || []).map(id=>playlists[id]).filter(Boolean);
   $('detailNote').textContent=item.album
     ? [item.featuredTrack, listNames.join(', ')].filter(Boolean).join(' · ')
-    : [item.pages ? item.pages+' pages' : '', item.platforms?.join(', ') || item.platform, item.episodeCount!=null ? item.episodeCount+' episodes' : '', (item.genres||[]).join(', ')].filter(Boolean).join(' · ');
+    : [item.pages ? item.pages+' pages' : '', item.platforms?.join(', ') || item.platform, item.edition, item.episodeCount!=null ? item.episodeCount+' episodes' : '', (item.genres||[]).join(', ')].filter(Boolean).join(' · ');
   if(item.album)enrichAudio(item);
 }
 $('itemPrev').onclick=()=>turnItem(-1);
@@ -164,7 +172,7 @@ function arrive(floor,x,z,direction,lookPitch=0){
   selectCase(null);hasPointer=false;
   ground=(floor-1)*rise;camera.position.set(x,ground+1.62,z);yaw=direction;pitch=lookPitch;
   camera.rotation.y=yaw;camera.rotation.x=pitch;keys.clear();
-  enter();refreshFloor();camera.updateMatrixWorld();
+  refreshFloor();enter();camera.updateMatrixWorld();
 }
 function visitShelf(){
   if(!currentDetailItem)return;
@@ -240,7 +248,7 @@ function makeFrame(color){
 }
 const hoverFrame=makeFrame('#bebebe'),selectionFrame=makeFrame('#ffffff');
 function outline(frame,shell){
-  if(!shell){frame.visible=false;return;}
+  if(!shell||shell.userData.device){frame.visible=false;return;}
   if(shell.userData.display){
     shell.add(frame);frame.visible=true;
     frame.position.set(0,0,.001);frame.scale.set(shell.userData.width,shell.userData.height,1);return;
@@ -252,7 +260,15 @@ function outline(frame,shell){
 function selectCase(shell){
   selectedCase=shell;outline(selectionFrame,shell);
 }
+function useTarget(shell){
+  const data=shell?.userData;
+  if(!data?.device){selectCase(shell);return;}
+  selectCase(null);
+  if(['vinyl','cassettes','cds'].includes(data.device)){musicPlayer.toggle(data.device);return;}
+  keys.clear();uiOpen=true;document.exitPointerLock?.();openArcade(data.device,data.title);
+}
 function inspect(){
+  if(focusedCase?.userData.device){useTarget(focusedCase);return;}
   const target=focusedCase?.userData.display==='tv'?focusedCase:selectedCase||focusedCase;
   if(!target){showToast('Select a case on the shelf');return;}
   openDetail(target.userData.item);
@@ -270,7 +286,7 @@ canvas.addEventListener('pointerleave',()=>{hasPointer=false;});
 canvas.addEventListener('click',event=>{
   if(!active||uiOpen||suppressClick)return;
   const locked=document.pointerLockElement===canvas;
-  selectCase(pickStackAt(locked?innerWidth/2:event.clientX,locked?innerHeight/2:event.clientY));
+  useTarget(pickStackAt(locked?innerWidth/2:event.clientX,locked?innerHeight/2:event.clientY));
 });
 canvas.addEventListener('dblclick',()=>{if(active&&!uiOpen&&!mobile)requestLook();});
 document.addEventListener('pointerlockchange',()=>{if(!mobile&&active&&!uiOpen&&document.pointerLockElement!==canvas)pause();});
@@ -279,7 +295,7 @@ canvas.addEventListener('pointerdown',event=>{suppressClick=false;pressX=event.c
 function endDrag(event){if(event.pointerId===dragPointer){dragLook=false;dragPointer=null;}}
 canvas.addEventListener('pointerup',endDrag);canvas.addEventListener('pointercancel',endDrag);
 document.addEventListener('keydown',event=>{
-  if($('mapDialog').open)return;
+  if($('mapDialog').open||$('arcadeGame').open)return;
   if(currentDetailItem){
     if(event.key==='Escape')closeDetail();
     else if(event.key==='ArrowLeft'||event.key==='ArrowRight'){
@@ -309,7 +325,7 @@ const joyEl=$('joystick'),stickEl=$('stick');
 function updateJoy(e){const r=joyEl.getBoundingClientRect();const dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),len=Math.hypot(dx,dy),scale=len>39?39/len:1;joystick.x=dx*scale/39;joystick.y=-dy*scale/39;stickEl.style.left=`calc(50% + ${dx*scale}px)`;stickEl.style.top=`calc(50% + ${dy*scale}px)`;}
 joyEl.addEventListener('pointerdown',e=>{e.preventDefault();joystick.pointer=e.pointerId;joyEl.setPointerCapture(e.pointerId);updateJoy(e);});joyEl.addEventListener('pointermove',e=>{if(e.pointerId===joystick.pointer)updateJoy(e);});
 function releaseJoy(e){if(e.pointerId!==joystick.pointer)return;joystick.pointer=null;joystick.x=joystick.y=0;stickEl.style.left='50%';stickEl.style.top='50%';}joyEl.addEventListener('pointerup',releaseJoy);joyEl.addEventListener('pointercancel',releaseJoy);
-const lookEl=$('lookPad');lookEl.addEventListener('pointerdown',e=>{e.preventDefault();lookPointer=e.pointerId;lookLastX=e.clientX;lookLastY=e.clientY;lookStart={x:e.clientX,y:e.clientY,moved:false};lookEl.setPointerCapture(e.pointerId);});lookEl.addEventListener('pointermove',e=>{if(e.pointerId!==lookPointer||uiOpen)return;if(lookStart&&Math.hypot(e.clientX-lookStart.x,e.clientY-lookStart.y)>12)lookStart.moved=true;yaw-=(e.clientX-lookLastX)*.005;pitch=clamp(pitch-(e.clientY-lookLastY)*.005,-1.25,1.25);lookLastX=e.clientX;lookLastY=e.clientY;});lookEl.addEventListener('pointerup',e=>{if(e.pointerId!==lookPointer)return;if(lookStart&&!lookStart.moved&&active&&!uiOpen){const id=pickStackAt(e.clientX,e.clientY);selectCase(id);}lookPointer=null;lookStart=null;});lookEl.addEventListener('pointercancel',e=>{if(e.pointerId===lookPointer)lookPointer=null;});
+const lookEl=$('lookPad');lookEl.addEventListener('pointerdown',e=>{e.preventDefault();lookPointer=e.pointerId;lookLastX=e.clientX;lookLastY=e.clientY;lookStart={x:e.clientX,y:e.clientY,moved:false};lookEl.setPointerCapture(e.pointerId);});lookEl.addEventListener('pointermove',e=>{if(e.pointerId!==lookPointer||uiOpen)return;if(lookStart&&Math.hypot(e.clientX-lookStart.x,e.clientY-lookStart.y)>12)lookStart.moved=true;yaw-=(e.clientX-lookLastX)*.005;pitch=clamp(pitch-(e.clientY-lookLastY)*.005,-1.25,1.25);lookLastX=e.clientX;lookLastY=e.clientY;});lookEl.addEventListener('pointerup',e=>{if(e.pointerId!==lookPointer)return;if(lookStart&&!lookStart.moved&&active&&!uiOpen){const id=pickStackAt(e.clientX,e.clientY);useTarget(id);}lookPointer=null;lookStart=null;});lookEl.addEventListener('pointercancel',e=>{if(e.pointerId===lookPointer)lookPointer=null;});
 function tryMove(x,z){
   const h=groundAt(x,z,ground);
   if(h===null||Math.abs(h-ground)>.44)return;
@@ -332,7 +348,7 @@ function pickStackAt(clientX,clientY){
   raycaster.intersectObjects(visible,false,hits);
   const hit=hits[0];
   if(!hit||hit.distance>(hit.object.userData.display?14:8))return null;
-  if(!hit?.object.userData.item)return null;
+  if(!hit.object.userData.item&&!hit.object.userData.device)return null;
   const p=camera.position,q=hit.point;
   for(const wall of interior.occluders){
     if(!onStair && wall.level!==level)continue;
@@ -354,6 +370,14 @@ function updateFocus(){
     const sameFloor=display?interior.floors[selectedCase.userData.level-1].visible:interactables[level-1].includes(selectedCase);
     if(!inRange||!sameFloor)selectCase(null);
   }
+  if(focusedCase?.userData.device){
+    const info=focusedCase.userData;prompt.classList.remove('hidden');$('displayDetails').classList.add('hidden');
+    prompt.querySelector('.keycap').textContent=mobile?'Tap':aim?'E':'Click';
+    const action=['bricks','drift'].includes(info.device)?'Play '+info.title:musicPlayer.description(info.device);
+    $('promptText').textContent=action;$('touchInspect').textContent=action;
+    return;
+  }
+  $('touchInspect').textContent='View item';
   const hoveredTV=focusedCase?.userData.display==='tv' && focusedCase!==selectedCase;
   const current=hoveredTV?focusedCase:selectedCase||focusedCase;
   const isSelected=current && current===selectedCase;
@@ -376,7 +400,9 @@ function animate(){
   }
   if(active&&!uiOpen&&intro.classList.contains('hidden')){yaw+=((keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0))*dt*1.55;pitch=clamp(pitch+((keys.has('ArrowUp')?1:0)-(keys.has('ArrowDown')?1:0))*dt*1.3,-1.28,1.28);updateMovement(dt);camera.rotation.y=yaw;camera.rotation.x=pitch;camera.updateMatrixWorld();updateFocus();}
   updatePosters(performance.now());
-  updateTVs(camera,roomAt(level,camera.position.x,camera.position.z)?.id,active&&!uiOpen);
+  const currentRoom=roomAt(level,camera.position.x,camera.position.z)?.id;
+  updateTVs(camera,currentRoom,active&&!uiOpen);
+  musicPlayer.update(active&&!uiOpen&&currentRoom==='music',dt);
   if(!currentDetailItem){renderer.autoClear=false;renderer.clear();renderer.render(scene,camera);}
   preview.render();
 }animate();

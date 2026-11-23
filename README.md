@@ -9,17 +9,22 @@ A two-floor, first-person media store for desktop, tablet and phone. The interfa
 - The item carousel opens on the selected case. Use the left and right buttons or arrow keys to browse its media section in shelf order. Drag the centered 3D case to rotate it. With the preview focused, Shift + left/right rotates horizontally and up/down rotates vertically. Reset view restores the opening angle.
 - The floor map takes you to a room on either floor. The Book Library entrance stays open. The other doors swing open as you approach from either side and close after you walk away. The switchback stairs connect the two levels on foot.
 
-The digital posters on the walls, staircase and landing change once a minute. Click or tap a poster and choose View details to inspect its item. Hover over a playing TV to read the title, or select it to open the same details. Trailer sound gets quieter with distance. Use Mute TVs or press V to silence it. Playback pauses outside the TV room or while browsing a menu. The Level 2 gallery TV plays game trailers from the collection. The upstairs cartridge room has the original CRT, which plays promotions for verified legacy cartridge titles.
+Level 1 has a private projector theatre with movie and anime-film racks, and a TV room with separate regular and anime series shelves. Level 2 has a music room, a retro gaming room with two playable arcade cabinets, and a modern gaming desk with PlayStation, Xbox and Nintendo consoles. Other game editions without a verified console disc are filed in the collectibles annex.
+
+Each screen plays trailers drawn from its own shelves. The 4:3 CRT uses legacy cartridge titles. Digital posters change once a minute. Click or tap a poster or a playing screen and select View details to inspect its item. Trailer sound follows your distance from the screen. Use Mute TVs or V to silence it.
+
+The music room starts on vinyl. Select a physical deck or its on-screen control to switch formats or turn it off. One audio player shuffles Spotify previews from albums stocked in the selected format. Leaving the room or opening a menu pauses playback. The active track links to Spotify.
 
 ## Catalog
 
-The film, series and anime inventory comes from the supplied IMDb CSV. Each IMDb title ID appears once. A series goes on one shelf. Anime has its own section on Level 2. Box sets use a packaging estimate of four episodes per disc and four discs per inner case. Every set has a 135 × 190 mm cover. Additional discs and cases increase depth. Sets at least half as deep as their cover width stand upright in their own shelf slot. When an episode count is unavailable, the item uses a standard box without an inferred count.
+The film, series and anime inventory comes from the supplied IMDb CSV. Each IMDb title ID appears once. A series goes on one shelf. Anime movies and anime series have separate shelves in their respective screening rooms. Box sets use a packaging estimate of four episodes per disc and four discs per inner case. Every set has a 135 × 190 mm cover. Additional discs and cases increase depth. Sets at least half as deep as their cover width stand upright in their own shelf slot. When an episode count is unavailable, the item uses a standard box without an inferred count.
 
 The music catalog combines the previously imported Kratex Favs selection with the other supplied Spotify playlists. Each album retains its source playlists. Each album gets one case per eligible format, using Spotify's album release year. Vinyl covers releases through 1989 and from 2021 onward. Cassettes cover 1980 through 2000 inclusive, and CDs cover 1985 onward. Source links are available from the collection. TheAudioDB enriches album details where available. Games also come from the IMDb CSV. Titles without a listed physical platform use a neutral game archive case. The book shelves use the owner’s Open Library list, with one physical copy per work and a link to the listed edition. Book dimensions use the edition’s measurements where available and estimates otherwise.
 
 ## Update data
 
 - Run `python3 scripts/import_trailers.py` after updating IMDb titles to refresh verified Internet Archive trailer streams. An optional HTTPS `Trailer URL` column can supply a directly playable trailer for a specific IMDb ID.
+- Run `python3 scripts/import_igdb.py` to refresh IGDB covers for matched game editions and `python3 scripts/import_music_previews.py` to update Spotify preview availability.
 - Run `python3 scripts/import_books.py` to refresh the Open Library list, edition details, and book covers.
 
 - Run `python3 scripts/import_imdb.py path/to/watchlist.csv` with the IMDb title-list export. Series episode counts use matched TVmaze IDs or credited series metadata. The importer reuses local posters for existing IMDb IDs.

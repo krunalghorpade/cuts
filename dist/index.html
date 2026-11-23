@@ -13,7 +13,7 @@
 <body>
   <canvas id="scene" aria-label="Interactive three-dimensional basement media store"></canvas>
   <header class="topbar">
-    <span id="entryLocation" class="location">Level 1 · Music + game lounge</span>
+    <span id="entryLocation" class="location">Level 1 · Private movie theatre</span>
     <nav aria-label="Store menus">
       <button type="button" id="mapBtn">Floor map</button>
       <button type="button" id="browseBtn">Collection <span id="itemCount"></span></button>
@@ -33,6 +33,11 @@
     <div class="aim" aria-hidden="true"></div>
     <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap"></span><span id="promptText"></span><button id="displayDetails" class="hidden" type="button">View details</button></div>
     <button id="tvSound" class="hidden" type="button">Mute TVs</button>
+    <section id="musicControls" class="hidden" aria-label="Music players">
+      <div class="deck-buttons"><button data-deck="vinyl" type="button">Vinyl</button><button data-deck="cassettes" type="button">Cassette</button><button data-deck="cds" type="button">CD</button></div>
+      <p id="musicTrack" aria-live="polite"></p><button id="musicResume" type="button" class="hidden">Play audio</button>
+      <a id="musicLink" class="hidden" target="_blank" rel="noopener noreferrer">Open on Spotify</a> <button id="musicItem" class="hidden" type="button">View album</button>
+    </section>
     <details class="controls">
       <summary>Controls</summary>
       <dl><dt>Move</dt><dd>W A S D</dd><dt>Look</dt><dd>Drag or arrow keys</dd><dt>Select</dt><dd>Click a case, poster or TV</dd><dt>View item</dt><dd>E</dd><dt>Run</dt><dd>Hold Shift</dd><dt>Pause</dt><dd>Esc</dd><dt>TV sound</dt><dd>V</dd></dl>
@@ -73,10 +78,14 @@
     <dl class="detail-meta"><dt>Release</dt><dd id="detailYear"></dd><dt>Format</dt><dd id="detailFormatValue"></dd><dt id="sizeLabel">Case size</dt><dd id="detailSize"></dd><dt>Source</dt><dd id="detailSource"></dd></dl>
     <p id="detailNote" class="detail-note"></p><div id="audioExtra" class="audio-extra hidden"></div>
     <a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
+    <a id="coverSource" class="source-link hidden" target="_blank" rel="noopener noreferrer">Cover art on IGDB</a>
     <div class="detail-actions"><button id="visitShelf" class="primary-button" type="button">Go to shelf</button></div>
     </div></div>
   </aside>
 
+  <dialog id="arcadeGame" class="map-dialog" aria-labelledby="arcadeName"><header class="panel-head"><h2 id="arcadeName"></h2><button id="leaveArcade" type="button">Leave game</button></header>
+    <canvas id="arcadeCanvas" width="480" height="320" tabindex="0" aria-label="Arcade playfield"></canvas><p id="arcadeGuide"></p><span id="arcadeScore"></span> <button id="arcadeAgain" type="button">Play again</button>
+  </dialog>
   <dialog id="mapDialog" class="map-dialog" aria-labelledby="mapTitle">
     <header class="panel-head"><h2 id="mapTitle">Floor map</h2><button id="closeMap" type="button" aria-label="Close floor map">Close</button></header>
     <div class="level-tabs"><button id="levelOne" type="button">Level 1</button><button id="levelTwo" type="button">Level 2</button></div>
