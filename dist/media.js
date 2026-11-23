@@ -49,6 +49,7 @@ const formats = {
   cd: [142,125,10.4,'CD jewel case','#bfc7ca'],
   cassette: [109,69.6,16.8,'Cassette case','#c4c5bc'],
   switch: [21,31,3,'Switch game card','#383a38'],
+  ds: [33,35,3.8,'Nintendo DS game card','#484848'],
   gba: [60,34,9,'Game Boy Advance cartridge','#315344'],
   dvd: [135,190,14,'DVD case','#202123'],
   bluray: [135,171,12,'Blu-ray case','#1d5da4'],
@@ -58,9 +59,10 @@ const formats = {
 export function caseSpec(item){
   const kinds={vinyl:'vinyl',cds:'cd',cassettes:'cassette',shows:'boxset',anime:'boxset','game-discs':'game'};
   let kind=kinds[item.category];
-  if(item.category==='cartridges')kind=/advance|gba/i.test(item.platform||'')?'gba':'switch';
+  if(item.category==='cartridges')kind=item.platform==='Nintendo DS'?'ds':/advance|gba/i.test(item.platform||'')?'gba':'switch';
   if(!kind)kind=isBluRay(item)?'bluray':'dvd';
   let [width,height,depth,label,shell]=formats[kind];
+  if(kind==='game' && item.source==='RAWG')label='Game archive case';
   if(kind==='boxset'){
     label=item.category==='anime'?'Anime box set':'Series box set';
     // Estimate four episodes per disc and four discs per inner case. Large sets
@@ -77,7 +79,7 @@ export function caseSpec(item){
 }
 function shellMaterial(color){if(!shellCache.has(color))shellCache.set(color,new THREE.MeshStandardMaterial({color,metalness:.12,roughness:.42}));return shellCache.get(color);}
 const bandCanvas=document.createElement('canvas');bandCanvas.width=512;bandCanvas.height=64;const bg=bandCanvas.getContext('2d');bg.fillStyle='#e5f3ff';bg.fillRect(0,0,512,64);bg.fillStyle='#194a86';bg.font='bold 34px Arial';bg.fillText('BLU-RAY',26,43);const blueBandTexture=new THREE.CanvasTexture(bandCanvas);blueBandTexture.colorSpace=THREE.SRGBColorSpace;
-const gameCanvas=document.createElement('canvas');gameCanvas.width=512;gameCanvas.height=64;const gg=gameCanvas.getContext('2d');gg.fillStyle='#e9f1ff';gg.fillRect(0,0,512,64);gg.fillStyle='#205591';gg.font='bold 33px Arial';gg.fillText('GAME DISC',26,43);const gameBandTexture=new THREE.CanvasTexture(gameCanvas);gameBandTexture.colorSpace=THREE.SRGBColorSpace;
+const gameCanvas=document.createElement('canvas');gameCanvas.width=512;gameCanvas.height=64;const gg=gameCanvas.getContext('2d');gg.fillStyle='#e9f1ff';gg.fillRect(0,0,512,64);gg.fillStyle='#205591';gg.font='bold 33px Arial';gg.fillText('GAME ARCHIVE',26,43);const gameBandTexture=new THREE.CanvasTexture(gameCanvas);gameBandTexture.colorSpace=THREE.SRGBColorSpace;
 const templates=new Map(), printMaterials=new Map();
 function printMaterial(map){
   if(!printMaterials.has(map))printMaterials.set(map,new THREE.MeshBasicMaterial({map}));
@@ -106,9 +108,14 @@ export function createMediaCase(item,onShelf=false){
     }else if(kind==='game'||kind==='bluray'){
       face(w-.004,h*.89,0,-h*.038,art);
       face(w-.004,h*.067,0,h*.447,kind==='game'?gameBandTexture:blueBandTexture);
-    }else if(kind==='switch'||kind==='gba'){
+    }else if(kind==='switch'||kind==='gba'||kind==='ds'){
       face(w*.84,h*.72,0,-h*.048,art);
       group.add(makeBox(w*.94,h*.08,d*.06,shellMaterial(spec.shell),0,h*.445,front));
+      const contactCount=kind==='ds'?17:kind==='switch'?16:32;
+      const span=w*.8, pitch=span/contactCount;
+      for(let i=0;i<contactCount;i++){
+        group.add(makeBox(pitch*.66,h*.35,.00018,shellMaterial('#b9954c'),-span/2+pitch*(i+.5),-h*.265,-d/2-.0001));
+      }
     }else if(kind==='cassette'){
       face(w*.96,h*.93,0,0,art);
       group.add(makeBox(w*.98,.0015,.0003,silver,0,-h*.47,front+.00015));

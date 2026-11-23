@@ -1,0 +1,410 @@
+[
+  {
+    "id": "rawg:3070",
+    "rawgId": 3070,
+    "title": "Fallout 4",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "PlayStation 4",
+      "PC",
+      "PlayStation 5",
+      "Xbox One"
+    ],
+    "creator": "Bethesda Game Studios",
+    "year": "2015",
+    "genres": [
+      "Action",
+      "RPG"
+    ],
+    "artwork": "./art/rawg/3070.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/fallout-4"
+  },
+  {
+    "id": "rawg:1000841",
+    "rawgId": 1000841,
+    "title": "Fallout 4: Next-Gen",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "Xbox Series S/X",
+      "PlayStation 5",
+      "PlayStation 4",
+      "Xbox One",
+      "PC"
+    ],
+    "creator": "Bethesda Game Studios",
+    "year": "2024",
+    "genres": [
+      "Action",
+      "Shooter",
+      "RPG"
+    ],
+    "artwork": "./art/rawg/1000841.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/fallout-4-next-gen"
+  },
+  {
+    "id": "rawg:13554",
+    "rawgId": 13554,
+    "title": "Fallout",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "Classic Macintosh",
+      "PC",
+      "Linux",
+      "macOS"
+    ],
+    "creator": "Black Isle Studios, Interplay Entertainment",
+    "year": "1997",
+    "genres": [
+      "RPG"
+    ],
+    "artwork": "./art/rawg/13554.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/fallout-a-post-nuclear-role-playing-game"
+  },
+  {
+    "id": "rawg:58585",
+    "rawgId": 58585,
+    "title": "Fallout 76",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "PlayStation 4",
+      "Xbox One",
+      "PC"
+    ],
+    "creator": "Bethesda Game Studios",
+    "year": "2018",
+    "genres": [
+      "Action",
+      "Adventure",
+      "RPG"
+    ],
+    "artwork": "./art/rawg/58585.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/fallout-76"
+  },
+  {
+    "id": "rawg:43422",
+    "rawgId": 43422,
+    "title": "Fallout: New Vegas - Ultimate Edition",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "Xbox 360",
+      "PC",
+      "PlayStation 3"
+    ],
+    "creator": "Obsidian Entertainment",
+    "year": "2012",
+    "genres": [
+      "Action",
+      "Shooter",
+      "RPG"
+    ],
+    "artwork": "./art/rawg/43422.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/fallout-new-vegas-ultimate-edition"
+  },
+  {
+    "id": "rawg:559",
+    "rawgId": 559,
+    "title": "Fallout Shelter",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "PlayStation 4",
+      "Xbox One",
+      "PC",
+      "Nintendo Switch",
+      "Android",
+      "iOS"
+    ],
+    "creator": "Bethesda Softworks, Bethesda Game Studios",
+    "year": "2015",
+    "genres": [
+      "RPG",
+      "Simulation"
+    ],
+    "artwork": "./art/rawg/559.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/fallout-shelter"
+  },
+  {
+    "id": "rawg:4459",
+    "rawgId": 4459,
+    "title": "Grand Theft Auto IV",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "Xbox 360",
+      "PC",
+      "PlayStation 3",
+      "Xbox One"
+    ],
+    "creator": "Rockstar North",
+    "year": "2008",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "artwork": "./art/rawg/4459.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-auto-iv"
+  },
+  {
+    "id": "rawg:972995",
+    "rawgId": 972995,
+    "title": "Grand Theft Auto VI",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "Xbox Series S/X",
+      "PlayStation 5"
+    ],
+    "creator": "Rockstar Games",
+    "year": "2026",
+    "genres": [
+      "Action"
+    ],
+    "artwork": "./art/rawg/972995.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-aito-vi"
+  },
+  {
+    "id": "rawg:3498",
+    "rawgId": 3498,
+    "title": "Grand Theft Auto V",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "PlayStation 5",
+      "Xbox Series S/X",
+      "PlayStation 3",
+      "PC",
+      "PlayStation 4",
+      "Xbox 360",
+      "Xbox One"
+    ],
+    "creator": "Rockstar North, Rockstar Games",
+    "year": "2013",
+    "genres": [
+      "Action"
+    ],
+    "artwork": "./art/rawg/3498.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-auto-v"
+  },
+  {
+    "id": "rawg:378578",
+    "rawgId": 378578,
+    "title": "Grand Theft Auto IV: Complete Edition",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "PC",
+      "PlayStation 3",
+      "Xbox 360"
+    ],
+    "creator": "Rockstar Toronto",
+    "year": "2010",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "artwork": "./art/rawg/378578.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-auto-iv-complete-edition"
+  },
+  {
+    "id": "rawg:708998",
+    "rawgId": 708998,
+    "title": "Grand Theft Auto III: The Definitive Edition",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "PC",
+      "Xbox One",
+      "Nintendo Switch",
+      "PlayStation 4",
+      "Xbox Series S/X",
+      "PlayStation 5"
+    ],
+    "creator": "Rockstar Games, Grove Street Games",
+    "year": "2021",
+    "genres": [
+      "Action",
+      "Shooter",
+      "Adventure"
+    ],
+    "artwork": "./art/rawg/708998.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-auto-iii-the-definitive-edition"
+  },
+  {
+    "id": "rawg:5200",
+    "rawgId": 5200,
+    "title": "Grand Theft Auto: Chinatown Wars",
+    "category": "cartridges",
+    "format": "Game card",
+    "platform": "Nintendo DS",
+    "platforms": [
+      "Android",
+      "iOS",
+      "Nintendo DS",
+      "PS Vita",
+      "PSP"
+    ],
+    "creator": "Rockstar North, Rockstar Games, Rockstar Leeds",
+    "year": "2009",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "artwork": "./art/rawg/5200.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/gta-chinatown-wars"
+  },
+  {
+    "id": "rawg:430",
+    "rawgId": 430,
+    "title": "Grand Theft Auto: Vice City",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "Android",
+      "macOS",
+      "PC",
+      "iOS",
+      "PlayStation 4",
+      "PS Vita",
+      "PlayStation 2",
+      "Xbox"
+    ],
+    "creator": "Rockstar North",
+    "year": "2002",
+    "genres": [
+      "Action"
+    ],
+    "artwork": "./art/rawg/430.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-auto-vice-city"
+  },
+  {
+    "id": "rawg:416",
+    "rawgId": 416,
+    "title": "Grand Theft Auto: San Andreas",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "macOS",
+      "PC",
+      "iOS",
+      "Xbox",
+      "Android",
+      "PlayStation 4",
+      "PlayStation 3",
+      "PlayStation 2",
+      "Xbox 360",
+      "Xbox One"
+    ],
+    "creator": "Rockstar North, War Drum Studios",
+    "year": "2004",
+    "genres": [
+      "Action"
+    ],
+    "artwork": "./art/rawg/416.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-auto-san-andreas"
+  },
+  {
+    "id": "rawg:677164",
+    "rawgId": 677164,
+    "title": "Grand Theft Auto: The Trilogy – The Definitive Edition",
+    "category": "cartridges",
+    "format": "Game card",
+    "platform": "Nintendo Switch",
+    "platforms": [
+      "PlayStation 4",
+      "Nintendo Switch",
+      "Xbox Series S/X",
+      "PlayStation 5",
+      "Android",
+      "Xbox One",
+      "iOS",
+      "PC"
+    ],
+    "creator": "Grove Street Games",
+    "year": "2021",
+    "genres": [
+      "Action",
+      "Shooter"
+    ],
+    "artwork": "./art/rawg/677164.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-auto-the-trilogy-the-definitive-editio"
+  },
+  {
+    "id": "rawg:709004",
+    "rawgId": 709004,
+    "title": "Grand Theft Auto: San Andreas – The Definitive Edition",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "PlayStation 5",
+      "Xbox Series S/X",
+      "PC",
+      "PlayStation 4",
+      "Nintendo Switch",
+      "Xbox One",
+      "PS Vita"
+    ],
+    "creator": "Rockstar Games, Grove Street Games",
+    "year": "2021",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "artwork": "./art/rawg/709004.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-auto-san-andreas-the-definitive-editio"
+  },
+  {
+    "id": "rawg:4059",
+    "rawgId": 4059,
+    "title": "Grand Theft Auto: Vice City Stories",
+    "category": "game-discs",
+    "format": "Archive case",
+    "platform": null,
+    "platforms": [
+      "PSP",
+      "PlayStation 2"
+    ],
+    "creator": "Rockstar North, Rockstar Leeds",
+    "year": "2006",
+    "genres": [
+      "Action"
+    ],
+    "artwork": "./art/rawg/4059.webp",
+    "source": "RAWG",
+    "sourceUrl": "https://rawg.io/games/grand-theft-auto-vice-city-stories"
+  }
+]

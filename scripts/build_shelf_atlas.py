@@ -7,7 +7,7 @@ DIST = Path(__file__).resolve().parents[1] / "dist"
 TILE, GRID, PAD = 96, 12, 2
 dest = DIST / "art" / "shelves"
 dest.mkdir(parents=True, exist_ok=True)
-art = sorted({i["artwork"] for src in ("trakt-items", "spotify-items", "backloggd-items")
+art = sorted({i["artwork"] for src in ("trakt-items", "spotify-items", "rawg-items")
               for i in json.loads((DIST / (src + ".json")).read_text())
               if i.get("artwork", "").startswith("./art/") and (DIST / i["artwork"]).is_file()})
 for start in range(0, len(art), GRID * GRID):

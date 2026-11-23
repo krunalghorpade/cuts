@@ -4,10 +4,10 @@ const load = async path => {
   return response.json();
 };
 const [trakt, music, games, playlistSources] = await Promise.all([
-  load("trakt-items.json"), load("spotify-items.json"), load("backloggd-items.json"), load("playlists.json")
+  load("trakt-items.json"), load("spotify-items.json"), load("rawg-items.json"), load("playlists.json")
 ]);
 export const playlists = playlistSources;
-export const gameList = "https://backloggd.com/u/krunalghorpade/list/my-games/";
+export const gameList = "https://rawg.io/collections/my-games-108";
 export const traktList = "https://app.trakt.tv/users/krunal-ghorpade-324337/lists/my-watch-list?share=P0J99Y06TeYp";
 
 export const CATEGORIES = [
@@ -50,7 +50,7 @@ export const CATEGORIES = [
     "label": "Game DVDs",
     "short": "GAME DISCS",
     "format": "DISC",
-    "source": "Backloggd",
+    "source": "RAWG",
     "accent": "#4c9daa",
     "rack": {
       "x": -2.45,
@@ -63,7 +63,7 @@ export const CATEGORIES = [
     "label": "Game cartridges",
     "short": "CARTRIDGES",
     "format": "CART",
-    "source": "Backloggd",
+    "source": "RAWG",
     "accent": "#8875b5",
     "rack": {
       "x": -2.45,

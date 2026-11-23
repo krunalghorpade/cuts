@@ -32,12 +32,12 @@
     <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap"></span><span id="promptText"></span></div>
     <details class="controls">
       <summary>Controls</summary>
-      <dl><dt>Move</dt><dd>W A S D</dd><dt>Look</dt><dd>Drag or arrow keys</dd><dt>Select</dt><dd>Click a case</dd><dt>Open stack</dt><dd>E</dd><dt>Run</dt><dd>Hold Shift</dd><dt>Pause</dt><dd>Esc</dd></dl>
+      <dl><dt>Move</dt><dd>W A S D</dd><dt>Look</dt><dd>Drag or arrow keys</dd><dt>Select</dt><dd>Click a case</dd><dt>View item</dt><dd>E</dd><dt>Run</dt><dd>Hold Shift</dd><dt>Pause</dt><dd>Esc</dd></dl>
     </details>
     <div class="touch-controls">
       <div id="lookPad" class="look-pad" aria-label="Drag to look or tap a case to select it"></div>
       <div id="joystick" class="joystick" aria-label="Move around"><div id="stick" class="stick"></div></div>
-      <button id="touchInspect" class="touch-inspect" type="button">Open stack</button>
+      <button id="touchInspect" class="touch-inspect" type="button">View item</button>
     </div>
   </div>
 
@@ -49,31 +49,30 @@
     <div id="catalogGrid" class="catalog-grid"></div>
     <div id="catalogSelection" class="chosen-item hidden">
       <strong id="chosenTitle"></strong>
-      <div class="selection-actions"><button id="catalogDetails" class="primary-button" type="button">Item details</button><button id="catalogOpenStack" type="button">Open stack</button></div>
+      <div class="selection-actions"><button id="catalogDetails" class="primary-button" type="button">Item details</button></div>
     </div>
     <details class="sources"><summary>Sources</summary><div id="sourceLists"></div></details>
   </aside>
 
   <aside id="detailPanel" class="panel detail-panel hidden" aria-labelledby="detailTitle" aria-modal="true" role="dialog">
     <header class="panel-head"><span>Item details</span><button id="closeDetail" type="button" aria-label="Close item details">Close</button></header>
-    <div class="case-preview">
+    <div class="item-layout"><div class="case-preview" role="region" aria-label="Item carousel">
       <canvas id="casePreview" tabindex="0" aria-label="Rotate the 3D case"></canvas>
+      <div class="carousel-nav">
+        <button id="itemPrev" type="button" aria-label="Previous item">←</button>
+        <span id="itemPosition" aria-live="polite"></span>
+        <button id="itemNext" type="button" aria-label="Next item">→</button>
+      </div>
       <div class="preview-controls"><span>Drag to rotate</span><button type="button" id="previewReset">Reset view</button></div>
     </div>
+    <div class="item-description">
     <p id="detailCategory" class="detail-category"></p><h2 id="detailTitle"></h2><p id="detailCreator" class="detail-creator"></p>
-    <dl class="detail-meta"><dt>Release</dt><dd id="detailYear"></dd><dt>Format</dt><dd id="detailFormatValue"></dd><dt>Source</dt><dd id="detailSource"></dd></dl>
+    <dl class="detail-meta"><dt>Release</dt><dd id="detailYear"></dd><dt>Format</dt><dd id="detailFormatValue"></dd><dt>Case size</dt><dd id="detailSize"></dd><dt>Source</dt><dd id="detailSource"></dd></dl>
     <p id="detailNote" class="detail-note"></p><div id="audioExtra" class="audio-extra hidden"></div>
     <a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
-    <div class="detail-actions"><button id="visitShelf" class="primary-button" type="button">Go to shelf</button><button id="backToStore" type="button">Back to aisle</button></div>
+    <div class="detail-actions"><button id="visitShelf" class="primary-button" type="button">Go to shelf</button></div>
+    </div></div>
   </aside>
-
-  <div id="stackOverlay" class="stack-overlay hidden" role="dialog" aria-modal="true" aria-label="Browse stack">
-    <header class="stack-head"><span id="stackCategory"></span><button id="closeStack" type="button" aria-label="Close stack">Close</button></header>
-    <div class="stack-foot">
-      <div class="stack-info"><span id="stackCount"></span><h2 id="stackTitle"></h2><p id="stackMeta"></p><p id="caseSize"></p></div>
-      <div class="stack-actions"><button id="stackPrev" type="button" aria-label="Previous case">Previous</button><button id="stackNext" type="button" aria-label="Next case">Next</button><button id="caseZoom" type="button" aria-pressed="false">Magnify</button><button id="stackDetails" type="button">Item details</button></div>
-    </div>
-  </div>
 
   <dialog id="mapDialog" class="map-dialog" aria-labelledby="mapTitle">
     <header class="panel-head"><h2 id="mapTitle">Floor map</h2><button id="closeMap" type="button" aria-label="Close floor map">Close</button></header>

@@ -41,7 +41,9 @@ function displayLabel(item, spec, spine = false) {
 }
 
 export function createCasePreview(canvas) {
-  let renderer, model, art, artVersion, drag = null, dirty = true;
+  let renderer, model, drag = null, dirty = true, started=0;
+  let entries=[];
+  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   let width = 0, height = 0;
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(34, 1, .01, 15);
@@ -82,6 +84,7 @@ export function createCasePreview(canvas) {
   canvas.addEventListener('lostpointercapture', release);
   canvas.addEventListener('keydown', event => {
     const steps={ArrowLeft:[-.16,0],ArrowRight:[.16,0],ArrowUp:[0,-.16],ArrowDown:[0,.16]};
+    if (['ArrowLeft','ArrowRight'].includes(event.key) && !event.shiftKey) return;
     if (!steps[event.key] && event.key!=='Home') return;
     event.preventDefault(); event.stopPropagation();
     if(event.key==='Home')reset();else rotate(...steps[event.key]);
@@ -90,36 +93,49 @@ export function createCasePreview(canvas) {
   function hide() {
     if(drag && canvas.hasPointerCapture(drag.id))canvas.releasePointerCapture(drag.id);
     drag=null;
-    if(model)scene.remove(model);
+    for(const entry of entries)scene.remove(entry.group);
+    entries=[];
     model=null;
     for(const part of decorations.splice(0)){
       part.geometry.dispose();part.material.map.dispose();part.material.dispose();
     }
   }
 
-  function show(item) {
+  function show(item,previous,next,direction=0) {
+    const oldSlots=new Map(entries.map(entry=>[entry.id,entry.slot]));
     hide();
     if(!renderer){
       renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
       renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-      renderer.setClearColor(0,0);
-      renderer.outputColorSpace=THREE.SRGBColorSpace;
+      renderer.setClearColor(0,0);renderer.outputColorSpace=THREE.SRGBColorSpace;
     }
-    const {group,spec}=createMediaCase(item);
-    model=group;art=coverTexture(item);artVersion=-1;
-    const back=new THREE.Mesh(new THREE.PlaneGeometry(spec.w*.94,spec.h*.94),displayLabel(item,spec));
-    back.rotation.y=Math.PI;back.position.z=-spec.d/2-.00012;
-    model.add(back);decorations.push(back);
-    if(spec.d>=.007){
-      const side=new THREE.Mesh(new THREE.PlaneGeometry(spec.d*.9,spec.h*.94),displayLabel(item,spec,true));
-      side.rotation.y=-Math.PI/2;side.position.x=-spec.w/2-.00012;
-      model.add(side);decorations.push(side);
+    for(const [target,record] of [[-1,previous],[0,item],[1,next]]){
+      if(!record)continue;
+      const {group,spec}=createMediaCase(record);
+      const start=oldSlots.get(record.id) ?? target+direction;
+      entries.push({id:record.id,group,texture:coverTexture(record),version:-1,
+        start,slot:start,target,scale:2/Math.hypot(spec.w,spec.h,spec.d)});
+      scene.add(group);
+      if(target!==0){
+        group.rotation.set(.06,-target*.42,0,'YXZ');
+        continue;
+      }
+      model=group;
+      if(record.category!=='cartridges'){
+        const back=new THREE.Mesh(new THREE.PlaneGeometry(spec.w*.94,spec.h*.94),displayLabel(item,spec));
+        back.rotation.y=Math.PI;back.position.z=-spec.d/2-.00012;
+        model.add(back);decorations.push(back);
+        if(spec.d>=.007){
+          const side=new THREE.Mesh(new THREE.PlaneGeometry(spec.d*.9,spec.h*.94),displayLabel(item,spec,true));
+          side.rotation.y=-Math.PI/2;side.position.x=-spec.w/2-.00012;
+          model.add(side);decorations.push(side);
+        }
+      }
+      reset();
+      canvas.setAttribute('aria-label','Rotate '+item.title+'. Drag to rotate. Left and right browse items. Shift with left or right rotates. Home resets the view.');
     }
-    // Fit the entire case (including its diagonal) as it turns.
-    model.scale.setScalar(2/Math.hypot(spec.w,spec.h,spec.d));
-    scene.add(model);reset();
-    canvas.setAttribute('aria-label','Rotate '+item.title+' '+spec.label+'. Drag, or use the arrow keys. Home resets the view.');
-    render();
+    started=direction && !reducedMotion.matches?performance.now():0;
+    dirty=true;render();
   }
 
   function render() {
@@ -127,14 +143,23 @@ export function createCasePreview(canvas) {
     const w=canvas.clientWidth,h=canvas.clientHeight;
     if(!w||!h)return;
     if(w!==width||h!==height){
-      width=w;height=h;renderer.setSize(w,h,false);
-      camera.aspect=w/h;
-      camera.position.z=1.04/Math.sin(Math.atan(Math.tan(THREE.MathUtils.degToRad(camera.fov/2))*Math.min(1,camera.aspect)));
+      width=w;height=h;renderer.setSize(w,h,false);camera.aspect=w/h;
+      const fov=THREE.MathUtils.degToRad(camera.fov/2);
+      camera.position.z=Math.max(1.12/Math.sin(fov),1.6/(camera.aspect*Math.tan(fov)));
       camera.updateProjectionMatrix();dirty=true;
     }
-    if(!dirty && artVersion===art.version)return;
-    renderer.render(scene,camera);dirty=false;artVersion=art.version;
+    const t=started?Math.min(1,(performance.now()-started)/220):1;
+    if(!dirty && !started && entries.every(e=>e.texture.version===e.version))return;
+    const halfWidth=camera.position.z*Math.tan(THREE.MathUtils.degToRad(camera.fov/2))*camera.aspect;
+    for(const e of entries){
+      e.slot=e.target+(e.start-e.target)*(1-t)**3;
+      const side=Math.min(1,Math.abs(e.slot));
+      e.group.position.set(e.slot*halfWidth*.98,-side*.035,-side*.48);
+      e.group.scale.setScalar(e.scale*(1-.34*side));
+      e.version=e.texture.version;
+    }
+    if(t===1)started=0;
+    renderer.render(scene,camera);dirty=false;
   }
   return {show,hide,reset,render};
 }
-
