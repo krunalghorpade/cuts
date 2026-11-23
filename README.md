@@ -1,12 +1,13 @@
 # The Lower Level
 
-A first-person 3D basement media store for desktop, tablet, and phone. The walkable room follows the supplied video-store reference with long, dense face-out racks, gray flooring, and fluorescent ceiling lights. The rack fixtures and format shapes were developed with a private Spline scene (`The Lower Level — Physical Media Fixtures`, file `113bdccc-56e5-4f05-9f32-3085e7356a6a`).
+A first-person 3D basement media store for desktop, tablet, and phone. Level 1 contains the music and game lounge, clothing shop, bedroom, washroom and kitchen. The northwest switchback staircase leads to the media browsing gallery, game room, library and collectibles on Level 2. The private Spline study includes the fixture models and room layouts.
 
 ## Explore
 
 - Desktop: WASD to move, drag to look, Shift to run, E or click a visible case to flip through its stack, B to browse, Esc to pause. Double-click the scene or press L for optional pointer lock. Arrow keys also look around.
 - Phone and tablet: left joystick to move, drag the right side to look, and tap a visible case or Inspect to flip through its stack.
 - In a stack: arrow buttons, left/right keys, scroll, or swipe to flip cases. Drag to tilt the 3D stack; open details for the selected item.
+- Floor map opens a room selector for either level. Walk up the western stair flight, turn on the north landing, and follow the eastern flight to reach Level 2 on foot.
 - Browse offers search and format filters without walking to a rack. Item details include a **Go to this shelf** button.
 
 ## Collection

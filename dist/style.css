@@ -29,3 +29,17 @@
 .stack-active .topbar{opacity:0}
 
 .visit-shelf{width:100%;justify-content:space-between;margin-bottom:10px}
+
+.map-dialog{width:min(650px,94vw);max-height:92dvh;margin:auto;padding:24px;color:#eee5d7;background:#282823;border:1px solid #88775d;box-shadow:0 18px 100px #12151188}
+.map-dialog::backdrop{background:#171812b8;backdrop-filter:blur(3px)}
+.map-dialog h2{font:600 32px 'Space Grotesk',sans-serif;letter-spacing:-.04em;margin:0}
+.level-tabs{display:flex;gap:7px;margin:18px 0}
+.level-tabs button,.map-dialog #planBoard button{border:1px solid #786f5f;color:#efe4d4;background:#433f36;font:500 13px 'DM Sans',sans-serif;cursor:pointer}
+.level-tabs button{padding:8px 17px}.level-tabs button[aria-pressed=true],.map-dialog #planBoard button.here{background:#d9b284;color:#231e17}
+#planBoard{position:relative;width:100%;aspect-ratio:28/20;background:repeating-linear-gradient(90deg,transparent 0 23px,#d5bb8f13 24px),repeating-linear-gradient(0deg,transparent 0 23px,#d5bb8f13 24px),#23241f}
+#planBoard button{position:absolute;text-align:center;padding:3px;overflow-wrap:anywhere}
+#planBoard button:hover,#planBoard button:focus-visible{background:#806447}
+.map-dialog p{font-size:13px;margin:15px 0 0;color:#d1c3b3}
+.top-actions{gap:8px}.brand-mark{display:flex;align-items:center;justify-content:center;letter-spacing:-2px}
+@media(max-width:700px){.topbar{padding:14px 12px}.brand{gap:7px}.brand-mark{min-width:31px;height:36px}.top-actions{gap:4px}.brand-name small{display:none}.nav-button{padding:9px 7px}.map-dialog{padding:16px}.map-dialog #planBoard button{font-size:11px}.intro-controls{display:none}.brand-name{letter-spacing:.07em}}
+@media(max-height:500px){.map-dialog{width:min(520px,90vw)}#planBoard{height:48dvh}.level-tabs{margin:7px 0}}

@@ -19,25 +19,25 @@
 
   <header class="topbar">
     <div class="brand"><span class="brand-mark">L<span>↓</span>L</span><span class="brand-name">THE LOWER LEVEL<small>YOUR MEDIA, UNDERGROUND</small></span></div>
-    <div class="top-actions"><span class="demo-pill"><span></span> YOUR COLLECTION</span><button id="browseBtn" class="nav-button" type="button"><span class="browse-full">Browse collection (B)</span><span class="browse-short">Browse</span> <span id="itemCount">42</span></button></div>
+    <div class="top-actions"><span class="demo-pill"><span></span> YOUR COLLECTION</span><button type="button" class="nav-button" id="mapBtn">Floor map</button><button id="browseBtn" class="nav-button" type="button"><span class="browse-full">Browse collection (B)</span><span class="browse-short">Browse</span> <span id="itemCount">42</span></button></div>
   </header>
 
   <section id="intro" class="intro" aria-labelledby="introTitle">
     <div class="intro-card">
-      <div class="eyebrow"><span class="eyebrow-line"></span> A PLACE FOR EVERYTHING YOU LOVE</div>
+      <div class="eyebrow"><span class="eyebrow-line"></span> LEVEL 1  /  MUSIC + GAME LOUNGE</div>
       <h1 id="introTitle">Go downstairs.<br><em>Get lost.</em></h1>
-      <p>Your personal media collection, reimagined as a basement store. Wander the aisles. Pick up a favorite. Stay a while.</p>
+      <p>Start in the listening lounge. Take the northwest stairs to the media gallery, or choose a room on the floor map.</p>
       <button id="enterBtn" class="primary-button" type="button">Enter the basement <span class="button-icon">↘</span></button>
       <div class="intro-controls"><span>W A S D <b>MOVE</b></span><span>DRAG <b>LOOK</b></span><span>DOUBLE CLICK <b>LOCK MOUSE</b></span><span>E <b>INSPECT</b></span><span>B <b>BROWSE</b></span></div>
     </div>
-    <div class="intro-side"><span>EST. IN YOUR IMAGINATION</span><span>↓ SCROLL THROUGH CULTURE</span></div>
+
   </section>
 
   <div id="hud" class="hud hidden">
-    <div class="location"><span class="location-dot"></span><span id="zoneName">THE ENTRANCE</span><small>THE LOWER LEVEL / B1</small></div>
+    <div class="location"><span class="location-dot"></span><span id="zoneName">THE ENTRANCE</span><small><span id="floorName">MUSIC, GAMES + CLOTHING</span></small></div>
     <div class="crosshair" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap">E</span><span id="promptText">Inspect item</span></div>
-    <div class="hud-bottom"><div class="movement-guide"><span>W A S D</span> MOVE <b>·</b> <span>DRAG</span> LOOK <b>·</b> <span>SHIFT</span> RUN <b>·</b> <span>B</span> BROWSE <b>·</b> <span>ESC</span> PAUSE</div><div class="floor-tag">BASEMENT FLOOR <strong>01</strong></div></div>
+    <div class="hud-bottom"><div class="movement-guide"><span>W A S D</span> MOVE <b>·</b> <span>DRAG</span> LOOK <b>·</b> <span>SHIFT</span> RUN <b>·</b> <span>B</span> BROWSE <b>·</b> <span>ESC</span> PAUSE</div><div class="floor-tag">LEVEL <strong id="floorNumber">01</strong></div></div>
     <div id="touchControls" class="touch-controls"><div id="joystick" class="joystick"><div id="stick" class="stick"></div></div><div id="lookPad" class="look-pad" aria-label="Drag to look around"><span>DRAG TO LOOK</span></div><button id="touchInspect" class="touch-inspect" type="button">INSPECT</button></div>
   </div>
 
@@ -64,6 +64,7 @@
     <div class="stack-side-note">DRAG TO TILT <span>·</span> SWIPE OR SCROLL TO FLIP</div>
     <div class="stack-foot"><div class="stack-info"><span id="stackCount">1 / 4</span><h2 id="stackTitle"></h2><p id="stackMeta"></p></div><div class="stack-actions"><button id="stackPrev" type="button" aria-label="Previous case">←</button><button id="stackNext" type="button" aria-label="Next case">→</button><button id="stackDetails" type="button">View item details ↗</button></div></div>
   </div>
+  <dialog id="mapDialog" class="map-dialog"><div class="panel-head"><h2>Floor map</h2><button id="closeMap" class="close-button" aria-label="Close floor map">×</button></div><div class="level-tabs"><button id="levelOne">Level 1</button><button id="levelTwo">Level 2</button></div><div id="planBoard" aria-label="Select a room"></div><p>Select a room to enter it.</p></dialog>
   <div id="toast" class="toast hidden" role="status"></div>
   <script type="module" src="./app.js"></script>
 </body>
