@@ -209,14 +209,46 @@ body:has(.panel:not(.hidden), #mapDialog[open]) :is(.topbar, .hud, .intro) { vis
 
 #displayDetails { pointer-events:auto; min-height:44px; margin-left:1em; text-decoration:underline; text-underline-offset:3px; }
 .inspect-prompt { z-index:2; }
-#tvSound { position:absolute; bottom:var(--bottom); right:var(--gutter); z-index:2; pointer-events:auto; background:rgb(18 18 18 / .82); padding:0 14px; font-size:14px; }
-@media(pointer:coarse){#tvSound {bottom:auto; top:calc(var(--top) + 54px);}}
-@media(pointer:coarse){.hud:has(#displayDetails:not(.hidden)) .touch-inspect {display:none;}}
-
-#musicControls {position:absolute;right:var(--gutter);bottom:var(--bottom);z-index:2;max-width:min(340px,84vw);padding:7px 14px;background:rgb(16 16 16 / .90);pointer-events:auto;font-size:13px;}
-.deck-buttons {display:flex;gap:18px}.deck-buttons button[aria-pressed="true"] {font-weight:700}
-#musicControls a,#musicItem,#musicResume,#arcadeAgain {text-decoration:underline;text-underline-offset:3px}
-#musicTrack {overflow-wrap:anywhere}#musicItem {margin-left:12px}
 #arcadeCanvas {display:block;width:100%;height:auto;touch-action:none;background:#101722}
 #arcadeGame .panel-head {margin-bottom:12px}#arcadeGame #arcadeGuide {margin:10px 0}#arcadeScore {margin-right:16px}
-@media(pointer:coarse){#musicControls {top:calc(var(--top) + 54px);bottom:auto;max-width:min(280px,78vw)}}
+
+.player-bar {
+  position:absolute; z-index:2; right:var(--gutter); bottom:var(--bottom);
+  background:rgb(18 18 18 / .92); color:#fafafa; border-radius:14px;
+  padding:6px; pointer-events:auto; max-width:min(258px,calc(100vw - 38px));
+}
+#tvControls,.playing-row,.playing-item,.deck-buttons,.icon-button {display:flex;align-items:center}
+.playing-item {flex:1;min-width:0;gap:10px;text-align:left;padding:3px;border-radius:8px}
+.player-art {display:block;width:38px;height:38px;flex:none;object-fit:cover;border-radius:4px}
+#tvArtwork {width:31px;height:42px;object-fit:contain}
+.playing-copy {display:grid;min-width:0;gap:1px}
+.playing-copy strong,.playing-copy small {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1.25}
+.playing-copy strong {font-size:13px;font-weight:550}
+.playing-copy small,#musicStatus {font-size:11px;color:#b9b9b9}
+.icon-button {flex:0 0 44px;min-height:44px;justify-content:center;border-radius:9px}
+.icon-button svg {width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+#tvSound .sound-off,#tvSound[aria-pressed="true"] .sound-on {display:none}
+#tvSound[aria-pressed="true"] .sound-off {display:block}
+#tvControls:has(#tvItem:not(.hidden)),#musicControls {width:248px}
+#tvControls:has(#tvItem.hidden) {border-radius:50%}
+#musicStatus:not(:empty) {padding:6px 9px}
+.playing-row:has(#musicItem.hidden) {min-height:30px}
+.deck-buttons {padding:2px 0 0;gap:3px}
+.deck-buttons button {
+  flex:1; min-width:0; min-height:36px; padding:0 6px; border-radius:9px; text-align:center;
+  font-size:12px; font-weight:500; color:#cdcdcd; background:#303030;
+}
+.deck-buttons button[aria-pressed="true"] {color:#141414;background:#f2f2f2}
+.player-bar :is(button,a):focus-visible {outline:2px solid #fff;outline-offset:1px}
+@media(hover:hover){.playing-item:hover,.icon-button:hover {background:#383838}.deck-buttons button:hover {filter:brightness(1.18)}}
+@media(pointer:coarse){
+  .player-bar {right:max(12px,env(safe-area-inset-right));bottom:var(--bottom)}
+  .deck-buttons button {min-height:44px}
+  .hud:has(.inspect-prompt:not(.hidden)) .player-bar {bottom:calc(var(--bottom) + 64px)}
+  .hud:has(#displayDetails:not(.hidden)) .touch-inspect {display:none}
+  .hud:has(.player-bar:not(.hidden)) .inspect-prompt {bottom:max(178px,22vh)}
+}
+@media(pointer:coarse) and (max-width:510px){
+  #musicControls,#tvControls:has(#tvItem:not(.hidden)){width:min(242px,calc(100vw - 144px))}
+}
+#arcadeAgain {text-decoration:underline;text-underline-offset:3px}

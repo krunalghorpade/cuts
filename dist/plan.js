@@ -22,9 +22,9 @@ export function openingsFor(level){
   return [...doorways.filter(o=>level===1||o[4]!=='Washroom'), ['x',0,2.82,4.55,level===1?'TV room':'Modern gaming room']];
 }
 export const fixtures = [
-  [1,'movies',-7.55,-.05,3.65,Math.PI/2], [1,'anime-movies',-7.55,3.69,3.38,Math.PI/2],
-  [1,'movies',-3.71,5.55,3.40,Math.PI],
-  [1,'shows',2.08,5.55,3.46,Math.PI], [1,'anime',5.94,5.55,3.40,Math.PI],
+  [1,'movies',-7.55,-.05,1.825,Math.PI/2], [1,'anime-movies',-7.55,3.69,1.69,Math.PI/2],
+  [1,'movies',-3.71,5.55,1.70,Math.PI],
+  [1,'shows',2.08,5.55,1.73,Math.PI], [1,'anime',5.94,5.55,1.70,Math.PI],
   [2,'vinyl',-5.99,-5.55,3.50,0], [2,'vinyl',-2.04,-5.55,3.55,0],
   [2,'cds',-7.55,-.05,3.12,Math.PI/2], [2,'cassettes',-7.55,3.40,3.25,Math.PI/2],
   [2,'cds',-4.88,.04,3.30,-Math.PI/2], [2,'cds',-4.15,.04,3.30,Math.PI/2],

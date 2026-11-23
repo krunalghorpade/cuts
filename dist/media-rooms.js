@@ -1,4 +1,5 @@
 import * as T from './vendor/three.module.js';
+import {turntable,discPlayer} from './hi-fi.js';
 import {addTelevision} from './displays.js';
 
 const dark='#202328', charcoal='#35363a', metal='#535762', amber='#b48b58';
@@ -40,41 +41,10 @@ export function listeningStation({group,box,cyl,oval,block,sign,shadow,walnut,de
   const layout=[['vinyl','Vinyl',-4.30],['cassettes','Cassette',-2.87],['cds','CD',-1.44]];
   for(const [key,name,x] of layout){
     sign(name.toUpperCase(),x,1.60,5.872,.90,Math.PI);
-    hitSurface(group,devices,key,name+' player',x,1.02,z,.84,.23,.54);
-    const lamp=new T.Mesh(new T.SphereGeometry(.012,8,6),new T.MeshBasicMaterial({color:'#43534d'}));
-    lamp.position.set(x+.30,key==='vinyl'?y+.094:y+.155,z-(key==='vinyl'?.20:.226));
-    group.add(lamp);devices.at(-1).userData.lamp=lamp;
-    if(key==='vinyl'){
-      box(x,y+.045,z,.75,.09,.50,walnut);
-      cyl(x-.063,y+.101,z,.40,.028,.40,charcoal);
-      cyl(x-.063,y+.122,z,.375,.014,.375,'#141619');
-      for(const radius of [.155,.12,.085]){
-        const ring=new T.Mesh(new T.TorusGeometry(radius,.0011,4,48),new T.MeshBasicMaterial({color:'#5e5c58'}));
-        ring.position.set(x-.063,y+.13,z);ring.rotation.x=-Math.PI/2;group.add(ring);
-      }
-      cyl(x-.063,y+.133,z,.114,.006,.114,amber);
-      const mark=new T.Mesh(new T.BoxGeometry(.026,.004,.013),new T.MeshStandardMaterial({color:dark}));
-      const platter=new T.Group();platter.position.set(x-.063,y+.138,z);mark.position.x=.032;platter.add(mark);group.add(platter);
-      devices.at(-1).userData.platter=platter;
-      cyl(x+.265,y+.11,z+.12,.066,.065,.066,metal);
-      box(x+.215,y+.153,z+.008,.012,.012,.24,'#bdbbb1',0,.41);
-      box(x+.159,y+.14,z-.10,.026,.025,.038,charcoal);
-    }else{
-      box(x,y+.087,z,.74,.174,.44,key==='cds'?'#94948e':charcoal);
-      const front=z-.226;
-      if(key==='cassettes'){
-        box(x-.105,y+.09,front,.36,.125,.012,'#171c20');
-        box(x-.105,y+.10,front-.009,.28,.085,.01,'#7b8380');
-        for(const dx of [-.072,.072])cyl(x-.105+dx,y+.095,front-.019,.050,.015,.050,'#272b2d',Math.PI/2);
-        for(let i=0;i<5;i++)box(x+.11+i*.035,y+.05,front-.015,.026,.026,.029,'#aba99d');
-      }else{
-        box(x-.08,y+.095,front,.392,.052,.009,'#44494a');
-        box(x-.08,y+.096,front-.007,.36,.032,.008,'#878a86');
-        cyl(x+.248,y+.09,front-.005,.056,.025,.056,dark,Math.PI/2);
-      }
-      box(x+.155,y+.133,front-.014,.15,.04,.009,'#152923');
-      for(let i=0;i<5;i++)box(x+.105+i*.021,y+.131,front-.021,.013,.008,.004,'#7fab9c');
-    }
+    const isVinyl=key==='vinyl';
+    hitSurface(group,devices,key,name+' player',x,y+(isVinyl?.11:.24),z,isVinyl?.70:.92,isVinyl?.22:.49,.51);
+    const model=isVinyl?turntable({group,box,cyl,walnut},x,y,z):discPlayer({group,box,cyl},key,x,y,z);
+    Object.assign(devices.at(-1).userData,model);
   }
 }
 

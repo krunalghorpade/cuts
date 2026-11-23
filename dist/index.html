@@ -32,11 +32,26 @@
   <div id="hud" class="hud hidden">
     <div class="aim" aria-hidden="true"></div>
     <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap"></span><span id="promptText"></span><button id="displayDetails" class="hidden" type="button">View details</button></div>
-    <button id="tvSound" class="hidden" type="button">Mute TVs</button>
-    <section id="musicControls" class="hidden" aria-label="Music players">
-      <div class="deck-buttons"><button data-deck="vinyl" type="button">Vinyl</button><button data-deck="cassettes" type="button">Cassette</button><button data-deck="cds" type="button">CD</button></div>
-      <p id="musicTrack" aria-live="polite"></p><button id="musicResume" type="button" class="hidden">Play audio</button>
-      <a id="musicLink" class="hidden" target="_blank" rel="noopener noreferrer">Open on Spotify</a> <button id="musicItem" class="hidden" type="button">View album</button>
+    <section id="tvControls" class="player-bar hidden" aria-label="Room trailer">
+      <button id="tvItem" class="playing-item hidden" type="button" title="View trailer item details">
+        <img id="tvArtwork" class="player-art hidden" alt=""><span class="playing-copy"><strong id="tvTitle"></strong><small>Trailer</small></span>
+      </button>
+      <button id="tvSound" class="icon-button hidden" type="button" aria-label="Mute TVs" title="Mute TVs">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><g class="sound-on"><path d="M16 8q4 4 0 8m3-11q7 7 0 14"/></g><path class="sound-off" d="m16 9 6 6m0-6-6 6"/></svg>
+      </button>
+    </section>
+    <section id="musicControls" class="player-bar hidden" aria-label="Music players">
+      <div class="playing-row">
+        <button id="musicItem" class="playing-item hidden" type="button" title="View album details">
+          <img id="musicArtwork" class="player-art hidden" alt=""><span class="playing-copy"><strong id="musicTrack"></strong><small id="musicArtist"></small></span>
+        </button>
+        <span id="musicStatus" role="status"></span>
+        <a id="musicLink" class="icon-button hidden" target="_blank" rel="noopener noreferrer" aria-label="Open track on Spotify" title="Open track on Spotify"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M7 6h11v11"/></svg></a>
+      </div>
+      <div class="deck-buttons" aria-label="Select or switch off player">
+        <button data-deck="vinyl" type="button">Vinyl</button><button data-deck="cassettes" type="button">Cassette</button><button data-deck="cds" type="button">CD</button>
+        <button id="musicResume" type="button" class="hidden" aria-label="Resume audio">Play</button>
+      </div>
     </section>
     <details class="controls">
       <summary>Controls</summary>

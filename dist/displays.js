@@ -19,7 +19,7 @@ const frames=[
   ...row(1,[-11.45,-10.25,-9.05],2.22,6.125,0,.65),
   ...row(1,[1.17,6.98],2.32,-5.875,0,.64),
   [1,7.875,2.17,-4.65,-quarter,.82],[1,7.875,2.15,2.72,-quarter,.64],
-  ...row(1,[-4.77,-3.74,-2.71,2.03,4.14,6.28],2.43,5.875,Math.PI,.68),
+  ...row(1,[-2.24,-1.15,.60,3.61,4.51,7.43],2.20,5.875,Math.PI,.68),
   ...row(1,[-11.67,-10.44,-9.21],2.35,10.875,Math.PI,.79),
   [1,8.125,2.23,-6.24,quarter,.82],[1,8.125,2.23,-7.42,quarter,.82],
   [1,13.875,2.28,4.62,-quarter,.65],
@@ -42,9 +42,20 @@ function shuffled(entries){
   return a;
 }
 
-export function installPosters(floors,items,targets){
+// Keep the entire frame and a viewing gap free, including rack headers and deep box sets.
+function clearMount([level,x,y,z,angle,width],shelves){
+  const nx=Math.sin(angle),nz=Math.cos(angle),halfWidth=width/2+.10,halfHeight=width*320/224/2+.10;
+  return !shelves.some(s=>{
+    if(s.level!==level || y-halfHeight>s.top || y+halfHeight<s.bottom)return false;
+    const dx=s.x-x,dz=s.z-z,front=dx*nx+dz*nz,side=dx*nz-dz*nx;
+    const depth=(Math.abs(nx)*s.w+Math.abs(nz)*s.d)/2;
+    const span=(Math.abs(nz)*s.w+Math.abs(nx)*s.d)/2;
+    return front+depth>=-.02 && front-depth<.88 && Math.abs(side)<span+halfWidth;
+  });
+}
+export function installPosters(floors,items,targets,shelves){
   const artwork=items.filter(i=>i.artwork && screenCategories.includes(i.category));
-  const slots=frames.slice(0,artwork.length);
+  const slots=frames.filter(frame=>clearMount(frame,shelves)).slice(0,artwork.length);
   if(!slots.length)return ()=>{};
   const w=224,h=320,cols=Math.ceil(Math.sqrt(slots.length*h/w)),rows=Math.ceil(slots.length/cols);
   const atlas=document.createElement('canvas');atlas.width=cols*w;atlas.height=rows*h;
@@ -200,7 +211,7 @@ function createChannel(scene,entries,retro){
   }};
 }
 
-export function installTelevisions(canvas,screens,roomStock,streams){
+export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   const renderer=new CSS3DRenderer(),scene=new T.Scene();
   renderer.domElement.className='room-televisions';renderer.domElement.setAttribute('aria-hidden','true');
   canvas.before(renderer.domElement);
@@ -217,11 +228,26 @@ export function installTelevisions(canvas,screens,roomStock,streams){
   function resize(){renderer.setSize(canvas.clientWidth,canvas.clientHeight);}
   resize();window.addEventListener('resize',resize);
   const muteButton=document.getElementById('tvSound');
+  const controls=document.getElementById('tvControls'),itemButton=document.getElementById('tvItem');
+  const art=document.getElementById('tvArtwork'),title=document.getElementById('tvTitle');
+  let currentItem=null,activeScreen=null;
+  itemButton.onclick=()=>{if(currentItem)openDetail(currentItem);};
+  function updateItem(item){
+    if(currentItem===item)return;
+    currentItem=item;itemButton.classList.toggle('hidden',!item);
+    title.textContent=item?.title||'';
+    art.classList.add('hidden');art.removeAttribute('src');
+    if(item?.artwork){
+      art.onload=()=>{if(currentItem===item)art.classList.remove('hidden');};
+      art.src=item.artwork;
+    }
+  }
   let muted=false;
   try{muted=localStorage.getItem('myroom.tvMuted')==='true';}catch{}
   function syncSound(){
     channels.forEach(channel=>channel.sound(muted));
-    muteButton.textContent=muted?'Unmute TVs':'Mute TVs';
+    muteButton.title=muted?'Unmute TVs':'Mute TVs';
+    muteButton.setAttribute('aria-label',muteButton.title);muteButton.setAttribute('aria-pressed',String(muted));
   }
   syncSound();
   muteButton.onclick=()=>{
@@ -233,18 +259,19 @@ export function installTelevisions(canvas,screens,roomStock,streams){
   window.addEventListener('pointerdown',resume);window.addEventListener('keydown',resume);
   let activeRoom,hasScreen=false;
   function switchRoom(room){
-    activeRoom=room;hasScreen=false;
+    activeRoom=room;hasScreen=false;activeScreen=null;
     channels.forEach((channel,name)=>{
       const tv=screens.find(s=>s.room===room && s.channel===name);
       channel.setScreen(tv||null);
-      if(tv)hasScreen=true;
+      if(tv){hasScreen=true;activeScreen=tv.screen;}
     });
-    muteButton.classList.toggle("hidden",!hasScreen);
+    controls.classList.toggle("hidden",!hasScreen);muteButton.classList.toggle("hidden",!hasScreen);
   }
   document.addEventListener('visibilitychange',()=>{if(document.hidden)switchRoom(null);});
   return (camera,room,enabled)=>{
     const next=enabled&&!document.hidden?room:null,changed=next!==activeRoom;
     if(changed)switchRoom(next);
+    updateItem(activeScreen?.userData.item||null);
     if(hasScreen)channels.forEach(ch=>ch.distance(camera.position));
     if(changed||hasScreen)renderer.render(scene,camera);
   };

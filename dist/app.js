@@ -57,9 +57,9 @@ function label(parent, text, x, y, z, w, h, opts = {}) {
 
 const interior=buildInterior(scene,label);
 const displayTargets=[[],[]];
-const updatePosters=installPosters(interior.floors,ITEMS,displayTargets);
 const {stacks,interactables,destinations,roomStock}=stockRooms(interior,box,label);
-const updateTVs=installTelevisions(canvas,interior.screens,roomStock,trailerStreams);
+const updatePosters=installPosters(interior.floors,ITEMS,displayTargets,interior.shelfBounds);
+const updateTVs=installTelevisions(canvas,interior.screens,roomStock,trailerStreams,openDetail);
 for(const device of interior.devices)displayTargets[device.userData.level-1].push(device);
 for(const tv of interior.screens){
   const floor=rooms.find(room=>room.id===tv.room).floor;
@@ -371,7 +371,9 @@ function updateFocus(){
     if(!inRange||!sameFloor)selectCase(null);
   }
   if(focusedCase?.userData.device){
-    const info=focusedCase.userData;prompt.classList.remove('hidden');$('displayDetails').classList.add('hidden');
+    const info=focusedCase.userData;
+    const touchDeck=mobile&&['vinyl','cassettes','cds'].includes(info.device);
+    prompt.classList.toggle('hidden',touchDeck);$('displayDetails').classList.add('hidden');
     prompt.querySelector('.keycap').textContent=mobile?'Tap':aim?'E':'Click';
     const action=['bricks','drift'].includes(info.device)?'Play '+info.title:musicPlayer.description(info.device);
     $('promptText').textContent=action;$('touchInspect').textContent=action;

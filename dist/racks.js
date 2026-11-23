@@ -61,9 +61,11 @@ export function stockRooms(interior,box,label){
     const deepest=isBoxRack?Math.max(0,...assigned.flat().map(item=>caseSpec(item).d)):0;
     const extension=Math.max(0,deepest-.46);
     const shelfZ=extension/2,depth=.65+extension;
-    interior.obstacles.push({level,x:x+Math.sin(angle)*shelfZ,z:z+Math.cos(angle)*shelfZ,
+    const footprint={level,x:x+Math.sin(angle)*shelfZ,z:z+Math.cos(angle)*shelfZ,
       w:Math.abs(Math.cos(angle))*width+Math.abs(Math.sin(angle))*depth,
-      d:Math.abs(Math.sin(angle))*width+Math.abs(Math.cos(angle))*depth});
+      d:Math.abs(Math.sin(angle))*width+Math.abs(Math.cos(angle))*depth};
+    interior.obstacles.push(footprint);
+    interior.shelfBounds.push({...footprint,bottom:0,top:height+.22});
     board(0,base/2,-.035+shelfZ,width,base,.5+extension,wood);
     board(0,height/2,-.26,width,height,.055,steel);
     for(const side of [-1,1])board(side*(width/2-.026),height/2,shelfZ,.052,height,.61+extension,steel);

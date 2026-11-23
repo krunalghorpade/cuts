@@ -3,6 +3,7 @@ import {rooms, rise, stair, openingsFor, roomAt} from './plan.js';
 import {makeDoor} from './doors.js';
 import {addTelevision} from './displays.js';
 import {cinemaRoom,listeningStation,gameConsoles,arcadeCabinets} from './media-rooms.js';
+import {collectibleShelves} from './collectibles.js';
 import {buildGamingDesk} from './gaming-desk.js';
 
 let seed=22711;
@@ -57,7 +58,7 @@ function textureMaterial(draw,w=512,h=256){
 }
 const shadowMat=(()=>{const m=textureMaterial((g,w,h)=>{const v=g.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);v.addColorStop(0,'rgba(15,10,5,.72)');v.addColorStop(.55,'rgba(15,10,5,.45)');v.addColorStop(1,'rgba(15,10,5,0)');g.fillStyle=v;g.fillRect(0,0,w,h);},96,96);m.transparent=true;m.depthWrite=false;return m})();
 export function buildInterior(scene, label){
-  const floors=[], obstacles=[], occluders=[], doors=[], screens=[], devices=[];
+  const shelfBounds=[], floors=[], obstacles=[], occluders=[], doors=[], screens=[], devices=[];
   scene.add(new T.HemisphereLight('#f9e9d7','#716f68',1.38));
   const sun=new T.DirectionalLight('#fff1df',1.55);sun.position.set(-5,9,5);scene.add(sun);
   const fill=new T.DirectionalLight('#b8c9d3',.52);fill.position.set(8,3,-4);scene.add(fill);
@@ -109,6 +110,7 @@ export function buildInterior(scene, label){
         if(kind!=='empty'){for(let k=0;k<4;k++){const px=w*((k+.5)/4-.5);if(kind==='objects'&&(k+r)%2===0){piece(px,sy+.24,0,.13,.36,.12,brass);piece(px,sy+.47,0,.22,.18,.17,cream);piece(px,sy+.055,0,.42,.07,.21,iron);}else{piece(px,sy+.112,0,w*.17,.15,.32,(k+r)%2?cream:iron);piece(px,sy+.2,0,w*.11,.045,.25,dark);piece(px+.08,sy+.12,.164,.035,.018,.012,light);}}}
       }
       piece(0,h-.06,.24,w-.1,.018,.04,light);
+      shelfBounds.push({level,x:x+originX,z,w:Math.abs(Math.cos(angle))*(w+.07)+Math.abs(Math.sin(angle))*.6,d:Math.abs(Math.sin(angle))*(w+.07)+Math.abs(Math.cos(angle))*.6,bottom:0,top:h+.04});
       block(x,z,Math.abs(Math.cos(angle))*w+Math.abs(Math.sin(angle))*.6,Math.abs(Math.sin(angle))*w+Math.abs(Math.cos(angle))*.6);
     }
     function tv(x,z,w,y,crt=false,reverse=false,surface=.8375){
@@ -219,6 +221,7 @@ export function buildInterior(scene, label){
       buildGamingDesk({part,box,tv,speaker,block,shadow,walnut});
       originX=0;
       gameConsoles({box,cyl,oval});
+      collectibleShelves({group,box,cyl,walnut,block,shelfBounds,label});
       table(-8.7,8.6,1.85,.81,.82);seat(-10.06,8.6,.78,-Math.PI/2);plant(-12.2,6.7,1.75);
       cabinet(9.67,-1.65,1.72);tv(9.67,-1.65,1.48,1.51,true,true);
       arcadeCabinets({group,box,cyl,block,label,shadow,devices});
@@ -240,5 +243,5 @@ export function buildInterior(scene, label){
       group.add(new T.Mesh(geo,material));
     }
   }
-  return {floors,obstacles,occluders,doors,screens,devices};
+  return {floors,obstacles,occluders,doors,screens,devices,shelfBounds};
 }
