@@ -7,10 +7,8 @@ function hitSurface(parent,devices,key,title,x,y,z,w,h,d){
   const target=new T.Mesh(new T.BoxGeometry(w,h,d),new T.MeshBasicMaterial({visible:false}));
   target.position.set(x,y,z);target.userData={device:key,title,display:'device',level:2};parent.add(target);devices.push(target);
 }
-export function listeningStation({group,part,box,cyl,block,sign,shadow,walnut,devices}){
-  const z=-5.53,y=.91,cx=-5.55;
-  box(cx,.44,z,3.75,.78,.72,walnut);
-  box(cx,y-.04,z,3.79,.08,.76,'#27292a');block(cx,z,3.79,.76);shadow(cx,z,3.88,1.19);
+export function listeningStation({group,part,sign,shadow,walnut,devices}){
+  const z=-5.53,y=.91;
   const layout=[
     ['vinyl','Vinyl',-6.65,turntable,[.484,.416,.397]],
     ['cassettes','Cassette',-5.50,boombox,[.56,.412,.222]],

@@ -279,3 +279,7 @@ body:has(#liftDialog[open]) :is(.hud,.topbar){visibility:hidden}
 #tvControls:has(#cinemaLights:not([hidden])){width:auto;max-width:min(350px,calc(100vw - 32px));border-radius:8px}
 #tvControls:has(#cinemaLights:not([hidden])) .playing-item{max-width:min(185px,33vw)}
 #cinemaLights[aria-pressed=true]{background:rgba(255,255,255,.16)}
+
+.load-floor{position:fixed;left:var(--gutter);top:calc(var(--top) + 47px);z-index:4;display:flex;align-items:center;gap:12px;color:#fff;text-shadow:0 1px 4px #151614;font-size:.875rem}
+.load-floor[hidden],.load-floor button[hidden]{display:none}
+.load-floor button{text-decoration:underline;text-underline-offset:3px}

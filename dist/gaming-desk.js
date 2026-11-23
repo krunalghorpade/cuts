@@ -8,23 +8,6 @@ function beveled(shape,depth,radius){
   return new T.ExtrudeGeometry(shape,{depth,bevelEnabled:true,bevelSegments:2,bevelSize:radius,bevelThickness:radius,curveSegments:8});
 }
 
-function backrest(){
-  // The shell is open through both harness slots, including the visible back.
-  const s=new T.Shape();
-  s.moveTo(-.17,0);s.quadraticCurveTo(-.23,.02,-.225,.12);
-  s.lineTo(-.178,.34);s.quadraticCurveTo(-.18,.42,-.25,.53);
-  s.quadraticCurveTo(-.275,.59,-.22,.64);s.lineTo(-.145,.74);
-  s.quadraticCurveTo(-.115,.815,-.075,.82);s.lineTo(.075,.82);
-  s.quadraticCurveTo(.115,.815,.145,.74);s.lineTo(.22,.64);
-  s.quadraticCurveTo(.275,.59,.25,.53);s.quadraticCurveTo(.18,.42,.178,.34);
-  s.lineTo(.225,.12);s.quadraticCurveTo(.23,.02,.17,0);s.closePath();
-  for(const side of [-1,1]){
-    const hole=new T.Path();hole.absellipse(side*.09,.61,.052,.027,side*-.30,Math.PI*2+side*-.30,true,side*.18);
-    s.holes.push(hole);
-  }
-  return beveled(s,.051,.009);
-}
-
 function gamepad(){
   // Positive Y on this profile points towards the triggers when the pad lies flat.
   const s=new T.Shape();
@@ -38,23 +21,7 @@ function gamepad(){
   return beveled(s,.022,.006);
 }
 
-function stitchedFabric(){
-  const c=document.createElement('canvas');c.width=160;c.height=240;
-  const g=c.getContext('2d');
-  g.fillStyle='#3c4140';g.fillRect(0,0,160,240);
-  g.fillStyle='#333737';
-  for(let y=2;y<240;y+=5)for(let x=2+(y%2)*2;x<160;x+=5)g.fillRect(x,y,1.4,1.4);
-  for(let y=20;y<220;y+=36){
-    for(const [dy,color] of [[0,'#2d3231'],[2,'#67716a']]){
-      g.strokeStyle=color;g.lineWidth=dy?.8:2;
-      g.beginPath();g.moveTo(9,y+dy);g.lineTo(80,y+15+dy);g.lineTo(151,y+dy);g.stroke();
-    }
-  }
-  const map=new T.CanvasTexture(c);map.colorSpace=T.SRGBColorSpace;map.anisotropy=4;
-  return new T.MeshStandardMaterial({map,roughness:.94});
-}
-
-export function buildGamingDesk({part,box,tv,speaker,block,shadow}){
+export function buildGamingDesk({part,tv,speaker}){
   // Model small objects around their own origin so the controls turn with their bodies.
   function placed(x,y,z,yaw=0){
     const pose=new T.Matrix4().makeRotationY(yaw).setPosition(x,y,z);
@@ -62,24 +29,8 @@ export function buildGamingDesk({part,box,tv,speaker,block,shadow}){
       part(shape,lx,ly,lz,w,h,d,mat,rx,ry,rz,pose);
   }
 
-  const top=.79,z=-1.66;
+  const top=.79;
   const glass=new T.MeshStandardMaterial({color:'#a5c8c9',transparent:true,opacity:.32,depthWrite:false,metalness:.26,roughness:.15});
-  box(0,top-.009,z,3.26,.018,1.04,glass);
-  for(const side of [-1,1]){
-    box(0,top-.036,z+side*.50,3.24,.045,.026,alloy);
-    box(side*1.61,top-.036,z,.025,.045,1.00,alloy);
-  }
-  for(const side of [-1,1]){
-    const x=side*1.29;
-    box(x,.371,z-.07,.086,.68,.12,graphite);
-    box(x,.043,z,.13,.065,.88,alloy);
-    for(const foot of [-1,1])box(x,.02,z+foot*.32,.12,.04,.14,rubber);
-  }
-  box(0,.64,z-.30,2.62,.09,.09,graphite);
-  box(0,.61,z-.40,1.47,.07,.13,rubber);
-  box(0,top-.064,z+.515,1.42,.004,.006,pilot);
-  block(0,z,3.26,1.04);shadow(0,z,3.72,1.60);
-
   tv(0,-1.98,1.128*1.4,1.51,false,false,top);
   speaker(-1.38,top,-1.93);speaker(1.38,top,-1.93);
 
@@ -182,31 +133,4 @@ export function buildGamingDesk({part,box,tv,speaker,block,shadow}){
     hp('cushion',side*.072,.163,.018,.019,.087,.067,upholstery);
     hp('box',side*.109,.162,.018,.002,.035,.009,rgb[2]);
   }
-  // The chair is pulled back and turned toward the screen, leaving the controls visible.
-  const chairX=-.52,chairZ=-.32;
-  const chair=placed(chairX,0,chairZ,-.57);
-  chair('round',0,.28,0,.071,.28,.071,alloy);
-  chair('round',0,.184,0,.093,.17,.093,graphite);
-  for(let n=0;n<5;n++){
-    const a=n*Math.PI*2/5,dx=Math.sin(a),dz=Math.cos(a);
-    chair('box',dx*.16,.125,dz*.16,.043,.041,.29,alloy,0,a);
-    chair('round',dx*.295,.098,dz*.295,.024,.062,.024,graphite);
-    chair('leaf',dx*.295,.064,dz*.295,.088,.081,.065,rubber,0,a);
-  }
-  chair('box',0,.398,0,.33,.07,.32,graphite);
-  chair('cushion',0,.478,-.018,.51,.115,.53,upholstery);
-  chair('cushion',0,.536,-.035,.38,.035,.44,graphite);
-  chair(backrest(),0,.48,.20,1,1,1,upholstery,.13);
-  chair('cushion',0,.905,.207,.31,.405,.072,stitchedFabric(),.15);
-  chair('cushion',0,.678,.177,.345,.12,.096,upholstery,.10);
-  chair('cushion',0,1.219,.261,.25,.10,.087,graphite,.14);
-  for(const side of [-1,1]){
-    chair('cushion',side*.20,.54,-.028,.088,.086,.46,upholstery,0,0,side*-.23);
-    chair('cushion',side*.189,.84,.209,.088,.42,.103,upholstery,.15,0,side*-.055);
-    chair('cushion',side*.149,.88,.171,.009,.34,.012,piping,.15,0,side*-.08);
-    chair('box',side*.277,.565,.045,.034,.20,.047,alloy);
-    chair('cushion',side*.277,.686,.012,.073,.055,.226,graphite);
-    chair('cushion',side*.121,.91,.319,.014,.46,.010,piping,.13,0,side*-.15);
-  }
-  block(chairX,chairZ,.88,.87);shadow(chairX,chairZ,1.07,1.03,.034);
 }

@@ -24,8 +24,9 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color('#63584a');
 scene.fog = new THREE.FogExp2('#63584a', 0.012);
 const camera = new THREE.PerspectiveCamera(73, innerWidth / innerHeight, 0.08, 80);
-const start=location.hash==='#cinema'?rooms.find(room=>room.id==='cinema').spawn:entrance;
-camera.position.set(start[0],1.62,start[1]);
+const entryRoom=rooms.find(room=>room.id===location.hash.slice(1));
+const start=entryRoom?.spawn||entrance;
+camera.position.set(start[0],((entryRoom?.floor||1)-1)*rise+1.62,start[1]);
 camera.rotation.order = 'YXZ';
 camera.rotation.y = start[2];
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
@@ -89,9 +90,25 @@ for(const tv of interior.screens){
 for(const door of interior.doors)interactables[door.level-1].push(...door.faces);
 const musicPlayer=installMusicPlayers(roomStock.get('music')||[],musicPreviews,interior.devices,openDetail);
 const openArcade=installArcade(()=>{uiOpen=false;});
-let ground=0,level=1;
+let ground=((entryRoom?.floor||1)-1)*rise,level=levelOf(ground);
+let requestedFloor=0;
+const loadNotice=$('floorLoad'),loadText=loadNotice.querySelector('span'),retryFloor=loadNotice.querySelector('button');
+function requestFloor(next){
+  requestedFloor=next;retryFloor.hidden=true;loadNotice.hidden=true;
+  const hint=setTimeout(()=>{if(requestedFloor===next){loadText.textContent='Loading Level '+next;loadNotice.hidden=false;}},500);
+  interior.roomModels.loadFloor(next).then(()=>{
+    if(requestedFloor===next)loadNotice.hidden=true;
+  }).catch(error=>{
+    console.error('Room loading failed',error);
+    if(requestedFloor!==next)return;
+    loadText.textContent='Level '+next+' could not finish loading';retryFloor.hidden=false;loadNotice.hidden=false;
+  }).finally(()=>clearTimeout(hint));
+}
+retryFloor.onclick=()=>requestFloor(level);
+
 function refreshFloor(){
   level=levelOf(ground);
+  if(level!==requestedFloor)requestFloor(level);
   const onStair=inside(stair,camera.position.x,camera.position.z);
   interior.floors.forEach((group,index)=>group.visible=onStair||index===level-1);
   const {x,z}=camera.position;
@@ -280,7 +297,7 @@ function renderCatalog(){
   }
 }
 const sourceList=$('sourceLists');
-for(const [title,url] of [['IMDb watchlist (CSV export)',imdbList],['My books on Open Library',bookList],...Object.entries(playlists).map(([id,name])=>[name,'https://open.spotify.com/playlist/'+id])]){
+for(const [title,url] of [['IMDb watchlist (CSV export)',imdbList],['My books on Open Library',bookList],['My art room on Pinterest','https://www.pinterest.com/kratexmusic/my-art-room/'],...Object.entries(playlists).map(([id,name])=>[name,'https://open.spotify.com/playlist/'+id])]){
   const a=document.createElement('a');a.href=url;a.textContent=title;a.target='_blank';a.rel='noopener noreferrer';sourceList.append(a);
 }
 $('dismissPanel').onclick=()=>detailPanel.classList.contains('hidden')?closeCatalog():closeDetail();
@@ -488,6 +505,7 @@ function animate(){
   }
   if(active&&!uiOpen&&intro.classList.contains('hidden')){yaw+=((keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0))*dt*1.55;pitch=clamp(pitch+((keys.has('ArrowUp')?1:0)-(keys.has('ArrowDown')?1:0))*dt*1.3,-1.28,1.28);if(!elevator.riding)updateMovement(dt);camera.rotation.y=yaw;camera.rotation.x=pitch;camera.updateMatrixWorld();updateFocus();}
   updatePosters(performance.now());
+  interior.roomModels.tick(performance.now(),level);
   const currentRoom=roomAt(level,camera.position.x,camera.position.z)?.id;
   houseLights.hidden=currentRoom!=='cinema'||!active||uiOpen;
   updateTVs(camera,currentRoom,active&&!uiOpen);

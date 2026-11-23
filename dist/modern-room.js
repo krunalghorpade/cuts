@@ -23,26 +23,8 @@ function psMat({part}){
   },768,578);
   part(new T.PlaneGeometry(),4,.037,.32,5.53,4.46,1,material,-Math.PI/2);
 }
-function beanBag({part,block,shadow},x,z,yaw,tone,seam){
-  const base=new T.SphereGeometry(.5,28,20),pos=base.attributes.position,v=new T.Vector3();
-  for(let i=0;i<pos.count;i++){
-    v.fromBufferAttribute(pos,i);const upper=Math.max(0,v.y+.02),dimple=Math.exp(-16*(v.x*v.x+(v.z-.10)**2));
-    v.y=Math.max(-.38,v.y+.65*upper*(-v.z)-upper*.53*dimple);
-    v.z+=upper*.13;pos.setXYZ(i,v.x,v.y,v.z);
-  }
-  base.computeVertexNormals();part(base,x,.32,z,1.03,.82,1.13,tone,0,yaw);
-  const hem=new T.TorusGeometry(.47,.006,5,40);part(hem,x,.106,z,.86,.97,1,seam,-Math.PI/2,yaw);
-  part('box',x+.37,.19,z+.22,.042,.019,.059,seam,0,yaw);
-  block(x,z,1.04,1.12);shadow(x,z,1.37,1.47,.04);
-}
-function cabinet({part,box,cyl,oval,block,label,group,walnut,shelfBounds}){
-  const lo=1.13,hi=4.96,cx=(lo+hi)/2,z=5.60,width=hi-lo;
-  box(cx,1.00,z+.20,width,1.85,.05,'#44464a');
-  for(const y of [.32,.88,1.45,1.97]){
-    box(cx,y,z,width+.08,.047,.47,walnut);box(cx,y-.031,z-.17,width-.09,.012,.02,light);
-  }
-  for(const x of [lo,hi])box(x,1.09,z,.032,1.87,.48,black);
-  block(cx,z,width+.08,.48);shelfBounds.push({level:2,x:cx,z,w:width+.08,d:.49,bottom:0,top:2.02});
+function cabinet({part,box,cyl,oval,label,group}){
+  const lo=1.13,hi=4.96,cx=(lo+hi)/2,z=5.60;
   function tag(name,x,y){const m=label(group,name,x,y,z-.244,.49,.068,{width:620,height:88,size:54,bg:'#333634',color:'#e9e0cb'});m.rotation.y=Math.PI;}
   const y=.905;
   // Disc-drive family. Stepped wedges and vented faces read differently in profile.
@@ -92,21 +74,7 @@ function cabinet({part,box,cyl,oval,block,label,group,walnut,shelfBounds}){
   }
   tag('Custom controllers',cx,1.451);
 }
-function drinksFridge({part,box,cyl,block,shelfBounds}){
-  const x=.57,z=-3.60,front=x+.31;
-  box(x-.28,.74,z,.055,1.45,.73,black);
-  for(const s of [-1,1]){box(x,.74,z+s*.363,.60,1.45,.041,black);box(front,.75,z+s*.34,.052,1.40,.041,steel);}
-  box(x,.09,z,.62,.16,.75,black);box(x,1.44,z,.62,.083,.75,black);
-  for(let row=0;row<4;row++){const y=.20+row*.293;box(x,y,z,.55,.017,.66,steel);
-    for(let col=0;col<5;col++){const zz=z-.24+.12*col;const c=['#af5946','#bd9259','#708b9b','#64917d','#9c7d9b'][(col+row)%5];
-      cyl(x+.113,y+.087,zz,.079,.158,.079,c);cyl(x+.113,y+.168,zz,.077,.006,.077,'#bdc4c2');cyl(x+.113,y+.078,zz,.081,.026,.081,'#d8d2b8');}}
-  const glass=new T.MeshStandardMaterial({color:'#8cb8bf',transparent:true,opacity:.16,roughness:.22,depthWrite:false});
-  box(front+.006,.79,z,.012,1.21,.65,glass);box(front+.034,.82,z+.292,.044,.32,.025,black);
-  for(const s of [-1,1])box(front-.02,.80,z+s*.32,.014,1.20,.007,light);
-  block(x,z,.70,.76);shelfBounds.push({level:2,x,z,w:.74,d:.78,bottom:0,top:1.50});
-}
 export function dressGamingRoom(api){
-  psMat(api);cabinet(api);drinksFridge(api);
-  beanBag(api,5.90,.50,-.58,'#647582','#a5a9a0');
-  beanBag(api,5.06,2.20,.56,'#825d49','#b09571');
+  psMat(api);
+  cabinet(api);
 }

@@ -190,57 +190,9 @@ function pixelCollectible({b}, rows) {
   }
 }
 
-// Round bean bags have a compressed center, a higher back and a slightly
-// scalloped perimeter where the stitched panels pull against the filling.
-const bagProfile = [
-  [0,.025],[.67,.030],[.92,.090],[1,.196],[.99,.29],
-  [.88,.39],[.69,.395],[.49,.35],[.25,.295],[0,.275]
-];
-function bagPoint(row, angle) {
-  const [r,h]=bagProfile[row], sides=Math.sin(angle), back=(1-sides)/2;
-  const fold=1+.026*Math.cos(7*angle+.53*row)+.012*Math.sin(3*angle-row*.34);
-  const lift=Math.sin(Math.PI*row/(bagProfile.length-1))**1.3;
-  return new T.Vector3(
-    Math.cos(angle)*r*.67*fold-.036*Math.sin(row*.64),
-    h+back**2*r*lift*.32,
-    sides*r*.60*fold+row*.003
-  );
-}
-function bagGeometry() {
-  const points=[],uv=[],idx=[],n=56;
-  for(let j=0;j<bagProfile.length;j++){
-    for(let i=0;i<=n;i++){
-      const v=bagPoint(j,i/n*Math.PI*2);points.push(v.x,v.y,v.z);uv.push(i/n,j/(bagProfile.length-1));
-    }
-  }
-  for(let j=0;j<bagProfile.length-1;j++)for(let i=0;i<n;i++){
-    const a=j*(n+1)+i,b=a+1,c=a+n+1,d=c+1;
-    idx.push(a,c,b,b,c,d);
-  }
-  const geo=new T.BufferGeometry();
-  geo.setAttribute('position',new T.Float32BufferAttribute(points,3));
-  geo.setAttribute('uv',new T.Float32BufferAttribute(uv,2));
-  geo.setIndex(idx);geo.computeVertexNormals();return geo;
-}
 function cordGeometry(points,radius,segments=24){
   return new T.TubeGeometry(new T.CatmullRomCurve3(points.map(p=>new T.Vector3(...p)),false,'centripetal'),segments,radius,6,false);
 }
-function beanBags({part,block}) {
-  const geo=bagGeometry();
-  const stitches=[-.72,.72,2.37,3.91].map(a=>{
-    const path=bagProfile.slice(1,-1).map((_,index)=>{
-      const v=bagPoint(index+1,a);v.x*=1.006;v.z*=1.006;v.y+=.003;return v.toArray();
-    });
-    return cordGeometry(path,.0036,18);
-  });
-  for(const [x,z,angle,fabric,thread] of [[10.99,-4.50,1.25,'#568781','#96a690'],[12.46,-5.14,1.70,'#ad664d','#d09b70']]){
-    const pose=new T.Matrix4().makeRotationY(angle).setPosition(x,.034,z);
-    part(geo,0,0,0,1,1,1,fabric,0,0,0,pose);
-    for(const seam of stitches)part(seam,0,0,0,1,1,1,thread,0,0,0,pose);
-    block(x,z,1.19,1.18);
-  }
-}
-
 function floorAudio({part:rawPart,box:rawBox,cyl:rawCyl}) {
   const rugTop=.034;
   const part=(shape,x,y,z,...args)=>rawPart(shape,x,y+rugTop,z,...args);
@@ -284,31 +236,15 @@ function floorAudio({part:rawPart,box:rawBox,cyl:rawCyl}) {
   cable([[8.59,1.154,-6.06],[8.64,1.13,-5.87],[8.681,1.03,-5.66],[8.686,.53,-5.612],[8.63,.086,-5.55],[8.58,.014,-5.51],[sx,.055,sz+.134]],.0065,graphite,28,false);
 }
 
-export function buildRetroShowcase({part,box,cyl,group,block,label,walnut,shelfBounds}) {
+export function buildRetroShowcase({part,box,cyl,group,label}) {
   function plaque(text,z,y,w,h,heading=false) {
     const s=label(group,text,front+.004,y,z,w,h,{width:heading?960:480,height:92,size:heading?58:52,color:'#f4ead6',bg:heading?'#282e32':'#393630'});
     s.rotation.y=facing;s.name=text;
   }
-  function cabinet(z,width,levels,heading,top){
-    const bottom=.18;
-    box(wallX-depth/2+.019,(top+bottom)/2,z,.038,top-bottom,width,graphite);
-    for(const side of [-1,1]) box(wallX,(top+bottom)/2,z+side*(width/2-.017),depth,top-bottom,.034,walnut);
-    for(const y of levels){
-      box(wallX,y-.024,z,depth,.048,width,walnut);
-      box(front-.024,y-.046,z,.036,.055,width-.055,graphite);
-      box(front-.074,y-.055,z,.015,.006,width-.13,amber);
-    }
-    box(wallX,top-.025,z,depth,.05,width,walnut);
-    box(front-.012,top-.089,z,.024,.10,width-.048,graphite);
-    plaque(heading,z,top-.09,Math.min(width-.12,1.02),.095,true);
-    for(const s of [-1,1]) box(wallX,.135,z+s*(width/2-.092),depth*.74,.16,.080,graphite);
-    block(wallX,z,depth,width);
-    shelfBounds.push({level:2,x:wallX,z,w:depth,d:width,bottom:.055,top});
-  }
   const main=-6.99, mini=-4.76;
   const lower=.48,middle=1.10,upper=1.71;
-  cabinet(main,2.76,[lower,middle,upper],'CONSOLE ARCHIVE',2.26);
-  cabinet(mini,1.37,[.84,1.44],'PIXEL COLLECTIBLES',1.96);
+  plaque('CONSOLE ARCHIVE',main,2.17,1.02,.095,true);
+  plaque('PIXEL COLLECTIBLES',mini,1.87,1.02,.095,true);
   function system(name,offset,top,model){
     const z=main+offset; model(workbench(part,z,top));plaque(name,z,top-.043,.370,.061);
   }
@@ -327,5 +263,4 @@ export function buildRetroShowcase({part,box,cyl,group,block,label,walnut,shelfB
     plaque(name,z,top-.043,.32,.054);
   });
   floorAudio({part,box,cyl});
-  beanBags({part,block});
 }

@@ -1,5 +1,6 @@
 import * as T from './vendor/three.module.js';
 import {cinemaShelfFinishes,dressCinemaCabinet} from './cinema.js';
+import {fitBoxSetRack} from './room-models.js';
 import {batchRack} from './shelf-render.js';
 import {categoryById, ITEMS} from './catalog.js';
 import {fixtures,rise,roomAt} from './plan.js';
@@ -67,6 +68,7 @@ export function stockRooms(interior,box,label,seed=0){
     const wood=cinema?cinemaShelfFinishes.walnut:usualWood,steel=cinema?cinemaShelfFinishes.edge:usualSteel;
     if(!roomStock.has(room))roomStock.set(room,[]);
     roomStock.get(room).push(...assigned.flat());
+    const isBoxRack=key==='shows'||key==='anime';
     const board=(...args)=>{const m=box(group,...args);picks.push(m);return m;};
     const maxWidth=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).w));
     const maxHeight=Math.max(.10,...assigned.flat().map(item=>caseSpec(item).h));
@@ -74,12 +76,11 @@ export function stockRooms(interior,box,label,seed=0){
     const printRack=key==='books'||key==='manga',recordBin=key==='vinyl';
     const firstRow=key==='books'?2:key==='manga'?1:0;
     const stockRows=Math.ceil(assigned.length/capacity);
-    const rows=cinema?Math.max(5,stockRows):printRack?Math.max(4,firstRow+stockRows):Math.max(1,stockRows);
+    const rows=isBoxRack?Math.max(4,stockRows):cinema?Math.max(5,stockRows):printRack?Math.max(4,firstRow+stockRows):Math.max(1,stockRows);
     const step=cinema?Math.max(.389,maxHeight*1.41+.045):recordBin?maxHeight*2.03+.06:printRack?Math.max(.46,maxHeight+.10):maxHeight*1.75+.07;
-    const base=cinema?.43:recordBin?.74:printRack?.16:rows>2?.64:1.08;
+    const base=isBoxRack?.45:cinema?.43:recordBin?.74:printRack?.16:rows>2?.64:1.08;
     const height=cinema?Math.max(2.89,base+step*rows+.57):base+step*rows+.04;
     // Extend the display toward the aisle if a set outgrows the regular shelf.
-    const isBoxRack=key==='shows'||key==='anime';
     const deepest=isBoxRack?Math.max(0,...assigned.flat().map(item=>caseSpec(item).d)):0;
     const extension=Math.max(0,deepest-.46);
     const shelfZ=extension/2,depth=recordBin?.32:.65+extension;
@@ -88,7 +89,12 @@ export function stockRooms(interior,box,label,seed=0){
       d:Math.abs(Math.sin(angle))*width+Math.abs(Math.cos(angle))*depth};
     interior.obstacles.push(footprint);
     interior.shelfBounds.push({...footprint,bottom:0,top:height+.22});
-    if(recordBin){
+    if(isBoxRack){
+      group.name=key==='shows'?'Series box sets':'Anime box sets';
+      // Cabinet backing and gables also stop ray selection through the fixture.
+      for(const side of [-1,1])board(side*(width/2-.026),height/2,shelfZ,.052,height,depth,steel).visible=false;
+      board(0,height/2,-.26,width,height,.055,steel).visible=false;
+    }else if(recordBin){
       board(0,base/2,0,width,base,.31,wood);
       board(0,base+.018,.152,width,.095,.025,steel);
       for(const side of [-1,1])board(side*(width/2-.016),base+.045,0,.032,.14,.31,wood);
@@ -109,7 +115,8 @@ export function stockRooms(interior,box,label,seed=0){
     }
     for(let row=0;row<rows;row++){
       const deck=base+row*step;
-      board(0,deck,shelfZ,width,.026,recordBin?.31:.62+extension,wood);
+      const ledge=board(0,deck,shelfZ,width,.026,recordBin?.31:.62+extension,wood);
+      if(isBoxRack)ledge.visible=false;
       if(cinema){
         board(0,deck-.019,.267,width-.075,.016,.025,steel);
         board(0,deck-.020,.255,width-.098,.009,.010,led);
@@ -144,7 +151,10 @@ export function stockRooms(interior,box,label,seed=0){
         });
       });
     }
-    if(!recordBin){
+    if(isBoxRack){
+      const signY=height*2.465/2.4,signZ=shelfZ+.300*(.62+extension)/.62;
+      label(group,group.name,0,signY,signZ,Math.min(1.22,width-.12),.12,{bg:'#252923',color:'#efe7d3',size:69});
+    }else if(!recordBin){
       board(0,height,shelfZ,width,.035,.62+extension,wood);board(0,height-.025,.235+extension,width-.1,.01,.025,led);
       if(cinema){
         const displayDeck=base+step*rows;
@@ -157,6 +167,8 @@ export function stockRooms(interior,box,label,seed=0){
       }else label(group,category.short,0,height+.12,.12,Math.min(1.55,width*.65),.19,{bg:'#302c26',color:'#efcea5',size:80});
     }
     batchRack(group);
+    if(isBoxRack)fitBoxSetRack(group,width,height,extension,Array.from({length:rows},(_,i)=>base+i*step))
+      .catch(error=>console.error('Box-set cabinet unavailable',error));
   });
   return {stacks,interactables,destinations,roomStock};
 }

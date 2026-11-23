@@ -20,7 +20,7 @@ function slate(label,retro=false){
 }
 
 const standby={
-  cinema:cinemaProgramme(), television:slate('TV ROOM'),
+  cinema:cinemaProgramme(), television:slate('TV ROOM'), bed:slate('MOVIE TV'),
   gaming:slate('GAME TRAILERS'), retro:slate('RETRO GAMING ROOM',true)
 };
 const windowMaterial=new T.ShaderMaterial({
@@ -43,7 +43,7 @@ export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   const channels=new Map();
   for(const tv of screens){
     const entries=[];
-    for(const item of roomStock.get(tv.room)||[]){
+    for(const item of roomStock.get(tv.room==='bed'?'cinema':tv.room)||[]){
       const sources=trailerSources(item,streams[item.id]);
       if(sources.length)entries.push({id:item.id,item,sources});
     }
