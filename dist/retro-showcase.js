@@ -6,6 +6,29 @@ const amber = '#e3b76e', ruby = '#a73c42', blue = '#377490', lcd = '#526c72';
 const blackGlass = '#17252d', red = '#e44f40', lit = '#c2d0b1';
 const wallX = 8.43, depth = .49, front = wallX + depth / 2;
 const facing = Math.PI / 2;
+const consoleBayZ = -6.99, lowerDeck = .48;
+
+export const ps2ShelfView = {level:2, x:9.46, z:consoleBayZ+.06, yaw:Math.PI/2-.055, pitch:-.76};
+
+export async function installPlayStation2(room, loader) {
+  const {scene:model} = await loader.loadAsync(new URL('./models/playstation-2.glb',import.meta.url).href);
+  const display = new T.Group();
+  display.name = 'PlayStation 2 · console, DualShock 2 and memory card';
+  display.position.set(wallX, lowerDeck, consoleBayZ);
+  display.rotation.y = facing;
+  display.add(model);
+  const bounds = new T.Box3().setFromObject(model), size = bounds.getSize(new T.Vector3());
+  const pick = new T.Mesh(new T.BoxGeometry(size.x,size.y,size.z),new T.MeshBasicMaterial());
+  bounds.getCenter(pick.position);pick.visible=false;
+  pick.userData = {display:'console',level:2,width:size.x,height:size.y,depth:size.z,item:{
+    id:'display:playstation-2',title:'PlayStation 2',creator:'Sony Computer Entertainment',year:2000,
+    description:'The original ribbed PlayStation 2 stands upright in its blue base, with a wired DualShock 2 controller and a removable 8 MB memory card.',
+    source:'PlayStation',sourceUrl:'https://www.playstation.com/en-us/playstation-history/2000-ps2-psp/',
+    exhibit:{model,section:'Retro gaming room',format:'Home console',dimensions:[78,301,182],destination:ps2ShelfView}
+  }};
+  display.add(pick);room.add(display);
+  return pick;
+}
 
 // Local +z faces the visitor. All hardware details, including the tiny controls,
 // bake into the floor's existing material batches.
@@ -106,15 +129,6 @@ function cube({b,soft,disk,dial}) {
   b(0,.105,.125,.22,.113,.006,graphite);
   for(const x of [-.081,-.027,.027,.081]) dial(x,.123,.130,.032,ink);
   for(const x of [-.053,.053]) b(x,.071,.130,.081,.009,.004,ink);
-}
-
-function ps2({b}) {
-  b(0,.012,.013,.166,.024,.270,blue);
-  b(-.016,.182,-.004,.082,.324,.228,ink);
-  b(.026,.174,.011,.032,.301,.250,graphite);
-  for(let i=0;i<7;i++) b(-.049+i*.010,.182,.114,.004,.325,.008,graphite);
-  b(.027,.194,.139,.009,.176,.004,ink);
-  b(.022,.087,.140,.008,.017,.004,blue); b(.022,.066,.140,.007,.005,.005,green);
 }
 
 function xbox({b,soft,disk}) {
@@ -241,8 +255,8 @@ export function buildRetroShowcase({part,box,cyl,group,label}) {
     const s=label(group,text,front+.004,y,z,w,h,{width:heading?960:480,height:92,size:heading?58:52,color:'#f4ead6',bg:heading?'#282e32':'#393630'});
     s.rotation.y=facing;s.name=text;
   }
-  const main=-6.99, mini=-4.76;
-  const lower=.48,middle=1.10,upper=1.71;
+  const main=consoleBayZ, mini=-4.76;
+  const lower=lowerDeck,middle=1.10,upper=1.71;
   plaque('CONSOLE ARCHIVE',main,2.17,1.02,.095,true);
   plaque('PIXEL COLLECTIBLES',mini,1.87,1.02,.095,true);
   function system(name,offset,top,model){
@@ -255,8 +269,9 @@ export function buildRetroShowcase({part,box,cyl,group,label}) {
   handhelds.forEach(([n,model],i)=>system(n,1.10-i*.44,upper,model));
   [['NES',nes],['FAMICOM',famicom],['SUPER NES',snes],['SEGA GENESIS',genesis]]
     .forEach(([n,model],i)=>system(n,.99-i*.66,middle,model));
-  [['GAMECUBE',cube],['PLAYSTATION 2',ps2],['ORIGINAL XBOX',xbox]]
-    .forEach(([n,model],i)=>system(n,.85-i*.85,lower,model));
+  system('GAMECUBE',.85,lower,cube);
+  plaque('PLAYSTATION 2',main,lower-.043,.370,.061);
+  system('ORIGINAL XBOX',-.85,lower,xbox);
   sprites.forEach(([name,rows],i)=>{
     const z=mini+(.42-(i%3)*.42),top=i<3?1.44:.84;
     pixelCollectible(workbench(part,z,top),rows);

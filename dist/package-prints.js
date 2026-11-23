@@ -113,17 +113,18 @@ export function shelfInserts(item,spec){
 export function shelfJCard(item,cover){
   if(cassetteSlots.has(item.id))return cassetteSlots.get(item.id);
   const index=cassetteSlots.size,pageIndex=Math.floor(index/128),cell=index%128;
-  const page=cassetteSheets[pageIndex]??=atlasSheet(1024,320);
-  const x=(cell%16)*64,y=Math.floor(cell/16)*40;
+  const width=128,height=80;
+  const page=cassetteSheets[pageIndex]??=atlasSheet(width*16,height*8);
+  const x=(cell%16)*width,y=Math.floor(cell/16)*height;
   function print(img=null,crop=null){
-    drawAt(page.canvas,x,y,64,40,(c,w,h)=>drawJCard(c,item,img,w,h,crop));page.map.needsUpdate=true;
+    drawAt(page.canvas,x,y,width,height,(c,w,h)=>drawJCard(c,item,img,w,h,crop));page.map.needsUpdate=true;
   }
   print();
   cover.ready.then(map=>{
     const img=map.image;if(!img)return;
     print(img,[cover.u*img.width,(1-cover.v-cover.sy)*img.height,cover.sx*img.width,cover.sy*img.height]);
   });
-  const tile=boxUV(page,x,y,64,40);cassetteSlots.set(item.id,tile);return tile;
+  const tile=boxUV(page,x,y,width,height);cassetteSlots.set(item.id,tile);return tile;
 }
 export function detailInserts(item,spec){
   const h=512,w=Math.max(128,Math.round(h*spec.w/spec.h));

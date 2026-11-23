@@ -99,7 +99,7 @@ function formatBand(item){
   const map=new THREE.CanvasTexture(c);map.colorSpace=THREE.SRGBColorSpace;bands.set(label,map);return map;
 }
 export function createMediaCase(item,onShelf=false){
-  const spec=caseSpec(item),tile=onShelf?shelfCover(item.artwork):null;
+  const spec=caseSpec(item),tile=onShelf?shelfCover(item.artwork,item.category==='vinyl'):null;
   const cover=tile||{map:coverTexture(item)};
   return makePackage(item,spec,onShelf,cover,formatBand(item));
 }

@@ -32,7 +32,9 @@ export function createCasePreview(canvas, items) {
 
   function reset() {
     if (!model) return;
-    model.rotation.set(.09, -.38, -.015, 'YXZ'); dirty = true;
+    if(entries.length)model.rotation.set(.09, -.38, -.015, 'YXZ');
+    else model.rotation.set(.16, .12, 0, 'YXZ');
+    dirty = true;
   }
 
   function rotate(dx, dy) {
@@ -70,19 +72,33 @@ export function createCasePreview(canvas, items) {
     if(drag && canvas.hasPointerCapture(drag.id))canvas.releasePointerCapture(drag.id);
     drag=null;
     for(const entry of entries){scene.remove(entry.group);entry.dispose();}
+    if(model&&entries.length===0)scene.remove(model);
     entries=[];
     model=null;
   }
 
+  function prepareRenderer() {
+    if(renderer)return;
+    renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+    scene.environment=inspectionStudio();scene.environmentIntensity=.53;
+    renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+    renderer.setClearColor(0,0);renderer.outputColorSpace=THREE.SRGBColorSpace;
+  }
+
+  function showModel(source,title) {
+    hide();prepareRenderer();
+    const display=source.clone(true), bounds=new THREE.Box3().setFromObject(display);
+    const pivot=new THREE.Group();
+    display.position.sub(bounds.getCenter(new THREE.Vector3()));pivot.add(display);
+    pivot.scale.setScalar(2.25/bounds.getSize(new THREE.Vector3()).length());
+    scene.add(pivot);model=pivot;
+    canvas.setAttribute('aria-label','Rotate '+title+'. Drag to rotate. Home resets the view.');
+    reset();started=0;render();
+  }
+
   function show(item,previous,next,direction=0) {
     const oldSlots=new Map(entries.map(entry=>[entry.id,entry.slot]));
-    hide();
-    if(!renderer){
-      renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
-      scene.environment=inspectionStudio();scene.environmentIntensity=.53;
-      renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-      renderer.setClearColor(0,0);renderer.outputColorSpace=THREE.SRGBColorSpace;
-    }
+    hide();prepareRenderer();
     for(const [target,record] of [[-1,previous],[0,item],[1,next]]){
       if(!record)continue;
       const {group,spec,dispose}=createMediaCase(record);
@@ -125,5 +141,5 @@ export function createCasePreview(canvas, items) {
     if(t===1)started=0;
     renderer.render(scene,camera);dirty=false;
   }
-  return {show,hide,reset,render};
+  return {show,showModel,hide,reset,render};
 }

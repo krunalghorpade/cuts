@@ -73,22 +73,6 @@ function textureMaterial(draw,w=512,h=256){
   const map=new T.CanvasTexture(canvas);map.colorSpace=T.SRGBColorSpace;return new T.MeshBasicMaterial({map});
 }
 const shadowMat=(()=>{const m=textureMaterial((g,w,h)=>{const v=g.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);v.addColorStop(0,'rgba(15,10,5,.72)');v.addColorStop(.55,'rgba(15,10,5,.45)');v.addColorStop(1,'rgba(15,10,5,0)');g.fillStyle=v;g.fillRect(0,0,w,h);},96,96);m.transparent=true;m.depthWrite=false;return m})();
-// Soft patterned daylight in front of glazed masonry. Shared alpha map keeps the
-// glass-block shadows inexpensive on phones as well as on desktop.
-const sunPatch=textureMaterial((ctx,w,h)=>{
-  ctx.clearRect(0,0,w,h);
-  const wash=ctx.createLinearGradient(0,0,0,h);
-  wash.addColorStop(0,'rgba(255,232,174,.32)');wash.addColorStop(.61,'rgba(255,223,154,.20)');wash.addColorStop(1,'rgba(255,221,160,0)');
-  ctx.fillStyle=wash;ctx.fillRect(0,0,w,h);
-  ctx.globalCompositeOperation='destination-out';
-  ctx.filter='blur(2px)';ctx.strokeStyle='rgba(0,0,0,.69)';ctx.lineWidth=3;
-  for(let i=-2;i<16;i++){ctx.beginPath();ctx.moveTo(i*w/13,0);ctx.lineTo(i*w/13+w*.14,h);ctx.stroke();}
-  for(let i=1;i<9;i++){ctx.fillStyle='rgba(0,0,0,.52)';ctx.fillRect(0,i*h/10,w,2.5);}
-  const feather=ctx.createLinearGradient(0,0,w,0);
-  feather.addColorStop(0,'#000');feather.addColorStop(.12,'transparent');feather.addColorStop(.88,'transparent');feather.addColorStop(1,'#000');
-  ctx.fillStyle=feather;ctx.fillRect(0,0,w,h);
-},512,256);
-sunPatch.transparent=true;sunPatch.depthWrite=false;sunPatch.blending=T.AdditiveBlending;
 import {dressRooms} from './room-props.js';
 import {dressGamingRoom} from './modern-room.js';
 import {brotherhoodStatue} from './brotherhood-statue.js';
@@ -98,9 +82,7 @@ export function buildInterior(scene,label,items,editorial){
   const featureStock=new Map();
   let theatre;
   const shelfBounds=[], floors=[], obstacles=[], occluders=[], doors=[], screens=[], devices=[];
-  scene.add(new T.HemisphereLight('#f9e9d7','#716f68',1.38));
-  const sun=new T.DirectionalLight('#fff1df',1.55);sun.position.set(-5,9,5);scene.add(sun);
-  const fill=new T.DirectionalLight('#b8c9d3',.52);fill.position.set(8,3,-4);scene.add(fill);
+  scene.add(new T.HemisphereLight('#f2eae0','#aa9c8b',.90));
 
   for(const level of levels){
     const group=new T.Group();group.position.y=(level-1)*rise;scene.add(group);floors.push(group);
@@ -128,11 +110,6 @@ export function buildInterior(scene,label,items,editorial){
     const box=(...args)=>part(args[6]===linen?'cushion':'box',...args), cyl=(...args)=>part('round',...args), oval=(...args)=>part('leaf',...args);
     const block=(x,z,w,d)=>obstacles.push({level,x:x+originX,z,w,d});
     function shadow(x,z,w,d,y=.012){const m=new T.Mesh(new T.PlaneGeometry(w,d),shadowMat);m.rotation.x=-Math.PI/2;m.position.set(x+originX,y,z);group.add(m);}
-    function daylight(x,z,w,d,angle=0){
-      const beam=new T.Mesh(new T.PlaneGeometry(w,d),sunPatch);
-      beam.rotation.order='YXZ';beam.rotation.set(-Math.PI/2,angle,0,'YXZ');
-      beam.position.set(x,.038,z);group.add(beam);
-    }
     function sign(name,x,y,z,w,angle=0){const tag=label(group,name,x,y,z,w,.21,{height:96,width:768,bg:'#302c26',color:'#f1d7ad',size:56});tag.rotation.y=angle;}
     function lightStrip(x,y,z,w,d){box(x,y,z,w,.08,d,iron);box(x,y-.048,z,w*.96,.018,d*.6,light);}
     function cove(x,z,width,height,angle=0){
@@ -141,7 +118,7 @@ export function buildInterior(scene,label,items,editorial){
       const halo=new T.Mesh(new T.PlaneGeometry(width,1.08),wash);halo.position.set(x,height-.54,z);halo.rotation.y=angle;group.add(halo);
       box(x,height+.045,z,width,.085,.13,walnut,0,angle);box(x,height,z,width-.04,.021,.095,light,0,angle);
     }
-    function spot(x,y,z,power,dist){const l=new T.PointLight('#ffbd78',power,dist,1.7);l.position.set(x,y,z);group.add(l);}
+    function spot(x,y,z,power,dist,color='#ffbd78'){const l=new T.PointLight(color,power,dist,1.7);l.position.set(x,y,z);group.add(l);}
     function tv(x,z,w,y,crt=false,reverse=false,surface=.8375){
       const sign=reverse?-1:1,depth=crt?w*.57:.065;
       const screenW=w*.91*(crt?1:1.4),screenH=crt?screenW*3/4:w*.49*1.4;
@@ -216,10 +193,6 @@ export function buildInterior(scene,label,items,editorial){
     for(const opening of doorways){
       if(['single','double'].includes(opening[5]))doors.push(makeDoor(group,level,opening,opening[4],walnut,label));
     }
-    daylight(.45,-7.70,4.15,2.24);
-    if(level===1){daylight(3.71,4.4,1.58,2.75,Math.PI);daylight(-10,9.0,3.0,2.7,Math.PI);}
-    if(level===2){daylight(-11.12,7.58,1.53,3.2,-Math.PI/2);}
-    if(level===3){daylight(0,4.35,3.08,3.15,Math.PI);daylight(11.74,-7.64,4.45,2.34);}
     furnishHall({group,level,box,walnut,label});
     if(level===1){
       theatre=buildCinema({group,box,cyl,block,shadow,screens});
@@ -254,6 +227,8 @@ export function buildInterior(scene,label,items,editorial){
 
       sign('RETRO GAMING ROOM',12.27,3.065,-1.124,2.52,Math.PI);
       const arcadeLight=new T.PointLight('#a091c5',5,5,1.8);arcadeLight.position.set(12,2.20,-2.48);group.add(arcadeLight);
+      // Warm recessed fixtures light the aisle between the tape racks and LP bins.
+      spot(-6.24,3.98,-3.96,18,6.8,'#ffe6c9');spot(-6.24,3.98,.04,18,6.8,'#ffe6c9');
       spot(4,2.9,-1.8,18,9);spot(-2.9,2.8,4.63,13,7);spot(-8.5,3,9.5,24,8);spot(11.3,3,-6.2,28,9);spot(11.1,2.8,7.25,23,7);
     }
     if(level===3){

@@ -2,6 +2,8 @@ import * as THREE from './vendor/three.module.js';
 import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList, trailerStreams, musicPreviews, posterContent, loadCollections } from './catalog.js';
 import {installMusicPlayers} from './music-players.js';
 import {installArcade} from './arcade.js';
+import {ps2ShelfView} from './retro-showcase.js';
+import {createWindowLighting} from './window-light.js';
 import { buildInterior } from './interior.js';
 import {installPosters,installTelevisions} from './displays.js';
 import {installElevator} from './elevator.js';
@@ -24,11 +26,14 @@ const scene = new THREE.Scene();
 scene.background = new THREE.Color('#63584a');
 scene.fog = new THREE.FogExp2('#63584a', 0.012);
 const camera = new THREE.PerspectiveCamera(73, innerWidth / innerHeight, 0.08, 80);
-const entryRoom=rooms.find(room=>room.id===location.hash.slice(1));
-const start=entryRoom?.spawn||entrance;
+const atPS2=location.hash==='#ps2';
+const entryRoom=rooms.find(room=>room.id===(atPS2?'retro':location.hash.slice(1)));
+const start=atPS2?[ps2ShelfView.x,ps2ShelfView.z,ps2ShelfView.yaw]:entryRoom?.spawn||entrance;
+const entryPitch=atPS2?ps2ShelfView.pitch:0;
 camera.position.set(start[0],((entryRoom?.floor||1)-1)*rise+1.62,start[1]);
 camera.rotation.order = 'YXZ';
 camera.rotation.y = start[2];
+camera.rotation.x = entryPitch;
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
 renderer.setPixelRatio(Math.min(devicePixelRatio, Math.sqrt(900000/(innerWidth*innerHeight))));
 renderer.setSize(innerWidth, innerHeight);
@@ -64,6 +69,7 @@ try{
   const pending=sessionStorage.getItem('myroom.refreshVisit');
   if(pending){restoredVisit=JSON.parse(pending);sessionStorage.removeItem('myroom.refreshVisit');}
 }catch{}
+const illuminate=createWindowLighting(renderer);
 const interior=buildInterior(scene,label,ITEMS,posterContent);
 const elevator=installElevator(scene,interior.floors,box,label);
 const houseLights=$('cinemaLights');
@@ -75,7 +81,7 @@ function syncHouseLights(on){
 }
 houseLights.onclick=()=>syncHouseLights(!interior.theatre.bright);
 syncHouseLights(false);
-const displayTargets=levels.map(()=>[]);
+const displayTargets=interior.roomModels.displayTargets;
 const {stacks,interactables,destinations,roomStock}=stockRooms(interior,box,label,layoutSeed);
 const updatePosters=installPosters(interior,roomStock,displayTargets,posterContent);
 const updateTVs=installTelevisions(canvas,interior.screens,roomStock,trailerStreams,openDetail);
@@ -90,6 +96,8 @@ for(const tv of interior.screens){
 for(const door of interior.doors)interactables[door.level-1].push(...door.faces);
 const musicPlayer=installMusicPlayers(roomStock.get('music')||[],musicPreviews,interior.devices,openDetail);
 const openArcade=installArcade(()=>{uiOpen=false;});
+illuminate(scene);
+interior.theatre.ready.then(()=>illuminate(interior.floors[0])).catch(()=>{});
 let ground=((entryRoom?.floor||1)-1)*rise,level=levelOf(ground);
 let requestedFloor=0;
 const loadNotice=$('floorLoad'),loadText=loadNotice.querySelector('span'),retryFloor=loadNotice.querySelector('button');
@@ -97,6 +105,7 @@ function requestFloor(next){
   requestedFloor=next;retryFloor.hidden=true;loadNotice.hidden=true;
   const hint=setTimeout(()=>{if(requestedFloor===next){loadText.textContent='Loading Level '+next;loadNotice.hidden=false;}},500);
   interior.roomModels.loadFloor(next).then(()=>{
+    illuminate(interior.floors[next-1]);
     if(requestedFloor===next)loadNotice.hidden=true;
   }).catch(error=>{
     console.error('Room loading failed',error);
@@ -116,7 +125,7 @@ function refreshFloor(){
   $('entryLocation').textContent='Level '+level+' · '+location;
 }
 refreshFloor();
-let active=false, uiOpen=false, yaw=start[2], pitch=0, focusedCase=null, selectedCase=null, toastTimer;
+let active=false, uiOpen=false, yaw=start[2], pitch=entryPitch, focusedCase=null, selectedCase=null, toastTimer;
 let dragLook=false, dragPointer=null, dragLastX=0, dragLastY=0;
 const keys=new Set(); const raycaster=new THREE.Raycaster(); const hoverPoint=new THREE.Vector2();let hasPointer=false,suppressClick=false,pressX=0,pressY=0; const clock=new THREE.Clock();
 const joystick={x:0,y:0,pointer:null}; let lookStart=null,lookPointer=null,lookLastX=0,lookLastY=0;
@@ -151,7 +160,7 @@ let detailItems=[], detailIndex=-1, fromCatalog=false;
 function openDetail(item){
   if(!item)return;
   fromCatalog=!catalogPanel.classList.contains('hidden');
-  detailItems=sections.get(item.category);
+  detailItems=item.exhibit?[item]:sections.get(item.category);
   detailIndex=detailItems.findIndex(entry=>entry.id===item.id);
   if(detailIndex<0)return;
   uiOpen=true;keys.clear();
@@ -195,14 +204,16 @@ function showDetailItem(direction=0){
   $('itemNext').title=next?next.title:'Last item';
   $('itemPosition').textContent=(detailIndex+1)+' / '+detailItems.length;
   detailPanel.scrollTop=0;
-  preview.show(item,prev,next,direction);
+  detailPanel.querySelector('.carousel-nav').classList.toggle('hidden',!!item.exhibit);
+  if(item.exhibit)preview.showModel(item.exhibit.model,item.title);
+  else preview.show(item,prev,next,direction);
   $('audioExtra').classList.add('hidden');
   $('itemDescription').textContent=item.description;
   showRelated(item);
-  $('sizeLabel').textContent=['books','manga'].includes(item.category) ? (item.estimatedSize?'Estimated size':'Book size') : 'Case size';
-  $('detailSize').textContent=caseSpec(item).dimensions.join(' × ')+' mm';
-  $('detailCategory').textContent=categoryById[item.category].label;$('detailTitle').textContent=item.title;
-  $('detailCreator').textContent=item.creator;$('detailYear').textContent=item.year;$('detailFormatValue').textContent=caseSpec(item).label;$('detailSource').textContent=item.source;
+  $('sizeLabel').textContent=item.exhibit?'Console size (upright)':['books','manga'].includes(item.category) ? (item.estimatedSize?'Estimated size':'Book size') : 'Case size';
+  $('detailSize').textContent=(item.exhibit?.dimensions||caseSpec(item).dimensions).join(' × ')+' mm';
+  $('detailCategory').textContent=item.exhibit?.section||categoryById[item.category].label;$('detailTitle').textContent=item.title;
+  $('detailCreator').textContent=item.creator;$('detailYear').textContent=item.year;$('detailFormatValue').textContent=item.exhibit?.format||caseSpec(item).label;$('detailSource').textContent=item.source;
   const sourceLink=$('sourceLink');
   sourceLink.classList.toggle('hidden', !item.sourceUrl);
   if(item.sourceUrl){
@@ -239,7 +250,7 @@ function arrive(floor,x,z,direction,lookPitch=0){
 }
 function visitShelf(){
   if(!currentDetailItem)return;
-  const dest=destinations.get(currentDetailItem.id);
+  const dest=currentDetailItem.exhibit?.destination||destinations.get(currentDetailItem.id);
   closeDetail(false);arrive(dest.level,dest.x,dest.z,dest.yaw,dest.pitch);
 }
 $('visitShelf').onclick=visitShelf;
@@ -314,7 +325,7 @@ function outline(frame,shell){
   if(!shell||shell.userData.device){frame.visible=false;return;}
   if(shell.userData.display){
     shell.add(frame);frame.visible=true;
-    frame.position.set(0,0,.001);frame.scale.set(shell.userData.width,shell.userData.height,1);return;
+    frame.position.set(0,0,(shell.userData.depth||0)/2+.001);frame.scale.set(shell.userData.width,shell.userData.height,1);return;
   }
   if(frame.parent!==shell.parent)shell.parent.add(frame);
   const {w,h,d}=shell.userData.spec;

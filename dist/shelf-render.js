@@ -2,12 +2,15 @@ import * as T from './vendor/three.module.js';
 
 const atlas=await (await fetch(new URL('./art/shelves/index.json',import.meta.url))).json();
 const slots=new Map(atlas.art.map((path,index)=>[path,index]));
+const vinylSlots=new Map((atlas.vinyl?.art??[]).map((path,index)=>[path,index]));
 const sheets=new Map();
 const loader=new T.TextureLoader();
-export function shelfCover(path){
-  const index=slots.get(path);
+export function shelfCover(path,vinyl=false){
+  const useLargePrint=vinyl&&vinylSlots.has(path);
+  const index=(useLargePrint?vinylSlots:slots).get(path);
   if(index===undefined)return null;
-  const {grid,tile,pad}=atlas,page=Math.floor(index/(grid*grid));
+  const {grid,tile,pad}=useLargePrint?atlas.vinyl:atlas;
+  const page=(useLargePrint?'lp-':'')+Math.floor(index/(grid*grid));
   if(!sheets.has(page)){
     let complete;
     const ready=new Promise(resolve=>{complete=resolve;});

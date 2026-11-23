@@ -16,33 +16,6 @@ const velvet=new T.MeshStandardMaterial({name:'Screen masking',color:'#111210',r
 const aisle=new T.MeshBasicMaterial({name:'Aisle guidance',color:'#efba7a'});
 export const cinemaShelfFinishes={walnut,edge};
 
-// Project filtered window light in world coordinates. It follows the folds of the seats
-// and the height of the steps without another shadow pass on mobile.
-const daylight=loader.load(new URL('./art/cinema-daylight.webp',import.meta.url).href);
-const sunlight={value:.63};
-function lightThroughGlass(material){
-  material.onBeforeCompile=shader=>{
-    shader.uniforms.cinemaGlassMap={value:daylight};shader.uniforms.cinemaSun=sunlight;
-    shader.vertexShader='varying vec3 cinemaWorld;\n'+shader.vertexShader;
-    shader.vertexShader=shader.vertexShader.replace('#include <project_vertex>',`#include <project_vertex>
-      vec4 cw=vec4(transformed,1.0);
-      #ifdef USE_INSTANCING
-        cw=instanceMatrix*cw;
-      #endif
-      cinemaWorld=(modelMatrix*cw).xyz;`);
-    shader.fragmentShader='varying vec3 cinemaWorld; uniform sampler2D cinemaGlassMap; uniform float cinemaSun;\n'+shader.fragmentShader;
-    shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',`
-      vec2 glassUv=(cinemaWorld.xz+vec2(7.65,3.9)+cinemaWorld.y*vec2(-.42,-1.25))/vec2(7.65,10.1);
-      float mottling=texture2D(cinemaGlassMap,clamp(glassUv,0.0,1.0)).r;
-      vec3 sunDir=normalize(vec3(-.29,.60,.74));
-      float incidence=max(0.,dot(inverseTransformDirection(normal,viewMatrix),sunDir));
-      outgoingLight+=mottling*cinemaSun*incidence*vec3(1.,.85,.61)*(.068+diffuseColor.rgb*.88);
-      #include <opaque_fragment>`);
-  };
-  material.customProgramCacheKey=()=>'cinema-window-light-v1';
-}
-lightThroughGlass(slate);
-
 async function placeModels(parent,stem,positions){
   const {GLTFLoader}=await import('./vendor/GLTFLoader.js');
   const {scene}=await new GLTFLoader().loadAsync(new URL('./models/'+stem+'.glb',import.meta.url).href);
@@ -51,7 +24,6 @@ async function placeModels(parent,stem,positions){
   scene.traverse(part=>{
     if(!part.isMesh)return;
     const mesh=new T.InstancedMesh(part.geometry,part.material,positions.length);
-    if(stem==='cinema-lounge-seat'||(stem==='cinema-architecture'&&part.material.name.startsWith('Basalt')))lightThroughGlass(part.material);
     if(stem==='cinema-architecture'&&part.material.name.startsWith('Walnut')){
       part.material.roughness=.73;
     }
@@ -122,7 +94,7 @@ export function buildCinema({group,box,block,shadow,screens}){
   function setHouseLights(on){
     bright=on;
     for(const [light,power] of practicals)light.intensity=power*(bright?1.95:.64);
-    aisle.color.set(bright?'#ffddb4':'#e3ad76');sunlight.value=bright?1.04:.61;
+    aisle.color.set(bright?'#ffddb4':'#e3ad76');
   }
   setHouseLights(false);
   return {ready,setHouseLights,get bright(){return bright;}};

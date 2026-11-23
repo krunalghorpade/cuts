@@ -3,6 +3,7 @@ import {rooms} from './plan.js';
 import {roomObstaclesL1,roomDisplayBoundsL1} from './rooms-l1-collisions.js';
 import {roomObstaclesL2,roomShelfBoundsL2} from './rooms-l2-collisions.js';
 import {roomObstaclesUpper} from './rooms-upper-collisions.js';
+import {installPlayStation2} from './retro-showcase.js';
 import {hangGallery} from './gallery.js';
 
 const loader=new GLTFLoader();
@@ -14,7 +15,8 @@ export function installRoomModels(floors,obstacles,shelfBounds){
   for(const [level,bounds] of [[1,roomDisplayBoundsL1],[2,roomShelfBoundsL2]]){
     for(const [x,z,w,d,bottom,top] of bounds)shelfBounds.push({level,x,z,w,d,bottom,top});
   }
-  let structure,gallery;
+  let structure,gallery,consoleLoad;
+  const displayTargets=floors.map(()=>[]);
   const roomLoads=new Map(),ready=new Map();
   function envelope(){
     return structure??=read('architecture').then(({scene})=>{
@@ -30,11 +32,15 @@ export function installRoomModels(floors,obstacles,shelfBounds){
   function furniture(room){
     if(!roomLoads.has(room.id)){
       const p=read(room.id).then(({scene})=>{
-        scene.name='Blender room · '+room.id;floors[room.floor-1].add(scene);
+        scene.name='Blender room · '+room.id;floors[room.floor-1].add(scene);return scene;
       }).catch(error=>{roomLoads.delete(room.id);throw error;});
       roomLoads.set(room.id,p);
     }
-    return roomLoads.get(room.id);
+    const base=roomLoads.get(room.id);
+    if(room.id!=='retro')return base;
+    return consoleLoad??=base.then(scene=>installPlayStation2(scene,loader))
+      .then(target=>{displayTargets[room.floor-1].push(target);})
+      .catch(error=>{consoleLoad=null;throw error;});
   }
   function loadFloor(level){
     if(ready.has(level))return ready.get(level);
@@ -45,7 +51,7 @@ export function installRoomModels(floors,obstacles,shelfBounds){
     ready.set(level,load);return load;
   }
   let exhibition=null;
-  return {loadFloor,tick(now,level){exhibition?.tick(now,level===3);}};
+  return {loadFloor,displayTargets,tick(now,level){exhibition?.tick(now,level===3);}};
 }
 
 const casework=read('box-set-casework');

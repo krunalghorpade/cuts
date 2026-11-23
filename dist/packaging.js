@@ -69,10 +69,11 @@ async function loadModel(id){
   }
 }
 const models=new Map(await Promise.all(Object.keys(dimensions).map(loadModel)));
-const tints=new Map(),paper=new WeakMap();
-function printed(map){
-  if(!paper.has(map))paper.set(map,new T.MeshStandardMaterial({map,roughness:.57,metalness:0}));
-  return paper.get(map);
+const tints=new Map(),paper=new WeakMap(),jacketStock=new WeakMap();
+function printed(map,vinyl){
+  const cache=vinyl?jacketStock:paper;
+  if(!cache.has(map))cache.set(map,new T.MeshStandardMaterial({map,roughness:vinyl ? .83 : .57,metalness:0}));
+  return cache.get(map);
 }
 function tinted(part,color){
   const key=part.material.uuid+color;
@@ -100,12 +101,12 @@ export function makePackage(item,spec,onShelf,cover,band){
   const front=onShelf&&id==='cassette'&&cover.ready?shelfJCard(item,cover):cover;
   const prints={MAT_FRONT:front,MAT_BACK:inserts.back,MAT_SPINE:inserts.spine,MAT_BAND:{map:band}};
   const generatedGeometry=[];
-  const detailPaper=onShelf?null:new T.MeshStandardMaterial({map:inserts.map,roughness:.66});
+  const detailPaper=onShelf?null:new T.MeshStandardMaterial({map:inserts.map,roughness:id==='vinyl' ? .83 : .66});
   for(const part of onShelf?model.shelf:model.detail){
     const tile=prints[part.slot];
     let geometry=part.geometry,material=part.material;
     if(tile?.map){
-      material=tile.map===inserts.map&&detailPaper?detailPaper:printed(tile.map);
+      material=tile.map===inserts.map&&detailPaper?detailPaper:printed(tile.map,id==='vinyl');
       if(!onShelf&&tile.sx){
         geometry=withUVs(geometry,tile);
         generatedGeometry.push(geometry);
