@@ -1,5 +1,5 @@
 import * as THREE from './vendor/three.module.js';
-import { CATEGORIES, ITEMS, categoryById } from './catalog.js';
+import { CATEGORIES, ITEMS, categoryById, playlists, traktList, gameList } from './catalog.js';
 import { buildInterior } from './interior.js';
 import { rooms, rise, stair, inside, roomAt, groundAt } from './plan.js';
 import { createCasePreview } from './case-preview.js';
@@ -59,10 +59,7 @@ function refreshFloor(){
   level=ground>rise/2?2:1;
   const onStair=inside(stair,camera.position.x,camera.position.z);
   interior.floors.forEach((group,index)=>group.visible=onStair||index===level-1);
-  $('floorNumber').textContent=String(level).padStart(2,'0');
-  $('floorName').textContent=level===1?'MUSIC, GAMES + CLOTHING':'MEDIA COLLECTION';
   $('entryLocation').textContent='Level '+level+' · '+(onStair?'Staircase':roomAt(level,camera.position.x,camera.position.z)?.name||'Landing');
-  $('zoneName').textContent=onStair?'STAIRCASE':(roomAt(level,camera.position.x,camera.position.z)?.name||'Landing').toUpperCase();
 }
 refreshFloor();
 let active=false, uiOpen=false, yaw=-.31, pitch=0, focusedCase=null, selectedCase=null, toastTimer;
@@ -72,7 +69,7 @@ const joystick={x:0,y:0,pointer:null}; let lookPointer=null,lookLastX=0,lookLast
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
 function requestLook(){ if(!mobile && !uiOpen && document.pointerLockElement!==canvas) { const request=canvas.requestPointerLock?.(); request?.catch?.(()=>showToast('Drag on the scene to look around')); } }
 function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden'); }
-function pause(){ if(!active||uiOpen)return; intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').firstChild.textContent='Continue '; document.exitPointerLock?.(); }
+function pause(){ if(!active||uiOpen)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Continue exploring'; document.exitPointerLock?.(); }
 function showToast(message){const el=$('toast');el.textContent=message;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2400);}
 function openCatalog(){preview.hide();currentDetailId=null;if(stackOpen)closeStack();uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();$('searchInput').focus();}
 function closeCatalog(){catalogPanel.classList.add('hidden');uiOpen=false;if(active){hud.classList.remove('hidden');}else intro.classList.remove('hidden');}
@@ -93,10 +90,19 @@ async function enrichAudio(item){
 }
 function openDetail(item){if(!item)return;if(stackOpen)closeStack();currentDetailId=item.id;currentDetailItem=item;uiOpen=true;detailPanel.classList.remove('hidden');catalogPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();
   detailPanel.scrollTop=0;preview.show(item);$('audioExtra').classList.add('hidden');
-  $('detailCategory').textContent=categoryById[item.category].label.toUpperCase();$('detailTitle').textContent=item.title;
+  $('detailCategory').textContent=categoryById[item.category].label;$('detailTitle').textContent=item.title;
   $('detailCreator').textContent=item.creator;$('detailYear').textContent=item.year;$('detailFormatValue').textContent=caseSpec(item).label;$('detailSource').textContent=item.source;
-  const sourceLink=$('sourceLink');if(item.sourceUrl){sourceLink.href=item.sourceUrl;sourceLink.textContent=item.source.includes('IMDb')?'Open on IMDb':'Open on Spotify';sourceLink.classList.remove('hidden');}else sourceLink.classList.add('hidden');
-  $('detailNote').textContent=item.album?`From your Spotify playlist · ${item.featuredTrack} appears on ${item.album}. Format uses the album release year.`:item.source.includes('IMDb')?`From your IMDb watchlist CSV${item.rating?' · IMDb '+item.rating+'/10':''}.`:'From your game collection.';
+  const sourceLink=$('sourceLink');
+  sourceLink.classList.toggle('hidden', !item.sourceUrl);
+  if(item.sourceUrl){
+    sourceLink.href=item.sourceUrl;
+    sourceLink.textContent=item.album?'Open on Spotify':'Open on '+item.source;
+  }
+  const listNames=(item.playlists || []).map(id=>playlists[id]).filter(Boolean);
+  $('detailNote').textContent=item.album
+    ? [item.featuredTrack, listNames.join(', ')].filter(Boolean).join(' · ')
+    : [item.platform, item.episodeCount!=null ? item.episodeCount+' episodes' : '', (item.genres||[]).join(', ')].filter(Boolean).join(' · ');
+  $('closeDetail').focus({preventScroll:true});
   if(item.album)enrichAudio(item);
 }
 function closeDetail(){preview.hide();currentDetailId=null;detailPanel.classList.add('hidden');uiOpen=false;if(active){hud.classList.remove('hidden');}else intro.classList.remove('hidden');}
@@ -113,13 +119,63 @@ function visitShelf(){
 }
 $('visitShelf').onclick=visitShelf;
 let filter='all',catalogSelection=null;
-function renderFilters(){const node=$('filters');node.replaceChildren();for(const c of [{id:'all',label:'ALL'},...CATEGORIES.map(c=>({id:c.id,label:c.short}))]){const b=document.createElement('button');b.type='button';b.className='filter'+(filter===c.id?' active':'');b.textContent=c.label;b.onclick=()=>{filter=c.id;renderFilters();renderCatalog();};node.append(b);}}
-function renderCatalog(){catalogSelection=null;$('catalogSelection').classList.add('hidden');const q=$('searchInput').value.trim().toLowerCase();const items=ITEMS.filter(item=>(filter==='all'||item.category===filter)&&(!q||`${item.title} ${item.creator} ${item.year} ${item.category}`.toLowerCase().includes(q)));const grid=$('catalogGrid');grid.replaceChildren();if(!items.length){const empty=document.createElement('div');empty.className='empty-state';empty.textContent='Nothing on this shelf. Try another search.';grid.append(empty);return;}
-  for(const item of items){const b=document.createElement('button');b.type='button';b.className='catalog-card';const art=document.createElement('div');art.className='catalog-art';art.style.backgroundImage=`linear-gradient(180deg,transparent,rgba(0,0,0,.65)),url("${item.artwork||coverDataUrl(item)}")`;const fmt=document.createElement('small');fmt.textContent=item.format;const title=document.createElement('strong');title.textContent=item.title;art.append(fmt,title);const copy=document.createElement('div');copy.className='catalog-copy';const name=document.createElement('strong');name.textContent=item.title;const meta=document.createElement('span');meta.textContent=`${item.creator} · ${item.year}`;copy.append(name,meta);b.append(art,copy);b.onclick=()=>{
-    grid.querySelector('[aria-pressed="true"]')?.setAttribute('aria-pressed','false');
-    b.setAttribute('aria-pressed','true');catalogSelection=item;
-    $('catalogSelection').classList.remove('hidden');$('chosenTitle').textContent=item.title;
-  };grid.append(b);}}
+function renderFilters(){
+  const node=$('filters');
+  node.replaceChildren();
+  for(const c of [{id:'all',label:'All'},...CATEGORIES]){
+    const button=document.createElement('button');
+    button.type='button';
+    button.textContent=c.label;
+    button.setAttribute('aria-pressed',String(filter===c.id));
+    button.onclick=()=>{filter=c.id;renderFilters();renderCatalog();};
+    node.append(button);
+  }
+}
+function renderCatalog(){
+  catalogSelection=null;
+  $('catalogSelection').classList.add('hidden');
+  const q=$('searchInput').value.trim().toLowerCase();
+  const grid=$('catalogGrid');
+  grid.replaceChildren();
+  grid.scrollTop=0;
+  for(const item of ITEMS){
+    if(filter!=='all' && item.category!==filter) continue;
+    if(q && ![item.title,item.creator,item.year,categoryById[item.category].label].join(' ').toLowerCase().includes(q)) continue;
+    const card=document.createElement('button');
+    card.type='button';card.className='catalog-card';card.setAttribute('aria-pressed','false');
+    const image=document.createElement('img');
+    image.className='catalog-art';image.alt='';image.loading='lazy';
+    image.src=item.artwork || coverDataUrl(item);
+    const copy=document.createElement('div');copy.className='catalog-copy';
+    const title=document.createElement('strong');title.textContent=item.title;
+    const meta=document.createElement('span');
+    meta.textContent=[item.creator,item.year].filter(Boolean).join(' · ');
+    copy.append(title,meta);card.append(image,copy);
+    card.onclick=()=>{
+      grid.querySelector('[aria-pressed="true"]')?.setAttribute('aria-pressed','false');
+      card.setAttribute('aria-pressed','true');catalogSelection=item;
+      $('chosenTitle').textContent=item.title;
+      $('catalogSelection').classList.remove('hidden');
+    };
+    grid.append(card);
+  }
+  if(!grid.childElementCount){
+    const empty=document.createElement('p');empty.className='empty-state';
+    empty.textContent=q?'No matches.':'This shelf is empty.';
+    if(!q && ['cartridges','game-discs'].includes(filter)){
+      const link=document.createElement('a');
+      link.href=gameList;link.target='_blank';link.rel='noopener noreferrer';
+      link.textContent='View My Games on Backloggd';
+      empty.append(document.createElement('br'),link);
+    }
+    grid.append(empty);
+  }
+}
+const sourceList=$('sourceLists');
+for(const [title,url] of [['Trakt watch list',traktList],['My Games on Backloggd',gameList],...Object.entries(playlists).map(([id,name])=>[name,'https://open.spotify.com/playlist/'+id])]){
+  const a=document.createElement('a');a.href=url;a.textContent=title;a.target='_blank';a.rel='noopener noreferrer';sourceList.append(a);
+}
+$('dismissPanel').onclick=()=>detailPanel.classList.contains('hidden')?closeCatalog():closeDetail();
 const frameGeometry=new THREE.BufferGeometry().setFromPoints([
   new THREE.Vector3(-.5,-.5,0),new THREE.Vector3(.5,-.5,0),
   new THREE.Vector3(.5,.5,0),new THREE.Vector3(-.5,.5,0)
@@ -151,7 +207,7 @@ function openCatalogStack(){
 $('catalogOpenStack').onclick=openCatalogStack;
 $('catalogDetails').onclick=()=>openDetail(catalogSelection);
 $('itemCount').textContent=ITEMS.length;$('enterBtn').onclick=enter;$('browseBtn').onclick=openCatalog;$('closeCatalog').onclick=closeCatalog;$('closeDetail').onclick=closeDetail;$('backToStore').onclick=closeDetail;$('searchInput').oninput=renderCatalog;$('touchInspect').onclick=inspect;
-renderFilters();renderCatalog();
+renderFilters();
 canvas.addEventListener('pointermove',event=>{
   if(event.pointerType!=='mouse')return;
   hoverPoint.set(event.clientX,event.clientY);hasPointer=true;
@@ -169,7 +225,7 @@ document.addEventListener('mousemove',event=>{if(uiOpen||!active)return;if(docum
 canvas.addEventListener('pointerdown',event=>{suppressClick=false;pressX=event.clientX;pressY=event.clientY;if(!active||uiOpen||mobile||document.pointerLockElement===canvas)return;dragLook=true;dragPointer=event.pointerId;dragLastX=event.clientX;dragLastY=event.clientY;canvas.setPointerCapture(event.pointerId);});
 function endDrag(event){if(event.pointerId===dragPointer){dragLook=false;dragPointer=null;}}
 canvas.addEventListener('pointerup',endDrag);canvas.addEventListener('pointercancel',endDrag);
-document.addEventListener('keydown',event=>{if($('mapDialog').open)return;if(event.code==='KeyM'&&!(event.target instanceof HTMLInputElement)&&!uiOpen){openMap();return;}if(event.target instanceof HTMLInputElement)return;if(!catalogPanel.classList.contains('hidden')&&event.code==='KeyE'){event.preventDefault();openCatalogStack();return;}keys.add(event.code);if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.code))event.preventDefault();if(event.code==='KeyB'&&active&&!uiOpen){event.preventDefault();openCatalog();}if(event.code==='KeyL'&&active&&!uiOpen)requestLook();if(event.code==='KeyE'&&active&&!uiOpen)inspect();if(stackOpen&&['ArrowLeft','KeyA'].includes(event.code)){event.preventDefault();turnStack(-1);}if(stackOpen&&['ArrowRight','KeyD'].includes(event.code)){event.preventDefault();turnStack(1);}if(stackOpen&&event.code==='Enter'){event.preventDefault();openDetail(stacks.get(stackOpen).items[stackIndex]);}if(event.code==='Escape'){if(!detailPanel.classList.contains('hidden'))closeDetail();else if(!catalogPanel.classList.contains('hidden'))closeCatalog();else if(stackOpen)closeStack();else pause();}});
+document.addEventListener('keydown',event=>{if($('mapDialog').open)return;if(event.code==='KeyM'&&!(event.target instanceof HTMLInputElement)&&!uiOpen){openMap();return;}if(event.target instanceof HTMLInputElement){if(event.key==='Escape'&&!catalogPanel.classList.contains('hidden')){event.preventDefault();closeCatalog();$('browseBtn').focus();}return;}if(!catalogPanel.classList.contains('hidden')&&event.code==='KeyE'){event.preventDefault();openCatalogStack();return;}keys.add(event.code);if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.code))event.preventDefault();if(event.code==='KeyB'&&active&&!uiOpen){event.preventDefault();openCatalog();}if(event.code==='KeyL'&&active&&!uiOpen)requestLook();if(event.code==='KeyE'&&active&&!uiOpen)inspect();if(stackOpen&&['ArrowLeft','KeyA'].includes(event.code)){event.preventDefault();turnStack(-1);}if(stackOpen&&['ArrowRight','KeyD'].includes(event.code)){event.preventDefault();turnStack(1);}if(stackOpen&&event.code==='Enter'){event.preventDefault();openDetail(stacks.get(stackOpen).items[stackIndex]);}if(event.code==='Escape'){if(!detailPanel.classList.contains('hidden'))closeDetail();else if(!catalogPanel.classList.contains('hidden'))closeCatalog();else if(stackOpen)closeStack();else pause();}});
 document.addEventListener('keyup',event=>keys.delete(event.code));window.addEventListener('blur',()=>keys.clear());
 const joyEl=$('joystick'),stickEl=$('stick');
 function updateJoy(e){const r=joyEl.getBoundingClientRect();const dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),len=Math.hypot(dx,dy),scale=len>39?39/len:1;joystick.x=dx*scale/39;joystick.y=-dy*scale/39;stickEl.style.left=`calc(50% + ${dx*scale}px)`;stickEl.style.top=`calc(50% + ${dy*scale}px)`;}
@@ -210,7 +266,7 @@ function updateFocus(){
   if(selectedCase && (selectedCase.getWorldPosition(new THREE.Vector3()).distanceTo(camera.position)>5 || !interactables[level-1].includes(selectedCase)))selectCase(null);
   const current=selectedCase||focusedCase;
   prompt.classList.toggle('hidden',!current);
-  prompt.querySelector('.keycap').textContent=selectedCase?'E':aim?'E':'CLICK';
+  prompt.querySelector('.keycap').textContent=mobile?'':selectedCase||aim?'E':'Click';
   if(current)$('promptText').textContent=(selectedCase||aim?'Open stack · ':'Select · ')+current.userData.item.title;
 }
 const viewerScene=new THREE.Scene();
@@ -226,10 +282,10 @@ function updateViewerInfo(){
   $('caseSize').textContent=spec.label+' · '+spec.dimensions.join(' × ')+' mm';
   $('caseZoom').setAttribute('aria-pressed',String(magnified));$('caseZoom').textContent=magnified?'Actual proportions':'Magnify';
   $('stackNext').disabled=$('stackPrev').disabled=stack.items.length===1;
-  $('stackCategory').textContent=stack.category.short+' / '+(item.source);
+  $('stackCategory').textContent=stack.category.label;
   $('stackTitle').textContent=item.title;$('stackMeta').textContent=`${item.creator} · ${item.year} · ${item.format}`;
   $('stackCount').textContent=`${stackIndex+1} / ${stack.items.length}`;
-  $('stackDetails').textContent='View item details ↗';
+  $('stackDetails').textContent='Item details';
 }
 function openStack(id,index=0){
   const stack=stacks.get(id);if(!stack)return;
@@ -294,6 +350,6 @@ function drawMap(){
 function openMap(){
   if(uiOpen)return;uiOpen=true;keys.clear();document.exitPointerLock?.();mapLevel=level;drawMap();mapDialog.showModal();
 }
-$('mapBtn').onclick=$('introMap').onclick=openMap;$('closeMap').onclick=()=>mapDialog.close();
+$('mapBtn').onclick=openMap;$('closeMap').onclick=()=>mapDialog.close();
 $('levelOne').onclick=()=>{mapLevel=1;drawMap();};$('levelTwo').onclick=()=>{mapLevel=2;drawMap();};
 mapDialog.addEventListener('close',()=>{uiOpen=false;});

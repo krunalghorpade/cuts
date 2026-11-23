@@ -181,9 +181,15 @@ export function buildInterior(scene, label){
       table(0,1.19,2.2,.93);books(-.52,.595,1.17);plant(.46,1.13,.55,.59);
       cabinet(-1.4,-5.46,2.98);cabinet(1.55,-5.46,2.37);tv(-1.38,-5.43,2.63,1.88);tv(1.55,-5.45,1.48,1.51,true);
       for(const x of [-2.3,.91]){box(x,.898,-5.27,.39,.085,.23,iron);box(x+.52,.905,-5.22,.20,.077,.12,cream);}
-      cabinet(-7,-.05,1.23);cyl(-7,.89,-.05,.43,.04,.43,iron);cyl(-7,.915,-.05,.15,.012,.15,brass);box(-6.76,.95,.04,.029,.024,.23,cream,0,.31);speaker(-7.4,.84,-.05);
+      // The listening station stands south of both music racks, clear of their browsing aisles.
+      const playerX=-7.04, playerZ=4.83;
+      cabinet(playerX,playerZ,1.23);
+      cyl(playerX,.89,playerZ,.43,.04,.43,iron);
+      cyl(playerX,.915,playerZ,.15,.012,.15,brass);
+      box(playerX+.24,.95,playerZ+.09,.029,.024,.23,cream,0,.31);
+      speaker(playerX-.4,.84,playerZ);
       shelf(-2.7,5.6,2.4,1.65,'books',Math.PI);shelf(.35,5.6,2.8,1.65,'consoles',Math.PI);shelf(3.53,5.6,2.8,1.65,'objects',Math.PI);
-      plant(-3.82,-5.38,1.7);plant(3.55,-5.4,1.85);plant(6.55,5.16,1.6);spot(-1,2.7,-4.3,15,10);
+      plant(-3.42,-4.45,1.7);plant(3.42,-4.45,1.85);plant(6.55,5.16,1.6);spot(-1,2.7,-4.3,15,10);
       textileRack(-10.5,7.7);textileRack(-9.1,9.4);rug(-9.2,8.7,5.9,3.6);
       box(-4.77,1.28,9.9,1.35,2.56,1.77,walnut);for(let i=0;i<12;i++)box(-5.39+i*.112,1.26,8.98,.125,2.48,.1+(i%2)*.06,linen);block(-4.77,9.9,1.35,1.85);sign('FITTING ROOM',-4.77,2.75,8.93,1.25,Math.PI);
       shelf(-12.53,9.3,2.35,2.35,'books',Math.PI/2);plant(-12.25,6.68,1.32);spot(-9.4,3.1,8.8,22,7);
@@ -206,7 +212,7 @@ export function buildInterior(scene, label){
       seat(-1.05,-.18,.75);seat(1.05,-.18,.75);seat(-2.3,2.35,1.03,-1.12);seat(2.3,2.35,1.03,1.12);table(0,2.4,1.75,.72);plant(.44,2.36,.56,.59);books(-.42,.59,2.42);
       shelf(-12.61,8.5,3.7,2.9,'books',Math.PI/2);shelf(-8.5,10.56,6.05,2.9,'books',Math.PI);table(-8.7,8.6,1.85,.81,.82);books(-8.65,.88,8.67);seat(-10.06,8.6,.78,-Math.PI/2);plant(-12.2,6.7,1.75);
       shelf(11.5,-1.44,5.1,2.75,'consoles',Math.PI);shelf(11.1,8.52,4.82,2.8,'objects',Math.PI);shelf(13.53,6,2.6,2.42,'objects',-Math.PI/2);
-      plant(-3.7,-5.4,1.47);plant(7.2,5.15,1.45);plant(14.25,-8.1,1.5);plant(8.7,8.36,1.4);
+      plant(-3.24,-4.44,1.47);plant(7.2,5.15,1.45);plant(14.23,-6.85,1.5);plant(8.7,8.36,1.4);
       spot(0,2.9,-1.8,18,9);spot(-8.5,3,9.5,24,8);spot(11.3,3,-6.2,28,9);spot(11.1,2.8,7.25,23,7);
     }
     for(const [material,b] of batches){const geo=new T.BufferGeometry();

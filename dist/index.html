@@ -3,75 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#141414">
-  <meta name="description" content="Step into The Lower Level, a first-person basement archive of films, television, games and music.">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Explore The Lower Level, a first-person basement archive of film, music and games.">
   <title>The Lower Level — A basement media archive</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./handheld.css">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 </head>
 <body>
   <canvas id="scene" aria-label="Interactive three-dimensional basement media store"></canvas>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-
   <header class="topbar">
-    <div class="brand"><span class="brand-mark" data-pixel="logo"></span><span class="brand-name">THE LOWER LEVEL</span></div>
-    <nav class="top-actions" aria-label="Store menus"><button type="button" class="nav-button" id="mapBtn" data-pixel="map">Floor map</button><button id="browseBtn" class="nav-button" type="button" data-pixel="collection">Collection <span id="itemCount"></span></button></nav>
+    <span id="entryLocation" class="location">Level 1 · Music + game lounge</span>
+    <nav aria-label="Store menus">
+      <button type="button" id="mapBtn">Floor map</button>
+      <button type="button" id="browseBtn">Collection <span id="itemCount"></span></button>
+    </nav>
   </header>
 
   <section id="intro" class="intro" aria-labelledby="introTitle">
-    <div class="intro-card">
-      <div class="menu-bar"><span>Field menu</span><span class="bar-bars" aria-hidden="true"></span></div>
-      <div class="intro-slot"><div class="tile-frame"><canvas id="roomTile" width="124" height="82" aria-label="Pixel illustration of the listening lounge"></canvas></div><div><h1 id="introTitle">The Lower Level</h1><p id="entryLocation">Music + game lounge</p></div></div>
-      <div class="intro-options"><button id="enterBtn" class="primary-button" type="button">Enter the store <span aria-hidden="true">▶</span></button><button type="button" id="introMap">Floor map</button></div>
-      <div class="intro-controls"><span>WASD <b>Move</b></span><span>Drag <b>Look</b></span><span>E <b>Open stack</b></span></div>
-      <div class="intro-touch">Move with the stick · Drag to look</div>
+    <div class="entry-copy">
+      <h1 id="introTitle">The Lower Level</h1>
+      <button id="enterBtn" class="primary-button" type="button">Enter the store</button>
+      <p class="entry-guide"><span>WASD to move · Drag to look</span><span>Move with the stick · Drag to look</span></p>
     </div>
-
   </section>
 
   <div id="hud" class="hud hidden">
-    <div class="location"><span class="location-dot"></span><span id="zoneName">THE ENTRANCE</span><small><span id="floorName">MUSIC, GAMES + CLOTHING</span></small></div>
-    <div class="crosshair" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-    <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap">E</span><span id="promptText">Inspect item</span></div>
-    <div class="hud-bottom"><div class="movement-guide"><span>W A S D</span> MOVE <b>·</b> <span>DRAG</span> LOOK <b>·</b> <span>SHIFT</span> RUN <b>·</b> <span>B</span> BROWSE <b>·</b> <span>ESC</span> PAUSE</div><div class="floor-tag">LEVEL <strong id="floorNumber">01</strong></div></div>
-    <div id="touchControls" class="touch-controls"><div id="joystick" class="joystick"><div id="stick" class="stick"></div></div><div id="lookPad" class="look-pad" aria-label="Drag to look around"><span>DRAG TO LOOK</span></div><button id="touchInspect" class="touch-inspect" type="button">OPEN STACK</button></div>
+    <div class="aim" aria-hidden="true"></div>
+    <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap"></span><span id="promptText"></span></div>
+    <details class="controls">
+      <summary>Controls</summary>
+      <dl><dt>Move</dt><dd>W A S D</dd><dt>Look</dt><dd>Drag or arrow keys</dd><dt>Select</dt><dd>Click a case</dd><dt>Open stack</dt><dd>E</dd><dt>Run</dt><dd>Hold Shift</dd><dt>Pause</dt><dd>Esc</dd></dl>
+    </details>
+    <div class="touch-controls">
+      <div id="lookPad" class="look-pad" aria-label="Drag to look or tap a case to select it"></div>
+      <div id="joystick" class="joystick" aria-label="Move around"><div id="stick" class="stick"></div></div>
+      <button id="touchInspect" class="touch-inspect" type="button">Open stack</button>
+    </div>
   </div>
 
+  <div id="dismissPanel" class="panel-shade" aria-hidden="true"></div>
   <aside id="catalogPanel" class="panel catalog-panel hidden" aria-labelledby="catalogTitle" aria-modal="true" role="dialog">
-    <div class="panel-head"><div><h2 id="catalogTitle" data-pixel="collection">Collection</h2></div><button id="closeCatalog" class="close-button" type="button" aria-label="Close collection">×</button></div>
-    <p class="panel-intro">Movies and series from your IMDb CSV. Music selections from your Spotify playlist. </p>
-    <label class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search the shelves" autocomplete="off" aria-label="Search the collection"></label>
+    <header class="panel-head"><h2 id="catalogTitle">Collection</h2><button id="closeCatalog" type="button" aria-label="Close collection">Close</button></header>
+    <input id="searchInput" type="search" placeholder="Search the collection" autocomplete="off" aria-label="Search the collection">
     <div id="filters" class="filters" aria-label="Filter media categories"></div>
-    <div id="catalogSelection" class="chosen-item hidden"><strong id="chosenTitle"></strong><button id="catalogOpenStack">Open stack (E)</button><button id="catalogDetails">Details</button></div>
     <div id="catalogGrid" class="catalog-grid"></div>
-    <div class="panel-foot"><a href="https://www.imdb.com/user/p.ad4lijmxzoqnsph42clunnfkoi/watchlist/?ref_=ext_shr_lnk" target="_blank" rel="noopener noreferrer">IMDb watchlist</a><span>·</span><a href="https://open.spotify.com/playlist/0gwADXODSkvnsFaNMe55XP?si=6c3fd152b6304f54" target="_blank" rel="noopener noreferrer">Full Spotify playlist</a></div>
+    <div id="catalogSelection" class="chosen-item hidden">
+      <strong id="chosenTitle"></strong>
+      <div class="selection-actions"><button id="catalogDetails" class="primary-button" type="button">Item details</button><button id="catalogOpenStack" type="button">Open stack</button></div>
+    </div>
+    <details class="sources"><summary>Sources</summary><div id="sourceLists"></div></details>
   </aside>
 
   <aside id="detailPanel" class="panel detail-panel hidden" aria-labelledby="detailTitle" aria-modal="true" role="dialog">
-    <div class="panel-head"><strong data-pixel="disc">Item details</strong><button id="closeDetail" class="close-button" type="button" aria-label="Close item details">×</button></div>
+    <header class="panel-head"><span>Item details</span><button id="closeDetail" type="button" aria-label="Close item details">Close</button></header>
     <div class="case-preview">
       <canvas id="casePreview" tabindex="0" aria-label="Rotate the 3D case"></canvas>
-      <div class="preview-controls"><span>Drag to rotate</span><button type="button" id="previewReset" aria-label="Reset case rotation">Reset view</button></div>
+      <div class="preview-controls"><span>Drag to rotate</span><button type="button" id="previewReset">Reset view</button></div>
     </div>
-    <div id="detailCategory" class="detail-category"></div><h2 id="detailTitle"></h2><p id="detailCreator" class="detail-creator"></p>
-    <div class="detail-rule"></div><div class="detail-meta"><div><span>RELEASE</span><strong id="detailYear"></strong></div><div><span>FORMAT</span><strong id="detailFormatValue"></strong></div><div><span>COLLECTION SOURCE</span><strong id="detailSource"></strong></div></div>
-    <div id="detailNote" class="detail-note"></div><div id="audioExtra" class="audio-extra hidden"></div><a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
-    <button id="visitShelf" class="primary-button visit-shelf" type="button">Go to this shelf <span class="button-icon">↗</span></button><button id="backToStore" class="secondary-button" type="button">Back to the aisle</button>
+    <p id="detailCategory" class="detail-category"></p><h2 id="detailTitle"></h2><p id="detailCreator" class="detail-creator"></p>
+    <dl class="detail-meta"><dt>Release</dt><dd id="detailYear"></dd><dt>Format</dt><dd id="detailFormatValue"></dd><dt>Source</dt><dd id="detailSource"></dd></dl>
+    <p id="detailNote" class="detail-note"></p><div id="audioExtra" class="audio-extra hidden"></div>
+    <a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
+    <div class="detail-actions"><button id="visitShelf" class="primary-button" type="button">Go to shelf</button><button id="backToStore" type="button">Back to aisle</button></div>
   </aside>
 
-  <div id="stackOverlay" class="stack-overlay hidden" role="dialog" aria-modal="true" aria-label="Flip through media stack">
-    <div class="stack-head"><div><div class="stack-kicker" data-pixel="disc">Stack viewer</div><div id="stackCategory" class="stack-category"></div></div><button id="closeStack" class="close-button" type="button" aria-label="Close stack">×</button></div>
-    <div class="stack-side-note">DRAG TO TILT <span>·</span> SWIPE OR SCROLL TO FLIP</div>
-    <div class="stack-foot"><div class="stack-info"><span id="stackCount">1 / 4</span><h2 id="stackTitle"></h2><p id="stackMeta"></p><p id="caseSize"></p></div><div class="stack-actions"><button id="caseZoom" type="button" aria-pressed="false">Magnify</button><button id="stackPrev" type="button" aria-label="Previous case">←</button><button id="stackNext" type="button" aria-label="Next case">→</button><button id="stackDetails" type="button">View item details ↗</button></div></div>
+  <div id="stackOverlay" class="stack-overlay hidden" role="dialog" aria-modal="true" aria-label="Browse stack">
+    <header class="stack-head"><span id="stackCategory"></span><button id="closeStack" type="button" aria-label="Close stack">Close</button></header>
+    <div class="stack-foot">
+      <div class="stack-info"><span id="stackCount"></span><h2 id="stackTitle"></h2><p id="stackMeta"></p><p id="caseSize"></p></div>
+      <div class="stack-actions"><button id="stackPrev" type="button" aria-label="Previous case">Previous</button><button id="stackNext" type="button" aria-label="Next case">Next</button><button id="caseZoom" type="button" aria-pressed="false">Magnify</button><button id="stackDetails" type="button">Item details</button></div>
+    </div>
   </div>
-  <dialog id="mapDialog" class="map-dialog"><div class="panel-head"><h2 data-pixel="map">Floor map</h2><button id="closeMap" class="close-button" aria-label="Close floor map">×</button></div><div class="level-tabs"><button id="levelOne">Level 1</button><button id="levelTwo">Level 2</button></div><div id="planBoard" aria-label="Select a room"></div><p>Select a room to enter it.</p></dialog>
+
+  <dialog id="mapDialog" class="map-dialog" aria-labelledby="mapTitle">
+    <header class="panel-head"><h2 id="mapTitle">Floor map</h2><button id="closeMap" type="button" aria-label="Close floor map">Close</button></header>
+    <div class="level-tabs"><button id="levelOne" type="button">Level 1</button><button id="levelTwo" type="button">Level 2</button></div>
+    <div id="planBoard" aria-label="Select a room"></div><p>Select a room to enter it.</p>
+  </dialog>
   <div id="toast" class="toast hidden" role="status"></div>
-  <script type="module" src="./interface.js"></script>
   <script type="module" src="./app.js"></script>
 </body>
 </html>

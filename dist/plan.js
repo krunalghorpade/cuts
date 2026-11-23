@@ -22,7 +22,8 @@ export const fixtures = [
   [2,'vinyl',-5.6,-5.55,3.7,0], [2,'cassettes',-.2,-5.55,4,0], [2,'movies',5.6,-5.55,3.7,0],
   [2,'shows',-7.55,-.6,2.45,Math.PI/2], [2,'cassettes',-7.55,2.75,2.45,Math.PI/2],
   [2,'cds',-3.8,-.6,3.3,Math.PI/2], [2,'game-discs',3.95,-.6,3.3,-Math.PI/2],
-  [2,'vinyl',-2.7,5.56,2.7,Math.PI], [2,'movies',.8,5.56,2.8,Math.PI], [2,'cassettes',4.3,5.56,2.8,Math.PI],
+  [2,'cds',-4.51,-.6,3.3,-Math.PI/2], [2,'cds',4.66,-.6,3.3,Math.PI/2],
+  [2,'vinyl',-2.7,5.56,2.7,Math.PI], [2,'movies',.8,5.56,2.8,Math.PI], [2,'anime',4.3,5.56,2.8,Math.PI],
   [2,'cartridges',11.5,-8.5,5.6,0]
 ];
 export function roomAt(floor,x,z) {

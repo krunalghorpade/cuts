@@ -1,42 +1,28 @@
 # The Lower Level
 
-A first-person 3D basement media store for desktop, tablet, and phone. Level 1 contains the music and game lounge, clothing shop, bedroom, washroom and kitchen. The northwest switchback staircase leads to the media browsing gallery, game room, library and collectibles on Level 2. The private Spline study includes the fixture models and room layouts.
+A two-floor, first-person media store for desktop, tablet and phone. The interface uses Helvetica Neue, with Helvetica and Arial fallbacks.
 
 ## Explore
 
-- Desktop: WASD to move, drag to look, Shift to run, click a case to select it and press E to open its stack, B to browse, Esc to pause. Double-click the scene or press L for optional pointer lock. Arrow keys also look around.
-- Phone and tablet: left joystick to move, drag the right side to look, and tap a case to select it, then tap Open stack.
-- In a stack: arrow buttons, left/right keys, scroll, or swipe to flip cases. Drag to tilt the 3D stack; open details for the selected item.
-- Floor map opens a room selector for either level. Walk up the western stair flight, turn on the north landing, and follow the eastern flight to reach Level 2 on foot.
-- Browse offers search and format filters without walking to a rack. Item details include a **Go to this shelf** button.
+- Use WASD to walk, drag or use the arrow keys to look, and hold Shift to run. Click a case to select it and press E to open its stack. B opens the collection, M opens the floor map and Esc pauses the walkthrough. L or a double click enables mouse look.
+- On a touch screen, move with the stick, drag to look, tap a case to select it, then tap Open stack.
+- Flip through a stack with the Previous and Next controls, the arrow keys, a swipe or the scroll wheel. Item details opens a rotatable 3D preview. Drag to rotate it or focus it and use the arrow keys. Reset view restores the opening angle.
+- The floor map takes you to a room on either floor. The switchback stairs connect the two levels on foot.
 
-## Collection
+## Catalog
 
-The current catalog has 205 entries:
+The film, series and anime inventory comes from the supplied Trakt list. An empty snapshot leaves those shelves empty. A series goes on one shelf. Anime has its own section on Level 2. Box sets use a packaging estimate of four episodes per disc and four discs per inner case. Multi-volume sets expand in depth and width. When an episode count is unavailable, the item uses a standard box without an inferred count.
 
-- 96 imported from the supplied IMDb watchlist CSV: 81 films and 15 TV series or miniseries.
-- 109 physical music entries from 108 verified albums represented in the supplied Spotify playlist. This is a selected snapshot of the playlist, not a live or complete sync. The full playlist link is available in Browse. Spotify album art is bundled for the selected snapshot. TheAudioDB free v1 API enriches album details and cover art when an album is opened and a match is found.
-- Game racks are empty until a game list is supplied.
+The music catalog combines the previously imported Kratex Favs selection with the other supplied Spotify playlists. Each album retains its source playlists. Spotify's album release year selects vinyl before 1985, cassette and CD from 1985 through 1995 inclusive, and CD after 1995. Source links are available from the collection. TheAudioDB enriches album details where available. The game collection uses the owner’s Backloggd list, My Games. Cartridge and disc shelves take their inventory from the verified list snapshot in `dist/backloggd-items.json`.
 
-Music format rules use the album's published release year: before 1985 goes to vinyl; 1985–1995 goes to both cassette and CD; after 1995 goes to CD. An album that appears in the 1985–1995 interval has two physical entries. Spotify album page metadata supplied the release years for the selected snapshot; TheAudioDB is used for live item detail enrichment. Album editions and compilations can have later dates than the original recording.
+## Update data
 
-Movie and series cases use imported IMDb artwork. Films from 2006 onward use blue Blu-ray style cases; older films use DVD cases. Vinyl sleeves are square, CDs use jewel cases, cassettes use horizontal tape cases, and games use cartridge or blue disc cases. Cases use one metre per world unit. Each imported item has one physical shelf location per format. Rear cases sit on an incline with individually selectable covers.
+- Run `python3 scripts/import_backloggd.py` to read My Games when the list is accessible. It also accepts saved list HTML or CSV rows with title, format and platform. Where the list omits the physical format, pass a confirmed edition mapping with `--editions`. An inaccessible page leaves the current inventory intact.
 
-## Preview locally
+- Run `python3 scripts/import_trakt.py path/to/list.json` with a Trakt movie/show list export. CSV rows with type and title are also accepted. Include genres, origin and episode counts for classification and sizing. With a configured `TRAKT_CLIENT_ID`, the importer can read the public list directly and hydrate minimal entries. The client ID is read only by the import script.
+- `scripts/import_spotify.py` merges normalized Spotify album results into the snapshot. It reads Spotify album release dates, saves local cover thumbnails and retains each album's playlist memberships.
+- Run `python3 scripts/build_shelf_atlas.py` after updating the catalog. The walkthrough batches static shelf geometry and uses small artwork tiles. The stack and item preview load the larger covers as needed.
 
-```sh
-python3 -m http.server 4173 --directory dist
-```
+## Preview
 
-Open `http://localhost:4173/`. The site is buildless; `dist/` is deployed directly. Three.js is bundled in `dist/vendor/`.
-
-## Source files
-
-- `dist/catalog.js`: combined in-browser catalog and category definitions.
-- `dist/imdb-items.json`: selected fields converted from the supplied IMDb CSV.
-- `dist/spotify-items.json`: selected Spotify playlist albums and verified release dates.
-- `dist/app.js`: 3D scene, controls, physical racks, stack viewer, search, inspection, and TheAudioDB detail lookups.
-- `dist/media.js`: artwork textures and format-specific 3D case models.
-- `dist/art/`: local IMDb poster and Spotify album thumbnails.
-
-The IMDb CSV and Spotify playlist are currently imported snapshots. A later live sync needs a supported provider API or authenticated server integration. The client uses only the public TheAudioDB v1 key for optional album details. Do not place private API credentials in browser code.
+Run `python3 -m http.server 4173 --directory dist` and open `http://localhost:4173/`. The site deploys directly from `dist/`. Three.js is bundled locally.
