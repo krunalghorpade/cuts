@@ -60,7 +60,10 @@ const displayTargets=[[],[]];
 const {stacks,interactables,destinations,roomStock}=stockRooms(interior,box,label);
 const updatePosters=installPosters(interior.floors,ITEMS,displayTargets,interior.shelfBounds);
 const updateTVs=installTelevisions(canvas,interior.screens,roomStock,trailerStreams,openDetail);
-for(const device of interior.devices)displayTargets[device.userData.level-1].push(device);
+for(const device of interior.devices){
+  const targets=displayTargets[device.userData.level-1];targets.push(device);
+  if(device.userData.coverTarget)targets.push(device.userData.coverTarget);
+}
 for(const tv of interior.screens){
   const floor=rooms.find(room=>room.id===tv.room).floor;
   tv.screen.userData.level=floor;displayTargets[floor-1].push(tv.screen);

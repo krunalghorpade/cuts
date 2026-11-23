@@ -1,5 +1,6 @@
 import * as T from './vendor/three.module.js';
-import {turntable,discPlayer} from './hi-fi.js';
+import {turntable} from './hi-fi.js';
+import {boombox,compactStereo} from './stereos.js';
 import {addTelevision} from './displays.js';
 
 const dark='#202328', charcoal='#35363a', metal='#535762', amber='#b48b58';
@@ -34,17 +35,21 @@ export function cinemaRoom({group,box,cyl,seat,block,spot,rug,screens}){
   spot(-4.1,2.8,.15,6,7);
 }
 
-export function listeningStation({group,box,cyl,oval,block,sign,shadow,walnut,devices}){
+export function listeningStation({group,part,box,cyl,block,sign,shadow,walnut,devices}){
   const z=5.42,y=.91;
   box(-2.87,.44,z,4.62,.78,.75,walnut);
   box(-2.87,y-.04,z,4.69,.08,.83,'#27292a');block(-2.87,z,4.69,.83);shadow(-2.87,z,4.94,1.25);
-  const layout=[['vinyl','Vinyl',-4.30],['cassettes','Cassette',-2.87],['cds','CD',-1.44]];
-  for(const [key,name,x] of layout){
+  const layout=[
+    {key:'vinyl',name:'Vinyl',x:-4.30,build:turntable,bounds:[.70,.22,.51]},
+    {key:'cassettes',name:'Cassette',x:-2.87,build:boombox,bounds:[.56,.412,.222]},
+    {key:'cds',name:'CD',x:-1.44,build:compactStereo,bounds:[.75,.36,.34]}
+  ];
+  for(const {key,name,x,build,bounds:[width,height,depth]} of layout){
     sign(name.toUpperCase(),x,1.60,5.872,.90,Math.PI);
-    const isVinyl=key==='vinyl';
-    hitSurface(group,devices,key,name+' player',x,y+(isVinyl?.11:.24),z,isVinyl?.70:.92,isVinyl?.22:.49,.51);
-    const model=isVinyl?turntable({group,box,cyl,walnut},x,y,z):discPlayer({group,box,cyl},key,x,y,z);
+    hitSurface(group,devices,key,name+' player',x,y+height/2,z,width,height,depth);
+    const model=build({group,part,box,cyl,walnut},x,y,z);
     Object.assign(devices.at(-1).userData,model);
+    if(key!=='vinyl')shadow(x,z,width*1.28,depth*1.48,y+.001);
   }
 }
 

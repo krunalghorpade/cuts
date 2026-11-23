@@ -1,7 +1,8 @@
 import * as T from './vendor/three.module.js';
 import {screenCategories} from './catalog.js';
 import {rise,groundAt} from './plan.js';
-import {CSS3DObject,CSS3DRenderer} from './vendor/CSS3DRenderer.js';
+import {CSS3DRenderer} from './vendor/CSS3DRenderer.js';
+import {createChannel,trailerSources} from './trailer-channel.js';
 
 const minute=60000;
 const quarter=Math.PI/2;
@@ -140,77 +141,6 @@ export function addTelevision(parent,room,x,y,z,w,h,reverse,retro){
   return {screen,room,w,h,retro,channel};
 }
 
-// Cross-origin movie streams stay in ordinary video players. The depth-tested
-// WebGL screen cuts a window onto the matching CSS 3D plane behind the canvas.
-function createChannel(scene,entries,retro){
-  if(!entries.length)return {setScreen(){},sound(){},resume(){},distance(){}};
-  const video=document.createElement('video');
-  video.muted=true;video.playsInline=true;video.preload='none';
-  video.disablePictureInPicture=true;video.tabIndex=-1;
-  video.style.cssText='width:640px;height:'+ (retro?480:360)+'px;object-fit:contain;background:black;pointer-events:none';
-  const plane=new CSS3DObject(video);plane.visible=false;scene.add(plane);
-  let tv=null,record=null,queue=[],last=null,skipped=new Set(),timer=0,blocked=false;
-  let muted=false,needsGesture=false;
-  function sound(value){
-    muted=value;video.muted=muted||needsGesture;
-  }
-  function showVideo(on){
-    if(!tv)return;
-    tv.screen.material=on?windowMaterial:standby[tv.channel];
-    tv.screen.userData.item=on?record?.item:null;
-  }
-  function watch(ms,callback){clearTimeout(timer);timer=setTimeout(callback,ms);}
-  function play(){
-    if(!tv||!record)return;
-    const attempt=record;
-    video.play().catch(error=>{
-      if(attempt!==record||!tv||error.name==='AbortError')return;
-      if(error.name==='NotAllowedError'){
-        if(!video.muted){needsGesture=true;video.muted=true;play();}
-        else{blocked=true;clearTimeout(timer);}
-      }
-      else fail();
-    });
-  }
-  function next(){
-    clearTimeout(timer);showVideo(false);blocked=false;
-    if(!tv)return;
-    if(!queue.length){
-      queue=shuffled(entries.filter(entry=>!skipped.has(entry)));
-      if(queue.length>1 && queue.at(-1).id===last){queue.unshift(queue.pop());}
-    }
-    record=queue.pop();
-    if(!record){watch(minute,()=>{skipped.clear();next();});return;}
-    last=record.id;video.muted=muted||needsGesture;video.src=record.url;video.title=record.item.title+' trailer';
-    watch(20000,fail);play();
-  }
-  function fail(){
-    if(!tv||!record)return;
-    skipped.add(record);video.pause();next();
-  }
-  video.addEventListener('error',fail);
-  video.addEventListener('playing',()=>{clearTimeout(timer);blocked=false;showVideo(true);});
-  video.addEventListener('waiting',()=>{if(tv&&!blocked)watch(20000,fail);});
-  video.addEventListener('ended',()=>{skipped.clear();next();});
-  function setScreen(nextTV){
-    if(nextTV===tv)return;
-    showVideo(false);tv=nextTV;plane.visible=Boolean(tv);clearTimeout(timer);
-    if(!tv){video.pause();return;}
-    tv.screen.getWorldPosition(plane.position);tv.screen.getWorldQuaternion(plane.quaternion);
-    plane.scale.set(tv.w/640,tv.h/(retro?480:360),1);
-    if(!record||video.ended){next();return;}
-    if(!video.paused && video.readyState>=2)showVideo(true);
-    else{watch(20000,fail);play();}
-  }
-  return {setScreen,sound,resume(){
-    if(!tv)return;
-    if(needsGesture&&!muted){needsGesture=false;video.muted=false;play();}
-    else if(blocked){blocked=false;play();}
-  },distance(position){
-    if(tv)video.volume=Math.min(1,1/(1+.12*Math.max(0,position.distanceTo(plane.position)-1)**1.5));
-  }};
-}
-
 export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   const renderer=new CSS3DRenderer(),scene=new T.Scene();
   renderer.domElement.className='room-televisions';renderer.domElement.setAttribute('aria-hidden','true');
@@ -219,11 +149,19 @@ export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   for(const tv of screens){
     const entries=[];
     for(const item of roomStock.get(tv.room)||[]){
-      const url=item.trailerUrl||streams[item.id]?.url;
-      if(!url||tv.retro&&!item.legacyCartridge)continue;
-      entries.push({id:item.id,item,url});
+      if(tv.retro&&!item.legacyCartridge)continue;
+      const sources=trailerSources(item,streams[item.id]);
+      if(sources.length)entries.push({id:item.id,item,sources});
     }
-    channels.set(tv.channel,createChannel(scene,entries,tv.retro));
+    // Joint releases (e.g. Pokémon Red and Blue) share one original TV spot.
+    const editions=new Map();
+    for(const entry of entries){
+      const key=JSON.stringify(entry.sources.map(s=>s.value));
+      if(!editions.has(key))editions.set(key,[]);
+      editions.get(key).push(entry);
+    }
+    for(const group of editions.values())for(const e of group)e.siblings=group.filter(other=>other!==e).map(other=>other.id);
+    channels.set(tv.channel,createChannel(scene,entries,tv.retro,tv.room,standby,windowMaterial));
   }
   function resize(){renderer.setSize(canvas.clientWidth,canvas.clientHeight);}
   resize();window.addEventListener('resize',resize);
@@ -258,11 +196,11 @@ export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   const resume=()=>channels.forEach(channel=>channel.resume());
   window.addEventListener('pointerdown',resume);window.addEventListener('keydown',resume);
   let activeRoom,hasScreen=false;
-  function switchRoom(room){
+  function switchRoom(room,departed=false){
     activeRoom=room;hasScreen=false;activeScreen=null;
     channels.forEach((channel,name)=>{
       const tv=screens.find(s=>s.room===room && s.channel===name);
-      channel.setScreen(tv||null);
+      channel.setScreen(tv||null,departed&&name!==room);
       if(tv){hasScreen=true;activeScreen=tv.screen;}
     });
     controls.classList.toggle("hidden",!hasScreen);muteButton.classList.toggle("hidden",!hasScreen);
@@ -270,7 +208,7 @@ export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   document.addEventListener('visibilitychange',()=>{if(document.hidden)switchRoom(null);});
   return (camera,room,enabled)=>{
     const next=enabled&&!document.hidden?room:null,changed=next!==activeRoom;
-    if(changed)switchRoom(next);
+    if(changed)switchRoom(next,enabled&&!document.hidden);
     updateItem(activeScreen?.userData.item||null);
     if(hasScreen)channels.forEach(ch=>ch.distance(camera.position));
     if(changed||hasScreen)renderer.render(scene,camera);

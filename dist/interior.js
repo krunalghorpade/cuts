@@ -215,7 +215,7 @@ export function buildInterior(scene, label){
       lightStrip(11.2,1.97,8.67,3.5,.19);plant(8.6,8.25,1.3);spot(11.6,2.8,7.4,28,8);
     }else{
       cove(-4,-5.88,7.3,3.04);cove(4,-5.88,7.3,3.04);
-      listeningStation({group,box,cyl,oval,block,sign,shadow,walnut,devices});
+      listeningStation({group,part,box,cyl,block,sign,shadow,walnut,devices});
       originX=4;
       rug(0,.32,5.65,4.62);
       buildGamingDesk({part,box,tv,speaker,block,shadow,walnut});

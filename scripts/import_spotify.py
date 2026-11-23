@@ -45,7 +45,7 @@ class AlbumMetadata(HTMLParser):
 
 def album_formats(year):
     formats = []
-    if year < 1990 or year > 2020:
+    if year < 1990:
         formats.append(("vinyl", "LP"))
     if 1980 <= year <= 2000:
         formats.append(("cassettes", "Cassette"))

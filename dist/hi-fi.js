@@ -8,15 +8,6 @@ function canvasMap(w,h){
   map.colorSpace=T.SRGBColorSpace;map.anisotropy=4;
   return {map,ctx:canvas.getContext('2d')};
 }
-function lettering(ctx,text,x,y,width,size,color,weight=500){
-  ctx.fillStyle=color;ctx.font=weight+' '+size+'px "Helvetica Neue",Arial,sans-serif';
-  let value=String(text||'');
-  if(ctx.measureText(value).width>width){
-    while(value.length&&ctx.measureText(value+'…').width>width)value=value.slice(0,-1);
-    value=value.trimEnd()+'…';
-  }
-  ctx.fillText(value,x,y);
-}
 function squareImage(ctx,img,x,y,size){
   const side=Math.min(img.naturalWidth,img.naturalHeight);
   ctx.drawImage(img,(img.naturalWidth-side)/2,(img.naturalHeight-side)/2,side,side,x,y,size,size);
@@ -25,60 +16,6 @@ function mesh(parent,geometry,material,x,y,z){
   const obj=new T.Mesh(geometry,material);
   obj.position.set(x,y,z);parent.add(obj);
   return obj;
-}
-
-export function discPlayer({group,box,cyl},key,x,y,z){
-  const cassette=key==='cassettes',front=z-.244,body=cassette?'#353535':'#959693';
-  for(const dx of [-.34,.34])box(x+dx,y+.022,z,.075,.044,.33,rubber);
-  box(x,y+.145,z,.91,.208,.48,body);
-  box(x,y+.144,front,.90,.197,.018,cassette?'#55524b':'#adb0af');
-  for(let i=0;i<11;i++)box(x-.17+i*.037,y+.251,z+.1,.018,.002,.14,graphite);
-  if(cassette){
-    box(x+.17,y+.15,front-.012,.41,.151,.018,graphite);
-    box(x+.17,y+.16,front-.023,.34,.094,.008,'#7a7871');
-    for(const dx of [.083,.257]){
-      cyl(x+dx,y+.165,front-.031,.064,.011,.064,'#323535',Math.PI/2);
-      cyl(x+dx,y+.165,front-.038,.032,.006,.032,'#cdc5b2',Math.PI/2);
-    }
-    for(let i=0;i<5;i++)box(x-.28+i*.062,y+.11,front-.029,.049,.063,.044,i===4?silver:graphite);
-  }else{
-    box(x+.105,y+.153,front-.012,.48,.085,.014,'#676a6b');
-    box(x+.105,y+.17,front-.02,.425,.015,.009,rubber);
-    cyl(x-.269,y+.149,front-.024,.11,.040,.11,graphite,Math.PI/2);
-    cyl(x-.269,y+.149,front-.048,.090,.012,.090,silver,Math.PI/2);
-  }
-  // Hinged readout above the transport, tilted toward a standing listener.
-  const housing=new T.Group();
-  housing.position.set(x,y+.364,z+.04);housing.rotation.order='YXZ';
-  housing.rotation.set(-.30,Math.PI,0,'YXZ');group.add(housing);
-  mesh(housing,new T.BoxGeometry(.64,.24,.026),new T.MeshStandardMaterial({color:'#242627'}),0,0,0);
-  box(x,y+.275,z+.08,.60,.05,.09,graphite);
-  const {map,ctx}=canvasMap(768,264);
-  const lcd=mesh(housing,new T.PlaneGeometry(.613,.211),new T.MeshBasicMaterial({map,toneMapped:false}),0,0,.014);
-  lcd.name=key+' now playing';
-  return {show({item,track,status,image}){
-    const active=Boolean(item&&track),ink=cassette?'#eace96':'#bedbd1';
-    ctx.fillStyle=active?'#151c1c':'#161a1b';ctx.fillRect(0,0,768,264);
-    lettering(ctx,cassette?'CASSETTE DECK':'COMPACT DISC',25,43,480,24,active?ink:'#86918e',600);
-    if(!active){lettering(ctx,'Standby',25,171,700,64,'#7a8583');map.needsUpdate=true;return;}
-    const offset=image?198:25;
-    if(image)squareImage(ctx,image,25,81,153);
-    const available=742-offset;
-    ctx.font='600 46px Helvetica,Arial,sans-serif';
-    if(ctx.measureText(track.title).width<=available){
-      lettering(ctx,track.title,offset,151,available,46,'#f5f4ec',600);
-    }else{
-      const words=track.title.split(/\s+/);
-      let first=words.shift()||'';
-      ctx.font='600 39px Helvetica,Arial,sans-serif';
-      while(words.length&&ctx.measureText(first+' '+words[0]).width<=available)first+=' '+words.shift();
-      lettering(ctx,first,offset,119,available,39,'#f5f4ec',600);
-      lettering(ctx,words.join(' '),offset,168,available,39,'#f5f4ec',600);
-    }
-    lettering(ctx,item.creator,offset,222,available,33,ink);
-    ctx.textAlign='right';lettering(ctx,status.toUpperCase(),743,43,220,22,ink,600);ctx.textAlign='left';
-    map.needsUpdate=true;
-  }};
 }
 
 export function turntable({group,box,cyl,walnut},x,y,z){
