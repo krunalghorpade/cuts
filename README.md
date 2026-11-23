@@ -7,13 +7,13 @@ A two-floor, first-person media store for desktop, tablet and phone. The interfa
 - Use WASD to walk, drag or use the arrow keys to look, and hold Shift to run. Click a case to select it and press E to inspect it. B opens the collection, M opens the floor map and Esc pauses the walkthrough. L or a double click enables mouse look.
 - On a touch screen, move with the stick, drag to look, tap a case to select it, then tap View item.
 - The item carousel opens on the selected case. Use the left and right buttons or arrow keys to browse its media section in shelf order. Drag the centered 3D case to rotate it. With the preview focused, Shift + left/right rotates horizontally and up/down rotates vertically. Reset view restores the opening angle.
-- The floor map takes you to a room on either floor. The switchback stairs connect the two levels on foot.
+- The floor map takes you to a room on either floor. Room and stairwell doors swing open as you approach from either side and close after you walk away. The switchback stairs connect the two levels on foot.
 
 ## Catalog
 
 The film, series and anime inventory comes from the supplied Trakt list. An empty snapshot leaves those shelves empty. A series goes on one shelf. Anime has its own section on Level 2. Box sets use a packaging estimate of four episodes per disc and four discs per inner case. Multi-volume sets expand in depth and width. When an episode count is unavailable, the item uses a standard box without an inferred count.
 
-The music catalog combines the previously imported Kratex Favs selection with the other supplied Spotify playlists. Each album retains its source playlists. Spotify's album release year selects vinyl before 1985, cassette and CD from 1985 through 1995 inclusive, and CD after 1995. Source links are available from the collection. TheAudioDB enriches album details where available. The game inventory comes from the owner’s RAWG collection, My Games. Each distinct RAWG entry has a single location. The Nintendo DS and Switch card models represent selected cartridge releases. Other titles use archive case mockups. The listed platforms describe support, not ownership of a particular edition.
+The music catalog combines the previously imported Kratex Favs selection with the other supplied Spotify playlists. Each album retains its source playlists. Each album gets one case per eligible format, using Spotify's album release year. Vinyl covers releases through 1989 and from 2021 onward. Cassettes cover 1980 through 2000 inclusive, and CDs cover 1985 onward. Source links are available from the collection. TheAudioDB enriches album details where available. The game inventory comes from the owner’s RAWG collection, My Games. Each distinct RAWG entry has a single location. The Nintendo DS and Switch card models represent selected cartridge releases. Other titles use archive case mockups. The listed platforms describe support, not ownership of a particular edition.
 
 ## Update data
 

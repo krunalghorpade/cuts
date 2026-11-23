@@ -43,6 +43,17 @@ class AlbumMetadata(HTMLParser):
             self.fields[a.get("property") or a.get("name")] = a.get("content", "")
 
 
+def album_formats(year):
+    formats = []
+    if year < 1990 or year > 2020:
+        formats.append(("vinyl", "LP"))
+    if 1980 <= year <= 2000:
+        formats.append(("cassettes", "Cassette"))
+    if year >= 1985:
+        formats.append(("cds", "CD"))
+    return formats
+
+
 def import_album(album, existing):
     uri = album["uri"]
     album_id = uri.split(":")[-1]
@@ -84,12 +95,11 @@ def import_album(album, existing):
         except Exception:
             pass
     year = int(date[:4])
-    formats = [("vinyl", "LP")] if year < 1985 else [("cassettes", "Cassette"), ("cds", "CD")] if year <= 1995 else [("cds", "CD")]
     lists = list(dict.fromkeys((existing or {}).get("playlists", []) + album["lists"]))
     return [dict(id=uri+"-"+category, category=category, title=album["title"], album=album["title"],
                  creator=artist, year=str(year), format=fmt, source="Spotify", sourceUrl=url, albumUri=uri,
                  releaseDate=date, featuredTrack=album["track"], artwork=("./art/spotify/"+cover.name if cover.is_file() else art),
-                 playlists=lists) for category, fmt in formats]
+                 playlists=lists) for category, fmt in album_formats(year)]
 
 
 def main():

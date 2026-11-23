@@ -54,6 +54,7 @@ function label(parent, text, x, y, z, w, h, opts = {}) {
 
 const interior=buildInterior(scene,label);
 const {stacks,interactables,destinations}=stockRooms(interior,box,label);
+for(const door of interior.doors)interactables[door.level-1].push(...door.faces);
 let ground=0,level=1;
 function refreshFloor(){
   level=ground>rise/2?2:1;
@@ -299,6 +300,7 @@ function tryMove(x,z){
   if(onStair && z< -4.1 && z> -7.9 && Math.abs(x+10)<.24)return;
   const floor=h>rise/2?2:1;
   if(interior.obstacles.some(o=>o.level===floor && Math.abs(x-o.x)<o.w/2+.19 && Math.abs(z-o.z)<o.d/2+.19))return;
+  if(interior.doors.some(door=>door.level===floor && door.blocks(x,z)))return;
   camera.position.x=x;camera.position.z=z;ground=h;
 }
 let bob=0;function updateMovement(dt){let f=(keys.has('KeyW')?1:0)-(keys.has('KeyS')?1:0)+joystick.y;let s=(keys.has('KeyD')?1:0)-(keys.has('KeyA')?1:0)+joystick.x;const len=Math.hypot(f,s);if(len>1){f/=len;s/=len;}const speed=keys.has('ShiftLeft')||keys.has('ShiftRight')?6.2:3.5;const dx=(-Math.sin(yaw)*f+Math.cos(yaw)*s)*speed*dt,dz=(-Math.cos(yaw)*f-Math.sin(yaw)*s)*speed*dt;const steps=Math.max(1,Math.ceil(Math.max(Math.abs(dx),Math.abs(dz))/.12));
@@ -331,6 +333,9 @@ function updateFocus(){
 }
 function animate(){
   requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.15);
+  if(active&&!uiOpen){
+    for(const door of interior.doors)door.update(dt,level,camera.position.x,camera.position.z);
+  }
   if(active&&!uiOpen&&intro.classList.contains('hidden')){yaw+=((keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0))*dt*1.55;pitch=clamp(pitch+((keys.has('ArrowUp')?1:0)-(keys.has('ArrowDown')?1:0))*dt*1.3,-1.28,1.28);updateMovement(dt);camera.rotation.y=yaw;camera.rotation.x=pitch;camera.updateMatrixWorld();updateFocus();}
   if(!currentDetailItem){renderer.autoClear=false;renderer.clear();renderer.render(scene,camera);}
   preview.render();

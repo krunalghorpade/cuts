@@ -1,5 +1,6 @@
 import * as T from './vendor/three.module.js';
-import {rooms, rise, stair, doorways} from './plan.js';
+import {rooms, rise, stair, doorways, roomAt} from './plan.js';
+import {makeDoor} from './doors.js';
 
 let seed=22711;
 const random=()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
@@ -64,7 +65,7 @@ const pixelScreen=textureMaterial((g,w,h)=>{
 });
 const shadowMat=(()=>{const m=textureMaterial((g,w,h)=>{const v=g.createRadialGradient(w/2,h/2,0,w/2,h/2,w/2);v.addColorStop(0,'rgba(15,10,5,.72)');v.addColorStop(.55,'rgba(15,10,5,.45)');v.addColorStop(1,'rgba(15,10,5,0)');g.fillStyle=v;g.fillRect(0,0,w,h);},96,96);m.transparent=true;m.depthWrite=false;return m})();
 export function buildInterior(scene, label){
-  const floors=[], obstacles=[], occluders=[];
+  const floors=[], obstacles=[], occluders=[], doors=[];
   scene.add(new T.HemisphereLight('#f9e9d7','#716f68',1.38));
   const sun=new T.DirectionalLight('#fff1df',1.55);sun.position.set(-5,9,5);scene.add(sun);
   const fill=new T.DirectionalLight('#b8c9d3',.52);fill.position.set(8,3,-4);scene.add(fill);
@@ -149,6 +150,13 @@ export function buildInterior(scene, label){
         else{for(const q of [a+.04,b-.04])box(axis==='x'?f:q,1.32,axis==='z'?f:q,axis==='x'?.23:.075,2.64,axis==='z'?.23:.075,walnut);box(x,2.63,z,w+.03,.09,d+.03,walnut);}
       }
     }
+    for(const opening of doorways){
+      const [axis,wall,a,b,name]=opening;
+      if(level===2 && name==='Washroom')continue;
+      const mid=(a+b)/2;
+      const destination=axis==='x'?roomAt(level,wall+Math.sign(wall)*.3,mid):roomAt(level,mid,wall+.3);
+      doors.push(makeDoor(group,level,opening,destination?.name || 'Stairwell',walnut,label));
+    }
     // Mid-flight landing and stair treads occupy a shared double-height opening.
     box(-10,-.075,-3.05,4,.15,2.1,floorMat);
     if(level===1){
@@ -182,12 +190,12 @@ export function buildInterior(scene, label){
       cabinet(-1.4,-5.46,2.98);cabinet(1.55,-5.46,2.37);tv(-1.38,-5.43,2.63,1.88);tv(1.55,-5.45,1.48,1.51,true);
       for(const x of [-2.3,.91]){box(x,.898,-5.27,.39,.085,.23,iron);box(x+.52,.905,-5.22,.20,.077,.12,cream);}
       // The listening station stands south of both music racks, clear of their browsing aisles.
-      const playerX=-7.04, playerZ=4.83;
-      cabinet(playerX,playerZ,1.23);
+      const playerX=-7.25, playerZ=4.83;
+      cabinet(-7.40,playerZ,.90);
       cyl(playerX,.89,playerZ,.43,.04,.43,iron);
       cyl(playerX,.915,playerZ,.15,.012,.15,brass);
       box(playerX+.24,.95,playerZ+.09,.029,.024,.23,cream,0,.31);
-      speaker(playerX-.4,.84,playerZ);
+      speaker(-7.68,.84,playerZ);
       shelf(-2.7,5.6,2.4,1.65,'books',Math.PI);shelf(.35,5.6,2.8,1.65,'consoles',Math.PI);shelf(3.53,5.6,2.8,1.65,'objects',Math.PI);
       plant(-3.42,-4.45,1.7);plant(3.42,-4.45,1.85);plant(6.55,5.16,1.6);spot(-1,2.7,-4.3,15,10);
       textileRack(-10.5,7.7);textileRack(-9.1,9.4);rug(-9.2,8.7,5.9,3.6);
@@ -220,5 +228,5 @@ export function buildInterior(scene, label){
       group.add(new T.Mesh(geo,material));
     }
   }
-  return {floors,obstacles,occluders};
+  return {floors,obstacles,occluders,doors};
 }
