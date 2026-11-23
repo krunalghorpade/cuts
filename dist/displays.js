@@ -96,7 +96,7 @@ export function installPosters(floors,items,targets){
   };
 }
 
-function slate(retro){
+function slate(label,retro=false){
   const c=document.createElement('canvas');c.width=640;c.height=retro?480:360;
   const g=c.getContext('2d'),cx=c.width/2,cy=c.height/2;
   const glow=g.createRadialGradient(cx,cy,4,cx,cy,c.width*.6);
@@ -104,24 +104,29 @@ function slate(retro){
   g.fillStyle=glow;g.fillRect(0,0,c.width,c.height);
   g.textAlign='center';g.fillStyle=retro?'#a1ba9b':'#d8d7cd';
   g.font=retro?'23px monospace':'24px Helvetica, Arial, sans-serif';
-  g.fillText(retro?'CARTRIDGE CHANNEL':'MY ROOM CINEMA',cx,cy-5);
+  g.fillText(label,cx,cy-5);
   g.font='15px monospace';g.fillText(retro?'STANDBY':'TRAILERS',cx,cy+25);
   if(retro){g.fillStyle='rgba(0,0,0,.13)';for(let y=0;y<c.height;y+=4)g.fillRect(0,y,c.width,1);}
   const map=new T.CanvasTexture(c);map.colorSpace=T.SRGBColorSpace;
   return new T.MeshBasicMaterial({map,toneMapped:false});
 }
 
-const standby=[slate(false),slate(true)];
+const standby={
+  collection:slate('MY ROOM CINEMA'),
+  games:slate('GAME TRAILERS'),
+  cartridges:slate('CARTRIDGE CHANNEL',true)
+};
 const windowMaterial=new T.ShaderMaterial({
   vertexShader:'void main(){gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',
   fragmentShader:'void main(){gl_FragColor=vec4(0.0);}',blending:T.NoBlending
 });
 
 export function addTelevision(parent,room,x,y,z,w,h,reverse,retro){
-  const screen=new T.Mesh(new T.PlaneGeometry(w,h),standby[Number(retro)]);
+  const channel=retro?'cartridges':room==='gallery'?'games':'collection';
+  const screen=new T.Mesh(new T.PlaneGeometry(w,h),standby[channel]);
   screen.position.set(x,y,z);screen.rotation.y=reverse?Math.PI:0;parent.add(screen);
   screen.userData={display:"tv",width:w,height:h,item:null};
-  return {screen,room,w,h,retro};
+  return {screen,room,w,h,retro,channel};
 }
 
 // Cross-origin movie streams stay in ordinary video players. The depth-tested
@@ -140,7 +145,7 @@ function createChannel(scene,entries,retro){
   }
   function showVideo(on){
     if(!tv)return;
-    tv.screen.material=on?windowMaterial:standby[Number(retro)];
+    tv.screen.material=on?windowMaterial:standby[tv.channel];
     tv.screen.userData.item=on?record?.item:null;
   }
   function watch(ms,callback){clearTimeout(timer);timer=setTimeout(callback,ms);}
@@ -199,17 +204,19 @@ export function installTelevisions(canvas,screens,items,streams){
   const renderer=new CSS3DRenderer(),scene=new T.Scene();
   renderer.domElement.className='room-televisions';renderer.domElement.setAttribute('aria-hidden','true');
   canvas.before(renderer.domElement);
-  const byChannel=[[],[]];
+  const byChannel={collection:[],games:[],cartridges:[]};
   for(const item of items){
     const url=item.trailerUrl||streams[item.id]?.url;
     if(!url)continue;
     if(['movies','shows','anime','game-discs','cartridges'].includes(item.category)){
       const entry={id:item.id,item,url};
-      byChannel[0].push(entry);
-      if(item.category==='cartridges' && item.legacyCartridge===true)byChannel[1].push(entry);
+      byChannel.collection.push(entry);
+      if(item.category==='game-discs'||item.category==='cartridges')byChannel.games.push(entry);
+      if(item.category==='cartridges' && item.legacyCartridge===true)byChannel.cartridges.push(entry);
     }
   }
-  const channels=byChannel.map((entries,index)=>createChannel(scene,entries,Boolean(index)));
+  const channels=new Map(Object.entries(byChannel).map(([name,entries])=>
+    [name,createChannel(scene,entries,name==='cartridges')]));
   function resize(){renderer.setSize(canvas.clientWidth,canvas.clientHeight);}
   resize();window.addEventListener('resize',resize);
   const muteButton=document.getElementById('tvSound');
@@ -230,8 +237,8 @@ export function installTelevisions(canvas,screens,items,streams){
   let activeRoom,hasScreen=false;
   function switchRoom(room){
     activeRoom=room;hasScreen=false;
-    channels.forEach((channel,index)=>{
-      const tv=screens.find(s=>s.room===room && Number(s.retro)===index);
+    channels.forEach((channel,name)=>{
+      const tv=screens.find(s=>s.room===room && s.channel===name);
       channel.setScreen(tv||null);
       if(tv)hasScreen=true;
     });

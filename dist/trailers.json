@@ -242,5 +242,33 @@
   "tt2359704": {
     "url": "https://archive.org/download/turner_video_6244/6244.mp4",
     "source": "https://archive.org/details/turner_video_6244"
+  },
+  "tt1648163": {
+    "url": "https://cdn.fastly.steamstatic.com/steam/apps/80822/movie480.mp4",
+    "source": "https://store.steampowered.com/app/620/"
+  },
+  "tt1712064": {
+    "url": "https://cdn.fastly.steamstatic.com/steam/apps/2028471/movie480.mp4",
+    "source": "https://store.steampowered.com/app/8870/"
+  },
+  "tt7791150": {
+    "url": "https://cdn.fastly.steamstatic.com/steam/apps/256679401/movie480.mp4",
+    "source": "https://store.steampowered.com/app/367520/"
+  },
+  "tt9459718": {
+    "url": "https://cdn.fastly.steamstatic.com/steam/apps/256801252/movie480.mp4",
+    "source": "https://store.steampowered.com/app/1145360/"
+  },
+  "tt6161168": {
+    "url": "https://cdn.fastly.steamstatic.com/steam/apps/256767979/movie480.mp4",
+    "source": "https://store.steampowered.com/app/1174180/"
+  },
+  "tt10562854": {
+    "url": "https://cdn.fastly.steamstatic.com/steam/apps/256875477/movie480.mp4",
+    "source": "https://store.steampowered.com/app/1245620/"
+  },
+  "tt3810192": {
+    "url": "https://cdn.fastly.steamstatic.com/steam/apps/256812919/movie480.mp4",
+    "source": "https://store.steampowered.com/app/1091500/"
   }
 }

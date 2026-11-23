@@ -9,7 +9,7 @@ A two-floor, first-person media store for desktop, tablet and phone. The interfa
 - The item carousel opens on the selected case. Use the left and right buttons or arrow keys to browse its media section in shelf order. Drag the centered 3D case to rotate it. With the preview focused, Shift + left/right rotates horizontally and up/down rotates vertically. Reset view restores the opening angle.
 - The floor map takes you to a room on either floor. The Book Library entrance stays open. The other doors swing open as you approach from either side and close after you walk away. The switchback stairs connect the two levels on foot.
 
-The digital posters on the walls, staircase and landing change once a minute. Click or tap a poster and choose View details to inspect its item. Hover over a playing TV to read the title, or select it to open the same details. Trailer sound gets quieter with distance. Use Mute TVs or press V to silence it. Playback pauses outside the TV room or while browsing a menu. The upstairs cartridge room has the original CRT, which plays promotions for verified legacy cartridge titles.
+The digital posters on the walls, staircase and landing change once a minute. Click or tap a poster and choose View details to inspect its item. Hover over a playing TV to read the title, or select it to open the same details. Trailer sound gets quieter with distance. Use Mute TVs or press V to silence it. Playback pauses outside the TV room or while browsing a menu. The Level 2 gallery TV plays game trailers from the collection. The upstairs cartridge room has the original CRT, which plays promotions for verified legacy cartridge titles.
 
 ## Catalog
 
