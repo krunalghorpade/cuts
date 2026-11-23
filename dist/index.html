@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#111713">
+  <meta name="theme-color" content="#141414">
   <meta name="description" content="Step into The Lower Level, a first-person basement archive of films, television, games and music.">
   <title>The Lower Level — A basement media archive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +54,10 @@
 
   <aside id="detailPanel" class="panel detail-panel hidden" aria-labelledby="detailTitle" aria-modal="true" role="dialog">
     <div class="panel-head"><strong data-pixel="disc">Item details</strong><button id="closeDetail" class="close-button" type="button" aria-label="Close item details">×</button></div>
-    <div id="detailArt" class="detail-art"><img id="audioArt" class="audio-art hidden" alt="Cover artwork"><div class="detail-art-top" id="detailFormat"></div><div class="detail-art-title" id="detailArtTitle"></div></div>
+    <div class="case-preview">
+      <canvas id="casePreview" tabindex="0" aria-label="Rotate the 3D case"></canvas>
+      <div class="preview-controls"><span>Drag to rotate</span><button type="button" id="previewReset" aria-label="Reset case rotation">Reset view</button></div>
+    </div>
     <div id="detailCategory" class="detail-category"></div><h2 id="detailTitle"></h2><p id="detailCreator" class="detail-creator"></p>
     <div class="detail-rule"></div><div class="detail-meta"><div><span>RELEASE</span><strong id="detailYear"></strong></div><div><span>FORMAT</span><strong id="detailFormatValue"></strong></div><div><span>COLLECTION SOURCE</span><strong id="detailSource"></strong></div></div>
     <div id="detailNote" class="detail-note"></div><div id="audioExtra" class="audio-extra hidden"></div><a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
