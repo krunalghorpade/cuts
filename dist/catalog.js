@@ -40,9 +40,10 @@ const titles=screenTitles.map(item=>{
   const retro=retroPackage(platform);
   const category=retro?'retro-games':/^Nintendo Switch/i.test(platform)?'switch':
     /^PlayStation [345]$/i.test(platform)?'playstation':/^Xbox (360|One|Series)/i.test(platform)?'xbox':'game-discs';
-  return {...item,category,platform,edition:edition?.edition||'',
+  return {...item,category,platform,edition:edition?.edition||'',gameMedia:edition?.gameMedia,
     format:retro?platform+' boxed edition':category==='switch'?'Nintendo Switch retail case':platform?platform+' disc':item.format,
-    ...(edition?.launchboxUrl && edition.artwork ? {artwork:edition.artwork,launchboxUrl:edition.launchboxUrl,
+    ...(edition?.launchboxUrl ? {launchboxUrl:edition.launchboxUrl} : {}),
+    ...(edition?.artwork ? {artwork:edition.artwork,
       boxBack:edition.boxBack,boxSpine:edition.boxSpine,artworkNote:edition.artworkNote} : {})};
 });
 export const categoryById = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));

@@ -16,7 +16,30 @@
       }
     },
     "artwork": "./art/launchbox/tt6161168-front-34aeba0d-b1e8-400f-8905-c81ed8d84c78.webp",
-    "artworkSource": "https://images.launchbox-app.com/34aeba0d-b1e8-400f-8905-c81ed8d84c78.jpg"
+    "artworkSource": "https://images.launchbox-app.com/34aeba0d-b1e8-400f-8905-c81ed8d84c78.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt6161168-media-r2_66e2ec97-cabe-466d-ad9d-ebff348fedd7.webp",
+          "source": "https://images.launchbox-app.com/r2_66e2ec97-cabe-466d-ad9d-ebff348fedd7.png",
+          "type": "Disc",
+          "region": "Europe",
+          "layout": "disc",
+          "regionalAlternative": true,
+          "label": "Data Disc"
+        },
+        {
+          "artwork": "./art/launchbox/tt6161168-media-r2_6fbd8dfa-2587-4a02-a2bc-22ac1c3be525.webp",
+          "source": "https://images.launchbox-app.com/r2_6fbd8dfa-2587-4a02-a2bc-22ac1c3be525.png",
+          "type": "Disc",
+          "region": "Europe",
+          "layout": "disc",
+          "regionalAlternative": true,
+          "label": "Play Disc"
+        }
+      ]
+    }
   },
   "tt2140553": {
     "igdbId": 1009,
@@ -41,7 +64,19 @@
     },
     "artwork": "./art/launchbox/tt2140553-front-9a204038-8491-4714-8639-62b6af67ad36.webp",
     "artworkSource": "https://images.launchbox-app.com/9a204038-8491-4714-8639-62b6af67ad36.jpg",
-    "boxBack": "./art/launchbox/tt2140553-back-428dfeb4-fa1d-40af-9b77-e3f5ff0af8ce.webp"
+    "boxBack": "./art/launchbox/tt2140553-back-428dfeb4-fa1d-40af-9b77-e3f5ff0af8ce.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2140553-media-9531c70b-c263-4ca3-9254-251a76b85327.webp",
+          "source": "https://images.launchbox-app.com/9531c70b-c263-4ca3-9254-251a76b85327.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt13258344": {
     "igdbId": 119171,
@@ -62,7 +97,11 @@
     },
     "artwork": "./art/launchbox/tt13258344-front-5340d2a1-80aa-49a5-a7f7-57b55e9062ae.webp",
     "artworkSource": "https://images.launchbox-app.com/5340d2a1-80aa-49a5-a7f7-57b55e9062ae.png",
-    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows.",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt32591698": {
     "igdbId": 305152,
@@ -93,7 +132,11 @@
     "artwork": "./art/launchbox/tt32591698-front-r2_bb0113ae-fd26-40ac-97c5-7a3cb23d5862.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_bb0113ae-fd26-40ac-97c5-7a3cb23d5862.png",
     "boxBack": "./art/launchbox/tt32591698-back-r2_73a18949-ba78-41ec-9e16-057176748595.webp",
-    "boxSpine": "./art/launchbox/tt32591698-spine-r2_83d04277-8e12-4926-9706-e8221c0cb226.webp"
+    "boxSpine": "./art/launchbox/tt32591698-spine-r2_83d04277-8e12-4926-9706-e8221c0cb226.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt2993508": {
     "igdbId": 1942,
@@ -112,7 +155,11 @@
       }
     },
     "artwork": "./art/launchbox/tt2993508-front-5aa3c1d0-8e6a-46c2-9821-099b394b07b8.webp",
-    "artworkSource": "https://images.launchbox-app.com/5aa3c1d0-8e6a-46c2-9821-099b394b07b8.jpg"
+    "artworkSource": "https://images.launchbox-app.com/5aa3c1d0-8e6a-46c2-9821-099b394b07b8.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt0184666": {
     "igdbId": 1029,
@@ -140,7 +187,19 @@
     "artwork": "./art/launchbox/tt0184666-front-06da83f4-2c7b-4551-9792-8e2292ff6afb.webp",
     "artworkSource": "https://images.launchbox-app.com/06da83f4-2c7b-4551-9792-8e2292ff6afb.jpg",
     "boxBack": "./art/launchbox/tt0184666-back-0f7548a2-8b81-4f1d-9284-3e1a3b6303e5.webp",
-    "boxSpine": "./art/launchbox/tt0184666-spine-ce26333d-438c-4795-86a7-9657494805a8.webp"
+    "boxSpine": "./art/launchbox/tt0184666-spine-ce26333d-438c-4795-86a7-9657494805a8.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0184666-media-c20454c0-e6ab-4dd9-810d-50ade4278d3a.webp",
+          "source": "https://images.launchbox-app.com/c20454c0-e6ab-4dd9-810d-50ade4278d3a.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt0208155": {
     "igdbId": 427,
@@ -171,7 +230,36 @@
     "artwork": "./art/launchbox/tt0208155-front-r2_0fc9f0e1-4e87-4410-9be7-96e59a4c5464.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_0fc9f0e1-4e87-4410-9be7-96e59a4c5464.png",
     "boxBack": "./art/launchbox/tt0208155-back-eacdb1ca-ab11-47af-98a5-ec3f553c9df1.webp",
-    "boxSpine": "./art/launchbox/tt0208155-spine-d5a8e96f-ed9e-4596-b3c1-271a150fbb19.webp"
+    "boxSpine": "./art/launchbox/tt0208155-spine-d5a8e96f-ed9e-4596-b3c1-271a150fbb19.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0208155-media-b3bda860-0ef2-461e-b1ff-91869f22958e.webp",
+          "source": "https://images.launchbox-app.com/b3bda860-0ef2-461e-b1ff-91869f22958e.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 1"
+        },
+        {
+          "artwork": "./art/launchbox/tt0208155-media-779b194a-5d2d-453f-a243-a5393c13506c.webp",
+          "source": "https://images.launchbox-app.com/779b194a-5d2d-453f-a243-a5393c13506c.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 2"
+        },
+        {
+          "artwork": "./art/launchbox/tt0208155-media-b5576a83-9e8b-493b-a314-38f319231949.webp",
+          "source": "https://images.launchbox-app.com/b5576a83-9e8b-493b-a314-38f319231949.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 3"
+        }
+      ]
+    }
   },
   "tt5838588": {
     "igdbId": 19560,
@@ -202,7 +290,20 @@
     "artwork": "./art/launchbox/tt5838588-front-ac21e54c-a102-49a3-ab17-17ce67e4f868.webp",
     "artworkSource": "https://images.launchbox-app.com/ac21e54c-a102-49a3-ab17-17ce67e4f868.jpg",
     "boxBack": "./art/launchbox/tt5838588-back-5a3752a0-683f-43cb-b068-4457dd8b70a3.webp",
-    "boxSpine": "./art/launchbox/tt5838588-spine-e09a8e8e-7ae6-41b6-84bd-74df7620a7b9.webp"
+    "boxSpine": "./art/launchbox/tt5838588-spine-e09a8e8e-7ae6-41b6-84bd-74df7620a7b9.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt5838588-media-r2_a4e0f015-de3e-463e-bd5b-dd9aced19056.webp",
+          "source": "https://images.launchbox-app.com/r2_a4e0f015-de3e-463e-bd5b-dd9aced19056.png",
+          "type": "Disc",
+          "region": "Europe",
+          "layout": "disc",
+          "regionalAlternative": true
+        }
+      ]
+    }
   },
   "tt13119450": {
     "igdbId": 112875,
@@ -221,7 +322,11 @@
       }
     },
     "artwork": "./art/launchbox/tt13119450-front-4166fff0-21ec-41ae-a3bf-9dbf36934e81.webp",
-    "artworkSource": "https://images.launchbox-app.com/4166fff0-21ec-41ae-a3bf-9dbf36934e81.jpg"
+    "artworkSource": "https://images.launchbox-app.com/4166fff0-21ec-41ae-a3bf-9dbf36934e81.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt0180825": {
     "igdbId": 375,
@@ -252,7 +357,28 @@
     "artwork": "./art/launchbox/tt0180825-front-r2_d810b36e-fd9e-435f-9e1b-32ef76459e66.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_d810b36e-fd9e-435f-9e1b-32ef76459e66.jpg",
     "boxBack": "./art/launchbox/tt0180825-back-7ce6092e-8afb-42b5-bc83-bcb64e25e0f4.webp",
-    "boxSpine": "./art/launchbox/tt0180825-spine-r2_4115e099-f65e-4293-a794-74079c336fa6.webp"
+    "boxSpine": "./art/launchbox/tt0180825-spine-r2_4115e099-f65e-4293-a794-74079c336fa6.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0180825-media-e2cfb4a5-df51-4a29-8324-9c5de6689057.webp",
+          "source": "https://images.launchbox-app.com/e2cfb4a5-df51-4a29-8324-9c5de6689057.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 1"
+        },
+        {
+          "artwork": "./art/launchbox/tt0180825-media-92c86da4-63e7-460d-9e02-ff4d79128dff.webp",
+          "source": "https://images.launchbox-app.com/92c86da4-63e7-460d-9e02-ff4d79128dff.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 2"
+        }
+      ]
+    }
   },
   "tt0365498": {
     "igdbId": 379,
@@ -283,7 +409,19 @@
     "artwork": "./art/launchbox/tt0365498-front-e8fb6be7-937e-4147-b64c-2002381bf024.webp",
     "artworkSource": "https://images.launchbox-app.com/e8fb6be7-937e-4147-b64c-2002381bf024.jpg",
     "boxBack": "./art/launchbox/tt0365498-back-8a10e4bd-8997-41bb-9ced-5c706a9a9656.webp",
-    "boxSpine": "./art/launchbox/tt0365498-spine-46ed768a-2e2a-4493-af12-a0dba588fc32.webp"
+    "boxSpine": "./art/launchbox/tt0365498-spine-46ed768a-2e2a-4493-af12-a0dba588fc32.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0365498-media-b0bb419e-3076-4615-a140-143c742df081.webp",
+          "source": "https://images.launchbox-app.com/b0bb419e-3076-4615-a140-143c742df081.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1568322": {
     "igdbId": 501,
@@ -308,7 +446,19 @@
     },
     "artwork": "./art/launchbox/tt1568322-front-1e72179c-e0a5-47c6-bb4b-186db80aee72.webp",
     "artworkSource": "https://images.launchbox-app.com/1e72179c-e0a5-47c6-bb4b-186db80aee72.jpg",
-    "boxBack": "./art/launchbox/tt1568322-back-b7d41590-66ae-4317-ae00-030c698da275.webp"
+    "boxBack": "./art/launchbox/tt1568322-back-b7d41590-66ae-4317-ae00-030c698da275.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1568322-media-5fd600a9-0145-41f8-a369-c8dfd2e30342.webp",
+          "source": "https://images.launchbox-app.com/5fd600a9-0145-41f8-a369-c8dfd2e30342.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0210613": {
     "igdbId": 1802,
@@ -336,7 +486,19 @@
     "artwork": "./art/launchbox/tt0210613-front-5db08b42-02db-4a10-b073-6a44abf60720.webp",
     "artworkSource": "https://images.launchbox-app.com/5db08b42-02db-4a10-b073-6a44abf60720.jpg",
     "boxBack": "./art/launchbox/tt0210613-back-f82bab38-07f2-47c5-9585-db5d81dea6e6.webp",
-    "boxSpine": "./art/launchbox/tt0210613-spine-5adc8c03-0bc3-43a6-b4cc-14e6f3581850.webp"
+    "boxSpine": "./art/launchbox/tt0210613-spine-5adc8c03-0bc3-43a6-b4cc-14e6f3581850.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0210613-media-r2_0ca54db7-ba18-423e-b0e6-6614a293b482.webp",
+          "source": "https://images.launchbox-app.com/r2_0ca54db7-ba18-423e-b0e6-6614a293b482.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt10562854": {
     "igdbId": 119133,
@@ -355,7 +517,11 @@
       }
     },
     "artwork": "./art/launchbox/tt10562854-front-b113fa60-684c-401c-9f95-10b0c9e92786.webp",
-    "artworkSource": "https://images.launchbox-app.com/b113fa60-684c-401c-9f95-10b0c9e92786.jpg"
+    "artworkSource": "https://images.launchbox-app.com/b113fa60-684c-401c-9f95-10b0c9e92786.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt0183066": {
     "igdbId": 14,
@@ -384,7 +550,19 @@
     "artwork": "./art/launchbox/tt0183066-front-bbdf71d0-44b6-48c5-9eea-4b10bd65f02f.webp",
     "artworkSource": "https://images.launchbox-app.com/bbdf71d0-44b6-48c5-9eea-4b10bd65f02f.jpg",
     "boxBack": "./art/launchbox/tt0183066-back-dd089bf6-9747-41bd-9c67-162cc3d8c715.webp",
-    "boxSpine": "./art/launchbox/tt0183066-spine-f625b944-b2b9-41d7-9271-63e81e441990.webp"
+    "boxSpine": "./art/launchbox/tt0183066-spine-f625b944-b2b9-41d7-9271-63e81e441990.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0183066-media-51727f01-467d-4c47-98bd-b9c654480ae5.webp",
+          "source": "https://images.launchbox-app.com/51727f01-467d-4c47-98bd-b9c654480ae5.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0383385": {
     "igdbId": 732,
@@ -415,7 +593,19 @@
     "artwork": "./art/launchbox/tt0383385-front-56b5479a-bba5-43d6-b458-0fcd00bf10ba.webp",
     "artworkSource": "https://images.launchbox-app.com/56b5479a-bba5-43d6-b458-0fcd00bf10ba.png",
     "boxBack": "./art/launchbox/tt0383385-back-8ff51dca-beef-4d70-9827-61b8b2bd7f42.webp",
-    "boxSpine": "./art/launchbox/tt0383385-spine-d3af030f-53dc-4197-aed7-14831d65d4fa.webp"
+    "boxSpine": "./art/launchbox/tt0383385-spine-d3af030f-53dc-4197-aed7-14831d65d4fa.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0383385-media-25129bda-7947-4a3c-bec7-d80907b62dc4.webp",
+          "source": "https://images.launchbox-app.com/25129bda-7947-4a3c-bec7-d80907b62dc4.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0224637": {
     "igdbId": 6,
@@ -432,7 +622,11 @@
       }
     },
     "artwork": "./art/launchbox/tt0224637-front-5afe2f73-e642-4e5d-b3fa-c4b17595c795.webp",
-    "artworkSource": "https://images.launchbox-app.com/5afe2f73-e642-4e5d-b3fa-c4b17595c795.jpg"
+    "artworkSource": "https://images.launchbox-app.com/5afe2f73-e642-4e5d-b3fa-c4b17595c795.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt2103188": {
     "igdbId": 1020,
@@ -463,7 +657,28 @@
     "artwork": "./art/launchbox/tt2103188-front-d1a1e164-2441-4738-ae90-304e0bfcadda.webp",
     "artworkSource": "https://images.launchbox-app.com/d1a1e164-2441-4738-ae90-304e0bfcadda.jpg",
     "boxBack": "./art/launchbox/tt2103188-back-893cd6e7-7981-4442-8f7c-95c6855c5c6b.webp",
-    "boxSpine": "./art/launchbox/tt2103188-spine-1468f0e7-9a5f-4a1c-8c4a-431f8fa14c3d.webp"
+    "boxSpine": "./art/launchbox/tt2103188-spine-1468f0e7-9a5f-4a1c-8c4a-431f8fa14c3d.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2103188-media-05b583e4-8114-42e1-980d-5b8d483ca2de.webp",
+          "source": "https://images.launchbox-app.com/05b583e4-8114-42e1-980d-5b8d483ca2de.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Install disc"
+        },
+        {
+          "artwork": "./art/launchbox/tt2103188-media-046e255f-c438-4d49-a6f1-e9cbb61feac8.webp",
+          "source": "https://images.launchbox-app.com/046e255f-c438-4d49-a6f1-e9cbb61feac8.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Play disc"
+        }
+      ]
+    }
   },
   "tt0374692": {
     "igdbId": 233,
@@ -494,7 +709,19 @@
     "artwork": "./art/launchbox/tt0374692-front-2c53e9cb-2bcd-472a-9d96-789d713f1202.webp",
     "artworkSource": "https://images.launchbox-app.com/2c53e9cb-2bcd-472a-9d96-789d713f1202.jpg",
     "boxBack": "./art/launchbox/tt0374692-back-0a2d8e8e-d354-4287-87c0-281c3aa9d696.webp",
-    "boxSpine": "./art/launchbox/tt0374692-spine-c58e1ece-1aaf-4db8-8626-430460671a42.webp"
+    "boxSpine": "./art/launchbox/tt0374692-spine-c58e1ece-1aaf-4db8-8626-430460671a42.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0374692-media-f92e8475-9472-4823-b619-b8beddec58b4.webp",
+          "source": "https://images.launchbox-app.com/f92e8475-9472-4823-b619-b8beddec58b4.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1648163": {
     "igdbId": 72,
@@ -525,7 +752,19 @@
     "artwork": "./art/launchbox/tt1648163-front-7969e3ba-d874-475c-9864-b3de9452c3ce.webp",
     "artworkSource": "https://images.launchbox-app.com/7969e3ba-d874-475c-9864-b3de9452c3ce.jpg",
     "boxBack": "./art/launchbox/tt1648163-back-0556e635-aa9b-4243-99c9-5108c8125f2e.webp",
-    "boxSpine": "./art/launchbox/tt1648163-spine-8435cadb-c23b-4303-b8c6-a15796aa6d1d.webp"
+    "boxSpine": "./art/launchbox/tt1648163-spine-8435cadb-c23b-4303-b8c6-a15796aa6d1d.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1648163-media-ab7faaf1-4a96-4eb2-86ae-02942ea68ac0.webp",
+          "source": "https://images.launchbox-app.com/ab7faaf1-4a96-4eb2-86ae-02942ea68ac0.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0282975": {
     "igdbId": 481,
@@ -556,7 +795,19 @@
     "artwork": "./art/launchbox/tt0282975-front-c4007fff-9166-4389-83b6-e338c2278a29.webp",
     "artworkSource": "https://images.launchbox-app.com/c4007fff-9166-4389-83b6-e338c2278a29.jpg",
     "boxBack": "./art/launchbox/tt0282975-back-4cf19c6d-16ac-46e7-a0ff-6516bf980c40.webp",
-    "boxSpine": "./art/launchbox/tt0282975-spine-0a09dd0a-a5a6-4b40-b3a1-8845f34cd644.webp"
+    "boxSpine": "./art/launchbox/tt0282975-spine-0a09dd0a-a5a6-4b40-b3a1-8845f34cd644.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0282975-media-6b03fe0e-e562-4484-93d2-6bad8f2a1330.webp",
+          "source": "https://images.launchbox-app.com/6b03fe0e-e562-4484-93d2-6bad8f2a1330.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1479962": {
     "igdbId": 434,
@@ -587,7 +838,19 @@
     "artwork": "./art/launchbox/tt1479962-front-1174b9ad-68a1-4098-82de-41c60969fde3.webp",
     "artworkSource": "https://images.launchbox-app.com/1174b9ad-68a1-4098-82de-41c60969fde3.jpg",
     "boxBack": "./art/launchbox/tt1479962-back-9736f5f7-1cdf-46b0-a13a-18d4666c0e92.webp",
-    "boxSpine": "./art/launchbox/tt1479962-spine-58fee692-0570-4cf0-bb64-000264c3f5ef.webp"
+    "boxSpine": "./art/launchbox/tt1479962-spine-58fee692-0570-4cf0-bb64-000264c3f5ef.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1479962-media-40c706e6-119a-495a-8dff-c7143a34f69c.webp",
+          "source": "https://images.launchbox-app.com/40c706e6-119a-495a-8dff-c7143a34f69c.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt10471854": {
     "igdbId": 119388,
@@ -615,7 +878,19 @@
     "artwork": "./art/launchbox/tt10471854-front-20c45766-0bc0-410d-ab7c-58b6a4855f75.webp",
     "artworkSource": "https://images.launchbox-app.com/20c45766-0bc0-410d-ab7c-58b6a4855f75.png",
     "boxBack": "./art/launchbox/tt10471854-back-a9ce73d6-37c1-45a8-b641-4f1f68d1d224.webp",
-    "boxSpine": "./art/launchbox/tt10471854-spine-469ec44d-aeb6-4f33-a1d4-505ea2a6b79e.webp"
+    "boxSpine": "./art/launchbox/tt10471854-spine-469ec44d-aeb6-4f33-a1d4-505ea2a6b79e.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt10471854-media-3b510cb8-0fb3-4b6a-8744-5a44736066be.webp",
+          "source": "https://images.launchbox-app.com/3b510cb8-0fb3-4b6a-8744-5a44736066be.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt3334704": {
     "igdbId": 7331,
@@ -634,7 +909,11 @@
       }
     },
     "artwork": "./art/launchbox/tt3334704-front-07f1ca51-57e2-4e7e-859b-fd03ebd4f7fe.webp",
-    "artworkSource": "https://images.launchbox-app.com/07f1ca51-57e2-4e7e-859b-fd03ebd4f7fe.jpg"
+    "artworkSource": "https://images.launchbox-app.com/07f1ca51-57e2-4e7e-859b-fd03ebd4f7fe.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt25808274": {
     "igdbId": 215769,
@@ -652,7 +931,11 @@
     },
     "artwork": "./art/launchbox/tt25808274-front-3c23163a-b9ae-4e2b-b8ba-7878f7ff5c19.webp",
     "artworkSource": "https://images.launchbox-app.com/3c23163a-b9ae-4e2b-b8ba-7878f7ff5c19.jpg",
-    "artworkNote": "LaunchBox has a promotional banner for this digital expansion. The artwork is shown at its original proportions."
+    "artworkNote": "LaunchBox has a promotional banner for this digital expansion. The artwork is shown at its original proportions.",
+    "gameMedia": {
+      "kind": "digital",
+      "media": []
+    }
   },
   "tt24179294": {
     "igdbId": 228530,
@@ -671,7 +954,11 @@
       }
     },
     "artwork": "./art/launchbox/tt24179294-front-r2_458fa392-6068-4afd-b5e4-241f50bd1463.webp",
-    "artworkSource": "https://images.launchbox-app.com/r2_458fa392-6068-4afd-b5e4-241f50bd1463.jpg"
+    "artworkSource": "https://images.launchbox-app.com/r2_458fa392-6068-4afd-b5e4-241f50bd1463.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt21047286": {
     "igdbId": 132181,
@@ -691,7 +978,11 @@
     },
     "artwork": "./art/launchbox/tt21047286-front-1a174b0e-c44d-41d5-9fa6-e3a3046f8a59.webp",
     "artworkSource": "https://images.launchbox-app.com/1a174b0e-c44d-41d5-9fa6-e3a3046f8a59.jpg",
-    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows.",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt1814884": {
     "igdbId": 472,
@@ -722,7 +1013,19 @@
     "artwork": "./art/launchbox/tt1814884-front-r2_0003e4b0-2772-4ed5-8753-480c0627f2cf.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_0003e4b0-2772-4ed5-8753-480c0627f2cf.jpg",
     "boxBack": "./art/launchbox/tt1814884-back-f582e910-c177-4ce8-bfc0-f596c7b211aa.webp",
-    "boxSpine": "./art/launchbox/tt1814884-spine-r2_782e5d64-e2e3-4186-805e-e558c686dc6a.webp"
+    "boxSpine": "./art/launchbox/tt1814884-spine-r2_782e5d64-e2e3-4186-805e-e558c686dc6a.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1814884-media-r2_029b533e-b404-4a9a-a3d2-7412160c215d.webp",
+          "source": "https://images.launchbox-app.com/r2_029b533e-b404-4a9a-a3d2-7412160c215d.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1349460": {
     "igdbId": 565,
@@ -753,7 +1056,19 @@
     "artwork": "./art/launchbox/tt1349460-front-cbfc0edb-730a-48ed-8fd7-e6b3e2e9107b.webp",
     "artworkSource": "https://images.launchbox-app.com/cbfc0edb-730a-48ed-8fd7-e6b3e2e9107b.jpg",
     "boxBack": "./art/launchbox/tt1349460-back-72bcd46a-8f91-40f7-9955-9fb1f0704383.webp",
-    "boxSpine": "./art/launchbox/tt1349460-spine-r2_202ef6dd-c3d3-42bd-a1e8-9a1d9e57746e.webp"
+    "boxSpine": "./art/launchbox/tt1349460-spine-r2_202ef6dd-c3d3-42bd-a1e8-9a1d9e57746e.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1349460-media-r2_890a3c50-f776-4c21-8fdc-26745c182755.webp",
+          "source": "https://images.launchbox-app.com/r2_890a3c50-f776-4c21-8fdc-26745c182755.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0397042": {
     "igdbId": 145191,
@@ -784,7 +1099,19 @@
     "artwork": "./art/launchbox/tt0397042-front-r2_acc0564e-f465-405b-bf84-0ee721b1714d.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_acc0564e-f465-405b-bf84-0ee721b1714d.png",
     "boxBack": "./art/launchbox/tt0397042-back-r2_197d26d3-b849-47c7-8028-e049c795ea75.webp",
-    "boxSpine": "./art/launchbox/tt0397042-spine-r2_4de0b9a9-88ce-463e-8e9c-61a8617a1149.webp"
+    "boxSpine": "./art/launchbox/tt0397042-spine-r2_4de0b9a9-88ce-463e-8e9c-61a8617a1149.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0397042-media-0442ea4b-5d2c-4ee9-8165-d1ced4b250a0.webp",
+          "source": "https://images.launchbox-app.com/0442ea4b-5d2c-4ee9-8165-d1ced4b250a0.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0314123": {
     "igdbId": 733,
@@ -815,7 +1142,19 @@
     "artwork": "./art/launchbox/tt0314123-front-9ab89a02-8481-495f-b16b-f669573a34a0.webp",
     "artworkSource": "https://images.launchbox-app.com/9ab89a02-8481-495f-b16b-f669573a34a0.jpg",
     "boxBack": "./art/launchbox/tt0314123-back-0db024bb-0e08-493b-baa6-f00111068523.webp",
-    "boxSpine": "./art/launchbox/tt0314123-spine-2a20624c-c3a7-485d-ba27-0574f194b03d.webp"
+    "boxSpine": "./art/launchbox/tt0314123-spine-2a20624c-c3a7-485d-ba27-0574f194b03d.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0314123-media-7cafc5b1-77b8-4431-b2e4-73c67b7187e2.webp",
+          "source": "https://images.launchbox-app.com/7cafc5b1-77b8-4431-b2e4-73c67b7187e2.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt7651352": {
     "igdbId": 75235,
@@ -846,7 +1185,20 @@
     "artwork": "./art/launchbox/tt7651352-front-e45c7c13-3b92-43e7-83e1-329041919414.webp",
     "artworkSource": "https://images.launchbox-app.com/e45c7c13-3b92-43e7-83e1-329041919414.jpg",
     "boxBack": "./art/launchbox/tt7651352-back-6e5a367e-0b80-4954-9d5b-b228d2492037.webp",
-    "boxSpine": "./art/launchbox/tt7651352-spine-r2_97ce6119-4596-4878-9eea-937a78c82468.webp"
+    "boxSpine": "./art/launchbox/tt7651352-spine-r2_97ce6119-4596-4878-9eea-937a78c82468.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt7651352-media-r2_06002a48-8304-47b5-9356-196943fcfe92.webp",
+          "source": "https://images.launchbox-app.com/r2_06002a48-8304-47b5-9356-196943fcfe92.png",
+          "type": "Disc",
+          "region": "Europe",
+          "layout": "disc",
+          "regionalAlternative": true
+        }
+      ]
+    }
   },
   "tt0291337": {
     "igdbId": 18,
@@ -877,7 +1229,19 @@
     "artwork": "./art/launchbox/tt0291337-front-75525c80-30e5-466d-a58e-01a795947b88.webp",
     "artworkSource": "https://images.launchbox-app.com/75525c80-30e5-466d-a58e-01a795947b88.jpg",
     "boxBack": "./art/launchbox/tt0291337-back-6acd8c72-a6db-4774-9ee3-0d2c4dead325.webp",
-    "boxSpine": "./art/launchbox/tt0291337-spine-77b5c7d8-cd0c-4f57-b461-222dbfe936da.webp"
+    "boxSpine": "./art/launchbox/tt0291337-spine-77b5c7d8-cd0c-4f57-b461-222dbfe936da.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0291337-media-ad310b8d-877c-4b71-9e62-56f30efdedf9.webp",
+          "source": "https://images.launchbox-app.com/ad310b8d-877c-4b71-9e62-56f30efdedf9.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1380179": {
     "igdbId": 9600,
@@ -908,7 +1272,19 @@
     "artwork": "./art/launchbox/tt1380179-front-88dd3c72-663f-4262-a85d-0ba96f2a99ab.webp",
     "artworkSource": "https://images.launchbox-app.com/88dd3c72-663f-4262-a85d-0ba96f2a99ab.jpg",
     "boxBack": "./art/launchbox/tt1380179-back-de5371a0-42b2-4a7c-8f4c-b34e56f6e705.webp",
-    "boxSpine": "./art/launchbox/tt1380179-spine-6df17171-ff85-4bf6-909c-bbfd0996196c.webp"
+    "boxSpine": "./art/launchbox/tt1380179-spine-6df17171-ff85-4bf6-909c-bbfd0996196c.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1380179-media-8fd2bb0c-3017-4105-aab1-8230dee496e2.webp",
+          "source": "https://images.launchbox-app.com/8fd2bb0c-3017-4105-aab1-8230dee496e2.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt3944082": {
     "igdbId": 9927,
@@ -927,7 +1303,19 @@
       }
     },
     "artwork": "./art/launchbox/tt3944082-front-3648080d-af08-4130-a126-3f43e4d8b607.webp",
-    "artworkSource": "https://images.launchbox-app.com/3648080d-af08-4130-a126-3f43e4d8b607.jpg"
+    "artworkSource": "https://images.launchbox-app.com/3648080d-af08-4130-a126-3f43e4d8b607.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt3944082-media-0c1b44d8-a1d5-4310-9542-47bd337fd165.webp",
+          "source": "https://images.launchbox-app.com/0c1b44d8-a1d5-4310-9542-47bd337fd165.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0486673": {
     "igdbId": 2207,
@@ -958,7 +1346,19 @@
     "artwork": "./art/launchbox/tt0486673-front-5cc09022-addf-4e85-8233-007ea1b29b1d.webp",
     "artworkSource": "https://images.launchbox-app.com/5cc09022-addf-4e85-8233-007ea1b29b1d.jpg",
     "boxBack": "./art/launchbox/tt0486673-back-ee695f26-87cf-4660-9e28-ff6ad18cd4f7.webp",
-    "boxSpine": "./art/launchbox/tt0486673-spine-cae40912-e5f6-4f5d-963b-82bd0535678f.webp"
+    "boxSpine": "./art/launchbox/tt0486673-spine-cae40912-e5f6-4f5d-963b-82bd0535678f.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0486673-media-9abc15ba-40b2-4eac-a32c-be4835ab5432.webp",
+          "source": "https://images.launchbox-app.com/9abc15ba-40b2-4eac-a32c-be4835ab5432.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0249174": {
     "igdbId": 1068,
@@ -986,7 +1386,19 @@
     "artwork": "./art/launchbox/tt0249174-front-500ae7d7-0c4a-41bf-a91c-747623e894a5.webp",
     "artworkSource": "https://images.launchbox-app.com/500ae7d7-0c4a-41bf-a91c-747623e894a5.jpg",
     "boxBack": "./art/launchbox/tt0249174-back-25d45104-f557-4a8c-a963-590ff7cac0dc.webp",
-    "boxSpine": "./art/launchbox/tt0249174-spine-f4523f0b-372d-4983-95f1-1cf27c0971e6.webp"
+    "boxSpine": "./art/launchbox/tt0249174-spine-f4523f0b-372d-4983-95f1-1cf27c0971e6.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0249174-media-6270c6cf-fde4-424d-9cfc-92aefd30c8c5.webp",
+          "source": "https://images.launchbox-app.com/6270c6cf-fde4-424d-9cfc-92aefd30c8c5.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt0221606": {
     "igdbId": 1070,
@@ -1014,7 +1426,19 @@
     "artwork": "./art/launchbox/tt0221606-front-00fb4aca-c22f-4ca9-84d0-90cf8c22d4af.webp",
     "artworkSource": "https://images.launchbox-app.com/00fb4aca-c22f-4ca9-84d0-90cf8c22d4af.png",
     "boxBack": "./art/launchbox/tt0221606-back-1c158bd5-22be-49d8-a0ca-895e1a206f5a.webp",
-    "boxSpine": "./art/launchbox/tt0221606-spine-dbf473bc-a534-4aa1-84c1-8de3a218c060.webp"
+    "boxSpine": "./art/launchbox/tt0221606-spine-dbf473bc-a534-4aa1-84c1-8de3a218c060.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0221606-media-a4906ecc-e7dd-4bda-ab8e-b57a461794d0.webp",
+          "source": "https://images.launchbox-app.com/a4906ecc-e7dd-4bda-ab8e-b57a461794d0.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt0263641": {
     "igdbId": 1026,
@@ -1042,7 +1466,19 @@
     "artwork": "./art/launchbox/tt0263641-front-r2_689c3eda-bd3b-452d-997c-c25b5335656e.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_689c3eda-bd3b-452d-997c-c25b5335656e.jpg",
     "boxBack": "./art/launchbox/tt0263641-back-r2_6911f959-beb7-4131-9c4b-3b12cb4e3816.webp",
-    "boxSpine": "./art/launchbox/tt0263641-spine-r2_5c9fd347-7b4b-4370-aebe-cc42dafc38d1.webp"
+    "boxSpine": "./art/launchbox/tt0263641-spine-r2_5c9fd347-7b4b-4370-aebe-cc42dafc38d1.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0263641-media-7de8570b-5750-4917-bc37-5df77e28cb97.webp",
+          "source": "https://images.launchbox-app.com/7de8570b-5750-4917-bc37-5df77e28cb97.png",
+          "type": "Cart - 3D",
+          "region": "North America",
+          "layout": "label"
+        }
+      ]
+    }
   },
   "tt1282022": {
     "igdbId": 500,
@@ -1067,7 +1503,19 @@
     },
     "artwork": "./art/launchbox/tt1282022-front-e3ed282b-754c-4ff6-bf77-cf8ecad6f2c2.webp",
     "artworkSource": "https://images.launchbox-app.com/e3ed282b-754c-4ff6-bf77-cf8ecad6f2c2.png",
-    "boxSpine": "./art/launchbox/tt1282022-spine-ff4f65ae-8bfa-4557-ad5b-4485047539e9.webp"
+    "boxSpine": "./art/launchbox/tt1282022-spine-ff4f65ae-8bfa-4557-ad5b-4485047539e9.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1282022-media-967327dd-0700-46bf-986a-210a6495cf2f.webp",
+          "source": "https://images.launchbox-app.com/967327dd-0700-46bf-986a-210a6495cf2f.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1094581": {
     "igdbId": 20,
@@ -1098,7 +1546,19 @@
     "artwork": "./art/launchbox/tt1094581-front-7f924b6d-bcf5-4365-8855-77aa668692dd.webp",
     "artworkSource": "https://images.launchbox-app.com/7f924b6d-bcf5-4365-8855-77aa668692dd.jpg",
     "boxBack": "./art/launchbox/tt1094581-back-e738a362-0bd1-49fd-a75a-c076a6c08811.webp",
-    "boxSpine": "./art/launchbox/tt1094581-spine-3c221692-ba70-4069-b26b-70ceb8ba5a88.webp"
+    "boxSpine": "./art/launchbox/tt1094581-spine-3c221692-ba70-4069-b26b-70ceb8ba5a88.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1094581-media-r2_24aeb33b-e6e8-46fa-8524-15ea58ccc127.webp",
+          "source": "https://images.launchbox-app.com/r2_24aeb33b-e6e8-46fa-8524-15ea58ccc127.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1712064": {
     "igdbId": 538,
@@ -1117,7 +1577,19 @@
       }
     },
     "artwork": "./art/launchbox/tt1712064-front-r2_749171d1-6e3e-421b-98e1-1025b50c6c49.webp",
-    "artworkSource": "https://images.launchbox-app.com/r2_749171d1-6e3e-421b-98e1-1025b50c6c49.jpg"
+    "artworkSource": "https://images.launchbox-app.com/r2_749171d1-6e3e-421b-98e1-1025b50c6c49.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1712064-media-r2_9962629e-24ed-473f-b2d7-dc1d987f08d8.webp",
+          "source": "https://images.launchbox-app.com/r2_9962629e-24ed-473f-b2d7-dc1d987f08d8.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt4795016": {
     "igdbId": 11133,
@@ -1136,7 +1608,11 @@
       }
     },
     "artwork": "./art/launchbox/tt4795016-front-2c9098c7-5c39-48cd-9799-cc502525839a.webp",
-    "artworkSource": "https://images.launchbox-app.com/2c9098c7-5c39-48cd-9799-cc502525839a.jpg"
+    "artworkSource": "https://images.launchbox-app.com/2c9098c7-5c39-48cd-9799-cc502525839a.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt1541718": {
     "igdbId": 76,
@@ -1161,7 +1637,19 @@
     },
     "artwork": "./art/launchbox/tt1541718-front-da600af5-3da4-4d8a-9e22-39a12b30fff7.webp",
     "artworkSource": "https://images.launchbox-app.com/da600af5-3da4-4d8a-9e22-39a12b30fff7.jpg",
-    "boxBack": "./art/launchbox/tt1541718-back-ca3e7bc8-6376-446b-a887-f11952ffad79.webp"
+    "boxBack": "./art/launchbox/tt1541718-back-ca3e7bc8-6376-446b-a887-f11952ffad79.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1541718-media-r2_8490b66a-db22-43ed-9502-cc6786cb10d6.webp",
+          "source": "https://images.launchbox-app.com/r2_8490b66a-db22-43ed-9502-cc6786cb10d6.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0210061": {
     "igdbId": 426,
@@ -1190,7 +1678,19 @@
     "artworkSource": "https://images.launchbox-app.com/6504fd85-ab13-47f1-b600-1954a91c7696.jpg",
     "boxBack": "./art/launchbox/tt0210061-back-29d53bd3-bba9-47c0-9a68-e1394e72bf80.webp",
     "boxSpine": "./art/launchbox/tt0210061-spine-a4f5ef5e-9070-42f7-baf3-93b73a9783a1.webp",
-    "artworkNote": "The North American Super Nintendo box carries the original regional title, Final Fantasy III."
+    "artworkNote": "The North American Super Nintendo box carries the original regional title, Final Fantasy III.",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0210061-media-2b24ffff-a3a1-4d33-9c3b-3c1081636a3e.webp",
+          "source": "https://images.launchbox-app.com/2b24ffff-a3a1-4d33-9c3b-3c1081636a3e.png",
+          "type": "Cart - 3D",
+          "region": "North America",
+          "layout": "label"
+        }
+      ]
+    }
   },
   "tt0284110": {
     "igdbId": 418,
@@ -1221,7 +1721,19 @@
     "artwork": "./art/launchbox/tt0284110-front-0ac3558d-5e4a-4515-8384-a9939928610c.webp",
     "artworkSource": "https://images.launchbox-app.com/0ac3558d-5e4a-4515-8384-a9939928610c.jpg",
     "boxBack": "./art/launchbox/tt0284110-back-ae49832a-5ed5-4f67-8684-ab390dc1eac1.webp",
-    "boxSpine": "./art/launchbox/tt0284110-spine-1dcc80f1-c850-4e23-af1e-0986ad560a2d.webp"
+    "boxSpine": "./art/launchbox/tt0284110-spine-1dcc80f1-c850-4e23-af1e-0986ad560a2d.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0284110-media-e384d90c-c493-41c0-8624-b5df444b2c04.webp",
+          "source": "https://images.launchbox-app.com/e384d90c-c493-41c0-8624-b5df444b2c04.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0846694": {
     "igdbId": 551,
@@ -1252,7 +1764,28 @@
     "artwork": "./art/launchbox/tt0846694-front-2b06034c-9d15-4bdd-8e20-b564027cd957.webp",
     "artworkSource": "https://images.launchbox-app.com/2b06034c-9d15-4bdd-8e20-b564027cd957.jpg",
     "boxBack": "./art/launchbox/tt0846694-back-90b1c5e3-71d9-4043-b6af-6d9787407a31.webp",
-    "boxSpine": "./art/launchbox/tt0846694-spine-ed2a70f1-872f-4c25-8ed9-057e1850bf02.webp"
+    "boxSpine": "./art/launchbox/tt0846694-spine-ed2a70f1-872f-4c25-8ed9-057e1850bf02.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0846694-media-4c64ba67-6bbc-4264-89cc-0ab9b489c02d.webp",
+          "source": "https://images.launchbox-app.com/4c64ba67-6bbc-4264-89cc-0ab9b489c02d.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 1"
+        },
+        {
+          "artwork": "./art/launchbox/tt0846694-media-89895543-86b5-400c-96af-088aaf7947d5.webp",
+          "source": "https://images.launchbox-app.com/89895543-86b5-400c-96af-088aaf7947d5.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 2 · Special features"
+        }
+      ]
+    }
   },
   "tt1199781": {
     "igdbId": 499,
@@ -1283,7 +1816,19 @@
     "artwork": "./art/launchbox/tt1199781-front-43250330-b1dc-40c7-ac61-7bac745c5ace.webp",
     "artworkSource": "https://images.launchbox-app.com/43250330-b1dc-40c7-ac61-7bac745c5ace.jpg",
     "boxBack": "./art/launchbox/tt1199781-back-ed7ab402-c85e-421e-876c-ed507caadcc1.webp",
-    "boxSpine": "./art/launchbox/tt1199781-spine-0c72cebf-26d7-4003-852a-eb4dc894c269.webp"
+    "boxSpine": "./art/launchbox/tt1199781-spine-0c72cebf-26d7-4003-852a-eb4dc894c269.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1199781-media-de746212-f5d0-47e6-943d-27d6f499e8b9.webp",
+          "source": "https://images.launchbox-app.com/de746212-f5d0-47e6-943d-27d6f499e8b9.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt10323784": {
     "igdbId": 115289,
@@ -1304,7 +1849,11 @@
     },
     "artwork": "./art/launchbox/tt10323784-front-b35d1530-af7a-41d3-a07b-b4a812b0ade9.webp",
     "artworkSource": "https://images.launchbox-app.com/b35d1530-af7a-41d3-a07b-b4a812b0ade9.jpg",
-    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows.",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt14321832": {
     "igdbId": 135243,
@@ -1323,7 +1872,11 @@
       }
     },
     "artwork": "./art/launchbox/tt14321832-front-3b0cd49b-42b9-48df-8f40-70beb3c3e2ec.webp",
-    "artworkSource": "https://images.launchbox-app.com/3b0cd49b-42b9-48df-8f40-70beb3c3e2ec.jpg"
+    "artworkSource": "https://images.launchbox-app.com/3b0cd49b-42b9-48df-8f40-70beb3c3e2ec.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt0338221": {
     "igdbId": 39,
@@ -1354,7 +1907,19 @@
     "artwork": "./art/launchbox/tt0338221-front-409d9b4b-8c15-4b39-94a1-08acfa7fa436.webp",
     "artworkSource": "https://images.launchbox-app.com/409d9b4b-8c15-4b39-94a1-08acfa7fa436.jpg",
     "boxBack": "./art/launchbox/tt0338221-back-7d544159-7293-473b-aae5-e7a24fe2e558.webp",
-    "boxSpine": "./art/launchbox/tt0338221-spine-3e514071-bdeb-4351-b970-ce298817b79c.webp"
+    "boxSpine": "./art/launchbox/tt0338221-spine-3e514071-bdeb-4351-b970-ce298817b79c.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0338221-media-530433c3-6107-4310-ad0e-4b99c4d18a81.webp",
+          "source": "https://images.launchbox-app.com/530433c3-6107-4310-ad0e-4b99c4d18a81.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1073668": {
     "igdbId": 73,
@@ -1385,7 +1950,19 @@
     "artwork": "./art/launchbox/tt1073668-front-18798261-4c46-436f-b0f9-d9bcac487ffe.webp",
     "artworkSource": "https://images.launchbox-app.com/18798261-4c46-436f-b0f9-d9bcac487ffe.jpg",
     "boxBack": "./art/launchbox/tt1073668-back-3e32f4c2-0add-4728-9a90-752c6f032a79.webp",
-    "boxSpine": "./art/launchbox/tt1073668-spine-2db546a0-1db2-45ab-a35d-4ea153f2c079.webp"
+    "boxSpine": "./art/launchbox/tt1073668-spine-2db546a0-1db2-45ab-a35d-4ea153f2c079.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1073668-media-787524d9-4f1e-472c-9eb8-64a0ccdd36d2.webp",
+          "source": "https://images.launchbox-app.com/787524d9-4f1e-472c-9eb8-64a0ccdd36d2.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1839558": {
     "igdbId": 75,
@@ -1416,7 +1993,28 @@
     "artwork": "./art/launchbox/tt1839558-front-d95b395d-e661-4934-8848-23285248d672.webp",
     "artworkSource": "https://images.launchbox-app.com/d95b395d-e661-4934-8848-23285248d672.jpg",
     "boxBack": "./art/launchbox/tt1839558-back-c67a4a86-b4a2-4f8d-b26a-c0fbb54ada65.webp",
-    "boxSpine": "./art/launchbox/tt1839558-spine-82a75f69-35b0-4648-ae18-b684fc9ec4e6.webp"
+    "boxSpine": "./art/launchbox/tt1839558-spine-82a75f69-35b0-4648-ae18-b684fc9ec4e6.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1839558-media-f0389044-2efe-4412-ba13-dfa7db13679f.webp",
+          "source": "https://images.launchbox-app.com/f0389044-2efe-4412-ba13-dfa7db13679f.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 1"
+        },
+        {
+          "artwork": "./art/launchbox/tt1839558-media-r2_9719e89a-6416-4667-9b90-527d20f9610c.webp",
+          "source": "https://images.launchbox-app.com/r2_9719e89a-6416-4667-9b90-527d20f9610c.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 2"
+        }
+      ]
+    }
   },
   "tt0217061": {
     "igdbId": 230,
@@ -1445,7 +2043,19 @@
     "artwork": "./art/launchbox/tt0217061-front-41cfbc36-a9a4-4416-a6cb-a88c2300abd2.webp",
     "artworkSource": "https://images.launchbox-app.com/41cfbc36-a9a4-4416-a6cb-a88c2300abd2.jpg",
     "boxBack": "./art/launchbox/tt0217061-back-f03fb12d-389d-4b8c-a761-0992ff9cba2e.webp",
-    "boxSpine": "./art/launchbox/tt0217061-spine-20516a5b-1046-478e-b109-c3e4ce9e7aba.webp"
+    "boxSpine": "./art/launchbox/tt0217061-spine-20516a5b-1046-478e-b109-c3e4ce9e7aba.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0217061-media-b63fdb4e-b450-45ee-9a29-9484ed678dcd.webp",
+          "source": "https://images.launchbox-app.com/b63fdb4e-b450-45ee-9a29-9484ed678dcd.png",
+          "type": "Disc",
+          "region": "",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt22892938": {
     "igdbId": 222341,
@@ -1476,7 +2086,19 @@
     "artwork": "./art/launchbox/tt22892938-front-r2_f6f6f015-20ac-49f2-8b3c-6c421cc5b7b2.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_f6f6f015-20ac-49f2-8b3c-6c421cc5b7b2.jpg",
     "boxBack": "./art/launchbox/tt22892938-back-r2_335afa24-7f3a-4c0b-b18e-8707cf9d1a0c.webp",
-    "boxSpine": "./art/launchbox/tt22892938-spine-r2_954cc465-b1ea-49ff-a2a9-15ba963016bd.webp"
+    "boxSpine": "./art/launchbox/tt22892938-spine-r2_954cc465-b1ea-49ff-a2a9-15ba963016bd.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt22892938-media-r2_864b0a2e-6cc2-412e-b88c-3f510557d5dc.webp",
+          "source": "https://images.launchbox-app.com/r2_864b0a2e-6cc2-412e-b88c-3f510557d5dc.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt5807780": {
     "igdbId": 19565,
@@ -1507,7 +2129,19 @@
     "artwork": "./art/launchbox/tt5807780-front-ded2ed1f-5ef1-4752-bfce-79ccef7d7b8f.webp",
     "artworkSource": "https://images.launchbox-app.com/ded2ed1f-5ef1-4752-bfce-79ccef7d7b8f.jpg",
     "boxBack": "./art/launchbox/tt5807780-back-c2214765-f0de-4eb4-883f-43ad3abdde68.webp",
-    "boxSpine": "./art/launchbox/tt5807780-spine-88bafc75-b0c7-4859-bb8e-e435e19bf1b4.webp"
+    "boxSpine": "./art/launchbox/tt5807780-spine-88bafc75-b0c7-4859-bb8e-e435e19bf1b4.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt5807780-media-c0a22763-d09c-4370-aa06-d0a8ae6069c3.webp",
+          "source": "https://images.launchbox-app.com/c0a22763-d09c-4370-aa06-d0a8ae6069c3.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0282366": {
     "igdbId": 82,
@@ -1530,7 +2164,11 @@
     },
     "artwork": "./art/launchbox/tt0282366-front-f79693a6-bdcb-4d92-97cf-16531136bb5a.webp",
     "artworkSource": "https://images.launchbox-app.com/f79693a6-bdcb-4d92-97cf-16531136bb5a.jpg",
-    "boxBack": "./art/launchbox/tt0282366-back-ab4b5cbf-63d2-467e-a70e-906e6dbf5dc4.webp"
+    "boxBack": "./art/launchbox/tt0282366-back-ab4b5cbf-63d2-467e-a70e-906e6dbf5dc4.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt3554580": {
     "igdbId": 5503,
@@ -1549,7 +2187,11 @@
       }
     },
     "artwork": "./art/launchbox/tt3554580-front-89614fa7-cb08-4c16-b3c1-721127a069cd.webp",
-    "artworkSource": "https://images.launchbox-app.com/89614fa7-cb08-4c16-b3c1-721127a069cd.jpg"
+    "artworkSource": "https://images.launchbox-app.com/89614fa7-cb08-4c16-b3c1-721127a069cd.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt1125798": {
     "igdbId": 623,
@@ -1580,7 +2222,19 @@
     "artwork": "./art/launchbox/tt1125798-front-3783374f-86b4-4ff5-b463-24e66ff0f984.webp",
     "artworkSource": "https://images.launchbox-app.com/3783374f-86b4-4ff5-b463-24e66ff0f984.jpg",
     "boxBack": "./art/launchbox/tt1125798-back-1fa8c8dd-decd-4dea-b102-2c5f95b22b44.webp",
-    "boxSpine": "./art/launchbox/tt1125798-spine-3c88eca7-9b0c-4e74-9e26-6813e25b9bf2.webp"
+    "boxSpine": "./art/launchbox/tt1125798-spine-3c88eca7-9b0c-4e74-9e26-6813e25b9bf2.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1125798-media-69d46f22-cd84-4e85-b5d9-dc5c4442ec12.webp",
+          "source": "https://images.launchbox-app.com/69d46f22-cd84-4e85-b5d9-dc5c4442ec12.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0258523": {
     "igdbId": 126,
@@ -1609,7 +2263,20 @@
     "artwork": "./art/launchbox/tt0258523-front-d1fe0aa2-755f-4b13-ba78-a906b8ca39bb.webp",
     "artworkSource": "https://images.launchbox-app.com/d1fe0aa2-755f-4b13-ba78-a906b8ca39bb.jpg",
     "boxBack": "./art/launchbox/tt0258523-back-ef781ba4-287e-4345-97fb-2402ddd0809f.webp",
-    "boxSpine": "./art/launchbox/tt0258523-spine-b1c3b4e7-eea9-418b-a06d-b76cd9cdcdbd.webp"
+    "boxSpine": "./art/launchbox/tt0258523-spine-b1c3b4e7-eea9-418b-a06d-b76cd9cdcdbd.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0258523-media-25077f71-7cd4-4918-a2a1-1a91a06ad429.webp",
+          "source": "https://images.launchbox-app.com/25077f71-7cd4-4918-a2a1-1a91a06ad429.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Play disc"
+        }
+      ]
+    }
   },
   "tt11177022": {
     "igdbId": 26472,
@@ -1630,7 +2297,11 @@
     },
     "artwork": "./art/launchbox/tt11177022-front-b62e64af-969b-4a79-9114-9ffa9658f10d.webp",
     "artworkSource": "https://images.launchbox-app.com/b62e64af-969b-4a79-9114-9ffa9658f10d.jpg",
-    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows.",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt1073664": {
     "igdbId": 15,
@@ -1661,7 +2332,19 @@
     "artwork": "./art/launchbox/tt1073664-front-56566597-dd2b-4ba4-a944-f0aadf36f038.webp",
     "artworkSource": "https://images.launchbox-app.com/56566597-dd2b-4ba4-a944-f0aadf36f038.jpg",
     "boxBack": "./art/launchbox/tt1073664-back-b179b1af-0a13-4866-baa2-32853b8518bf.webp",
-    "boxSpine": "./art/launchbox/tt1073664-spine-bb15fe24-50a2-4a4d-b3c0-da7b2dfbbc29.webp"
+    "boxSpine": "./art/launchbox/tt1073664-spine-bb15fe24-50a2-4a4d-b3c0-da7b2dfbbc29.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1073664-media-r2_18ae650d-2291-4472-ae6c-6c1ef180b46b.webp",
+          "source": "https://images.launchbox-app.com/r2_18ae650d-2291-4472-ae6c-6c1ef180b46b.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0416779": {
     "igdbId": 549,
@@ -1692,7 +2375,19 @@
     "artwork": "./art/launchbox/tt0416779-front-e0525716-30ba-4c1d-8522-669e10bf21f4.webp",
     "artworkSource": "https://images.launchbox-app.com/e0525716-30ba-4c1d-8522-669e10bf21f4.jpg",
     "boxBack": "./art/launchbox/tt0416779-back-1babf65c-3e29-492f-9bd1-46e1ad250ee0.webp",
-    "boxSpine": "./art/launchbox/tt0416779-spine-9c24cd30-9a3c-404c-8a91-7ecea926db42.webp"
+    "boxSpine": "./art/launchbox/tt0416779-spine-9c24cd30-9a3c-404c-8a91-7ecea926db42.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0416779-media-efa92f20-27aa-4eda-a07d-1fad2f93e9fe.webp",
+          "source": "https://images.launchbox-app.com/efa92f20-27aa-4eda-a07d-1fad2f93e9fe.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0366758": {
     "igdbId": 19,
@@ -1723,7 +2418,19 @@
     "artwork": "./art/launchbox/tt0366758-front-b084a6f5-c3bf-487e-9e7c-3672c37de6de.webp",
     "artworkSource": "https://images.launchbox-app.com/b084a6f5-c3bf-487e-9e7c-3672c37de6de.jpg",
     "boxBack": "./art/launchbox/tt0366758-back-9592ad86-928a-4b84-b06a-672adf58b299.webp",
-    "boxSpine": "./art/launchbox/tt0366758-spine-115c72c9-264c-454a-8e6d-c8b64bbe06bd.webp"
+    "boxSpine": "./art/launchbox/tt0366758-spine-115c72c9-264c-454a-8e6d-c8b64bbe06bd.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0366758-media-33e85337-97e6-410d-b496-4060b2950790.webp",
+          "source": "https://images.launchbox-app.com/33e85337-97e6-410d-b496-4060b2950790.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt8329350": {
     "igdbId": 37001,
@@ -1742,7 +2449,11 @@
       }
     },
     "artwork": "./art/launchbox/tt8329350-front-5e0c0504-9a36-4e2f-aca0-4125c56da442.webp",
-    "artworkSource": "https://images.launchbox-app.com/5e0c0504-9a36-4e2f-aca0-4125c56da442.jpg"
+    "artworkSource": "https://images.launchbox-app.com/5e0c0504-9a36-4e2f-aca0-4125c56da442.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt1127708": {
     "igdbId": 71,
@@ -1775,7 +2486,19 @@
     "artworkSource": "https://images.launchbox-app.com/99c5524a-bbc4-4054-97d3-b83f468c315d.jpg",
     "boxBack": "./art/launchbox/tt1127708-back-1561ff97-c5d5-465a-8bbf-7390117c2289.webp",
     "boxSpine": "./art/launchbox/tt1127708-spine-r2_327caba4-5c33-4ccf-b6c1-fb7abaf79641.webp",
-    "artworkNote": "The Orange Box is the Xbox 360 physical release that includes Portal."
+    "artworkNote": "The Orange Box is the Xbox 360 physical release that includes Portal.",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1127708-media-r2_93a2cfb7-9a87-4622-8abc-cb2708073fa5.webp",
+          "source": "https://images.launchbox-app.com/r2_93a2cfb7-9a87-4622-8abc-cb2708073fa5.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt8558306": {
     "igdbId": 76882,
@@ -1794,7 +2517,22 @@
       }
     },
     "artwork": "./art/launchbox/tt8558306-front-r2_06ffdb31-c4b0-4bff-a34f-c81149450c4a.webp",
-    "artworkSource": "https://images.launchbox-app.com/r2_06ffdb31-c4b0-4bff-a34f-c81149450c4a.jpg"
+    "artworkSource": "https://images.launchbox-app.com/r2_06ffdb31-c4b0-4bff-a34f-c81149450c4a.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt8558306-media-r2_f974d445-586d-4841-a3ac-7ab37670ab3d.webp",
+          "source": "https://images.launchbox-app.com/r2_f974d445-586d-4841-a3ac-7ab37670ab3d.png",
+          "type": "Disc",
+          "region": "Europe",
+          "layout": "disc",
+          "regionalAlternative": true,
+          "sourceRegion": "United States",
+          "printEvidence": "CUSA-13801, PEGI 18 and USK 18"
+        }
+      ]
+    }
   },
   "tt0296870": {
     "igdbId": 456,
@@ -1811,7 +2549,19 @@
       }
     },
     "artwork": "./art/launchbox/tt0296870-front-efcf2d4f-d337-464c-bd0c-9a35e5e0e61f.webp",
-    "artworkSource": "https://images.launchbox-app.com/efcf2d4f-d337-464c-bd0c-9a35e5e0e61f.jpg"
+    "artworkSource": "https://images.launchbox-app.com/efcf2d4f-d337-464c-bd0c-9a35e5e0e61f.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0296870-media-a20f31e5-e6b1-47fc-8cb2-f513a43ae87b.webp",
+          "source": "https://images.launchbox-app.com/a20f31e5-e6b1-47fc-8cb2-f513a43ae87b.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1800763": {
     "igdbId": 512,
@@ -1842,7 +2592,19 @@
     "artwork": "./art/launchbox/tt1800763-front-e47f8a34-3d98-475a-a9fa-33ea743cf2fb.webp",
     "artworkSource": "https://images.launchbox-app.com/e47f8a34-3d98-475a-a9fa-33ea743cf2fb.jpg",
     "boxBack": "./art/launchbox/tt1800763-back-7fe8dfb9-cd30-4e16-8d1d-bde74ca0e0b0.webp",
-    "boxSpine": "./art/launchbox/tt1800763-spine-r2_8fe5356e-94c8-43dc-8550-6a8344d7e8a4.webp"
+    "boxSpine": "./art/launchbox/tt1800763-spine-r2_8fe5356e-94c8-43dc-8550-6a8344d7e8a4.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1800763-media-r2_d3902062-98ca-49a1-82f9-947255b2e70e.webp",
+          "source": "https://images.launchbox-app.com/r2_d3902062-98ca-49a1-82f9-947255b2e70e.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1706601": {
     "igdbId": 16,
@@ -1861,7 +2623,19 @@
       }
     },
     "artwork": "./art/launchbox/tt1706601-front-r2_9260c8fc-a9f1-4736-8aae-d205c4e9e60e.webp",
-    "artworkSource": "https://images.launchbox-app.com/r2_9260c8fc-a9f1-4736-8aae-d205c4e9e60e.jpg"
+    "artworkSource": "https://images.launchbox-app.com/r2_9260c8fc-a9f1-4736-8aae-d205c4e9e60e.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1706601-media-r2_dd622582-e6d1-4bbe-9078-975d6edd05d2.webp",
+          "source": "https://images.launchbox-app.com/r2_dd622582-e6d1-4bbe-9078-975d6edd05d2.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0802999": {
     "igdbId": 731,
@@ -1886,7 +2660,19 @@
     },
     "artwork": "./art/launchbox/tt0802999-front-3e472d4d-2df7-408d-b0fc-7bd51f1773fe.webp",
     "artworkSource": "https://images.launchbox-app.com/3e472d4d-2df7-408d-b0fc-7bd51f1773fe.jpg",
-    "boxSpine": "./art/launchbox/tt0802999-spine-c6878c30-e3b9-4818-be00-08f8657a6a6f.webp"
+    "boxSpine": "./art/launchbox/tt0802999-spine-c6878c30-e3b9-4818-be00-08f8657a6a6f.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0802999-media-59ddd3e8-8447-4809-9e94-1203ae0eadf6.webp",
+          "source": "https://images.launchbox-app.com/59ddd3e8-8447-4809-9e94-1203ae0eadf6.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt6057416": {
     "igdbId": 11169,
@@ -1905,7 +2691,11 @@
       }
     },
     "artwork": "./art/launchbox/tt6057416-front-7a07f5f9-5244-45f1-b91d-ae29fe4e03ab.webp",
-    "artworkSource": "https://images.launchbox-app.com/7a07f5f9-5244-45f1-b91d-ae29fe4e03ab.jpg"
+    "artworkSource": "https://images.launchbox-app.com/7a07f5f9-5244-45f1-b91d-ae29fe4e03ab.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt7791150": {
     "igdbId": 14593,
@@ -1924,7 +2714,11 @@
       }
     },
     "artwork": "./art/launchbox/tt7791150-front-r2_4cdb14ea-c353-448f-99d1-de3fe1841e8b.webp",
-    "artworkSource": "https://images.launchbox-app.com/r2_4cdb14ea-c353-448f-99d1-de3fe1841e8b.jpg"
+    "artworkSource": "https://images.launchbox-app.com/r2_4cdb14ea-c353-448f-99d1-de3fe1841e8b.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt7896952": {
     "igdbId": 26845,
@@ -1952,7 +2746,19 @@
     "artwork": "./art/launchbox/tt7896952-front-17e79619-8fa9-469b-a1b6-cf161f33066e.webp",
     "artworkSource": "https://images.launchbox-app.com/17e79619-8fa9-469b-a1b6-cf161f33066e.jpg",
     "boxBack": "./art/launchbox/tt7896952-back-r2_d1ab5cbe-1a77-42e7-9a6d-680becbc464c.webp",
-    "boxSpine": "./art/launchbox/tt7896952-spine-r2_427768bf-5d23-4946-a8ca-eeed79cd71c3.webp"
+    "boxSpine": "./art/launchbox/tt7896952-spine-r2_427768bf-5d23-4946-a8ca-eeed79cd71c3.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt7896952-media-6a4fe8d6-2dfd-457b-8712-366fa648f0b8.webp",
+          "source": "https://images.launchbox-app.com/6a4fe8d6-2dfd-457b-8712-366fa648f0b8.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt4044024": {
     "igdbId": 11156,
@@ -1971,7 +2777,19 @@
       }
     },
     "artwork": "./art/launchbox/tt4044024-front-01ebaf1c-f0bd-43bb-afe9-81e6127508e1.webp",
-    "artworkSource": "https://images.launchbox-app.com/01ebaf1c-f0bd-43bb-afe9-81e6127508e1.jpg"
+    "artworkSource": "https://images.launchbox-app.com/01ebaf1c-f0bd-43bb-afe9-81e6127508e1.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt4044024-media-e30240ff-4fc7-4553-8ff2-ceefb7353afe.webp",
+          "source": "https://images.launchbox-app.com/e30240ff-4fc7-4553-8ff2-ceefb7353afe.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt3983144": {
     "igdbId": 11397,
@@ -1991,7 +2809,19 @@
     },
     "artwork": "./art/launchbox/tt3983144-front-33510b12-7079-49fc-816a-57a13fae7c86.webp",
     "artworkSource": "https://images.launchbox-app.com/33510b12-7079-49fc-816a-57a13fae7c86.jpg",
-    "artworkNote": "Japanese PlayStation 3 box for Yakuza 0, released as Ryū ga Gotoku Zero: Chikai no Basho."
+    "artworkNote": "Japanese PlayStation 3 box for Yakuza 0, released as Ryū ga Gotoku Zero: Chikai no Basho.",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt3983144-media-3deb53c4-d7bf-4556-a491-f4924a746054.webp",
+          "source": "https://images.launchbox-app.com/3deb53c4-d7bf-4556-a491-f4924a746054.png",
+          "type": "Disc",
+          "region": "Japan",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0413662": {
     "igdbId": 327,
@@ -2022,7 +2852,19 @@
     "artwork": "./art/launchbox/tt0413662-front-dade3eff-95d4-46e0-921f-87dd29e706a2.webp",
     "artworkSource": "https://images.launchbox-app.com/dade3eff-95d4-46e0-921f-87dd29e706a2.jpg",
     "boxBack": "./art/launchbox/tt0413662-back-56a1dd98-7ef1-450d-a3bc-4e8bee7ec174.webp",
-    "boxSpine": "./art/launchbox/tt0413662-spine-b8cd19fc-529d-468a-977e-508ae92cb62c.webp"
+    "boxSpine": "./art/launchbox/tt0413662-spine-b8cd19fc-529d-468a-977e-508ae92cb62c.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0413662-media-f2a578bf-030c-44a6-a3e9-92350bdeaef4.webp",
+          "source": "https://images.launchbox-app.com/f2a578bf-030c-44a6-a3e9-92350bdeaef4.png",
+          "type": "Disc",
+          "region": "Germany",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt15174768": {
     "igdbId": 159119,
@@ -2042,7 +2884,11 @@
     },
     "artwork": "./art/launchbox/tt15174768-front-335c73fe-f036-4e70-a46a-da5806069e66.webp",
     "artworkSource": "https://images.launchbox-app.com/335c73fe-f036-4e70-a46a-da5806069e66.jpg",
-    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows.",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt2321297": {
     "igdbId": 529,
@@ -2073,7 +2919,19 @@
     "artwork": "./art/launchbox/tt2321297-front-3c4a628e-08b1-49e3-8880-d86503840a02.webp",
     "artworkSource": "https://images.launchbox-app.com/3c4a628e-08b1-49e3-8880-d86503840a02.jpg",
     "boxBack": "./art/launchbox/tt2321297-back-b84a4d84-5c12-4b3c-984f-23ae2813484a.webp",
-    "boxSpine": "./art/launchbox/tt2321297-spine-r2_02e8b8dc-3172-4f00-bbab-b048714e43d0.webp"
+    "boxSpine": "./art/launchbox/tt2321297-spine-r2_02e8b8dc-3172-4f00-bbab-b048714e43d0.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2321297-media-dafcb306-f8c6-4ff9-a941-81dba26059c6.webp",
+          "source": "https://images.launchbox-app.com/dafcb306-f8c6-4ff9-a941-81dba26059c6.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt9459718": {
     "igdbId": 113112,
@@ -2093,7 +2951,11 @@
     },
     "artwork": "./art/launchbox/tt9459718-front-e47fbdac-3c40-4717-a7a9-025b775e4988.webp",
     "artworkSource": "https://images.launchbox-app.com/e47fbdac-3c40-4717-a7a9-025b775e4988.jpg",
-    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows."
+    "artworkNote": "Unbranded promotional cover for the same release. LaunchBox lists this artwork under Windows.",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt12496904": {
     "igdbId": 112874,
@@ -2118,7 +2980,28 @@
     },
     "artwork": "./art/launchbox/tt12496904-front-r2_2edb51c0-a2bf-4252-a85d-20f021c954ca.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_2edb51c0-a2bf-4252-a85d-20f021c954ca.jpg",
-    "boxBack": "./art/launchbox/tt12496904-back-r2_887fa693-eb29-4e8b-bd7b-3b64d087f60d.webp"
+    "boxBack": "./art/launchbox/tt12496904-back-r2_887fa693-eb29-4e8b-bd7b-3b64d087f60d.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt12496904-media-r2_a5241d08-3030-4402-98e1-e1c648a1cf4a.webp",
+          "source": "https://images.launchbox-app.com/r2_a5241d08-3030-4402-98e1-e1c648a1cf4a.png",
+          "type": "Disc",
+          "region": "Russia",
+          "layout": "disc",
+          "label": "Data disc"
+        },
+        {
+          "artwork": "./art/launchbox/tt12496904-media-r2_1d667544-2c43-4d99-8742-68c3997b3ded.webp",
+          "source": "https://images.launchbox-app.com/r2_1d667544-2c43-4d99-8742-68c3997b3ded.png",
+          "type": "Disc",
+          "region": "Russia",
+          "layout": "disc",
+          "label": "Play disc"
+        }
+      ]
+    }
   },
   "tt0884870": {
     "igdbId": 1271,
@@ -2149,7 +3032,19 @@
     "artwork": "./art/launchbox/tt0884870-front-fa7e3762-87ac-489f-9ce4-6571d9117709.webp",
     "artworkSource": "https://images.launchbox-app.com/fa7e3762-87ac-489f-9ce4-6571d9117709.jpg",
     "boxBack": "./art/launchbox/tt0884870-back-738310e3-bca4-49b3-8ce4-68485c9502d4.webp",
-    "boxSpine": "./art/launchbox/tt0884870-spine-869910d1-4802-40f1-95e9-d25bc19724e4.webp"
+    "boxSpine": "./art/launchbox/tt0884870-spine-869910d1-4802-40f1-95e9-d25bc19724e4.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0884870-media-b3bd4c53-6583-4da2-a9e6-ce106b6028d3.webp",
+          "source": "https://images.launchbox-app.com/b3bd4c53-6583-4da2-a9e6-ce106b6028d3.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt5238626": {
     "igdbId": 11208,
@@ -2168,7 +3063,19 @@
       }
     },
     "artwork": "./art/launchbox/tt5238626-front-9cc5a678-eb2f-4e16-9025-da579c70ba13.webp",
-    "artworkSource": "https://images.launchbox-app.com/9cc5a678-eb2f-4e16-9025-da579c70ba13.jpg"
+    "artworkSource": "https://images.launchbox-app.com/9cc5a678-eb2f-4e16-9025-da579c70ba13.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt5238626-media-r2_ea09336c-f73c-49ce-a4b0-984939eb0c01.webp",
+          "source": "https://images.launchbox-app.com/r2_ea09336c-f73c-49ce-a4b0-984939eb0c01.png",
+          "type": "Disc",
+          "region": "United States",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0217733": {
     "igdbId": 1561,
@@ -2196,7 +3103,19 @@
     "artwork": "./art/launchbox/tt0217733-front-7b8101cd-ea45-4189-b9e6-45e170aa42dc.webp",
     "artworkSource": "https://images.launchbox-app.com/7b8101cd-ea45-4189-b9e6-45e170aa42dc.png",
     "boxBack": "./art/launchbox/tt0217733-back-ef3897c8-fb89-42bb-a0f8-0e742938e9d6.webp",
-    "boxSpine": "./art/launchbox/tt0217733-spine-5882fcc5-cb56-4583-a8a2-2515b2cabfa7.webp"
+    "boxSpine": "./art/launchbox/tt0217733-spine-5882fcc5-cb56-4583-a8a2-2515b2cabfa7.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0217733-media-b020ecb1-1ce5-4a0c-a031-e508e498961a.webp",
+          "source": "https://images.launchbox-app.com/b020ecb1-1ce5-4a0c-a031-e508e498961a.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt0310011": {
     "igdbId": 1558,
@@ -2224,7 +3143,19 @@
     "artwork": "./art/launchbox/tt0310011-front-91254337-0075-4edb-b28f-b9c4e38163b2.webp",
     "artworkSource": "https://images.launchbox-app.com/91254337-0075-4edb-b28f-b9c4e38163b2.jpg",
     "boxBack": "./art/launchbox/tt0310011-back-e1f4c2f4-3121-49f8-b872-2cb518dd62f9.webp",
-    "boxSpine": "./art/launchbox/tt0310011-spine-8bc07bce-9951-4a08-99fe-a7ffff808a31.webp"
+    "boxSpine": "./art/launchbox/tt0310011-spine-8bc07bce-9951-4a08-99fe-a7ffff808a31.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0310011-media-a8c2f791-2b55-48e9-a3de-05ff0437a3e2.webp",
+          "source": "https://images.launchbox-app.com/a8c2f791-2b55-48e9-a3de-05ff0437a3e2.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt1037854": {
     "igdbId": 239,
@@ -2253,7 +3184,19 @@
     "artwork": "./art/launchbox/tt1037854-front-05e248ec-6df2-4558-9483-cf39dd560db4.webp",
     "artworkSource": "https://images.launchbox-app.com/05e248ec-6df2-4558-9483-cf39dd560db4.jpg",
     "boxBack": "./art/launchbox/tt1037854-back-ce7cb3d9-8987-4384-a993-6fa7b16580f2.webp",
-    "boxSpine": "./art/launchbox/tt1037854-spine-1be5235c-caf9-48aa-a5f7-82c552bcd9aa.webp"
+    "boxSpine": "./art/launchbox/tt1037854-spine-1be5235c-caf9-48aa-a5f7-82c552bcd9aa.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1037854-media-3ea4caca-1e60-42c1-90c7-e1e94a392bd5.webp",
+          "source": "https://images.launchbox-app.com/3ea4caca-1e60-42c1-90c7-e1e94a392bd5.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0177266": {
     "igdbId": 358,
@@ -2281,7 +3224,19 @@
     "artwork": "./art/launchbox/tt0177266-front-e078d459-a166-47a2-9b5a-26a9fd7cd924.webp",
     "artworkSource": "https://images.launchbox-app.com/e078d459-a166-47a2-9b5a-26a9fd7cd924.jpg",
     "boxBack": "./art/launchbox/tt0177266-back-829fc885-7b63-4e64-934d-104f5e939340.webp",
-    "boxSpine": "./art/launchbox/tt0177266-spine-efce963a-c0b1-49a0-810e-f48e31f71bfc.webp"
+    "boxSpine": "./art/launchbox/tt0177266-spine-efce963a-c0b1-49a0-810e-f48e31f71bfc.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0177266-media-5442ae86-8631-4362-b5e1-8c77ac9c2f96.webp",
+          "source": "https://images.launchbox-app.com/5442ae86-8631-4362-b5e1-8c77ac9c2f96.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt5370130": {
     "igdbId": 90101,
@@ -2309,7 +3264,19 @@
     "artwork": "./art/launchbox/tt5370130-front-10b6c7ca-a587-47cb-b7ad-40a4ef710b24.webp",
     "artworkSource": "https://images.launchbox-app.com/10b6c7ca-a587-47cb-b7ad-40a4ef710b24.png",
     "boxBack": "./art/launchbox/tt5370130-back-873e54cf-6d01-4370-8121-70a7b645b845.webp",
-    "boxSpine": "./art/launchbox/tt5370130-spine-9d087597-5a84-4944-8ee4-d5074e395ed2.webp"
+    "boxSpine": "./art/launchbox/tt5370130-spine-9d087597-5a84-4944-8ee4-d5074e395ed2.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt5370130-media-c7dd67f5-78bd-49d3-a286-a53c5633a9ea.webp",
+          "source": "https://images.launchbox-app.com/c7dd67f5-78bd-49d3-a286-a53c5633a9ea.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt6298000": {
     "igdbId": 26192,
@@ -2340,7 +3307,28 @@
     "artwork": "./art/launchbox/tt6298000-front-3e0032bb-3e29-4206-af02-6fdeed8ecb06.webp",
     "artworkSource": "https://images.launchbox-app.com/3e0032bb-3e29-4206-af02-6fdeed8ecb06.jpg",
     "boxBack": "./art/launchbox/tt6298000-back-f5d90b08-2cef-42c8-8aa0-078f62b63c98.webp",
-    "boxSpine": "./art/launchbox/tt6298000-spine-fff30691-3aab-4290-a768-7755e6bcd95e.webp"
+    "boxSpine": "./art/launchbox/tt6298000-spine-fff30691-3aab-4290-a768-7755e6bcd95e.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt6298000-media-r2_a350da5f-9e1d-490b-bd5b-6be224216d7d.webp",
+          "source": "https://images.launchbox-app.com/r2_a350da5f-9e1d-490b-bd5b-6be224216d7d.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Data disc"
+        },
+        {
+          "artwork": "./art/launchbox/tt6298000-media-r2_07ae4afc-4b0b-4f49-a24c-c7d94914ecef.webp",
+          "source": "https://images.launchbox-app.com/r2_07ae4afc-4b0b-4f49-a24c-c7d94914ecef.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Play disc"
+        }
+      ]
+    }
   },
   "tt1699759": {
     "igdbId": 113,
@@ -2371,7 +3359,19 @@
     "artwork": "./art/launchbox/tt1699759-front-2cff20a6-217a-4ff8-890f-d91f6bd8ba3d.webp",
     "artworkSource": "https://images.launchbox-app.com/2cff20a6-217a-4ff8-890f-d91f6bd8ba3d.jpg",
     "boxBack": "./art/launchbox/tt1699759-back-5439edcf-2dff-4723-bb6b-ac8cc350d488.webp",
-    "boxSpine": "./art/launchbox/tt1699759-spine-986c47e1-f808-4c0d-a4dd-1b8de616c5a6.webp"
+    "boxSpine": "./art/launchbox/tt1699759-spine-986c47e1-f808-4c0d-a4dd-1b8de616c5a6.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1699759-media-e0eed8d0-7335-435a-9905-087e523eabcc.webp",
+          "source": "https://images.launchbox-app.com/e0eed8d0-7335-435a-9905-087e523eabcc.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt2739708": {
     "igdbId": 1970,
@@ -2402,7 +3402,28 @@
     "artwork": "./art/launchbox/tt2739708-front-f118e8f2-d2d0-4a48-90d7-b79835095522.webp",
     "artworkSource": "https://images.launchbox-app.com/f118e8f2-d2d0-4a48-90d7-b79835095522.jpg",
     "boxBack": "./art/launchbox/tt2739708-back-ed20b0c9-44f9-4372-9c93-b15182d79859.webp",
-    "boxSpine": "./art/launchbox/tt2739708-spine-311705e5-d763-4f1f-9f9b-2e5eb7895895.webp"
+    "boxSpine": "./art/launchbox/tt2739708-spine-311705e5-d763-4f1f-9f9b-2e5eb7895895.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2739708-media-e727b36b-e93d-4732-a635-e40b868c8a94.webp",
+          "source": "https://images.launchbox-app.com/e727b36b-e93d-4732-a635-e40b868c8a94.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 1"
+        },
+        {
+          "artwork": "./art/launchbox/tt2739708-media-r2_dc958887-d589-4118-a708-86d0e5efe33b.webp",
+          "source": "https://images.launchbox-app.com/r2_dc958887-d589-4118-a708-86d0e5efe33b.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 2"
+        }
+      ]
+    }
   },
   "tt5807606": {
     "igdbId": 19564,
@@ -2421,7 +3442,22 @@
       }
     },
     "artwork": "./art/launchbox/tt5807606-front-f6cbfdd5-39ad-411e-89e9-44ed80b26af5.webp",
-    "artworkSource": "https://images.launchbox-app.com/f6cbfdd5-39ad-411e-89e9-44ed80b26af5.png"
+    "artworkSource": "https://images.launchbox-app.com/f6cbfdd5-39ad-411e-89e9-44ed80b26af5.png",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt5807606-media-5fa37ccb-407c-45e8-a42b-4f4447de391a.webp",
+          "source": "https://images.launchbox-app.com/5fa37ccb-407c-45e8-a42b-4f4447de391a.png",
+          "type": "Disc",
+          "region": "Japan",
+          "layout": "disc",
+          "regionalAlternative": true,
+          "sourceRegion": "",
+          "printEvidence": "PCJS-66054 and JASRAC"
+        }
+      ]
+    }
   },
   "tt1173898": {
     "igdbId": 2254,
@@ -2452,7 +3488,19 @@
     "artwork": "./art/launchbox/tt1173898-front-d764b840-eab1-4605-9fc8-f1dfdf166700.webp",
     "artworkSource": "https://images.launchbox-app.com/d764b840-eab1-4605-9fc8-f1dfdf166700.jpg",
     "boxBack": "./art/launchbox/tt1173898-back-c698b1b8-47ae-4555-b388-07c8a40bedd7.webp",
-    "boxSpine": "./art/launchbox/tt1173898-spine-73382b75-1529-4142-91bd-546441bff626.webp"
+    "boxSpine": "./art/launchbox/tt1173898-spine-73382b75-1529-4142-91bd-546441bff626.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1173898-media-e78f0d89-dde3-4740-b2ce-24e4f18e0d49.webp",
+          "source": "https://images.launchbox-app.com/e78f0d89-dde3-4740-b2ce-24e4f18e0d49.png",
+          "type": "Disc",
+          "region": "Europe",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1288501": {
     "igdbId": 548,
@@ -2483,7 +3531,19 @@
     "artwork": "./art/launchbox/tt1288501-front-efd00fb8-5ce4-44a8-81dc-36b44ba9ab4c.webp",
     "artworkSource": "https://images.launchbox-app.com/efd00fb8-5ce4-44a8-81dc-36b44ba9ab4c.jpg",
     "boxBack": "./art/launchbox/tt1288501-back-77f85c55-a4c0-4a74-9716-b97dc94265d6.webp",
-    "boxSpine": "./art/launchbox/tt1288501-spine-6a0bff17-bfcf-4c0b-89ca-0362466baed6.webp"
+    "boxSpine": "./art/launchbox/tt1288501-spine-6a0bff17-bfcf-4c0b-89ca-0362466baed6.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1288501-media-r2_442e35fa-0a8e-46c5-9803-75fa45428ae3.webp",
+          "source": "https://images.launchbox-app.com/r2_442e35fa-0a8e-46c5-9803-75fa45428ae3.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0357718": {
     "igdbId": 986,
@@ -2514,7 +3574,19 @@
     "artwork": "./art/launchbox/tt0357718-front-ea79d9b4-6cb4-46dd-951d-d7ef9e9beb1b.webp",
     "artworkSource": "https://images.launchbox-app.com/ea79d9b4-6cb4-46dd-951d-d7ef9e9beb1b.jpg",
     "boxBack": "./art/launchbox/tt0357718-back-e64e11b1-2193-46ce-9988-24cf9295f028.webp",
-    "boxSpine": "./art/launchbox/tt0357718-spine-189105e9-c5a0-4a64-8227-2f55536e07da.webp"
+    "boxSpine": "./art/launchbox/tt0357718-spine-189105e9-c5a0-4a64-8227-2f55536e07da.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0357718-media-0979c729-28e5-48b7-897c-4c04b577cb1d.webp",
+          "source": "https://images.launchbox-app.com/0979c729-28e5-48b7-897c-4c04b577cb1d.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0259104": {
     "igdbId": 132,
@@ -2537,7 +3609,11 @@
     },
     "artwork": "./art/launchbox/tt0259104-front-532075de-1a72-46c8-b355-e327ff14f263.webp",
     "artworkSource": "https://images.launchbox-app.com/532075de-1a72-46c8-b355-e327ff14f263.jpg",
-    "boxBack": "./art/launchbox/tt0259104-back-4144fd22-16d8-4589-b56a-246fbc8d0797.webp"
+    "boxBack": "./art/launchbox/tt0259104-back-4144fd22-16d8-4589-b56a-246fbc8d0797.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt0462448": {
     "igdbId": 98,
@@ -2562,7 +3638,20 @@
     },
     "artwork": "./art/launchbox/tt0462448-front-80e7c117-9007-4bc3-bb49-f04308a1e592.webp",
     "artworkSource": "https://images.launchbox-app.com/80e7c117-9007-4bc3-bb49-f04308a1e592.jpg",
-    "boxBack": "./art/launchbox/tt0462448-back-c1904bfe-71b2-49ae-ba43-75be099f29fd.webp"
+    "boxBack": "./art/launchbox/tt0462448-back-c1904bfe-71b2-49ae-ba43-75be099f29fd.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0462448-media-r2_72a19266-9436-459c-9c37-8cdb58aa87e6.webp",
+          "source": "https://images.launchbox-app.com/r2_72a19266-9436-459c-9c37-8cdb58aa87e6.png",
+          "type": "Disc",
+          "region": "Europe",
+          "layout": "disc",
+          "regionalAlternative": true
+        }
+      ]
+    }
   },
   "tt2370518": {
     "igdbId": 1985,
@@ -2581,7 +3670,28 @@
       }
     },
     "artwork": "./art/launchbox/tt2370518-front-f049e751-a5db-47f6-baee-b2650eee3451.webp",
-    "artworkSource": "https://images.launchbox-app.com/f049e751-a5db-47f6-baee-b2650eee3451.jpg"
+    "artworkSource": "https://images.launchbox-app.com/f049e751-a5db-47f6-baee-b2650eee3451.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2370518-media-r2_b85c3ec5-7078-4619-8590-c0ba9db3c831.webp",
+          "source": "https://images.launchbox-app.com/r2_b85c3ec5-7078-4619-8590-c0ba9db3c831.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 1"
+        },
+        {
+          "artwork": "./art/launchbox/tt2370518-media-r2_61a3372a-7571-451d-8f6f-cc3ba639d380.webp",
+          "source": "https://images.launchbox-app.com/r2_61a3372a-7571-451d-8f6f-cc3ba639d380.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc",
+          "label": "Disc 2"
+        }
+      ]
+    }
   },
   "tt0217729": {
     "igdbId": 1511,
@@ -2609,7 +3719,19 @@
     "artwork": "./art/launchbox/tt0217729-front-22bbf1b4-fe67-45b3-96cd-26134e29591e.webp",
     "artworkSource": "https://images.launchbox-app.com/22bbf1b4-fe67-45b3-96cd-26134e29591e.jpg",
     "boxBack": "./art/launchbox/tt0217729-back-a80a4371-5734-48ff-985e-69baa44e7c4d.webp",
-    "boxSpine": "./art/launchbox/tt0217729-spine-d0d56b0f-d328-43fe-acc2-7ed5dcf00c0a.webp"
+    "boxSpine": "./art/launchbox/tt0217729-spine-d0d56b0f-d328-43fe-acc2-7ed5dcf00c0a.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0217729-media-f27eb5ca-0747-40e7-a498-4a166c08557f.webp",
+          "source": "https://images.launchbox-app.com/f27eb5ca-0747-40e7-a498-4a166c08557f.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt0288740": {
     "igdbId": 1514,
@@ -2637,7 +3759,19 @@
     "artwork": "./art/launchbox/tt0288740-front-8b6c2887-9bf3-4f5c-beb4-13cd12673ca2.webp",
     "artworkSource": "https://images.launchbox-app.com/8b6c2887-9bf3-4f5c-beb4-13cd12673ca2.jpg",
     "boxBack": "./art/launchbox/tt0288740-back-e8b85a4a-1c3c-4924-8ede-47a693e42930.webp",
-    "boxSpine": "./art/launchbox/tt0288740-spine-33078ee9-7177-4b33-a9a8-b567a7f76752.webp"
+    "boxSpine": "./art/launchbox/tt0288740-spine-33078ee9-7177-4b33-a9a8-b567a7f76752.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0288740-media-0a40d723-c657-4266-af60-2f25d7acf2fa.webp",
+          "source": "https://images.launchbox-app.com/0a40d723-c657-4266-af60-2f25d7acf2fa.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt0478230": {
     "igdbId": 1517,
@@ -2665,7 +3799,19 @@
     "artwork": "./art/launchbox/tt0478230-front-1fde111d-8805-47ba-af07-03b436e4dfde.webp",
     "artworkSource": "https://images.launchbox-app.com/1fde111d-8805-47ba-af07-03b436e4dfde.jpg",
     "boxBack": "./art/launchbox/tt0478230-back-6602f3ad-0d9c-47d2-93f8-d36f18d5e092.webp",
-    "boxSpine": "./art/launchbox/tt0478230-spine-567c7a8d-baeb-4b16-9dc3-b158c11f411d.webp"
+    "boxSpine": "./art/launchbox/tt0478230-spine-567c7a8d-baeb-4b16-9dc3-b158c11f411d.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0478230-media-r2_ea8f352b-fa39-41b7-b27e-bbe6df1e86d1.webp",
+          "source": "https://images.launchbox-app.com/r2_ea8f352b-fa39-41b7-b27e-bbe6df1e86d1.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt2385021": {
     "igdbId": 1011,
@@ -2690,7 +3836,19 @@
     },
     "artwork": "./art/launchbox/tt2385021-front-bd44d321-535a-4e98-a22d-85f286ed774a.webp",
     "artworkSource": "https://images.launchbox-app.com/bd44d321-535a-4e98-a22d-85f286ed774a.jpg",
-    "boxBack": "./art/launchbox/tt2385021-back-r2_0f72b065-8277-4077-852b-09776da4d91c.webp"
+    "boxBack": "./art/launchbox/tt2385021-back-r2_0f72b065-8277-4077-852b-09776da4d91c.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2385021-media-d999aedf-cce7-414f-80d4-452ecd47e46e.webp",
+          "source": "https://images.launchbox-app.com/d999aedf-cce7-414f-80d4-452ecd47e46e.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0888006": {
     "igdbId": 2720,
@@ -2721,7 +3879,19 @@
     "artwork": "./art/launchbox/tt0888006-front-3cf369be-2b6a-4a13-910b-1ca30ba95feb.webp",
     "artworkSource": "https://images.launchbox-app.com/3cf369be-2b6a-4a13-910b-1ca30ba95feb.jpg",
     "boxBack": "./art/launchbox/tt0888006-back-489a1d17-1cae-41e2-96d7-294d3a84aa81.webp",
-    "boxSpine": "./art/launchbox/tt0888006-spine-17859a3c-f277-45ef-8866-da1b810c3ba5.webp"
+    "boxSpine": "./art/launchbox/tt0888006-spine-17859a3c-f277-45ef-8866-da1b810c3ba5.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0888006-media-1a48e472-22ca-4205-acf5-f80e881a4fb0.webp",
+          "source": "https://images.launchbox-app.com/1a48e472-22ca-4205-acf5-f80e881a4fb0.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt3810192": {
     "igdbId": 1877,
@@ -2740,7 +3910,21 @@
       }
     },
     "artwork": "./art/launchbox/tt3810192-front-d3942503-dd67-4dee-93e1-0ad51a8ea78c.webp",
-    "artworkSource": "https://images.launchbox-app.com/d3942503-dd67-4dee-93e1-0ad51a8ea78c.jpg"
+    "artworkSource": "https://images.launchbox-app.com/d3942503-dd67-4dee-93e1-0ad51a8ea78c.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt3810192-media-93ef8399-cd27-41d9-8908-487da84c43c1.webp",
+          "source": "https://images.launchbox-app.com/93ef8399-cd27-41d9-8908-487da84c43c1.png",
+          "type": "Disc",
+          "region": "Europe",
+          "layout": "disc",
+          "regionalAlternative": true,
+          "label": "Disc 1"
+        }
+      ]
+    }
   },
   "tt0277723": {
     "igdbId": 730,
@@ -2771,7 +3955,19 @@
     "artwork": "./art/launchbox/tt0277723-front-cf73a1a9-002f-4513-b9ef-c575adf8b683.webp",
     "artworkSource": "https://images.launchbox-app.com/cf73a1a9-002f-4513-b9ef-c575adf8b683.jpg",
     "boxBack": "./art/launchbox/tt0277723-back-40c394e7-ae98-4fc3-ba0c-203c15ffd63e.webp",
-    "boxSpine": "./art/launchbox/tt0277723-spine-a909aaeb-86ca-4b69-b3ba-1bfaa3899f34.webp"
+    "boxSpine": "./art/launchbox/tt0277723-spine-a909aaeb-86ca-4b69-b3ba-1bfaa3899f34.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0277723-media-ff4a5080-9b35-4a78-88fd-f7a4903c010d.webp",
+          "source": "https://images.launchbox-app.com/ff4a5080-9b35-4a78-88fd-f7a4903c010d.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0217732": {
     "igdbId": 1512,
@@ -2799,7 +3995,19 @@
     "artwork": "./art/launchbox/tt0217732-front-9d0d1c3f-a63e-4e15-9c9d-536cbeedfb1d.webp",
     "artworkSource": "https://images.launchbox-app.com/9d0d1c3f-a63e-4e15-9c9d-536cbeedfb1d.jpg",
     "boxBack": "./art/launchbox/tt0217732-back-d18f6661-4636-46a2-8611-45e985f82341.webp",
-    "boxSpine": "./art/launchbox/tt0217732-spine-301258c4-b985-4a9c-8aac-5e0fea4fec8f.webp"
+    "boxSpine": "./art/launchbox/tt0217732-spine-301258c4-b985-4a9c-8aac-5e0fea4fec8f.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0217732-media-2c3b11c1-d473-49fc-915a-3c5359ed8431.webp",
+          "source": "https://images.launchbox-app.com/2c3b11c1-d473-49fc-915a-3c5359ed8431.png",
+          "type": "Cart - Front",
+          "region": "United States",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt0437437": {
     "igdbId": 837,
@@ -2830,7 +4038,19 @@
     "artwork": "./art/launchbox/tt0437437-front-62796e64-481f-4d9d-ac58-98cc5d50d0ba.webp",
     "artworkSource": "https://images.launchbox-app.com/62796e64-481f-4d9d-ac58-98cc5d50d0ba.jpg",
     "boxBack": "./art/launchbox/tt0437437-back-8bbee6b3-4226-443f-8e89-fb3e15a48d01.webp",
-    "boxSpine": "./art/launchbox/tt0437437-spine-1b1b80f9-e86d-4307-8514-18255d45928d.webp"
+    "boxSpine": "./art/launchbox/tt0437437-spine-1b1b80f9-e86d-4307-8514-18255d45928d.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0437437-media-1e02c3f2-4b5d-4d74-b4b9-84885e0a6603.webp",
+          "source": "https://images.launchbox-app.com/1e02c3f2-4b5d-4d74-b4b9-84885e0a6603.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt12497042": {
     "igdbId": 55163,
@@ -2850,7 +4070,19 @@
     },
     "artwork": "./art/launchbox/tt12497042-front-6242e4c4-8edd-4168-985d-1472ca6c5635.webp",
     "artworkSource": "https://images.launchbox-app.com/6242e4c4-8edd-4168-985d-1472ca6c5635.jpg",
-    "artworkNote": "Shared Xbox Series X and Xbox One retail cover for Resident Evil Village."
+    "artworkNote": "Shared Xbox Series X and Xbox One retail cover for Resident Evil Village.",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt12497042-media-ace7a5ab-70a4-4c96-8044-c534e1a14335.webp",
+          "source": "https://images.launchbox-app.com/ace7a5ab-70a4-4c96-8044-c534e1a14335.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt12497014": {
     "igdbId": 134582,
@@ -2881,7 +4113,19 @@
     "artwork": "./art/launchbox/tt12497014-front-47d4eacd-501c-47f8-b994-e938d69238c2.webp",
     "artworkSource": "https://images.launchbox-app.com/47d4eacd-501c-47f8-b994-e938d69238c2.jpg",
     "boxBack": "./art/launchbox/tt12497014-back-e9298c27-c405-45e5-92aa-790959ef75eb.webp",
-    "boxSpine": "./art/launchbox/tt12497014-spine-r2_0545072a-87f8-45aa-81df-76a93b3f7f28.webp"
+    "boxSpine": "./art/launchbox/tt12497014-spine-r2_0545072a-87f8-45aa-81df-76a93b3f7f28.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt12497014-media-r2_4fb4b298-b29a-4a23-94b6-9512c2e04342.webp",
+          "source": "https://images.launchbox-app.com/r2_4fb4b298-b29a-4a23-94b6-9512c2e04342.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0427889": {
     "igdbId": 911,
@@ -2906,7 +4150,19 @@
     },
     "artwork": "./art/launchbox/tt0427889-front-2591a906-188c-4257-aa44-c63609a95213.webp",
     "artworkSource": "https://images.launchbox-app.com/2591a906-188c-4257-aa44-c63609a95213.jpg",
-    "boxSpine": "./art/launchbox/tt0427889-spine-90b02264-063c-4f32-8bad-96e28dd75303.webp"
+    "boxSpine": "./art/launchbox/tt0427889-spine-90b02264-063c-4f32-8bad-96e28dd75303.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0427889-media-e6435166-3225-4bd8-b29f-e174ab6d69dc.webp",
+          "source": "https://images.launchbox-app.com/e6435166-3225-4bd8-b29f-e174ab6d69dc.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt2224413": {
     "igdbId": 3201,
@@ -2929,7 +4185,19 @@
     },
     "artwork": "./art/launchbox/tt2224413-front-d2dab8f4-7fd8-4ec9-a304-ec77dded8efe.webp",
     "artworkSource": "https://images.launchbox-app.com/d2dab8f4-7fd8-4ec9-a304-ec77dded8efe.jpg",
-    "boxBack": "./art/launchbox/tt2224413-back-474c3e92-51e3-4cc3-81fc-79d52cb760c4.webp"
+    "boxBack": "./art/launchbox/tt2224413-back-474c3e92-51e3-4cc3-81fc-79d52cb760c4.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2224413-media-r2_ddf3521a-46df-40b1-a1eb-82dd39ac51f7.webp",
+          "source": "https://images.launchbox-app.com/r2_ddf3521a-46df-40b1-a1eb-82dd39ac51f7.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt0275393": {
     "igdbId": 241,
@@ -2958,7 +4226,19 @@
     "artwork": "./art/launchbox/tt0275393-front-04d4c174-02b5-459a-9ebc-2810e4c59e7a.webp",
     "artworkSource": "https://images.launchbox-app.com/04d4c174-02b5-459a-9ebc-2810e4c59e7a.png",
     "boxBack": "./art/launchbox/tt0275393-back-1fe8e3aa-d8e4-441a-919f-b84cad2fc9e2.webp",
-    "boxSpine": "./art/launchbox/tt0275393-spine-ff09b31f-2996-4ef3-8c80-bb7dd3ba00d4.webp"
+    "boxSpine": "./art/launchbox/tt0275393-spine-ff09b31f-2996-4ef3-8c80-bb7dd3ba00d4.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0275393-media-e83f9de8-aa4f-49b3-8f9a-194868cd392a.webp",
+          "source": "https://images.launchbox-app.com/e83f9de8-aa4f-49b3-8f9a-194868cd392a.png",
+          "type": "Disc",
+          "region": "",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt2584348": {
     "igdbId": 1372,
@@ -2975,7 +4255,11 @@
       }
     },
     "artwork": "./art/launchbox/tt2584348-front-cf809d92-1858-489e-9c9a-007b530d2022.webp",
-    "artworkSource": "https://images.launchbox-app.com/cf809d92-1858-489e-9c9a-007b530d2022.jpg"
+    "artworkSource": "https://images.launchbox-app.com/cf809d92-1858-489e-9c9a-007b530d2022.jpg",
+    "gameMedia": {
+      "kind": "digital",
+      "media": []
+    }
   },
   "tt0466736": {
     "igdbId": 297,
@@ -3004,7 +4288,20 @@
     "artwork": "./art/launchbox/tt0466736-front-0bd902e1-e3f7-4bbf-8ded-b6d46cf8d026.webp",
     "artworkSource": "https://images.launchbox-app.com/0bd902e1-e3f7-4bbf-8ded-b6d46cf8d026.jpg",
     "boxBack": "./art/launchbox/tt0466736-back-8bb44455-044c-4514-973c-e1edc00aff0d.webp",
-    "boxSpine": "./art/launchbox/tt0466736-spine-defbe55a-5da3-473b-a5bd-965a2f15cb1d.webp"
+    "boxSpine": "./art/launchbox/tt0466736-spine-defbe55a-5da3-473b-a5bd-965a2f15cb1d.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0466736-media-2f5d4cb9-20f0-40fe-a1fd-ce9a06d8a816.webp",
+          "source": "https://images.launchbox-app.com/2f5d4cb9-20f0-40fe-a1fd-ce9a06d8a816.png",
+          "type": "Disc",
+          "region": "",
+          "layout": "disc",
+          "label": "Disc 1"
+        }
+      ]
+    }
   },
   "tt7795464": {
     "igdbId": 307,
@@ -3021,7 +4318,19 @@
       }
     },
     "artwork": "./art/launchbox/tt7795464-front-33b78d40-529c-4927-b6b2-7c604cd1156b.webp",
-    "artworkSource": "https://images.launchbox-app.com/33b78d40-529c-4927-b6b2-7c604cd1156b.jpg"
+    "artworkSource": "https://images.launchbox-app.com/33b78d40-529c-4927-b6b2-7c604cd1156b.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt7795464-media-72716b7c-b4e2-455d-b4d1-fd8a2c8b9049.webp",
+          "source": "https://images.launchbox-app.com/72716b7c-b4e2-455d-b4d1-fd8a2c8b9049.png",
+          "type": "Disc",
+          "region": "",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt2290962": {
     "igdbId": 2963,
@@ -3038,7 +4347,11 @@
       }
     },
     "artwork": "./art/launchbox/tt2290962-front-3494a505-747f-41d7-99bb-c646952e43c7.webp",
-    "artworkSource": "https://images.launchbox-app.com/3494a505-747f-41d7-99bb-c646952e43c7.jpg"
+    "artworkSource": "https://images.launchbox-app.com/3494a505-747f-41d7-99bb-c646952e43c7.jpg",
+    "gameMedia": {
+      "kind": "digital",
+      "media": []
+    }
   },
   "tt2071507": {
     "igdbId": 115,
@@ -3055,7 +4368,11 @@
       }
     },
     "artwork": "./art/launchbox/tt2071507-front-d823bc11-a294-4043-8bb3-b77203417ebb.webp",
-    "artworkSource": "https://images.launchbox-app.com/d823bc11-a294-4043-8bb3-b77203417ebb.jpg"
+    "artworkSource": "https://images.launchbox-app.com/d823bc11-a294-4043-8bb3-b77203417ebb.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt10987766": {
     "igdbId": 119161,
@@ -3074,7 +4391,11 @@
       }
     },
     "artwork": "./art/launchbox/tt10987766-front-1ef1b00a-285f-4bab-be46-c2e3d1833f55.webp",
-    "artworkSource": "https://images.launchbox-app.com/1ef1b00a-285f-4bab-be46-c2e3d1833f55.jpg"
+    "artworkSource": "https://images.launchbox-app.com/1ef1b00a-285f-4bab-be46-c2e3d1833f55.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt0790814": {
     "igdbId": 99,
@@ -3105,7 +4426,19 @@
     "artwork": "./art/launchbox/tt0790814-front-f6cb0183-d65b-496c-ac2d-3afc37f498e8.webp",
     "artworkSource": "https://images.launchbox-app.com/f6cb0183-d65b-496c-ac2d-3afc37f498e8.jpg",
     "boxBack": "./art/launchbox/tt0790814-back-r2_14a9b5fb-3350-48b9-8ce9-ced25e7ad0cf.webp",
-    "boxSpine": "./art/launchbox/tt0790814-spine-r2_f32d106d-9328-48fb-83d0-43e721916748.webp"
+    "boxSpine": "./art/launchbox/tt0790814-spine-r2_f32d106d-9328-48fb-83d0-43e721916748.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0790814-media-e34ca921-e00e-46ad-90ab-1ba0ab143f20.webp",
+          "source": "https://images.launchbox-app.com/e34ca921-e00e-46ad-90ab-1ba0ab143f20.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt5108242": {
     "igdbId": 10965,
@@ -3124,7 +4457,11 @@
       }
     },
     "artwork": "./art/launchbox/tt5108242-front-5b6b5ea5-f91c-4c8a-b0fc-cbc8ea5c410e.webp",
-    "artworkSource": "https://images.launchbox-app.com/5b6b5ea5-f91c-4c8a-b0fc-cbc8ea5c410e.jpg"
+    "artworkSource": "https://images.launchbox-app.com/5b6b5ea5-f91c-4c8a-b0fc-cbc8ea5c410e.jpg",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt0420798": {
     "igdbId": 97,
@@ -3155,7 +4492,19 @@
     "artwork": "./art/launchbox/tt0420798-front-4b70a068-c41f-4c7d-b367-33b33b7dc6b3.webp",
     "artworkSource": "https://images.launchbox-app.com/4b70a068-c41f-4c7d-b367-33b33b7dc6b3.jpg",
     "boxBack": "./art/launchbox/tt0420798-back-219e4a5e-a9b4-4f49-bb41-c0f0bb7cdaed.webp",
-    "boxSpine": "./art/launchbox/tt0420798-spine-fe331254-fe44-4923-b999-ccb82324a277.webp"
+    "boxSpine": "./art/launchbox/tt0420798-spine-fe331254-fe44-4923-b999-ccb82324a277.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0420798-media-043aff98-cf00-4e0e-a369-ea9459e893e6.webp",
+          "source": "https://images.launchbox-app.com/043aff98-cf00-4e0e-a369-ea9459e893e6.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt2186922": {
     "igdbId": 3193,
@@ -3186,7 +4535,19 @@
     "artwork": "./art/launchbox/tt2186922-front-61b93440-a1bd-4bde-b07d-367fefb41144.webp",
     "artworkSource": "https://images.launchbox-app.com/61b93440-a1bd-4bde-b07d-367fefb41144.jpg",
     "boxBack": "./art/launchbox/tt2186922-back-b7d3572b-0fc1-4a93-85e7-e2d5a96eec85.webp",
-    "boxSpine": "./art/launchbox/tt2186922-spine-40237a83-c7e7-4f0b-b5b9-f0617564c02d.webp"
+    "boxSpine": "./art/launchbox/tt2186922-spine-40237a83-c7e7-4f0b-b5b9-f0617564c02d.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2186922-media-0d0918be-343f-4e3a-8d6b-e75d7fc43198.webp",
+          "source": "https://images.launchbox-app.com/0d0918be-343f-4e3a-8d6b-e75d7fc43198.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1264900": {
     "igdbId": 101,
@@ -3217,7 +4578,19 @@
     "artwork": "./art/launchbox/tt1264900-front-0467ddd4-b66b-470e-a648-67c5c34c55af.webp",
     "artworkSource": "https://images.launchbox-app.com/0467ddd4-b66b-470e-a648-67c5c34c55af.jpg",
     "boxBack": "./art/launchbox/tt1264900-back-c474bf57-7afa-4609-aa08-535b2d98f280.webp",
-    "boxSpine": "./art/launchbox/tt1264900-spine-0921d518-257d-4977-b24b-5a967f192eb1.webp"
+    "boxSpine": "./art/launchbox/tt1264900-spine-0921d518-257d-4977-b24b-5a967f192eb1.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1264900-media-88ab08cf-df0d-4e62-b4f1-689be011f090.webp",
+          "source": "https://images.launchbox-app.com/88ab08cf-df0d-4e62-b4f1-689be011f090.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt7243342": {
     "igdbId": 36662,
@@ -3236,7 +4609,11 @@
       }
     },
     "artwork": "./art/launchbox/tt7243342-front-e9e2cc81-6cd0-48e2-b15c-55a9aee5b38f.webp",
-    "artworkSource": "https://images.launchbox-app.com/e9e2cc81-6cd0-48e2-b15c-55a9aee5b38f.png"
+    "artworkSource": "https://images.launchbox-app.com/e9e2cc81-6cd0-48e2-b15c-55a9aee5b38f.png",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
   },
   "tt1708432": {
     "igdbId": 248127,
@@ -3264,7 +4641,19 @@
     "artwork": "./art/launchbox/tt1708432-front-6a32512d-8038-44a2-a821-3b86ef2f16aa.webp",
     "artworkSource": "https://images.launchbox-app.com/6a32512d-8038-44a2-a821-3b86ef2f16aa.jpg",
     "boxBack": "./art/launchbox/tt1708432-back-8f0feead-d69f-4345-bbcc-e8c52a9b3a3c.webp",
-    "boxSpine": "./art/launchbox/tt1708432-spine-bc1d10ca-c27d-452d-b01f-0b29e48f2939.webp"
+    "boxSpine": "./art/launchbox/tt1708432-spine-bc1d10ca-c27d-452d-b01f-0b29e48f2939.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1708432-media-66dcbce6-4675-4b1d-a788-a065833637f4.webp",
+          "source": "https://images.launchbox-app.com/66dcbce6-4675-4b1d-a788-a065833637f4.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   },
   "tt0390296": {
     "igdbId": 96,
@@ -3295,7 +4684,19 @@
     "artwork": "./art/launchbox/tt0390296-front-r2_b52f6419-7e31-4211-80a2-23b48eaba90b.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_b52f6419-7e31-4211-80a2-23b48eaba90b.png",
     "boxBack": "./art/launchbox/tt0390296-back-f95e0bb1-cb46-40d5-ae21-0c4b50b53987.webp",
-    "boxSpine": "./art/launchbox/tt0390296-spine-bcccc0bb-10c7-42c7-a446-2fe6967a3448.webp"
+    "boxSpine": "./art/launchbox/tt0390296-spine-bcccc0bb-10c7-42c7-a446-2fe6967a3448.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0390296-media-ba0a2221-7d8a-41d3-9126-be8787af15c6.webp",
+          "source": "https://images.launchbox-app.com/ba0a2221-7d8a-41d3-9126-be8787af15c6.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   },
   "tt1776254": {
     "igdbId": 105,
@@ -3320,7 +4721,20 @@
     },
     "artwork": "./art/launchbox/tt1776254-front-971c514e-30fb-4e21-a57a-3b476e1916b4.webp",
     "artworkSource": "https://images.launchbox-app.com/971c514e-30fb-4e21-a57a-3b476e1916b4.jpg",
-    "boxBack": "./art/launchbox/tt1776254-back-da09b64e-7849-413c-b959-7bc07f15eabf.webp"
+    "boxBack": "./art/launchbox/tt1776254-back-da09b64e-7849-413c-b959-7bc07f15eabf.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1776254-media-42425a31-7c16-435a-96ae-8df2c78d5e70.webp",
+          "source": "https://images.launchbox-app.com/42425a31-7c16-435a-96ae-8df2c78d5e70.png",
+          "type": "Disc",
+          "region": "Europe",
+          "layout": "disc",
+          "regionalAlternative": true
+        }
+      ]
+    }
   },
   "tt2315506": {
     "igdbId": 11639,
@@ -3351,6 +4765,18 @@
     "artwork": "./art/launchbox/tt2315506-front-r2_5501f5da-18e1-4055-9613-0932872dbb3d.webp",
     "artworkSource": "https://images.launchbox-app.com/r2_5501f5da-18e1-4055-9613-0932872dbb3d.jpg",
     "boxBack": "./art/launchbox/tt2315506-back-r2_0f9fca54-2a9d-450a-9704-70cc8e99c1cb.webp",
-    "boxSpine": "./art/launchbox/tt2315506-spine-r2_db3a0c68-836c-4c5e-b208-0cc51dc3f4ce.webp"
+    "boxSpine": "./art/launchbox/tt2315506-spine-r2_db3a0c68-836c-4c5e-b208-0cc51dc3f4ce.webp",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2315506-media-c0304ff1-9910-4519-8994-f201e1064ff9.webp",
+          "source": "https://images.launchbox-app.com/c0304ff1-9910-4519-8994-f201e1064ff9.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
   }
 }

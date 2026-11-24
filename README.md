@@ -4,16 +4,16 @@ A three-floor, first-person media store for desktop, tablet and phone. The inter
 
 ## Explore
 
-- Use WASD to walk, drag or use the arrow keys to look, and hold Shift to run. Click a case to select it and press E to inspect it. B opens the collection, M opens the floor map and Esc pauses the walkthrough. L or a double click enables mouse look.
-- On a touch screen, move with the stick, drag to look, tap a case to select it, then tap View item.
-- The item carousel opens on the selected case. Use the left and right buttons or arrow keys to browse its media section in shelf order. Drag the centered 3D case to rotate it. With the preview focused, Shift + left/right rotates horizontally and up/down rotates vertically. Reset view restores the opening angle.
+- Use WASD to walk, drag or use the arrow keys to look, and hold Shift to run. B opens the collection, M opens the floor map and Esc pauses the walkthrough. L or a double-click in the room enables mouse look.
+- Click or tap a physical stack to browse it. Use the arrows, tap a neighboring item, or swipe horizontally on a touch screen. Face-out books and retro games browse the neighboring items on their shelf.
+- Double-click or double-tap the selected item, choose More info, or press E to inspect it. Drag the enlarged model to rotate it through 360°. Its angle holds when released. Use Open case on a physical game to see its disc, cartridge, or UMD. Choose a disc on editions with multiple identified scans. Back to stack returns to the same selection.
 - The floor map visits rooms on all three levels. Doors open as you approach. Both switchback flights and the elevator connect the floors. The lift arrives when approached. Step inside and press E or choose a destination on screen.
 
 The entrance lobby on Level 1 opens straight into the TV lounge and has a separate door to a private projector theatre with movie and anime-film racks, and a TV room with separate regular and anime series shelves. Level 2 has a combined music and book library with a listening lounge, a retro gaming room with two playable arcade cabinets, and a modern gaming desk with PlayStation, Xbox and Nintendo consoles. Other game editions without a verified console disc are filed in the collectibles annex. Level 3 has a gallery with wall-mounted and suspended art, and a separately accessed private bedroom and writing desk.
 
 Each screen draws randomly from titles on its own shelves with matched trailers. A per-room history in the visitor’s browser keeps played titles out of the current cycle. The player tries alternate sources when a stream or embed fails. The 4:3 CRT uses legacy cartridge titles. Digital posters change once a minute. Click or tap a poster or a playing screen and select View details to inspect its item. Trailer sound follows your distance from the screen. Use Mute TVs or V to silence it.
 
-The music room starts on vinyl. Select a physical deck or its on-screen control to switch formats or turn it off. One audio player shuffles Spotify previews from albums stocked in the selected format. Leaving the room or opening a menu pauses playback. The active track links to Spotify. A spinning LP and its sleeve, an open cassette case beside the boombox, or an open jewel case beside the mini hi-fi displays the active release.
+The music room starts on vinyl. Select a physical deck or its on-screen control to switch formats or turn it off. One audio player shuffles Spotify previews from albums stocked in the selected format. Room music continues while browsing stacks and item details. Leaving the room, pausing the walkthrough or hiding the browser tab pauses playback. The active track links to Spotify. A spinning LP and its sleeve, an open cassette case beside the boombox, or an open jewel case beside the mini hi-fi displays the active release.
 
 ## Catalog
 
@@ -24,7 +24,7 @@ The music catalog combines the previously imported Kratex Favs selection with th
 ## Update data
 
 - Run `python3 scripts/import_trailers.py` after updating IMDb titles to refresh title-matched trailer sources from Internet Archive, IMDb-keyed film metadata, and IGDB game records. An optional HTTPS `Trailer URL` column can supply a directly playable trailer for a specific IMDb ID.
-- Run `python3 scripts/import_launchbox.py` to refresh platform-matched game box art from the LaunchBox Games Database. Use `--metadata /path/to/Metadata.zip` to read a previously downloaded LaunchBox snapshot. The importer keeps each IMDb game ID and records the LaunchBox edition and image sources. The shelves and inspection view show the front, back and spine scans available for that edition.
+- Run `python3 scripts/import_launchbox.py` to refresh platform-matched game box art from the LaunchBox Games Database. Use `--metadata /path/to/Metadata.zip` to read a previously downloaded LaunchBox snapshot. The importer keeps each IMDb game ID and records the LaunchBox edition and image sources. The shelves and inspection view show the box scans available for that edition. Opening a physical game reveals the verified disc or cartridge art available on LaunchBox.
 - Run `python3 scripts/import_music_previews.py` to update Spotify preview availability.
 - Run `python3 scripts/import_books.py` to refresh the Open Library list, edition details, and book covers.
 

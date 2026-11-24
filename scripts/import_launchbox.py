@@ -16,6 +16,8 @@ from xml.etree.ElementTree import iterparse
 
 from PIL import Image, ImageOps
 
+from launchbox_media import MEDIA_TYPES, add_media, prepare_scan
+
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 EDITIONS = DIST / "game-editions.json"
@@ -25,7 +27,7 @@ IMAGES = "https://images.launchbox-app.com/"
 REGIONS = ("North America", "United States", "World", "Europe", "United Kingdom", "Japan", "")
 FRONTS = ("Box - Front", "Box - Front - Reconstructed")
 ART_FIELDS = {"artwork", "artworkSource", "launchboxId", "launchboxUrl", "launchboxPlatform",
-              "launchboxArt", "boxBack", "boxSpine", "artworkNote"}
+              "launchboxArt", "boxBack", "boxSpine", "artworkNote", "gameMedia"}
 
 
 def name_key(name):
@@ -110,7 +112,7 @@ def image_index(archive, matches):
     images = defaultdict(list)
     for _, record in records(archive, {"GameImage"}):
         dbid = int(record["DatabaseID"])
-        if dbid in wanted and record.get("Type") in {*FRONTS, "Box - Back", "Box - Spine", "Banner"}:
+        if dbid in wanted and record.get("Type") in {*FRONTS, *MEDIA_TYPES, "Box - Back", "Box - Spine", "Banner"}:
             filename = record["FileName"]
             if not re.fullmatch(r"[A-Za-z0-9_-]+\.(?:jpg|jpeg|png|webp)", filename, flags=re.I):
                 raise ValueError("Unexpected LaunchBox image filename: " + filename)
@@ -172,11 +174,15 @@ def save_face(job):
     buf = io.BytesIO()
     fetch(IMAGES + row["file"], buf, 80 * 1024 * 1024)
     buf.seek(0)
-    with Image.open(buf) as src:
-        image = ImageOps.exif_transpose(src).convert("RGB")
+    if face == "media":
+        image = prepare_scan(buf, row)
+    else:
+        with Image.open(buf) as src:
+            image = ImageOps.exif_transpose(src).convert("RGB")
     if face == "spine" and image.width > image.height:
         image = image.transpose(Image.Transpose.ROTATE_270)
-    image.thumbnail((220, 840) if face == "spine" else (690, 840), Image.Resampling.LANCZOS)
+    if face != "media":
+        image.thumbnail((220, 840) if face == "spine" else (690, 840), Image.Resampling.LANCZOS)
     path.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(dir=path.parent, suffix=".webp", delete=False) as temp:
         staged = Path(temp.name)
@@ -208,10 +214,12 @@ def refresh(metadata):
         match = matches.get(iid)
         rule = rules.get(iid, {})
         faces = choose_faces(images[match[0]], rule) if match else {}
-        if faces:
+        if match:
             dbid, platform = match
             entry.update(launchboxId=dbid, launchboxUrl=f"https://gamesdb.launchbox-app.com/games/dbid/{dbid}",
-                         launchboxPlatform=platform, launchboxArt={})
+                         launchboxPlatform=platform)
+        if faces:
+            entry["launchboxArt"] = {}
             for face, row in faces.items():
                 fingerprint = Path(row["file"]).stem
                 path = DIST / "art" / "launchbox" / f"{iid}-{face}-{fingerprint}.webp"
@@ -226,6 +234,9 @@ def refresh(metadata):
                 entry["artworkNote"] = rule["artworkNote"]
         else:
             missing.append(item["title"])
+        platform = source_platform(item.get("platform") or old.get("platform") or rule.get("platform", ""))
+        add_media(entry, iid, images[match[0]] if match else [], rule, platform,
+                  faces.get("front", {}).get("region", ""), DIST, IMAGES, jobs)
         editions[iid] = entry
     with ThreadPoolExecutor(max_workers=7) as pool:
         list(pool.map(save_face, jobs))
@@ -234,7 +245,7 @@ def refresh(metadata):
     with tempfile.NamedTemporaryFile(dir=EDITIONS.parent, suffix=".json", delete=False) as temp:
         temp.write((json.dumps(editions, ensure_ascii=False, indent=2) + "\n").encode())
     Path(temp.name).replace(EDITIONS)
-    print(f"Matched {len(games)-len(missing)}/{len(games)} games. {len(jobs)} verified box images.")
+    print(f"Matched {len(games)-len(missing)}/{len(games)} games. {len(jobs)} verified packaging and media images.")
     if missing:
         print("No verified LaunchBox art; retaining original catalog front:", ", ".join(missing))
 

@@ -131,7 +131,10 @@ export function stockRooms(interior,box,label,seed=0){
           board(cx,deck-.019,.314,pitch-.016,.041,.008,steel);
           label(group,platform,cx,deck-.019,.319,pitch-.019,.037,{bg:'#292b2b',color:'#ebe5d5',width:768,height:118,size:66});
         }
-        stacks.set(id,{category,items});let previousTop=deck,previousDepth=0,zz=recordBin?.105:.22;
+        // Face-out displays browse neighbors on the same shelf and platform.
+        const shelfRow=printRack?rowStacks.flat():key==='retro-games'?rowStacks.flat().filter(game=>game.platform===items[0].platform):null;
+        stacks.set(id,{category,items,browseItems:shelfRow||items,
+          label:shelfRow?(items[0].platform||category.label)+' shelf':category.label+' · Stack'});let previousTop=deck,previousDepth=0,zz=recordBin?.105:.22;
         items.forEach((item,index)=>{
           const {group:model,spec,shell}=createMediaCase(item,true);
           if(isBoxRack && index===0)zz=.255+extension-spec.d/2;

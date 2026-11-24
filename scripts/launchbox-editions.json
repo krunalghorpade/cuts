@@ -10,16 +10,28 @@
     "databaseId": 447842,
     "frontFile": "3c23163a-b9ae-4e2b-b8ba-7878f7ff5c19.jpg",
     "frontOnly": true,
-    "artworkNote": "LaunchBox has a promotional banner for this digital expansion. The artwork is shown at its original proportions."
+    "artworkNote": "LaunchBox has a promotional banner for this digital expansion. The artwork is shown at its original proportions.",
+    "mediaKind": "digital"
   },
   "tt0217061": {
-    "platform": "Windows"
+    "platform": "Windows",
+    "mediaFiles": [
+      {
+        "file": "b63fdb4e-b450-45ee-9a29-9484ed678dcd.png"
+      }
+    ]
   },
   "tt0282366": {
     "platform": "Windows"
   },
   "tt0258523": {
-    "platform": "Windows"
+    "platform": "Windows",
+    "mediaFiles": [
+      {
+        "file": "25077f71-7cd4-4918-a2a1-1a91a06ad429.png",
+        "label": "Play disc"
+      }
+    ]
   },
   "tt0296870": {
     "platform": "Windows"
@@ -28,32 +40,52 @@
     "platform": "Windows"
   },
   "tt0259104": {
-    "platform": "Windows"
+    "platform": "Windows",
+    "mediaFiles": []
   },
   "tt2224413": {
     "platform": "Windows"
   },
   "tt0275393": {
-    "platform": "Windows"
+    "platform": "Windows",
+    "mediaFiles": [
+      {
+        "file": "e83f9de8-aa4f-49b3-8f9a-194868cd392a.png"
+      }
+    ]
   },
   "tt2584348": {
     "platform": "Windows",
-    "frontFile": "cf809d92-1858-489e-9c9a-007b530d2022.jpg"
+    "frontFile": "cf809d92-1858-489e-9c9a-007b530d2022.jpg",
+    "mediaKind": "digital"
   },
   "tt0466736": {
     "platform": "Windows",
-    "frontFile": "0bd902e1-e3f7-4bbf-8ded-b6d46cf8d026.jpg"
+    "frontFile": "0bd902e1-e3f7-4bbf-8ded-b6d46cf8d026.jpg",
+    "mediaFiles": [
+      {
+        "file": "2f5d4cb9-20f0-40fe-a1fd-ce9a06d8a816.png",
+        "label": "Disc 1"
+      }
+    ]
   },
   "tt7795464": {
-    "platform": "Windows"
+    "platform": "Windows",
+    "mediaFiles": [
+      {
+        "file": "72716b7c-b4e2-455d-b4d1-fd8a2c8b9049.png"
+      }
+    ]
   },
   "tt2290962": {
     "platform": "Windows",
-    "frontFile": "3494a505-747f-41d7-99bb-c646952e43c7.jpg"
+    "frontFile": "3494a505-747f-41d7-99bb-c646952e43c7.jpg",
+    "mediaKind": "digital"
   },
   "tt2071507": {
     "platform": "Windows",
-    "frontFile": "d823bc11-a294-4043-8bb3-b77203417ebb.jpg"
+    "frontFile": "d823bc11-a294-4043-8bb3-b77203417ebb.jpg",
+    "mediaFiles": []
   },
   "tt13258344": {
     "databaseId": 447791,
@@ -119,16 +151,52 @@
     "sourcePlatform": "Microsoft Xbox One",
     "frontOnly": true,
     "frontFile": "6242e4c4-8edd-4168-985d-1472ca6c5635.jpg",
-    "artworkNote": "Shared Xbox Series X and Xbox One retail cover for Resident Evil Village."
+    "artworkNote": "Shared Xbox Series X and Xbox One retail cover for Resident Evil Village.",
+    "sharedMediaPlatform": true
   },
   "tt0210061": {
-    "artworkNote": "The North American Super Nintendo box carries the original regional title, Final Fantasy III."
+    "artworkNote": "The North American Super Nintendo box carries the original regional title, Final Fantasy III.",
+    "mediaFiles": [
+      {
+        "file": "2b24ffff-a3a1-4d33-9c3b-3c1081636a3e.png",
+        "layout": "label",
+        "labelCorners": [
+          [
+            0.13111111111111112,
+            0.0136986301369863
+          ],
+          [
+            0.14,
+            0.3780821917808219
+          ],
+          [
+            0.7044444444444444,
+            0.5589041095890411
+          ],
+          [
+            0.7555555555555555,
+            0.17534246575342466
+          ]
+        ],
+        "labelAspect": 2.15
+      }
+    ]
   },
   "tt0184666": {
-    "frontFile": "06da83f4-2c7b-4551-9792-8e2292ff6afb.jpg"
+    "frontFile": "06da83f4-2c7b-4551-9792-8e2292ff6afb.jpg",
+    "mediaFiles": [
+      {
+        "file": "c20454c0-e6ab-4dd9-810d-50ade4278d3a.png"
+      }
+    ]
   },
   "tt0383385": {
-    "frontFile": "56b5479a-bba5-43d6-b458-0fcd00bf10ba.png"
+    "frontFile": "56b5479a-bba5-43d6-b458-0fcd00bf10ba.png",
+    "mediaFiles": [
+      {
+        "file": "25129bda-7947-4a3c-bec7-d80907b62dc4.png"
+      }
+    ]
   },
   "tt1479962": {
     "frontFile": "1174b9ad-68a1-4098-82de-41c60969fde3.jpg"
@@ -137,19 +205,64 @@
     "frontFile": "r2_458fa392-6068-4afd-b5e4-241f50bd1463.jpg"
   },
   "tt1349460": {
-    "frontFile": "cbfc0edb-730a-48ed-8fd7-e6b3e2e9107b.jpg"
+    "frontFile": "cbfc0edb-730a-48ed-8fd7-e6b3e2e9107b.jpg",
+    "mediaFiles": [
+      {
+        "file": "r2_890a3c50-f776-4c21-8fdc-26745c182755.png"
+      }
+    ]
   },
   "tt0397042": {
-    "frontFile": "r2_acc0564e-f465-405b-bf84-0ee721b1714d.png"
+    "frontFile": "r2_acc0564e-f465-405b-bf84-0ee721b1714d.png",
+    "mediaFiles": [
+      {
+        "file": "0442ea4b-5d2c-4ee9-8165-d1ced4b250a0.png"
+      }
+    ]
   },
   "tt0263641": {
-    "frontFile": "r2_689c3eda-bd3b-452d-997c-c25b5335656e.jpg"
+    "frontFile": "r2_689c3eda-bd3b-452d-997c-c25b5335656e.jpg",
+    "mediaFiles": [
+      {
+        "file": "7de8570b-5750-4917-bc37-5df77e28cb97.png",
+        "layout": "label",
+        "labelCorners": [
+          [
+            0.13111111111111112,
+            0.0136986301369863
+          ],
+          [
+            0.14,
+            0.3780821917808219
+          ],
+          [
+            0.7044444444444444,
+            0.5589041095890411
+          ],
+          [
+            0.7555555555555555,
+            0.17534246575342466
+          ]
+        ],
+        "labelAspect": 2.15
+      }
+    ]
   },
   "tt0284110": {
-    "frontFile": "0ac3558d-5e4a-4515-8384-a9939928610c.jpg"
+    "frontFile": "0ac3558d-5e4a-4515-8384-a9939928610c.jpg",
+    "mediaFiles": [
+      {
+        "file": "e384d90c-c493-41c0-8624-b5df444b2c04.png"
+      }
+    ]
   },
   "tt0416779": {
-    "frontFile": "e0525716-30ba-4c1d-8522-669e10bf21f4.jpg"
+    "frontFile": "e0525716-30ba-4c1d-8522-669e10bf21f4.jpg",
+    "mediaFiles": [
+      {
+        "file": "efa92f20-27aa-4eda-a07d-1fad2f93e9fe.png"
+      }
+    ]
   },
   "tt8329350": {
     "frontFile": "5e0c0504-9a36-4e2f-aca0-4125c56da442.jpg"
@@ -161,12 +274,289 @@
     "frontFile": "3cf369be-2b6a-4a13-910b-1ca30ba95feb.jpg"
   },
   "tt0420798": {
-    "frontFile": "4b70a068-c41f-4c7d-b367-33b33b7dc6b3.jpg"
+    "frontFile": "4b70a068-c41f-4c7d-b367-33b33b7dc6b3.jpg",
+    "mediaFiles": [
+      {
+        "file": "043aff98-cf00-4e0e-a369-ea9459e893e6.png"
+      }
+    ]
   },
   "tt1264900": {
     "frontFile": "0467ddd4-b66b-470e-a648-67c5c34c55af.jpg"
   },
   "tt0390296": {
     "frontFile": "r2_b52f6419-7e31-4211-80a2-23b48eaba90b.png"
+  },
+  "tt0208155": {
+    "mediaFiles": [
+      {
+        "file": "b3bda860-0ef2-461e-b1ff-91869f22958e.png",
+        "label": "Disc 1"
+      },
+      {
+        "file": "779b194a-5d2d-453f-a243-a5393c13506c.png",
+        "label": "Disc 2"
+      },
+      {
+        "file": "b5576a83-9e8b-493b-a314-38f319231949.png",
+        "label": "Disc 3"
+      }
+    ]
+  },
+  "tt0180825": {
+    "mediaFiles": [
+      {
+        "file": "e2cfb4a5-df51-4a29-8324-9c5de6689057.png",
+        "label": "Disc 1"
+      },
+      {
+        "file": "92c86da4-63e7-460d-9e02-ff4d79128dff.png",
+        "label": "Disc 2"
+      }
+    ]
+  },
+  "tt2103188": {
+    "mediaFiles": [
+      {
+        "file": "05b583e4-8114-42e1-980d-5b8d483ca2de.png",
+        "label": "Install disc"
+      },
+      {
+        "file": "046e255f-c438-4d49-a6f1-e9cbb61feac8.png",
+        "label": "Play disc"
+      }
+    ]
+  },
+  "tt0374692": {
+    "mediaFiles": [
+      {
+        "file": "f92e8475-9472-4823-b619-b8beddec58b4.png"
+      }
+    ]
+  },
+  "tt10471854": {
+    "mediaFiles": [
+      {
+        "file": "3b510cb8-0fb3-4b6a-8744-5a44736066be.png"
+      }
+    ]
+  },
+  "tt0486673": {
+    "mediaFiles": [
+      {
+        "file": "9abc15ba-40b2-4eac-a32c-be4835ab5432.png"
+      }
+    ]
+  },
+  "tt0249174": {
+    "mediaFiles": [
+      {
+        "file": "6270c6cf-fde4-424d-9cfc-92aefd30c8c5.png"
+      }
+    ]
+  },
+  "tt0846694": {
+    "mediaFiles": [
+      {
+        "file": "4c64ba67-6bbc-4264-89cc-0ab9b489c02d.png",
+        "label": "Disc 1"
+      },
+      {
+        "file": "89895543-86b5-400c-96af-088aaf7947d5.png",
+        "label": "Disc 2 · Special features"
+      }
+    ]
+  },
+  "tt1073668": {
+    "mediaFiles": [
+      {
+        "file": "787524d9-4f1e-472c-9eb8-64a0ccdd36d2.png"
+      }
+    ]
+  },
+  "tt1839558": {
+    "mediaFiles": [
+      {
+        "file": "f0389044-2efe-4412-ba13-dfa7db13679f.png",
+        "label": "Disc 1"
+      },
+      {
+        "file": "r2_9719e89a-6416-4667-9b90-527d20f9610c.png",
+        "label": "Disc 2"
+      }
+    ]
+  },
+  "tt5807780": {
+    "mediaFiles": [
+      {
+        "file": "c0a22763-d09c-4370-aa06-d0a8ae6069c3.png"
+      }
+    ]
+  },
+  "tt1800763": {
+    "mediaFiles": [
+      {
+        "file": "r2_d3902062-98ca-49a1-82f9-947255b2e70e.png"
+      }
+    ]
+  },
+  "tt0413662": {
+    "mediaFiles": [
+      {
+        "file": "f2a578bf-030c-44a6-a3e9-92350bdeaef4.png"
+      }
+    ]
+  },
+  "tt12496904": {
+    "mediaFiles": [
+      {
+        "file": "r2_a5241d08-3030-4402-98e1-e1c648a1cf4a.png",
+        "label": "Data disc"
+      },
+      {
+        "file": "r2_1d667544-2c43-4d99-8742-68c3997b3ded.png",
+        "label": "Play disc"
+      }
+    ]
+  },
+  "tt0177266": {
+    "mediaFiles": [
+      {
+        "file": "5442ae86-8631-4362-b5e1-8c77ac9c2f96.png"
+      }
+    ]
+  },
+  "tt6298000": {
+    "mediaFiles": [
+      {
+        "file": "r2_a350da5f-9e1d-490b-bd5b-6be224216d7d.png",
+        "label": "Data disc"
+      },
+      {
+        "file": "r2_07ae4afc-4b0b-4f49-a24c-c7d94914ecef.png",
+        "label": "Play disc"
+      }
+    ]
+  },
+  "tt2739708": {
+    "mediaFiles": [
+      {
+        "file": "e727b36b-e93d-4732-a635-e40b868c8a94.png",
+        "label": "Disc 1"
+      },
+      {
+        "file": "r2_dc958887-d589-4118-a708-86d0e5efe33b.png",
+        "label": "Disc 2"
+      }
+    ]
+  },
+  "tt2370518": {
+    "mediaFiles": [
+      {
+        "file": "r2_b85c3ec5-7078-4619-8590-c0ba9db3c831.png",
+        "label": "Disc 1"
+      },
+      {
+        "file": "r2_61a3372a-7571-451d-8f6f-cc3ba639d380.png",
+        "label": "Disc 2"
+      }
+    ]
+  },
+  "tt0288740": {
+    "mediaFiles": [
+      {
+        "file": "0a40d723-c657-4266-af60-2f25d7acf2fa.png"
+      }
+    ]
+  },
+  "tt0217732": {
+    "mediaFiles": [
+      {
+        "file": "2c3b11c1-d473-49fc-915a-3c5359ed8431.png"
+      }
+    ]
+  },
+  "tt2315506": {
+    "mediaFiles": [
+      {
+        "file": "c0304ff1-9910-4519-8994-f201e1064ff9.png",
+        "layout": "shell"
+      }
+    ]
+  },
+  "tt8558306": {
+    "mediaFiles": [
+      {
+        "file": "r2_f974d445-586d-4841-a3ac-7ab37670ab3d.png",
+        "regionalAlternative": true,
+        "printedRegion": "Europe",
+        "printEvidence": "CUSA-13801, PEGI 18 and USK 18"
+      }
+    ]
+  },
+  "tt5807606": {
+    "mediaFiles": [
+      {
+        "file": "5fa37ccb-407c-45e8-a42b-4f4447de391a.png",
+        "regionalAlternative": true,
+        "printedRegion": "Japan",
+        "printEvidence": "PCJS-66054 and JASRAC"
+      }
+    ]
+  },
+  "tt6161168": {
+    "mediaFiles": [
+      {
+        "file": "r2_66e2ec97-cabe-466d-ad9d-ebff348fedd7.png",
+        "regionalAlternative": true,
+        "label": "Data Disc"
+      },
+      {
+        "file": "r2_6fbd8dfa-2587-4a02-a2bc-22ac1c3be525.png",
+        "regionalAlternative": true,
+        "label": "Play Disc"
+      }
+    ]
+  },
+  "tt5838588": {
+    "mediaFiles": [
+      {
+        "file": "r2_a4e0f015-de3e-463e-bd5b-dd9aced19056.png",
+        "regionalAlternative": true
+      }
+    ]
+  },
+  "tt7651352": {
+    "mediaFiles": [
+      {
+        "file": "r2_06002a48-8304-47b5-9356-196943fcfe92.png",
+        "regionalAlternative": true
+      }
+    ]
+  },
+  "tt0462448": {
+    "mediaFiles": [
+      {
+        "file": "r2_72a19266-9436-459c-9c37-8cdb58aa87e6.png",
+        "regionalAlternative": true
+      }
+    ]
+  },
+  "tt3810192": {
+    "mediaFiles": [
+      {
+        "file": "93ef8399-cd27-41d9-8908-487da84c43c1.png",
+        "regionalAlternative": true,
+        "label": "Disc 1"
+      }
+    ]
+  },
+  "tt1776254": {
+    "mediaFiles": [
+      {
+        "file": "42425a31-7c16-435a-96ae-8df2c78d5e70.png",
+        "regionalAlternative": true
+      }
+    ]
   }
 }

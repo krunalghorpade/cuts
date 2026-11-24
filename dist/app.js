@@ -19,7 +19,7 @@ const hud = $('hud');
 const catalogPanel = $('catalogPanel');
 const detailPanel = $('detailPanel');
 const prompt = $('inspectPrompt');
-const preview=createCasePreview($('casePreview'),ITEMS);
+const preview=createCasePreview($('casePreview'),{onStep:turnItem,onDetails:moreInfo});
 $('previewReset').onclick=preview.reset;
 const mobile = matchMedia('(pointer: coarse)').matches;
 const scene = new THREE.Scene();
@@ -151,24 +151,38 @@ async function enrichAudio(item){
   if(!item.description&&album.strDescriptionEN){const desc=document.createElement('p');desc.textContent=album.strDescriptionEN.slice(0,270)+(album.strDescriptionEN.length>270?'…':'');extra.append(desc);}
   if(extra.childNodes.length)extra.classList.remove('hidden');
 }
-const sections=new Map();
-for(const {category,items} of stacks.values()){
-  if(!sections.has(category.id))sections.set(category.id,[]);
-  sections.get(category.id).push(...items);
-}
-let detailItems=[], detailIndex=-1, fromCatalog=false;
-function openDetail(item){
-  if(!item)return;
-  fromCatalog=!catalogPanel.classList.contains('hidden');
-  detailItems=item.exhibit?[item]:sections.get(item.category);
-  detailIndex=detailItems.findIndex(entry=>entry.id===item.id);
-  if(detailIndex<0)return;
-  uiOpen=true;keys.clear();
+let detailItems=[],detailIndex=-1,browseStack=null,fromCatalog=false,caseOpen=false,mediumIndex=0;
+let returnFocus=null,caseRequest=0;
+function showPopup(){
+  if(detailPanel.classList.contains('hidden')){
+    fromCatalog=!catalogPanel.classList.contains('hidden');
+    returnFocus=document.activeElement;
+  }
+  uiOpen=true;keys.clear();dragLook=false;
   catalogPanel.classList.add('hidden');intro.classList.add('hidden');
   detailPanel.classList.remove('hidden');document.exitPointerLock?.();
-  showDetailItem();
-  $('closeDetail').focus({preventScroll:true});
 }
+function openStack(shell){
+  const stack=stacks.get(shell.userData.stackId);
+  if(!stack)return;
+  showPopup();browseStack=stack;
+  detailItems=stack.browseItems;detailIndex=detailItems.indexOf(shell.userData.item);
+  showDetailItem('stack');$('moreInfo').focus({preventScroll:true});
+}
+function openDetail(item){
+  if(!item)return;
+  showPopup();browseStack=null;detailItems=[item];detailIndex=0;
+  showDetailItem('info');$('closeDetail').focus({preventScroll:true});
+}
+function moreInfo(){
+  if(detailPanel.dataset.view!=='stack'||!currentDetailItem)return;
+  showDetailItem('info');$('backToStack').focus({preventScroll:true});
+}
+function backToStack(){
+  if(!browseStack)return;
+  showDetailItem('stack');$('moreInfo').focus({preventScroll:true});
+}
+$('moreInfo').onclick=moreInfo;$('backToStack').onclick=backToStack;
 const catalogById=new Map(ITEMS.map(item=>[item.id,item]));
 function showRelated(item){
   const panel=$('relatedTitles');panel.replaceChildren();
@@ -192,28 +206,75 @@ function showRelated(item){
 }
 function turnItem(direction){
   const next=detailIndex+direction;
-  if(next<0 || next>=detailItems.length)return;
-  detailIndex=next;showDetailItem(direction);
+  if(detailPanel.dataset.view!=='stack'||next<0||next>=detailItems.length)return;
+  detailIndex=next;showDetailItem('stack',direction);
 }
-function showDetailItem(direction=0){
-  const item=detailItems[detailIndex];
-  currentDetailId=item.id;currentDetailItem=item;
-  const prev=detailItems[detailIndex-1], next=detailItems[detailIndex+1];
+function updateCaseControls(item){
+  const media=item.gameMedia,kind=media?.kind,actual=media?.media||[];
+  const physical=['disc','cartridge','umd'].includes(kind);
+  $('caseActions').hidden=!media;
+  $('toggleCase').hidden=!physical;
+  $('toggleCase').textContent=caseOpen?'Close case':'Open case';
+  $('toggleCase').setAttribute('aria-pressed',String(caseOpen));
+  const selector=$('mediumSelect');
+  $('mediumPicker').hidden=!caseOpen||actual.length<2;
+  if(caseOpen&&actual.length>1){
+    selector.replaceChildren(...actual.map((entry,i)=>new Option(entry.label||'Disc '+(i+1),String(i))));
+    selector.value=String(mediumIndex);
+  }
+  const medium=actual[mediumIndex];
+  let note='';
+  if(kind==='digital')note='Digital release.';
+  else if(kind==='unknown')note='Physical media unverified for this edition.';
+  else if(caseOpen){
+    if(!medium?.artwork)note='LaunchBox has no verified label scan for this edition.';
+    else note=[medium.label,medium.regionalAlternative?medium.region+' disc artwork':'',
+      medium.type==='Cart - 3D'?'Cartridge label from the LaunchBox 3D image':''].filter(Boolean).join(' · ');
+  }
+  $('mediumNote').textContent=note;
+}
+async function viewCase(open,index=0){
+  const item=currentDetailItem,request=++caseRequest;
+  caseOpen=open;mediumIndex=index;updateCaseControls(item);
+  try{await preview.setCaseOpen(open,index);}
+  catch(error){
+    if(request!==caseRequest||currentDetailItem!==item)return;
+    caseOpen=false;updateCaseControls(item);
+    $('mediumNote').textContent='The case could not load. Choose Open case to retry.';
+    console.error('Open game case unavailable',error);
+  }
+}
+$('toggleCase').onclick=()=>viewCase(!caseOpen,mediumIndex);
+$('mediumSelect').onchange=event=>viewCase(true,Number(event.target.value));
+function showDetailItem(view,direction=0){
+  const item=detailItems[detailIndex],browsing=view==='stack';
+  currentDetailId=item.id;currentDetailItem=item;caseOpen=false;mediumIndex=0;caseRequest++;
+  detailPanel.dataset.view=view;
+  const prev=browsing?detailItems[detailIndex-1]:null,next=browsing?detailItems[detailIndex+1]:null;
   $('itemPrev').disabled=!prev;$('itemNext').disabled=!next;
-  $('itemPrev').title=prev?prev.title:'First item';
-  $('itemNext').title=next?next.title:'Last item';
+  $('itemPrev').title=prev?prev.title:'First item';$('itemNext').title=next?next.title:'Last item';
   $('itemPosition').textContent=(detailIndex+1)+' / '+detailItems.length;
   detailPanel.scrollTop=0;
-  detailPanel.querySelector('.carousel-nav').classList.toggle('hidden',!!item.exhibit);
-  if(item.exhibit)preview.showModel(item.exhibit.model,item.title);
-  else preview.show(item,prev,next,direction);
+  $('backToStack').hidden=browsing||!browseStack;
+  $('inspectLocation').hidden=!browsing&&!!browseStack;
+  $('inspectLocation').textContent=browsing?browseStack.label:'Item details';
+  $('gestureHint').textContent=browsing?(mobile?(prev||next?'Swipe to browse · Double-tap for details':'Double-tap for details'):
+    'Drag to rotate · Double-click for details'):'Drag to rotate';
+  $('previewReset').hidden=browsing&&mobile&&!!(prev||next);
+  $('detailTitle').textContent=item.title;
+  $('detailCreator').textContent=browsing?[item.creator,item.year].filter(Boolean).join(' · '):item.creator;
+  preview.show(item,{previous:prev,next,step:direction,view});
+  if(browsing)return;
+  updateCaseControls(item);
   $('audioExtra').classList.add('hidden');
   $('itemDescription').textContent=item.description;
   showRelated(item);
+  const digital=item.gameMedia?.kind==='digital';
+  $('sizeLabel').hidden=digital;$('detailSize').hidden=digital;
   $('sizeLabel').textContent=item.exhibit?'Console size (upright)':['books','manga'].includes(item.category) ? (item.estimatedSize?'Estimated size':'Book size') : 'Case size';
   $('detailSize').textContent=(item.exhibit?.dimensions||caseSpec(item).dimensions).join(' × ')+' mm';
   $('detailCategory').textContent=item.exhibit?.section||categoryById[item.category].label;$('detailTitle').textContent=item.title;
-  $('detailCreator').textContent=item.creator;$('detailYear').textContent=item.year;$('detailFormatValue').textContent=item.exhibit?.format||caseSpec(item).label;$('detailSource').textContent=item.source;
+  $('detailCreator').textContent=item.creator;$('detailYear').textContent=item.year;$('detailFormatValue').textContent=digital?'Digital release':item.exhibit?.format||caseSpec(item).label;$('detailSource').textContent=item.source;
   const sourceLink=$('sourceLink');
   sourceLink.classList.toggle('hidden', !item.sourceUrl);
   if(item.sourceUrl){
@@ -234,7 +295,8 @@ $('itemPrev').onclick=()=>turnItem(-1);
 $('itemNext').onclick=()=>turnItem(1);
 function closeDetail(returnToCatalog=fromCatalog){
   preview.hide();currentDetailId=null;currentDetailItem=null;
-  detailPanel.classList.add('hidden');detailItems=[];detailIndex=-1;fromCatalog=false;
+  detailPanel.classList.add('hidden');detailItems=[];detailIndex=-1;fromCatalog=false;browseStack=null;caseRequest++;
+  if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});returnFocus=null;
   if(returnToCatalog){
     uiOpen=true;catalogPanel.classList.remove('hidden');
     $('catalogDetails').focus({preventScroll:true});
@@ -337,7 +399,7 @@ function selectCase(shell){
 }
 function useTarget(shell){
   const data=shell?.userData;
-  if(!data?.device){selectCase(shell);return;}
+  if(!data?.device){selectCase(shell);if(data?.stackId)openStack(shell);return;}
   selectCase(null);
   if(['vinyl','cassettes','cds'].includes(data.device)){musicPlayer.toggle(data.device);return;}
   keys.clear();uiOpen=true;document.exitPointerLock?.();openArcade(data.device,data.title);
@@ -374,9 +436,18 @@ canvas.addEventListener('pointerup',endDrag);canvas.addEventListener('pointercan
 document.addEventListener('keydown',event=>{
   if($('mapDialog').open||$('arcadeGame').open||$('liftDialog').open||elevator.riding)return;
   if(currentDetailItem){
-    if(event.key==='Escape')closeDetail();
-    else if(event.key==='ArrowLeft'||event.key==='ArrowRight'){
+    const browsing=detailPanel.dataset.view==='stack';
+    if(event.key==='Tab'){
+      const controls=[...detailPanel.querySelectorAll('button:not(:disabled),a[href],select,canvas[tabindex]')].filter(el=>el.getClientRects().length);
+      const first=controls[0],last=controls.at(-1);
+      if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+      else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+    }else if(event.key==='Escape'){
+      event.preventDefault();if(!browsing&&browseStack)backToStack();else closeDetail();
+    }else if(browsing&&(event.key==='ArrowLeft'||event.key==='ArrowRight')){
       event.preventDefault();turnItem(event.key==='ArrowLeft'?-1:1);
+    }else if(browsing&&!event.repeat&&(event.code==='KeyE'||event.key==='Enter'&&event.target===$('casePreview'))){
+      event.preventDefault();moreInfo();
     }
     return;
   }
@@ -473,7 +544,7 @@ function updateFocus(){
     $('promptText').textContent=(current.userData.display==='tv'?'Now playing · ':'')+item.title;
   }else{
     prompt.querySelector('.keycap').textContent=mobile?'':isSelected||aim?'E':'Click';
-    $('promptText').textContent=(isSelected||aim?'View item · ':'Select · ')+item.title;
+    $('promptText').textContent='Browse stack · '+item.title;
   }
 }
 const liftDialog=$('liftDialog'),liftAction=$('liftAction'),liftMessage=$('liftMessage');
@@ -509,6 +580,7 @@ function updateLift(dt){
   if(liftMessage.textContent!==status)liftMessage.textContent=status;
   liftMessage.classList.toggle('hidden',!active||uiOpen||!status);
 }
+let roomFrameValid=false;
 function animate(){
   requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.15);
   updateLift(dt);
@@ -520,12 +592,17 @@ function animate(){
   interior.roomModels.tick(performance.now(),level);
   const currentRoom=roomAt(level,camera.position.x,camera.position.z)?.id;
   houseLights.hidden=currentRoom!=='cinema'||!active||uiOpen;
-  updateTVs(camera,currentRoom,active&&!uiOpen);
-  musicPlayer.update(active&&!uiOpen&&(currentRoom==='music'||currentRoom==='library'),dt);
-  if(!currentDetailItem){renderer.autoClear=false;renderer.clear();renderer.render(scene,camera);}
+  updateTVs(camera,currentRoom,active);
+  musicPlayer.update(active&&(currentRoom==='music'||currentRoom==='library'),dt);
+  // The camera is stationary behind the glass. Keep its last frame composited
+  // so a touch gesture only redraws the inspected models.
+  if(!currentDetailItem||!roomFrameValid){
+    renderer.autoClear=false;renderer.clear();renderer.render(scene,camera);roomFrameValid=true;
+  }
   preview.render();
 }animate();
 window.addEventListener('resize',()=>{
+  roomFrameValid=false;
   camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
   renderer.setPixelRatio(Math.min(devicePixelRatio,Math.sqrt(900000/(innerWidth*innerHeight))));
   renderer.setSize(innerWidth,innerHeight);
