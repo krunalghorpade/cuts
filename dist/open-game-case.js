@@ -64,18 +64,31 @@ function cartridgeRimColor(image){
 const clamp=n=>Math.max(0,Math.min(1,n));
 
 export function createOpenGameCase(item,spec,mediumIndex=0){
-  const game=item.gameMedia,kind=game?.kind;
+  return hingedPackage(item,spec,item.gameMedia,mediumIndex);
+}
+
+export function createOpticalCase(item,spec,discPrint,mountInserts,linerPrint){
+  return hingedPackage(item,spec,{kind:'disc'},0,{discPrint,mountInserts,linerPrint});
+}
+
+function hingedPackage(item,spec,game,mediumIndex,release){
+  const kind=game?.kind;
   if(!['disc','cartridge','umd'].includes(kind))return null;
   const model=new T.Group(),stage=new T.Group();stage.scale.setScalar(.001);model.add(stage);
   model.name=item.title+' · open package';
   const w=spec.w*1000,h=spec.h*1000,d=spec.d*1000,platform=item.platform||'';
   const entry=game.media?.[mediumIndex],textures=[],materials=new Set(),geometries=new Set();
   const loader=new T.TextureLoader(),animators=[];
+  const mountInsert=release?.mountInserts(geometries);
+  if(release)textures.push(release.discPrint);
+  if(release?.linerPrint)textures.push(release.linerPrint);
   let disposed=false;
   function mat(color,roughness=.55,metalness=0,options={}){
     const m=new T.MeshStandardMaterial({color,roughness,metalness,...options});materials.add(m);return m;
   }
-  const shell=mat(shellColor(platform),.36),shadow=mat('#25272a',.77),rim=mat(shellColor(platform),.28);
+  const color=release?spec.shell:shellColor(platform);
+  const jewel=platform==='PlayStation'||spec.kind==='cd';
+  const shell=mat(color,.36),shadow=mat('#25272a',.77),rim=mat(color,.28);
   rim.color.multiplyScalar(1.28);
   const polymer=mat('#383a3c',.48),well=mat('#343639',.72),nickel=mat('#b9bdc0',.29,.71);
   const cardStock=mat('#c1bba6',.91),cutEdge=mat('#998f74',.9);
@@ -141,7 +154,11 @@ export function createOpenGameCase(item,spec,mediumIndex=0){
     annulus(disc,'Reflective substrate',hole,radius,foil,0,0,-.5).rotation.y=Math.PI;
     for(const [r,tube] of [[radius-.44,.45],[hole+.31,.31]])hoop(disc,'Polycarbonate edge',r,tube,foil,0,0,0);
     annulus(disc,'Label side',hole,radius-.22,blank,0,0,.48);
-    if(entry?.artwork){
+    if(release){
+      const ink=mat('#ffffff',.56,.06,{map:release.discPrint,alphaTest:.15});
+      annulus(disc,'Printed release label',Math.max(hole,radius*.165),radius-.72,ink,0,0,.56);
+      hoop(disc,'Mastering ring',radius*.22,.13,foil,0,0,.55);
+    }else if(entry?.artwork){
       const ink=printMaterial(entry.artwork,{alphaTest:.18,roughness:.53});
       annulus(disc,'LaunchBox · printed disc',hole,radius-.46,ink,0,0,.54);
     }else{
@@ -220,6 +237,10 @@ export function createOpenGameCase(item,spec,mediumIndex=0){
       const clear=mat('#c6cac7',.23,.12),paper=mat('#d3d2c7',.86);
       // A front booklet shows its plain paper reverse inside a clear jewel lid.
       plate(cover,'Reverse of front booklet',w-15,h-6,1.15,paper,-3.4,0,-1.6,.65);
+      if(release?.linerPrint){
+        const liner=mat('#ffffff',.88,0,{map:release.linerPrint});
+        mesh(cover,'Album liner',new T.PlaneGeometry(w-15,h-6),liner,-3.4,0,-2.22).rotation.y=Math.PI;
+      }
       for(const sign of [-1,1]){
         plate(cover,'Clear booklet stop',5.2,18,1.8,clear,-w*.46,sign*h*.31,-2.64,2);
         plate(cover,'Clear corner tab',7.2,9.2,1.55,clear,w*.405,sign*h*.42,-2.52,2.5);
@@ -228,7 +249,7 @@ export function createOpenGameCase(item,spec,mediumIndex=0){
       return;
     }
     const x=w*.43,y=h*.42,z=-1.18;
-    const guide=mat(shellColor(platform),.30);guide.color.multiplyScalar(1.45);
+    const guide=mat(color,.30);guide.color.multiplyScalar(1.45);
     for(const sign of [-1,1]){
       routedRib(cover,[[-x,y*sign*.65,z],[-x,y*sign*.95,z],[-x+2,y*sign,z],[-x+11,y*sign,z]],.48,guide);
       routedRib(cover,[[x-10,y*sign,z],[x-2,y*sign,z],[x,y*sign*.96,z],[x,y*sign*.72,z]],.48,guide);
@@ -245,7 +266,6 @@ export function createOpenGameCase(item,spec,mediumIndex=0){
     }
   }
   function clamshell(){
-    const jewel=platform==='PlayStation';
     const inside=jewel?well:shell;
     const back=joint(stage,'Tray half',w/2,0,-d/2+1.25);
     plate(back,'Back panel',w-1.7,h-1.5,2,inside,0,0,0,2);
@@ -258,12 +278,21 @@ export function createOpenGameCase(item,spec,mediumIndex=0){
       }
     };
     frame(back,rim,1);
-    print(back,'Retail back insert',item.boxBack,w-4,h-4,0,0,-1.08,true);
+    if(mountInsert)mountInsert(back,'MAT_BACK',0,0,-1.26);
+    else print(back,'Retail back insert',item.boxBack,w-4,h-4,0,0,-1.08,true);
     const hinge=joint(stage,'Living hinge'),cover=joint(hinge,'Lid',w/2,0,d/2-1.25);
     plate(cover,'Cover panel',w-1.8,h-1.6,1.8,inside,0,0,0,2);
     frame(cover,rim,-1);
     bookletMount(cover,jewel);
-    print(cover,'Retail front insert',item.artwork,w-3.7,h-4,0,0,1.03);
+    if(mountInsert){
+      mountInsert(cover,'MAT_FRONT',0,0,1.15);mountInsert(cover,'MAT_BAND',0,0,1.17);
+      if(jewel){
+        const acrylic=mat('#d9e4e7',.18,.13,{transparent:true,opacity:.56,depthWrite:false});
+        for(const sy of [-1,1])bar(cover,'Clear lid lip',w-2,1.25,3.0,acrylic,0,sy*(h/2-1.3),0);
+        bar(cover,'Ribbed hinge strip',10.4,h-2,1.7,well,-w/2+5.6,0,1.2);
+        for(let i=0;i<15;i++)bar(cover,'Jewel cover fluting',.25,h-3,.5,rim,-w/2+1.2+i*.6,0,2.1);
+      }
+    }else print(cover,'Retail front insert',item.artwork,w-3.7,h-4,0,0,1.03);
     for(const s of [-1,1]){
       plate(cover,'Booklet spring',6.5,12,1.4,rim,w*.38,s*h*.315,-1.84,1.6);
       bar(cover,'Booklet retaining lip',6,4,2.2,shell,w*.38-1.8,s*h*.315,-2.63);

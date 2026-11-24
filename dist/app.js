@@ -19,7 +19,7 @@ const hud = $('hud');
 const catalogPanel = $('catalogPanel');
 const detailPanel = $('detailPanel');
 const prompt = $('inspectPrompt');
-const preview=createCasePreview($('casePreview'),{onStep:turnItem,onDetails:moreInfo});
+const preview=createCasePreview($('casePreview'),{onStep:turnItem,onDetails:moreInfo,onTravel:showRecordTravel});
 $('previewReset').onclick=preview.reset;
 const mobile = matchMedia('(pointer: coarse)').matches;
 const scene = new THREE.Scene();
@@ -209,12 +209,20 @@ function turnItem(direction){
   if(detailPanel.dataset.view!=='stack'||next<0||next>=detailItems.length)return;
   detailIndex=next;showDetailItem('stack',direction);
 }
+function showRecordTravel(fraction){
+  const n=Math.round(fraction*100),slider=$('sleeveSlider');
+  slider.value=String(n);
+  slider.setAttribute('aria-valuetext',n===0?'In sleeve':n===100?'Fully out':n+'% out');
+}
 function updateCaseControls(item){
   const media=item.gameMedia,kind=media?.kind,actual=media?.media||[];
-  const physical=['disc','cartridge','umd'].includes(kind);
-  $('caseActions').hidden=!media;
+  const release=item.releaseKind,lp=release==='vinyl';
+  const physical=!!release||['disc','cartridge','umd'].includes(kind);
+  $('caseActions').hidden=!media&&!release;
   $('toggleCase').hidden=!physical;
-  $('toggleCase').textContent=caseOpen?'Close case':'Open case';
+  $('toggleCase').textContent=lp?(caseOpen?'Return to sleeve':'Slide record out'):(caseOpen?'Close case':'Open case');
+  $('recordTravel').hidden=!lp;
+  if(lp&&!caseOpen)showRecordTravel(0);
   $('toggleCase').setAttribute('aria-pressed',String(caseOpen));
   const selector=$('mediumSelect');
   $('mediumPicker').hidden=!caseOpen||actual.length<2;
@@ -226,24 +234,37 @@ function updateCaseControls(item){
   let note='';
   if(kind==='digital')note='Digital release.';
   else if(kind==='unknown')note='Physical media unverified for this edition.';
-  else if(caseOpen){
+  else if(caseOpen&&release){
+    note=item.mediumArt?.credit||(release==='vinyl'?'Center label adapted from the album cover.':
+      release==='cassette'?'Tape label adapted from the album cover.':release==='cd'?'Disc label adapted from the album cover.':'Disc label adapted from the film poster.');
+    if(item.mediumArt?.issue)note+=' · '+item.mediumArt.issue;
+    if(lp&&item.mediumArt)note+=' · Side '+(item.mediumArt.side||'A')+'. Opposite label adapted from the cover.';
+  }else if(caseOpen){
     if(!medium?.artwork)note='LaunchBox has no verified label scan for this edition.';
     else note=[medium.label,medium.regionalAlternative?medium.region+' disc artwork':'',
       medium.type==='Cart - 3D'?'Cartridge label from the LaunchBox 3D image':''].filter(Boolean).join(' · ');
   }
-  $('mediumNote').textContent=note;
+  const caption=$('mediumNote');caption.textContent=note;
+  if(caseOpen&&item.mediumArt?.source){
+    const link=document.createElement('a');link.href=item.mediumArt.source;link.target='_blank';link.rel='noopener noreferrer';
+    link.textContent='View artwork source';caption.append(' · ',link);
+  }
 }
-async function viewCase(open,index=0){
+async function viewCase(open,index=0,position=null){
   const item=currentDetailItem,request=++caseRequest;
   caseOpen=open;mediumIndex=index;updateCaseControls(item);
-  try{await preview.setCaseOpen(open,index);}
+  try{await preview.setCaseOpen(open,index,position);}
   catch(error){
     if(request!==caseRequest||currentDetailItem!==item)return;
     caseOpen=false;updateCaseControls(item);
-    $('mediumNote').textContent='The case could not load. Choose Open case to retry.';
-    console.error('Open game case unavailable',error);
+    $('mediumNote').textContent='The preview could not load. Try again.';
+    console.error('Open case preview unavailable',error);
   }
 }
+$('sleeveSlider').oninput=event=>{
+  const fraction=event.target.valueAsNumber/100;
+  viewCase(fraction>0,0,fraction);
+};
 $('toggleCase').onclick=()=>viewCase(!caseOpen,mediumIndex);
 $('mediumSelect').onchange=event=>viewCase(true,Number(event.target.value));
 function showDetailItem(view,direction=0){

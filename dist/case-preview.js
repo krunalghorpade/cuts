@@ -14,7 +14,7 @@ function inspectionStudio(){
   map.colorSpace=THREE.SRGBColorSpace;return map;
 }
 
-export function createCasePreview(canvas,{onStep,onDetails}){
+export function createCasePreview(canvas,{onStep,onDetails,onTravel}){
   const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(32,1,.01,20);
   camera.position.z=4.5;
   scene.add(new THREE.HemisphereLight(0xffffff,0x9c9c9c,1.6));
@@ -85,15 +85,27 @@ export function createCasePreview(canvas,{onStep,onDetails}){
     dirty=true;
   }
 
-  async function setCaseOpen(value,mediumIndex=0){
+  async function setCaseOpen(value,mediumIndex=0,position=null){
     const token=++openGeneration,entry=hero;
     if(!entry||mode!=='info')return;
     if(value&&(!opening||opening.mediumIndex!==mediumIndex)){
-      const {createOpenGameCase}=await import('./open-game-case.js');
+      const kind=entry.item.releaseKind;
+      let build;
+      if(kind==='vinyl'||kind==='cassette'){
+        const {createOpenMusicCase}=await import('./open-music-case.js');
+        build=()=>createOpenMusicCase(entry.item,entry.spec,entry.group);
+      }else if(kind){
+        const [{createOpticalCase},{mediumPrint,musicLiner},{caseInserts}]=await Promise.all([
+          import('./open-game-case.js'),import('./medium-print.js'),import('./case-inserts.js')]);
+        build=()=>createOpticalCase(entry.item,entry.spec,mediumPrint(entry.item,kind),owned=>caseInserts(entry.group,owned),kind==='cd'?musicLiner(entry.item,false):null);
+      }else{
+        const {createOpenGameCase}=await import('./open-game-case.js');
+        build=()=>createOpenGameCase(entry.item,entry.spec,mediumIndex);
+      }
       if(token!==openGeneration||entry!==hero)return;
       const priorProgress=opening?progress:0;
       dropInterior();
-      opening=createOpenGameCase(entry.item,entry.spec,mediumIndex);
+      opening=build();
       opening.mediumIndex=mediumIndex;
       opening.restPosition=opening.group.position.clone();
       // Measure the travel of each hinge or carton insert before attaching it to
@@ -106,7 +118,14 @@ export function createCasePreview(canvas,{onStep,onDetails}){
       opening.versions=[];progress=priorProgress;entry.group.visible=false;entry.pivot.add(opening.group);
     }
     if(!opening)return;
-    goal=value?1:0;lastTime=performance.now();dirty=true;render();
+    goal=value?1:0;
+    if(position!==null){
+      // Invert smoothstep so manual travel agrees exactly with the slider.
+      const distance=THREE.MathUtils.clamp(position,0,1);
+      progress=goal=.5-Math.sin(Math.asin(1-2*distance)/3);
+      if(distance===0||distance===1)progress=goal=distance;
+    }
+    lastTime=performance.now();dirty=true;render();
   }
   function rotate(dx,dy){
     if(!hero)return;
@@ -184,6 +203,7 @@ export function createCasePreview(canvas,{onStep,onDetails}){
       progress+=Math.sign(goal-progress)*Math.min(travel,Math.abs(goal-progress));lastTime=now;
       const amount=progress*progress*(3-2*progress);
       opening.setOpen(amount);
+      if(hero.item.releaseKind==='vinyl')onTravel?.(amount);
       const frame=amount*(opening.frames.length-1),index=Math.floor(frame);
       const a=opening.frames[index],b=opening.frames[Math.min(index+1,opening.frames.length-1)];
       center.lerpVectors(a.center,b.center,frame-index);

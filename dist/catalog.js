@@ -1,13 +1,14 @@
 import {retroPackage} from './game-packages.js';
 const files=['imdb-items','spotify-items','book-items','playlists','trailers','game-editions','music-previews','manga-items','item-descriptions','poster-content'];
 export async function loadCollections(cache='default'){
-  return Promise.all(files.map(async name=>{
+  return Promise.all([...files,'music-medium-art','movie-medium-art'].map(async name=>{
     const response=await fetch(new URL('./'+name+'.json',import.meta.url),{cache});
+    if(!response.ok && name.endsWith('-medium-art'))return {};
     if(!response.ok)throw new Error('Unable to load '+name);
     return response.json();
   }));
 }
-const [screenTitles,music,books,playlistSources,trailerSources,editions,previews,manga,descriptions,editorial]=await loadCollections();
+const [screenTitles,music,books,playlistSources,trailerSources,editions,previews,manga,descriptions,editorial,musicArt,movieArt]=await loadCollections();
 export const posterContent=editorial;
 export const trailerStreams = trailerSources;
 export const musicPreviews = previews;
@@ -67,9 +68,14 @@ export const ITEMS = [...titles, ...retainedMusic, ...books, ...manga].filter(it
   seen.add(key);
   return true;
 }).map(item=>{
+  const category=item.category;
+  const film=category==='movies'||category==='anime-movies';
+  const releaseKind=film?(Number(item.year)>=2006?'bluray':'dvd'):{cds:'cd',cassettes:'cassette',vinyl:'vinyl'}[category];
+  const filmPrint=film&&movieArt[item.id];
+  const mediumArt=film?(filmPrint?.format===releaseKind?filmPrint:null):musicArt[item.albumUri]?.[releaseKind];
   const note=descriptions[item.id]||descriptions[item.albumUri];
   const sourceText=item.description||note?.text;
   const extra=item.album&&item.featuredTrack?' Its playlist selection includes “'+item.featuredTrack+'”.':'';
-  return {...item,description:sourceText||[item.title,item.creator?'by '+item.creator:'',item.year?'('+item.year+')':''].filter(Boolean).join(' ')+'.'+extra,
+  return {...item,releaseKind,mediumArt,description:sourceText||[item.title,item.creator?'by '+item.creator:'',item.year?'('+item.year+')':''].filter(Boolean).join(' ')+'.'+extra,
     descriptionSource:note?.sourceUrl||item.sourceUrl,accent:categoryById[item.category].accent};
 });

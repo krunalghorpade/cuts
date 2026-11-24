@@ -1,0 +1,993 @@
+{
+  "spotify:album:02f3y3NTsddjdUMoNiBppI": {
+    "cassette": {
+      "artwork": "./art/music-media/caa-41692096507.webp",
+      "source": "https://musicbrainz.org/release/ae792ffd-3773-45a8-b0e4-a128745e9146/cover-art",
+      "imageSource": "https://coverartarchive.org/release/ae792ffd-3773-45a8-b0e4-a128745e9146/41692096507.jpg",
+      "credit": "Physical cassette scan · Cover Art Archive",
+      "layout": "shell",
+      "type": "scan",
+      "issue": "1984, GB",
+      "side": "A"
+    },
+    "vinyl": {
+      "artwork": "./art/music-media/caa-14766993704.webp",
+      "source": "https://musicbrainz.org/release/8587cf6d-3761-4cae-9acc-78770a13c758/cover-art",
+      "imageSource": "https://coverartarchive.org/release/8587cf6d-3761-4cae-9acc-78770a13c758/14766993704.jpg",
+      "credit": "Physical LP scan · Cover Art Archive",
+      "layout": "label",
+      "type": "scan",
+      "issue": "1984, US",
+      "side": "A"
+    }
+  },
+  "spotify:album:0KcRX7YkMZ4mwOkEiCb9zw": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2137041.webp",
+      "source": "https://www.theaudiodb.com/album/2137041",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/cage-the-elephant-4e600afcb3081.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:0jcOOqw8oVjs2ngnrndbsO": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2123956.webp",
+      "source": "https://www.theaudiodb.com/album/2123956",
+      "imageSource": "https://www.theaudiodb.com/images/media/album/cdart/hu3u871788172909.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:0oFBaXLFsUVa2gEmJf4FcJ": {
+    "cd": {
+      "artwork": "./art/music-media/caa-32603138311.webp",
+      "source": "https://musicbrainz.org/release/2b8c047e-34b4-3cb6-b09f-6aacee10735d/cover-art",
+      "imageSource": "https://coverartarchive.org/release/2b8c047e-34b4-3cb6-b09f-6aacee10735d/32603138311.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2011-03-28, GB"
+    }
+  },
+  "spotify:album:0ujXvRGc3L4Rb1xVCSjwVg": {
+    "vinyl": {
+      "artwork": "./art/music-media/caa-33095798276.webp",
+      "source": "https://musicbrainz.org/release/7a6bb0ac-0504-46b7-b890-b54721f1a352/cover-art",
+      "imageSource": "https://coverartarchive.org/release/7a6bb0ac-0504-46b7-b890-b54721f1a352/33095798276.jpg",
+      "credit": "Physical LP scan · Cover Art Archive",
+      "layout": "label",
+      "type": "scan",
+      "issue": "1971, IN",
+      "side": "A"
+    }
+  },
+  "spotify:album:0z7pVBGOD7HCIB7S8eLkLI": {
+    "cd": {
+      "artwork": "./art/music-media/caa-25184468263.webp",
+      "source": "https://musicbrainz.org/release/140129a0-988c-47c2-af06-811904b19890/cover-art",
+      "imageSource": "https://coverartarchive.org/release/140129a0-988c-47c2-af06-811904b19890/25184468263.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2003-11-18, US"
+    }
+  },
+  "spotify:album:155cebHEGGBqYJAXKWJw6D": {
+    "cd": {
+      "artwork": "./art/music-media/caa-33220472067.webp",
+      "source": "https://musicbrainz.org/release/ce9f8c15-1a7b-4ad7-836b-ee4fbb772f3f/cover-art",
+      "imageSource": "https://coverartarchive.org/release/ce9f8c15-1a7b-4ad7-836b-ee4fbb772f3f/33220472067.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "1994-03-14, DE"
+    }
+  },
+  "spotify:album:19ObsGobUuBr11M6ysFMug": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2112938.webp",
+      "source": "https://www.theaudiodb.com/album/2112938",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/american-idiot-50ffa5a4d9c7a.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:19UbDbyaYRW1U7lBMYO9F2": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2110676.webp",
+      "source": "https://www.theaudiodb.com/album/2110676",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/music-of-the-sun-4dd05e2960e32.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:1ER3B6zev5JEAaqhnyyfbf": {
+    "cd": {
+      "artwork": "./art/music-media/caa-44703278941.webp",
+      "source": "https://musicbrainz.org/release/1ea9868b-3b80-44d1-9311-bd13b0f3a243/cover-art",
+      "imageSource": "https://coverartarchive.org/release/1ea9868b-3b80-44d1-9311-bd13b0f3a243/44703278941.png",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "1985-06-10, US"
+    },
+    "vinyl": {
+      "artwork": "./art/music-media/caa-34410855935.webp",
+      "source": "https://musicbrainz.org/release/15e40f35-458e-4909-9d8e-53dde9176fdc/cover-art",
+      "imageSource": "https://coverartarchive.org/release/15e40f35-458e-4909-9d8e-53dde9176fdc/34410855935.jpg",
+      "credit": "Physical LP scan · Cover Art Archive",
+      "layout": "label",
+      "type": "scan",
+      "issue": "1985, GB",
+      "side": "A"
+    }
+  },
+  "spotify:album:1KQUrny9y5zGpktF6hAGd4": {
+    "vinyl": {
+      "artwork": "./art/music-media/caa-13679492937.webp",
+      "source": "https://musicbrainz.org/release/002a65d3-ab21-4fdd-adbf-ca6d5f39033a/cover-art",
+      "imageSource": "https://coverartarchive.org/release/002a65d3-ab21-4fdd-adbf-ca6d5f39033a/13679492937.jpg",
+      "credit": "Physical LP scan · Cover Art Archive",
+      "layout": "label",
+      "type": "scan",
+      "issue": "1976, NL",
+      "side": "A"
+    }
+  },
+  "spotify:album:1KlU96Hw9nlvqpBPlSqcTV": {
+    "cd": {
+      "artwork": "./art/music-media/caa-8311221547.webp",
+      "source": "https://musicbrainz.org/release/96875f5b-4bb1-4c75-8afc-db0eedbfcda1/cover-art",
+      "imageSource": "https://coverartarchive.org/release/96875f5b-4bb1-4c75-8afc-db0eedbfcda1/8311221547.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2012-10-26, DE"
+    }
+  },
+  "spotify:album:1Li4rADxSxjT2g4xqUcMYh": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2287276.webp",
+      "source": "https://www.theaudiodb.com/album/2287276",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/qywpvt1589534304.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:1OEGfToF7QbjUgyxMAnGXg": {
+    "cd": {
+      "artwork": "./art/music-media/caa-43808981310.webp",
+      "source": "https://musicbrainz.org/release/988e5a13-1550-423d-8760-96b3636d8c0a/cover-art",
+      "imageSource": "https://coverartarchive.org/release/988e5a13-1550-423d-8760-96b3636d8c0a/43808981310.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2012-02-13, FR"
+    }
+  },
+  "spotify:album:1RM6MGv6bcl6NrAG8PGoZk": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2111080.webp",
+      "source": "https://www.theaudiodb.com/album/2111080",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/confessions-4ee56ff1a24d3.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:1VW1MFNstaJuygaoTPkdCk": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2113125.webp",
+      "source": "https://www.theaudiodb.com/album/2113125",
+      "imageSource": "https://r2.TheAudioDB.com/images/media/album/cdart/ctebvc1754854619.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:1XkGORuUX2QGOEIL4EbJKm": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2113921.webp",
+      "source": "https://www.theaudiodb.com/album/2113921",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/favourite-worst-nightmare-4e5f772c1b521.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:1Z5oeufZDMMzL8ZlWTZrQg": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2119566.webp",
+      "source": "https://www.theaudiodb.com/album/2119566",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/freedom-5370fe1175118.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:1c9Sx7XdXuMptGyfCB6hHs": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2280224.webp",
+      "source": "https://www.theaudiodb.com/album/2280224",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/wh0zis1612160016.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:1ePkYcH5ZQCb1b4tQeiEDj": {
+    "cd": {
+      "artwork": "./art/music-media/caa-32508908069.webp",
+      "source": "https://musicbrainz.org/release/1b0930aa-2044-4709-bef0-85bc4e9a356b/cover-art",
+      "imageSource": "https://coverartarchive.org/release/1b0930aa-2044-4709-bef0-85bc4e9a356b/32508908069.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2007-10-25, XE"
+    }
+  },
+  "spotify:album:1k1Cr3nlJDa8pvwZUJ5xfj": {
+    "cd": {
+      "artwork": "./art/music-media/caa-10671047070.webp",
+      "source": "https://musicbrainz.org/release/43dd44ff-cd23-4902-a510-f5eb8ce73fdc/cover-art",
+      "imageSource": "https://coverartarchive.org/release/43dd44ff-cd23-4902-a510-f5eb8ce73fdc/10671047070.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "1999-05-11, US"
+    }
+  },
+  "spotify:album:1qwlxZTNLe1jq3b0iidlue": {
+    "cd": {
+      "artwork": "./art/music-media/caa-38668454308.webp",
+      "source": "https://musicbrainz.org/release/8a88b05d-0441-3f33-b22b-21dbd3b3a548/cover-art",
+      "imageSource": "https://coverartarchive.org/release/8a88b05d-0441-3f33-b22b-21dbd3b3a548/38668454308.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2008-12-02, DE"
+    }
+  },
+  "spotify:album:1yGbNOtRIgdIiGHOEBaZWf": {
+    "cd": {
+      "artwork": "./art/music-media/caa-27366695516.webp",
+      "source": "https://musicbrainz.org/release/23f7b88c-264b-42e7-82f1-4b7ad033fecf/cover-art",
+      "imageSource": "https://coverartarchive.org/release/23f7b88c-264b-42e7-82f1-4b7ad033fecf/27366695516.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2014-10-27, XE"
+    }
+  },
+  "spotify:album:20Ol6zZ0nLlc5EGTH1zA0j": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2249513.webp",
+      "source": "https://www.theaudiodb.com/album/2249513",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/pvh65o1605425309.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:2ANVost0y2y52ema1E9xAZ": {
+    "cassette": {
+      "artwork": "./art/music-media/caa-42453458219.webp",
+      "source": "https://musicbrainz.org/release/56e11eb9-a1a2-46e1-8919-dea0dadd21f9/cover-art",
+      "imageSource": "https://coverartarchive.org/release/56e11eb9-a1a2-46e1-8919-dea0dadd21f9/42453458219.jpg",
+      "credit": "Physical cassette scan · Cover Art Archive",
+      "layout": "shell",
+      "type": "scan",
+      "issue": "1982-11, GB",
+      "side": "A"
+    },
+    "vinyl": {
+      "artwork": "./art/music-media/caa-31843731518.webp",
+      "source": "https://musicbrainz.org/release/0881a2b7-2be3-4dfd-94f0-b186069802bd/cover-art",
+      "imageSource": "https://coverartarchive.org/release/0881a2b7-2be3-4dfd-94f0-b186069802bd/31843731518.jpg",
+      "credit": "Physical LP scan · Cover Art Archive",
+      "layout": "label",
+      "type": "scan",
+      "issue": "1982, XE",
+      "side": "A"
+    }
+  },
+  "spotify:album:2H66HrVR1UeMlAoSXpxUnk": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2131376.webp",
+      "source": "https://www.theaudiodb.com/album/2131376",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/all-or-nothing-4ee4126d82b04.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:2ODvWsOgouMbaA5xf0RkJe": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2273822.webp",
+      "source": "https://www.theaudiodb.com/album/2273822",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/co3ws51605555911.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:2U9ONknz1iFEK9drEKLx8v": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2133280.webp",
+      "source": "https://www.theaudiodb.com/album/2133280",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/backstreets-back-4ff481e01c48c.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:2UG6T6f0Qc9SaBCIcaviLM": {
+    "cd": {
+      "artwork": "./art/music-media/caa-39424832379.webp",
+      "source": "https://musicbrainz.org/release/2a666025-eb7c-3cc2-bd76-4fbd80487395/cover-art",
+      "imageSource": "https://coverartarchive.org/release/2a666025-eb7c-3cc2-bd76-4fbd80487395/39424832379.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2010-08-24, US"
+    }
+  },
+  "spotify:album:2Uv0SsIwRolyvE76e0CaBM": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2303957.webp",
+      "source": "https://www.theaudiodb.com/album/2303957",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/pqp8jy1608047475.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:2ZytN2cY4Zjrr9ukb2rqTP": {
+    "vinyl": {
+      "artwork": "./art/music-media/caa-31843699313.webp",
+      "source": "https://musicbrainz.org/release/228faa64-76ca-48cd-90fe-d098bb297986/cover-art",
+      "imageSource": "https://coverartarchive.org/release/228faa64-76ca-48cd-90fe-d098bb297986/31843699313.jpg",
+      "credit": "Physical LP scan · Cover Art Archive",
+      "layout": "label",
+      "type": "scan",
+      "issue": "1979, GB",
+      "side": "A"
+    }
+  },
+  "spotify:album:2cHhcN6iNLNXc7FByWBGi5": {
+    "cd": {
+      "artwork": "./art/music-media/caa-9720350994.webp",
+      "source": "https://musicbrainz.org/release/5a5b93d8-0db1-3ab0-b23f-0465aa546d4d/cover-art",
+      "imageSource": "https://coverartarchive.org/release/5a5b93d8-0db1-3ab0-b23f-0465aa546d4d/9720350994.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2006, XE"
+    }
+  },
+  "spotify:album:2g1EakEaW7fPTZC6vBmBCn": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2110672.webp",
+      "source": "https://www.theaudiodb.com/album/2110672",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/talk-that-talk-4ecd58494b1cc.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:2gP2LMVcIFgVczSJqn340t": {
+    "cd": {
+      "artwork": "./art/music-media/caa-34659865406.webp",
+      "source": "https://musicbrainz.org/release/2cd07855-2d9a-4f6f-b653-8acddaa89ed6/cover-art",
+      "imageSource": "https://coverartarchive.org/release/2cd07855-2d9a-4f6f-b653-8acddaa89ed6/34659865406.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2009, XE"
+    }
+  },
+  "spotify:album:2pidzXTaHV4WaIJYRxKDCH": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2115662.webp",
+      "source": "https://www.theaudiodb.com/album/2115662",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/the-massacre-4df441dcacd18.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:2scB1uhcCI1TSf6b9TCZK3": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2117595.webp",
+      "source": "https://www.theaudiodb.com/album/2117595",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/futuresexlovesounds-4f051e66ef127.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:2vD3zSQr8hNlg0obNel4TE": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2290904.webp",
+      "source": "https://www.theaudiodb.com/album/2290904",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/iifi3r1605705181.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:34K1Kvskt9arWy8E1Gz3Lw": {
+    "cassette": {
+      "artwork": "./art/music-media/caa-15519008819.webp",
+      "source": "https://musicbrainz.org/release/17ff24d8-7718-4995-a32d-95c2147f1fd6/cover-art",
+      "imageSource": "https://coverartarchive.org/release/17ff24d8-7718-4995-a32d-95c2147f1fd6/15519008819.jpg",
+      "credit": "Physical cassette scan · Cover Art Archive",
+      "layout": "shell",
+      "type": "scan",
+      "issue": "1987, US",
+      "side": "A"
+    },
+    "cd": {
+      "artwork": "./art/music-media/caa-43953593585.webp",
+      "source": "https://musicbrainz.org/release/14d6afda-36d1-4200-944f-4c5e4c90b770/cover-art",
+      "imageSource": "https://coverartarchive.org/release/14d6afda-36d1-4200-944f-4c5e4c90b770/43953593585.png",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "1987, XE"
+    },
+    "vinyl": {
+      "artwork": "./art/music-media/caa-16834961337.webp",
+      "source": "https://musicbrainz.org/release/ea90c855-af5b-4d07-a115-f215216c9f19/cover-art",
+      "imageSource": "https://coverartarchive.org/release/ea90c855-af5b-4d07-a115-f215216c9f19/16834961337.jpg",
+      "credit": "Physical LP scan · Cover Art Archive",
+      "layout": "label",
+      "type": "scan",
+      "issue": "1987, XE",
+      "side": "A"
+    }
+  },
+  "spotify:album:3BmcYMh0KYsimWL6p2gPa9": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2113854.webp",
+      "source": "https://www.theaudiodb.com/album/2113854",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/my-world-20-4ed515e064f0b.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:3N6VPyK0YsRTccqoRQjkVx": {
+    "vinyl": {
+      "artwork": "./art/music-media/caa-40672859739.webp",
+      "source": "https://musicbrainz.org/release/eb399822-11b6-48fc-bb4e-2d47da01ad9d/cover-art",
+      "imageSource": "https://coverartarchive.org/release/eb399822-11b6-48fc-bb4e-2d47da01ad9d/40672859739.png",
+      "credit": "Physical LP scan · Cover Art Archive",
+      "layout": "label",
+      "type": "scan",
+      "issue": "1989, XE",
+      "side": "A"
+    }
+  },
+  "spotify:album:3N88bRVAwQrtKqSV0UgU69": {
+    "cd": {
+      "artwork": "./art/music-media/caa-19628045132.webp",
+      "source": "https://musicbrainz.org/release/cfc02c93-906c-4b95-9d5c-3c1dd390fafc/cover-art",
+      "imageSource": "https://coverartarchive.org/release/cfc02c93-906c-4b95-9d5c-3c1dd390fafc/19628045132.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2018-04-13, XE"
+    }
+  },
+  "spotify:album:3OxfaVgvTxUTy7276t7SPU": {
+    "cd": {
+      "artwork": "./art/music-media/caa-41123569810.webp",
+      "source": "https://musicbrainz.org/release/73ff9cfe-65f6-420b-a750-af31c31f3167/cover-art",
+      "imageSource": "https://coverartarchive.org/release/73ff9cfe-65f6-420b-a750-af31c31f3167/41123569810.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2025-01-31, XE"
+    }
+  },
+  "spotify:album:3SZr5Pco2oqKFORCP3WNj9": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2114789.webp",
+      "source": "https://www.theaudiodb.com/album/2114789",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/graduation-4ed3435477377.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:3WNxdumkSMGMJRhEgK80qx": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2110292.webp",
+      "source": "https://www.theaudiodb.com/album/2110292",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/baby-one-more-time-4dcff7266d1ad.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:3g5K7IOTOSY6nIfu7lj562": {
+    "cd": {
+      "artwork": "./art/music-media/caa-28816856313.webp",
+      "source": "https://musicbrainz.org/release/3e06903d-7aa9-4fc0-a0bc-8137532301e4/cover-art",
+      "imageSource": "https://coverartarchive.org/release/3e06903d-7aa9-4fc0-a0bc-8137532301e4/28816856313.png",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "1986, GB"
+    }
+  },
+  "spotify:album:3gR578qnw47M30LVBTjrlW": {
+    "cd": {
+      "artwork": "./art/music-media/caa-1252302477.webp",
+      "source": "https://musicbrainz.org/release/07572681-4e1b-4ac9-8858-5e6d13744139/cover-art",
+      "imageSource": "https://coverartarchive.org/release/07572681-4e1b-4ac9-8858-5e6d13744139/1252302477.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2010-10-19, XE"
+    }
+  },
+  "spotify:album:3sysiYphqNRQw7VKLCg1yE": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2109620.webp",
+      "source": "https://www.theaudiodb.com/album/2109620",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/love-4f04e26ab52ea.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:3wCe8HjHk6QNGcf5D3jgW1": {
+    "cd": {
+      "artwork": "./art/music-media/caa-41728347284.webp",
+      "source": "https://musicbrainz.org/release/1b0fb37c-2540-3bb2-afe0-45226782f3c8/cover-art",
+      "imageSource": "https://coverartarchive.org/release/1b0fb37c-2540-3bb2-afe0-45226782f3c8/41728347284.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "1986, GB"
+    }
+  },
+  "spotify:album:4BxB8U8QgpR4UCvJ0moj8Z": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2117983.webp",
+      "source": "https://www.theaudiodb.com/album/2117983",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/shock-value-4fa043c13f96c.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:4DyMK9x2gnmRkRa16zHaEV": {
+    "cd": {
+      "artwork": "./art/music-media/caa-8319161086.webp",
+      "source": "https://musicbrainz.org/release/46f25a39-1630-4bed-8b5c-5aef1e464757/cover-art",
+      "imageSource": "https://coverartarchive.org/release/46f25a39-1630-4bed-8b5c-5aef1e464757/8319161086.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2001-11-13, US"
+    }
+  },
+  "spotify:album:4Gfnly5CzMJQqkUFfoHaP3": {
+    "cd": {
+      "artwork": "./art/music-media/caa-39833477213.webp",
+      "source": "https://musicbrainz.org/release/1dfcaa3d-8995-48ee-8fd2-73347cbe020b/cover-art",
+      "imageSource": "https://coverartarchive.org/release/1dfcaa3d-8995-48ee-8fd2-73347cbe020b/39833477213.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2003, US"
+    }
+  },
+  "spotify:album:4JPguzRps3kuWDD5GS6oXr": {
+    "cd": {
+      "artwork": "./art/music-media/caa-16750125088.webp",
+      "source": "https://musicbrainz.org/release/c4630cf4-0e9d-4907-9653-8bb8825f73ff/cover-art",
+      "imageSource": "https://coverartarchive.org/release/c4630cf4-0e9d-4907-9653-8bb8825f73ff/16750125088.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2017-04-07, XE"
+    }
+  },
+  "spotify:album:4UlGauD7ROb3YbVOFMgW5u": {
+    "cd": {
+      "artwork": "./art/music-media/caa-20191752818.webp",
+      "source": "https://musicbrainz.org/release/a0f89482-f6ea-4f74-a75c-ebce6b8bd3d5/cover-art",
+      "imageSource": "https://coverartarchive.org/release/a0f89482-f6ea-4f74-a75c-ebce6b8bd3d5/20191752818.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2016-02-05, XE"
+    }
+  },
+  "spotify:album:4axgysRjIB7ToC0DA7uxXC": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2130838.webp",
+      "source": "https://www.theaudiodb.com/album/2130838",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/free-wired-4ee3e87f92f07.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:4bTjdxhRRUiWfwj200f9Kl": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2112843.webp",
+      "source": "https://www.theaudiodb.com/album/2112843",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/nothing-but-the-beat-4e8955c864de7.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:4eLPsYPBmXABThSJ821sqY": {
+    "cd": {
+      "artwork": "./art/music-media/caa-19013804492.webp",
+      "source": "https://musicbrainz.org/release/87d39f16-b84f-473c-8c9d-60456c6da439/cover-art",
+      "imageSource": "https://coverartarchive.org/release/87d39f16-b84f-473c-8c9d-60456c6da439/19013804492.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2017-04-21, XE"
+    }
+  },
+  "spotify:album:4m2880jivSbbyEGAKfITCa": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2162908.webp",
+      "source": "https://www.theaudiodb.com/album/2162908",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/random-access-memories-5194a5974107d.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:4rG0MhkU6UojACJxkMHIXB": {
+    "cd": {
+      "artwork": "./art/music-media/caa-44158282551.webp",
+      "source": "https://musicbrainz.org/release/43a784e0-2a5f-4b2e-baaa-d2d703ceeab1/cover-art",
+      "imageSource": "https://coverartarchive.org/release/43a784e0-2a5f-4b2e-baaa-d2d703ceeab1/44158282551.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2011-06, XE"
+    }
+  },
+  "spotify:album:4sLtOBOzn4s3GDUv3c5oJD": {
+    "cd": {
+      "artwork": "./art/music-media/caa-38629685275.webp",
+      "source": "https://musicbrainz.org/release/799a2cd0-1f56-48bf-985f-37f3fefa786c/cover-art",
+      "imageSource": "https://coverartarchive.org/release/799a2cd0-1f56-48bf-985f-37f3fefa786c/38629685275.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2018-10-04, US"
+    }
+  },
+  "spotify:album:4yP0hdKOZPNshxUOjY0cZj": {
+    "cd": {
+      "artwork": "./art/music-media/caa-28417863103.webp",
+      "source": "https://musicbrainz.org/release/241f61c4-7b16-4967-a4d6-c0b548b349a3/cover-art",
+      "imageSource": "https://coverartarchive.org/release/241f61c4-7b16-4967-a4d6-c0b548b349a3/28417863103.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2020-03-20, XE"
+    }
+  },
+  "spotify:album:512J2VIGOTP50qp5MNEUyG": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2127598.webp",
+      "source": "https://www.theaudiodb.com/album/2127598",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/vspvvw1586257474.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:58ufpQsJ1DS5kq4hhzQDiI": {
+    "cd": {
+      "artwork": "./art/music-media/caa-34187149011.webp",
+      "source": "https://musicbrainz.org/release/093d1760-538d-4bdc-a916-e04723b12774/cover-art",
+      "imageSource": "https://coverartarchive.org/release/093d1760-538d-4bdc-a916-e04723b12774/34187149011.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2012-12-11, US"
+    }
+  },
+  "spotify:album:5G5rgQHzdQnw32SI0WjIo5": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2115667.webp",
+      "source": "https://www.theaudiodb.com/album/2115667",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/get-rich-or-die-tryin-4df441dcae0a1.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:5IrMfIT621GidGPuOSRTB4": {
+    "cd": {
+      "artwork": "./art/music-media/caa-39126075982.webp",
+      "source": "https://musicbrainz.org/release/a8bfc46d-fd92-3b54-94dd-570fec1df893/cover-art",
+      "imageSource": "https://coverartarchive.org/release/a8bfc46d-fd92-3b54-94dd-570fec1df893/39126075982.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "1993-01-18, DE"
+    }
+  },
+  "spotify:album:5JNhQFH8HMKQWP4SITzdoc": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2134519.webp",
+      "source": "https://www.theaudiodb.com/album/2134519",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/euphoria-4f04aa3435acd.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:5PmgtkodFl2Om3hMXONDll": {
+    "cassette": {
+      "artwork": "./art/music-media/caa-34662394995.webp",
+      "source": "https://musicbrainz.org/release/840a9847-2b26-4d41-bd45-2d844fdb29a6/cover-art",
+      "imageSource": "https://coverartarchive.org/release/840a9847-2b26-4d41-bd45-2d844fdb29a6/34662394995.jpg",
+      "credit": "Physical cassette scan · Cover Art Archive",
+      "layout": "shell",
+      "type": "scan",
+      "issue": "2003-11-18, SA",
+      "side": "A"
+    }
+  },
+  "spotify:album:5QG3tjE5L9F6O2vCAPph38": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2110674.webp",
+      "source": "https://www.theaudiodb.com/album/2110674",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/loud-4fe8d3e36874c.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:5WXL9YjbNd4GIqWc9mZOOq": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2166509.webp",
+      "source": "https://www.theaudiodb.com/album/2166509",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/13-51b3708e0ff32.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:5duyQokC4FMcWPYTV9Gpf9": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2112977.webp",
+      "source": "https://www.theaudiodb.com/album/2112977",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/21-4dc971bd53cbd.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:5j1wrOAOm5KFd17pPiSvle": {
+    "cd": {
+      "artwork": "./art/music-media/caa-40080172031.webp",
+      "source": "https://musicbrainz.org/release/a8e92ff9-4a20-43a7-a3e5-04bbf4267b32/cover-art",
+      "imageSource": "https://coverartarchive.org/release/a8e92ff9-4a20-43a7-a3e5-04bbf4267b32/40080172031.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2008, JP"
+    }
+  },
+  "spotify:album:5lKlFlReHOLShQKyRv6AL9": {
+    "cd": {
+      "artwork": "./art/music-media/caa-27093929793.webp",
+      "source": "https://musicbrainz.org/release/315bbc48-dea9-463c-bfa9-a6ccab78b990/cover-art",
+      "imageSource": "https://coverartarchive.org/release/315bbc48-dea9-463c-bfa9-a6ccab78b990/27093929793.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2020-03-27, XE"
+    }
+  },
+  "spotify:album:5xSvNPstcxHtR4ap2vvN8A": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2177072.webp",
+      "source": "https://www.theaudiodb.com/album/2177072",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/31ds7s1636560903.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:6D9urpsOWWKtYvF6PaorGE": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2112914.webp",
+      "source": "https://www.theaudiodb.com/album/2112914",
+      "imageSource": "https://www.theaudiodb.com/images/media/album/cdart/kfxbpn1790854801.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:6FTFKwFEs3hwpnj68VKXg3": {
+    "cd": {
+      "artwork": "./art/music-media/caa-8725979519.webp",
+      "source": "https://musicbrainz.org/release/632a2e60-3809-4d75-bdc9-19710f7a9d01/cover-art",
+      "imageSource": "https://coverartarchive.org/release/632a2e60-3809-4d75-bdc9-19710f7a9d01/8725979519.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "1987, US"
+    }
+  },
+  "spotify:album:6Fr2rQkZ383FcMqFyT7yPr": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2251733.webp",
+      "source": "https://www.theaudiodb.com/album/2251733",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/98sjsa1609066247.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:6TVfiWmo8KtflUAmkK9gGF": {
+    "cd": {
+      "artwork": "./art/music-media/caa-32215728427.webp",
+      "source": "https://musicbrainz.org/release/a4f190d5-c752-4ebd-8d2f-925abfb52c40/cover-art",
+      "imageSource": "https://coverartarchive.org/release/a4f190d5-c752-4ebd-8d2f-925abfb52c40/32215728427.png",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2015-11-20, GB"
+    }
+  },
+  "spotify:album:6VxkEWtAKwOLXzM26xK6oB": {
+    "cd": {
+      "artwork": "./art/music-media/caa-12942570171.webp",
+      "source": "https://musicbrainz.org/release/3dd8f19b-c870-4373-95b2-14117b09358a/cover-art",
+      "imageSource": "https://coverartarchive.org/release/3dd8f19b-c870-4373-95b2-14117b09358a/12942570171.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2011-05-02, FR"
+    }
+  },
+  "spotify:album:6df0qvkMXoyHGt9J8cujZb": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2117561.webp",
+      "source": "https://www.theaudiodb.com/album/2117561",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/fame-deluxe-edition-4e14c9eb2a967.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:6edYDxspt9uQj21mbAfFIb": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2157764.webp",
+      "source": "https://www.theaudiodb.com/album/2157764",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/willpower-518b90be1a0cb.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:6fpLLJsDSSAlToEDW2jv4F": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2120835.webp",
+      "source": "https://www.theaudiodb.com/album/2120835",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/animal-4dd062b6051b2.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:6hPkbAV3ZXpGZBGUvL6jVM": {
+    "cassette": {
+      "artwork": "./art/music-media/caa-44442403922.webp",
+      "source": "https://musicbrainz.org/release/f2944830-4dc2-4757-97fc-58847155c048/cover-art",
+      "imageSource": "https://coverartarchive.org/release/f2944830-4dc2-4757-97fc-58847155c048/44442403922.png",
+      "credit": "Physical cassette scan · Cover Art Archive",
+      "layout": "shell",
+      "type": "scan",
+      "issue": "2000, US",
+      "side": "A"
+    },
+    "cd": {
+      "artwork": "./art/music-media/caa-15325916848.webp",
+      "source": "https://musicbrainz.org/release/a17a48b6-51db-3c52-8fdd-066fb9989f78/cover-art",
+      "imageSource": "https://coverartarchive.org/release/a17a48b6-51db-3c52-8fdd-066fb9989f78/15325916848.jpg",
+      "credit": "Physical CD scan · Cover Art Archive",
+      "layout": "disc",
+      "type": "scan",
+      "issue": "2000-10-24, US"
+    }
+  },
+  "spotify:album:6kzoWb4UzvKYgbDfAwgaFq": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2119562.webp",
+      "source": "https://www.theaudiodb.com/album/2119562",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/h6e69g1599139137.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:6vuykQgDLUCiZ7YggIpLM9": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2263629.webp",
+      "source": "https://www.theaudiodb.com/album/2263629",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/k05e4u1612966360.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:6zXb9FQMzawvY2Au8Kxky3": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2233013.webp",
+      "source": "https://www.theaudiodb.com/album/2233013",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/black-star-elephant-54ba2d98b60e4.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:7f6xPqyaolTiziKf5R5Z0c": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2300021.webp",
+      "source": "https://www.theaudiodb.com/album/2300021",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/2t5lp11638961578.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:7iLuHJkrb9KHPkMgddYigh": {
+    "vinyl": {
+      "artwork": "./art/music-media/caa-28647054870.webp",
+      "source": "https://musicbrainz.org/release/716fec17-8e20-493c-8d93-56bec66f1fd6/cover-art",
+      "imageSource": "https://coverartarchive.org/release/716fec17-8e20-493c-8d93-56bec66f1fd6/28647054870.jpg",
+      "credit": "Physical LP scan · Cover Art Archive",
+      "layout": "label",
+      "type": "scan",
+      "issue": "1979, DE",
+      "side": "B"
+    }
+  },
+  "spotify:album:7tsXPtLqhab1zWeubbf6JH": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2110664.webp",
+      "source": "https://www.theaudiodb.com/album/2110664",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/encore-4dd1768a47def.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  },
+  "spotify:album:7v7kpwwk6JXKS3klilqXV7": {
+    "cd": {
+      "artwork": "./art/music-media/tadb-2113967.webp",
+      "source": "https://www.theaudiodb.com/album/2113967",
+      "imageSource": "https://r2.theaudiodb.com/images/media/album/cdart/different-light-50b6280882b01.png",
+      "credit": "Community CD artwork · TheAudioDB",
+      "layout": "disc",
+      "type": "community"
+    }
+  }
+}
