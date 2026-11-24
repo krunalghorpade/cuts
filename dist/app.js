@@ -1,4 +1,5 @@
 import * as THREE from './vendor/three.module.js';
+import {dvdCoverReference} from './dvd-cover-reference.js';
 import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList, trailerStreams, musicPreviews, posterContent, loadCollections } from './catalog.js';
 import {installMusicPlayers} from './music-players.js';
 import {installArcade} from './arcade.js';
@@ -353,9 +354,17 @@ function showDetailItem(view,direction=0){
     sourceLink.setAttribute('aria-label',sourceLink.title);
   }else sourceLink.removeAttribute('href');
   const coverSource=$('coverSource');
-  coverSource.classList.toggle('hidden',!item.launchboxUrl);
-  if(item.launchboxUrl)coverSource.href=item.launchboxUrl;
-  else coverSource.removeAttribute('href');
+  const reference=item.launchboxUrl
+    ? {url:item.launchboxUrl,label:'Artwork on LaunchBox'}
+    : dvdCoverReference(item);
+  coverSource.classList.toggle('hidden',!reference);
+  if(reference){
+    coverSource.href=reference.url;
+    coverSource.textContent=reference.label;
+  }else{
+    coverSource.removeAttribute('href');
+    coverSource.textContent='';
+  }
   const listNames=(item.playlists || []).map(id=>playlists[id]).filter(Boolean);
   $('detailNote').textContent=item.album
     ? [item.featuredTrack, listNames.join(', ')].filter(Boolean).join(' · ')

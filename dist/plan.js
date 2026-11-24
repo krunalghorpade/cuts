@@ -21,7 +21,7 @@ export const rooms = [
   room('library','Reading area',2,[-13,6,-4,11],[-6.1,7.3,1.5]),
   room('gaming','Modern gaming room',2,[0,-6,8,6],[2,2.6,-.40]),
   room('retro','Retro gaming room',2,[8,-9,15,-1],[9.65,-2.25,-Math.PI/2]),
-  room('collect','Collectibles',2,[8,3,14,9],[9.3,4.4,-2.35]),
+  room('collect','Collectibles',2,[8,3,14,9],[9.3,4.4,-2.03]),
   room('foyer','Gallery foyer',3,hall,[.43,-7.34,1.98]),
   room('gallery','Art gallery',3,[-8,-6,8,6],[.4,-4.32,Math.PI]),
   room('private','Kratex’s private room',3,[8,-9,15,-1],[9.35,-7.82,-2.18])

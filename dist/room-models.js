@@ -7,6 +7,7 @@ import {installPlayStation2} from './retro-showcase.js';
 import {hangGallery} from './gallery.js';
 
 const loader=new GLTFLoader();
+const venomDisplay={x:11.65,z:5.55,yaw:-2.03,diameter:1.22};
 function read(name){return loader.loadAsync(new URL('./models/rooms/'+name+'.glb',import.meta.url).href);}
 export function installRoomModels(floors,obstacles,shelfBounds){
   for(const [level,x,z,w,d] of [...roomObstaclesL1.map(a=>[1,...a]),...roomObstaclesL2.map(a=>[2,...a]),...roomObstaclesUpper]){
@@ -15,6 +16,7 @@ export function installRoomModels(floors,obstacles,shelfBounds){
   for(const [level,bounds] of [[1,roomDisplayBoundsL1],[2,roomShelfBoundsL2]]){
     for(const [x,z,w,d,bottom,top] of bounds)shelfBounds.push({level,x,z,w,d,bottom,top});
   }
+  obstacles.push({level:2,x:venomDisplay.x,z:venomDisplay.z,w:venomDisplay.diameter,d:venomDisplay.diameter});
   let structure,gallery,consoleLoad;
   const displayTargets=floors.map(()=>[]);
   const roomLoads=new Map(),ready=new Map();
@@ -31,7 +33,15 @@ export function installRoomModels(floors,obstacles,shelfBounds){
   }
   function furniture(room){
     if(!roomLoads.has(room.id)){
-      const p=read(room.id).then(({scene})=>{
+      const exhibit=room.id==='collect' ? read('venom-display') : null;
+      const p=Promise.all([read(room.id),exhibit]).then(([{scene},model])=>{
+        if(model){
+          const display=model.scene;
+          display.name='Venom (2018)';
+          display.position.set(venomDisplay.x,0,venomDisplay.z);
+          display.rotation.y=venomDisplay.yaw;
+          scene.add(display);
+        }
         scene.name='Blender room · '+room.id;floors[room.floor-1].add(scene);return scene;
       }).catch(error=>{roomLoads.delete(room.id);throw error;});
       roomLoads.set(room.id,p);
