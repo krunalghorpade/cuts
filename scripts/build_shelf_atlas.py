@@ -1,5 +1,6 @@
 """Pack shelf-resolution artwork into shared textures for the WebGL walkthrough."""
 import json
+import sys
 from pathlib import Path
 from PIL import Image
 
@@ -34,17 +35,16 @@ def paste_print(sheet, image, x, y, pad):
         sheet.paste(sheet.crop((x-pad, y+sy, x+width+pad, y+sy+1)).resize((width+2*pad, pad)), (x-pad, dy))
 
 
-def pack_game_boxes(editions):
+def pack_box_prints(paths, prefix):
     # Spines only occupy their printed width. Keep the whole scan, including wide SNES boxes.
     sheet_width, row_height, rows, pad = 1536, 152, 7, 3
-    paths = sorted({e[k] for e in editions.values() if e.get("launchboxUrl")
-                    for k in ("artwork", "boxBack", "boxSpine") if e.get(k)})
+    paths = sorted(set(paths))
     pages, prints = [], {}
     x, y = pad, pad
     sheet = Image.new("RGB", (sheet_width, rows*row_height))
     def save_page():
         height = y-pad+row_height
-        sheet.crop((0, 0, sheet_width, height)).save(dest / f"game-{len(pages)}.webp", quality=91, method=5)
+        sheet.crop((0, 0, sheet_width, height)).save(dest / f"{prefix}-{len(pages)}.webp", quality=91, method=5)
         pages.append([sheet_width, height])
     for path in paths:
         with Image.open(DIST / path) as original:
@@ -84,10 +84,24 @@ def pack(art, tile, grid, pad, prefix="", quality=84):
         sheet.save(dest / (prefix+str(start//(grid*grid))+".webp"), quality=quality)
     return dict(tile=tile, grid=grid, pad=pad, art=art)
 
-manifest = pack(art, TILE, GRID, PAD)
-# LP jackets are three times the width of a cassette and occupy more screen pixels.
-lp_paths = {i.get("artwork") for i in items if i.get("category") == "vinyl"}
-manifest["vinyl"] = pack([p for p in art if p in lp_paths], 192, 8, 3, "lp-", 89)
-manifest["gameBoxes"] = pack_game_boxes(editions)
-index_file.write_text(json.dumps(manifest, separators=(",", ":")))
+def print_paths(editions):
+    return [edition[key] for edition in editions for key in ("artwork", "boxBack", "boxSpine") if edition.get(key)]
+
+
+if sys.argv[1:] == ["--film-only"]:
+    manifest = json.loads(index_file.read_text())
+else:
+    manifest = pack(art, TILE, GRID, PAD)
+    # LP jackets are three times the width of a cassette and occupy more screen pixels.
+    lp_paths = {i.get("artwork") for i in items if i.get("category") == "vinyl"}
+    manifest["vinyl"] = pack([p for p in art if p in lp_paths], 192, 8, 3, "lp-", 89)
+    manifest["gameBoxes"] = pack_box_prints(print_paths(e for e in editions.values() if e.get("launchboxUrl")), "game")
+film_covers = json.loads((DIST / "film-cover-scans.json").read_text())
+if film_covers:
+    manifest["filmBoxes"] = pack_box_prints(print_paths(film_covers.values()), "film")
+else:
+    manifest.pop("filmBoxes", None)
+pending = index_file.with_suffix(".tmp")
+pending.write_text(json.dumps(manifest, separators=(",", ":")))
+pending.replace(index_file)
 print(len(art), "covers packed")

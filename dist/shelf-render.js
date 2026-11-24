@@ -16,15 +16,16 @@ function loadSheet(page){
   return sheets.get(page);
 }
 
-export function gamePrintAspect(path){
-  return atlas.gameBoxes?.prints[path]?.[5];
+export function casePrintAspect(path){
+  return (atlas.filmBoxes?.prints[path]||atlas.gameBoxes?.prints[path])?.[5];
 }
 
 export function shelfCover(path,vinyl=false){
-  const box=atlas.gameBoxes?.prints[path];
+  const film=atlas.filmBoxes?.prints[path];
+  const box=film||atlas.gameBoxes?.prints[path];
   if(box){
-    const [page,x,y,w,h]=box,[width,height]=atlas.gameBoxes.pages[page];
-    return {...loadSheet('game-'+page),u:(x+.5)/width,v:1-(y+h-.5)/height,
+    const [page,x,y,w,h]=box,[width,height]=(film?atlas.filmBoxes:atlas.gameBoxes).pages[page];
+    return {...loadSheet((film?'film-':'game-')+page),u:(x+.5)/width,v:1-(y+h-.5)/height,
       sx:(w-1)/width,sy:(h-1)/height};
   }
   const useLargePrint=vinyl&&vinylSlots.has(path);

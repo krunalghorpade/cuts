@@ -132,7 +132,7 @@ export function makePackage(item,spec,onShelf,cover,band,scans){
   const front=onShelf&&id==='cassette'&&cover.ready?shelfJCard(item,cover):cover;
   const prints={MAT_FRONT:front,MAT_BACK:inserts.back,MAT_SPINE:inserts.spine,MAT_BAND:{map:band},...scans};
   const surfaces=onShelf?model.shelf:model.detail;
-  const printedBand=scans?.MAT_FRONT && surfaces.find(part=>part.slot==='MAT_BAND');
+  const printedBand=item.launchboxUrl && scans?.MAT_FRONT && surfaces.find(part=>part.slot==='MAT_BAND');
   const generatedGeometry=[];
   const detailPaper=onShelf?null:new T.MeshStandardMaterial({map:inserts.map,roughness:id==='vinyl' ? .83 : .66});
   for(const part of surfaces){

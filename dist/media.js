@@ -1,6 +1,6 @@
 import * as THREE from './vendor/three.module.js';
 
-import {shelfCover,gamePrintAspect} from './shelf-render.js';
+import {shelfCover,casePrintAspect} from './shelf-render.js';
 import {makePackage,disposePrint} from './packaging.js';
 import {minimumBoxDepth} from './box-set-layout.js';
 import {drawJCard} from './package-prints.js';
@@ -101,8 +101,8 @@ function formatBand(item){
   const map=new THREE.CanvasTexture(c);map.colorSpace=THREE.SRGBColorSpace;bands.set(label,map);return map;
 }
 const scanMaps=new Map(),scanLoader=new THREE.TextureLoader();
-function gameScan(path,onShelf){
-  const aspect=gamePrintAspect(path);
+function caseScan(path,onShelf){
+  const aspect=casePrintAspect(path);
   if(onShelf){
     const tile=shelfCover(path);
     return tile && {...tile,aspect};
@@ -128,10 +128,11 @@ function gameScan(path,onShelf){
 export function createMediaCase(item,onShelf=false){
   const spec=caseSpec(item);
   const scans={};
-  if(item.launchboxUrl){
-    for(const [slot,path] of [['MAT_FRONT',item.artwork],['MAT_BACK',item.boxBack],['MAT_SPINE',item.boxSpine]]){
+  const print=item.casePrint||(item.launchboxUrl?item:null);
+  if(print){
+    for(const [slot,path] of [['MAT_FRONT',print.artwork],['MAT_BACK',print.boxBack],['MAT_SPINE',print.boxSpine]]){
       if(path){
-        const scan=gameScan(path,onShelf);
+        const scan=caseScan(path,onShelf);
         if(scan)scans[slot]=scan;
       }
     }
