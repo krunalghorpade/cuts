@@ -5,14 +5,17 @@ import {installArcade} from './arcade.js';
 import {ps2ShelfView} from './retro-showcase.js';
 import {createWindowLighting} from './window-light.js';
 import { buildInterior } from './interior.js';
+import {trailerSources} from './trailer-channel.js';
 import {installPosters,installTelevisions} from './displays.js';
 import {installElevator} from './elevator.js';
 import { rooms, levels, levelOf, ceilingOf, rise, stair, stairStart, stairEnd, lift, entrance, inside, roomAt, groundAt } from './plan.js';
+import { enableMenuDrawer } from './menu-drawers.js';
+import { seatAnchors } from './seat-anchors.js';
 import { createItemDrawer } from './item-drawer.js';
 import {createBoxSetControls} from './box-set-controls.js';
 import { createCasePreview } from './case-preview.js';
 import { stockRooms } from './racks.js';
-import { caseSpec, coverDataUrl } from './media.js';
+import { coverDataUrl } from './media.js';
 
 const $ = id => document.getElementById(id);
 const canvas = $('scene');
@@ -22,7 +25,7 @@ const catalogPanel = $('catalogPanel');
 const detailPanel = $('detailPanel');
 const drawer = createItemDrawer(detailPanel, { openInfo: moreInfo, dismiss: () => closeDetail() });
 const prompt = $('inspectPrompt');
-const preview=createCasePreview($('casePreview'),{onStep:turnItem,onDetails:moreInfo,onTravel:showRecordTravel,onSeasonPick:i=>boxControls.pick(i),onBoxTravel:t=>boxControls.travel(t)});
+const preview=createCasePreview($('casePreview'),{onStep:turnItem,onDetails:moreInfo,onTravel:showRecordTravel,onSeasonPick:i=>boxControls.pick(i),onCaseTap:tapCase,onBoxTravel:t=>boxControls.travel(t)});
 const boxControls=createBoxSetControls(preview);
 $('previewReset').onclick=preview.reset;
 const mobile = matchMedia('(pointer: coarse)').matches;
@@ -87,8 +90,17 @@ houseLights.onclick=()=>syncHouseLights(!interior.theatre.bright);
 syncHouseLights(false);
 const displayTargets=interior.roomModels.displayTargets;
 const {stacks,interactables,destinations,roomStock}=stockRooms(interior,box,label,layoutSeed);
+const seatTargets=interior.floors.map(()=>[]);
+const seatMaterial=new THREE.MeshBasicMaterial({visible:false});
+for(const seat of seatAnchors){
+  const target=new THREE.Mesh(boxGeo,seatMaterial);
+  target.scale.set(seat.width,seat.top-seat.bottom,seat.depth);
+  target.position.set(seat.x,(seat.top+seat.bottom)/2,seat.z);
+  target.name=seat.id;target.userData.seat=seat;target.visible=false;
+  interior.floors[seat.level-1].add(target);seatTargets[seat.level-1].push(target);
+}
 const updatePosters=installPosters(interior,roomStock,displayTargets,posterContent);
-const updateTVs=installTelevisions(canvas,interior.screens,roomStock,trailerStreams,openDetail);
+const televisions=installTelevisions(canvas,interior.screens,roomStock,trailerStreams,openDetail);
 for(const device of interior.devices){
   const targets=displayTargets[device.userData.level-1];targets.push(device);
   if(device.userData.coverTarget)targets.push(device.userData.coverTarget);
@@ -102,6 +114,7 @@ const musicPlayer=installMusicPlayers(roomStock.get('music')||[],musicPreviews,i
 const openArcade=installArcade(()=>{uiOpen=false;});
 illuminate(scene);
 interior.theatre.ready.then(()=>illuminate(interior.floors[0])).catch(()=>{});
+let seated=null,libraryScreenSelected=false;
 let ground=((entryRoom?.floor||1)-1)*rise,level=levelOf(ground);
 let requestedFloor=0;
 const loadNotice=$('floorLoad'),loadText=loadNotice.querySelector('span'),retryFloor=loadNotice.querySelector('button');
@@ -135,8 +148,8 @@ const keys=new Set(); const raycaster=new THREE.Raycaster(); const hoverPoint=ne
 const joystick={x:0,y:0,pointer:null}; let lookStart=null,lookPointer=null,lookLastX=0,lookLastY=0;
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
 function requestLook(){ if(!mobile && !uiOpen && document.pointerLockElement!==canvas) { const request=canvas.requestPointerLock?.(); request?.catch?.(()=>showToast('Drag on the scene to look around')); } }
-function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');const room=roomAt(level,camera.position.x,camera.position.z)?.id;updateTVs(camera,room,true);musicPlayer.update(room==='music'||room==='library'); }
-function pause(){ if(!active||uiOpen||elevator.riding)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Continue exploring'; document.exitPointerLock?.(); }
+function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');const room=roomAt(level,camera.position.x,camera.position.z)?.id;televisions.update(camera,room,true);musicPlayer.update(room==='music'||room==='library'&&!libraryScreenSelected); }
+function pause(){ if(!active||uiOpen||elevator.riding)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Keep digging'; document.exitPointerLock?.(); }
 function showToast(message){const el=$('toast');el.textContent=message;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2400);}
 function openCatalog(){if(elevator.riding)return;preview.hide();boxControls.show(null);currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();(drawer.compact ? $('closeCatalog') : $('searchInput')).focus({preventScroll:true});}
 function closeCatalog(){catalogPanel.classList.add('hidden');uiOpen=false;if(active){hud.classList.remove('hidden');}else intro.classList.remove('hidden');}
@@ -224,7 +237,7 @@ function updateCaseControls(item){
   const physical=!!release||['disc','cartridge','umd'].includes(kind);
   $('caseActions').hidden=!media&&!release;
   $('toggleCase').hidden=!physical;
-  $('toggleCase').textContent=lp?(caseOpen?'Return to sleeve':'Slide record out'):(caseOpen?'Close case':'Open case');
+  $('caseLabel').textContent=lp?(caseOpen?'Return to sleeve':'Slide record out'):(caseOpen?'Close case':'Open case');
   $('recordTravel').hidden=!lp;
   if(lp&&!caseOpen)showRecordTravel(0);
   $('toggleCase').setAttribute('aria-pressed',String(caseOpen));
@@ -271,6 +284,13 @@ $('sleeveSlider').oninput=event=>{
 };
 $('toggleCase').onclick=()=>viewCase(!caseOpen,mediumIndex);
 $('mediumSelect').onchange=event=>viewCase(true,Number(event.target.value));
+function tapCase(season){
+  if(!drawer.compact||!currentDetailItem)return;
+  if(currentDetailItem.seasons){boxControls.openTappedCase(season);return;}
+  if(currentDetailItem.releaseKind||['disc','cartridge','umd'].includes(currentDetailItem.gameMedia?.kind)){
+    viewCase(!caseOpen,mediumIndex);
+  }
+}
 function showDetailItem(view,direction=0){
   const item=detailItems[detailIndex],browsing=view==='stack';
   currentDetailId=item.id;currentDetailItem=item;caseOpen=false;mediumIndex=0;caseRequest++;
@@ -293,21 +313,45 @@ function showDetailItem(view,direction=0){
   boxControls.show(browsing?null:item);
   if(browsing)return;
   updateCaseControls(item);
+  const programme=programmeFor(item);
+  $('playLabel').textContent=programme.action;
+  $('playInRoom').title=programme.action+' · '+programme.content.title+' · '+programme.destination.name;
+  $('playInRoom').setAttribute('aria-label',$('playInRoom').title);
+  if(drawer.compact && mobile && (item.seasons || !$('toggleCase').hidden && !$('caseActions').hidden)){
+    $('gestureHint').textContent='Drag to rotate · Double-tap to open';
+  }
   $('audioExtra').classList.add('hidden');
   $('itemDescription').textContent=item.description;
   showRelated(item);
-  const digital=item.gameMedia?.kind==='digital';
-  $('sizeLabel').hidden=digital;$('detailSize').hidden=digital;
-  $('sizeLabel').textContent=item.exhibit?'Console size (upright)':['books','manga'].includes(item.category) ? (item.estimatedSize?'Estimated size':'Book size') : 'Case size';
-  $('detailSize').textContent=(item.exhibit?.dimensions||caseSpec(item).dimensions).join(' × ')+' mm';
-  $('detailCategory').textContent=item.exhibit?.section||categoryById[item.category].label;$('detailTitle').textContent=item.title;
-  $('detailCreator').textContent=item.creator;$('detailYear').textContent=item.year;$('detailFormatValue').textContent=digital?'Digital release':item.exhibit?.format||caseSpec(item).label;$('detailSource').textContent=item.source;
+  const category=item.exhibit?.section||categoryById[item.category].label;
+  $('detailCategory').textContent=category;
+  $('detailCreator').textContent=[item.album||item.pages?item.creator:category,item.year].filter(Boolean).join(' · ');
+  const credits=item.credits;
+  const imdbTitle=/^tt\d+$/.test(item.id);
+  const rating=credits?.rating||item.rating;
+  const rows=[
+    ['IMDb rating',rating?rating+' / 10':imdbTitle?'Unrated':''],
+    ['Genre',(credits?.genres||item.genres||[]).join(', ')],
+    ['Cast',credits?.cast?.slice(0,4).join(', ')||(imdbTitle?'Unlisted':'')],
+    ['Director',credits?.directors?.slice(0,4).join(', ')||
+      (['movies','anime-movies'].includes(item.category)?item.creator:'')||(imdbTitle?'Unlisted':'')]
+  ];
+  const meta=$('detailMeta');meta.replaceChildren();
+  for(const [label,value] of rows){
+    if(!value)continue;
+    const dt=document.createElement('dt'),dd=document.createElement('dd');
+    dt.textContent=label;dd.textContent=value;meta.append(dt,dd);
+  }
   const sourceLink=$('sourceLink');
-  sourceLink.classList.toggle('hidden', !item.sourceUrl);
+  sourceLink.classList.toggle('hidden',!item.sourceUrl);
+  const imdb=item.sourceUrl && /^https:\/\/(?:www\.)?imdb\.com\//i.test(item.sourceUrl);
+  $('imdbMark').hidden=!imdb;
+  sourceLink.querySelector('svg').toggleAttribute('hidden',Boolean(imdb));
   if(item.sourceUrl){
     sourceLink.href=item.sourceUrl;
-    sourceLink.textContent=item.album?'Open on Spotify':'Open on '+item.source;
-  }
+    sourceLink.title='Open '+item.title+' on '+(imdb?'IMDb':item.source||'the source website');
+    sourceLink.setAttribute('aria-label',sourceLink.title);
+  }else sourceLink.removeAttribute('href');
   const coverSource=$('coverSource');
   coverSource.classList.toggle('hidden',!item.launchboxUrl);
   if(item.launchboxUrl)coverSource.href=item.launchboxUrl;
@@ -315,7 +359,7 @@ function showDetailItem(view,direction=0){
   const listNames=(item.playlists || []).map(id=>playlists[id]).filter(Boolean);
   $('detailNote').textContent=item.album
     ? [item.featuredTrack, listNames.join(', ')].filter(Boolean).join(' · ')
-    : [item.pages ? item.pages+' pages' : '', item.platforms?.join(', ') || item.platform, item.edition, item.artworkNote, item.episodeCount!=null ? item.episodeCount+' episodes' : '', (item.genres||[]).join(', ')].filter(Boolean).join(' · ');
+    : [item.pages ? item.pages+' pages' : '', item.platforms?.join(', ') || item.platform, item.edition, item.artworkNote, item.episodeCount!=null ? item.episodeCount+' episodes' : ''].filter(Boolean).join(' · ');
   if(item.album)enrichAudio(item);
 }
 $('itemPrev').onclick=()=>turnItem(-1);
@@ -335,11 +379,56 @@ function closeDetail(returnToCatalog=fromCatalog){
   if(trigger?.isConnected && trigger.getClientRects().length)trigger.focus({preventScroll:true});
 }
 function arrive(floor,x,z,direction,lookPitch=0){
+  seated=null;$('standUp').hidden=true;
   selectCase(null);hasPointer=false;
   ground=(floor-1)*rise;camera.position.set(x,ground+1.62,z);yaw=direction;pitch=lookPitch;
   camera.rotation.y=yaw;camera.rotation.x=pitch;keys.clear();
   refreshFloor();enter();camera.updateMatrixWorld();
 }
+const screenRoomsByCategory={
+  movies:'cinema','anime-movies':'cinema',shows:'television',anime:'television',
+  vinyl:'music',cds:'music',cassettes:'music',books:'library',manga:'library',
+  playstation:'gaming',xbox:'gaming',switch:'gaming','retro-games':'retro','game-discs':'collect'
+};
+const screenViews={cinema:[-4.90,-1.62],television:[2.00,-.84],music:[-5.50,-2.65],
+  library:[-10.95,9.52],collect:[11.28,6.54],gaming:[4.12,1.31],retro:[11.60,-2.26],bed:[11.63,-3.92]};
+function programmeFor(item){
+  let room=screenRoomsByCategory[item.category]||'retro';
+  if(room==='cinema'&&roomAt(level,camera.position.x,camera.position.z)?.id==='bed')room='bed';
+  const destination=rooms.find(r=>r.id===room);
+  if(item.albumUri)return {destination,content:item,action:'Listen'};
+  let content=item,sources=trailerSources(item,trailerStreams[item.id]);
+  if(item.relatedAnimeIds?.length){
+    for(const id of item.relatedAnimeIds){
+      const adaptation=catalogById.get(id);
+      if(!adaptation)continue;
+      const clips=trailerSources(adaptation,trailerStreams[id]);
+      if(clips.length){content=adaptation;sources=clips;break;}
+    }
+  }
+  const action=sources.length?'Trailer':'On screen';
+  const label=['books','manga'].includes(item.category)?'Reading room':item.exhibit?'Console spotlight':'Trailer unavailable';
+  return {destination,content,sources,action,label};
+}
+function playInRoom(){
+  if(!currentDetailItem)return;
+  const {destination,content,sources,label}=programmeFor(currentDetailItem);
+  const screen=interior.screens.find(tv=>tv.room===destination.id);
+  if(!screen)return;
+  closeDetail(false);
+  const staySeated=seated&&roomAt(level,camera.position.x,camera.position.z)?.id===destination.id;
+  libraryScreenSelected=destination.id==='library';
+  if(!staySeated){
+    const [x,z]=screenViews[destination.id];arrive(destination.floor,x,z,0);
+  }else enter();
+  const point=screen.screen.getWorldPosition(new THREE.Vector3());
+  const dx=point.x-camera.position.x,dz=point.z-camera.position.z;
+  yaw=Math.atan2(-dx,-dz);pitch=Math.atan2(point.y-camera.position.y,Math.hypot(dx,dz));
+  camera.rotation.set(pitch,yaw,0,'YXZ');camera.updateMatrixWorld();
+  if(content.albumUri){musicPlayer.request(content);}
+  else{televisions.request(destination.id,content,sources,label);}
+}
+$('playInRoom').onclick=playInRoom;
 function visitShelf(){
   if(!currentDetailItem)return;
   const dest=currentDetailItem.exhibit?.destination||destinations.get(currentDetailItem.id);
@@ -415,7 +504,7 @@ function makeFrame(color){
 }
 const hoverFrame=makeFrame('#bebebe'),selectionFrame=makeFrame('#ffffff');
 function outline(frame,shell){
-  if(!shell||shell.userData.device){frame.visible=false;return;}
+  if(!shell||shell.userData.device||shell.userData.seat){frame.visible=false;return;}
   if(shell.userData.display){
     shell.add(frame);frame.visible=true;
     frame.position.set(0,0,(shell.userData.depth||0)/2+.001);frame.scale.set(shell.userData.width,shell.userData.height,1);return;
@@ -427,8 +516,28 @@ function outline(frame,shell){
 function selectCase(shell){
   selectedCase=shell;outline(selectionFrame,shell);
 }
+function sit(seat){
+  if(seated||uiOpen||!active)return;
+  seated={x:camera.position.x,z:camera.position.z,ground,yaw,pitch};
+  selectCase(null);focusedCase=null;keys.clear();
+  ground=(seat.level-1)*rise;
+  camera.position.set(seat.eyeX,ground+seat.eyeY,seat.eyeZ);
+  yaw=seat.yaw;pitch=seat.pitch;camera.rotation.set(pitch,yaw,0,'YXZ');camera.updateMatrixWorld();
+  $('standUp').hidden=false;refreshFloor();
+}
+function stand(){
+  if(!seated)return;
+  const previous=seated;
+  // Return to the walkable point from which this seat was reached.
+  seated=null;$('standUp').hidden=true;keys.clear();
+  ground=previous.ground;yaw=previous.yaw;pitch=previous.pitch;
+  camera.position.set(previous.x,ground+1.62,previous.z);
+  camera.rotation.set(pitch,yaw,0,'YXZ');camera.updateMatrixWorld();refreshFloor();
+}
+$('standUp').onclick=stand;
 function useTarget(shell){
   const data=shell?.userData;
+  if(data?.seat){sit(data.seat);return;}
   if(!data?.device){selectCase(shell);if(data?.stackId)openStack(shell);return;}
   selectCase(null);
   if(['vinyl','cassettes','cds'].includes(data.device)){musicPlayer.toggle(data.device);return;}
@@ -437,7 +546,7 @@ function useTarget(shell){
 function inspect(){
   if(elevator.riding)return;
   if(elevator.enclosed(camera.position.x,camera.position.z)){openLift();return;}
-  if(focusedCase?.userData.device){useTarget(focusedCase);return;}
+  if(focusedCase?.userData.seat||focusedCase?.userData.device){useTarget(focusedCase);return;}
   const target=focusedCase?.userData.display==='tv'?focusedCase:selectedCase||focusedCase;
   if(!target){showToast('Select a case on the shelf');return;}
   openDetail(target.userData.item);
@@ -495,7 +604,7 @@ document.addEventListener('keydown',event=>{
   if(event.code==='KeyB'){event.preventDefault();openCatalog();}
   if(event.code==='KeyL')requestLook();
   if(event.code==='KeyV'&&!event.repeat&&!$('tvSound').classList.contains('hidden'))$('tvSound').click();
-  if(event.code==='KeyE'&&!event.repeat)inspect();
+  if(event.code==='KeyE'&&!event.repeat){if(seated)stand();else inspect();}
   if(event.key==='Escape')pause();
 });
 document.addEventListener('keyup',event=>keys.delete(event.code));window.addEventListener('blur',()=>keys.clear());
@@ -515,7 +624,7 @@ function tryMove(x,z){
   if(interior.doors.some(door=>door.level===floor && door.blocks(x,z)))return;
   camera.position.x=x;camera.position.z=z;ground=h;
 }
-let bob=0;function updateMovement(dt){let f=(keys.has('KeyW')?1:0)-(keys.has('KeyS')?1:0)+joystick.y;let s=(keys.has('KeyD')?1:0)-(keys.has('KeyA')?1:0)+joystick.x;const len=Math.hypot(f,s);if(len>1){f/=len;s/=len;}const speed=keys.has('ShiftLeft')||keys.has('ShiftRight')?6.2:3.5;const dx=(-Math.sin(yaw)*f+Math.cos(yaw)*s)*speed*dt,dz=(-Math.cos(yaw)*f-Math.sin(yaw)*s)*speed*dt;const steps=Math.max(1,Math.ceil(Math.max(Math.abs(dx),Math.abs(dz))/.12));
+let bob=0;function updateMovement(dt){if(seated)return;let f=(keys.has('KeyW')?1:0)-(keys.has('KeyS')?1:0)+joystick.y;let s=(keys.has('KeyD')?1:0)-(keys.has('KeyA')?1:0)+joystick.x;const len=Math.hypot(f,s);if(len>1){f/=len;s/=len;}const speed=keys.has('ShiftLeft')||keys.has('ShiftRight')?6.2:3.5;const dx=(-Math.sin(yaw)*f+Math.cos(yaw)*s)*speed*dt,dz=(-Math.cos(yaw)*f-Math.sin(yaw)*s)*speed*dt;const steps=Math.max(1,Math.ceil(Math.max(Math.abs(dx),Math.abs(dz))/.12));
   for(let i=0;i<steps;i++){tryMove(camera.position.x+dx/steps,camera.position.z);tryMove(camera.position.x,camera.position.z+dz/steps);}
   bob+=Math.hypot(dx,dz)*5;camera.position.y=ground+1.62+(len>.03?Math.sin(bob)*.022:0);refreshFloor();
 }
@@ -525,9 +634,15 @@ function pickStackAt(clientX,clientY){
   const visible=onStair?displayTargets.flat():displayTargets[level-1];
   const hits=raycaster.intersectObjects(interactables[level-1],false);
   raycaster.intersectObjects(visible,false,hits);
+  if(!seated&&!onStair){
+    const room=roomAt(level,camera.position.x,camera.position.z)?.id;
+    const candidates=seatTargets[level-1].filter(target=>target.userData.seat.room===room);
+    const seatHit=raycaster.intersectObjects(candidates,false)[0];
+    if(seatHit&&seatHit.distance<=3.3&&(!hits.length||seatHit.distance<hits[0].distance))hits.unshift(seatHit);
+  }
   const hit=hits[0];
   if(!hit||hit.distance>(hit.object.userData.display?14:8))return null;
-  if(!hit.object.userData.item&&!hit.object.userData.device)return null;
+  if(!hit.object.userData.item&&!hit.object.userData.device&&!hit.object.userData.seat)return null;
   const p=camera.position,q=hit.point;
   for(const wall of interior.occluders){
     if(!onStair && wall.level!==level)continue;
@@ -551,6 +666,12 @@ function updateFocus(){
     const inRange=selectedCase.userData.item && selectedCase.getWorldPosition(new THREE.Vector3()).distanceTo(camera.position)<(display?14:5);
     const sameFloor=display?interior.floors[selectedCase.userData.level-1].visible:interactables[level-1].includes(selectedCase);
     if(!inRange||!sameFloor)selectCase(null);
+  }
+  if(focusedCase?.userData.seat){
+    const action='Sit on '+focusedCase.userData.seat.label;
+    prompt.classList.remove('hidden');$('displayDetails').classList.add('hidden');
+    prompt.querySelector('.keycap').textContent=mobile?'Tap':aim?'E':'Click';
+    $('promptText').textContent=action;$('touchInspect').textContent=action;return;
   }
   if(focusedCase?.userData.device){
     const info=focusedCase.userData;
@@ -622,8 +743,13 @@ function animate(){
   interior.roomModels.tick(performance.now(),level);
   const currentRoom=roomAt(level,camera.position.x,camera.position.z)?.id;
   houseLights.hidden=currentRoom!=='cinema'||!active||uiOpen;
-  updateTVs(camera,currentRoom,active);
-  musicPlayer.update(active&&(currentRoom==='music'||currentRoom==='library'),dt);
+  televisions.update(camera,currentRoom,active);
+  if(currentRoom!=='library'||(active&&!document.hidden&&!televisions.hasProgramme()))libraryScreenSelected=false;
+  musicPlayer.update(active&&(currentRoom==='music'||currentRoom==='library'&&!libraryScreenSelected),dt);
+  if(currentRoom==='music'){
+    const now=musicPlayer.screen();
+    televisions.music(now?.item||null,now?.label||'',now?.title||'');
+  }
   // The camera is stationary behind the glass. Keep its last frame composited
   // so a touch gesture only redraws the inspected models.
   if(!currentDetailItem||!roomFrameValid){
@@ -663,6 +789,14 @@ function openMap(){
 $('mapBtn').onclick=openMap;$('closeMap').onclick=()=>mapDialog.close();
 $('levelOne').onclick=()=>{mapLevel=1;drawMap();};$('levelTwo').onclick=()=>{mapLevel=2;drawMap();};$('levelThree').onclick=()=>{mapLevel=3;drawMap();};
 mapDialog.addEventListener('close',()=>{uiOpen=false;});
+function dismissCatalog(){if(!catalogPanel.classList.contains('hidden')){closeCatalog();$('browseBtn').focus({preventScroll:true});}}
+enableMenuDrawer(catalogPanel,()=>drawer.compact,dismissCatalog);
+enableMenuDrawer(mapDialog,()=>drawer.compact,()=>{if(mapDialog.open)mapDialog.close();});
+mapDialog.addEventListener('click',event=>{
+  if(!drawer.compact||event.target!==mapDialog)return;
+  const b=mapDialog.getBoundingClientRect();
+  if(event.clientY<b.top||event.clientY>b.bottom||event.clientX<b.left||event.clientX>b.right)mapDialog.close();
+});
 
 const reloadButton=$('reloadCollections');
 reloadButton.disabled=false;
@@ -671,7 +805,7 @@ reloadButton.onclick=async()=>{
   reloadButton.disabled=true;reloadButton.setAttribute('aria-busy','true');
   try{
     await loadCollections('reload');
-    const view={active,ground,level,x:camera.position.x,z:camera.position.z,yaw,pitch};
+    const view={active,ground,level,x:camera.position.x,z:camera.position.z,yaw,pitch,...seated};
     const seed=crypto.getRandomValues(new Uint32Array(1))[0]||1;
     sessionStorage.setItem('myroom.shelfSeed',String(seed));
     sessionStorage.setItem('myroom.refreshVisit',JSON.stringify(view));

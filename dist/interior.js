@@ -205,6 +205,23 @@ export function buildInterior(scene,label,items,editorial){
     }else if(level===2){
       cove(-5.55,-5.88,3.8,3.04);cove(1.63,-5.88,2.7,3.04);
       listeningStation({group,part,box,cyl,block,sign,shadow,walnut,devices});
+      // These wall mounts sit in the solid bays, clear of the listening-deck
+      // labels, library window and collectibles-room doorway.
+      function wallScreen(room,x,y,z,width,yaw=0){
+        const height=width*9/16,rim=.014;
+        const nx=Math.sin(yaw),nz=Math.cos(yaw);
+        box(x-nx*.077,y,z-nz*.077,width*.40,height*.59,.095,iron,0,yaw);
+        box(x-nx*.024,y,z-nz*.024,width+2*rim,height+2*rim,.044,'#171919',0,yaw);
+        const tv=addTelevision(group,room,x,y,z,width,height,false,false);
+        tv.screen.rotation.y=yaw;screens.push(tv);
+        const span=width+.065,depth=.15;
+        shelfBounds.push({level,x:x-nx*.055,z:z-nz*.055,
+          w:Math.abs(nz)*span+Math.abs(nx)*depth,d:Math.abs(nx)*span+Math.abs(nz)*depth,
+          bottom:y-height/2-.035,top:y+height/2+.035});
+      }
+      wallScreen('music',-5.55,2.35,-5.80,1.92);
+      wallScreen('library',-10.49,2.03,6.19,1.82);
+      wallScreen('collect',8.19,1.94,6.68,1.91,Math.PI/2);
       originX=4;
       buildGamingDesk({part,box,tv,speaker,block,shadow,walnut});
       originX=0;

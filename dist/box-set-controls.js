@@ -18,8 +18,8 @@ export function createBoxSetControls(preview){
   }
   function paint(){
     const season=item.seasons[index],drawn=stage===2,opened=stage===3;
-    advance.textContent=['Open box set','Slide case out','Open season case','Close season case'][stage];
-    back.hidden=stage===0;back.textContent=stage===1?'Close box set':drawn?'Return to box':'Back to box';
+    byId('boxLabel').textContent=['Open box set','Slide case out','Open season case','Close season case'][stage];
+    back.hidden=stage===0;byId('boxBackLabel').textContent=stage===1?'Close box set':drawn?'Return to box':'Back to box';
     byId('seasonPicker').hidden=stage!==1||item.seasons.length<2;
     byId('caseTravel').hidden=stage!==1&&stage!==2;
     byId('discSpreadPicker').hidden=!opened||season.count<3;
@@ -63,7 +63,7 @@ export function createBoxSetControls(preview){
     index=i;page=0;trays();move(1);
   }
   function show(next){
-    request++;item=next?.seasons?next:null;index=page=stage=0;panel.hidden=!item;
+    request++;item=next?.seasons?next:null;index=page=stage=0;panel.hidden=!item;advance.hidden=!item;
     if(!item)return;
     seasonSelect.replaceChildren(...item.seasons.map((s,i)=>new Option(s.label,String(i))));
     travel(0);trays();paint();
@@ -73,5 +73,11 @@ export function createBoxSetControls(preview){
   seasonSelect.onchange=()=>pick(Number(seasonSelect.value));
   discSelect.onchange=()=>{page=Number(discSelect.value);move(3);};
   slider.oninput=()=>{const t=slider.valueAsNumber/100;move(t>0?2:1,t);};
-  return {show,pick,travel};
+  function openTappedCase(season){
+    if(!item)return;
+    if(stage===0){move(1);return;}
+    if(stage===1 && Number.isInteger(season))pick(season);
+    move(stage===3?2:3);
+  }
+  return {show,pick,travel,openTappedCase};
 }

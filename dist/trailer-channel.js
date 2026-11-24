@@ -1,4 +1,5 @@
 import {CSS3DObject} from './vendor/CSS3DRenderer.js';
+import {showProgramme,programmePages} from './screen-programme.js';
 import {roomRotation} from './trailer-rotation.js';
 
 let apiPromise,apiRetryAt=0;
@@ -44,13 +45,13 @@ export function trailerSources(item,info={}){
 }
 
 export function createChannel(scene,entries,retro,room,standby,windowMaterial){
-  if(!entries.length)return {setScreen(){},sound(){},resume(){},distance(){}};
   const rotation=roomRotation(room,entries);
   const width=640,height=retro?480:360;
   const surface=document.createElement('div');
   surface.style.cssText='width:'+width+'px;height:'+height+'px;background:black;overflow:hidden;pointer-events:none';
   const plane=new CSS3DObject(surface);plane.visible=false;scene.add(plane);
   let tv=null,entry=null,candidates=[],index=0,source=null,video=null,embed=null,hls=null,ready=false;
+  let requested=false,card=null;
   let timer=0,generation=0,muted=false,gestureMuted=false,volume=1,marked=false,blocked=false;
   function display(on){
     if(!tv)return;
@@ -69,21 +70,24 @@ export function createChannel(scene,entries,retro,room,standby,windowMaterial){
     surface.replaceChildren();source=null;
   }
   function next(){
-    resetSource();entry=rotation.choose();index=0;marked=false;
+    requested=false;card=null;resetSource();entry=rotation.choose();index=0;marked=false;
     standby[room].userData.cue?.(entry?.item||null);
-    if(!entry){watch(30000,next);return;}
+    if(!entry){if(entries.length)watch(30000,next);return;}
     candidates=rotation.sourcesFor(entry);startSource();
   }
   function failed(){
     if(!entry||!tv)return;
     resetSource();
     if(index<candidates.length){startSource();return;}
+    if(requested){present(entry.item,'Trailer unavailable',entry.item.description);return;}
     rotation.unavailable(entry.id);next();
   }
   function playing(){
     if(!tv)return;
     clearTimeout(timer);blocked=false;display(true);
-    if(!marked){rotation.played(entry.id,entry.siblings,entry.sources.indexOf(source));marked=true;}
+    tv.screen.userData.programme='Trailer';
+    surface.querySelector('.screen-programme')?.remove();
+    if(!marked && entries.some(candidate=>candidate.id===entry.id)){rotation.played(entry.id,entry.siblings,entry.sources.indexOf(source));marked=true;}
   }
   function sound(value){
     muted=value;
@@ -107,6 +111,9 @@ export function createChannel(scene,entries,retro,room,standby,windowMaterial){
   function startSource(){
     source=candidates[index++];
     const tag=++generation;
+    if(requested){
+      showProgramme(surface,entry.item,'Loading trailer');display(true);tv.screen.userData.programme='Loading trailer';
+    }
     watch(15000,failed);
     if(source.type!=='youtube'){
       video=document.createElement('video');
@@ -157,10 +164,27 @@ export function createChannel(scene,entries,retro,room,standby,windowMaterial){
         }});
     }).catch(()=>{if(tag===generation&&tv)failed();});
   }
+  function drawCard(){
+    if(!tv||!card)return;
+    showProgramme(surface,entry.item,card.label,card.pages[card.page]);
+    display(true);tv.screen.userData.programme=card.label;
+    if(card.pages.length>1)watch(8000,()=>{card.page=(card.page+1)%card.pages.length;drawCard();});
+  }
+  function present(item,label,description=''){
+    resetSource();requested=true;entry={id:item.id,item};
+    card={label,pages:programmePages(description),page:0};drawCard();
+  }
+  function request(item,sources,label='Collection preview'){
+    if(!tv)return;
+    if(!sources.length){present(item,label,item.description);return;}
+    resetSource();requested=true;card=null;
+    entry=entries.find(e=>e.id===item.id)||{id:item.id,item,sources};
+    index=0;marked=false;candidates=rotation.sourcesFor(entry);startSource();
+  }
   function setScreen(target,departed){
     if(!target){
       display(false);tv=null;plane.visible=false;clearTimeout(timer);
-      if(departed){resetSource();entry=null;}
+      if(departed){resetSource();entry=null;card=null;requested=false;}
       else if(video)video.pause();
       else if(ready)embed?.pauseVideo();
       return;
@@ -168,10 +192,11 @@ export function createChannel(scene,entries,retro,room,standby,windowMaterial){
     if(tv===target)return;
     tv=target;plane.visible=true;tv.screen.getWorldPosition(plane.position);tv.screen.getWorldQuaternion(plane.quaternion);
     plane.scale.set(tv.w/width,tv.h/height,1);
+    if(card){drawCard();return;}
     if(!entry||!source){next();return;}
     play();
   }
-  return {setScreen,sound,resume(){
+  return {setScreen,sound,request,present,clear:next,resume(){
     if(!tv)return;
     if(gestureMuted&&!muted){gestureMuted=false;sound(muted);play();}
     else if(blocked||video?.paused||ready&&embed?.getPlayerState()===2)play();

@@ -1,7 +1,11 @@
+import {spotifyPlayer} from './spotify-player.js';
 const names={vinyl:'Vinyl',cassettes:'Cassette',cds:'CD'};
 export function installMusicPlayers(items,previews,devices,openDetail){
   const panel=document.getElementById('musicControls'), info=document.getElementById('musicTrack');
   const link=document.getElementById('musicLink'),details=document.getElementById('musicItem'),unlock=document.getElementById('musicResume');
+  const host=document.createElement('div');host.className='spotify-album-player';host.hidden=true;panel.append(host);
+  const spotify=spotifyPlayer(host);
+  let explicit=false,external=false;
   const audio=document.createElement('audio');audio.preload='none';panel.append(audio);
   const decks=new Map(Object.keys(names).map(key=>[key,items.filter(i=>i.category===key && previews[i.albumUri]?.url)]));
   const models=devices.map(d=>d.userData).filter(d=>d.show);
@@ -27,9 +31,9 @@ export function installMusicPlayers(items,previews,devices,openDetail){
       b.setAttribute('aria-pressed',String(on));
       b.setAttribute('aria-label',(on?'Turn off ':'Turn on ')+names[key]+' player');
     }
-    const track=record&&previews[record.albumUri];
+    const track=record&&(external?{title:record.title}:previews[record.albumUri]);
     selectCover(record?.artwork||'');
-    const state=sounding&&present?'Playing':blocked||!present?'Paused':'Loading';
+    const state=sounding&&present?'Playing':external?'Spotify player':blocked||!present?'Paused':'Loading';
     for(const model of models){
       const on=Boolean(track&&model.device===selected);
       model.show({item:on?record:null,track:on?track:null,status:state,image:on?cover:null});
@@ -39,14 +43,15 @@ export function installMusicPlayers(items,previews,devices,openDetail){
     status.textContent=track?'':selected?'Loading preview…':'Players off';
     link.classList.toggle('hidden',!track);details.classList.toggle('hidden',!track);
     if(track){
-      link.href='https://open.spotify.com/track/'+track.trackUri.split(':').at(-1);
+      link.title=external?'Open album on Spotify':'Open track on Spotify';link.setAttribute('aria-label',link.title);
+      link.href=track.trackUri?'https://open.spotify.com/track/'+track.trackUri.split(':').at(-1):record.sourceUrl;
       details.setAttribute('aria-label','View '+record.title+' album details');
       details.title=track.title+' · '+record.creator;
     }
     unlock.classList.toggle('hidden',!blocked);
   }
   function stop(){
-    sounding=false;token++;clearTimeout(timer);audio.pause();audio.removeAttribute('src');audio.load();record=null;blocked=false;
+    explicit=false;external=false;spotify.stop();sounding=false;token++;clearTimeout(timer);audio.pause();audio.removeAttribute('src');audio.load();record=null;blocked=false;
   }
   function play(){
     if(!present||!record)return;
@@ -59,6 +64,7 @@ export function installMusicPlayers(items,previews,devices,openDetail){
     });
   }
   function next(){
+    explicit=false;external=false;
     if(!present||!selected)return;
     if(!queue.length){
       queue=decks.get(selected).filter(i=>!failed.has(i.id)).slice();
@@ -70,7 +76,27 @@ export function installMusicPlayers(items,previews,devices,openDetail){
     sounding=false;last=record.id;audio.src=previews[record.albumUri].url;audio.title=previews[record.albumUri].title;
     blocked=false;play();render();
   }
-  function skip(){if(record&&present){failed.add(record.id);stop();next();}}
+  function spotifyAlbum(){
+    const item=record;
+    clearTimeout(timer);token++;external=true;sounding=false;blocked=false;
+    audio.pause();audio.removeAttribute('src');audio.load();
+    spotify.start(item,playing=>{
+      if(record===item&&external&&present&&sounding!==playing){sounding=playing;render();}
+    });
+    render();
+  }
+  function skip(){
+    if(!record||!present)return;
+    if(explicit){spotifyAlbum();return;}
+    failed.add(record.id);stop();next();
+  }
+  function request(item){
+    if(!present||!decks.has(item.category))return;
+    stop();queue=[];failed.clear();selected=item.category;explicit=true;record=item;last=item.id;
+    const track=previews[item.albumUri];
+    if(!track?.url){spotifyAlbum();return;}
+    audio.src=track.url;audio.title=track.title;play();render();
+  }
   function toggle(key){
     if(!decks.has(key)||!present)return;
     const on=selected===key;stop();selected=on?null:key;queue=[];failed.clear();
@@ -85,13 +111,17 @@ export function installMusicPlayers(items,previews,devices,openDetail){
     const inside=active&&!document.hidden;
     if(inside!==present){
       present=inside;
-      if(!inside){token++;clearTimeout(timer);audio.pause();}
-      else if(record)play();else if(selected)next();
+      if(!inside){token++;clearTimeout(timer);audio.pause();if(external){spotify.stop();sounding=false;}}
+      else if(record&&external)spotifyAlbum();else if(record)play();else if(selected)next();
       render();
     }
-    if(inside)vinylPlayer?.updateMechanism(dt,selected==='vinyl'&&sounding&&!audio.paused);
+    if(inside)vinylPlayer?.updateMechanism(dt,selected==='vinyl'&&sounding&&(external||!audio.paused));
   }
   document.addEventListener('visibilitychange',()=>{if(document.hidden)update(false);});
   render();
-  return {update,toggle,description:key=>(selected===key?'Turn off ':'Turn on ')+names[key]+' player'};
+  return {update,toggle,request,screen(){
+    if(!present||!record)return null;
+    const title=external?record.title:previews[record.albumUri]?.title;
+    return {item:record,title,label:external&&!sounding?'Spotify album':sounding?'Now playing':blocked?'Paused':'Loading song'};
+  },description:key=>(selected===key?'Turn off ':'Turn on ')+names[key]+' player'};
 }

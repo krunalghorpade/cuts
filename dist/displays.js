@@ -21,6 +21,7 @@ function slate(label,retro=false){
 
 const standby={
   cinema:cinemaProgramme(), television:slate('TV ROOM'), bed:slate('MOVIE TV'),
+  music:slate('LISTENING ROOM'),library:slate('READING ROOM'),collect:slate('GAME ARCHIVE'),
   gaming:slate('GAME TRAILERS'), retro:slate('RETRO GAMING ROOM',true)
 };
 const windowMaterial=new T.ShaderMaterial({
@@ -43,7 +44,8 @@ export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   const channels=new Map();
   for(const tv of screens){
     const entries=[];
-    for(const item of roomStock.get(tv.room==='bed'?'cinema':tv.room)||[]){
+    const stock=tv.room==='music'||tv.room==='library'?[]:roomStock.get(tv.room==='bed'?'cinema':tv.room)||[];
+    for(const item of stock){
       const sources=trailerSources(item,streams[item.id]);
       if(sources.length)entries.push({id:item.id,item,sources});
     }
@@ -62,9 +64,11 @@ export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   const muteButton=document.getElementById('tvSound');
   const controls=document.getElementById('tvControls'),itemButton=document.getElementById('tvItem');
   const art=document.getElementById('tvArtwork'),title=document.getElementById('tvTitle');
-  let currentItem=null,activeScreen=null;
+  let currentItem=null,activeScreen=null,musicItem=null,musicLabel,musicCaption;
   itemButton.onclick=()=>{if(currentItem)openDetail(currentItem);};
+  const subtitle=itemButton.querySelector('small');
   function updateItem(item){
+    subtitle.textContent=activeScreen?.userData.programme||'Trailer';
     if(currentItem===item)return;
     currentItem=item;itemButton.classList.toggle('hidden',!item);
     title.textContent=item?.title||'';
@@ -91,20 +95,32 @@ export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   window.addEventListener('pointerdown',resume);window.addEventListener('keydown',resume);
   let activeRoom,hasScreen=false;
   function switchRoom(room,departed=false){
-    activeRoom=room;hasScreen=false;activeScreen=null;
+    activeRoom=room;hasScreen=false;activeScreen=null;musicItem=null;musicLabel=null;musicCaption=null;
     channels.forEach((channel,name)=>{
       const tv=screens.find(s=>s.room===room && s.channel===name);
       channel.setScreen(tv||null,departed&&name!==room);
       if(tv){hasScreen=true;activeScreen=tv.screen;}
     });
-    controls.classList.toggle("hidden",!hasScreen);muteButton.classList.toggle("hidden",!hasScreen);
+    const showControls=hasScreen&&room!=='music'&&(room!=='library'||tvTitle());
+    controls.classList.toggle("hidden",!showControls);muteButton.classList.toggle("hidden",!showControls);
   }
   document.addEventListener('visibilitychange',()=>{if(document.hidden)switchRoom(null);});
-  return (camera,room,enabled)=>{
+  const tvTitle=()=>activeScreen?.userData.item;
+  function update(camera,room,enabled){
     const next=enabled&&!document.hidden?room:null,changed=next!==activeRoom;
     if(changed)switchRoom(next,enabled&&!document.hidden);
-    updateItem(activeScreen?.userData.item||null);
+    updateItem(tvTitle()||null);
+    if(activeRoom==='library')controls.classList.toggle('hidden',!tvTitle());
     if(hasScreen)channels.forEach(ch=>ch.distance(camera.position));
     if(changed||hasScreen)renderer.render(scene,camera);
-  };
+  }
+  return {update,hasProgramme:()=>Boolean(tvTitle()),request(room,item,sources,label){
+    channels.get(room)?.request(item,sources,label);
+    if(room==='library')muteButton.classList.toggle('hidden',!sources.length);
+  },music(item,label,caption){
+    if(activeRoom!=='music'||(item===musicItem&&label===musicLabel&&caption===musicCaption))return;
+    musicItem=item;musicLabel=label;musicCaption=caption;
+    if(item)channels.get('music').present(item,label,caption);
+    else channels.get('music').clear();
+  }};
 }

@@ -14,7 +14,7 @@ function inspectionStudio(){
   map.colorSpace=THREE.SRGBColorSpace;return map;
 }
 
-export function createCasePreview(canvas,{onStep,onDetails,onTravel,onSeasonPick,onBoxTravel}){
+export function createCasePreview(canvas,{onStep,onDetails,onTravel,onSeasonPick,onBoxTravel,onCaseTap}){
   const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(32,1,.01,20);
   camera.position.z=4.5;
   scene.add(new THREE.HemisphereLight(0xffffff,0x9c9c9c,1.6));
@@ -58,7 +58,7 @@ export function createCasePreview(canvas,{onStep,onDetails,onTravel,onSeasonPick
   }
   function reset(){if(hero)home(hero);}
   function show(item,{previous=null,next=null,step=0,view='info'}={}){
-    prepare();releasePointer();
+    prepare();releasePointer();lastTap=null;
     openGeneration++;dropInterior();
     const oldHero=hero,existing=new Map(entries.map(entry=>[entry.item.id,entry]));
     entries=[];hero=null;mode=view;
@@ -178,13 +178,27 @@ export function createCasePreview(canvas,{onStep,onDetails,onTravel,onSeasonPick
   canvas.addEventListener('pointerup',event=>{
     if(pointer?.id!==event.pointerId)return;
     const p=pointer;releasePointer();
-    if(mode!=='stack'){
-      if(!p.moved&&opening?.boxSet&&goal===1/3&&progress===goal){
-        const b=canvas.getBoundingClientRect();
-        ndc.set((event.clientX-b.left)/b.width*2-1,1-(event.clientY-b.top)/b.height*2);
-        ray.setFromCamera(ndc,camera);
-        const hit=ray.intersectObject(opening.group,true)[0];
-        if(Number.isInteger(hit?.object.userData.seasonIndex))onSeasonPick?.(hit.object.userData.seasonIndex);
+    const tap = !p.moved && Math.hypot(event.clientX-p.startX,event.clientY-p.startY)<=8;
+    const now=performance.now();
+    const doubleTap=tap && lastTap?.item===hero.item.id &&
+      Math.min(event.timeStamp-lastTap.eventTime,now-lastTap.time)<480 &&
+      Math.hypot(event.clientX-lastTap.x,event.clientY-lastTap.y)<28;
+    const remember=()=>({time:now,eventTime:event.timeStamp,x:event.clientX,y:event.clientY,item:hero.item.id});
+    if(mode==='info'){
+      if(!tap){lastTap=null;return;}
+      const b=canvas.getBoundingClientRect();
+      ndc.set((event.clientX-b.left)/b.width*2-1,1-(event.clientY-b.top)/b.height*2);
+      ray.setFromCamera(ndc,camera);
+      const hit=ray.intersectObject(opening?.group||hero.group,true).find(hit=>{
+        for(let n=hit.object;n;n=n.parent)if(!n.visible)return false;
+        return true;
+      });
+      if(!hit){lastTap=null;return;}
+      const season=hit.object.userData.seasonIndex;
+      if(opening?.boxSet && goal===1/3 && Number.isInteger(season))onSeasonPick?.(season);
+      if(event.pointerType==='touch'){
+        if(doubleTap){lastTap=null;onCaseTap?.(season);}
+        else lastTap=remember();
       }
       return;
     }
@@ -193,14 +207,13 @@ export function createCasePreview(canvas,{onStep,onDetails,onTravel,onSeasonPick
       lastTap=null;onStep(dx<0?1:-1);return;
     }
     if(p.moved||Math.hypot(dx,dy)>8){lastTap=null;return;}
-    const now=performance.now();
-    if(lastTap&&lastTap.item===hero.item.id&&Math.min(event.timeStamp-lastTap.eventTime,now-lastTap.time)<480&&Math.hypot(event.clientX-lastTap.x,event.clientY-lastTap.y)<28){
+    if(doubleTap){
       lastTap=null;onDetails();return;
     }
     const slot=hitSlot(event.clientX,event.clientY);
     if(slot===null){lastTap=null;return;}
     if(slot)onStep(slot);
-    lastTap={time:performance.now(),eventTime:event.timeStamp,x:event.clientX,y:event.clientY,item:hero.item.id};
+    lastTap=remember();
   });
   for(const type of ['pointercancel','lostpointercapture'])canvas.addEventListener(type,event=>{
     if(pointer?.id===event.pointerId)pointer=null;

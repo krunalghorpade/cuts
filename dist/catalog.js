@@ -1,7 +1,7 @@
 import {boxSetLayout} from './box-set-layout.js';
 import {retroPackage} from './game-packages.js';
 const files=['imdb-items','spotify-items','book-items','playlists','trailers','game-editions','music-previews','manga-items','item-descriptions','poster-content'];
-const artFiles=['music-medium-art','movie-medium-art','box-set-seasons','box-set-disc-art'];
+const artFiles=['music-medium-art','movie-medium-art','box-set-seasons','box-set-disc-art','screen-credits'];
 export async function loadCollections(cache='default'){
   return Promise.all([...files,...artFiles].map(async name=>{
     const response=await fetch(new URL('./'+name+'.json',import.meta.url),{cache});
@@ -10,7 +10,7 @@ export async function loadCollections(cache='default'){
     return response.json();
   }));
 }
-const [screenTitles,music,books,playlistSources,trailerSources,editions,previews,manga,descriptions,editorial,musicArt,movieArt,seasonRows,seasonEditions]=await loadCollections();
+const [screenTitles,music,books,playlistSources,trailerSources,editions,previews,manga,descriptions,editorial,musicArt,movieArt,seasonRows,seasonEditions,screenCredits]=await loadCollections();
 export const posterContent=editorial;
 export const trailerStreams = trailerSources;
 export const musicPreviews = previews;
@@ -79,6 +79,6 @@ export const ITEMS = [...titles, ...retainedMusic, ...books, ...manga].filter(it
   const sourceText=item.description||note?.text;
   const extra=item.album&&item.featuredTrack?' Its playlist selection includes “'+item.featuredTrack+'”.':'';
   const seasons=['shows','anime'].includes(category)?boxSetLayout(item,seasonRows[item.id],seasonEditions[item.id]):null;
-  return {...item,releaseKind,mediumArt,seasons,description:sourceText||[item.title,item.creator?'by '+item.creator:'',item.year?'('+item.year+')':''].filter(Boolean).join(' ')+'.'+extra,
+  return {...item,credits:screenCredits[item.id],releaseKind,mediumArt,seasons,description:sourceText||[item.title,item.creator?'by '+item.creator:'',item.year?'('+item.year+')':''].filter(Boolean).join(' ')+'.'+extra,
     descriptionSource:note?.sourceUrl||item.sourceUrl,accent:categoryById[item.category].accent};
 });

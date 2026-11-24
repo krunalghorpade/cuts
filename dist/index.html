@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#101010">
-  <meta name="description" content="Explore My Room, a three-floor first-person archive of film, music, games and art by Krunal Ghorpade aka Kratex.">
+  <meta name="description" content="Explore The Kratex Cut, three floors of films, records, games and books collected and recommended to Kratex.">
   <meta name="author" content="Krunal Ghorpade aka Kratex">
-  <title>My Room - by Krunal Ghorpade aka Kratex</title>
+  <title>The Kratex Cut — by Krunal Ghorpade</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 </head>
 <body>
+  <svg class="icon-symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 5 10 7-10 7z"/></symbol><symbol id="icon-case" viewBox="0 0 24 24"><path d="M12 6 3 3v14l9 4 9-4V3zM12 6v15"/></symbol><symbol id="icon-shelf" viewBox="0 0 24 24"><path d="M3 20h18M4 16V6h3v10zm5 0V4h3v12zm7 .2-2-10 3-.6 2 10z"/></symbol><symbol id="icon-external" viewBox="0 0 24 24"><path d="M13 4h7v7m0-7L10 14M10 6H5v13h13v-5"/></symbol><symbol id="icon-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.3"/></symbol><symbol id="icon-back" viewBox="0 0 24 24"><path d="m10 5-7 7 7 7m-6-7h16"/></symbol></defs></svg>
   <canvas id="scene" aria-label="Interactive three-dimensional basement media store"></canvas>
   <header class="topbar">
     <span id="entryLocation" class="location">Level 1 · Entrance lobby</span>
@@ -23,9 +24,10 @@
 
   <section id="intro" class="intro" aria-labelledby="introTitle">
     <div class="entry-copy">
-      <h1 id="introTitle">My Room</h1>
-      <p class="entry-byline">by Krunal Ghorpade aka Kratex</p>
-      <button id="enterBtn" class="primary-button" type="button">Enter the store</button>
+      <p class="entry-byline">By Krunal Ghorpade, aka Kratex</p>
+      <h1 id="introTitle">The Kratex Cut</h1>
+      <p class="entry-description">Three floors of films, records, games and books I love, alongside the recommendations I’m still working through.</p>
+      <button id="enterBtn" class="primary-button" type="button">Start digging</button>
       <p class="entry-guide"><span>WASD to move · Drag to look</span><span>Move with the stick · Drag to look</span></p>
     </div>
   </section>
@@ -34,6 +36,7 @@
   <div id="hud" class="hud hidden">
     <button id="liftAction" class="lift-hint hidden" type="button">Choose elevator floor</button>
     <span id="liftMessage" class="lift-hint hidden" role="status"></span>
+    <button id="standUp" type="button" hidden>Stand up</button>
     <div class="aim" aria-hidden="true"></div>
     <div id="inspectPrompt" class="inspect-prompt hidden"><span class="keycap"></span><span id="promptText"></span><button id="displayDetails" class="hidden" type="button">View details</button></div>
     <section id="tvControls" class="player-bar hidden" aria-label="Room trailer">
@@ -60,7 +63,7 @@
     </section>
     <details class="controls">
       <summary>Controls</summary>
-      <dl><dt>Move</dt><dd>W A S D</dd><dt>Look</dt><dd>Drag or arrow keys</dd><dt>Browse stack</dt><dd>Click a shelf item</dd><dt>Item details</dt><dd>E or double-click the item in a stack</dd><dt>Run</dt><dd>Hold Shift</dd><dt>Pause</dt><dd>Esc</dd><dt>TV sound</dt><dd>V</dd></dl>
+      <dl><dt>Move</dt><dd>W A S D</dd><dt>Look</dt><dd>Drag or arrow keys</dd><dt>Browse stack</dt><dd>Click a shelf item</dd><dt>Item details</dt><dd>E or double-click the item in a stack</dd><dt>Use a seat</dt><dd>Click to sit · E to stand</dd><dt>Run</dt><dd>Hold Shift</dd><dt>Pause</dt><dd>Esc</dd><dt>TV sound</dt><dd>V</dd></dl>
     </details>
     <div class="touch-controls">
       <div id="lookPad" class="look-pad" aria-label="Drag to look or tap a case to browse its stack"></div>
@@ -71,6 +74,7 @@
 
   <div id="dismissPanel" class="panel-shade" aria-hidden="true"></div>
   <aside id="catalogPanel" class="panel catalog-panel hidden" aria-labelledby="catalogTitle" aria-modal="true" role="dialog">
+    <button class="menu-grip" type="button" aria-label="Close collection"><span aria-hidden="true"></span></button>
     <header class="panel-head"><h2 id="catalogTitle">Collection</h2><button id="closeCatalog" type="button" aria-label="Close collection">Close</button></header>
     <input id="searchInput" type="search" placeholder="Search the collection" autocomplete="off" aria-label="Search the collection">
     <div id="filters" class="filters" aria-label="Filter media categories"></div>
@@ -85,7 +89,7 @@
   <aside id="detailPanel" class="panel detail-panel hidden" aria-labelledby="detailTitle" aria-modal="true" role="dialog" data-view="info">
     <header class="inspect-head">
       <span id="inspectLocation"></span>
-      <button id="backToStack" type="button" hidden>‹ Back to stack</button>
+      <button id="backToStack" type="button" hidden><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-back"/></svg>Stack</button>
       <button id="closeDetail" class="glass-icon" type="button" aria-label="Close item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
     </header>
     <div class="item-layout">
@@ -108,31 +112,35 @@
               <span id="itemPosition" aria-live="polite"></span>
               <button id="itemNext" class="glass-icon" type="button" aria-label="Next item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
             </div>
-            <button id="moreInfo" class="glass-primary" type="button">More info</button>
+            <button id="moreInfo" class="glass-primary" type="button"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-info"/></svg>More info</button>
           </div>
           <div id="itemInfo">
+            <div class="item-tools" role="group" aria-label="Item actions">
+              <button id="toggleCase" class="glass-primary" type="button" aria-pressed="false" hidden><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-case"/></svg><span id="caseLabel">Open case</span></button>
+              <button id="boxAdvance" class="glass-primary" type="button" hidden><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-case"/></svg><span id="boxLabel">Open box set</span></button>
+              <button id="playInRoom" type="button"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-play"/></svg><span id="playLabel">Trailer</span></button>
+              <a id="sourceLink" class="tool-icon hidden" target="_blank" rel="noopener noreferrer"><img id="imdbMark" src="./imdb-logo.svg" alt="" hidden><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-external"/></svg></a>
+              <button id="visitShelf" class="tool-icon" type="button" aria-label="Go to shelf" title="Go to shelf"><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-shelf"/></svg></button>
+            </div>
             <div id="boxActions" hidden>
               <label id="seasonPicker" hidden>Case <select id="seasonSelect"></select></label>
-              <div class="box-buttons"><button id="boxAdvance" type="button" class="glass-primary">Open box set</button><button id="boxBack" type="button" hidden></button></div>
+              <button id="boxBack" type="button" hidden><svg class="action-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-back"/></svg><span id="boxBackLabel"></span></button>
               <label id="caseTravel" hidden>Case position <input id="seasonSlider" type="range" min="0" max="100" step="1" value="0" aria-valuetext="In box"></label>
               <label id="discSpreadPicker" hidden>Tray <select id="discSpread"></select></label>
               <p id="boxNote" role="status"></p>
             </div>
             <div id="caseActions" hidden>
-              <button id="toggleCase" class="glass-primary" type="button" aria-pressed="false">Open case</button>
               <label id="recordTravel" hidden>Record position <input id="sleeveSlider" type="range" min="0" max="100" step="1" value="0" aria-valuetext="In sleeve"></label>
               <label id="mediumPicker" hidden><span>Media</span><select id="mediumSelect"></select></label>
               <p id="mediumNote" role="status"></p>
             </div>
             <div id="itemFacts">
               <p id="itemDescription" class="catalog-description"></p>
-              <dl class="detail-meta"><dt>Release</dt><dd id="detailYear"></dd><dt>Format</dt><dd id="detailFormatValue"></dd><dt id="sizeLabel">Case size</dt><dd id="detailSize"></dd><dt>Source</dt><dd id="detailSource"></dd></dl>
+              <dl id="detailMeta" class="detail-meta"></dl>
               <p id="detailNote" class="detail-note"></p><div id="audioExtra" class="audio-extra hidden"></div>
-              <a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
               <a id="coverSource" class="source-link hidden" target="_blank" rel="noopener noreferrer">Artwork on LaunchBox</a>
               <div id="relatedTitles" class="related-titles hidden"></div>
               <div id="posterCredit" class="poster-credit hidden"></div>
-              <div class="detail-actions"><button id="visitShelf" class="primary-button" type="button">Go to shelf</button></div>
             </div>
           </div>
         </div>
@@ -148,6 +156,7 @@
     <div class="lift-stops"><button type="button" data-floor="3"><b>03</b> Gallery &amp; private room</button><button type="button" data-floor="2"><b>02</b> Library, music &amp; games</button><button type="button" data-floor="1"><b>01</b> Entrance &amp; cinema</button></div>
   </dialog>
   <dialog id="mapDialog" class="map-dialog" aria-labelledby="mapTitle">
+    <button class="menu-grip" type="button" aria-label="Close floor map"><span aria-hidden="true"></span></button>
     <header class="panel-head"><h2 id="mapTitle">Floor map</h2><button id="closeMap" type="button" aria-label="Close floor map">Close</button></header>
     <div class="level-tabs"><button id="levelOne" type="button">Level 1</button><button id="levelTwo" type="button">Level 2</button><button id="levelThree" type="button">Level 3</button></div>
     <div id="planBoard" aria-label="Select a room"></div><p>Select a room to enter it.</p>
