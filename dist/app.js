@@ -28,7 +28,7 @@ const prompt = $('inspectPrompt');
 const preview=createCasePreview($('casePreview'),{onStep:turnItem,onDetails:moreInfo,onTravel:showRecordTravel,onSeasonPick:i=>boxControls.pick(i),onCaseTap:tapCase,onBoxTravel:t=>boxControls.travel(t)});
 const boxControls=createBoxSetControls(preview);
 $('previewReset').onclick=preview.reset;
-const mobile = matchMedia('(pointer: coarse)').matches;
+const mobile = matchMedia('(any-pointer: coarse)').matches;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#63584a');
 scene.fog = new THREE.FogExp2('#63584a', 0.012);

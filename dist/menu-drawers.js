@@ -1,12 +1,12 @@
 // The header is always draggable. A pull on the contents dismisses only from
 // the top of its scroll area, leaving ordinary list scrolling and map taps free.
-export function enableMenuDrawer(panel, isPhone, dismiss) {
+export function enableMenuDrawer(panel, isCompact, dismiss) {
   const handle = panel.querySelector('.menu-grip');
   handle.onclick = dismiss;
   const header = panel.querySelector('.panel-head');
   let start = null;
   header.addEventListener('pointerdown', event => {
-    if (!isPhone() || !event.isPrimary || event.button !== 0 || event.target.closest('button')) return;
+    if (!isCompact() || !event.isPrimary || event.button !== 0 || event.target.closest('button')) return;
     start = { id: event.pointerId, y: event.clientY };
     header.setPointerCapture(event.pointerId);
   });
@@ -18,7 +18,7 @@ export function enableMenuDrawer(panel, isPhone, dismiss) {
   let pull = null;
   panel.addEventListener('touchstart', event => {
     pull = null;
-    if (!isPhone() || event.touches.length !== 1 || event.target.closest('input, select, a, .filters')) return;
+    if (!isCompact() || event.touches.length !== 1 || event.target.closest('input, select, a, .filters')) return;
     for (let n=event.target; n && panel.contains(n); n=n.parentElement) {
       if (n.scrollTop > 1 && n.scrollHeight > n.clientHeight + 1) return;
       if (n === panel) break;

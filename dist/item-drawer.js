@@ -1,7 +1,7 @@
 // The preview canvas handles rotation, stack browsing and case manipulation.
 // Only the drawer handle captures vertical gestures.
 export function createItemDrawer(panel, { openInfo, dismiss }) {
-  const phones = matchMedia('(max-width: 720px), (max-width: 960px) and (max-height: 520px) and (pointer: coarse)');
+  const compactLayout = matchMedia('(max-width: 1024px), (any-pointer: coarse)');
   const grip = panel.querySelector('#drawerGrip');
   const label = panel.querySelector('#drawerLabel');
   const body = panel.querySelector('.drawer-body');
@@ -53,6 +53,6 @@ export function createItemDrawer(panel, { openInfo, dismiss }) {
     else dismiss();
   });
   grip.addEventListener('lostpointercapture', () => { drag = null; });
-  phones.addEventListener('change', reset);
-  return { reset, get compact() { return phones.matches; } };
+  compactLayout.addEventListener('change', reset);
+  return { reset, get compact() { return compactLayout.matches; } };
 }
