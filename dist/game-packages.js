@@ -12,6 +12,7 @@ const packages=[
   ['Xbox',/^(?:microsoft )?(?:xbox|original xbox|xbox og|og xbox)$/i,135,190,14,'#46633a'],
   ['Sega Genesis',/^(?:sega )?(?:genesis|mega drive)$/i,145,195,27,'#252529'],
   ['Super Nintendo',/^(?:super nintendo(?: entertainment system)?|snes|super famicom)$/i,179,125,30,'#7b7181'],
+  ['Famicom Disk System',/^(?:nintendo )?famicom disk system$/i,96,102,12,'#555050'],
   ['Famicom',/^(?:nintendo )?(?:famicom|famicon|family computer)$/i,139,98,21,'#985755'],
   ['Nintendo Entertainment System',/^(?:nintendo entertainment system|nes)$/i,126,179,26,'#47454b'],
   ['Nintendo 64',/^(?:nintendo 64|n64)$/i,179,125,30,'#4c4752']

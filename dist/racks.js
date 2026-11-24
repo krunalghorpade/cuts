@@ -33,6 +33,14 @@ function distributeInventory(seed){
       entries.forEach((book,index)=>placements[bays[index % bays.length]].push([book]));
       continue;
     }
+    // Keep large film collections below the cinema ceiling. Each five-tier
+    // cabinet can show up to six staggered cases in a front-to-back stack.
+    let stackLimit=category==='vinyl'?10:4;
+    if(category==='movies'||category==='anime-movies'){
+      const pitch=Math.max(.10,...entries.map(item=>caseSpec(item).w))+.042;
+      const columns=Math.min(...bays.map(bay=>Math.max(1,Math.floor((fixtures[bay][4]-.18)/pitch))));
+      stackLimit=Math.min(6,Math.max(2,Math.ceil(entries.length/(bays.length*columns*5))));
+    }
     let stack=[], occupied=0, index=0;
     const place=()=>{placements[bays[index++ % bays.length]].push(stack);stack=[];occupied=0;};
     for(const item of entries){
@@ -44,7 +52,6 @@ function distributeInventory(seed){
         continue;
       }
       const depth=spec.d+(category==='vinyl'?.016:.026);
-      const stackLimit=category==='vinyl'?10:(category==='movies'||category==='anime-movies')?2:4;
       if(stack.length && (stack.length===stackLimit || occupied+depth>(category==='vinyl'?.25:.43)))place();
       stack.push(item);occupied+=depth;
     }

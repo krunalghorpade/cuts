@@ -110,7 +110,9 @@ def maze_seasons(item, maze_id, cache, as_of):
 def cinemeta_seasons(item, cache, as_of):
     iid = item["id"]
     url = f"https://v3-cinemeta.strem.io/meta/series/{iid}.json"
-    data = json.loads(read_url(url, cache))["meta"]
+    data = json.loads(read_url(url, cache)).get("meta")
+    if not data:
+        return {"source": item["sourceUrl"], "seasons": []}
     if data.get("imdb_id", data.get("id")) != iid:
         raise ValueError("IMDb identifier mismatch for " + iid)
     return {"source": url, "seasons": season_rows(data.get("videos", []), as_of, cinemeta=True)}

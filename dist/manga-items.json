@@ -993,5 +993,215 @@
       5.7
     ],
     "estimatedSize": true
+  },
+  {
+    "id": "manga:pokemon-adventures",
+    "category": "manga",
+    "title": "Pokémon Adventures, Vol. 1",
+    "creator": "Hidenori Kusaka and Mato",
+    "year": "2009",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/pokemon-adventures-volume-1-0/product/1958",
+    "relatedAnimeIds": [
+      "tt0168366",
+      "tt0190641",
+      "tt0210234",
+      "tt26692417",
+      "tt0287635",
+      "tt0235679",
+      "tt0347791",
+      "tt26916286",
+      "tt0304564",
+      "tt3218680",
+      "tt0875609",
+      "tt44923792"
+    ],
+    "description": "Red befriends Pokémon across Kanto while his rivalry with Blue draws him into the path of Team Rocket.",
+    "relation": "Companion manga set in the Pokémon game universe.",
+    "format": "Manga volume",
+    "artwork": "./art/manga/pokemon-adventures-vol1.webp",
+    "dimensions": [
+      127,
+      190,
+      15
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:darkrai",
+    "category": "manga",
+    "title": "Pokémon: The Rise of Darkrai",
+    "creator": "Ryo Takamisaki",
+    "year": "2008",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/pokemon-the-movie-manga-volume-1/product/1749",
+    "relatedAnimeIds": [
+      "tt1226251"
+    ],
+    "description": "Ash and his friends arrive in Alamos Town as a clash between Dialga and Palkia threatens to tear it apart.",
+    "relation": "Manga adaptation of the film.",
+    "format": "Manga volume",
+    "artwork": "./art/manga/darkrai-vol1.webp",
+    "dimensions": [
+      127,
+      190,
+      15
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:i-choose-you",
+    "category": "manga",
+    "title": "Pokémon the Movie: I Choose You!",
+    "creator": "Ryo Takamisaki",
+    "year": "2018",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/pokemon-the-movie-manga/product/5769",
+    "relatedAnimeIds": [
+      "tt6595896"
+    ],
+    "description": "Ash and Pikachu set off together and follow a mysterious feather toward the legendary Ho-Oh.",
+    "relation": "Manga adaptation of the film.",
+    "format": "Manga volume",
+    "artwork": "./art/manga/i-choose-you-vol1.webp",
+    "dimensions": [
+      127,
+      190,
+      15
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:beyblade",
+    "category": "manga",
+    "title": "Beyblade, Vol. 1",
+    "creator": "Takao Aoki",
+    "year": "2004",
+    "source": "Open Library",
+    "sourceUrl": "https://openlibrary.org/books/OL8852942M",
+    "relatedAnimeIds": [
+      "tt0328733"
+    ],
+    "description": "Tyson enters the world of competitive spinning-top battles and meets the rivals who will push his skills further.",
+    "relation": "Original Beyblade manga.",
+    "format": "Manga volume",
+    "artwork": "./art/manga/beyblade-vol1.webp",
+    "dimensions": [
+      127,
+      190,
+      15
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:beyblade-burst",
+    "category": "manga",
+    "title": "Beyblade Burst, Vol. 1",
+    "creator": "Hiro Morita",
+    "year": "2015",
+    "source": "Open Library",
+    "sourceUrl": "https://openlibrary.org/books/OL32197621M",
+    "relatedAnimeIds": [
+      "tt6348126",
+      "tt18554728"
+    ],
+    "description": "Valt Aoi practices with his spinning top Valkyrie and measures his progress against his friend Shu.",
+    "relation": "Manga from the Beyblade Burst series.",
+    "format": "Manga volume",
+    "artwork": "./art/manga/beyblade-burst-vol1.webp",
+    "dimensions": [
+      121,
+      190,
+      15
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:metal-fight",
+    "category": "manga",
+    "title": "Metal Fight Beyblade, Vol. 1",
+    "creator": "Takafumi Adachi",
+    "year": "2009",
+    "source": "Shogakukan",
+    "sourceUrl": "https://e-comi.shogakukan.co.jp/books/091407570000d0000000",
+    "relatedAnimeIds": [
+      "tt1674928"
+    ],
+    "description": "Gingka and his Pegasus travel from battle to battle, meeting new Bladers and challenging stronger opponents.",
+    "relation": "Manga from the Metal Fusion series.",
+    "format": "Manga volume",
+    "artwork": "./art/manga/metal-fight-vol1.webp",
+    "dimensions": [
+      121,
+      190,
+      15
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:beyblade-x",
+    "category": "manga",
+    "title": "Beyblade X, Vol. 1",
+    "creator": "Homura Kawamoto, Hikaru Muno and Posuka Demizu",
+    "year": "2025",
+    "source": "VIZ Media",
+    "sourceUrl": "https://www.viz.com/manga-books/manga/beyblade-x-volume-1-0/product/8140",
+    "relatedAnimeIds": [
+      "tt27865962"
+    ],
+    "description": "Robin wants to become a professional Blader. A masked teammate gives him a new chance to climb The X.",
+    "relation": "Manga from the Beyblade X series.",
+    "format": "Manga volume",
+    "artwork": "./art/manga/beyblade-x-vol1.webp",
+    "dimensions": [
+      127,
+      190,
+      15
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:kaiji",
+    "category": "manga",
+    "title": "Gambling Apocalypse Kaiji, Vol. 1",
+    "creator": "Nobuyuki Fukumoto",
+    "year": "2019",
+    "source": "Open Library",
+    "sourceUrl": "https://openlibrary.org/books/OL27874796M",
+    "relatedAnimeIds": [
+      "tt1202625"
+    ],
+    "description": "Burdened with someone else’s debt, Kaiji boards a ship where a card game offers a dangerous chance to clear it.",
+    "relation": "Source manga for Kaiji: Ultimate Survivor.",
+    "format": "Manga volume",
+    "artwork": "./art/manga/kaiji-vol1.webp",
+    "dimensions": [
+      133,
+      190,
+      15
+    ],
+    "estimatedSize": true
+  },
+  {
+    "id": "manga:ai-city",
+    "category": "manga",
+    "title": "Ai City, Vol. 1",
+    "creator": "Shuho Itahashi",
+    "year": "",
+    "source": "BookLive",
+    "sourceUrl": "https://booklive.jp/product/index/title_id/392363/vol_no/001",
+    "relatedAnimeIds": [
+      "tt0109057"
+    ],
+    "description": "A girl and her protector flee through a city caught in a struggle between people with psychic abilities.",
+    "relation": "Source manga for the animated film.",
+    "format": "Manga volume",
+    "artwork": "./art/manga/ai-city-vol1.webp",
+    "dimensions": [
+      131,
+      190,
+      15
+    ],
+    "estimatedSize": true
   }
 ]

@@ -77,7 +77,7 @@ def make_credits(data, catalog):
         # The shelf catalog's creator field is the Directors column of the IMDb CSV.
         listed = [name.strip() for name in item['creator'].split(',') if name.strip()]
         result[item['id']] = {
-            'rating': ratings.get(key) or item['rating'],
+            'rating': item['rating'] or ratings.get(key, ''),
             'genres': item['genres'],
             'directors': listed or [names[p] for p in directors[key] if p in names],
             'cast': list(dict.fromkeys(names[p] for p in main_cast[key] if p in names)),

@@ -39,6 +39,10 @@ def name_key(name):
 
 
 def source_platform(label):
+    if label == "Super Nintendo":
+        return "Super Nintendo Entertainment System"
+    if label == "Famicom Disk System":
+        return "Nintendo Famicom Disk System"
     if label.startswith("PlayStation"):
         return "Sony PSP" if label == "PlayStation Portable" else "Sony " + label.replace("Station", "station")
     if label.startswith("Xbox"):
@@ -194,11 +198,15 @@ def save_face(job):
             staged.unlink(missing_ok=True)
 
 
-def refresh(metadata):
+def refresh(metadata, *, only_new=False):
     games = [x for x in json.loads((DIST / "imdb-items.json").read_text())
              if x["category"] in ("cartridges", "game-discs")]
     before = EDITIONS.read_bytes() if EDITIONS.exists() else b"{}"
     editions = json.loads(before)
+    if only_new:
+        games = [g for g in games if g["id"] not in editions]
+        if not games:
+            return
     rules = json.loads(RULES.read_text())
     with zipfile.ZipFile(metadata) as archive:
         matches = match_games(archive, games, editions, rules)
@@ -253,14 +261,15 @@ def refresh(metadata):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--metadata", type=Path, help="Use an existing official Metadata.zip snapshot.")
+    parser.add_argument("--only-new", action="store_true", help="Import games that do not yet have an edition record.")
     args = parser.parse_args()
     if args.metadata:
-        refresh(args.metadata)
+        refresh(args.metadata, only_new=args.only_new)
     else:
         with tempfile.TemporaryFile() as temp:
             fetch(METADATA, temp, 300 * 1024 * 1024)
             temp.seek(0)
-            refresh(temp)
+            refresh(temp, only_new=args.only_new)
 
 
 if __name__ == "__main__":

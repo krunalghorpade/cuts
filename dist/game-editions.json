@@ -4778,5 +4778,3799 @@
         }
       ]
     }
+  },
+  "tt4109630": {
+    "launchboxId": 193211,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/193211",
+    "launchboxPlatform": "Sony Playstation 4",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/49370c59-a108-42b3-906b-8cf4ffadda83.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9d439f1f-83f2-41d5-a2c2-46ee7852f68b.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9237b920-706b-4cae-9951-82bee2aebd7d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt4109630-front-49370c59-a108-42b3-906b-8cf4ffadda83.webp",
+    "artworkSource": "https://images.launchbox-app.com/49370c59-a108-42b3-906b-8cf4ffadda83.jpg",
+    "boxBack": "./art/launchbox/tt4109630-back-9d439f1f-83f2-41d5-a2c2-46ee7852f68b.webp",
+    "boxSpine": "./art/launchbox/tt4109630-spine-9237b920-706b-4cae-9951-82bee2aebd7d.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt4109630-media-855233b7-9424-40fb-95df-05443787d24d.webp",
+          "source": "https://images.launchbox-app.com/855233b7-9424-40fb-95df-05443787d24d.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0276506": {
+    "launchboxId": 8910,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8910",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/92ca135c-1a68-4414-ba87-5e4ff0daabd5.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d8d5ac48-19b7-433b-b4b4-0e7bd9c12d4b.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a0cc90cd-be00-4e86-88f9-953615dbf791.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0276506-front-92ca135c-1a68-4414-ba87-5e4ff0daabd5.webp",
+    "artworkSource": "https://images.launchbox-app.com/92ca135c-1a68-4414-ba87-5e4ff0daabd5.jpg",
+    "boxBack": "./art/launchbox/tt0276506-back-d8d5ac48-19b7-433b-b4b4-0e7bd9c12d4b.webp",
+    "boxSpine": "./art/launchbox/tt0276506-spine-a0cc90cd-be00-4e86-88f9-953615dbf791.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0276506-media-782eb06e-b4cb-48ee-9315-1d3fae8732a8.webp",
+          "source": "https://images.launchbox-app.com/782eb06e-b4cb-48ee-9315-1d3fae8732a8.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt1176737": {
+    "launchboxId": 13718,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/13718",
+    "launchboxPlatform": "Microsoft Xbox 360",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_7b81d904-1dcc-4fa5-8053-41186e49eeac.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c23477f4-3189-46ee-9352-b1045dd27ba3.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/120703fc-094c-42e7-b52e-6ea0459e4597.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt1176737-front-r2_7b81d904-1dcc-4fa5-8053-41186e49eeac.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_7b81d904-1dcc-4fa5-8053-41186e49eeac.jpg",
+    "boxBack": "./art/launchbox/tt1176737-back-c23477f4-3189-46ee-9352-b1045dd27ba3.webp",
+    "boxSpine": "./art/launchbox/tt1176737-spine-120703fc-094c-42e7-b52e-6ea0459e4597.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1176737-media-r2_be257ee7-5822-40fd-9b2c-78f7ca44b909.webp",
+          "source": "https://images.launchbox-app.com/r2_be257ee7-5822-40fd-9b2c-78f7ca44b909.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0438545": {
+    "launchboxId": 9837,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/9837",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/64b4098c-f7b3-4bfd-ad27-755addbd914a.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/495a090a-93e4-42cf-997b-42a835cf9fc7.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e8c8f0eb-6999-4f43-83fd-2085b9d75cca.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0438545-front-64b4098c-f7b3-4bfd-ad27-755addbd914a.webp",
+    "artworkSource": "https://images.launchbox-app.com/64b4098c-f7b3-4bfd-ad27-755addbd914a.jpg",
+    "boxBack": "./art/launchbox/tt0438545-back-495a090a-93e4-42cf-997b-42a835cf9fc7.webp",
+    "boxSpine": "./art/launchbox/tt0438545-spine-e8c8f0eb-6999-4f43-83fd-2085b9d75cca.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0438545-media-f659ba0b-1a3c-4a48-acc7-92d10e2155d2.webp",
+          "source": "https://images.launchbox-app.com/f659ba0b-1a3c-4a48-acc7-92d10e2155d2.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt3125098": {
+    "launchboxId": 474342,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/474342",
+    "launchboxPlatform": "Android",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front - Reconstructed",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/526fba8b-d7a2-40c8-bf08-345d9044c1d9.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt3125098-front-526fba8b-d7a2-40c8-bf08-345d9044c1d9.webp",
+    "artworkSource": "https://images.launchbox-app.com/526fba8b-d7a2-40c8-bf08-345d9044c1d9.png",
+    "gameMedia": {
+      "kind": "digital",
+      "media": []
+    }
+  },
+  "tt0395268": {
+    "launchboxId": 23848,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/23848",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6b817652-47f6-401f-b69c-82b2656fd139.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b0b3f8e7-0790-4824-9b3b-c72767edb18a.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b6abc6cd-cbc8-488e-862b-0e7995b6cdba.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0395268-front-6b817652-47f6-401f-b69c-82b2656fd139.webp",
+    "artworkSource": "https://images.launchbox-app.com/6b817652-47f6-401f-b69c-82b2656fd139.jpg",
+    "boxBack": "./art/launchbox/tt0395268-back-b0b3f8e7-0790-4824-9b3b-c72767edb18a.webp",
+    "boxSpine": "./art/launchbox/tt0395268-spine-b6abc6cd-cbc8-488e-862b-0e7995b6cdba.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0395268-media-2e3d2944-d9e5-445b-825e-f13cd49e1ac1.webp",
+          "source": "https://images.launchbox-app.com/2e3d2944-d9e5-445b-825e-f13cd49e1ac1.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0212448": {
+    "launchboxId": 2920,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2920",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/440b0686-749d-4646-9752-4e4ab9154983.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0093e6b3-1654-4624-b199-89b54983f95c.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e51cf89a-3f75-43e2-b7a6-639a12300ce2.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0212448-front-440b0686-749d-4646-9752-4e4ab9154983.webp",
+    "artworkSource": "https://images.launchbox-app.com/440b0686-749d-4646-9752-4e4ab9154983.jpg",
+    "boxBack": "./art/launchbox/tt0212448-back-0093e6b3-1654-4624-b199-89b54983f95c.webp",
+    "boxSpine": "./art/launchbox/tt0212448-spine-e51cf89a-3f75-43e2-b7a6-639a12300ce2.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0212448-media-45d28fd7-3f11-48da-8b41-5cf4a65f9c29.webp",
+          "source": "https://images.launchbox-app.com/45d28fd7-3f11-48da-8b41-5cf4a65f9c29.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0204798": {
+    "launchboxId": 157,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/157",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/19255356-fd53-42a7-b978-3a9dcd890a90.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8082e5c4-a00b-4970-a42b-367e4d494b8b.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ae01184c-e3ad-4a8b-86be-92ef75473d71.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0204798-front-19255356-fd53-42a7-b978-3a9dcd890a90.webp",
+    "artworkSource": "https://images.launchbox-app.com/19255356-fd53-42a7-b978-3a9dcd890a90.jpg",
+    "boxBack": "./art/launchbox/tt0204798-back-8082e5c4-a00b-4970-a42b-367e4d494b8b.webp",
+    "boxSpine": "./art/launchbox/tt0204798-spine-ae01184c-e3ad-4a8b-86be-92ef75473d71.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0204798-media-9e420d4b-cff0-416d-b928-90146a30659a.webp",
+          "source": "https://images.launchbox-app.com/9e420d4b-cff0-416d-b928-90146a30659a.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0203703": {
+    "launchboxId": 2823,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2823",
+    "launchboxPlatform": "Super Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f4548a5c-d1da-451e-96f3-805fa973f0c8.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9989b0f3-0030-4ba9-ac2f-cc898000500f.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0203703-front-f4548a5c-d1da-451e-96f3-805fa973f0c8.webp",
+    "artworkSource": "https://images.launchbox-app.com/f4548a5c-d1da-451e-96f3-805fa973f0c8.jpg",
+    "boxBack": "./art/launchbox/tt0203703-back-9989b0f3-0030-4ba9-ac2f-cc898000500f.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt0290572": {
+    "launchboxId": 760,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/760",
+    "launchboxPlatform": "MS-DOS",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/77a276e4-6737-4415-ad01-4d40931fd3c4.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a64e2a0d-57b4-4900-987a-12333928ac5c.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/dd3f60d7-f4ac-44cc-84f0-11fd96e6e23b.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0290572-front-77a276e4-6737-4415-ad01-4d40931fd3c4.webp",
+    "artworkSource": "https://images.launchbox-app.com/77a276e4-6737-4415-ad01-4d40931fd3c4.jpg",
+    "boxBack": "./art/launchbox/tt0290572-back-a64e2a0d-57b4-4900-987a-12333928ac5c.webp",
+    "boxSpine": "./art/launchbox/tt0290572-spine-dd3f60d7-f4ac-44cc-84f0-11fd96e6e23b.webp",
+    "gameMedia": {
+      "kind": "unknown",
+      "media": []
+    }
+  },
+  "tt0228246": {
+    "launchboxId": 34097,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/34097",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "World",
+        "source": "https://images.launchbox-app.com/a8e364b4-6168-483e-9eb7-4c3159445e66.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0228246-front-a8e364b4-6168-483e-9eb7-4c3159445e66.webp",
+    "artworkSource": "https://images.launchbox-app.com/a8e364b4-6168-483e-9eb7-4c3159445e66.jpg",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt0203701": {
+    "launchboxId": 653,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/653",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/761fcb30-db04-4ca9-84cd-a15f038ef38f.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/611f8081-811b-49ab-b358-77d857c3a3c5.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e0e88cd9-4843-43e8-94dd-3cdc13e41e81.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0203701-front-761fcb30-db04-4ca9-84cd-a15f038ef38f.webp",
+    "artworkSource": "https://images.launchbox-app.com/761fcb30-db04-4ca9-84cd-a15f038ef38f.jpg",
+    "boxBack": "./art/launchbox/tt0203701-back-611f8081-811b-49ab-b358-77d857c3a3c5.webp",
+    "boxSpine": "./art/launchbox/tt0203701-spine-e0e88cd9-4843-43e8-94dd-3cdc13e41e81.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0203701-media-47048739-01e6-41e9-bc03-ed05e93ec376.webp",
+          "source": "https://images.launchbox-app.com/47048739-01e6-41e9-bc03-ed05e93ec376.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt1779394": {
+    "launchboxId": 4372,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4372",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/42d8091c-29e4-4b7d-b554-c3b4cadffd40.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4a369409-a77f-4902-ae63-afd8b55c061e.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1779394-front-42d8091c-29e4-4b7d-b554-c3b4cadffd40.webp",
+    "artworkSource": "https://images.launchbox-app.com/42d8091c-29e4-4b7d-b554-c3b4cadffd40.jpg",
+    "boxBack": "./art/launchbox/tt1779394-back-4a369409-a77f-4902-ae63-afd8b55c061e.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1779394-media-d7f659c5-2fe5-4ffa-86b7-75f4b564df9f.webp",
+          "source": "https://images.launchbox-app.com/d7f659c5-2fe5-4ffa-86b7-75f4b564df9f.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0442713": {
+    "launchboxId": 34094,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/34094",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/1e2ce522-c1c9-4931-9d8f-bf6949c89c39.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "Europe",
+        "source": "https://images.launchbox-app.com/5c709a79-e6d0-4f01-a418-a0bc4adec9b2.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0442713-front-1e2ce522-c1c9-4931-9d8f-bf6949c89c39.webp",
+    "artworkSource": "https://images.launchbox-app.com/1e2ce522-c1c9-4931-9d8f-bf6949c89c39.jpg",
+    "boxBack": "./art/launchbox/tt0442713-back-5c709a79-e6d0-4f01-a418-a0bc4adec9b2.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0442713-media-7e087b79-e1f9-454c-8ffc-cda55eebcd5f.webp",
+          "source": "https://images.launchbox-app.com/7e087b79-e1f9-454c-8ffc-cda55eebcd5f.png",
+          "type": "Cart - Front",
+          "region": "Europe",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0298562": {
+    "launchboxId": 971,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/971",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/75e8efc5-67bb-4dd3-971f-2784dbb8529e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1f5c7125-ef19-46eb-a569-ffa11c51e5db.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4bc426c4-a553-4c52-b17c-81e1f7579bbf.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0298562-front-75e8efc5-67bb-4dd3-971f-2784dbb8529e.webp",
+    "artworkSource": "https://images.launchbox-app.com/75e8efc5-67bb-4dd3-971f-2784dbb8529e.jpg",
+    "boxBack": "./art/launchbox/tt0298562-back-1f5c7125-ef19-46eb-a569-ffa11c51e5db.webp",
+    "boxSpine": "./art/launchbox/tt0298562-spine-4bc426c4-a553-4c52-b17c-81e1f7579bbf.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0298562-media-ed7bf1c2-f6fa-455a-b67b-9e98cf58b7cf.webp",
+          "source": "https://images.launchbox-app.com/ed7bf1c2-f6fa-455a-b67b-9e98cf58b7cf.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0206656": {
+    "launchboxId": 1258,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1258",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3c70d940-5dfe-45ea-a957-9a8e6d2d00f8.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6bedbe54-d6db-4812-8222-c3fa87246572.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a56a54d4-87fa-4cb6-ac82-4e35da8b679e.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0206656-front-3c70d940-5dfe-45ea-a957-9a8e6d2d00f8.webp",
+    "artworkSource": "https://images.launchbox-app.com/3c70d940-5dfe-45ea-a957-9a8e6d2d00f8.jpg",
+    "boxBack": "./art/launchbox/tt0206656-back-6bedbe54-d6db-4812-8222-c3fa87246572.webp",
+    "boxSpine": "./art/launchbox/tt0206656-spine-a56a54d4-87fa-4cb6-ac82-4e35da8b679e.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0206656-media-9a2fd0ad-d202-48bb-be01-6b552dabd8f5.webp",
+          "source": "https://images.launchbox-app.com/9a2fd0ad-d202-48bb-be01-6b552dabd8f5.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0186046": {
+    "launchboxId": 346,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/346",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b6724a0f-d610-40c0-8b4e-c8c1ebd5035a.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/322b0561-c320-47ab-aae4-468b1721d469.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0186046-front-b6724a0f-d610-40c0-8b4e-c8c1ebd5035a.webp",
+    "artworkSource": "https://images.launchbox-app.com/b6724a0f-d610-40c0-8b4e-c8c1ebd5035a.jpg",
+    "boxBack": "./art/launchbox/tt0186046-back-322b0561-c320-47ab-aae4-468b1721d469.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0186046-media-e2b015a8-9673-4632-9ae9-ce43e93ad559.webp",
+          "source": "https://images.launchbox-app.com/e2b015a8-9673-4632-9ae9-ce43e93ad559.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0825477": {
+    "launchboxId": 9388,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/9388",
+    "launchboxPlatform": "Nintendo Game Boy Advance",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/d96ad3e3-f2b1-480f-aa7f-6de9405b5595.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/04e8904e-bf83-422b-86c2-66a131d7757b.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/e7cfe277-f147-46f6-9687-7390e3172fb2.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0825477-front-d96ad3e3-f2b1-480f-aa7f-6de9405b5595.webp",
+    "artworkSource": "https://images.launchbox-app.com/d96ad3e3-f2b1-480f-aa7f-6de9405b5595.jpg",
+    "boxBack": "./art/launchbox/tt0825477-back-04e8904e-bf83-422b-86c2-66a131d7757b.webp",
+    "boxSpine": "./art/launchbox/tt0825477-spine-e7cfe277-f147-46f6-9687-7390e3172fb2.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0825477-media-ee838900-c32e-49cd-8c8a-bf9b20a29a18.webp",
+          "source": "https://images.launchbox-app.com/ee838900-c32e-49cd-8c8a-bf9b20a29a18.png",
+          "type": "Cart - Front",
+          "region": "Japan",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0363647": {
+    "launchboxId": 3771,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3771",
+    "launchboxPlatform": "Nintendo Game Boy Advance",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1655e436-eec9-4e70-9f9d-6673a87c3e72.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/301a1841-8f68-426e-8cfc-19d0584406b1.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0363647-front-1655e436-eec9-4e70-9f9d-6673a87c3e72.webp",
+    "artworkSource": "https://images.launchbox-app.com/1655e436-eec9-4e70-9f9d-6673a87c3e72.jpg",
+    "boxBack": "./art/launchbox/tt0363647-back-301a1841-8f68-426e-8cfc-19d0584406b1.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0363647-media-r2_c5f4689c-2de0-4304-b3e8-010fd9d8103f.webp",
+          "source": "https://images.launchbox-app.com/r2_c5f4689c-2de0-4304-b3e8-010fd9d8103f.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0403927": {
+    "launchboxId": 3349,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3349",
+    "launchboxPlatform": "Nintendo Game Boy Advance",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/23588e39-184c-4b82-8c7a-5c46d1868013.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/576eff09-b6bf-4fbf-9130-87d78ad9df3d.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a1a671cc-3f3d-4783-86c7-039e8fd61cf8.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0403927-front-23588e39-184c-4b82-8c7a-5c46d1868013.webp",
+    "artworkSource": "https://images.launchbox-app.com/23588e39-184c-4b82-8c7a-5c46d1868013.jpg",
+    "boxBack": "./art/launchbox/tt0403927-back-576eff09-b6bf-4fbf-9130-87d78ad9df3d.webp",
+    "boxSpine": "./art/launchbox/tt0403927-spine-a1a671cc-3f3d-4783-86c7-039e8fd61cf8.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0403927-media-e28a5596-51b4-43a9-a65f-0e742a83c874.webp",
+          "source": "https://images.launchbox-app.com/e28a5596-51b4-43a9-a65f-0e742a83c874.png",
+          "type": "Cart - Front",
+          "region": "United States",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt5357924": {
+    "launchboxId": 3428,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3428",
+    "launchboxPlatform": "Nintendo Game Boy Advance",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a3cf209e-7ad6-4d6a-b314-7c1e59400c64.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/539d5960-5358-4863-bda4-38e23e9985ff.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt5357924-front-a3cf209e-7ad6-4d6a-b314-7c1e59400c64.webp",
+    "artworkSource": "https://images.launchbox-app.com/a3cf209e-7ad6-4d6a-b314-7c1e59400c64.jpg",
+    "boxBack": "./art/launchbox/tt5357924-back-539d5960-5358-4863-bda4-38e23e9985ff.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt5357924-media-r2_6db8b68b-5140-4e61-b824-4700a2cb15de.webp",
+          "source": "https://images.launchbox-app.com/r2_6db8b68b-5140-4e61-b824-4700a2cb15de.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0397089": {
+    "launchboxId": 3745,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3745",
+    "launchboxPlatform": "Nintendo Game Boy Advance",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/83842f45-8717-4e55-8b25-dd8afa5cc257.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/337c2d47-d4aa-4aad-aa27-9815322bbbd1.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/11a21863-c40c-4ce1-96dc-698b89935783.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0397089-front-83842f45-8717-4e55-8b25-dd8afa5cc257.webp",
+    "artworkSource": "https://images.launchbox-app.com/83842f45-8717-4e55-8b25-dd8afa5cc257.jpg",
+    "boxBack": "./art/launchbox/tt0397089-back-337c2d47-d4aa-4aad-aa27-9815322bbbd1.webp",
+    "boxSpine": "./art/launchbox/tt0397089-spine-11a21863-c40c-4ce1-96dc-698b89935783.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0397089-media-r2_0352118c-013e-42b9-ba55-0a5dc51872fb.webp",
+          "source": "https://images.launchbox-app.com/r2_0352118c-013e-42b9-ba55-0a5dc51872fb.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt3425360": {
+    "launchboxId": 93040,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/93040",
+    "launchboxPlatform": "Nintendo Famicom Disk System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/5c84ae3e-3f88-4cfd-9657-6a150238e10e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/6d3de4ed-d15c-4773-ba73-e56144898cba.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/0037aa97-94b3-42fa-8d23-c323f4315b1b.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt3425360-front-5c84ae3e-3f88-4cfd-9657-6a150238e10e.webp",
+    "artworkSource": "https://images.launchbox-app.com/5c84ae3e-3f88-4cfd-9657-6a150238e10e.jpg",
+    "boxBack": "./art/launchbox/tt3425360-back-6d3de4ed-d15c-4773-ba73-e56144898cba.webp",
+    "boxSpine": "./art/launchbox/tt3425360-spine-0037aa97-94b3-42fa-8d23-c323f4315b1b.webp",
+    "gameMedia": {
+      "kind": "unknown",
+      "media": []
+    }
+  },
+  "tt0310812": {
+    "launchboxId": 1658,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1658",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a22dabb0-0f7a-4b01-a9ca-11c04286542f.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/032c2401-e264-4a7c-8937-581914aaef1f.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0a71924a-2156-4d12-b88d-b91d46ab86f8.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0310812-front-a22dabb0-0f7a-4b01-a9ca-11c04286542f.webp",
+    "artworkSource": "https://images.launchbox-app.com/a22dabb0-0f7a-4b01-a9ca-11c04286542f.jpg",
+    "boxBack": "./art/launchbox/tt0310812-back-032c2401-e264-4a7c-8937-581914aaef1f.webp",
+    "boxSpine": "./art/launchbox/tt0310812-spine-0a71924a-2156-4d12-b88d-b91d46ab86f8.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt6557746": {
+    "launchboxId": 7864,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7864",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5cede9fc-5555-4fe8-891c-19b53e2c2cd2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9aed2226-8abf-4c63-b9ed-7849ec5cbac3.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/43c53065-7e99-412b-9b92-d9b38829c4a5.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt6557746-front-5cede9fc-5555-4fe8-891c-19b53e2c2cd2.webp",
+    "artworkSource": "https://images.launchbox-app.com/5cede9fc-5555-4fe8-891c-19b53e2c2cd2.jpg",
+    "boxBack": "./art/launchbox/tt6557746-back-9aed2226-8abf-4c63-b9ed-7849ec5cbac3.webp",
+    "boxSpine": "./art/launchbox/tt6557746-spine-43c53065-7e99-412b-9b92-d9b38829c4a5.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt6557746-media-8bdae4c8-8b3e-462a-bd99-b9f80fc0a70f.webp",
+          "source": "https://images.launchbox-app.com/8bdae4c8-8b3e-462a-bd99-b9f80fc0a70f.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt6297616": {
+    "launchboxId": 2053,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2053",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a9091b4f-8dbd-4885-a8f4-df582a2f8ed5.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ebee2863-8d5d-4f00-a812-2806035e9a58.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3e7e588e-ef54-4058-9f41-527439fa3961.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt6297616-front-a9091b4f-8dbd-4885-a8f4-df582a2f8ed5.webp",
+    "artworkSource": "https://images.launchbox-app.com/a9091b4f-8dbd-4885-a8f4-df582a2f8ed5.jpg",
+    "boxBack": "./art/launchbox/tt6297616-back-ebee2863-8d5d-4f00-a812-2806035e9a58.webp",
+    "boxSpine": "./art/launchbox/tt6297616-spine-3e7e588e-ef54-4058-9f41-527439fa3961.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt6297616-media-768cb265-44af-4a78-8987-1fc1933744fe.webp",
+          "source": "https://images.launchbox-app.com/768cb265-44af-4a78-8987-1fc1933744fe.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt19865392": {
+    "launchboxId": 1945,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1945",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/63eee835-0c5a-4978-b681-7d98f9ca81ee.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/80f7fca4-542b-41e9-9d50-688552419f60.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/274880eb-9ade-49fa-895e-e6123716594a.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt19865392-front-63eee835-0c5a-4978-b681-7d98f9ca81ee.webp",
+    "artworkSource": "https://images.launchbox-app.com/63eee835-0c5a-4978-b681-7d98f9ca81ee.jpg",
+    "boxBack": "./art/launchbox/tt19865392-back-80f7fca4-542b-41e9-9d50-688552419f60.webp",
+    "boxSpine": "./art/launchbox/tt19865392-spine-274880eb-9ade-49fa-895e-e6123716594a.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt19865392-media-53ab69c4-c909-45af-8b1d-950c592c3b2e.webp",
+          "source": "https://images.launchbox-app.com/53ab69c4-c909-45af-8b1d-950c592c3b2e.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt2454842": {
+    "launchboxId": 2099,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2099",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/01c9cc5a-af56-4255-ba23-c2b892361473.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ec9320b0-4e09-49cb-95bd-b3fff98bada5.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b54b12f4-9eae-4a14-a45d-02320357c2eb.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2454842-front-01c9cc5a-af56-4255-ba23-c2b892361473.webp",
+    "artworkSource": "https://images.launchbox-app.com/01c9cc5a-af56-4255-ba23-c2b892361473.jpg",
+    "boxBack": "./art/launchbox/tt2454842-back-ec9320b0-4e09-49cb-95bd-b3fff98bada5.webp",
+    "boxSpine": "./art/launchbox/tt2454842-spine-b54b12f4-9eae-4a14-a45d-02320357c2eb.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2454842-media-fc7af631-9b64-4624-af76-17122540f66e.webp",
+          "source": "https://images.launchbox-app.com/fc7af631-9b64-4624-af76-17122540f66e.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt2189274": {
+    "launchboxId": 1405,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1405",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6a858938-1918-4f25-82cc-fed4346ce7d0.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0e4b634f-325d-423f-827b-5b084964f339.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/83e6d1de-ef59-4dc1-9cf5-41d4da92e477.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2189274-front-6a858938-1918-4f25-82cc-fed4346ce7d0.webp",
+    "artworkSource": "https://images.launchbox-app.com/6a858938-1918-4f25-82cc-fed4346ce7d0.jpg",
+    "boxBack": "./art/launchbox/tt2189274-back-0e4b634f-325d-423f-827b-5b084964f339.webp",
+    "boxSpine": "./art/launchbox/tt2189274-spine-83e6d1de-ef59-4dc1-9cf5-41d4da92e477.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2189274-media-fb0022f4-2781-4fbb-80be-1461d21a88e0.webp",
+          "source": "https://images.launchbox-app.com/fb0022f4-2781-4fbb-80be-1461d21a88e0.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt3714730": {
+    "launchboxId": 1461,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1461",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b8ff5760-b7cf-4492-b64c-e2768c127b95.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/38f70bf7-4ac1-4121-90a3-f64a820c24b2.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/36c63e3b-bb26-4ec4-8577-c691141a8c4c.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt3714730-front-b8ff5760-b7cf-4492-b64c-e2768c127b95.webp",
+    "artworkSource": "https://images.launchbox-app.com/b8ff5760-b7cf-4492-b64c-e2768c127b95.jpg",
+    "boxBack": "./art/launchbox/tt3714730-back-38f70bf7-4ac1-4121-90a3-f64a820c24b2.webp",
+    "boxSpine": "./art/launchbox/tt3714730-spine-36c63e3b-bb26-4ec4-8577-c691141a8c4c.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt3714730-media-246875c0-f2b7-4b0f-9a5f-bf075b54f6f8.webp",
+          "source": "https://images.launchbox-app.com/246875c0-f2b7-4b0f-9a5f-bf075b54f6f8.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0376945": {
+    "launchboxId": 1389,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1389",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b8f0e9b9-d9b4-4920-a468-9258a46156cd.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8a5bac0c-9232-4394-88b7-54c80733d440.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a8ba6351-2ea7-4238-9707-de390d3d8c68.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0376945-front-b8f0e9b9-d9b4-4920-a468-9258a46156cd.webp",
+    "artworkSource": "https://images.launchbox-app.com/b8f0e9b9-d9b4-4920-a468-9258a46156cd.jpg",
+    "boxBack": "./art/launchbox/tt0376945-back-8a5bac0c-9232-4394-88b7-54c80733d440.webp",
+    "boxSpine": "./art/launchbox/tt0376945-spine-a8ba6351-2ea7-4238-9707-de390d3d8c68.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0376945-media-c0f243af-1681-4bea-bfce-1a7e51e9a8a6.webp",
+          "source": "https://images.launchbox-app.com/c0f243af-1681-4bea-bfce-1a7e51e9a8a6.png",
+          "type": "Cart - Front",
+          "region": "United States",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt2198141": {
+    "launchboxId": 1409,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1409",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f8d462de-3133-4051-9c12-0d46a535cac3.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d14fe40a-d24b-4583-9330-a9c2bc05722a.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/24b45b52-56a7-4ed2-ba6e-9271cc273d57.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2198141-front-f8d462de-3133-4051-9c12-0d46a535cac3.webp",
+    "artworkSource": "https://images.launchbox-app.com/f8d462de-3133-4051-9c12-0d46a535cac3.jpg",
+    "boxBack": "./art/launchbox/tt2198141-back-d14fe40a-d24b-4583-9330-a9c2bc05722a.webp",
+    "boxSpine": "./art/launchbox/tt2198141-spine-24b45b52-56a7-4ed2-ba6e-9271cc273d57.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2198141-media-r2_50bcbbb6-e851-438f-860f-555896276517.webp",
+          "source": "https://images.launchbox-app.com/r2_50bcbbb6-e851-438f-860f-555896276517.jpg",
+          "type": "Cart - Front",
+          "region": "United States",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt2323334": {
+    "launchboxId": 2019,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2019",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6107c44d-5379-47ca-98cb-d312ed864062.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f4fcbb57-c31e-44e1-9b12-7a157c2266aa.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ded2cb9d-654b-429e-817c-70aeba09d318.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2323334-front-6107c44d-5379-47ca-98cb-d312ed864062.webp",
+    "artworkSource": "https://images.launchbox-app.com/6107c44d-5379-47ca-98cb-d312ed864062.jpg",
+    "boxBack": "./art/launchbox/tt2323334-back-f4fcbb57-c31e-44e1-9b12-7a157c2266aa.webp",
+    "boxSpine": "./art/launchbox/tt2323334-spine-ded2cb9d-654b-429e-817c-70aeba09d318.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt18749128": {
+    "launchboxId": 1376,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1376",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d8e59863-c255-4c69-b691-b770d3e12533.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/aa17e60e-a0e2-41af-9718-ecaadbcd05cb.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4e5a96eb-9046-45d9-9e8f-ea38a2eb98b0.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt18749128-front-d8e59863-c255-4c69-b691-b770d3e12533.webp",
+    "artworkSource": "https://images.launchbox-app.com/d8e59863-c255-4c69-b691-b770d3e12533.jpg",
+    "boxBack": "./art/launchbox/tt18749128-back-aa17e60e-a0e2-41af-9718-ecaadbcd05cb.webp",
+    "boxSpine": "./art/launchbox/tt18749128-spine-4e5a96eb-9046-45d9-9e8f-ea38a2eb98b0.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt18749128-media-2710eaa4-4029-455f-adae-a0216638044a.webp",
+          "source": "https://images.launchbox-app.com/2710eaa4-4029-455f-adae-a0216638044a.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt6569262": {
+    "launchboxId": 2160,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2160",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e0e72ad8-488d-4865-b46c-879c3ec7e3bd.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ddca952b-5137-4a7d-9ffb-329e3026800a.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3b83446f-3a0d-4e23-8081-8d07d8be8589.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt6569262-front-e0e72ad8-488d-4865-b46c-879c3ec7e3bd.webp",
+    "artworkSource": "https://images.launchbox-app.com/e0e72ad8-488d-4865-b46c-879c3ec7e3bd.png",
+    "boxBack": "./art/launchbox/tt6569262-back-ddca952b-5137-4a7d-9ffb-329e3026800a.webp",
+    "boxSpine": "./art/launchbox/tt6569262-spine-3b83446f-3a0d-4e23-8081-8d07d8be8589.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt0185017": {
+    "launchboxId": 321,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/321",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/101138aa-0825-4355-b3dd-0f0edee49190.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/71ae2ed4-2673-4d4d-8ede-cd635adebfa2.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f8aa8768-e6b8-4e3e-8249-e39a65448b91.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0185017-front-101138aa-0825-4355-b3dd-0f0edee49190.webp",
+    "artworkSource": "https://images.launchbox-app.com/101138aa-0825-4355-b3dd-0f0edee49190.jpg",
+    "boxBack": "./art/launchbox/tt0185017-back-71ae2ed4-2673-4d4d-8ede-cd635adebfa2.webp",
+    "boxSpine": "./art/launchbox/tt0185017-spine-f8aa8768-e6b8-4e3e-8249-e39a65448b91.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0185017-media-38a78444-b49a-4afa-990c-45bfd9438201.webp",
+          "source": "https://images.launchbox-app.com/38a78444-b49a-4afa-990c-45bfd9438201.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt2241307": {
+    "launchboxId": 1888,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1888",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Asia",
+        "source": "https://images.launchbox-app.com/ffd572d0-b6df-492a-89b0-a50c1e7ec3ee.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "Asia",
+        "source": "https://images.launchbox-app.com/470803f0-3f69-49c1-8e7c-a75c9fc0475d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2241307-front-ffd572d0-b6df-492a-89b0-a50c1e7ec3ee.webp",
+    "artworkSource": "https://images.launchbox-app.com/ffd572d0-b6df-492a-89b0-a50c1e7ec3ee.jpg",
+    "boxBack": "./art/launchbox/tt2241307-back-470803f0-3f69-49c1-8e7c-a75c9fc0475d.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2241307-media-67db5a85-ad91-41c1-bbe1-c0b5a489b0ba.webp",
+          "source": "https://images.launchbox-app.com/67db5a85-ad91-41c1-bbe1-c0b5a489b0ba.jpg",
+          "type": "Cart - Front",
+          "region": "Asia",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt2242232": {
+    "launchboxId": 2007,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2007",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/adfa0fd6-fb29-47f4-b778-01efba1df8d5.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d98b4693-160c-4acc-bddc-4f4dc226bb4d.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ce72e3d1-05ed-4d58-b2ca-08b4af99b379.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2242232-front-adfa0fd6-fb29-47f4-b778-01efba1df8d5.webp",
+    "artworkSource": "https://images.launchbox-app.com/adfa0fd6-fb29-47f4-b778-01efba1df8d5.jpg",
+    "boxBack": "./art/launchbox/tt2242232-back-d98b4693-160c-4acc-bddc-4f4dc226bb4d.webp",
+    "boxSpine": "./art/launchbox/tt2242232-spine-ce72e3d1-05ed-4d58-b2ca-08b4af99b379.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2242232-media-64baaab6-2d6b-4bf3-9789-bd5212dff763.webp",
+          "source": "https://images.launchbox-app.com/64baaab6-2d6b-4bf3-9789-bd5212dff763.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0304184": {
+    "launchboxId": 1375,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1375",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3c15fe3f-c017-42af-b38c-3ce3cc98997b.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/330101d6-154e-40c1-b101-402a2d530938.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/19a04162-2b06-462b-aaca-3099b9acf57d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0304184-front-3c15fe3f-c017-42af-b38c-3ce3cc98997b.webp",
+    "artworkSource": "https://images.launchbox-app.com/3c15fe3f-c017-42af-b38c-3ce3cc98997b.jpg",
+    "boxBack": "./art/launchbox/tt0304184-back-330101d6-154e-40c1-b101-402a2d530938.webp",
+    "boxSpine": "./art/launchbox/tt0304184-spine-19a04162-2b06-462b-aaca-3099b9acf57d.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0304184-media-e8cebbd2-e0e4-4017-b4ac-19760af91001.webp",
+          "source": "https://images.launchbox-app.com/e8cebbd2-e0e4-4017-b4ac-19760af91001.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0301222": {
+    "launchboxId": 1274,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1274",
+    "launchboxPlatform": "Nintendo Entertainment System",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/349074ca-fcb6-4292-8299-e942d551db5e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4b9f3179-0ce9-4ffd-bfef-a1eae59d6a6a.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/62ade16e-2f5a-4b4b-802c-feaf9dbabf0f.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0301222-front-349074ca-fcb6-4292-8299-e942d551db5e.webp",
+    "artworkSource": "https://images.launchbox-app.com/349074ca-fcb6-4292-8299-e942d551db5e.jpg",
+    "boxBack": "./art/launchbox/tt0301222-back-4b9f3179-0ce9-4ffd-bfef-a1eae59d6a6a.webp",
+    "boxSpine": "./art/launchbox/tt0301222-spine-62ade16e-2f5a-4b4b-802c-feaf9dbabf0f.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0301222-media-9a57b39e-1457-4d9f-a29b-f9f37bf06c5c.webp",
+          "source": "https://images.launchbox-app.com/9a57b39e-1457-4d9f-a29b-f9f37bf06c5c.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt11859948": {
+    "launchboxId": 10616,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/10616",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e5075683-56fd-4ae2-b900-07ba098b80ae.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f982f5dc-e08c-4310-8a08-2b693b8bda7d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt11859948-front-e5075683-56fd-4ae2-b900-07ba098b80ae.webp",
+    "artworkSource": "https://images.launchbox-app.com/e5075683-56fd-4ae2-b900-07ba098b80ae.jpg",
+    "boxBack": "./art/launchbox/tt11859948-back-f982f5dc-e08c-4310-8a08-2b693b8bda7d.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt11859948-media-cfef6fae-834d-49ec-aa3e-9183db0586c5.webp",
+          "source": "https://images.launchbox-app.com/cfef6fae-834d-49ec-aa3e-9183db0586c5.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0204660": {
+    "launchboxId": 1726,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1726",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6bf91a99-0e3f-4ac1-8cf5-dd8f4547e211.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8a630f4d-b63f-4027-be77-361d12870b3f.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/eaea94c3-ee6a-4b25-9586-0d389279b436.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0204660-front-6bf91a99-0e3f-4ac1-8cf5-dd8f4547e211.webp",
+    "artworkSource": "https://images.launchbox-app.com/6bf91a99-0e3f-4ac1-8cf5-dd8f4547e211.jpg",
+    "boxBack": "./art/launchbox/tt0204660-back-8a630f4d-b63f-4027-be77-361d12870b3f.webp",
+    "boxSpine": "./art/launchbox/tt0204660-spine-eaea94c3-ee6a-4b25-9586-0d389279b436.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt10284164": {
+    "launchboxId": 17779,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/17779",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b3054292-20df-468b-a445-40abb4de4f1e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a5ec87a6-3b9d-428d-85bd-6046312830c5.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt10284164-front-b3054292-20df-468b-a445-40abb4de4f1e.webp",
+    "artworkSource": "https://images.launchbox-app.com/b3054292-20df-468b-a445-40abb4de4f1e.jpg",
+    "boxBack": "./art/launchbox/tt10284164-back-a5ec87a6-3b9d-428d-85bd-6046312830c5.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt10284164-media-dd683028-5271-4e35-9a11-bd45b190f0b2.webp",
+          "source": "https://images.launchbox-app.com/dd683028-5271-4e35-9a11-bd45b190f0b2.jpg",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0485408": {
+    "launchboxId": 13078,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/13078",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7914a58e-5da0-4b85-93e8-96640604d5c2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/34810fbd-3536-4861-8872-227185a8ca69.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0485408-front-7914a58e-5da0-4b85-93e8-96640604d5c2.webp",
+    "artworkSource": "https://images.launchbox-app.com/7914a58e-5da0-4b85-93e8-96640604d5c2.jpg",
+    "boxBack": "./art/launchbox/tt0485408-back-34810fbd-3536-4861-8872-227185a8ca69.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt0445751": {
+    "launchboxId": 6124,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/6124",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d225a476-1841-4eed-9d40-4a1c46ba9806.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/508aef53-0e51-4ecd-8bdc-2537e56149be.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0445751-front-d225a476-1841-4eed-9d40-4a1c46ba9806.webp",
+    "artworkSource": "https://images.launchbox-app.com/d225a476-1841-4eed-9d40-4a1c46ba9806.png",
+    "boxBack": "./art/launchbox/tt0445751-back-508aef53-0e51-4ecd-8bdc-2537e56149be.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0445751-media-19a32c6d-fee9-4733-9d66-44ae66d80d34.webp",
+          "source": "https://images.launchbox-app.com/19a32c6d-fee9-4733-9d66-44ae66d80d34.jpg",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0445752": {
+    "launchboxId": 6125,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/6125",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/350ac140-30ab-44a8-8713-e19ffa3a7a25.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/001ddc77-d551-445f-9cb6-579c98817fde.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0445752-front-350ac140-30ab-44a8-8713-e19ffa3a7a25.webp",
+    "artworkSource": "https://images.launchbox-app.com/350ac140-30ab-44a8-8713-e19ffa3a7a25.jpg",
+    "boxBack": "./art/launchbox/tt0445752-back-001ddc77-d551-445f-9cb6-579c98817fde.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt0221693": {
+    "launchboxId": 1728,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1728",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/38ea9979-bcc8-4b05-88a0-31bd75be2449.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/184c6f87-7641-4197-bfd6-58e08f42c60f.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5a41e7e7-8b8e-44ed-8c4f-d9e42745ef0d.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0221693-front-38ea9979-bcc8-4b05-88a0-31bd75be2449.webp",
+    "artworkSource": "https://images.launchbox-app.com/38ea9979-bcc8-4b05-88a0-31bd75be2449.jpg",
+    "boxBack": "./art/launchbox/tt0221693-back-184c6f87-7641-4197-bfd6-58e08f42c60f.webp",
+    "boxSpine": "./art/launchbox/tt0221693-spine-5a41e7e7-8b8e-44ed-8c4f-d9e42745ef0d.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0221693-media-dc9e43b1-5615-40db-a91f-617df383242c.webp",
+          "source": "https://images.launchbox-app.com/dc9e43b1-5615-40db-a91f-617df383242c.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0302504": {
+    "launchboxId": 3174,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3174",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/40dc3b02-1ae4-4674-b7e7-e5cef3d1a17d.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/61befa87-bd52-4408-9cfc-43991c9fd0d6.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0302504-front-40dc3b02-1ae4-4674-b7e7-e5cef3d1a17d.webp",
+    "artworkSource": "https://images.launchbox-app.com/40dc3b02-1ae4-4674-b7e7-e5cef3d1a17d.jpg",
+    "boxBack": "./art/launchbox/tt0302504-back-61befa87-bd52-4408-9cfc-43991c9fd0d6.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0302504-media-r2_d234161c-f47f-4773-b890-fa811d2c3a2f.webp",
+          "source": "https://images.launchbox-app.com/r2_d234161c-f47f-4773-b890-fa811d2c3a2f.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0379973": {
+    "launchboxId": 21719,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/21719",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/34efcbb8-6afa-4d84-a6dd-cf19e5c47530.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6006658e-3cbb-4dd4-95f9-1fa96cf9f346.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e7f20671-a8d9-4585-86c7-775649f7da60.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0379973-front-34efcbb8-6afa-4d84-a6dd-cf19e5c47530.webp",
+    "artworkSource": "https://images.launchbox-app.com/34efcbb8-6afa-4d84-a6dd-cf19e5c47530.jpg",
+    "boxBack": "./art/launchbox/tt0379973-back-6006658e-3cbb-4dd4-95f9-1fa96cf9f346.webp",
+    "boxSpine": "./art/launchbox/tt0379973-spine-e7f20671-a8d9-4585-86c7-775649f7da60.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt22097970": {
+    "launchboxId": 18634,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/18634",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9d53afa6-e612-4417-80df-1a515b99adff.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/bfc376dc-5b81-403c-9843-36b311b5667c.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt22097970-front-9d53afa6-e612-4417-80df-1a515b99adff.webp",
+    "artworkSource": "https://images.launchbox-app.com/9d53afa6-e612-4417-80df-1a515b99adff.jpg",
+    "boxBack": "./art/launchbox/tt22097970-back-bfc376dc-5b81-403c-9843-36b311b5667c.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt22097970-media-01f9e4d7-c889-4cd7-a64e-b0cef37c325c.webp",
+          "source": "https://images.launchbox-app.com/01f9e4d7-c889-4cd7-a64e-b0cef37c325c.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0217731": {
+    "launchboxId": 455671,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/455671",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d88488cf-6dcb-4379-8587-e6f53287c00f.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/da2e6510-8b05-4c6e-8bbf-63f6ad081da4.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_e2c4c750-d978-4ba4-9706-714f4676c135.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0217731-front-d88488cf-6dcb-4379-8587-e6f53287c00f.webp",
+    "artworkSource": "https://images.launchbox-app.com/d88488cf-6dcb-4379-8587-e6f53287c00f.png",
+    "boxBack": "./art/launchbox/tt0217731-back-da2e6510-8b05-4c6e-8bbf-63f6ad081da4.webp",
+    "boxSpine": "./art/launchbox/tt0217731-spine-r2_e2c4c750-d978-4ba4-9706-714f4676c135.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0217731-media-r2_543a9f3a-bf36-43dd-81fb-ae5e7a01851c.webp",
+          "source": "https://images.launchbox-app.com/r2_543a9f3a-bf36-43dd-81fb-ae5e7a01851c.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt5833738": {
+    "launchboxId": 21625,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/21625",
+    "launchboxPlatform": "Nintendo Game Boy",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/26595e1d-eb87-4dad-8e85-b00fa17fbae7.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ddb2a4bc-3197-4d1b-9b82-841279b380c7.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt5833738-front-26595e1d-eb87-4dad-8e85-b00fa17fbae7.webp",
+    "artworkSource": "https://images.launchbox-app.com/26595e1d-eb87-4dad-8e85-b00fa17fbae7.jpg",
+    "boxBack": "./art/launchbox/tt5833738-back-ddb2a4bc-3197-4d1b-9b82-841279b380c7.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt5833738-media-42b14e2e-746a-45d9-be2c-a9a779188742.webp",
+          "source": "https://images.launchbox-app.com/42b14e2e-746a-45d9-be2c-a9a779188742.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt1379204": {
+    "launchboxId": 32088,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/32088",
+    "launchboxPlatform": "Nintendo Game Boy Color",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7f37dfce-099b-42b0-abc7-5e5e6409b68d.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/2bc5ee94-ae59-4491-a605-39bfbe8902a6.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1379204-front-7f37dfce-099b-42b0-abc7-5e5e6409b68d.webp",
+    "artworkSource": "https://images.launchbox-app.com/7f37dfce-099b-42b0-abc7-5e5e6409b68d.png",
+    "boxBack": "./art/launchbox/tt1379204-back-2bc5ee94-ae59-4491-a605-39bfbe8902a6.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt0325819": {
+    "launchboxId": 8633,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8633",
+    "launchboxPlatform": "Nintendo Game Boy Color",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/25664448-3478-418e-85bf-82191888d828.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b1dbdf5d-3570-49a8-aa6d-c6e69a2bf8e0.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0325819-front-25664448-3478-418e-85bf-82191888d828.webp",
+    "artworkSource": "https://images.launchbox-app.com/25664448-3478-418e-85bf-82191888d828.jpg",
+    "boxBack": "./art/launchbox/tt0325819-back-b1dbdf5d-3570-49a8-aa6d-c6e69a2bf8e0.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0325819-media-60550672-f4ad-40ef-88fe-eabb72a0ac51.webp",
+          "source": "https://images.launchbox-app.com/60550672-f4ad-40ef-88fe-eabb72a0ac51.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0319738": {
+    "launchboxId": 6123,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/6123",
+    "launchboxPlatform": "Nintendo Game Boy Color",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a51f7769-843a-486e-b8e8-73117c1c9981.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/77101f88-812d-445c-b117-3da063f6d7ad.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/aeb698a9-5660-4861-8e34-ad9ddfd8219e.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0319738-front-a51f7769-843a-486e-b8e8-73117c1c9981.webp",
+    "artworkSource": "https://images.launchbox-app.com/a51f7769-843a-486e-b8e8-73117c1c9981.jpg",
+    "boxBack": "./art/launchbox/tt0319738-back-77101f88-812d-445c-b117-3da063f6d7ad.webp",
+    "boxSpine": "./art/launchbox/tt0319738-spine-aeb698a9-5660-4861-8e34-ad9ddfd8219e.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0319738-media-8d4037eb-b45c-41d3-aeca-1e0325766e4a.webp",
+          "source": "https://images.launchbox-app.com/8d4037eb-b45c-41d3-aeca-1e0325766e4a.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt1064955": {
+    "launchboxId": 89,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/89",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "United States",
+        "source": "https://images.launchbox-app.com/ab8917f5-541d-407a-a426-8c42e3d1a2df.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1064955-front-ab8917f5-541d-407a-a426-8c42e3d1a2df.webp",
+    "artworkSource": "https://images.launchbox-app.com/ab8917f5-541d-407a-a426-8c42e3d1a2df.jpg",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1064955-media-063e4849-be4e-44c5-8c75-9e0e7307308b.webp",
+          "source": "https://images.launchbox-app.com/063e4849-be4e-44c5-8c75-9e0e7307308b.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0790638": {
+    "launchboxId": 7078,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7078",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6c6f5bad-a2ce-40ea-93d7-de73d98742fd.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/71f6044d-69dd-40f3-bce4-be8949b7adb4.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b554ac87-f8ca-4663-92b3-824ce6f598bf.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0790638-front-6c6f5bad-a2ce-40ea-93d7-de73d98742fd.webp",
+    "artworkSource": "https://images.launchbox-app.com/6c6f5bad-a2ce-40ea-93d7-de73d98742fd.jpg",
+    "boxBack": "./art/launchbox/tt0790638-back-71f6044d-69dd-40f3-bce4-be8949b7adb4.webp",
+    "boxSpine": "./art/launchbox/tt0790638-spine-b554ac87-f8ca-4663-92b3-824ce6f598bf.webp",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0790638-media-2a20781e-1a46-4bc4-bc11-3a30b20b61b1.webp",
+          "source": "https://images.launchbox-app.com/2a20781e-1a46-4bc4-bc11-3a30b20b61b1.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt6034356": {
+    "launchboxId": 7108,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7108",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/75cfaa3c-71c9-4723-a5d9-8de16e28c56a.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/94e1d2bf-3bac-4e35-a238-8ec5b4be78b2.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt6034356-front-75cfaa3c-71c9-4723-a5d9-8de16e28c56a.webp",
+    "artworkSource": "https://images.launchbox-app.com/75cfaa3c-71c9-4723-a5d9-8de16e28c56a.jpg",
+    "boxBack": "./art/launchbox/tt6034356-back-94e1d2bf-3bac-4e35-a238-8ec5b4be78b2.webp",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt6034356-media-9a2133aa-4478-4a4e-87cf-1be1ac35eaf7.webp",
+          "source": "https://images.launchbox-app.com/9a2133aa-4478-4a4e-87cf-1be1ac35eaf7.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt1235543": {
+    "launchboxId": 12582,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/12582",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7028ead1-4d37-4d6f-80e9-f0a610e5918b.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0a4b5501-2d5f-4503-bd1b-8724f8c72dff.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1235543-front-7028ead1-4d37-4d6f-80e9-f0a610e5918b.webp",
+    "artworkSource": "https://images.launchbox-app.com/7028ead1-4d37-4d6f-80e9-f0a610e5918b.jpg",
+    "boxBack": "./art/launchbox/tt1235543-back-0a4b5501-2d5f-4503-bd1b-8724f8c72dff.webp",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1235543-media-21af4bd0-b787-4de2-bd31-e65d98eba23e.webp",
+          "source": "https://images.launchbox-app.com/21af4bd0-b787-4de2-bd31-e65d98eba23e.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0465482": {
+    "launchboxId": 7085,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7085",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6828c5ad-5cb0-4b1c-b899-620e51268427.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/86c2eb6e-06d6-49eb-ada6-bd966d0f1043.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/635fff46-fdb3-4eb3-96c4-52fb52411565.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0465482-front-6828c5ad-5cb0-4b1c-b899-620e51268427.webp",
+    "artworkSource": "https://images.launchbox-app.com/6828c5ad-5cb0-4b1c-b899-620e51268427.jpg",
+    "boxBack": "./art/launchbox/tt0465482-back-86c2eb6e-06d6-49eb-ada6-bd966d0f1043.webp",
+    "boxSpine": "./art/launchbox/tt0465482-spine-635fff46-fdb3-4eb3-96c4-52fb52411565.webp",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0465482-media-d968f183-ca7a-4154-8ae0-9c601cc36ebe.webp",
+          "source": "https://images.launchbox-app.com/d968f183-ca7a-4154-8ae0-9c601cc36ebe.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0788227": {
+    "launchboxId": 19405,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/19405",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8b88b5cb-7440-4d30-90a5-ebf5399304a9.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/8836cc44-c562-4eea-a6ec-2793fbc0d6b8.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0788227-front-8b88b5cb-7440-4d30-90a5-ebf5399304a9.webp",
+    "artworkSource": "https://images.launchbox-app.com/8b88b5cb-7440-4d30-90a5-ebf5399304a9.jpg",
+    "boxBack": "./art/launchbox/tt0788227-back-8836cc44-c562-4eea-a6ec-2793fbc0d6b8.webp",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0788227-media-3872ba07-add2-41d9-9424-2499f8d5e244.webp",
+          "source": "https://images.launchbox-app.com/3872ba07-add2-41d9-9424-2499f8d5e244.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0815168": {
+    "launchboxId": 7086,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7086",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7506f251-6e16-4a01-a2f4-e57adcc2210e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4ec1bccd-28ef-491c-a4a4-d83b0714a639.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/bdc3f8c4-a7ed-47d7-a867-973f58d2c30c.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0815168-front-7506f251-6e16-4a01-a2f4-e57adcc2210e.webp",
+    "artworkSource": "https://images.launchbox-app.com/7506f251-6e16-4a01-a2f4-e57adcc2210e.jpg",
+    "boxBack": "./art/launchbox/tt0815168-back-4ec1bccd-28ef-491c-a4a4-d83b0714a639.webp",
+    "boxSpine": "./art/launchbox/tt0815168-spine-bdc3f8c4-a7ed-47d7-a867-973f58d2c30c.webp",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0815168-media-03a81c50-e1f8-4f9e-aca6-1a70b23df054.webp",
+          "source": "https://images.launchbox-app.com/03a81c50-e1f8-4f9e-aca6-1a70b23df054.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt1207658": {
+    "launchboxId": 15543,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/15543",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6daee736-081f-4e4f-aadf-3b473d2bf818.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1207658-front-6daee736-081f-4e4f-aadf-3b473d2bf818.webp",
+    "artworkSource": "https://images.launchbox-app.com/6daee736-081f-4e4f-aadf-3b473d2bf818.jpg",
+    "gameMedia": {
+      "kind": "umd",
+      "media": []
+    }
+  },
+  "tt9832194": {
+    "launchboxId": 7098,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/7098",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5932a92d-4d4c-4a10-884a-908616c1ac23.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/158d0e18-d2e6-434c-a7d6-0004c9bec763.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt9832194-front-5932a92d-4d4c-4a10-884a-908616c1ac23.webp",
+    "artworkSource": "https://images.launchbox-app.com/5932a92d-4d4c-4a10-884a-908616c1ac23.jpg",
+    "boxBack": "./art/launchbox/tt9832194-back-158d0e18-d2e6-434c-a7d6-0004c9bec763.webp",
+    "gameMedia": {
+      "kind": "umd",
+      "media": []
+    }
+  },
+  "tt1249419": {
+    "launchboxId": 19406,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/19406",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ec3f8036-f745-424b-91c8-8d2e30cddba0.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1249419-front-ec3f8036-f745-424b-91c8-8d2e30cddba0.webp",
+    "artworkSource": "https://images.launchbox-app.com/ec3f8036-f745-424b-91c8-8d2e30cddba0.jpg",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1249419-media-fbf9dbbb-d9c2-48b0-acbb-4d88082a85f9.webp",
+          "source": "https://images.launchbox-app.com/fbf9dbbb-d9c2-48b0-acbb-4d88082a85f9.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt1737172": {
+    "launchboxId": 14089,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/14089",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/73079b5b-895c-4fa0-a995-8f698fba5f79.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6aa0e674-1aef-45a0-aa2e-7e94f35fd24d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1737172-front-73079b5b-895c-4fa0-a995-8f698fba5f79.webp",
+    "artworkSource": "https://images.launchbox-app.com/73079b5b-895c-4fa0-a995-8f698fba5f79.jpg",
+    "boxBack": "./art/launchbox/tt1737172-back-6aa0e674-1aef-45a0-aa2e-7e94f35fd24d.webp",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1737172-media-8d4c76d7-38d6-4d93-9022-5350be1f2312.webp",
+          "source": "https://images.launchbox-app.com/8d4c76d7-38d6-4d93-9022-5350be1f2312.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt1369842": {
+    "launchboxId": 34451,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/34451",
+    "launchboxPlatform": "Sony PSP",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e0aab0f2-0d6d-495a-a13d-bdca2466a550.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt1369842-front-e0aab0f2-0d6d-495a-a13d-bdca2466a550.webp",
+    "artworkSource": "https://images.launchbox-app.com/e0aab0f2-0d6d-495a-a13d-bdca2466a550.jpg",
+    "gameMedia": {
+      "kind": "umd",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1369842-media-c1885a10-8a60-4b2e-aca7-ed86861f272e.webp",
+          "source": "https://images.launchbox-app.com/c1885a10-8a60-4b2e-aca7-ed86861f272e.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0262903": {
+    "launchboxId": 11517,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/11517",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/358a6ab1-2a92-4954-9877-dd39f4b4d5d3.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/58394d64-ea9f-4d93-b08c-86a3587f0548.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/02a3d8dc-9c88-42a9-884e-e29a3ae62a5c.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0262903-front-358a6ab1-2a92-4954-9877-dd39f4b4d5d3.webp",
+    "artworkSource": "https://images.launchbox-app.com/358a6ab1-2a92-4954-9877-dd39f4b4d5d3.jpg",
+    "boxBack": "./art/launchbox/tt0262903-back-58394d64-ea9f-4d93-b08c-86a3587f0548.webp",
+    "boxSpine": "./art/launchbox/tt0262903-spine-02a3d8dc-9c88-42a9-884e-e29a3ae62a5c.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0262903-media-r2_35b4cff0-1869-4c28-a68f-c6370a56d412.webp",
+          "source": "https://images.launchbox-app.com/r2_35b4cff0-1869-4c28-a68f-c6370a56d412.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0259046": {
+    "launchboxId": 2613,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2613",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/bed1af7f-38fa-4557-bd90-04e8a2386e77.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/64d52110-0485-42d1-9779-95e977a956ad.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/21a58c82-3984-45ad-9fe8-999fc413c951.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0259046-front-bed1af7f-38fa-4557-bd90-04e8a2386e77.webp",
+    "artworkSource": "https://images.launchbox-app.com/bed1af7f-38fa-4557-bd90-04e8a2386e77.jpg",
+    "boxBack": "./art/launchbox/tt0259046-back-64d52110-0485-42d1-9779-95e977a956ad.webp",
+    "boxSpine": "./art/launchbox/tt0259046-spine-21a58c82-3984-45ad-9fe8-999fc413c951.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
+  },
+  "tt0258924": {
+    "launchboxId": 11796,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/11796",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7e808a5f-48d0-481d-a4c4-a210b8715439.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d6302da4-af6c-45a6-aab5-912b788f83e3.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_d174ce52-ca98-49fa-b157-fbfe6164681a.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0258924-front-7e808a5f-48d0-481d-a4c4-a210b8715439.webp",
+    "artworkSource": "https://images.launchbox-app.com/7e808a5f-48d0-481d-a4c4-a210b8715439.jpg",
+    "boxBack": "./art/launchbox/tt0258924-back-d6302da4-af6c-45a6-aab5-912b788f83e3.webp",
+    "boxSpine": "./art/launchbox/tt0258924-spine-r2_d174ce52-ca98-49fa-b157-fbfe6164681a.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
+  },
+  "tt0295914": {
+    "launchboxId": 1006,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1006",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/82e097fc-f49e-47c7-8ab9-dfe3d91a9b3e.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/71ad9fb3-d8f6-4bf1-9ff4-b2ffc04b0470.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9896ca01-5b45-4231-8118-15813189dce8.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0295914-front-82e097fc-f49e-47c7-8ab9-dfe3d91a9b3e.webp",
+    "artworkSource": "https://images.launchbox-app.com/82e097fc-f49e-47c7-8ab9-dfe3d91a9b3e.png",
+    "boxBack": "./art/launchbox/tt0295914-back-71ad9fb3-d8f6-4bf1-9ff4-b2ffc04b0470.webp",
+    "boxSpine": "./art/launchbox/tt0295914-spine-9896ca01-5b45-4231-8118-15813189dce8.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0295914-media-aa8ec861-a3f0-401f-977f-144c1c742325.webp",
+          "source": "https://images.launchbox-app.com/aa8ec861-a3f0-401f-977f-144c1c742325.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0314270": {
+    "launchboxId": 13544,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/13544",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d53648e7-08b4-4171-9c7e-8c770dbb8aef.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5e997872-9175-49cf-893e-2a1ba085b258.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_8a5ad4d0-9ff0-4f5f-b5ec-2bbc9ea407a8.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0314270-front-d53648e7-08b4-4171-9c7e-8c770dbb8aef.webp",
+    "artworkSource": "https://images.launchbox-app.com/d53648e7-08b4-4171-9c7e-8c770dbb8aef.jpg",
+    "boxBack": "./art/launchbox/tt0314270-back-5e997872-9175-49cf-893e-2a1ba085b258.webp",
+    "boxSpine": "./art/launchbox/tt0314270-spine-r2_8a5ad4d0-9ff0-4f5f-b5ec-2bbc9ea407a8.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0314270-media-0423a775-1dbc-403d-87a6-69ce2f976c78.webp",
+          "source": "https://images.launchbox-app.com/0423a775-1dbc-403d-87a6-69ce2f976c78.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0417173": {
+    "launchboxId": 11403,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/11403",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ad0a18ea-2acc-4982-80ec-660219bff8f7.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/761e06ff-20eb-43c9-9e16-81d49f52face.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_b15415b4-4607-47d9-a633-52b84ca99898.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0417173-front-ad0a18ea-2acc-4982-80ec-660219bff8f7.webp",
+    "artworkSource": "https://images.launchbox-app.com/ad0a18ea-2acc-4982-80ec-660219bff8f7.jpg",
+    "boxBack": "./art/launchbox/tt0417173-back-761e06ff-20eb-43c9-9e16-81d49f52face.webp",
+    "boxSpine": "./art/launchbox/tt0417173-spine-r2_b15415b4-4607-47d9-a633-52b84ca99898.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0417173-media-r2_a555221f-32d2-4a8c-9b6c-b2ab3298b531.webp",
+          "source": "https://images.launchbox-app.com/r2_a555221f-32d2-4a8c-9b6c-b2ab3298b531.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt3706780": {
+    "launchboxId": 1009,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1009",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_bce1a958-41c5-4cfd-a63f-4e1a63b1761e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_07b38f6f-e433-45e2-8b17-5729b68d8815.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_ced15da1-e8da-48a3-b00f-926d94931f16.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt3706780-front-r2_bce1a958-41c5-4cfd-a63f-4e1a63b1761e.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_bce1a958-41c5-4cfd-a63f-4e1a63b1761e.jpg",
+    "boxBack": "./art/launchbox/tt3706780-back-r2_07b38f6f-e433-45e2-8b17-5729b68d8815.webp",
+    "boxSpine": "./art/launchbox/tt3706780-spine-r2_ced15da1-e8da-48a3-b00f-926d94931f16.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
+  },
+  "tt0262038": {
+    "launchboxId": 11881,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/11881",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d9d98ceb-e59e-4e04-a3e3-37733803d190.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_05bd6796-1420-4fa0-b107-1b51a32fc362.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_2ec20312-fcd8-4b22-a6cf-33e2829f8dd4.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0262038-front-d9d98ceb-e59e-4e04-a3e3-37733803d190.webp",
+    "artworkSource": "https://images.launchbox-app.com/d9d98ceb-e59e-4e04-a3e3-37733803d190.jpg",
+    "boxBack": "./art/launchbox/tt0262038-back-r2_05bd6796-1420-4fa0-b107-1b51a32fc362.webp",
+    "boxSpine": "./art/launchbox/tt0262038-spine-r2_2ec20312-fcd8-4b22-a6cf-33e2829f8dd4.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0262038-media-r2_1b88b474-8b2b-4e7a-8f20-891f8d6f0af3.webp",
+          "source": "https://images.launchbox-app.com/r2_1b88b474-8b2b-4e7a-8f20-891f8d6f0af3.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0190838": {
+    "launchboxId": 2780,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/2780",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_0e9d1070-c485-452f-b08a-e12cd64413d9.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ac7e84f4-b4aa-4ae9-8c36-f9977a280242.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_a57f843f-0ffe-4985-a70e-e1f31026c063.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0190838-front-r2_0e9d1070-c485-452f-b08a-e12cd64413d9.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_0e9d1070-c485-452f-b08a-e12cd64413d9.jpg",
+    "boxBack": "./art/launchbox/tt0190838-back-ac7e84f4-b4aa-4ae9-8c36-f9977a280242.webp",
+    "boxSpine": "./art/launchbox/tt0190838-spine-r2_a57f843f-0ffe-4985-a70e-e1f31026c063.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0190838-media-r2_a2a54e70-0e8f-440a-8a41-e85802bb835d.webp",
+          "source": "https://images.launchbox-app.com/r2_a2a54e70-0e8f-440a-8a41-e85802bb835d.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt1192088": {
+    "launchboxId": 10773,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/10773",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_39f9b249-2da7-41fa-985d-74b1fb9810df.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e378be72-6754-41f0-9a8d-c38bf797c722.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_c54a8d66-019a-442c-9146-1584ed3e0288.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt1192088-front-r2_39f9b249-2da7-41fa-985d-74b1fb9810df.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_39f9b249-2da7-41fa-985d-74b1fb9810df.jpg",
+    "boxBack": "./art/launchbox/tt1192088-back-e378be72-6754-41f0-9a8d-c38bf797c722.webp",
+    "boxSpine": "./art/launchbox/tt1192088-spine-r2_c54a8d66-019a-442c-9146-1584ed3e0288.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt1192088-media-r2_4844df1e-3f34-42b6-90e5-06d6a3fc21f7.webp",
+          "source": "https://images.launchbox-app.com/r2_4844df1e-3f34-42b6-90e5-06d6a3fc21f7.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0247514": {
+    "launchboxId": 567,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/567",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/26fb91d3-2722-4d1e-a0ea-5ece05048769.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7196df4e-870d-43c6-9cf7-9c254ef8ba49.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_6f5a88d4-b08f-412a-aba9-a9c510591e9f.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0247514-front-26fb91d3-2722-4d1e-a0ea-5ece05048769.webp",
+    "artworkSource": "https://images.launchbox-app.com/26fb91d3-2722-4d1e-a0ea-5ece05048769.jpg",
+    "boxBack": "./art/launchbox/tt0247514-back-7196df4e-870d-43c6-9cf7-9c254ef8ba49.webp",
+    "boxSpine": "./art/launchbox/tt0247514-spine-r2_6f5a88d4-b08f-412a-aba9-a9c510591e9f.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0247514-media-f89e3fd5-2cfd-400d-bdcf-f3a9b470fa10.webp",
+          "source": "https://images.launchbox-app.com/f89e3fd5-2cfd-400d-bdcf-f3a9b470fa10.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0430279": {
+    "launchboxId": 446093,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/446093",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_269070c8-0742-432b-b373-ed1dfc518eca.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d0517aed-c51e-4466-9555-741f0b24f6a0.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b62fdfac-9728-4a19-9313-fa165368eb48.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0430279-front-r2_269070c8-0742-432b-b373-ed1dfc518eca.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_269070c8-0742-432b-b373-ed1dfc518eca.jpg",
+    "boxBack": "./art/launchbox/tt0430279-back-d0517aed-c51e-4466-9555-741f0b24f6a0.webp",
+    "boxSpine": "./art/launchbox/tt0430279-spine-b62fdfac-9728-4a19-9313-fa165368eb48.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0430279-media-ea6326b9-feb7-4b4b-8849-ded90c1625a8.webp",
+          "source": "https://images.launchbox-app.com/ea6326b9-feb7-4b4b-8849-ded90c1625a8.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0206584": {
+    "launchboxId": 10954,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/10954",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3c083f2e-64c8-4e33-a1b9-6948dc04cf93.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/77ff12d1-22d3-4e68-aaf9-d02f6cf27005.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b9c66f94-1d4d-4e5d-a90b-d2bf2eced090.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0206584-front-3c083f2e-64c8-4e33-a1b9-6948dc04cf93.webp",
+    "artworkSource": "https://images.launchbox-app.com/3c083f2e-64c8-4e33-a1b9-6948dc04cf93.jpg",
+    "boxBack": "./art/launchbox/tt0206584-back-77ff12d1-22d3-4e68-aaf9-d02f6cf27005.webp",
+    "boxSpine": "./art/launchbox/tt0206584-spine-b9c66f94-1d4d-4e5d-a90b-d2bf2eced090.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0206584-media-696206da-bd4a-4777-a87d-7fdb5b70a5f3.webp",
+          "source": "https://images.launchbox-app.com/696206da-bd4a-4777-a87d-7fdb5b70a5f3.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0284031": {
+    "launchboxId": 8564,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/8564",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/86de0b3e-a3c6-4f5e-90aa-df5f9c4de5f2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/22a1c236-73b6-4df3-b914-56e6cb1066e5.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_884ca0c1-7035-4201-82b7-515e1aaa5eef.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0284031-front-86de0b3e-a3c6-4f5e-90aa-df5f9c4de5f2.webp",
+    "artworkSource": "https://images.launchbox-app.com/86de0b3e-a3c6-4f5e-90aa-df5f9c4de5f2.jpg",
+    "boxBack": "./art/launchbox/tt0284031-back-22a1c236-73b6-4df3-b914-56e6cb1066e5.webp",
+    "boxSpine": "./art/launchbox/tt0284031-spine-r2_884ca0c1-7035-4201-82b7-515e1aaa5eef.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0284031-media-4a518202-c6da-4b8e-9f28-3d99bccf4e1d.webp",
+          "source": "https://images.launchbox-app.com/4a518202-c6da-4b8e-9f28-3d99bccf4e1d.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0190428": {
+    "launchboxId": 5632,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/5632",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_221f632e-7300-4a8a-81a6-3aa1e191177c.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0743f1c4-eb80-4883-a281-efd93feb43a4.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c2ef162a-b7bf-4907-a41b-ff691b8495b9.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0190428-front-r2_221f632e-7300-4a8a-81a6-3aa1e191177c.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_221f632e-7300-4a8a-81a6-3aa1e191177c.png",
+    "boxBack": "./art/launchbox/tt0190428-back-0743f1c4-eb80-4883-a281-efd93feb43a4.webp",
+    "boxSpine": "./art/launchbox/tt0190428-spine-c2ef162a-b7bf-4907-a41b-ff691b8495b9.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0190428-media-f04f5e0a-e494-46e0-94f6-043143a86320.webp",
+          "source": "https://images.launchbox-app.com/f04f5e0a-e494-46e0-94f6-043143a86320.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0180318": {
+    "launchboxId": 628,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/628",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_e99ff048-e16e-4251-8961-00ba582f46f2.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5e85fa6b-bc13-4962-93ba-4ef5cf08b7ce.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_c848d8f5-5935-4b91-a30f-1ca11b2c51f3.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0180318-front-r2_e99ff048-e16e-4251-8961-00ba582f46f2.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_e99ff048-e16e-4251-8961-00ba582f46f2.jpg",
+    "boxBack": "./art/launchbox/tt0180318-back-5e85fa6b-bc13-4962-93ba-4ef5cf08b7ce.webp",
+    "boxSpine": "./art/launchbox/tt0180318-spine-r2_c848d8f5-5935-4b91-a30f-1ca11b2c51f3.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0180318-media-1259ae62-4259-477b-8d50-550e72e770cc.webp",
+          "source": "https://images.launchbox-app.com/1259ae62-4259-477b-8d50-550e72e770cc.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt6032936": {
+    "launchboxId": 12216,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/12216",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1da04b25-c154-48ee-b8af-a742fea6c89b.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d6a434ce-457e-4cf2-b486-5b7036ad103f.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6e536cbb-ad51-4386-aea9-46b477f973b0.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt6032936-front-1da04b25-c154-48ee-b8af-a742fea6c89b.webp",
+    "artworkSource": "https://images.launchbox-app.com/1da04b25-c154-48ee-b8af-a742fea6c89b.jpg",
+    "boxBack": "./art/launchbox/tt6032936-back-d6a434ce-457e-4cf2-b486-5b7036ad103f.webp",
+    "boxSpine": "./art/launchbox/tt6032936-spine-6e536cbb-ad51-4386-aea9-46b477f973b0.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
+  },
+  "tt7853790": {
+    "launchboxId": 29859,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/29859",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/cf3b490c-4a6c-43c2-afa3-ff3a4ca8b6db.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_5f05d065-a9a2-4c95-8abf-81ccd05484e2.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_7b6be209-f32d-4a9d-9c79-f74111a8cb8c.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt7853790-front-cf3b490c-4a6c-43c2-afa3-ff3a4ca8b6db.webp",
+    "artworkSource": "https://images.launchbox-app.com/cf3b490c-4a6c-43c2-afa3-ff3a4ca8b6db.jpg",
+    "boxBack": "./art/launchbox/tt7853790-back-r2_5f05d065-a9a2-4c95-8abf-81ccd05484e2.webp",
+    "boxSpine": "./art/launchbox/tt7853790-spine-r2_7b6be209-f32d-4a9d-9c79-f74111a8cb8c.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt7853790-media-r2_b5e27a47-fdc4-43fc-9881-59c3b4e17458.webp",
+          "source": "https://images.launchbox-app.com/r2_b5e27a47-fdc4-43fc-9881-59c3b4e17458.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
+  },
+  "tt0269682": {
+    "launchboxId": 9858,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/9858",
+    "launchboxPlatform": "Sony Playstation",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6a2b9ca9-38d9-44d4-a9a7-55b761ecdc4e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4e28d3c5-b5ce-4218-9341-d8a632f46a12.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6bbfa6d3-b513-4f37-800f-f004a2ddcbe3.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0269682-front-6a2b9ca9-38d9-44d4-a9a7-55b761ecdc4e.webp",
+    "artworkSource": "https://images.launchbox-app.com/6a2b9ca9-38d9-44d4-a9a7-55b761ecdc4e.jpg",
+    "boxBack": "./art/launchbox/tt0269682-back-4e28d3c5-b5ce-4218-9341-d8a632f46a12.webp",
+    "boxSpine": "./art/launchbox/tt0269682-spine-6bbfa6d3-b513-4f37-800f-f004a2ddcbe3.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": []
+    }
+  },
+  "tt0388405": {
+    "launchboxId": 184,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/184",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3de72658-25ed-4cbf-af48-9859e9626990.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/30963556-e690-4478-afc6-912247cd3d9d.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0388405-front-3de72658-25ed-4cbf-af48-9859e9626990.webp",
+    "artworkSource": "https://images.launchbox-app.com/3de72658-25ed-4cbf-af48-9859e9626990.jpg",
+    "boxBack": "./art/launchbox/tt0388405-back-30963556-e690-4478-afc6-912247cd3d9d.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0388405-media-2924e32f-1a9e-417d-a76a-b345a8d2dbd8.webp",
+          "source": "https://images.launchbox-app.com/2924e32f-1a9e-417d-a76a-b345a8d2dbd8.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0457473": {
+    "launchboxId": 120,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/120",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/522a3315-97f9-4259-b8dc-306d11c68a0a.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/95113985-fd0d-443d-9afe-6e3a560157a1.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_04bf8349-8a1e-4388-9750-caa0f176642b.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0457473-front-522a3315-97f9-4259-b8dc-306d11c68a0a.webp",
+    "artworkSource": "https://images.launchbox-app.com/522a3315-97f9-4259-b8dc-306d11c68a0a.jpg",
+    "boxBack": "./art/launchbox/tt0457473-back-95113985-fd0d-443d-9afe-6e3a560157a1.webp",
+    "boxSpine": "./art/launchbox/tt0457473-spine-r2_04bf8349-8a1e-4388-9750-caa0f176642b.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0457473-media-567bf003-473f-4d31-8053-db88b7251fde.webp",
+          "source": "https://images.launchbox-app.com/567bf003-473f-4d31-8053-db88b7251fde.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0387872": {
+    "launchboxId": 3872,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3872",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/82b6c5a9-27f9-4d3c-8346-e9c75b17489e.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9a777fe0-3a4a-444c-be77-ff5becea8fe9.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0387872-front-82b6c5a9-27f9-4d3c-8346-e9c75b17489e.webp",
+    "artworkSource": "https://images.launchbox-app.com/82b6c5a9-27f9-4d3c-8346-e9c75b17489e.jpg",
+    "boxBack": "./art/launchbox/tt0387872-back-9a777fe0-3a4a-444c-be77-ff5becea8fe9.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0387872-media-166b66fa-49c1-4c3f-8ae9-8e1a25e53e46.webp",
+          "source": "https://images.launchbox-app.com/166b66fa-49c1-4c3f-8ae9-8e1a25e53e46.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0291491": {
+    "launchboxId": 108429,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/108429",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/54506801-806f-4e4a-976d-876c4ea02420.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5d3d8fac-d95d-4fdb-bcd7-2db36bf465cd.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/844fce6e-e7a6-4887-a57b-98016e33a537.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0291491-front-54506801-806f-4e4a-976d-876c4ea02420.webp",
+    "artworkSource": "https://images.launchbox-app.com/54506801-806f-4e4a-976d-876c4ea02420.jpg",
+    "boxBack": "./art/launchbox/tt0291491-back-5d3d8fac-d95d-4fdb-bcd7-2db36bf465cd.webp",
+    "boxSpine": "./art/launchbox/tt0291491-spine-844fce6e-e7a6-4887-a57b-98016e33a537.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0291491-media-ace55579-164e-41d8-b3a4-74f4c540d99e.webp",
+          "source": "https://images.launchbox-app.com/ace55579-164e-41d8-b3a4-74f4c540d99e.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0316697": {
+    "launchboxId": 694,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/694",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ca04021e-975f-47a1-8f98-74fb4736ddac.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7c3b899b-d8f4-4096-ba50-1a24747e0796.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f30e159c-5be7-4313-a163-710cf7789076.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0316697-front-ca04021e-975f-47a1-8f98-74fb4736ddac.webp",
+    "artworkSource": "https://images.launchbox-app.com/ca04021e-975f-47a1-8f98-74fb4736ddac.jpg",
+    "boxBack": "./art/launchbox/tt0316697-back-7c3b899b-d8f4-4096-ba50-1a24747e0796.webp",
+    "boxSpine": "./art/launchbox/tt0316697-spine-f30e159c-5be7-4313-a163-710cf7789076.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt0388195": {
+    "launchboxId": 540,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/540",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/7821ef49-ee24-42ed-9a91-a8f7e66c34da.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e715f7e2-fd78-4cf5-8af0-c11bd074a814.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0388195-front-7821ef49-ee24-42ed-9a91-a8f7e66c34da.webp",
+    "artworkSource": "https://images.launchbox-app.com/7821ef49-ee24-42ed-9a91-a8f7e66c34da.jpg",
+    "boxBack": "./art/launchbox/tt0388195-back-e715f7e2-fd78-4cf5-8af0-c11bd074a814.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0388195-media-2f821de2-5e67-4666-a149-c560798c85a8.webp",
+          "source": "https://images.launchbox-app.com/2f821de2-5e67-4666-a149-c560798c85a8.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0356481": {
+    "launchboxId": 3487,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/3487",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/ba8832d8-626c-435e-bfe0-db987f00a130.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/e4d314eb-5176-4ca8-8467-b40488e7cc5c.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0356481-front-ba8832d8-626c-435e-bfe0-db987f00a130.webp",
+    "artworkSource": "https://images.launchbox-app.com/ba8832d8-626c-435e-bfe0-db987f00a130.jpg",
+    "boxBack": "./art/launchbox/tt0356481-back-e4d314eb-5176-4ca8-8467-b40488e7cc5c.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0356481-media-c0fb275c-6a97-438f-b2a6-08699fec27dd.webp",
+          "source": "https://images.launchbox-app.com/c0fb275c-6a97-438f-b2a6-08699fec27dd.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0291490": {
+    "launchboxId": 108428,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/108428",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/9f647bdd-c985-4771-8119-9a2b4926b76a.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1f9587b0-c611-49bd-b1af-d9b7a82543d3.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/65cf11f7-d8d9-44e2-9492-523e3724a588.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0291490-front-9f647bdd-c985-4771-8119-9a2b4926b76a.webp",
+    "artworkSource": "https://images.launchbox-app.com/9f647bdd-c985-4771-8119-9a2b4926b76a.jpg",
+    "boxBack": "./art/launchbox/tt0291490-back-1f9587b0-c611-49bd-b1af-d9b7a82543d3.webp",
+    "boxSpine": "./art/launchbox/tt0291490-spine-65cf11f7-d8d9-44e2-9492-523e3724a588.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0291490-media-4b19e57d-bdea-4de5-b7a9-2bd0753d0b9f.webp",
+          "source": "https://images.launchbox-app.com/4b19e57d-bdea-4de5-b7a9-2bd0753d0b9f.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0291492": {
+    "launchboxId": 691,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/691",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d1e6d816-2298-404c-9bb5-074ac99183b4.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b391353d-411f-48fd-aa44-06403dd7b263.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a76d9dc4-b6fb-4cf6-a74e-fd5b637b8e1e.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0291492-front-d1e6d816-2298-404c-9bb5-074ac99183b4.webp",
+    "artworkSource": "https://images.launchbox-app.com/d1e6d816-2298-404c-9bb5-074ac99183b4.jpg",
+    "boxBack": "./art/launchbox/tt0291492-back-b391353d-411f-48fd-aa44-06403dd7b263.webp",
+    "boxSpine": "./art/launchbox/tt0291492-spine-a76d9dc4-b6fb-4cf6-a74e-fd5b637b8e1e.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0291492-media-8d863363-2a32-4ac7-8bef-d67399a9d4ba.webp",
+          "source": "https://images.launchbox-app.com/8d863363-2a32-4ac7-8bef-d67399a9d4ba.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0291489": {
+    "launchboxId": 733,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/733",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/cac5ef1e-6f2c-412b-9d1f-a299545ebeed.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/abdc0fb9-40c2-48cd-be9d-5ffb2c888c13.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/a163cfab-d4b7-45a2-ba3e-3de4b0049fe4.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0291489-front-cac5ef1e-6f2c-412b-9d1f-a299545ebeed.webp",
+    "artworkSource": "https://images.launchbox-app.com/cac5ef1e-6f2c-412b-9d1f-a299545ebeed.jpg",
+    "boxBack": "./art/launchbox/tt0291489-back-abdc0fb9-40c2-48cd-be9d-5ffb2c888c13.webp",
+    "boxSpine": "./art/launchbox/tt0291489-spine-a163cfab-d4b7-45a2-ba3e-3de4b0049fe4.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0291489-media-011e2ba4-f38b-4043-bc0c-ed8a714d912e.webp",
+          "source": "https://images.launchbox-app.com/011e2ba4-f38b-4043-bc0c-ed8a714d912e.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0478389": {
+    "launchboxId": 4598,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4598",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_8b90e4b7-8f21-4080-8417-469ce4c65214.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/2bbfccf8-f293-464a-94ed-af3414a40aa1.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_a4de31ed-7700-4ba6-981c-76a0ac17b6db.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0478389-front-r2_8b90e4b7-8f21-4080-8417-469ce4c65214.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_8b90e4b7-8f21-4080-8417-469ce4c65214.png",
+    "boxBack": "./art/launchbox/tt0478389-back-2bbfccf8-f293-464a-94ed-af3414a40aa1.webp",
+    "boxSpine": "./art/launchbox/tt0478389-spine-r2_a4de31ed-7700-4ba6-981c-76a0ac17b6db.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt6538110": {
+    "launchboxId": 9415,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/9415",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/f695e861-fb9a-4415-b103-6e3d962c1ef3.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6288bbd0-52ec-409f-828e-53617fa6a060.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt6538110-front-f695e861-fb9a-4415-b103-6e3d962c1ef3.webp",
+    "artworkSource": "https://images.launchbox-app.com/f695e861-fb9a-4415-b103-6e3d962c1ef3.jpg",
+    "boxBack": "./art/launchbox/tt6538110-back-6288bbd0-52ec-409f-828e-53617fa6a060.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt6538110-media-722299a5-ea4b-46cb-8756-8a13960c1cfb.webp",
+          "source": "https://images.launchbox-app.com/722299a5-ea4b-46cb-8756-8a13960c1cfb.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0309462": {
+    "launchboxId": 6242,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/6242",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0dda3594-45cd-412a-8696-1ab27876e01b.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/41978c81-faa2-43f9-9b72-7f843e6b82a0.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0309462-front-0dda3594-45cd-412a-8696-1ab27876e01b.webp",
+    "artworkSource": "https://images.launchbox-app.com/0dda3594-45cd-412a-8696-1ab27876e01b.jpg",
+    "boxBack": "./art/launchbox/tt0309462-back-41978c81-faa2-43f9-9b72-7f843e6b82a0.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0309462-media-b604a74e-1906-4422-9e44-58669aad9143.webp",
+          "source": "https://images.launchbox-app.com/b604a74e-1906-4422-9e44-58669aad9143.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0466009": {
+    "launchboxId": 967,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/967",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6dbb523c-9587-4ae2-b751-0b228dec96a5.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6e323495-58ee-4ec3-83ba-248bf9b795af.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_14a40eec-7f28-4e75-ada4-bc8076314bc8.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0466009-front-6dbb523c-9587-4ae2-b751-0b228dec96a5.webp",
+    "artworkSource": "https://images.launchbox-app.com/6dbb523c-9587-4ae2-b751-0b228dec96a5.jpg",
+    "boxBack": "./art/launchbox/tt0466009-back-6e323495-58ee-4ec3-83ba-248bf9b795af.webp",
+    "boxSpine": "./art/launchbox/tt0466009-spine-r2_14a40eec-7f28-4e75-ada4-bc8076314bc8.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0466009-media-a16a116b-8901-4f32-b44e-85e8c528b1d0.webp",
+          "source": "https://images.launchbox-app.com/a16a116b-8901-4f32-b44e-85e8c528b1d0.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0479991": {
+    "launchboxId": 26291,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/26291",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/5ea85178-29fa-4974-bd76-23e405798f0d.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b8f1b41e-f02a-426f-a442-38cf26ba9958.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0479991-front-5ea85178-29fa-4974-bd76-23e405798f0d.webp",
+    "artworkSource": "https://images.launchbox-app.com/5ea85178-29fa-4974-bd76-23e405798f0d.jpg",
+    "boxBack": "./art/launchbox/tt0479991-back-b8f1b41e-f02a-426f-a442-38cf26ba9958.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt13204596": {
+    "launchboxId": 20348,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/20348",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/25cab9cf-e562-4299-95ec-1160c89532e5.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/561d4a92-bc61-4553-ba71-c65cd19e0cd2.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "Japan",
+        "source": "https://images.launchbox-app.com/f4a42f20-bc9f-4f02-9dae-ae111b01e121.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt13204596-front-25cab9cf-e562-4299-95ec-1160c89532e5.webp",
+    "artworkSource": "https://images.launchbox-app.com/25cab9cf-e562-4299-95ec-1160c89532e5.png",
+    "boxBack": "./art/launchbox/tt13204596-back-561d4a92-bc61-4553-ba71-c65cd19e0cd2.webp",
+    "boxSpine": "./art/launchbox/tt13204596-spine-f4a42f20-bc9f-4f02-9dae-ae111b01e121.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt13204596-media-4cbc16f5-6de9-4368-b289-174988e60589.webp",
+          "source": "https://images.launchbox-app.com/4cbc16f5-6de9-4368-b289-174988e60589.png",
+          "type": "Cart - Front",
+          "region": "Japan",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0297407": {
+    "launchboxId": 611,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/611",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/803f9b88-332d-4fe7-b706-1e905c5234a9.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/57f7fb91-5b1a-42df-8a3e-8025c9075b30.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/673ffa3f-c139-43a2-9dc9-f5318cc0248a.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0297407-front-803f9b88-332d-4fe7-b706-1e905c5234a9.webp",
+    "artworkSource": "https://images.launchbox-app.com/803f9b88-332d-4fe7-b706-1e905c5234a9.jpg",
+    "boxBack": "./art/launchbox/tt0297407-back-57f7fb91-5b1a-42df-8a3e-8025c9075b30.webp",
+    "boxSpine": "./art/launchbox/tt0297407-spine-673ffa3f-c139-43a2-9dc9-f5318cc0248a.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0297407-media-df47503a-f057-499e-8f8f-629b678b8c69.webp",
+          "source": "https://images.launchbox-app.com/df47503a-f057-499e-8f8f-629b678b8c69.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt2054768": {
+    "launchboxId": 1939,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/1939",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3249deec-fc90-4423-8f7c-2fe0b3ab2c73.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/725e9c7c-5bba-40ed-8c66-8ad180d1e56e.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt2054768-front-3249deec-fc90-4423-8f7c-2fe0b3ab2c73.webp",
+    "artworkSource": "https://images.launchbox-app.com/3249deec-fc90-4423-8f7c-2fe0b3ab2c73.jpg",
+    "boxBack": "./art/launchbox/tt2054768-back-725e9c7c-5bba-40ed-8c66-8ad180d1e56e.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt2054768-media-18985de0-20c8-44bd-997e-9916731de6a1.webp",
+          "source": "https://images.launchbox-app.com/18985de0-20c8-44bd-997e-9916731de6a1.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt21331620": {
+    "launchboxId": 4629,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4629",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/2969c1c2-2865-4542-80cd-d563d89b8664.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/6164f280-771e-4e87-9912-3c10f9e22d11.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt21331620-front-2969c1c2-2865-4542-80cd-d563d89b8664.webp",
+    "artworkSource": "https://images.launchbox-app.com/2969c1c2-2865-4542-80cd-d563d89b8664.jpg",
+    "boxBack": "./art/launchbox/tt21331620-back-6164f280-771e-4e87-9912-3c10f9e22d11.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt21331620-media-6fa3f5a7-51d8-4c59-841a-e8d3ecfbc036.webp",
+          "source": "https://images.launchbox-app.com/6fa3f5a7-51d8-4c59-841a-e8d3ecfbc036.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt1403099": {
+    "launchboxId": 4701,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4701",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/101b94c3-5148-4b76-b995-b9e41c0e3f77.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/32dc0a71-a556-44a9-9239-dc8ad18054ec.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/db821575-23c9-4803-a0f8-925ba850a5b0.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt1403099-front-101b94c3-5148-4b76-b995-b9e41c0e3f77.webp",
+    "artworkSource": "https://images.launchbox-app.com/101b94c3-5148-4b76-b995-b9e41c0e3f77.jpg",
+    "boxBack": "./art/launchbox/tt1403099-back-32dc0a71-a556-44a9-9239-dc8ad18054ec.webp",
+    "boxSpine": "./art/launchbox/tt1403099-spine-db821575-23c9-4803-a0f8-925ba850a5b0.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": []
+    }
+  },
+  "tt0390822": {
+    "launchboxId": 446,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/446",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/3acadc56-7e17-4af4-9c6e-37776d17be49.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/4fd8eb1d-9878-4f8f-baa6-2306922601ed.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/0a99f87d-31dc-4031-b5c9-126d83a666f1.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0390822-front-3acadc56-7e17-4af4-9c6e-37776d17be49.webp",
+    "artworkSource": "https://images.launchbox-app.com/3acadc56-7e17-4af4-9c6e-37776d17be49.jpg",
+    "boxBack": "./art/launchbox/tt0390822-back-4fd8eb1d-9878-4f8f-baa6-2306922601ed.webp",
+    "boxSpine": "./art/launchbox/tt0390822-spine-0a99f87d-31dc-4031-b5c9-126d83a666f1.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0390822-media-f87c1602-2bb1-4223-8b21-d7082ccc5eff.webp",
+          "source": "https://images.launchbox-app.com/f87c1602-2bb1-4223-8b21-d7082ccc5eff.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt19855554": {
+    "launchboxId": 675,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/675",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b7ab9af0-9469-411e-b966-2b5c57f21b6f.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/c0777fbd-e4c1-4cbf-a3a4-d79556e46931.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt19855554-front-b7ab9af0-9469-411e-b966-2b5c57f21b6f.webp",
+    "artworkSource": "https://images.launchbox-app.com/b7ab9af0-9469-411e-b966-2b5c57f21b6f.jpg",
+    "boxBack": "./art/launchbox/tt19855554-back-c0777fbd-e4c1-4cbf-a3a4-d79556e46931.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt19855554-media-a9371b97-3d2f-47a7-8a15-ca379aa3d730.webp",
+          "source": "https://images.launchbox-app.com/a9371b97-3d2f-47a7-8a15-ca379aa3d730.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0308688": {
+    "launchboxId": 4541,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4541",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_5b0f57f1-44b2-457f-a2b3-a9a486b068f7.png"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_241aa6a2-7a99-4e2c-8078-c3f522508ec0.png"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/r2_8115bf90-5daf-4538-8c35-90851be71157.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0308688-front-r2_5b0f57f1-44b2-457f-a2b3-a9a486b068f7.webp",
+    "artworkSource": "https://images.launchbox-app.com/r2_5b0f57f1-44b2-457f-a2b3-a9a486b068f7.png",
+    "boxBack": "./art/launchbox/tt0308688-back-r2_241aa6a2-7a99-4e2c-8078-c3f522508ec0.webp",
+    "boxSpine": "./art/launchbox/tt0308688-spine-r2_8115bf90-5daf-4538-8c35-90851be71157.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0308688-media-88b11f5c-1381-4b8a-b70c-a40e5f852f99.webp",
+          "source": "https://images.launchbox-app.com/88b11f5c-1381-4b8a-b70c-a40e5f852f99.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0301766": {
+    "launchboxId": 114123,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/114123",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/d557a10d-6a58-4185-a7cb-650b850eb323.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1d9904ff-b387-4b7e-bf4a-74b565b379e6.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0301766-front-d557a10d-6a58-4185-a7cb-650b850eb323.webp",
+    "artworkSource": "https://images.launchbox-app.com/d557a10d-6a58-4185-a7cb-650b850eb323.jpg",
+    "boxBack": "./art/launchbox/tt0301766-back-1d9904ff-b387-4b7e-bf4a-74b565b379e6.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0301766-media-7b59b099-459a-42da-8d1b-224b7ace3839.webp",
+          "source": "https://images.launchbox-app.com/7b59b099-459a-42da-8d1b-224b7ace3839.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0206583": {
+    "launchboxId": 4279,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/4279",
+    "launchboxPlatform": "Sega Genesis",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/04a55bef-53bd-4c26-bb7a-f70aae85f1a4.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/b5b88158-4551-48c7-ab65-3d3e2a6d2cf2.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/00aafaba-9ef4-47bd-a193-87a9eb2d9d87.png"
+      }
+    },
+    "artwork": "./art/launchbox/tt0206583-front-04a55bef-53bd-4c26-bb7a-f70aae85f1a4.webp",
+    "artworkSource": "https://images.launchbox-app.com/04a55bef-53bd-4c26-bb7a-f70aae85f1a4.jpg",
+    "boxBack": "./art/launchbox/tt0206583-back-b5b88158-4551-48c7-ab65-3d3e2a6d2cf2.webp",
+    "boxSpine": "./art/launchbox/tt0206583-spine-00aafaba-9ef4-47bd-a193-87a9eb2d9d87.webp",
+    "gameMedia": {
+      "kind": "cartridge",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0206583-media-7ee64e90-ef92-4a04-8140-6b585a48d736.webp",
+          "source": "https://images.launchbox-app.com/7ee64e90-ef92-4a04-8140-6b585a48d736.png",
+          "type": "Cart - Front",
+          "region": "North America",
+          "layout": "shell"
+        }
+      ]
+    }
+  },
+  "tt0808446": {
+    "launchboxId": 5392,
+    "launchboxUrl": "https://gamesdb.launchbox-app.com/games/dbid/5392",
+    "launchboxPlatform": "Sony Playstation 2",
+    "launchboxArt": {
+      "front": {
+        "type": "Box - Front",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/1a15df11-1e16-48d4-abf1-a19682fb7911.jpg"
+      },
+      "back": {
+        "type": "Box - Back",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/fb9fd3db-8969-4d17-861e-1d46b8af4431.jpg"
+      },
+      "spine": {
+        "type": "Box - Spine",
+        "region": "North America",
+        "source": "https://images.launchbox-app.com/abc1bc43-9c46-41bb-8130-aad073835073.jpg"
+      }
+    },
+    "artwork": "./art/launchbox/tt0808446-front-1a15df11-1e16-48d4-abf1-a19682fb7911.webp",
+    "artworkSource": "https://images.launchbox-app.com/1a15df11-1e16-48d4-abf1-a19682fb7911.jpg",
+    "boxBack": "./art/launchbox/tt0808446-back-fb9fd3db-8969-4d17-861e-1d46b8af4431.webp",
+    "boxSpine": "./art/launchbox/tt0808446-spine-abc1bc43-9c46-41bb-8130-aad073835073.webp",
+    "gameMedia": {
+      "kind": "disc",
+      "media": [
+        {
+          "artwork": "./art/launchbox/tt0808446-media-d635e0ae-71f3-4b02-ae88-b2bd961e0e12.webp",
+          "source": "https://images.launchbox-app.com/d635e0ae-71f3-4b02-ae88-b2bd961e0e12.png",
+          "type": "Disc",
+          "region": "North America",
+          "layout": "disc"
+        }
+      ]
+    }
   }
 }

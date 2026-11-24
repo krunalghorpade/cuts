@@ -558,5 +558,566 @@
         "regionalAlternative": true
       }
     ]
+  },
+  "tt4109630": {
+    "platform": "PlayStation 4",
+    "sourcePlatform": "Sony Playstation 4",
+    "databaseId": 193211
+  },
+  "tt0276506": {
+    "platform": "PlayStation 2",
+    "sourcePlatform": "Sony Playstation 2",
+    "databaseId": 8910
+  },
+  "tt1176737": {
+    "platform": "Xbox 360",
+    "sourcePlatform": "Microsoft Xbox 360",
+    "databaseId": 13718
+  },
+  "tt0438545": {
+    "platform": "PlayStation 2",
+    "sourcePlatform": "Sony Playstation 2",
+    "databaseId": 9837
+  },
+  "tt3125098": {
+    "platform": "Android",
+    "sourcePlatform": "Android",
+    "databaseId": 474342,
+    "mediaKind": "digital"
+  },
+  "tt0395268": {
+    "platform": "PlayStation 2",
+    "sourcePlatform": "Sony Playstation 2",
+    "databaseId": 23848
+  },
+  "tt0212448": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 2920
+  },
+  "tt0204798": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 157
+  },
+  "tt0203703": {
+    "platform": "Super Nintendo",
+    "sourcePlatform": "Super Nintendo Entertainment System",
+    "databaseId": 2823
+  },
+  "tt0228246": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 34097
+  },
+  "tt0203701": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 653
+  },
+  "tt1779394": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 4372
+  },
+  "tt0442713": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 34094
+  },
+  "tt0206656": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1258
+  },
+  "tt0186046": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 346
+  },
+  "tt0825477": {
+    "platform": "Game Boy Advance",
+    "sourcePlatform": "Nintendo Game Boy Advance",
+    "databaseId": 9388
+  },
+  "tt0363647": {
+    "platform": "Game Boy Advance",
+    "sourcePlatform": "Nintendo Game Boy Advance",
+    "databaseId": 3771
+  },
+  "tt0403927": {
+    "platform": "Game Boy Advance",
+    "sourcePlatform": "Nintendo Game Boy Advance",
+    "databaseId": 3349
+  },
+  "tt0397089": {
+    "platform": "Game Boy Advance",
+    "sourcePlatform": "Nintendo Game Boy Advance",
+    "databaseId": 3745
+  },
+  "tt3425360": {
+    "platform": "Famicom Disk System",
+    "sourcePlatform": "Nintendo Famicom Disk System",
+    "databaseId": 93040
+  },
+  "tt0310812": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1658
+  },
+  "tt6557746": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 7864
+  },
+  "tt6297616": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 2053
+  },
+  "tt19865392": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1945
+  },
+  "tt2189274": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1405
+  },
+  "tt3714730": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1461
+  },
+  "tt2198141": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1409
+  },
+  "tt2323334": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 2019
+  },
+  "tt18749128": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1376
+  },
+  "tt6569262": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 2160
+  },
+  "tt0185017": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 321
+  },
+  "tt2241307": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1888
+  },
+  "tt2242232": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 2007
+  },
+  "tt0304184": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1375
+  },
+  "tt0301222": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1274
+  },
+  "tt11859948": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 10616
+  },
+  "tt0204660": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 1726
+  },
+  "tt10284164": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 17779
+  },
+  "tt0485408": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 13078
+  },
+  "tt0445751": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 6124
+  },
+  "tt0445752": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 6125
+  },
+  "tt0221693": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 1728
+  },
+  "tt0302504": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 3174
+  },
+  "tt0379973": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 21719
+  },
+  "tt22097970": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 18634
+  },
+  "tt0217731": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 455671
+  },
+  "tt5833738": {
+    "platform": "Game Boy",
+    "sourcePlatform": "Nintendo Game Boy",
+    "databaseId": 21625
+  },
+  "tt0325819": {
+    "platform": "Game Boy Color",
+    "sourcePlatform": "Nintendo Game Boy Color",
+    "databaseId": 8633
+  },
+  "tt0319738": {
+    "platform": "Game Boy Color",
+    "sourcePlatform": "Nintendo Game Boy Color",
+    "databaseId": 6123
+  },
+  "tt1064955": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 89
+  },
+  "tt0790638": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 7078
+  },
+  "tt6034356": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 7108
+  },
+  "tt1235543": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 12582
+  },
+  "tt0465482": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 7085
+  },
+  "tt0788227": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 19405
+  },
+  "tt0815168": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 7086
+  },
+  "tt1207658": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 15543
+  },
+  "tt9832194": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 7098
+  },
+  "tt1737172": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 14089
+  },
+  "tt1369842": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 34451
+  },
+  "tt0262903": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 11517
+  },
+  "tt0259046": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 2613
+  },
+  "tt0258924": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 11796
+  },
+  "tt0295914": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 1006
+  },
+  "tt0314270": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 13544
+  },
+  "tt0417173": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 11403
+  },
+  "tt3706780": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 1009
+  },
+  "tt0262038": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 11881
+  },
+  "tt0190838": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 2780
+  },
+  "tt1192088": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 10773
+  },
+  "tt0247514": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 567
+  },
+  "tt0430279": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 446093
+  },
+  "tt0206584": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 10954
+  },
+  "tt0284031": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 8564
+  },
+  "tt0190428": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 5632
+  },
+  "tt0180318": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 628
+  },
+  "tt6032936": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 12216
+  },
+  "tt7853790": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 29859
+  },
+  "tt0269682": {
+    "platform": "PlayStation",
+    "sourcePlatform": "Sony Playstation",
+    "databaseId": 9858
+  },
+  "tt0388405": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 184
+  },
+  "tt0457473": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 120
+  },
+  "tt0387872": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 3872
+  },
+  "tt0291491": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 108429
+  },
+  "tt0316697": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 694
+  },
+  "tt0388195": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 540
+  },
+  "tt0356481": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 3487
+  },
+  "tt0291490": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 108428
+  },
+  "tt0291492": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 691
+  },
+  "tt0291489": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 733
+  },
+  "tt0478389": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 4598
+  },
+  "tt6538110": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 9415
+  },
+  "tt0309462": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 6242
+  },
+  "tt0466009": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 967
+  },
+  "tt0479991": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 26291
+  },
+  "tt13204596": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 20348
+  },
+  "tt0297407": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 611
+  },
+  "tt2054768": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 1939
+  },
+  "tt21331620": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 4629
+  },
+  "tt1403099": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 4701
+  },
+  "tt0390822": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 446
+  },
+  "tt19855554": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 675
+  },
+  "tt0308688": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 4541
+  },
+  "tt0301766": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 114123
+  },
+  "tt0206583": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 4279
+  },
+  "tt0808446": {
+    "platform": "PlayStation 2",
+    "sourcePlatform": "Sony Playstation 2",
+    "databaseId": 5392
+  },
+  "tt0290572": {
+    "platform": "MS-DOS",
+    "sourcePlatform": "MS-DOS",
+    "databaseId": 760
+  },
+  "tt0298562": {
+    "platform": "Sega Genesis",
+    "sourcePlatform": "Sega Genesis",
+    "databaseId": 971
+  },
+  "tt5357924": {
+    "platform": "Game Boy Advance",
+    "sourcePlatform": "Nintendo Game Boy Advance",
+    "databaseId": 3428
+  },
+  "tt0376945": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 1389
+  },
+  "tt1379204": {
+    "platform": "Game Boy Color",
+    "sourcePlatform": "Nintendo Game Boy Color",
+    "databaseId": 32088
+  },
+  "tt1249419": {
+    "platform": "PlayStation Portable",
+    "sourcePlatform": "Sony PSP",
+    "databaseId": 19406
+  },
+  "tt2454842": {
+    "platform": "Nintendo Entertainment System",
+    "sourcePlatform": "Nintendo Entertainment System",
+    "databaseId": 2099
   }
 }

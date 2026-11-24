@@ -2650,5 +2650,1614 @@
     ],
     "asOf": "2026-11-24",
     "episodeBasis": "Aired numbered episodes"
+  },
+  "tt14354452": {
+    "source": "https://www.imdb.com/title/tt14354452/",
+    "seasons": [],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0328733": {
+    "source": "https://www.imdb.com/title/tt0328733/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 51,
+        "artwork": "./art/seasons/c19b64e6a5b2cb5fa5ba.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/mMwDiC9mTkvIHoF5BgoB33cIi9u.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/54728/season/1?language=en-US"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 51,
+        "artwork": "./art/seasons/e4970a5a205251291015.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/uIqVnqozqvShT2GUBeKtKsRLfdF.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/54728/season/2?language=en-US"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 52,
+        "artwork": "./art/seasons/a1fcdee419463f8b5756.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/xVzPmfEjaJaYk0T3yDjxu5CwB1f.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/54728/season/3?language=en-US"
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt6348126": {
+    "source": "https://www.imdb.com/title/tt6348126/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 51,
+        "artwork": "./art/seasons/f86740f608e619543dc4.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/9Nr7ZDlBV8Jt2NiiuCsc25W9cIG.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/67667/season/1?language=en-US"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 52
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 52
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 50
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 52,
+        "artwork": "./art/seasons/59a57eaef7eed18e7421.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/6K68p7TVdAyPvRzH5uSKNNyS3jG.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/67667/season/5?language=en-US"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 52,
+        "artwork": "./art/seasons/b193052b3485d3b5fa84.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/zWgv6UGXor8FIUhA2KHzwMWSHvZ.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/67667/season/6?language=en-US"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 52
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 10
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 10
+      },
+      {
+        "number": 10,
+        "label": "Season 10",
+        "episodes": 2
+      },
+      {
+        "number": 11,
+        "label": "Season 11",
+        "episodes": 2
+      },
+      {
+        "number": 12,
+        "label": "Season 12",
+        "episodes": 2
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt27865962": {
+    "source": "https://www.imdb.com/title/tt27865962/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 51
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 49
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 34
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 11
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt1674928": {
+    "source": "https://www.imdb.com/title/tt1674928/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 51,
+        "artwork": "./art/seasons/c56eafc592b961fd7bae.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/pJXZwM7CAlBg0yGD2UCERrQ6RcY.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/37807/season/1?language=en-US"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 51,
+        "artwork": "./art/seasons/b9a8fb84837e67b57d6a.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/d2c78zNMznYMy1JetIYvnvxjxO8.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/37807/season/2?language=en-US"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 45
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt18554728": {
+    "source": "https://www.imdb.com/title/tt18554728/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 51
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0168366": {
+    "source": "https://www.imdb.com/title/tt0168366/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 82,
+        "artwork": "./art/seasons/4acc49984c19c0c4ff58.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/eGQ5eJMQR20TZsWMFxiXPKR1M2c.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/1?language=en-US"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 36,
+        "artwork": "./art/seasons/9d9eb9e8768b88bc8c4d.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/evvGDN8QQkHEFDItfHyKakx41Uw.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/2?language=en-US"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 41,
+        "artwork": "./art/seasons/19f8573ee708a98e9dd1.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/q5SITwWnAclZUqWntAb6vCguYGw.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/3?language=en-US"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 52,
+        "artwork": "./art/seasons/15c407f5a2469ed03dd6.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/8gK8sesvgLbDWVdYA4nDHhjE9Rf.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/4?language=en-US"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 65,
+        "artwork": "./art/seasons/6380579e9dabbce9c6f5.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/4wSl5c3XegGMsvCJR8BWPyHmJIo.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/5?language=en-US"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 40,
+        "artwork": "./art/seasons/6df10db85df8b0b4ee4b.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/xpchg8jaKasRyWOePWw6f8zryxo.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/6?language=en-US"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 52,
+        "artwork": "./art/seasons/54022a183d165dfcf2f1.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/sAwAIiGSkGOL1Azq84pY8BktCws.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/7?language=en-US"
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 53,
+        "artwork": "./art/seasons/d3ef025a1cb938c6d12a.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/xVIHgY5bkE0kM8rmTeUME9MglJn.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/8?language=en-US"
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 47
+      },
+      {
+        "number": 10,
+        "label": "Season 10",
+        "episodes": 52,
+        "artwork": "./art/seasons/666f2220cd5f1e7c1a0d.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/w0s4qYeIM3ylt4mdD1fI5693zTW.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/10?language=en-US"
+      },
+      {
+        "number": 11,
+        "label": "Season 11",
+        "episodes": 51
+      },
+      {
+        "number": 12,
+        "label": "Season 12",
+        "episodes": 53,
+        "artwork": "./art/seasons/387c2b240b05dde3d80b.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/d4HfiaIXNsrdGrSALYA1G3uUIZR.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/12?language=en-US"
+      },
+      {
+        "number": 13,
+        "label": "Season 13",
+        "episodes": 34,
+        "artwork": "./art/seasons/94529e927a79121b96f8.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/l5GEKuCEV27tKdZV42GWJT4i7m4.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/13?language=en-US"
+      },
+      {
+        "number": 14,
+        "label": "Season 14",
+        "episodes": 48,
+        "artwork": "./art/seasons/8c774a12eb6cf352fb02.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/xU3wZY32o104FPfabra8LTjDEZ3.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/14?language=en-US"
+      },
+      {
+        "number": 15,
+        "label": "Season 15",
+        "episodes": 49,
+        "artwork": "./art/seasons/52b7e14583fdbb2bcc9c.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/87N3UhDUIBSm2WtmqbJuPMzUDNx.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/15?language=en-US"
+      },
+      {
+        "number": 16,
+        "label": "Season 16",
+        "episodes": 45,
+        "artwork": "./art/seasons/272871bcc2e8bf9b141d.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/bv9PugS3yIDIScxUR8Ye2DyrpM0.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/16?language=en-US"
+      },
+      {
+        "number": 17,
+        "label": "Season 17",
+        "episodes": 49
+      },
+      {
+        "number": 18,
+        "label": "Season 18",
+        "episodes": 44
+      },
+      {
+        "number": 19,
+        "label": "Season 19",
+        "episodes": 48
+      },
+      {
+        "number": 20,
+        "label": "Season 20",
+        "episodes": 43,
+        "artwork": "./art/seasons/6250b085ddca430c4102.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/3PEL4ghrbS8LiZB4gwCWKc10d9V.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/20?language=en-US"
+      },
+      {
+        "number": 21,
+        "label": "Season 21",
+        "episodes": 49,
+        "artwork": "./art/seasons/e5fea3caeceabf5a751b.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/fhAUZODeJy3tK0gUnw6a9JbR0iM.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/21?language=en-US"
+      },
+      {
+        "number": 22,
+        "label": "Season 22",
+        "episodes": 54,
+        "artwork": "./art/seasons/6865c2f1aa9a378cffa5.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/t5Td9peUDyAwX2wpPwr7ZafZzky.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/22?language=en-US"
+      },
+      {
+        "number": 23,
+        "label": "Season 23",
+        "episodes": 48,
+        "artwork": "./art/seasons/baf6bb856295277ffa29.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/r073zmLxA4yzdi1dwbfyh1i3UwJ.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/23?language=en-US"
+      },
+      {
+        "number": 24,
+        "label": "Season 24",
+        "episodes": 42,
+        "artwork": "./art/seasons/68aa453a79f9a7e030c7.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/wrZARmey5XeSj35rK5hF8rYg8e8.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/60572/season/24?language=en-US"
+      },
+      {
+        "number": 25,
+        "label": "Season 25",
+        "episodes": 58
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt26692417": {
+    "source": "https://www.imdb.com/title/tt26692417/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 25
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 20
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 22
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 22
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 22
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 3
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 22
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 23
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt26916286": {
+    "source": "https://www.imdb.com/title/tt26916286/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8,
+        "artwork": "./art/seasons/2e79e2bedb273ebb73c9.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/1Oygth33agTAJYsGCpWm9zEn7vL.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/221301/season/1?language=en-US"
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt3218680": {
+    "source": "https://www.imdb.com/title/tt3218680/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 4
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0106064": {
+    "source": "https://www.imdb.com/title/tt0106064/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 60
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 52
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 43
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt39134461": {
+    "source": "https://www.imdb.com/title/tt39134461/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 1
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt43580342": {
+    "source": "https://www.imdb.com/title/tt43580342/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 23
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 9
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0312189": {
+    "source": "https://www.imdb.com/title/tt0312189/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 38
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0373587": {
+    "source": "https://www.imdb.com/title/tt0373587/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 38
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt1202625": {
+    "source": "https://www.imdb.com/title/tt1202625/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 26,
+        "artwork": "./art/seasons/b13d79bd978fd858cf93.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/1vnN4Jejkl14PkXwLyxs0e9XXLu.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/42951/season/1?language=en-US"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 26,
+        "artwork": "./art/seasons/6c0447518f204ee1c037.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/iulDf0xAVopkRtlbaIRGwQhgYQF.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/42951/season/2?language=en-US"
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0112040": {
+    "source": "https://www.imdb.com/title/tt0112040/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 2
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0103520": {
+    "source": "https://www.imdb.com/title/tt0103520/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 13
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 22
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 21
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 23
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 22
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 23
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 22
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 23
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 24
+      },
+      {
+        "number": 10,
+        "label": "Season 10",
+        "episodes": 22
+      },
+      {
+        "number": 11,
+        "label": "Season 11",
+        "episodes": 25
+      },
+      {
+        "number": 12,
+        "label": "Season 12",
+        "episodes": 29
+      },
+      {
+        "number": 13,
+        "label": "Season 13",
+        "episodes": 26
+      },
+      {
+        "number": 14,
+        "label": "Season 14",
+        "episodes": 28
+      },
+      {
+        "number": 15,
+        "label": "Season 15",
+        "episodes": 27
+      },
+      {
+        "number": 16,
+        "label": "Season 16",
+        "episodes": 25
+      },
+      {
+        "number": 17,
+        "label": "Season 17",
+        "episodes": 26
+      },
+      {
+        "number": 18,
+        "label": "Season 18",
+        "episodes": 30
+      },
+      {
+        "number": 19,
+        "label": "Season 19",
+        "episodes": 25
+      },
+      {
+        "number": 20,
+        "label": "Season 20",
+        "episodes": 14
+      },
+      {
+        "number": 21,
+        "label": "Season 21",
+        "episodes": 14
+      },
+      {
+        "number": 22,
+        "label": "Season 22",
+        "episodes": 14
+      },
+      {
+        "number": 23,
+        "label": "Season 23",
+        "episodes": 15
+      },
+      {
+        "number": 24,
+        "label": "Season 24",
+        "episodes": 13
+      },
+      {
+        "number": 25,
+        "label": "Season 25",
+        "episodes": 14
+      },
+      {
+        "number": 26,
+        "label": "Season 26",
+        "episodes": 13
+      },
+      {
+        "number": 27,
+        "label": "Season 27",
+        "episodes": 13
+      },
+      {
+        "number": 28,
+        "label": "Season 28",
+        "episodes": 14
+      },
+      {
+        "number": 29,
+        "label": "Season 29",
+        "episodes": 14
+      },
+      {
+        "number": 30,
+        "label": "Season 30",
+        "episodes": 13
+      },
+      {
+        "number": 31,
+        "label": "Season 31",
+        "episodes": 15
+      },
+      {
+        "number": 32,
+        "label": "Season 32",
+        "episodes": 12
+      },
+      {
+        "number": 33,
+        "label": "Season 33",
+        "episodes": 12
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt7768848": {
+    "source": "https://www.imdb.com/title/tt7768848/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt1632701": {
+    "source": "https://www.imdb.com/title/tt1632701/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 12
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 16
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 16
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 16
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 16
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 16
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 16
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 16
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 10
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0108778": {
+    "source": "https://www.imdb.com/title/tt0108778/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 24
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 24
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 25
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 24
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 24
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 25
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 24
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 24
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 23
+      },
+      {
+        "number": 10,
+        "label": "Season 10",
+        "episodes": 17
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0898266": {
+    "source": "https://www.imdb.com/title/tt0898266/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 17
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 23
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 23
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 24
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 24
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 24
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 24
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 24
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 24
+      },
+      {
+        "number": 10,
+        "label": "Season 10",
+        "episodes": 24
+      },
+      {
+        "number": 11,
+        "label": "Season 11",
+        "episodes": 24
+      },
+      {
+        "number": 12,
+        "label": "Season 12",
+        "episodes": 24
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0369179": {
+    "source": "https://www.imdb.com/title/tt0369179/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 24
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 24
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 24
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 24
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 19
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 24
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 22
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 16
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 24
+      },
+      {
+        "number": 10,
+        "label": "Season 10",
+        "episodes": 23
+      },
+      {
+        "number": 11,
+        "label": "Season 11",
+        "episodes": 22
+      },
+      {
+        "number": 12,
+        "label": "Season 12",
+        "episodes": 15
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0460649": {
+    "source": "https://www.imdb.com/title/tt0460649/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 22
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 22
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 20
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 24
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 24
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 24
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 24
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 24
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 24
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0072562": {
+    "source": "https://www.imdb.com/title/tt0072562/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 24
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 23
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 20
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 20
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 20
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 13
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 20
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 20
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 19
+      },
+      {
+        "number": 10,
+        "label": "Season 10",
+        "episodes": 18
+      },
+      {
+        "number": 11,
+        "label": "Season 11",
+        "episodes": 18
+      },
+      {
+        "number": 12,
+        "label": "Season 12",
+        "episodes": 20
+      },
+      {
+        "number": 13,
+        "label": "Season 13",
+        "episodes": 13
+      },
+      {
+        "number": 14,
+        "label": "Season 14",
+        "episodes": 20
+      },
+      {
+        "number": 15,
+        "label": "Season 15",
+        "episodes": 20
+      },
+      {
+        "number": 16,
+        "label": "Season 16",
+        "episodes": 20
+      },
+      {
+        "number": 17,
+        "label": "Season 17",
+        "episodes": 20
+      },
+      {
+        "number": 18,
+        "label": "Season 18",
+        "episodes": 20
+      },
+      {
+        "number": 19,
+        "label": "Season 19",
+        "episodes": 20
+      },
+      {
+        "number": 20,
+        "label": "Season 20",
+        "episodes": 20
+      },
+      {
+        "number": 21,
+        "label": "Season 21",
+        "episodes": 20
+      },
+      {
+        "number": 22,
+        "label": "Season 22",
+        "episodes": 20
+      },
+      {
+        "number": 23,
+        "label": "Season 23",
+        "episodes": 20
+      },
+      {
+        "number": 24,
+        "label": "Season 24",
+        "episodes": 19
+      },
+      {
+        "number": 25,
+        "label": "Season 25",
+        "episodes": 20
+      },
+      {
+        "number": 26,
+        "label": "Season 26",
+        "episodes": 20
+      },
+      {
+        "number": 27,
+        "label": "Season 27",
+        "episodes": 20
+      },
+      {
+        "number": 28,
+        "label": "Season 28",
+        "episodes": 20
+      },
+      {
+        "number": 29,
+        "label": "Season 29",
+        "episodes": 20
+      },
+      {
+        "number": 30,
+        "label": "Season 30",
+        "episodes": 20
+      },
+      {
+        "number": 31,
+        "label": "Season 31",
+        "episodes": 19
+      },
+      {
+        "number": 32,
+        "label": "Season 32",
+        "episodes": 20
+      },
+      {
+        "number": 33,
+        "label": "Season 33",
+        "episodes": 12
+      },
+      {
+        "number": 34,
+        "label": "Season 34",
+        "episodes": 22
+      },
+      {
+        "number": 35,
+        "label": "Season 35",
+        "episodes": 22
+      },
+      {
+        "number": 36,
+        "label": "Season 36",
+        "episodes": 22
+      },
+      {
+        "number": 37,
+        "label": "Season 37",
+        "episodes": 22
+      },
+      {
+        "number": 38,
+        "label": "Season 38",
+        "episodes": 21
+      },
+      {
+        "number": 39,
+        "label": "Season 39",
+        "episodes": 21
+      },
+      {
+        "number": 40,
+        "label": "Season 40",
+        "episodes": 21
+      },
+      {
+        "number": 41,
+        "label": "Season 41",
+        "episodes": 21
+      },
+      {
+        "number": 42,
+        "label": "Season 42",
+        "episodes": 21
+      },
+      {
+        "number": 43,
+        "label": "Season 43",
+        "episodes": 21
+      },
+      {
+        "number": 44,
+        "label": "Season 44",
+        "episodes": 21
+      },
+      {
+        "number": 45,
+        "label": "Season 45",
+        "episodes": 18
+      },
+      {
+        "number": 46,
+        "label": "Season 46",
+        "episodes": 20
+      },
+      {
+        "number": 47,
+        "label": "Season 47",
+        "episodes": 21
+      },
+      {
+        "number": 48,
+        "label": "Season 48",
+        "episodes": 18
+      },
+      {
+        "number": 49,
+        "label": "Season 49",
+        "episodes": 20
+      },
+      {
+        "number": 50,
+        "label": "Season 50",
+        "episodes": 20
+      },
+      {
+        "number": 51,
+        "label": "Season 51",
+        "episodes": 20
+      },
+      {
+        "number": 52,
+        "label": "Season 52",
+        "episodes": 20
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt9437568": {
+    "source": "https://www.imdb.com/title/tt9437568/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 805
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt11349122": {
+    "source": "https://www.imdb.com/title/tt11349122/",
+    "seasons": [],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt3402548": {
+    "source": "https://www.imdb.com/title/tt3402548/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 192
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt5747326": {
+    "source": "https://www.imdb.com/title/tt5747326/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 130
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 180
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 80
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 85
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt1563069": {
+    "source": "https://www.imdb.com/title/tt1563069/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 11
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 14
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 14
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 13
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 12
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 14
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt5017396": {
+    "source": "https://www.imdb.com/title/tt5017396/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 12
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 15
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 12
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 20
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 13
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 13
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 16
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 16
+      },
+      {
+        "number": 10,
+        "label": "Season 10",
+        "episodes": 12
+      },
+      {
+        "number": 11,
+        "label": "Season 11",
+        "episodes": 11
+      },
+      {
+        "number": 12,
+        "label": "Season 12",
+        "episodes": 22
+      },
+      {
+        "number": 13,
+        "label": "Season 13",
+        "episodes": 24
+      },
+      {
+        "number": 14,
+        "label": "Season 14",
+        "episodes": 26
+      },
+      {
+        "number": 15,
+        "label": "Season 15",
+        "episodes": 28
+      },
+      {
+        "number": 16,
+        "label": "Season 16",
+        "episodes": 28
+      },
+      {
+        "number": 17,
+        "label": "Season 17",
+        "episodes": 36
+      },
+      {
+        "number": 18,
+        "label": "Season 18",
+        "episodes": 34
+      },
+      {
+        "number": 19,
+        "label": "Season 19",
+        "episodes": 40
+      },
+      {
+        "number": 20,
+        "label": "Season 20",
+        "episodes": 42
+      },
+      {
+        "number": 21,
+        "label": "Season 21",
+        "episodes": 7
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt4746820": {
+    "source": "https://www.imdb.com/title/tt4746820/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 14
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 15
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 13
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 18
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 13
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 13
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 20
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 22
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 20
+      },
+      {
+        "number": 10,
+        "label": "Season 10",
+        "episodes": 21
+      },
+      {
+        "number": 11,
+        "label": "Season 11",
+        "episodes": 27
+      },
+      {
+        "number": 12,
+        "label": "Season 12",
+        "episodes": 23
+      },
+      {
+        "number": 13,
+        "label": "Season 13",
+        "episodes": 31
+      },
+      {
+        "number": 14,
+        "label": "Season 14",
+        "episodes": 27
+      },
+      {
+        "number": 15,
+        "label": "Season 15",
+        "episodes": 41
+      },
+      {
+        "number": 16,
+        "label": "Season 16",
+        "episodes": 56
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0401916": {
+    "source": "https://www.imdb.com/title/tt0401916/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 1545
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 72
+      }
+    ],
+    "asOf": "2026-11-24"
   }
 }
