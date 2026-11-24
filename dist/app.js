@@ -353,6 +353,10 @@ function showDetailItem(view,direction=0){
     sourceLink.title='Open '+item.title+' on '+(imdb?'IMDb':item.source||'the source website');
     sourceLink.setAttribute('aria-label',sourceLink.title);
   }else sourceLink.removeAttribute('href');
+  const fanartSource=$('fanartSource');
+  fanartSource.classList.toggle('hidden',!item.fanartSource);
+  if(item.fanartSource)fanartSource.href=item.fanartSource;
+  else fanartSource.removeAttribute('href');
   const coverSource=$('coverSource');
   const reference=item.launchboxUrl
     ? {url:item.launchboxUrl,label:'Artwork on LaunchBox'}
@@ -471,7 +475,7 @@ function renderCatalog(){
     card.type='button';card.className='catalog-card';card.setAttribute('aria-pressed','false');
     const image=document.createElement('img');
     image.className='catalog-art';image.alt='';image.loading='lazy';
-    image.src=item.artwork || coverDataUrl(item);
+    image.src=item.casePrint?.artwork || item.artwork || coverDataUrl(item);
     const copy=document.createElement('div');copy.className='catalog-copy';
     const title=document.createElement('strong');title.textContent=item.title;
     const meta=document.createElement('span');

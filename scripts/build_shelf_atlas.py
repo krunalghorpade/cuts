@@ -97,8 +97,12 @@ else:
     manifest["vinyl"] = pack([p for p in art if p in lp_paths], 192, 8, 3, "lp-", 89)
     manifest["gameBoxes"] = pack_box_prints(print_paths(e for e in editions.values() if e.get("launchboxUrl")), "game")
 film_covers = json.loads((DIST / "film-cover-scans.json").read_text())
-if film_covers:
-    manifest["filmBoxes"] = pack_box_prints(print_paths(film_covers.values()), "film")
+fanart_path = DIST / "fanart-items.json"
+fanart = json.loads(fanart_path.read_text()) if fanart_path.exists() else {}
+fronts = [record["front"]["artwork"] for iid, record in fanart.items() if record.get("front") and iid not in film_covers]
+case_paths = print_paths(film_covers.values()) + fronts
+if case_paths:
+    manifest["filmBoxes"] = pack_box_prints(case_paths, "film")
 else:
     manifest.pop("filmBoxes", None)
 pending = index_file.with_suffix(".tmp")

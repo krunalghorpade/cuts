@@ -1,6 +1,6 @@
 // The collection's display convention is four episodes per disc unless the
 // selected physical edition has a documented disc count.
-export function boxSetLayout(item,record,editions={}){
+export function boxSetLayout(item,record,editions={},fanart){
   const known=record?.seasons?.length;
   const cases=known?record.seasons:[{label:'Series case',episodes:item.episodeCount??null}];
   return cases.map(season=>{
@@ -8,7 +8,9 @@ export function boxSetLayout(item,record,editions={}){
     const labels=new Map((edition?.discs||[]).map(d=>[d.number,d]));
     const verified=Number.isInteger(edition?.discCount)&&edition.discCount>0;
     const count=verified?edition.discCount:Math.max(1,Math.ceil((season.episodes||0)/4),...labels.keys());
-    return {...season,artwork:season.artwork||item.artwork,seasonArt:!!season.artwork,
+    const print=fanart?.seasons?.[season.number];
+    return {...season,artwork:print?.artwork||season.artwork||fanart?.front?.artwork||item.artwork,
+      artworkPage:print?.imageSource||season.artworkPage,seasonArt:!!(print||season.artwork),
       label:season.label||'Season '+season.number,count,labels,verified,
       unknownCount:!verified&&!season.episodes&&!labels.size,source:season.source||record?.source,
       editionSource:edition?.source,format:edition?.format||'dvd'};
