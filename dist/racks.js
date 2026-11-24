@@ -5,6 +5,9 @@ import {batchRack} from './shelf-render.js';
 import {categoryById, ITEMS} from './catalog.js';
 import {fixtures,rise,roomAt} from './plan.js';
 import {createMediaCase,caseSpec} from './media.js';
+import {retroPackage} from './game-packages.js';
+
+const retroConsole=item=>retroPackage(item.platform)?.[0] || item.platform;
 
 function distributeInventory(seed){
   let state=seed;
@@ -23,10 +26,17 @@ function distributeInventory(seed){
     if(category==='retro-games'){
       const systems=new Map();
       for(const item of entries){
-        if(!systems.has(item.platform))systems.set(item.platform,[]);
-        systems.get(item.platform).push(item);
+        const consoleName=retroConsole(item);
+        if(!systems.has(consoleName))systems.set(consoleName,[]);
+        systems.get(consoleName).push(item);
       }
-      for(const games of systems.values())for(const game of games)placements[bays[0]].push([game]);
+      // Eight of the deepest 30 mm retro boxes plus seven 26 mm gaps fit in 422 mm.
+      let bay=0;
+      for(const games of systems.values()){
+        for(let start=0;start<games.length;start+=8){
+          placements[bays[bay++ % bays.length]].push(games.slice(start,start+8));
+        }
+      }
       continue;
     }
     if(category==='books'||category==='manga'){
@@ -35,7 +45,8 @@ function distributeInventory(seed){
     }
     // Keep large film collections below the cinema ceiling. Each five-tier
     // cabinet can show up to six staggered cases in a front-to-back stack.
-    let stackLimit=category==='vinyl'?10:4;
+    const series=category==='shows'||category==='anime';
+    let stackLimit=series ? 3 : category==='vinyl' ? 10 : 4;
     if(category==='movies'||category==='anime-movies'){
       const pitch=Math.max(.10,...entries.map(item=>caseSpec(item).w))+.042;
       const columns=Math.min(...bays.map(bay=>Math.max(1,Math.floor((fixtures[bay][4]-.18)/pitch))));
@@ -46,9 +57,8 @@ function distributeInventory(seed){
     for(const item of entries){
       const spec=caseSpec(item);
       if(spec.kind==='boxset' && spec.d>=spec.w/2){
-        if(stack.length)place();
-        stack.push(item);
-        place();
+        // Reserve a slot for the deep set and keep filling the current slim stack.
+        placements[bays[index++ % bays.length]].push([item]);
         continue;
       }
       const depth=spec.d+(category==='vinyl'?.016:.026);
@@ -133,21 +143,22 @@ export function stockRooms(interior,box,label,seed=0){
       const rowStacks=assigned.slice(start,start+capacity);
       rowStacks.forEach((items,col)=>{
         const cx=(col-(rowStacks.length-1)/2)*pitch,id=key+'-'+stacks.size;
-        if(key==='retro-games'&&(col===0||rowStacks[col-1][0].platform!==items[0].platform)){
-          const platform=items[0].platform.replace('Super Nintendo Entertainment System','Super NES').replace('Nintendo Entertainment System','NES').replace('PlayStation Portable','PSP');
+        const consoleName=key==='retro-games'?retroConsole(items[0]):null;
+        if(consoleName&&(col===0||retroConsole(rowStacks[col-1][0])!==consoleName)){
+          const platform=consoleName.replace('Super Nintendo Entertainment System','Super NES').replace('Nintendo Entertainment System','NES').replace('PlayStation Portable','PSP');
           board(cx,deck-.019,.314,pitch-.016,.041,.008,steel);
           label(group,platform,cx,deck-.019,.319,pitch-.019,.037,{bg:'#292b2b',color:'#ebe5d5',width:768,height:118,size:66});
         }
-        // Face-out displays browse neighbors on the same shelf and platform.
-        const shelfRow=printRack?rowStacks.flat():key==='retro-games'?rowStacks.flat().filter(game=>game.platform===items[0].platform):null;
-        stacks.set(id,{category,items,browseItems:shelfRow||items,
-          label:shelfRow?(items[0].platform||category.label)+' shelf':category.label+' · Stack'});let previousTop=deck,previousDepth=0,zz=recordBin?.105:.22;
+        stacks.set(id,{category,items,browseItems:printRack?rowStacks.flat():items,
+          label:printRack?category.label+' shelf':(consoleName||category.label)+' · Stack'});
+        const revealFraction=recordBin ? .106 : consoleName ? .12 : .18;
+        let previousTop=deck,previousDepth=0,zz=recordBin?.105:.22;
         items.forEach((item,index)=>{
           const {group:model,spec,shell}=createMediaCase(item,true);
           if(isBoxRack && index===0)zz=.255+extension-spec.d/2;
           const upright=isBoxRack && items.length===1;
           const tilt=upright?0:-.19,faceHeight=spec.h*Math.cos(tilt);
-          const top=index?Math.max(deck+.018+faceHeight,previousTop+(recordBin?.106:.18)*faceHeight):deck+.018+faceHeight;
+          const top=index?Math.max(deck+.018+faceHeight,previousTop+revealFraction*faceHeight):deck+.018+faceHeight;
           const yy=top-faceHeight/2;
           if(index)zz-=(previousDepth+spec.d)/2+(recordBin?.016:.026);
           const support=top-faceHeight-deck-.012;
