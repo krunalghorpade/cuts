@@ -2,6 +2,7 @@ import * as THREE from './vendor/three.module.js';
 
 import {shelfCover,gamePrintAspect} from './shelf-render.js';
 import {makePackage,disposePrint} from './packaging.js';
+import {minimumBoxDepth} from './box-set-layout.js';
 import {drawJCard} from './package-prints.js';
 import {retroPackage} from './game-packages.js';
 
@@ -82,6 +83,7 @@ export function caseSpec(item){
       const innerCases=Math.ceil(discs/4);
       depth=8+innerCases*6+discs*2;
     }
+    if(item.seasons?.length)depth=Math.max(depth,minimumBoxDepth(item.seasons));
   }
   return {w:width/1000,h:height/1000,d:depth/1000,kind,label,shell,dimensions:[width,height,depth]};
 }

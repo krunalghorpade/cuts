@@ -8,6 +8,7 @@ import { buildInterior } from './interior.js';
 import {installPosters,installTelevisions} from './displays.js';
 import {installElevator} from './elevator.js';
 import { rooms, levels, levelOf, ceilingOf, rise, stair, stairStart, stairEnd, lift, entrance, inside, roomAt, groundAt } from './plan.js';
+import {createBoxSetControls} from './box-set-controls.js';
 import { createCasePreview } from './case-preview.js';
 import { stockRooms } from './racks.js';
 import { caseSpec, coverDataUrl } from './media.js';
@@ -19,7 +20,8 @@ const hud = $('hud');
 const catalogPanel = $('catalogPanel');
 const detailPanel = $('detailPanel');
 const prompt = $('inspectPrompt');
-const preview=createCasePreview($('casePreview'),{onStep:turnItem,onDetails:moreInfo,onTravel:showRecordTravel});
+const preview=createCasePreview($('casePreview'),{onStep:turnItem,onDetails:moreInfo,onTravel:showRecordTravel,onSeasonPick:i=>boxControls.pick(i),onBoxTravel:t=>boxControls.travel(t)});
+const boxControls=createBoxSetControls(preview);
 $('previewReset').onclick=preview.reset;
 const mobile = matchMedia('(pointer: coarse)').matches;
 const scene = new THREE.Scene();
@@ -134,7 +136,7 @@ function requestLook(){ if(!mobile && !uiOpen && document.pointerLockElement!==c
 function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');const room=roomAt(level,camera.position.x,camera.position.z)?.id;updateTVs(camera,room,true);musicPlayer.update(room==='music'||room==='library'); }
 function pause(){ if(!active||uiOpen||elevator.riding)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Continue exploring'; document.exitPointerLock?.(); }
 function showToast(message){const el=$('toast');el.textContent=message;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2400);}
-function openCatalog(){if(elevator.riding)return;preview.hide();currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();$('searchInput').focus();}
+function openCatalog(){if(elevator.riding)return;preview.hide();boxControls.show(null);currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();$('searchInput').focus();}
 function closeCatalog(){catalogPanel.classList.add('hidden');uiOpen=false;if(active){hud.classList.remove('hidden');}else intro.classList.remove('hidden');}
 const audioCache=new Map();let currentDetailId=null,currentDetailItem=null;
 async function enrichAudio(item){
@@ -285,6 +287,7 @@ function showDetailItem(view,direction=0){
   $('detailTitle').textContent=item.title;
   $('detailCreator').textContent=browsing?[item.creator,item.year].filter(Boolean).join(' · '):item.creator;
   preview.show(item,{previous:prev,next,step:direction,view});
+  boxControls.show(browsing?null:item);
   if(browsing)return;
   updateCaseControls(item);
   $('audioExtra').classList.add('hidden');
@@ -315,7 +318,7 @@ function showDetailItem(view,direction=0){
 $('itemPrev').onclick=()=>turnItem(-1);
 $('itemNext').onclick=()=>turnItem(1);
 function closeDetail(returnToCatalog=fromCatalog){
-  preview.hide();currentDetailId=null;currentDetailItem=null;
+  preview.hide();boxControls.show(null);currentDetailId=null;currentDetailItem=null;
   detailPanel.classList.add('hidden');detailItems=[];detailIndex=-1;fromCatalog=false;browseStack=null;caseRequest++;
   if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});returnFocus=null;
   if(returnToCatalog){

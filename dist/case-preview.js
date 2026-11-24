@@ -14,7 +14,7 @@ function inspectionStudio(){
   map.colorSpace=THREE.SRGBColorSpace;return map;
 }
 
-export function createCasePreview(canvas,{onStep,onDetails,onTravel}){
+export function createCasePreview(canvas,{onStep,onDetails,onTravel,onSeasonPick,onBoxTravel}){
   const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(32,1,.01,20);
   camera.position.z=4.5;
   scene.add(new THREE.HemisphereLight(0xffffff,0x9c9c9c,1.6));
@@ -85,6 +85,34 @@ export function createCasePreview(canvas,{onStep,onDetails,onTravel}){
     dirty=true;
   }
 
+  function replaceInterior(entry,build){
+    const previous=opening?progress:0;
+    dropInterior();
+    opening=build();
+    opening.restPosition=opening.group.position.clone();
+    const samples=opening.boxSet?31:13;
+    opening.frames=Array.from({length:samples},(_,i)=>{
+      opening.setOpen(i/(samples-1));
+      const box=opening.measure?.()||new THREE.Box3().setFromObject(opening.group);
+      return {center:box.getCenter(new THREE.Vector3()),size:box.getSize(new THREE.Vector3())};
+    });
+    opening.versions=[];progress=previous;entry.group.visible=false;entry.pivot.add(opening.group);
+  }
+
+  async function setBoxStage(stage,season,page,position=null){
+    const ticket=++openGeneration,entry=hero;
+    if(!entry?.item.seasons||mode!=='info')return;
+    if(stage&&(!opening||opening.seasonIndex!==season||opening.page!==page)){
+      const {createBoxSet}=await import('./open-box-set.js');
+      if(ticket!==openGeneration||entry!==hero)return;
+      replaceInterior(entry,()=>createBoxSet(entry.item,entry.spec,entry.group,season,page));
+    }
+    if(!opening)return;
+    goal=stage/3;
+    if(position!==null)progress=goal=(1+THREE.MathUtils.clamp(position,0,1))/3;
+    lastTime=performance.now();dirty=true;render();
+  }
+
   async function setCaseOpen(value,mediumIndex=0,position=null){
     const token=++openGeneration,entry=hero;
     if(!entry||mode!=='info')return;
@@ -103,19 +131,8 @@ export function createCasePreview(canvas,{onStep,onDetails,onTravel}){
         build=()=>createOpenGameCase(entry.item,entry.spec,mediumIndex);
       }
       if(token!==openGeneration||entry!==hero)return;
-      const priorProgress=opening?progress:0;
-      dropInterior();
-      opening=build();
+      replaceInterior(entry,build);
       opening.mediumIndex=mediumIndex;
-      opening.restPosition=opening.group.position.clone();
-      // Measure the travel of each hinge or carton insert before attaching it to
-      // the rotating studio pivot. Some cartons slide upwards and then sideways.
-      opening.frames=Array.from({length:13},(_,i)=>{
-        opening.setOpen(i/12);
-        const box=new THREE.Box3().setFromObject(opening.group);
-        return {center:box.getCenter(new THREE.Vector3()),size:box.getSize(new THREE.Vector3())};
-      });
-      opening.versions=[];progress=priorProgress;entry.group.visible=false;entry.pivot.add(opening.group);
     }
     if(!opening)return;
     goal=value?1:0;
@@ -161,7 +178,16 @@ export function createCasePreview(canvas,{onStep,onDetails,onTravel}){
   canvas.addEventListener('pointerup',event=>{
     if(pointer?.id!==event.pointerId)return;
     const p=pointer;releasePointer();
-    if(mode!=='stack')return;
+    if(mode!=='stack'){
+      if(!p.moved&&opening?.boxSet&&goal===1/3&&progress===goal){
+        const b=canvas.getBoundingClientRect();
+        ndc.set((event.clientX-b.left)/b.width*2-1,1-(event.clientY-b.top)/b.height*2);
+        ray.setFromCamera(ndc,camera);
+        const hit=ray.intersectObject(opening.group,true)[0];
+        if(Number.isInteger(hit?.object.userData.seasonIndex))onSeasonPick?.(hit.object.userData.seasonIndex);
+      }
+      return;
+    }
     const dx=event.clientX-p.startX,dy=event.clientY-p.startY;
     if(p.swipe&&Math.abs(dx)>=28&&Math.abs(dx)>Math.abs(dy)*1.15){
       lastTap=null;onStep(dx<0?1:-1);return;
@@ -188,6 +214,19 @@ export function createCasePreview(canvas,{onStep,onDetails,onTravel}){
   });
 
   const center=new THREE.Vector3(),size=new THREE.Vector3();
+  const corner=new THREE.Vector3();
+  function fitBoxSet(dims,pivot,fill){
+    const tanY=Math.tan(THREE.MathUtils.degToRad(camera.fov*.5))*.84;
+    const tanX=tanY/.84*camera.aspect*fill;
+    let limit=Infinity;
+    for(const x of [-.5,.5])for(const y of [-.5,.5])for(const z of [-.5,.5]){
+      corner.set(dims.x*x,dims.y*y,dims.z*z).applyQuaternion(pivot.quaternion);
+      // For each corner, include its depth in the perspective fit.
+      const extent=Math.max(Math.abs(corner.x)/tanX,Math.abs(corner.y)/tanY)+corner.z;
+      if(extent>0)limit=Math.min(limit,camera.position.z/extent);
+    }
+    return limit;
+  }
   function render(){
     if(!hero)return;
     const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;
@@ -199,11 +238,13 @@ export function createCasePreview(canvas,{onStep,onDetails,onTravel}){
     if(!dirty&&!slideStart&&progress===goal&&!entries.some(textureChanged)&&!(opening&&textureChanged(opening)))return;
     const t=slideStart?Math.min(1,(now-slideStart)/230):1;
     if(opening){
-      const travel=reduced.matches?1:Math.min(1,Math.max(.001,(now-lastTime)/410));
+      const duration=opening.boxSet?1740:410;
+      const travel=reduced.matches?1:Math.min(1,Math.max(.001,(now-lastTime)/duration));
       progress+=Math.sign(goal-progress)*Math.min(travel,Math.abs(goal-progress));lastTime=now;
-      const amount=progress*progress*(3-2*progress);
+      const amount=opening.boxSet?progress:progress*progress*(3-2*progress);
       opening.setOpen(amount);
       if(hero.item.releaseKind==='vinyl')onTravel?.(amount);
+      if(opening.boxSet)onBoxTravel?.(THREE.MathUtils.clamp(3*amount-1,0,1));
       const frame=amount*(opening.frames.length-1),index=Math.floor(frame);
       const a=opening.frames[index],b=opening.frames[Math.min(index+1,opening.frames.length-1)];
       center.lerpVectors(a.center,b.center,frame-index);
@@ -219,10 +260,11 @@ export function createCasePreview(canvas,{onStep,onDetails,onTravel}){
       const fill=mode==='stack'&&entries.length>1?.68:.89;
       const scale=Math.min(visibleH*.84/Math.max(dims.y,.001),visibleW*fill/Math.max(dims.x,dims.z,.001));
       e.pivot.position.set(position*visibleW*.54,-side*visibleH*.026,-side*.32);
-      e.pivot.scale.setScalar(scale*(1-.24*side));e.versions=e.textures.map(texture=>texture.version);
+      const fitted=e===hero&&opening?.boxSet?Math.min(scale,fitBoxSet(dims,e.pivot,fill)):scale;
+      e.pivot.scale.setScalar(fitted*(1-.24*side));e.versions=e.textures.map(texture=>texture.version);
     }
     if(t===1)slideStart=0;
     renderer.render(scene,camera);dirty=false;
   }
-  return {show,hide,reset,render,setCaseOpen};
+  return {show,hide,reset,render,setCaseOpen,setBoxStage};
 }

@@ -67,8 +67,8 @@ export function createOpenGameCase(item,spec,mediumIndex=0){
   return hingedPackage(item,spec,item.gameMedia,mediumIndex);
 }
 
-export function createOpticalCase(item,spec,discPrint,mountInserts,linerPrint){
-  return hingedPackage(item,spec,{kind:'disc'},0,{discPrint,mountInserts,linerPrint});
+export function createOpticalCase(item,spec,discPrint,mountInserts,linerPrint,lidDiscPrint=null){
+  return hingedPackage(item,spec,{kind:'disc'},0,{discPrint,mountInserts,linerPrint,lidDiscPrint});
 }
 
 function hingedPackage(item,spec,game,mediumIndex,release){
@@ -82,6 +82,7 @@ function hingedPackage(item,spec,game,mediumIndex,release){
   const mountInsert=release?.mountInserts(geometries);
   if(release)textures.push(release.discPrint);
   if(release?.linerPrint)textures.push(release.linerPrint);
+  if(release?.lidDiscPrint)textures.push(release.lidDiscPrint);
   let disposed=false;
   function mat(color,roughness=.55,metalness=0,options={}){
     const m=new T.MeshStandardMaterial({color,roughness,metalness,...options});materials.add(m);return m;
@@ -148,14 +149,14 @@ function hingedPackage(item,spec,game,mediumIndex,release){
     }
     drum(parent,'Hub · button',r*.48,1.3,hubBody,0,0,z+.45);
   }
-  function opticalDisc(parent,radius,hole,z){
+  function opticalDisc(parent,radius,hole,z,print=release?.discPrint){
     const disc=joint(parent,'Optical medium',0,0,z);
     const foil=mat('#d5d7da',.3,.67),blank=mat('#ced1d5',.36,.52);
     annulus(disc,'Reflective substrate',hole,radius,foil,0,0,-.5).rotation.y=Math.PI;
     for(const [r,tube] of [[radius-.44,.45],[hole+.31,.31]])hoop(disc,'Polycarbonate edge',r,tube,foil,0,0,0);
     annulus(disc,'Label side',hole,radius-.22,blank,0,0,.48);
     if(release){
-      const ink=mat('#ffffff',.56,.06,{map:release.discPrint,alphaTest:.15});
+      const ink=mat('#ffffff',.56,.06,{map:print,alphaTest:.15});
       annulus(disc,'Printed release label',Math.max(hole,radius*.165),radius-.72,ink,0,0,.56);
       hoop(disc,'Mastering ring',radius*.22,.13,foil,0,0,.55);
     }else if(entry?.artwork){
@@ -283,9 +284,10 @@ function hingedPackage(item,spec,game,mediumIndex,release){
     const hinge=joint(stage,'Living hinge'),cover=joint(hinge,'Lid',w/2,0,d/2-1.25);
     plate(cover,'Cover panel',w-1.8,h-1.6,1.8,inside,0,0,0,2);
     frame(cover,rim,-1);
-    bookletMount(cover,jewel);
+    if(!release?.lidDiscPrint)bookletMount(cover,jewel);
     if(mountInsert){
       mountInsert(cover,'MAT_FRONT',0,0,1.15);mountInsert(cover,'MAT_BAND',0,0,1.17);
+      if(!jewel&&!release.lidDiscPrint)mountInsert(cover,'MAT_LINER',0,0,-1.65);
       if(jewel){
         const acrylic=mat('#d9e4e7',.18,.13,{transparent:true,opacity:.56,depthWrite:false});
         for(const sy of [-1,1])bar(cover,'Clear lid lip',w-2,1.25,3.0,acrylic,0,sy*(h/2-1.3),0);
@@ -319,6 +321,14 @@ function hingedPackage(item,spec,game,mediumIndex,release){
       for(const sign of [-1,1]){
         const lift=drum(holder,'Finger recess',Math.min(7,r*.13),.75,shadow,sign*(r-2)*.74,(r-2)*.67,.44);
         lift.scale.y=.82;
+      }
+      if(release?.lidDiscPrint){
+        const leaf=joint(cover,'Second disc retainer',0,-h*.025,-1.55);
+        leaf.rotation.y=Math.PI;
+        drum(leaf,'Lid disc well',r+2.5,.9,well,0,0,0);
+        hoop(leaf,'Lid tray moulding',r+2,.70,rim,0,0,.50);
+        opticalDisc(leaf,r,7.5,1.55,release.lidDiscPrint);
+        ejectHub(leaf,7.5,2.1);
       }
       opticalDisc(holder,r,7.5,1.55);
       ejectHub(holder,7.5,2.1);

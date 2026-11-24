@@ -107,6 +107,13 @@
           <button id="moreInfo" class="glass-primary" type="button">More info</button>
         </div>
         <div id="itemInfo">
+          <div id="boxActions" hidden>
+            <label id="seasonPicker" hidden>Case <select id="seasonSelect"></select></label>
+            <div class="box-buttons"><button id="boxAdvance" type="button" class="glass-primary">Open box set</button><button id="boxBack" type="button" hidden></button></div>
+            <label id="caseTravel" hidden>Case position <input id="seasonSlider" type="range" min="0" max="100" step="1" value="0" aria-valuetext="In box"></label>
+            <label id="discSpreadPicker" hidden>Tray <select id="discSpread"></select></label>
+            <p id="boxNote" role="status"></p>
+          </div>
           <div id="caseActions" hidden>
             <button id="toggleCase" class="glass-primary" type="button" aria-pressed="false">Open case</button>
             <label id="recordTravel" hidden>Record position <input id="sleeveSlider" type="range" min="0" max="100" step="1" value="0" aria-valuetext="In sleeve"></label>

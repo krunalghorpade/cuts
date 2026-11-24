@@ -38,8 +38,8 @@ function coverDesign(g,item,kind,image,w,h,side){
   g.fillStyle='#fff';g.textAlign='center';g.font='600 '+w*(lp ? .069 : .054)+'px '+fonts;
   g.fillText(item.title,w*.5,h*.735,w*.73);
   g.font='500 '+w*(lp ? .047 : .033)+'px '+fonts;g.fillText(item.creator||'',w*.5,h*.797,w*.65);
-  const mark=lp?'33⅓ RPM   •   SIDE '+side:kind==='cd'?'COMPACT DISC':kind==='bluray'?'BLU-RAY DISC':'DVD VIDEO';
-  g.font='600 '+w*(lp ? .036 : .024)+'px '+fonts;g.fillText(mark,w*.5,h*.866,w*.45);g.textAlign='left';
+  const mark=item.discCaption|| (lp?'33⅓ RPM   •   SIDE '+side:kind==='cd'?'COMPACT DISC':kind==='bluray'?'BLU-RAY DISC':'DVD VIDEO');
+  g.font='600 '+w*(item.discCaption ? .048 : lp ? .036 : .024)+'px '+fonts;g.fillText(mark,w*.5,h*.866,w*.45);g.textAlign='left';
 }
 
 export function mediumPrint(item,kind,side='A'){

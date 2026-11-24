@@ -330,5 +330,15 @@ body:has(#liftDialog[open]) :is(.hud,.topbar){visibility:hidden}
 
 #recordTravel {display:flex;align-items:center;gap:10px;margin:10px 0 0;font-size:13px;color:var(--muted)}
 #recordTravel[hidden] {display:none}
-#sleeveSlider {accent-color:currentColor;width:min(140px,44%);min-height:32px;cursor:pointer}
+#sleeveSlider,#seasonSlider {accent-color:currentColor;width:min(140px,44%);min-height:32px;cursor:pointer}
 #mediumNote a {color:inherit;text-underline-offset:3px}
+
+#boxActions {margin:18px 0 6px}
+.box-buttons {display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px}
+#boxBack {min-height:44px;padding:0 10px;border-radius:24px}
+#boxActions label {display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px}
+#seasonPicker {margin-bottom:10px}
+#caseTravel,#discSpreadPicker {margin-top:10px}
+#boxActions select {max-width:90%;min-height:36px;padding:4px 9px;font:inherit;color:var(--ink);background:#414346;border:0;border-radius:8px}
+#boxNote:not(:empty) {margin-top:10px;color:var(--muted);font-size:13px;line-height:1.5}
+#boxNote a {color:inherit;text-underline-offset:3px}

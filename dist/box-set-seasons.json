@@ -1,0 +1,2654 @@
+{
+  "tt0496424": {
+    "source": "https://www.tvmaze.com/shows/537/30-rock/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 21,
+        "source": "https://www.tvmaze.com/seasons/2163/30-rock-season-1",
+        "artwork": "./art/seasons/4cb544c0a5d832a0e002.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/27/68703.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 15,
+        "source": "https://www.tvmaze.com/seasons/2164/30-rock-season-2",
+        "artwork": "./art/seasons/f6e13d07b265e03b3fb2.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997687.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/2165/30-rock-season-3",
+        "artwork": "./art/seasons/c76abdec34ae09bf3414.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997688.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/2166/30-rock-season-4",
+        "artwork": "./art/seasons/ecc9e8cdca9feccd71b5.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997689.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 23,
+        "source": "https://www.tvmaze.com/seasons/2167/30-rock-season-5",
+        "artwork": "./art/seasons/42fda720243c7a04f008.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997690.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/2168/30-rock-season-6",
+        "artwork": "./art/seasons/0baab6521690b92388a5.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997691.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/2169/30-rock-season-7",
+        "artwork": "./art/seasons/84219eb04b3e4e63a61c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997692.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0386676": {
+    "source": "https://www.tvmaze.com/shows/526/the-office/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/2087/the-office-season-1",
+        "artwork": "./art/seasons/799077768d56d0185df5.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983575.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/2088/the-office-season-2",
+        "artwork": "./art/seasons/1e7d3d73b6edd42a3532.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983576.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 25,
+        "source": "https://www.tvmaze.com/seasons/2089/the-office-season-3",
+        "artwork": "./art/seasons/6d9d0523770953040c02.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983577.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 19,
+        "source": "https://www.tvmaze.com/seasons/2090/the-office-season-4",
+        "artwork": "./art/seasons/cc0bb847b781ad268b67.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983578.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 28,
+        "source": "https://www.tvmaze.com/seasons/2091/the-office-season-5",
+        "artwork": "./art/seasons/220bf423ba32e8e1c99d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983579.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 26,
+        "source": "https://www.tvmaze.com/seasons/2092/the-office-season-6",
+        "artwork": "./art/seasons/d3c5f98c3297994eb434.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983580.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 27,
+        "source": "https://www.tvmaze.com/seasons/2093/the-office-season-7",
+        "artwork": "./art/seasons/b76b6917377318e64aba.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/271/679064.jpg"
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 24,
+        "source": "https://www.tvmaze.com/seasons/2094/the-office-season-8",
+        "artwork": "./art/seasons/105e70b4c289f1d555ae.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983573.jpg"
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 25,
+        "source": "https://www.tvmaze.com/seasons/2095/the-office-season-9",
+        "artwork": "./art/seasons/53c55855abf6dd9d8d80.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983574.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2467372": {
+    "source": "https://www.tvmaze.com/shows/49/brooklyn-nine-nine/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/148/brooklyn-nine-nine-season-1",
+        "artwork": "./art/seasons/6e107dbd08c3f5705bcc.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/41/104486.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 23,
+        "source": "https://www.tvmaze.com/seasons/149/brooklyn-nine-nine-season-2",
+        "artwork": "./art/seasons/616880a6426747e6a812.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/41/104488.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 23,
+        "source": "https://www.tvmaze.com/seasons/7990/brooklyn-nine-nine-season-3",
+        "artwork": "./art/seasons/a87ffbe888ebf5c908b2.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/41/104487.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/47915/brooklyn-nine-nine-season-4",
+        "artwork": "./art/seasons/df67ff3229d55466fc34.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/216/540107.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/68017/brooklyn-nine-nine-season-5",
+        "artwork": "./art/seasons/497dacb2d2c86ff2574f.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/216/540108.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 18,
+        "source": "https://www.tvmaze.com/seasons/85010/brooklyn-nine-nine-season-6",
+        "artwork": "./art/seasons/56b8f42146931a11011a.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/216/540109.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/94343/brooklyn-nine-nine-season-7",
+        "artwork": "./art/seasons/bd074e5ece5b2e5b4a20.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/980952.jpg"
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/108678/brooklyn-nine-nine-season-8",
+        "artwork": "./art/seasons/efe6e5c7739ac3f65fdf.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/402/1007485.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt22014226": {
+    "source": "https://www.tvmaze.com/shows/65827/taaza-khabar/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/146238/taaza-khabar-season-1",
+        "artwork": "./art/seasons/81d27395073debb22815.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/lIEsG2VmWc2HgMODooRaymdeXrx.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/203832/season/1?language=en-US"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/175522/taaza-khabar-season-2",
+        "artwork": "./art/seasons/7c9d9e55858870c4dd5b.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/zRrF8oj20lhd2jU0Yj9dg4sP5z5.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/203832/season/2?language=en-US"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt11611698": {
+    "source": "https://www.tvmaze.com/shows/65856/trial-by-fire/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 7,
+        "source": "https://www.tvmaze.com/seasons/146289/trial-by-fire-season-1",
+        "artwork": "./art/seasons/feeb58ebc8bbb7b0fc26.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/441/1103548.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt22297578": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt22297578.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2364582": {
+    "source": "https://www.tvmaze.com/shows/31/marvels-agents-of-shield/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/118/marvels-agents-of-shield-season-1",
+        "artwork": "./art/seasons/c2dd3218ca61c2106216.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60847.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/119/marvels-agents-of-shield-season-2",
+        "artwork": "./art/seasons/a8c07cd23cc32ca98b7d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60848.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/7524/marvels-agents-of-shield-season-3",
+        "artwork": "./art/seasons/6410a758e48dad624af5.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60849.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/37222/marvels-agents-of-shield-season-4",
+        "artwork": "./art/seasons/c217f3f43e8d8c0017e7.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/92/231215.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/68073/marvels-agents-of-shield-season-5",
+        "artwork": "./art/seasons/4bcdb25aaa8719a0acae.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/129/322938.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/85106/marvels-agents-of-shield-season-6",
+        "artwork": "./art/seasons/3cc09792f49c535dfb9a.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/214/536291.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/96917/marvels-agents-of-shield-season-7",
+        "artwork": "./art/seasons/0037eccc57cc3cbdac6d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/253/634140.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt3475734": {
+    "source": "https://www.tvmaze.com/shows/336/marvels-agent-carter/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/1356/marvels-agent-carter-season-1",
+        "artwork": "./art/seasons/3fec03ce7dd39e7a2c6d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60845.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/24944/marvels-agent-carter-season-2",
+        "artwork": "./art/seasons/6ddce9ce223232ff79ec.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/40/100824.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt6313900": {
+    "source": "https://www.tvmaze.com/shows/23460/marvels-agents-of-shield-slingshot/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/58153/marvels-agents-of-shield-slingshot-season-1"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2357547": {
+    "source": "https://www.tvmaze.com/shows/1370/marvels-jessica-jones/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/9215/marvels-jessica-jones-season-1",
+        "artwork": "./art/seasons/4b729de0f83dbf3f49b9.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/48/120767.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/46738/marvels-jessica-jones-season-2",
+        "artwork": "./art/seasons/c7d54853c6c3f87289b3.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/214/536295.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/83697/marvels-jessica-jones-season-3",
+        "artwork": "./art/seasons/89db038dd487f1ce6471.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/214/536296.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt3322312": {
+    "source": "https://www.tvmaze.com/shows/1369/marvels-daredevil/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/5383/marvels-daredevil-season-1",
+        "artwork": "./art/seasons/1d63745af28cd8d88304.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60850.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/30776/marvels-daredevil-season-2",
+        "artwork": "./art/seasons/0d56283d54517b9598e6.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/49/123156.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/50595/marvels-daredevil-season-3",
+        "artwork": "./art/seasons/134b9c33d2a0a2770348.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/214/536297.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt3322314": {
+    "source": "https://www.tvmaze.com/shows/2174/marvels-luke-cage/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/33434/marvels-luke-cage-season-1",
+        "artwork": "./art/seasons/bf8d6c113e2cf1a0d801.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/159/397945.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/57969/marvels-luke-cage-season-2",
+        "artwork": "./art/seasons/852d5f668798f4925256.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/159/397944.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt4230076": {
+    "source": "https://www.tvmaze.com/shows/2176/marvels-the-defenders/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/21255/marvels-the-defenders-season-1",
+        "artwork": "./art/seasons/d5713e6528758d31732c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/214/536213.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt5675620": {
+    "source": "https://www.tvmaze.com/shows/16544/marvels-the-punisher/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/43831/marvels-the-punisher-season-1",
+        "artwork": "./art/seasons/2e62f47ed97ae0eee79f.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/214/536287.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/91711/marvels-the-punisher-season-2",
+        "artwork": "./art/seasons/4fb7ec72003923624abb.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/214/536288.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0144736": {
+    "source": "https://www.tvmaze.com/shows/45828/waga-seishun-no-arukadia-mugen-kido-ssx/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/104992/waga-seishun-no-arukadia-mugen-kido-ssx-season-1"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt39395275": {
+    "source": "https://www.tvmaze.com/shows/93969/dragon-ball-super-beerus/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 7,
+        "source": "https://www.tvmaze.com/seasons/205191/dragon-ball-super-beerus-season-1"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0214341": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt0214341.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 39
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 35
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 33
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 32
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 26
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 29
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 25
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 34
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 38
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0088509": {
+    "source": "https://www.tvmaze.com/shows/2102/dragon-ball/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 28,
+        "source": "https://www.tvmaze.com/seasons/7487/dragon-ball-season-1",
+        "artwork": "./art/seasons/f5ca07f1e353c66d8d10.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/573/1433974.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 29,
+        "source": "https://www.tvmaze.com/seasons/7488/dragon-ball-season-2",
+        "artwork": "./art/seasons/6c484b023423cd6f3cc2.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/573/1434012.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 44,
+        "source": "https://www.tvmaze.com/seasons/7489/dragon-ball-season-3",
+        "artwork": "./art/seasons/11b71fe0835a3a08cf09.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/573/1434013.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 21,
+        "source": "https://www.tvmaze.com/seasons/7490/dragon-ball-season-4",
+        "artwork": "./art/seasons/0dcf1c7ea44d09b67e3c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/573/1433976.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 31,
+        "source": "https://www.tvmaze.com/seasons/7491/dragon-ball-season-5",
+        "artwork": "./art/seasons/b47b1195fd6d4591cf8b.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/575/1438744.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt4644488": {
+    "source": "https://www.tvmaze.com/shows/2368/dragon-ball-super/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 14,
+        "source": "https://www.tvmaze.com/seasons/8159/dragon-ball-super-season-1"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/43994/dragon-ball-super-season-2"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 19,
+        "source": "https://www.tvmaze.com/seasons/43995/dragon-ball-super-season-3"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 30,
+        "source": "https://www.tvmaze.com/seasons/45418/dragon-ball-super-season-4",
+        "artwork": "./art/seasons/792e3ec19c8749b0facd.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1424892.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 55,
+        "source": "https://www.tvmaze.com/seasons/46561/dragon-ball-super-season-5"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0121220": {
+    "source": "https://www.tvmaze.com/shows/2103/dragon-ball-z/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 39,
+        "source": "https://www.tvmaze.com/seasons/7492/dragon-ball-z-season-1",
+        "artwork": "./art/seasons/b4111291f2d4b0f19e20.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1423117.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 35,
+        "source": "https://www.tvmaze.com/seasons/7493/dragon-ball-z-season-2",
+        "artwork": "./art/seasons/d2f04e5dca1f781de632.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1423105.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 33,
+        "source": "https://www.tvmaze.com/seasons/7494/dragon-ball-z-season-3",
+        "artwork": "./art/seasons/512f4cb589f1d759ef85.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1423108.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 32,
+        "source": "https://www.tvmaze.com/seasons/7495/dragon-ball-z-season-4",
+        "artwork": "./art/seasons/73841d6a0db643d72278.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1424515.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 26,
+        "source": "https://www.tvmaze.com/seasons/7496/dragon-ball-z-season-5",
+        "artwork": "./art/seasons/8bce402d1a88e14d517a.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/573/1433994.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 29,
+        "source": "https://www.tvmaze.com/seasons/7497/dragon-ball-z-season-6",
+        "artwork": "./art/seasons/90aff04eeb0752ddedd2.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1423123.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 25,
+        "source": "https://www.tvmaze.com/seasons/7498/dragon-ball-z-season-7",
+        "artwork": "./art/seasons/bc5d68e0d059a235f708.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1423109.jpg"
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 34,
+        "source": "https://www.tvmaze.com/seasons/7499/dragon-ball-z-season-8",
+        "artwork": "./art/seasons/7d7457fa243f6f0d2df9.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1423124.jpg"
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 38,
+        "source": "https://www.tvmaze.com/seasons/7500/dragon-ball-z-season-9",
+        "artwork": "./art/seasons/0d4d36c11121e06de61d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/573/1434005.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt29485149": {
+    "source": "https://www.tvmaze.com/shows/75093/dragon-ball-daima/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 20,
+        "source": "https://www.tvmaze.com/seasons/165132/dragon-ball-daima-season-1"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt1409055": {
+    "source": "https://www.tvmaze.com/shows/1676/dragon-ball-kai/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 98,
+        "source": "https://www.tvmaze.com/seasons/6384/dragon-ball-kai-season-1",
+        "artwork": "./art/seasons/3e8f03178fda5734aa3d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/222/555234.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 69,
+        "source": "https://www.tvmaze.com/seasons/6385/dragon-ball-kai-season-2",
+        "artwork": "./art/seasons/9d7b52faa8c58340792e.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/222/555236.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0139774": {
+    "source": "https://www.tvmaze.com/shows/2104/dragon-ball-gt/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 16,
+        "source": "https://www.tvmaze.com/seasons/7501/dragon-ball-gt-season-1",
+        "artwork": "./art/seasons/cbec2552aed9515e5e33.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1424893.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 24,
+        "source": "https://www.tvmaze.com/seasons/7502/dragon-ball-gt-season-2",
+        "artwork": "./art/seasons/61b945669b297154e9fd.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1424894.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 7,
+        "source": "https://www.tvmaze.com/seasons/186194/dragon-ball-gt-season-3",
+        "artwork": "./art/seasons/c469ad8d5886737c8447.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/573/1434006.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 17,
+        "source": "https://www.tvmaze.com/seasons/186195/dragon-ball-gt-season-4",
+        "artwork": "./art/seasons/6b18aa3eb242b5f83063.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/569/1424906.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt10710138": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt10710138.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 12
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 22
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 33
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt8433216": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt8433216.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "artwork": "./art/seasons/783d25708a721edb233b.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/cD7w9sjCJD3YWO6pIPzlvPLk8MZ.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/80020/season/1?language=en-US"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "artwork": "./art/seasons/d76d3c2e1aedb684867d.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/wbSOgTRaGKAvExFscbqA3pvT0my.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/80020/season/2?language=en-US"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 11,
+        "artwork": "./art/seasons/219b2c37e2ede9f9b023.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/xuqCi8rUtx8bRzBufSRThKToM8.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/80020/season/3?language=en-US"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 8,
+        "artwork": "./art/seasons/21da2ebb74dc104b6576.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/bla6MshYnUu5zwQcIcLpo0be6Ze.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/80020/season/4?language=en-US"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 10,
+        "artwork": "./art/seasons/805cc22d40485d03296f.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/17n0LPG8ZvUVPmNeY29LL3mVxWB.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/80020/season/5?language=en-US"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 6,
+        "artwork": "./art/seasons/263396f3738e079b6561.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/yaVjAcSCTUEZrqx80eanR9SPgYZ.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/80020/season/6?language=en-US"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt9360062": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt9360062.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 12
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2565520": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt2565520.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 16
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt32304483": {
+    "source": "https://www.imdb.com/title/tt32304483/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 4
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt29954260": {
+    "source": "https://www.imdb.com/title/tt29954260/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 3
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt27750841": {
+    "source": "https://www.imdb.com/title/tt27750841/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt21142804": {
+    "source": "https://www.imdb.com/title/tt21142804/episodes/",
+    "episodeBasis": "IMDb numbered episode listings",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10
+      }
+    ],
+    "asOf": "2026-11-24"
+  },
+  "tt0098936": {
+    "source": "https://www.tvmaze.com/shows/156/twin-peaks/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/701/twin-peaks-season-1",
+        "artwork": "./art/seasons/43b64df73962147877b1.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/981447.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/702/twin-peaks-season-2",
+        "artwork": "./art/seasons/829b924cc2f8a098a832.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/981448.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 18,
+        "source": "https://www.tvmaze.com/seasons/21613/twin-peaks-season-3",
+        "artwork": "./art/seasons/122b1c886baa1c3e5e1c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/981449.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0903747": {
+    "source": "https://www.tvmaze.com/shows/169/breaking-bad/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 7,
+        "source": "https://www.tvmaze.com/seasons/753/breaking-bad-season-1",
+        "artwork": "./art/seasons/f9253e8a4fc0a3ea8d24.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012791.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/754/breaking-bad-season-2",
+        "artwork": "./art/seasons/2d9fccf50849c05b161b.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012792.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/755/breaking-bad-season-3",
+        "artwork": "./art/seasons/ded7892d6f6b553706df.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012793.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/756/breaking-bad-season-4",
+        "artwork": "./art/seasons/b32f86afb46dd70a9f3f.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012794.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 16,
+        "source": "https://www.tvmaze.com/seasons/757/breaking-bad-season-5",
+        "artwork": "./art/seasons/4bc88c764aa53b56c2e9.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012795.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt7366338": {
+    "source": "https://www.tvmaze.com/shows/30770/chernobyl/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 5,
+        "source": "https://www.tvmaze.com/seasons/72720/chernobyl-season-1",
+        "artwork": "./art/seasons/9c63fc305dd17ec6496f.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/263/657828.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0944947": {
+    "source": "https://www.tvmaze.com/shows/82/game-of-thrones/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/307/game-of-thrones-season-1",
+        "artwork": "./art/seasons/3c245c510a0e5185f61f.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60659.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/308/game-of-thrones-season-2",
+        "artwork": "./art/seasons/faf04fb014b1b0afb535.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60660.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/309/game-of-thrones-season-3",
+        "artwork": "./art/seasons/1d7e8acf48a30a10a563.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60661.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/310/game-of-thrones-season-4",
+        "artwork": "./art/seasons/0b3fb7b7b7594983523b.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60662.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/5317/game-of-thrones-season-5",
+        "artwork": "./art/seasons/8b9c862636361a63bd52.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60663.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/7946/game-of-thrones-season-6",
+        "artwork": "./art/seasons/3314b0e25e0266d3f434.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60664.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 7,
+        "source": "https://www.tvmaze.com/seasons/43194/game-of-thrones-season-7",
+        "artwork": "./art/seasons/7716704de52775277aa0.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/394/987293.jpg"
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/63232/game-of-thrones-season-8",
+        "artwork": "./art/seasons/134ecad1421d0ee5c64a.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/394/987294.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2861424": {
+    "source": "https://www.tvmaze.com/shows/216/rick-and-morty/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 11,
+        "source": "https://www.tvmaze.com/seasons/882/rick-and-morty-season-1",
+        "artwork": "./art/seasons/d5c5a8e4c0ab51d7ba10.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60883.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/6906/rick-and-morty-season-2",
+        "artwork": "./art/seasons/b7ccacb4a22d4b44d9b4.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60884.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/48515/rick-and-morty-season-3",
+        "artwork": "./art/seasons/98a6366eef6bf3ef313d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/254/637126.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/96487/rick-and-morty-season-4",
+        "artwork": "./art/seasons/80667dbed5254323536f.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/254/637131.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/118549/rick-and-morty-season-5",
+        "artwork": "./art/seasons/334cb3a17eaccf892a46.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/418/1045829.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/125490/rick-and-morty-season-6",
+        "artwork": "./art/seasons/b4a3bf8d052e9d1ad4a8.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/470/1175407.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/148103/rick-and-morty-season-7",
+        "artwork": "./art/seasons/63999dfa43df75c0855d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/568/1420184.jpg"
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/161794/rick-and-morty-season-8",
+        "artwork": "./art/seasons/98f2a1dd6ea754ac267d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/568/1420185.jpg"
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/189202/rick-and-morty-season-9",
+        "artwork": "./art/seasons/73da812dabb986ebf01d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/627/1569898.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt1475582": {
+    "source": "https://www.tvmaze.com/shows/335/sherlock/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 3,
+        "source": "https://www.tvmaze.com/seasons/1353/sherlock-season-1",
+        "artwork": "./art/seasons/6c5d899fe9f06e31d53d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/41/102754.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 3,
+        "source": "https://www.tvmaze.com/seasons/1354/sherlock-season-2",
+        "artwork": "./art/seasons/699fe3412520d20eac6c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/41/102755.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 3,
+        "source": "https://www.tvmaze.com/seasons/1355/sherlock-season-3",
+        "artwork": "./art/seasons/211b119a111b272610fc.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/41/102756.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 3,
+        "source": "https://www.tvmaze.com/seasons/20855/sherlock-season-4",
+        "artwork": "./art/seasons/7005ad61dc3fb13c2a0b.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/230/576017.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0103359": {
+    "source": "https://www.tvmaze.com/shows/757/batman-the-animated-series/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 60,
+        "source": "https://www.tvmaze.com/seasons/3083/batman-the-animated-series-season-1",
+        "artwork": "./art/seasons/f65f0048996b44ad6344.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/182/457356.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/3084/batman-the-animated-series-season-2",
+        "artwork": "./art/seasons/bbc504309665fb936287.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/182/457362.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/3085/batman-the-animated-series-season-3",
+        "artwork": "./art/seasons/56396743c28283980754.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/182/457363.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 5,
+        "source": "https://www.tvmaze.com/seasons/3086/batman-the-animated-series-season-4",
+        "artwork": "./art/seasons/1ac89b655f2e709be52c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/182/457364.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt3032476": {
+    "source": "https://www.tvmaze.com/shows/618/better-call-saul/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/2566/better-call-saul-season-1",
+        "artwork": "./art/seasons/034cebbb90a4aece7bc2.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/400/1000649.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/24939/better-call-saul-season-2",
+        "artwork": "./art/seasons/6fe9feb18c6ba5679751.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/400/1000650.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/38746/better-call-saul-season-3",
+        "artwork": "./art/seasons/cea66205588a37ddcb24.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/400/1000651.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/70687/better-call-saul-season-4",
+        "artwork": "./art/seasons/a1bd4f8f1a6a4e769315.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/400/1000652.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/87440/better-call-saul-season-5",
+        "artwork": "./art/seasons/05bcee2dde0959bd74b9.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/400/1000653.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/105103/better-call-saul-season-6",
+        "artwork": "./art/seasons/876aa7e24cf7a523fb20.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1013247.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt12392504": {
+    "source": "https://www.tvmaze.com/shows/51127/scam-1992-the-harshad-mehta-story/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/115266/scam-1992-the-harshad-mehta-story-season-1"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0877057": {
+    "source": "https://www.tvmaze.com/shows/40/death-note/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 37,
+        "source": "https://www.tvmaze.com/seasons/133/death-note-season-1"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0098904": {
+    "source": "https://www.tvmaze.com/shows/530/seinfeld/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 5,
+        "source": "https://www.tvmaze.com/seasons/2113/seinfeld-season-1",
+        "artwork": "./art/seasons/0accf8b10ccf89795409.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997562.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/2114/seinfeld-season-2",
+        "artwork": "./art/seasons/1c2cfa2cf9186241e37f.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997563.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 23,
+        "source": "https://www.tvmaze.com/seasons/2115/seinfeld-season-3",
+        "artwork": "./art/seasons/eea2aba5ff05ddde0532.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997564.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 24,
+        "source": "https://www.tvmaze.com/seasons/2116/seinfeld-season-4",
+        "artwork": "./art/seasons/88a16ddbed304f1f740d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997565.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/2117/seinfeld-season-5",
+        "artwork": "./art/seasons/6c48a8b600a381ba4366.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997566.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 24,
+        "source": "https://www.tvmaze.com/seasons/2118/seinfeld-season-6",
+        "artwork": "./art/seasons/3f16370e4c4da0bb8fbd.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997567.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 24,
+        "source": "https://www.tvmaze.com/seasons/2119/seinfeld-season-7",
+        "artwork": "./art/seasons/c5afe443abd15cf9223c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997568.jpg"
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 22,
+        "source": "https://www.tvmaze.com/seasons/2120/seinfeld-season-8",
+        "artwork": "./art/seasons/7033c89640107d58b743.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997569.jpg"
+      },
+      {
+        "number": 9,
+        "label": "Season 9",
+        "episodes": 24,
+        "source": "https://www.tvmaze.com/seasons/2121/seinfeld-season-9",
+        "artwork": "./art/seasons/2599811c5ca049802690.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/399/997570.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2356777": {
+    "source": "https://www.tvmaze.com/shows/5/true-detective/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/11/true-detective-season-1",
+        "artwork": "./art/seasons/b73153b7be274e2ae9bd.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/13/34831.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/6690/true-detective-season-2",
+        "artwork": "./art/seasons/7fb868570996b16d70fe.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/13/34830.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/80138/true-detective-season-3",
+        "artwork": "./art/seasons/60f7d586434193affa20.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/238/595443.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/136634/true-detective-season-4",
+        "artwork": "./art/seasons/d5ad741ce644a3505317.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/490/1226751.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0213338": {
+    "source": "https://www.tvmaze.com/shows/1121/cowboy-bebop/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 26,
+        "source": "https://www.tvmaze.com/seasons/4769/cowboy-bebop-season-1",
+        "artwork": "./art/seasons/726caf6f7adf3f3d8977.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/sGDfX8uXASlyZXUXhxQGqqh05Us.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/30991/season/1?language=en-US"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt7660850": {
+    "source": "https://www.tvmaze.com/shows/23470/succession/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/58168/succession-season-1",
+        "artwork": "./art/seasons/af702950d15ea30d90e4.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/980916.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/96702/succession-season-2",
+        "artwork": "./art/seasons/669a5318b26aef97e089.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/252/631191.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 9,
+        "source": "https://www.tvmaze.com/seasons/102352/succession-season-3",
+        "artwork": "./art/seasons/b8874e3cb0f51baac435.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/364/911663.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/132966/succession-season-4",
+        "artwork": "./art/seasons/406d6e080005b6678fc1.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/463/1159921.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt4742876": {
+    "source": "https://www.tvmaze.com/shows/7329/tvf-pitchers/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 5,
+        "source": "https://www.tvmaze.com/seasons/21753/tvf-pitchers-season-1"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 5,
+        "source": "https://www.tvmaze.com/seasons/146565/tvf-pitchers-season-2"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt3398228": {
+    "source": "https://www.tvmaze.com/shows/184/bojack-horseman/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/806/bojack-horseman-season-1",
+        "artwork": "./art/seasons/338ac850f3b4e386a84c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012619.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/7115/bojack-horseman-season-2",
+        "artwork": "./art/seasons/eb5bc65251a29e823e3b.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012611.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/46188/bojack-horseman-season-3",
+        "artwork": "./art/seasons/8b7031c22bd5a979dfac.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012614.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/71932/bojack-horseman-season-4",
+        "artwork": "./art/seasons/3e473def96884164bb79.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012615.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/86323/bojack-horseman-season-5",
+        "artwork": "./art/seasons/e08a09f9f120152fc394.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012616.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 16,
+        "source": "https://www.tvmaze.com/seasons/90381/bojack-horseman-season-6",
+        "artwork": "./art/seasons/6160e8af2374808b3935.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/405/1012626.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt12004706": {
+    "source": "https://www.tvmaze.com/shows/47014/panchayat/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/107605/panchayat-season-1",
+        "artwork": "./art/seasons/9c3b2a1a5006ac6ef139.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/cPPhduQk1eX0MAE2JDaQRh3UZB5.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/101352/season/1?language=en-US"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/138608/panchayat-season-2",
+        "artwork": "./art/seasons/7c4cfce9df28c073659f.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/gRKDEpUPd2pp2msmwdgEW34V0SL.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/101352/season/2?language=en-US"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/168451/panchayat-season-3",
+        "artwork": "./art/seasons/8ccfe3e3c5005cd5f3ef.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/wsgfe8YmntJ1uVIkBjBdRdYpJyN.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/101352/season/3?language=en-US"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/184025/panchayat-season-4",
+        "artwork": "./art/seasons/c0b155057a571a1edac7.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/sGjqP4lKCcvTgappoIb0N0ojR7T.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/101352/season/4?language=en-US"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0072500": {
+    "source": "https://www.tvmaze.com/shows/577/fawlty-towers/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/2437/fawlty-towers-season-1"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/2438/fawlty-towers-season-2"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0096548": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt0096548.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2085059": {
+    "source": "https://www.tvmaze.com/shows/305/black-mirror/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 3,
+        "source": "https://www.tvmaze.com/seasons/1256/black-mirror-season-1",
+        "artwork": "./art/seasons/c81cc92c9ec6bb1461df.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/41/103197.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 3,
+        "source": "https://www.tvmaze.com/seasons/1257/black-mirror-season-2",
+        "artwork": "./art/seasons/cad2f4bc9dbcff5df097.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/41/103198.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/44472/black-mirror-season-3",
+        "artwork": "./art/seasons/8a1176095151e52aac2c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/81/203850.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/55748/black-mirror-season-4",
+        "artwork": "./art/seasons/434ca06d9efb8760099c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/147/369711.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 3,
+        "source": "https://www.tvmaze.com/seasons/96483/black-mirror-season-5",
+        "artwork": "./art/seasons/63e414392eac48d100e9.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/200/501681.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 5,
+        "source": "https://www.tvmaze.com/seasons/149848/black-mirror-season-6"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/160367/black-mirror-season-7",
+        "artwork": "./art/seasons/09282099e076f0973a44.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/560/1400246.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2442560": {
+    "source": "https://www.tvmaze.com/shows/269/peaky-blinders/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/1087/peaky-blinders-season-1",
+        "artwork": "./art/seasons/908e2c04e72d8c24384d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60857.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/1088/peaky-blinders-season-2",
+        "artwork": "./art/seasons/3ccdb2e344000dced309.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60858.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/31802/peaky-blinders-season-3",
+        "artwork": "./art/seasons/a798d09d191c9cf53dbd.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983604.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/58464/peaky-blinders-season-4",
+        "artwork": "./art/seasons/e80a669f5bf5c5fb92ce.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/393/983605.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/58465/peaky-blinders-season-5",
+        "artwork": "./art/seasons/9b52a767e8defe345c79.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/414/1037085.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/130070/peaky-blinders-season-6",
+        "artwork": "./art/seasons/2f273ff61feea3386901.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/414/1037086.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0434706": {
+    "source": "https://www.tvmaze.com/shows/8244/monster/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 74,
+        "source": "https://www.tvmaze.com/seasons/24170/monster-season-1"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt10986410": {
+    "source": "https://www.tvmaze.com/shows/44458/ted-lasso/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/101583/ted-lasso-season-1",
+        "artwork": "./art/seasons/2056da5ebae3dbb3eedc.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/345/862940.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/112939/ted-lasso-season-2",
+        "artwork": "./art/seasons/982c5ee841437cdb5de9.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/389/973653.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/116253/ted-lasso-season-3",
+        "artwork": "./art/seasons/792496bfe8def0c21780.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/447/1118134.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/174064/ted-lasso-season-4",
+        "artwork": "./art/seasons/0792171bbfdd5aa209a9.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/635/1588608.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt5753856": {
+    "source": "https://www.tvmaze.com/shows/17861/dark/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/46649/dark-season-1",
+        "artwork": "./art/seasons/9cc81388a802ba8c59d0.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/148/370433.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/84187/dark-season-2",
+        "artwork": "./art/seasons/8bf7cbf8d0d2f13290cf.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/980866.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/97710/dark-season-3",
+        "artwork": "./art/seasons/32a660bfa15c85047063.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/980865.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt5687612": {
+    "source": "https://www.tvmaze.com/shows/16149/fleabag/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/42742/fleabag-season-1",
+        "artwork": "./art/seasons/f1f6c72a279cbd5fff22.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/213/532892.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/73899/fleabag-season-2",
+        "artwork": "./art/seasons/0108eebca45ad9bb617e.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/213/532893.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0804503": {
+    "source": "https://www.tvmaze.com/shows/385/mad-men/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/1570/mad-men-season-1",
+        "artwork": "./art/seasons/50613ae59b304d3434a7.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/218/546342.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/1571/mad-men-season-2",
+        "artwork": "./art/seasons/87f2a3cc6d328ba22eac.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/218/546343.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/1572/mad-men-season-3",
+        "artwork": "./art/seasons/e5cbb4344f21710aacf6.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/218/546344.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/1573/mad-men-season-4",
+        "artwork": "./art/seasons/d08c19b5db0a97a69897.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/218/546345.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/1574/mad-men-season-5",
+        "artwork": "./art/seasons/5211142bcdda373c1154.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/218/546348.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/1575/mad-men-season-6",
+        "artwork": "./art/seasons/535e797e3c5d7d0e72c0.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/218/546351.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 14,
+        "source": "https://www.tvmaze.com/seasons/1576/mad-men-season-7",
+        "artwork": "./art/seasons/98118f67d6dd4bdf8dcf.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/218/546354.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt6025022": {
+    "source": "https://www.tvmaze.com/shows/505/justice-league-unlimited/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/1988/justice-league-unlimited-season-1",
+        "artwork": "./art/seasons/398ca17a4c5f1d79842e.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/158/397037.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/1989/justice-league-unlimited-season-2"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/1990/justice-league-unlimited-season-3",
+        "artwork": "./art/seasons/b79a132f27fdb31aa91e.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/331/827841.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt11280740": {
+    "source": "https://www.tvmaze.com/shows/44933/severance/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 9,
+        "source": "https://www.tvmaze.com/seasons/102615/severance-season-1",
+        "artwork": "./art/seasons/0647307b5c4f860707b5.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/545/1362561.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/137329/severance-season-2",
+        "artwork": "./art/seasons/1b2c43789f433ab1679b.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/552/1380557.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt14392248": {
+    "source": "https://www.tvmaze.com/shows/55489/aspirants/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 5,
+        "source": "https://www.tvmaze.com/seasons/124378/aspirants-season-1",
+        "artwork": "./art/seasons/f0e00241077a3cf6a99e.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/632/1582221.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 5,
+        "source": "https://www.tvmaze.com/seasons/163433/aspirants-season-2",
+        "artwork": "./art/seasons/241ebba142147b6fa775.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/632/1582222.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 5,
+        "source": "https://www.tvmaze.com/seasons/199262/aspirants-season-3",
+        "artwork": "./art/seasons/f0382bad1a439dbbe655.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/632/1582223.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0773262": {
+    "source": "https://www.tvmaze.com/shows/161/dexter/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/719/dexter-season-1",
+        "artwork": "./art/seasons/e320a89ea8855ca0a18a.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/231/578587.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/720/dexter-season-2",
+        "artwork": "./art/seasons/e019d0aa412403716136.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/231/578590.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/721/dexter-season-3",
+        "artwork": "./art/seasons/06ffa6b89623ea7a659b.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/231/578594.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/722/dexter-season-4",
+        "artwork": "./art/seasons/a87725727cf7953f5d5e.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/231/578597.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/723/dexter-season-5",
+        "artwork": "./art/seasons/c4e20da6fda946118a6e.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/231/578598.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/724/dexter-season-6",
+        "artwork": "./art/seasons/7905c5a9a706f76222db.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/231/578600.jpg"
+      },
+      {
+        "number": 7,
+        "label": "Season 7",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/725/dexter-season-7",
+        "artwork": "./art/seasons/4493f75b6a281e1730b1.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/231/578604.jpg"
+      },
+      {
+        "number": 8,
+        "label": "Season 8",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/726/dexter-season-8",
+        "artwork": "./art/seasons/9efd6b51f4dec2c40e1b.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/231/578606.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt4786824": {
+    "source": "https://www.tvmaze.com/shows/3594/the-crown/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/11220/the-crown-season-1",
+        "artwork": "./art/seasons/4f24a2cbf72ad6c3baca.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/480/1201101.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/62939/the-crown-season-2",
+        "artwork": "./art/seasons/86d74fc9433e14da603c.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/480/1201100.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/98586/the-crown-season-3",
+        "artwork": "./art/seasons/50844f34c299636feeda.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/285/714612.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/105862/the-crown-season-4",
+        "artwork": "./art/seasons/3ab845af416a26534103.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/285/714613.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/105863/the-crown-season-5",
+        "artwork": "./art/seasons/ed92057f9cbd1c88f0ca.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/480/1201099.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/112103/the-crown-season-6",
+        "artwork": "./art/seasons/942e50261e7805133ae9.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/567/1419287.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt1518542": {
+    "source": "https://www.tvmaze.com/shows/29206/sarabhai-vs-sarabhai/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 70,
+        "source": "https://www.tvmaze.com/seasons/69995/sarabhai-vs-sarabhai-season-1"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/69996/sarabhai-vs-sarabhai-season-2"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0096657": {
+    "source": "https://www.tvmaze.com/shows/1719/mr-bean/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 14,
+        "source": "https://www.tvmaze.com/seasons/6524/mr-bean-season-1"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt1856010": {
+    "source": "https://www.tvmaze.com/shows/175/house-of-cards/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/779/house-of-cards-season-1",
+        "artwork": "./art/seasons/e1ede8c90a82e09d0649.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60760.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/780/house-of-cards-season-2",
+        "artwork": "./art/seasons/5d1ba399912b9ee0f1bb.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60762.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/2611/house-of-cards-season-3",
+        "artwork": "./art/seasons/578154abd402e12eccef.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/24/60764.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/23100/house-of-cards-season-4",
+        "artwork": "./art/seasons/60d27fc857d372326efc.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/47/118587.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/34108/house-of-cards-season-5",
+        "artwork": "./art/seasons/9663a80fcfa9784cb4c8.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/114/286459.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/78756/house-of-cards-season-6",
+        "artwork": "./art/seasons/ef00c7e30599e23ec400.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/218/546131.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0088484": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt0088484.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt4574334": {
+    "source": "https://www.tvmaze.com/shows/2993/stranger-things/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/9601/stranger-things-season-1",
+        "artwork": "./art/seasons/2aa87bd01918c792f9ea.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/67/168945.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 9,
+        "source": "https://www.tvmaze.com/seasons/52465/stranger-things-season-2",
+        "artwork": "./art/seasons/8dbd28815f55a93db8f5.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/980860.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/73742/stranger-things-season-3",
+        "artwork": "./art/seasons/c50fa5b94a8d06bea6db.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/980862.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 9,
+        "source": "https://www.tvmaze.com/seasons/100928/stranger-things-season-4",
+        "artwork": "./art/seasons/e53aefc24284412bf34d.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/398/996916.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/137136/stranger-things-season-5",
+        "artwork": "./art/seasons/240d76bbeb6353730e76.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/597/1493614.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0275137": {
+    "source": "https://www.tvmaze.com/shows/22040/justice-league/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 26,
+        "source": "https://www.tvmaze.com/seasons/55218/justice-league-season-1",
+        "artwork": "./art/seasons/f780f29de9654d25ade1.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/330/827019.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 26,
+        "source": "https://www.tvmaze.com/seasons/55221/justice-league-season-2",
+        "artwork": "./art/seasons/17e638913dbc0590fbec.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/158/397040.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0280249": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt0280249.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 28
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 25
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 48
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 21
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 31
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0487831": {
+    "source": "https://www.tvmaze.com/shows/539/the-it-crowd/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/2177/the-it-crowd-season-1",
+        "artwork": "./art/seasons/bd0c5ac1700fe918a407.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/422/1056717.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/2178/the-it-crowd-season-2",
+        "artwork": "./art/seasons/7a6da2d97a82409a416e.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/422/1056718.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/2179/the-it-crowd-season-3",
+        "artwork": "./art/seasons/97e7a062ab81792da7d7.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/422/1056719.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/2180/the-it-crowd-season-4",
+        "artwork": "./art/seasons/edc6a52f6e330299ed08.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/422/1056720.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt13868972": {
+    "source": "https://www.tvmaze.com/shows/60326/rocket-boys/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/135020/rocket-boys-season-1"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/179578/rocket-boys-season-2"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt4158110": {
+    "source": "https://www.tvmaze.com/shows/1871/mr-robot/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/6899/mr-robot-season-1",
+        "artwork": "./art/seasons/7f6ad025cd4a67ec24ad.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/396/992311.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 12,
+        "source": "https://www.tvmaze.com/seasons/42629/mr-robot-season-2",
+        "artwork": "./art/seasons/d03077d76d99b4af529a.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/396/992310.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/62940/mr-robot-season-3",
+        "artwork": "./art/seasons/0965be23da478e31a3fc.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/165/414427.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 13,
+        "source": "https://www.tvmaze.com/seasons/88400/mr-robot-season-4",
+        "artwork": "./art/seasons/9dff29350deef497ba1a.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/396/992309.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt9544034": {
+    "source": "https://www.tvmaze.com/shows/43728/the-family-man/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/100059/the-family-man-season-1",
+        "artwork": "./art/seasons/3da37df152f6807a31d4.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/325/813167.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 9,
+        "source": "https://www.tvmaze.com/seasons/124501/the-family-man-season-2",
+        "artwork": "./art/seasons/ea2998a3ceb2af78d12f.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/325/813166.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 7,
+        "source": "https://www.tvmaze.com/seasons/124715/the-family-man-season-3",
+        "artwork": "./art/seasons/92f6a54e54c49ff985c7.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/599/1498782.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt36988358": {
+    "source": "https://v3-cinemeta.strem.io/meta/series/tt36988358.json",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "artwork": "./art/seasons/e0dd75025da2decc4413.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/xPXDVhVKt0XM34ihoUVMHtLYTw8.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/284445/season/1?language=en-US"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0112159": {
+    "source": "https://www.tvmaze.com/shows/1925/neon-genesis-evangelion/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 26,
+        "source": "https://www.tvmaze.com/seasons/7024/neon-genesis-evangelion-season-1",
+        "artwork": "./art/seasons/707f32c06cff5d0c2b8f.webp",
+        "artworkSource": "https://media.themoviedb.org/t/p/w500/574vWDIZ1U6gOYoRcOHbIM7c9UT.jpg",
+        "artworkPage": "https://www.themoviedb.org/tv/890/season/1?language=en-US"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt0290978": {
+    "source": "https://www.tvmaze.com/shows/1292/the-office/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/5176/the-office-season-1"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 6,
+        "source": "https://www.tvmaze.com/seasons/5177/the-office-season-2"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2575988": {
+    "source": "https://www.tvmaze.com/shows/143/silicon-valley/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/661/silicon-valley-season-1",
+        "artwork": "./art/seasons/7c7644108640b690b3c4.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/49/123627.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/1953/silicon-valley-season-2",
+        "artwork": "./art/seasons/1ca43673e0309383534b.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/49/123628.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/31752/silicon-valley-season-3",
+        "artwork": "./art/seasons/a2e6eb1df6d851bae0ac.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/49/124839.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 10,
+        "source": "https://www.tvmaze.com/seasons/61681/silicon-valley-season-4",
+        "artwork": "./art/seasons/e4c674ec97b892877bfb.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/217/544119.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 8,
+        "source": "https://www.tvmaze.com/seasons/80078/silicon-valley-season-5",
+        "artwork": "./art/seasons/71be2cfeb8f45b677fc7.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/217/544114.jpg"
+      },
+      {
+        "number": 6,
+        "label": "Season 6",
+        "episodes": 7,
+        "source": "https://www.tvmaze.com/seasons/83685/silicon-valley-season-6",
+        "artwork": "./art/seasons/aa8d70899573bd04ab51.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/392/980996.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  },
+  "tt2359704": {
+    "source": "https://www.tvmaze.com/shows/8287/jojos-bizarre-adventure/seasons",
+    "seasons": [
+      {
+        "number": 1,
+        "label": "Season 1",
+        "episodes": 26,
+        "source": "https://www.tvmaze.com/seasons/24234/jojos-bizarre-adventure-season-1",
+        "artwork": "./art/seasons/9e58ef3d9d29ed6fc92a.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/381/952875.jpg"
+      },
+      {
+        "number": 2,
+        "label": "Season 2",
+        "episodes": 48,
+        "source": "https://www.tvmaze.com/seasons/24235/jojos-bizarre-adventure-season-2",
+        "artwork": "./art/seasons/1f5c01ac72486bcafb26.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/381/952876.jpg"
+      },
+      {
+        "number": 3,
+        "label": "Season 3",
+        "episodes": 39,
+        "source": "https://www.tvmaze.com/seasons/39147/jojos-bizarre-adventure-season-3",
+        "artwork": "./art/seasons/46991c41a69f8dd45430.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/381/952877.jpg"
+      },
+      {
+        "number": 4,
+        "label": "Season 4",
+        "episodes": 39,
+        "source": "https://www.tvmaze.com/seasons/89446/jojos-bizarre-adventure-season-4",
+        "artwork": "./art/seasons/e29a0f29e13c94b80758.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/381/952878.jpg"
+      },
+      {
+        "number": 5,
+        "label": "Season 5",
+        "episodes": 38,
+        "source": "https://www.tvmaze.com/seasons/127127/jojos-bizarre-adventure-season-5",
+        "artwork": "./art/seasons/783fcb2a583411597577.webp",
+        "artworkSource": "https://static.tvmaze.com/uploads/images/original_untouched/381/952879.jpg"
+      }
+    ],
+    "asOf": "2026-11-24",
+    "episodeBasis": "Aired numbered episodes"
+  }
+}

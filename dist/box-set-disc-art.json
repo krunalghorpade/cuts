@@ -1,0 +1,874 @@
+{
+  "tt0112159": {
+    "1": {
+      "discCount": 5,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0112159-s1-d1.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/ngebrboxscans/Disc%201.jpg",
+          "number": 1,
+          "source": "https://archive.org/details/ngebrboxscans"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0112159-s1-d2.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/ngebrboxscans/Disc%202.jpg",
+          "number": 2,
+          "source": "https://archive.org/details/ngebrboxscans"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0112159-s1-d3.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/ngebrboxscans/Disc%203.jpg",
+          "number": 3,
+          "source": "https://archive.org/details/ngebrboxscans"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0112159-s1-d4.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/ngebrboxscans/Disc%204.jpg",
+          "number": 4,
+          "source": "https://archive.org/details/ngebrboxscans"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0112159-s1-d5.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/ngebrboxscans/Disc%205.jpg",
+          "number": 5,
+          "source": "https://archive.org/details/ngebrboxscans"
+        }
+      ],
+      "edition": "Japanese Standard Edition · five TV-series discs (episodes 1–26)",
+      "format": "bluray",
+      "source": "https://www.evangelion.jp/ng.html"
+    }
+  },
+  "tt0386676": {
+    "1": {
+      "discCount": 1,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0386676-s1-d1.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/t/The_Office_Season_One_Label.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=t&f=The_Office_Season_One_Label.jpg"
+        }
+      ],
+      "edition": "Universal Region 1 DVD · episodes 1–6",
+      "format": "dvd",
+      "source": "https://catalog.ncwlibraries.org/Record/113387"
+    },
+    "2": {
+      "discCount": 4,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0386676-s2-d1.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/t/The_Office_S2_D1_edited.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=t&f=The_Office_S2_D1_edited.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0386676-s2-d2.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/t/The_Office_S2_D2_edited.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=t&f=The_Office_S2_D2_edited.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0386676-s2-d3.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/t/The_Office_S2_D3_edited.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=t&f=The_Office_S2_D3_edited.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0386676-s2-d4.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/t/The_Office_S2_D4_edited.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=t&f=The_Office_S2_D4_edited.jpg"
+        }
+      ],
+      "edition": "Universal US DVD · season two",
+      "format": "dvd",
+      "source": "https://thediscdb.com/series/the-office-2005/releases/season-two-dvd"
+    },
+    "3": {
+      "discCount": 4,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0386676-s3-d1.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/t/The_Office_S3_D1_edited.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=t&f=The_Office_S3_D1_edited.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0386676-s3-d2.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/t/The_Office_S3_D2_edited.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=t&f=The_Office_S3_D2_edited.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0386676-s3-d3.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/t/The_Office_S3_D3_edited.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=t&f=The_Office_S3_D3_edited.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0386676-s3-d4.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/t/The_Office_S3_D4_edited.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=t&f=The_Office_S3_D4_edited.jpg"
+        }
+      ],
+      "edition": "Universal US DVD · season three",
+      "format": "dvd",
+      "source": "https://fullsail.bywatersolutions.com/bib/12284"
+    }
+  },
+  "tt0773262": {
+    "6": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0773262-s6-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Dexter-S6D1.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Dexter-S6D1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0773262-s6-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Dexter-S6D2.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Dexter-S6D2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0773262-s6-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Dexter-S6D3.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Dexter-S6D3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0773262-s6-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Dexter-S6D4.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Dexter-S6D4.jpg"
+        }
+      ],
+      "format": "dvd"
+    },
+    "8": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0773262-s8-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Dexter-S8D1.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Dexter-S8D1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0773262-s8-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Dexter-S8D3.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Dexter-S8D3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0773262-s8-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Dexter-S8D4.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Dexter-S8D4.jpg"
+        }
+      ],
+      "format": "dvd"
+    }
+  },
+  "tt0877057": {
+    "1": {
+      "discCount": 13,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d1.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2001/death_note_01L.jpg",
+          "number": 1,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d2.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2002/death_note_02L.jpg",
+          "number": 2,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d3.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2003/death_note_03L.jpg",
+          "number": 3,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d4.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2004/death_note_04L.jpg",
+          "number": 4,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d5.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2005/death_note_05L.jpg",
+          "number": 5,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d6.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2006/death_note_06L.jpg",
+          "number": 6,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d7.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2007/death_note_07L.jpg",
+          "number": 7,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d8.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2008/death_note_08L.jpg",
+          "number": 8,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d9.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2009/death_note_09L.jpg",
+          "number": 9,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d10.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2010/death_note_10L.jpg",
+          "number": 10,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d11.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2011/death_note_11L.JPG",
+          "number": 11,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d12.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2012/death_note_12L.JPG",
+          "number": 12,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0877057-s1-d13.webp",
+          "credit": "Japanese release disc scan · Internet Archive",
+          "imageSource": "https://archive.org/download/dvdiso-death-note/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20%28TV%2BSP%2BScans%29/%5BDVDISO%5D%20DEATH%20NOTE%20-%E3%83%87%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88-%20Complete%20set%20Cover/DEATH%20NOTE%2013/death_note_13L.JPG",
+          "number": 13,
+          "source": "https://archive.org/details/dvdiso-death-note"
+        }
+      ],
+      "edition": "Japanese DVD volumes 1–13 · episodes 1–37",
+      "format": "dvd",
+      "source": "https://www.vap.co.jp/deathnote/anime.html"
+    }
+  },
+  "tt0944947": {
+    "1": {
+      "discCount": 5,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s1-d1.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-Of-Thrones-Season-1-2011-R1.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-Of-Thrones-Season-1-2011-R1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s1-d2.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-Of-Thrones-Season-1-2011-R1_1.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-Of-Thrones-Season-1-2011-R1_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s1-d3.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-Of-Thrones-Season-1-2011-R1_2.jpg",
+          "number": 3,
+          "rotation": 34,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-Of-Thrones-Season-1-2011-R1_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s1-d4.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-Of-Thrones-Season-1-2011-R1_3.jpg",
+          "number": 4,
+          "rotation": 40,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-Of-Thrones-Season-1-2011-R1_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s1-d5.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-Of-Thrones-Season-1-2011-R1_4.jpg",
+          "number": 5,
+          "rotation": -18,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-Of-Thrones-Season-1-2011-R1_4.jpg"
+        }
+      ],
+      "edition": "Region 1 DVD · episodes 1–10",
+      "format": "dvd"
+    },
+    "2": {
+      "discCount": 5,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s2-d1.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/blu-ray/g/Game-Of-Thrones-Season-2-R1-Blu-Ray.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=blu-ray&l=g&f=Game-Of-Thrones-Season-2-R1-Blu-Ray.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s2-d2.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/blu-ray/g/Game-Of-Thrones-Season-2-R1-Blu-Ray_1.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=blu-ray&l=g&f=Game-Of-Thrones-Season-2-R1-Blu-Ray_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s2-d3.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/blu-ray/g/Game-Of-Thrones-Season-2-R1-Blu-Ray_2.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=blu-ray&l=g&f=Game-Of-Thrones-Season-2-R1-Blu-Ray_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s2-d4.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/blu-ray/g/Game-Of-Thrones-Season-2-R1-Blu-Ray_3.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=blu-ray&l=g&f=Game-Of-Thrones-Season-2-R1-Blu-Ray_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s2-d5.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/blu-ray/g/Game-Of-Thrones-Season-2-R1-Blu-Ray_4.jpg",
+          "number": 5,
+          "source": "https://www.covercentury.com/index.php?p=blu-ray&l=g&f=Game-Of-Thrones-Season-2-R1-Blu-Ray_4.jpg"
+        }
+      ],
+      "edition": "US Blu-ray · episodes 1–10",
+      "format": "bluray"
+    },
+    "3": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s3-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-3.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s3-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-3_2.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-3_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s3-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-3_3.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-3_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s3-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-3_4.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-3_4.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s3-d5.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-3_1.jpg",
+          "number": 5,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-3_1.jpg"
+        }
+      ],
+      "format": "dvd"
+    },
+    "4": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s4-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-4_4.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-4_4.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s4-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-4_3.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-4_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s4-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-4_2.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-4_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s4-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-4_1.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-4_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s4-d5.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-4.jpg",
+          "number": 5,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-4.jpg"
+        }
+      ],
+      "format": "dvd"
+    },
+    "5": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s5-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-5_4.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-5_4.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s5-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-5_3.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-5_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s5-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-5_2.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-5_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s5-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-5_1.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-5_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s5-d5.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-5.jpg",
+          "number": 5,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-5.jpg"
+        }
+      ],
+      "format": "dvd"
+    },
+    "6": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s6-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-6_4.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-6_4.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s6-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-6_3.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-6_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s6-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-6_1.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-6_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s6-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-6_2.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-6_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt0944947-s6-d5.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/g/Game-of-Thrones-Staffel-6.jpg",
+          "number": 5,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=g&f=Game-of-Thrones-Staffel-6.jpg"
+        }
+      ],
+      "format": "dvd"
+    }
+  },
+  "tt1475582": {
+    "1": {
+      "discCount": 2,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt1475582-s1-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/s/Sherlock-Season-1-2010-R1-Custom-Cover-labels_1.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=s&f=Sherlock-Season-1-2010-R1-Custom-Cover-labels_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1475582-s1-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/s/Sherlock-Season-1-2010-R1-Custom-Cover-labels.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=s&f=Sherlock-Season-1-2010-R1-Custom-Cover-labels.jpg"
+        }
+      ],
+      "edition": "DVD · three season episodes",
+      "format": "dvd"
+    },
+    "2": {
+      "discCount": 2,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt1475582-s2-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/s/Sherlock-S2D1.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=s&f=Sherlock-S2D1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1475582-s2-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/s/Sherlock-S2D2.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=s&f=Sherlock-S2D2.jpg"
+        }
+      ],
+      "edition": "DVD · three season episodes",
+      "format": "dvd"
+    },
+    "3": {
+      "discCount": 2,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt1475582-s3-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/s/Sherlock-S3D1.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=s&f=Sherlock-S3D1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1475582-s3-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/s/Sherlock-S3D2.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=s&f=Sherlock-S3D2.jpg"
+        }
+      ],
+      "edition": "DVD · three season episodes",
+      "format": "dvd"
+    },
+    "4": {
+      "discCount": 2,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt1475582-s4-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/s/Sherlock-Season-4-2017-Covers-Labels_1.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=s&f=Sherlock-Season-4-2017-Covers-Labels_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1475582-s4-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/s/Sherlock-Season-4-2017-Covers-Labels.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=s&f=Sherlock-Season-4-2017-Covers-Labels.jpg"
+        }
+      ],
+      "edition": "DVD · three season episodes",
+      "format": "dvd"
+    }
+  },
+  "tt1856010": {
+    "3": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s3-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-Of-Cards-S3D1a.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-Of-Cards-S3D1a.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s3-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-Of-Cards-S3D2a.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-Of-Cards-S3D2a.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s3-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-Of-Cards-S3D3a.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-Of-Cards-S3D3a.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s3-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-Of-Cards-S3D4a.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-Of-Cards-S3D4a.jpg"
+        }
+      ],
+      "format": "dvd"
+    },
+    "4": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s4-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-of-Cards-Season-4-2016-Covers-Labels.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-of-Cards-Season-4-2016-Covers-Labels.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s4-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-of-Cards-Season-4-2016-Covers-Labels_1.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-of-Cards-Season-4-2016-Covers-Labels_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s4-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-of-Cards-Season-4-2016-Covers-Labels_2.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-of-Cards-Season-4-2016-Covers-Labels_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s4-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-of-Cards-Season-4-2016-Covers-Labels_3.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-of-Cards-Season-4-2016-Covers-Labels_3.jpg"
+        }
+      ],
+      "format": "dvd"
+    },
+    "5": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s5-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-of-Cards-Season-5-2017-Covers-Labels_3.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-of-Cards-Season-5-2017-Covers-Labels_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s5-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-of-Cards-Season-5-2017-Covers-Labels_1.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-of-Cards-Season-5-2017-Covers-Labels_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s5-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-of-Cards-Season-5-2017-Covers-Labels_2.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-of-Cards-Season-5-2017-Covers-Labels_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt1856010-s5-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/h/House-of-Cards-Season-5-2017-Covers-Labels.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=h&f=House-of-Cards-Season-5-2017-Covers-Labels.jpg"
+        }
+      ],
+      "format": "dvd"
+    }
+  },
+  "tt3322312": {
+    "1": {
+      "discCount": 4,
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt3322312-s1-d1.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/blu-ray/m/Marvel-s-Daredevil-The-Complete-First-Season-Blu-Ray-Cover-Labels_3.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=blu-ray&l=m&f=Marvel-s-Daredevil-The-Complete-First-Season-Blu-Ray-Cover-Labels_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3322312-s1-d2.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/blu-ray/m/Marvel-s-Daredevil-The-Complete-First-Season-Blu-Ray-Cover-Labels_1.jpg",
+          "number": 2,
+          "rotation": -90,
+          "source": "https://www.covercentury.com/index.php?p=blu-ray&l=m&f=Marvel-s-Daredevil-The-Complete-First-Season-Blu-Ray-Cover-Labels_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3322312-s1-d3.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/blu-ray/m/Marvel-s-Daredevil-The-Complete-First-Season-Blu-Ray-Cover-Labels_2.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=blu-ray&l=m&f=Marvel-s-Daredevil-The-Complete-First-Season-Blu-Ray-Cover-Labels_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3322312-s1-d4.webp",
+          "credit": "Disc scan · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/blu-ray/m/Marvel-s-Daredevil-The-Complete-First-Season-Blu-Ray-Cover-Labels.jpg",
+          "number": 4,
+          "rotation": -90,
+          "source": "https://www.covercentury.com/index.php?p=blu-ray&l=m&f=Marvel-s-Daredevil-The-Complete-First-Season-Blu-Ray-Cover-Labels.jpg"
+        }
+      ],
+      "edition": "US Blu-ray · episodes 1–13",
+      "format": "bluray"
+    },
+    "2": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt3322312-s2-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Daredevil-Staffel-2.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Daredevil-Staffel-2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3322312-s2-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Daredevil-Staffel-2_1.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Daredevil-Staffel-2_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3322312-s2-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Daredevil-Staffel-2_2.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Daredevil-Staffel-2_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3322312-s2-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/d/Daredevil-Staffel-2_3.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=d&f=Daredevil-Staffel-2_3.jpg"
+        }
+      ],
+      "format": "dvd"
+    }
+  },
+  "tt3475734": {
+    "1": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt3475734-s1-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/a/Agent-Carter-Staffel-1_2.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=a&f=Agent-Carter-Staffel-1_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3475734-s1-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/a/Agent-Carter-Staffel-1_3.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=a&f=Agent-Carter-Staffel-1_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3475734-s1-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/a/Agent-Carter-Staffel-1.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=a&f=Agent-Carter-Staffel-1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3475734-s1-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/a/Agent-Carter-Staffel-1_1.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=a&f=Agent-Carter-Staffel-1_1.jpg"
+        }
+      ],
+      "format": "dvd"
+    },
+    "2": {
+      "discs": [
+        {
+          "artwork": "./art/box-set-discs/tt3475734-s2-d1.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/a/Agent-Carter-Staffel-2_3.jpg",
+          "number": 1,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=a&f=Agent-Carter-Staffel-2_3.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3475734-s2-d2.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/a/Agent-Carter-Staffel-2_2.jpg",
+          "number": 2,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=a&f=Agent-Carter-Staffel-2_2.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3475734-s2-d3.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/a/Agent-Carter-Staffel-2_1.jpg",
+          "number": 3,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=a&f=Agent-Carter-Staffel-2_1.jpg"
+        },
+        {
+          "artwork": "./art/box-set-discs/tt3475734-s2-d4.webp",
+          "credit": "Community disc artwork · Cover Century",
+          "imageSource": "https://www.covercentury.com/covers/dvd/a/Agent-Carter-Staffel-2.jpg",
+          "number": 4,
+          "source": "https://www.covercentury.com/index.php?p=dvd&l=a&f=Agent-Carter-Staffel-2.jpg"
+        }
+      ],
+      "format": "dvd"
+    }
+  }
+}
