@@ -325,7 +325,7 @@ function showDetailItem(view,direction=0){
   showRelated(item);
   const category=item.exhibit?.section||categoryById[item.category].label;
   $('detailCategory').textContent=category;
-  $('detailCreator').textContent=[item.album||item.pages?item.creator:category,item.year].filter(Boolean).join(' · ');
+  $('detailCreator').textContent=[item.album||['books','manga'].includes(item.category)?item.creator:category,item.year].filter(Boolean).join(' · ');
   const credits=item.credits;
   const imdbTitle=/^tt\d+$/.test(item.id);
   const rating=credits?.rating||item.rating;
