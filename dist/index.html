@@ -86,7 +86,7 @@
     <header class="inspect-head">
       <span id="inspectLocation"></span>
       <button id="backToStack" type="button" hidden>‹ Back to stack</button>
-      <button id="closeDetail" class="glass-icon" type="button" aria-label="Close popup"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <button id="closeDetail" class="glass-icon" type="button" aria-label="Close item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
     </header>
     <div class="item-layout">
       <div class="case-preview" role="region" aria-label="3D item preview">
@@ -97,37 +97,44 @@
         </div>
       </div>
       <div class="item-description">
-        <p id="detailCategory" class="detail-category"></p><h2 id="detailTitle" aria-live="polite"></h2><p id="detailCreator" class="detail-creator"></p>
-        <div class="stack-actions">
-          <div class="carousel-nav">
-            <button id="itemPrev" class="glass-icon" type="button" aria-label="Previous item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
-            <span id="itemPosition" aria-live="polite"></span>
-            <button id="itemNext" class="glass-icon" type="button" aria-label="Next item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+        <button type="button" id="drawerGrip" aria-controls="itemFacts" aria-expanded="false">
+          <span class="grip-mark" aria-hidden="true"></span><span id="drawerLabel">Details</span>
+        </button>
+        <div class="drawer-body">
+          <p id="detailCategory" class="detail-category"></p><h2 id="detailTitle" aria-live="polite"></h2><p id="detailCreator" class="detail-creator"></p>
+          <div class="stack-actions">
+            <div class="carousel-nav">
+              <button id="itemPrev" class="glass-icon" type="button" aria-label="Previous item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+              <span id="itemPosition" aria-live="polite"></span>
+              <button id="itemNext" class="glass-icon" type="button" aria-label="Next item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+            </div>
+            <button id="moreInfo" class="glass-primary" type="button">More info</button>
           </div>
-          <button id="moreInfo" class="glass-primary" type="button">More info</button>
-        </div>
-        <div id="itemInfo">
-          <div id="boxActions" hidden>
-            <label id="seasonPicker" hidden>Case <select id="seasonSelect"></select></label>
-            <div class="box-buttons"><button id="boxAdvance" type="button" class="glass-primary">Open box set</button><button id="boxBack" type="button" hidden></button></div>
-            <label id="caseTravel" hidden>Case position <input id="seasonSlider" type="range" min="0" max="100" step="1" value="0" aria-valuetext="In box"></label>
-            <label id="discSpreadPicker" hidden>Tray <select id="discSpread"></select></label>
-            <p id="boxNote" role="status"></p>
+          <div id="itemInfo">
+            <div id="boxActions" hidden>
+              <label id="seasonPicker" hidden>Case <select id="seasonSelect"></select></label>
+              <div class="box-buttons"><button id="boxAdvance" type="button" class="glass-primary">Open box set</button><button id="boxBack" type="button" hidden></button></div>
+              <label id="caseTravel" hidden>Case position <input id="seasonSlider" type="range" min="0" max="100" step="1" value="0" aria-valuetext="In box"></label>
+              <label id="discSpreadPicker" hidden>Tray <select id="discSpread"></select></label>
+              <p id="boxNote" role="status"></p>
+            </div>
+            <div id="caseActions" hidden>
+              <button id="toggleCase" class="glass-primary" type="button" aria-pressed="false">Open case</button>
+              <label id="recordTravel" hidden>Record position <input id="sleeveSlider" type="range" min="0" max="100" step="1" value="0" aria-valuetext="In sleeve"></label>
+              <label id="mediumPicker" hidden><span>Media</span><select id="mediumSelect"></select></label>
+              <p id="mediumNote" role="status"></p>
+            </div>
+            <div id="itemFacts">
+              <p id="itemDescription" class="catalog-description"></p>
+              <dl class="detail-meta"><dt>Release</dt><dd id="detailYear"></dd><dt>Format</dt><dd id="detailFormatValue"></dd><dt id="sizeLabel">Case size</dt><dd id="detailSize"></dd><dt>Source</dt><dd id="detailSource"></dd></dl>
+              <p id="detailNote" class="detail-note"></p><div id="audioExtra" class="audio-extra hidden"></div>
+              <a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
+              <a id="coverSource" class="source-link hidden" target="_blank" rel="noopener noreferrer">Artwork on LaunchBox</a>
+              <div id="relatedTitles" class="related-titles hidden"></div>
+              <div id="posterCredit" class="poster-credit hidden"></div>
+              <div class="detail-actions"><button id="visitShelf" class="primary-button" type="button">Go to shelf</button></div>
+            </div>
           </div>
-          <div id="caseActions" hidden>
-            <button id="toggleCase" class="glass-primary" type="button" aria-pressed="false">Open case</button>
-            <label id="recordTravel" hidden>Record position <input id="sleeveSlider" type="range" min="0" max="100" step="1" value="0" aria-valuetext="In sleeve"></label>
-            <label id="mediumPicker" hidden><span>Media</span><select id="mediumSelect"></select></label>
-            <p id="mediumNote" role="status"></p>
-          </div>
-    <p id="itemDescription" class="catalog-description"></p>
-    <dl class="detail-meta"><dt>Release</dt><dd id="detailYear"></dd><dt>Format</dt><dd id="detailFormatValue"></dd><dt id="sizeLabel">Case size</dt><dd id="detailSize"></dd><dt>Source</dt><dd id="detailSource"></dd></dl>
-    <p id="detailNote" class="detail-note"></p><div id="audioExtra" class="audio-extra hidden"></div>
-    <a id="sourceLink" class="source-link hidden" target="_blank" rel="noopener noreferrer">View source entry</a>
-    <a id="coverSource" class="source-link hidden" target="_blank" rel="noopener noreferrer">Artwork on LaunchBox</a>
-    <div id="relatedTitles" class="related-titles hidden"></div>
-    <div id="posterCredit" class="poster-credit hidden"></div>
-    <div class="detail-actions"><button id="visitShelf" class="primary-button" type="button">Go to shelf</button></div>
         </div>
       </div>
     </div>

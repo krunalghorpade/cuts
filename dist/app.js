@@ -8,6 +8,7 @@ import { buildInterior } from './interior.js';
 import {installPosters,installTelevisions} from './displays.js';
 import {installElevator} from './elevator.js';
 import { rooms, levels, levelOf, ceilingOf, rise, stair, stairStart, stairEnd, lift, entrance, inside, roomAt, groundAt } from './plan.js';
+import { createItemDrawer } from './item-drawer.js';
 import {createBoxSetControls} from './box-set-controls.js';
 import { createCasePreview } from './case-preview.js';
 import { stockRooms } from './racks.js';
@@ -19,6 +20,7 @@ const intro = $('intro');
 const hud = $('hud');
 const catalogPanel = $('catalogPanel');
 const detailPanel = $('detailPanel');
+const drawer = createItemDrawer(detailPanel, { openInfo: moreInfo, dismiss: () => closeDetail() });
 const prompt = $('inspectPrompt');
 const preview=createCasePreview($('casePreview'),{onStep:turnItem,onDetails:moreInfo,onTravel:showRecordTravel,onSeasonPick:i=>boxControls.pick(i),onBoxTravel:t=>boxControls.travel(t)});
 const boxControls=createBoxSetControls(preview);
@@ -136,7 +138,7 @@ function requestLook(){ if(!mobile && !uiOpen && document.pointerLockElement!==c
 function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');const room=roomAt(level,camera.position.x,camera.position.z)?.id;updateTVs(camera,room,true);musicPlayer.update(room==='music'||room==='library'); }
 function pause(){ if(!active||uiOpen||elevator.riding)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Continue exploring'; document.exitPointerLock?.(); }
 function showToast(message){const el=$('toast');el.textContent=message;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2400);}
-function openCatalog(){if(elevator.riding)return;preview.hide();boxControls.show(null);currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();$('searchInput').focus();}
+function openCatalog(){if(elevator.riding)return;preview.hide();boxControls.show(null);currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();(drawer.compact ? $('closeCatalog') : $('searchInput')).focus({preventScroll:true});}
 function closeCatalog(){catalogPanel.classList.add('hidden');uiOpen=false;if(active){hud.classList.remove('hidden');}else intro.classList.remove('hidden');}
 const audioCache=new Map();let currentDetailId=null,currentDetailItem=null;
 async function enrichAudio(item){
@@ -169,7 +171,7 @@ function openStack(shell){
   if(!stack)return;
   showPopup();browseStack=stack;
   detailItems=stack.browseItems;detailIndex=detailItems.indexOf(shell.userData.item);
-  showDetailItem('stack');$('moreInfo').focus({preventScroll:true});
+  showDetailItem('stack');(drawer.compact ? $('drawerGrip') : $('moreInfo')).focus({preventScroll:true});
 }
 function openDetail(item){
   if(!item)return;
@@ -182,7 +184,7 @@ function moreInfo(){
 }
 function backToStack(){
   if(!browseStack)return;
-  showDetailItem('stack');$('moreInfo').focus({preventScroll:true});
+  showDetailItem('stack');(drawer.compact ? $('drawerGrip') : $('moreInfo')).focus({preventScroll:true});
 }
 $('moreInfo').onclick=moreInfo;$('backToStack').onclick=backToStack;
 const catalogById=new Map(ITEMS.map(item=>[item.id,item]));
@@ -273,6 +275,7 @@ function showDetailItem(view,direction=0){
   const item=detailItems[detailIndex],browsing=view==='stack';
   currentDetailId=item.id;currentDetailItem=item;caseOpen=false;mediumIndex=0;caseRequest++;
   detailPanel.dataset.view=view;
+  drawer.reset();
   const prev=browsing?detailItems[detailIndex-1]:null,next=browsing?detailItems[detailIndex+1]:null;
   $('itemPrev').disabled=!prev;$('itemNext').disabled=!next;
   $('itemPrev').title=prev?prev.title:'First item';$('itemNext').title=next?next.title:'Last item';
@@ -320,14 +323,16 @@ $('itemNext').onclick=()=>turnItem(1);
 function closeDetail(returnToCatalog=fromCatalog){
   preview.hide();boxControls.show(null);currentDetailId=null;currentDetailItem=null;
   detailPanel.classList.add('hidden');detailItems=[];detailIndex=-1;fromCatalog=false;browseStack=null;caseRequest++;
-  if(returnFocus?.isConnected)returnFocus.focus({preventScroll:true});returnFocus=null;
+  const trigger=returnFocus;returnFocus=null;
   if(returnToCatalog){
     uiOpen=true;catalogPanel.classList.remove('hidden');
-    $('catalogDetails').focus({preventScroll:true});
+    const target=drawer.compact ? catalogPanel.querySelector('.catalog-card[aria-pressed="true"]') : $('catalogDetails');
+    (target?.getClientRects().length ? target : $('closeCatalog')).focus({preventScroll:true});
     return;
   }
   uiOpen=false;
   if(active)hud.classList.remove('hidden');else intro.classList.remove('hidden');
+  if(trigger?.isConnected && trigger.getClientRects().length)trigger.focus({preventScroll:true});
 }
 function arrive(floor,x,z,direction,lookPitch=0){
   selectCase(null);hasPointer=false;
@@ -379,6 +384,7 @@ function renderCatalog(){
       card.setAttribute('aria-pressed','true');catalogSelection=item;
       $('chosenTitle').textContent=item.title;
       $('catalogSelection').classList.remove('hidden');
+      if(drawer.compact)openDetail(item);
     };
     grid.append(card);
   }
@@ -462,7 +468,7 @@ document.addEventListener('keydown',event=>{
   if(currentDetailItem){
     const browsing=detailPanel.dataset.view==='stack';
     if(event.key==='Tab'){
-      const controls=[...detailPanel.querySelectorAll('button:not(:disabled),a[href],select,canvas[tabindex]')].filter(el=>el.getClientRects().length);
+      const controls=[...detailPanel.querySelectorAll('button:not(:disabled),a[href],select,input:not(:disabled),canvas[tabindex]')].filter(el=>el.getClientRects().length);
       const first=controls[0],last=controls.at(-1);
       if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
       else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
