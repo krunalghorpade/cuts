@@ -1,0 +1,4 @@
+---
+deployment:
+  tasks:
+    - /bin/cp -R dist/. /home/kratexin/cuts.kratex.in/
