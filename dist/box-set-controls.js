@@ -1,3 +1,4 @@
+import {caseLatch} from './room-audio.js';
 import {discSpread,spreadName} from './box-set-layout.js';
 
 const byId=id=>document.getElementById(id);
@@ -50,8 +51,11 @@ export function createBoxSetControls(preview){
   }
   async function move(next,position=null){
     if(!item)return;
-    const ticket=++request;stage=next;paint();
-    try{await preview.setBoxStage(stage,index,page,position);}
+    const ticket=++request,wasOpen=stage===3;stage=next;paint();
+    try{
+      await preview.setBoxStage(stage,index,page,position);
+      if(ticket===request&&wasOpen!==(stage===3))caseLatch(stage===3,item);
+    }
     catch(err){
       if(ticket!==request)return;
       stage=0;page=0;paint();note.textContent='The box preview could not load. Try opening it again.';

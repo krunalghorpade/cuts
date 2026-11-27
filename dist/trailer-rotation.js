@@ -27,7 +27,7 @@ export function roomRotation(room,entries){
       }
       // Prefer direct playback, rotating away from the last clip for this title.
       const previous=entry.sources[lastSource.get(entry.id)];
-      const score=s=>s===previous?2:s.type==='youtube'?1:0;
+      const score=s=>(s.type==='youtube'?2:0)+(s===previous?1:0);
       return shuffled.sort((a,b)=>score(a)-score(b));
     },
     played(id,siblings=[],sourceIndex){

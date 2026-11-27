@@ -3,13 +3,16 @@ import {dvdCoverReference} from './dvd-cover-reference.js';
 import { CATEGORIES, ITEMS, categoryById, playlists, imdbList, bookList, trailerStreams, musicPreviews, posterContent, loadCollections } from './catalog.js';
 import {installMusicPlayers} from './music-players.js';
 import {installArcade} from './arcade.js';
-import {ps2ShelfView} from './retro-showcase.js';
+import {createRoomTour} from './room-tour.js';
+import {installHilltop,gardenArrival,gardenGround,isGarden} from './hilltop.js';
+import {solarAt,installClocks} from './room-time.js';
+import {caseLatch} from './room-audio.js';
 import {createWindowLighting} from './window-light.js';
 import { buildInterior } from './interior.js';
 import {trailerSources} from './trailer-channel.js';
 import {installPosters,installTelevisions} from './displays.js';
 import {installElevator} from './elevator.js';
-import { rooms, levels, levelOf, ceilingOf, rise, stair, stairStart, stairEnd, lift, entrance, inside, roomAt, groundAt } from './plan.js';
+import { rooms, levels, levelOf, ceilingOf, rise, stair, stairStart, stairEnd, lift, inside, roomAt, groundAt } from './plan.js';
 import { enableMenuDrawer } from './menu-drawers.js';
 import { seatAnchors } from './seat-anchors.js';
 import { createItemDrawer } from './item-drawer.js';
@@ -33,15 +36,11 @@ const mobile = matchMedia('(any-pointer: coarse)').matches;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('#63584a');
 scene.fog = new THREE.FogExp2('#63584a', 0.012);
-const camera = new THREE.PerspectiveCamera(73, innerWidth / innerHeight, 0.08, 80);
-const atPS2=location.hash==='#ps2';
-const entryRoom=rooms.find(room=>room.id===(atPS2?'retro':location.hash.slice(1)));
-const start=atPS2?[ps2ShelfView.x,ps2ShelfView.z,ps2ShelfView.yaw]:entryRoom?.spawn||entrance;
-const entryPitch=atPS2?ps2ShelfView.pitch:0;
-camera.position.set(start[0],((entryRoom?.floor||1)-1)*rise+1.62,start[1]);
-camera.rotation.order = 'YXZ';
-camera.rotation.y = start[2];
-camera.rotation.x = entryPitch;
+const camera = new THREE.PerspectiveCamera(73, innerWidth / innerHeight, 0.08, 420);
+const preferredRoom=location.hash==='#ps2'?'retro':location.hash.slice(1);
+camera.position.set(gardenArrival[0],1.62,gardenArrival[1]);
+camera.rotation.order='YXZ';
+camera.rotation.y=gardenArrival[2];
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
 renderer.setPixelRatio(Math.min(devicePixelRatio, Math.sqrt(900000/(innerWidth*innerHeight))));
 renderer.setSize(innerWidth, innerHeight);
@@ -73,12 +72,16 @@ function label(parent, text, x, y, z, w, h, opts = {}) {
 
 let layoutSeed=0, restoredVisit=null;
 try{
-  layoutSeed=Number(sessionStorage.getItem('myroom.shelfSeed'))>>>0;
+  // Keep the arrangement already visible to visitors who used the old shuffle.
+  const legacySeed=sessionStorage.getItem('myroom.shelfSeed');
+  layoutSeed=Number(legacySeed??localStorage.getItem('myroom.fixedShelfSeed'))>>>0;
+  if(legacySeed!==null)localStorage.setItem('myroom.fixedShelfSeed',String(layoutSeed));
   const pending=sessionStorage.getItem('myroom.refreshVisit');
   if(pending){restoredVisit=JSON.parse(pending);sessionStorage.removeItem('myroom.refreshVisit');}
 }catch{}
 const illuminate=createWindowLighting(renderer);
 const interior=buildInterior(scene,label,ITEMS,posterContent);
+const wallClocks=installClocks(interior);
 const elevator=installElevator(scene,interior.floors,box,label);
 const houseLights=$('cinemaLights');
 function syncHouseLights(on){
@@ -100,7 +103,7 @@ for(const seat of seatAnchors){
   target.name=seat.id;target.userData.seat=seat;target.visible=false;
   interior.floors[seat.level-1].add(target);seatTargets[seat.level-1].push(target);
 }
-const updatePosters=installPosters(interior,roomStock,displayTargets,posterContent);
+const updatePosters=installPosters(interior,roomStock,displayTargets,posterContent,restoredVisit?.posters);
 const televisions=installTelevisions(canvas,interior.screens,roomStock,trailerStreams,openDetail);
 for(const device of interior.devices){
   const targets=displayTargets[device.userData.level-1];targets.push(device);
@@ -114,9 +117,10 @@ for(const door of interior.doors)interactables[door.level-1].push(...door.faces)
 const musicPlayer=installMusicPlayers(roomStock.get('music')||[],musicPreviews,interior.devices,openDetail);
 const openArcade=installArcade(()=>{uiOpen=false;});
 illuminate(scene);
+const landscape=installHilltop(scene);
 interior.theatre.ready.then(()=>illuminate(interior.floors[0])).catch(()=>{});
 let seated=null,libraryScreenSelected=false;
-let ground=((entryRoom?.floor||1)-1)*rise,level=levelOf(ground);
+let ground=gardenGround(gardenArrival[0],gardenArrival[1])??0,level=1;
 let requestedFloor=0;
 const loadNotice=$('floorLoad'),loadText=loadNotice.querySelector('span'),retryFloor=loadNotice.querySelector('button');
 function requestFloor(next){
@@ -140,19 +144,24 @@ function refreshFloor(){
   interior.floors.forEach((group,index)=>group.visible=onStair||index===level-1);
   const {x,z}=camera.position;
   const location=inside(lift,x,z)?'Elevator':onStair?'Staircase':roomAt(level,x,z)?.name||'Entrance';
-  $('entryLocation').textContent='Level '+level+' · '+location;
+  $('entryLocation').textContent=level===1&&isGarden(x,z)?'Hilltop garden':'Level '+level+' · '+location;
 }
 refreshFloor();
-let active=false, uiOpen=false, yaw=start[2], pitch=entryPitch, focusedCase=null, selectedCase=null, toastTimer;
+let active=false, hasEntered=false, uiOpen=false, yaw=gardenArrival[2], pitch=0, focusedCase=null, selectedCase=null, toastTimer;
 let dragLook=false, dragPointer=null, dragLastX=0, dragLastY=0;
+const tour=createRoomTour(async floor=>{
+  await interior.roomModels.loadFloor(floor);
+  if(floor===1)await interior.theatre.ready;
+  illuminate(interior.floors[floor-1]);
+},$('tourVeil'),preferredRoom);
 const keys=new Set(); const raycaster=new THREE.Raycaster(); const hoverPoint=new THREE.Vector2();let hasPointer=false,suppressClick=false,pressX=0,pressY=0; const clock=new THREE.Clock();
 const joystick={x:0,y:0,pointer:null}; let lookStart=null,lookPointer=null,lookLastX=0,lookLastY=0;
 const clamp=(v,min,max)=>Math.max(min,Math.min(max,v));
 function requestLook(){ if(!mobile && !uiOpen && document.pointerLockElement!==canvas) { const request=canvas.requestPointerLock?.(); request?.catch?.(()=>showToast('Drag on the scene to look around')); } }
-function enter(){ active=true;uiOpen=false;intro.classList.add('hidden');hud.classList.remove('hidden');const room=roomAt(level,camera.position.x,camera.position.z)?.id;televisions.update(camera,room,true);musicPlayer.update(room==='music'||room==='library'&&!libraryScreenSelected); }
-function pause(){ if(!active||uiOpen||elevator.riding)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Keep digging'; document.exitPointerLock?.(); }
+function enter(){ hasEntered=true;tour.finish();active=true;uiOpen=false;refreshFloor();intro.classList.add('hidden');hud.classList.remove('hidden');const room=roomAt(level,camera.position.x,camera.position.z)?.id;televisions.update(camera,room,true);musicPlayer.update(room==='music'||room==='library'&&!libraryScreenSelected); }
+function pause(){ if(!active||uiOpen||elevator.riding)return; active=false;keys.clear();intro.classList.remove('hidden');hud.classList.add('hidden');$('enterBtn').textContent='Resume'; document.exitPointerLock?.(); }
 function showToast(message){const el=$('toast');el.textContent=message;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2400);}
-function openCatalog(){if(elevator.riding)return;preview.hide();boxControls.show(null);currentDetailId=null;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();(drawer.compact ? $('closeCatalog') : $('searchInput')).focus({preventScroll:true});}
+function openCatalog(){if(elevator.riding)return;preview.hide();boxControls.show(null);currentDetailId=null;currentDetailItem=null;detailItems=[];detailIndex=-1;browseStack=null;fromCatalog=false;returnFocus=null;caseRequest++;uiOpen=true;catalogPanel.classList.remove('hidden');detailPanel.classList.add('hidden');intro.classList.add('hidden');document.exitPointerLock?.();renderCatalog();(drawer.compact ? $('closeCatalog') : $('searchInput')).focus({preventScroll:true});}
 function closeCatalog(){catalogPanel.classList.add('hidden');uiOpen=false;if(active){hud.classList.remove('hidden');}else intro.classList.remove('hidden');}
 const audioCache=new Map();let currentDetailId=null,currentDetailItem=null;
 async function enrichAudio(item){
@@ -269,9 +278,9 @@ function updateCaseControls(item){
   }
 }
 async function viewCase(open,index=0,position=null){
-  const item=currentDetailItem,request=++caseRequest;
+  const item=currentDetailItem,request=++caseRequest,changed=caseOpen!==open;
   caseOpen=open;mediumIndex=index;updateCaseControls(item);
-  try{await preview.setCaseOpen(open,index,position);}
+  try{await preview.setCaseOpen(open,index,position);if(changed&&request===caseRequest)caseLatch(open,item);}
   catch(error){
     if(request!==caseRequest||currentDetailItem!==item)return;
     caseOpen=false;updateCaseControls(item);
@@ -611,6 +620,10 @@ document.addEventListener('keydown',event=>{
     return;
   }
   if(event.code==='KeyM'){openMap();return;}
+  if(!active&&!uiOpen&&event.key==='Enter'&&!event.repeat&&!intro.classList.contains('hidden') &&
+      (!event.target.closest?.('button,a,input,select,textarea,summary')||event.target===$('enterBtn'))){
+    event.preventDefault();enter();return;
+  }
   if(!active||uiOpen)return;
   keys.add(event.code);
   if(['Space','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.code))event.preventDefault();
@@ -627,7 +640,7 @@ joyEl.addEventListener('pointerdown',e=>{e.preventDefault();joystick.pointer=e.p
 function releaseJoy(e){if(e.pointerId!==joystick.pointer)return;joystick.pointer=null;joystick.x=joystick.y=0;stickEl.style.left='50%';stickEl.style.top='50%';}joyEl.addEventListener('pointerup',releaseJoy);joyEl.addEventListener('pointercancel',releaseJoy);
 const lookEl=$('lookPad');lookEl.addEventListener('pointerdown',e=>{e.preventDefault();lookPointer=e.pointerId;lookLastX=e.clientX;lookLastY=e.clientY;lookStart={x:e.clientX,y:e.clientY,moved:false};lookEl.setPointerCapture(e.pointerId);});lookEl.addEventListener('pointermove',e=>{if(e.pointerId!==lookPointer||uiOpen)return;if(lookStart&&Math.hypot(e.clientX-lookStart.x,e.clientY-lookStart.y)>12)lookStart.moved=true;yaw-=(e.clientX-lookLastX)*.005;pitch=clamp(pitch-(e.clientY-lookLastY)*.005,-1.25,1.25);lookLastX=e.clientX;lookLastY=e.clientY;});lookEl.addEventListener('pointerup',e=>{if(e.pointerId!==lookPointer)return;if(lookStart&&!lookStart.moved&&active&&!uiOpen){const id=pickStackAt(e.clientX,e.clientY);useTarget(id);}lookPointer=null;lookStart=null;});lookEl.addEventListener('pointercancel',e=>{if(e.pointerId===lookPointer)lookPointer=null;});
 function tryMove(x,z){
-  const h=groundAt(x,z,ground);
+  const h=groundAt(x,z,ground)??(level===1?gardenGround(x,z):null);
   if(h===null||Math.abs(h-ground)>.44)return;
   const onStair=inside(stair,x,z);
   if(onStair && z>stairStart && z<stairEnd && Math.abs(x+10)<.23)return;
@@ -752,11 +765,21 @@ function animate(){
     for(const door of interior.doors)door.update(dt,level,camera.position.x,camera.position.z);
   }
   if(active&&!uiOpen&&intro.classList.contains('hidden')){yaw+=((keys.has('ArrowLeft')?1:0)-(keys.has('ArrowRight')?1:0))*dt*1.55;pitch=clamp(pitch+((keys.has('ArrowUp')?1:0)-(keys.has('ArrowDown')?1:0))*dt*1.3,-1.28,1.28);if(!elevator.riding)updateMovement(dt);camera.rotation.y=yaw;camera.rotation.x=pitch;camera.updateMatrixWorld();updateFocus();}
-  updatePosters(performance.now());
-  interior.roomModels.tick(performance.now(),level);
+  const now=performance.now(),stamp=Date.now(),solar=solarAt(stamp);
+  const touring=!hasEntered&&!uiOpen&&!intro.classList.contains('hidden');
+  const shot=touring?tour.update(dt):null;
+  const view=shot?tour.camera:camera;
+  if(shot){
+    interior.floors.forEach((group,index)=>{group.visible=index===shot.floor-1;});
+    $('entryLocation').textContent='Level '+shot.floor+' · '+shot.name;
+  }
+  landscape.update(solar,now,!shot&&level===1&&isGarden(camera.position.x,camera.position.z));
+  wallClocks.update(stamp);illuminate.update(solar);
+  updatePosters(now);
+  interior.roomModels.tick(now,shot?.floor??level);
   const currentRoom=roomAt(level,camera.position.x,camera.position.z)?.id;
   houseLights.hidden=currentRoom!=='cinema'||!active||uiOpen;
-  televisions.update(camera,currentRoom,active);
+  televisions.update(camera,currentRoom,active,!detailPanel.classList.contains('hidden'));
   if(currentRoom!=='library'||(active&&!document.hidden&&!televisions.hasProgramme()))libraryScreenSelected=false;
   musicPlayer.update(active&&(currentRoom==='music'||currentRoom==='library'&&!libraryScreenSelected),dt);
   if(currentRoom==='music'){
@@ -766,7 +789,7 @@ function animate(){
   // The camera is stationary behind the glass. Keep its last frame composited
   // so a touch gesture only redraws the inspected models.
   if(!currentDetailItem||!roomFrameValid){
-    renderer.autoClear=false;renderer.clear();renderer.render(scene,camera);roomFrameValid=true;
+    renderer.autoClear=false;renderer.clear();renderer.render(scene,view);roomFrameValid=true;
   }
   preview.render();
 }animate();
@@ -819,9 +842,8 @@ reloadButton.onclick=async()=>{
   try{
     await loadCollections('reload');
     const view={active,ground,level,x:camera.position.x,z:camera.position.z,yaw,pitch,...seated};
-    const seed=crypto.getRandomValues(new Uint32Array(1))[0]||1;
-    sessionStorage.setItem('myroom.shelfSeed',String(seed));
-    sessionStorage.setItem('myroom.refreshVisit',JSON.stringify(view));
+    view.posters=updatePosters.snapshot();
+    try{sessionStorage.setItem('myroom.refreshVisit',JSON.stringify(view));}catch{}
     location.reload();
   }catch{
     reloadButton.disabled=false;reloadButton.removeAttribute('aria-busy');
@@ -835,9 +857,9 @@ if(restoredVisit){
     const obstacle=interior.obstacles.some(o=>o.level===v.level&&Math.abs(v.x-o.x)<o.w/2+.19&&Math.abs(v.z-o.z)<o.d/2+.19);
     if(inside(lift,v.x,v.z))arrive(v.level,-3.475,-7.95,0);
     else if(room&&obstacle)arrive(v.level,...room.spawn);
-    else if(room||inside(stair,v.x,v.z)){
+    else if(room||inside(stair,v.x,v.z)||(v.level===1&&gardenGround(v.x,v.z)!==null)){
       arrive(v.level,v.x,v.z,v.yaw,v.pitch);ground=v.ground;camera.position.y=ground+1.62;refreshFloor();
     }
   }
-  showToast('Collections refreshed · shelves shuffled');
+  showToast('Site and wall posters refreshed');
 }

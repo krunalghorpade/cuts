@@ -1,4 +1,5 @@
 import * as T from './vendor/three.module.js';
+import {unlockRoomAudio} from './room-audio.js';
 import {cinemaProgramme} from './cinema-programme.js';
 export {installPosters} from './posters.js';
 import {CSS3DRenderer} from './vendor/CSS3DRenderer.js';
@@ -91,8 +92,14 @@ export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
     try{localStorage.setItem('myroom.tvMuted',String(muted));}catch{}
     syncSound();if(!muted)resume();
   };
-  const resume=()=>channels.forEach(channel=>channel.resume());
-  window.addEventListener('pointerdown',resume);window.addEventListener('keydown',resume);
+  function resume(){
+    const unlocking=unlockRoomAudio();
+    channels.forEach(channel=>{channel.connectSound();channel.resume();});
+    unlocking?.then(()=>channels.forEach(channel=>channel.connectSound()));
+  }
+  window.addEventListener('pointerdown',resume);
+  window.addEventListener('pointerup',event=>{if(event.pointerType!=='mouse')resume();});
+  window.addEventListener('keydown',resume);
   let activeRoom,hasScreen=false;
   function switchRoom(room,departed=false){
     activeRoom=room;hasScreen=false;activeScreen=null;musicItem=null;musicLabel=null;musicCaption=null;
@@ -106,7 +113,11 @@ export function installTelevisions(canvas,screens,roomStock,streams,openDetail){
   }
   document.addEventListener('visibilitychange',()=>{if(document.hidden)switchRoom(null);});
   const tvTitle=()=>activeScreen?.userData.item;
-  function update(camera,room,enabled){
+  let inspecting=false;
+  function update(camera,room,enabled,detailOpen=false){
+    if(detailOpen!==inspecting){
+      inspecting=detailOpen;channels.forEach(channel=>channel.inspect(detailOpen));
+    }
     const next=enabled&&!document.hidden?room:null,changed=next!==activeRoom;
     if(changed)switchRoom(next,enabled&&!document.hidden);
     updateItem(tvTitle()||null);

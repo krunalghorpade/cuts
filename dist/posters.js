@@ -108,10 +108,10 @@ function paint(g,pic,img,x,y){
   }else{g.fillStyle='#f4ecd9';g.font='22px Georgia';lines(g,pic.item.title,190).forEach((l,i)=>g.fillText(l,14,130+28*i));}
   g.restore();
 }
-export function installPosters(interior,roomStock,targets,content){
+export function installPosters(interior,roomStock,targets,content,lastPosters=[]){
   const stock=new Map([...interior.featureStock,...roomStock]);
   const slots=[...rooms.flatMap(r=>mounts(r,interior.shelfBounds)),...stairFrames()].filter(s=>stock.get(s[6])?.length);
-  if(!slots.length)return ()=>{};
+  if(!slots.length)return Object.assign(()=>{},{snapshot:()=>[]});
   const decksByRoom=new Map([...stock].map(([r,i])=>[r,decks(i,r,content)])),counts=new Map();
   const w=224,h=320,cols=12,atlas=document.createElement('canvas');atlas.width=cols*w;atlas.height=Math.ceil(slots.length/cols)*h;
   const ctx=atlas.getContext('2d',{alpha:false}),texture=new T.CanvasTexture(atlas);texture.colorSpace=T.SRGBColorSpace;
@@ -125,19 +125,24 @@ export function installPosters(interior,roomStock,targets,content){
     const n=counts.get(room)||0;counts.set(room,n+1);
     const [a,b]=decksByRoom.get(room);return {panel,sx,sy,pool:b.length&&(room==='music'?n%2===0:n%3===1)?b:a,previous:null};
   });
+  const signature=p=>p?[p.item.id,p.kind,p.words||''].join('|'):'';
   let busy=false,due=0;
   async function rotate(){
     busy=true;const used=new Map(),images=new Map();
-    try{await Promise.all(panels.map(async p=>{
+    try{await Promise.all(panels.map(async (p,index)=>{
       const room=p.panel.userData.room;if(!used.has(room))used.set(room,new Set());const seen=used.get(room);
-      const fresh=p.pool.filter(e=>e!==p.previous&&!seen.has(e.item.albumUri||e.item.id));
-      const unused=p.pool.filter(e=>!seen.has(e.item.albumUri||e.item.id));
-      const pool=fresh.length?fresh:unused.length?unused:p.pool.filter(e=>e!==p.previous);
+      const prior=signature(p.previous)||lastPosters?.[index];
+      const alternatives=p.pool.filter(e=>signature(e)!==prior);
+      const eligible=alternatives.length?alternatives:p.pool;
+      const fresh=eligible.filter(e=>!seen.has(e.item.albumUri||e.item.id));
+      const pool=fresh.length?fresh:eligible;
       const pick=pool[Math.floor(Math.random()*pool.length)]||p.pool[0];if(!pick)return;
       seen.add(pick.item.albumUri||pick.item.id);
       if(!images.has(pick.image)){const img=new Image();img.src=pick.image;images.set(pick.image,img.decode().then(()=>img,()=>null));}
       const image=await images.get(pick.image);paint(ctx,pick,image,p.sx,p.sy);p.previous=pick;Object.assign(p.panel.userData,{item:pick.item,kind:pick.kind});
     }));texture.needsUpdate=true;}finally{busy=false;}
   }
-  return now=>{if(!busy&&now>=due){due=now+60000;void rotate();}};
+  const tick=now=>{if(!busy&&now>=due){due=now+60000;void rotate();}};
+  tick.snapshot=()=>panels.map(panel=>signature(panel.previous));
+  return tick;
 }
